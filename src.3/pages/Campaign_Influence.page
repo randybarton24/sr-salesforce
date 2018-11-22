@@ -1,3 +1,0 @@
-<apex:page >
-<apex:enhancedList type="Campaign_Influence__c" height="600" />
-</apex:page>

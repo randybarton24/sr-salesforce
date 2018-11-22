@@ -1,8 +1,0 @@
-<design:component >
-	<design:attribute name="topic1Id" label="First Topic Id" description="First Topic Id"/>
-    <design:attribute name="topic2Id" label="Second Topic Id" description="Second Topic Id"/>
-    <design:attribute name="topic3Id" label="Third Topic Id" description="Third Topic Id"/>
-    <design:attribute name="topic4Id" label="Fourth Topic Id" description="Fourth Topic Id"/>
-    <design:attribute name="topic5Id" label="Fifth Topic Id" description="Fifth Topic Id"/>
-    <design:attribute name="topic6Id" label="Sixth Topic Id" description="Sixth Topic Id"/>
-</design:component>

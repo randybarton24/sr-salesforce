@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Round Robins just the Onboarding Case to a Success Coach. Adds the RR info into the case</description>
-    <label>Onboarding Round Robin</label>
-    <processType>AutoLaunchedFlow</processType>
-</Flow>

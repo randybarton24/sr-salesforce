@@ -1,2 +1,0 @@
-Id,Opportunity__c,Asset__c,RecordTypeId,Cancel_Request_Type__c,Cancel_Request_Date__c,Description__c,Most_Recent_Contract_Date__c,Original_Setup_Fee__c,Current_MSF__c,E_T_Reason__c,Cancel_Meta_Theme__c,Cancel_Sub_Category__c,Cancellation_Reasons__c,Cancellation_Details__c,Projected_Contract_Expiration_Renewal__c
-CancelRequest01,Opportunity02,Asset01,01231000000tYZG,Annual,2018-05-04,Was not interested,2018-04-29,0,399,Technical Issues,Sales,Expectations,Contract/Billing,Test Cancel,2019-04-29

@@ -1,3 +1,0 @@
-<design:component >
-	<design:attribute name="searchPlaceHolder" label="Search Place Holder"/>	
-</design:component>

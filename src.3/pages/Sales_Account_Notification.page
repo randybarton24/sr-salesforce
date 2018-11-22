@@ -1,5 +1,0 @@
-<apex:page standardController="Account">
-
-  <p><h1 style="font-size:24px;color:#2a94d6;text-align:center !important;">This is&nbsp; <apex:outputText value="{!IF(Account.RecordType.Name = 'Account' , 'an ' + Account.RecordType.Name , 'a ' + Account.RecordType.Name)}"/> Page</h1></p>
-  <h2 style="font-size:14px;text-align:center !important;color:red;">Enter all sales notes for prospects on the Opportunity page of the parent Account.</h2>
-</apex:page>

@@ -1,4 +1,0 @@
-<apex:page sidebar="false" showheader="false">
-    <apex:iframe width="50%" src="https://10.1.0.35:8444/cuic/Main.htmx" scrolling="true"/>
-    <apex:iframe width="50%" src="https://10.1.0.35:8445?desktop" scrolling="True"/>
-</apex:page>

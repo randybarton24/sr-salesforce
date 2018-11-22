@@ -1,5 +1,0 @@
-<!-- c:CWT_fieldUpdateNotification-->
-<aura:event type="APPLICATION" access="GLOBAL">
-    <aura:attribute type="String" name="fieldName" />
-	<aura:attribute type="String" name="newValue" />
-</aura:event>

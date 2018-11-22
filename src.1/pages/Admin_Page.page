@@ -1,7 +1,0 @@
-<apex:page standardcontroller="Account" showHeader="false" sidebar="false">
-
-
-    <apex:iframe frameborder="false" height="500px" src="https://www.smilereminder.com/appAdmin/subscriber/edit.do?subscriberIdx={!Account.Subscriber_ID__c}" scrolling="true"/>
-
-
-</apex:page>

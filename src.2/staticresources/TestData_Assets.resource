@@ -1,2 +1,0 @@
-Id,AccountId,Current_Product_Subscription__c,Name
-Asset01,Account01,ProductSubscription01,SR Platform Asset

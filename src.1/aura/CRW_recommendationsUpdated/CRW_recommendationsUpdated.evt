@@ -1,3 +1,0 @@
-<aura:event type="APPLICATION" access="GLOBAL">
-    <aura:attribute type="String" name="recordId" />
-</aura:event>

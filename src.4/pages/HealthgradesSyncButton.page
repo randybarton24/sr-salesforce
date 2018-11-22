@@ -1,6 +1,0 @@
-<apex:page standardController="Provider__c" extensions="HealthgradesSyncButtonController" action="{!autoRun}" >
-  <apex:sectionHeader title="Auto-Running Apex Code"/>
-  <apex:outputPanel >
-      Sync failed.
-  </apex:outputPanel>
-</apex:page>

@@ -1,8 +1,0 @@
-<apex:page standardController="Contact" showHeader="true" sidebar="true">
-	<apex:relatedList subject="{!Contact.AccountId}" list="OpenActivities">
-		<apex:facet name="header"><strong style="font-size:130%;">&nbsp;&nbsp;Account Open Activities</strong></apex:facet>
-	</apex:relatedList>
-	<apex:relatedList subject="{!Contact.AccountId}" list="ActivityHistories">
-		<apex:facet name="header"><strong style="font-size:130%;">&nbsp;&nbsp;Account Activity History</strong></apex:facet>
-	</apex:relatedList>
-</apex:page>

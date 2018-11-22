@@ -1,5 +1,0 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
-	<aura:handler name="init" action="{!c.doinit}" value="{!this}" />
-    <!-- <aura:handler event="aura:doneRendering" action="{!c.doneRendering}"/>-->
-    
-</aura:component>

@@ -1,4 +1,0 @@
-Id,RecurSoft__Renewal_Rule_Firendly_Name__c
-a1E31000003AeTQEA0,6-Month Term Rule
-a1E31000004woKEEAY,24 month renewal
-a1Ei0000002F2GsEAK,Default Recurring Rule

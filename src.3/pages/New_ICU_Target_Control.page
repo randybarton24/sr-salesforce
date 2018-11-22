@@ -1,5 +1,0 @@
-<apex:page Controller="ICUTargetController" TabStyle="ICU_Target__c">
-    <flow:interview name="Request_ICU_Target" interview="{!icuFlowInterview}" finishlocation="{!varTargetID}">
-        <apex:param name="varUserID" value="{!$CurrentPage.parameters.UserID}"/>
-    </flow:interview> 
-</apex:page>

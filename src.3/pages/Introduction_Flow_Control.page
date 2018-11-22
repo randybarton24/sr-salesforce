@@ -1,5 +1,0 @@
-<apex:page standardController="Account" TabStyle="Account" sidebar="false" showHeader="false" showChat="false">  
-    <flow:interview name="Introducing_a_Feature_Product" finishlocation="/{!Account.Id}">
-        <apex:param name="varAccountID" value="{!Account.Id}"/>
-    </flow:interview> 
-</apex:page>

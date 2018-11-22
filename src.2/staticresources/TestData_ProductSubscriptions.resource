@@ -1,2 +1,0 @@
-Id,RecurSoft__Related_Opportunity__c,RecurSoft__Account__c
-ProductSubscription01,Opportunity01,Account01
