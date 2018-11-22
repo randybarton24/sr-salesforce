@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Date_is_First_Day_of_Month</fullName>
+    <active>true</active>
+    <description>Make sure that the target date is the first date of the month.</description>
+    <errorConditionFormula>DAY( Target_Date__c )  &lt;&gt; 1</errorConditionFormula>
+    <errorDisplayField>Target_Date__c</errorDisplayField>
+    <errorMessage>Must select the first (1) day of the month.</errorMessage>
+</ValidationRule>

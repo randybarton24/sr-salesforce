@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Is_Commissionable__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Used to determine if a product is commissionable or not.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box if the product is eligible for commission.</inlineHelpText>
+    <label>Is Commissionable</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Reasons__c</fullName>
+    <description>Sugar field for Retention Opportunities</description>
+    <externalId>false</externalId>
+    <label>Cancellation Reasons</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bankruptcy/Collections/Out of business</fullName>
+                <default>false</default>
+                <label>Bankruptcy/Collections/Out of business</label>
+            </value>
+            <value>
+                <fullName>Clean-up / Backlog</fullName>
+                <default>false</default>
+                <label>Clean-up / Backlog</label>
+            </value>
+            <value>
+                <fullName>Contract term / length</fullName>
+                <default>false</default>
+                <label>Contract term / length</label>
+            </value>
+            <value>
+                <fullName>In contract with other provider</fullName>
+                <default>false</default>
+                <label>In contract with other provider</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>Merged</fullName>
+                <default>false</default>
+                <label>Merged</label>
+            </value>
+            <value>
+                <fullName>Never trained / not ready</fullName>
+                <default>false</default>
+                <label>Never trained / not ready</label>
+            </value>
+            <value>
+                <fullName>Not interested</fullName>
+                <default>false</default>
+                <label>Not interested</label>
+            </value>
+            <value>
+                <fullName>Not satisfied - current features</fullName>
+                <default>false</default>
+                <label>Not satisfied - current features</label>
+            </value>
+            <value>
+                <fullName>Not satisfied - Sales / personnel</fullName>
+                <default>false</default>
+                <label>Not satisfied - Sales / personnel</label>
+            </value>
+            <value>
+                <fullName>Not satisfied - Support / personnel</fullName>
+                <default>false</default>
+                <label>Not satisfied - Support / personnel</label>
+            </value>
+            <value>
+                <fullName>Not satisfied - unavailable features</fullName>
+                <default>false</default>
+                <label>Not satisfied - unavailable features</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Patient complaints</fullName>
+                <default>false</default>
+                <label>Patient complaints</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Refused to give reason / unknown</fullName>
+                <default>false</default>
+                <label>Refused to give reason / unknown</label>
+            </value>
+            <value>
+                <fullName>Staff resistance</fullName>
+                <default>false</default>
+                <label>Staff resistance</label>
+            </value>
+            <value>
+                <fullName>Sync Issue</fullName>
+                <default>false</default>
+                <label>Sync Issue</label>
+            </value>
+            <value>
+                <fullName>Regulation</fullName>
+                <default>false</default>
+                <label>Regulation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

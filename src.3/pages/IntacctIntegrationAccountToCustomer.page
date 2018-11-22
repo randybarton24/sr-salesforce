@@ -1,0 +1,14 @@
+<!--
+ * File:        IntacctIntegrationAccountToCustomer.page
+ * Project:     Subscription Billing 
+ * Date:        May 15, 2013
+ * Created By:  Ionut Boghean
+ * *************************************************************************
+ * Description: The page is used to start the customer sync via button or link
+ * *************************************************************************
+ * History:
+ -->
+<apex:page standardController="Account" extensions="IntacctIntegrationAccountToCustomer" action="{!syncAccount}" showHeader="false" sidebar="false">
+    <apex:pageMessages escape="false">
+    </apex:pageMessages>
+</apex:page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Playbooks</fullName>
+    <columns>NAME</columns>
+    <columns>Date_Activated__c</columns>
+    <columns>Number_of_Plays__c</columns>
+    <columns>Survey_to_be_Sent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Active Playbooks</label>
+</ListView>

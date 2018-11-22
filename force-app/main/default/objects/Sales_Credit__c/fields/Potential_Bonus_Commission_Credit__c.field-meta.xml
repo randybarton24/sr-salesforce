@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Potential_Bonus_Commission_Credit__c</fullName>
+    <description>Calculates the Bonus &amp; Commission value for the Sales Credit.  Hidden on the Sales Credit object and displayed on the Bonus &amp; Commission Credit object.</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Sales_Rep_Target__r.Team__c , &quot;Inside Sales&quot; ) ,
+  ( Individual_Revenue_Credit__c / Sales_Rep_Target__r.Total_Revenue_Credit__c ) * Sales_Rep_Target__r.Available_Bonus__c *
+    Sales_Rep_Target__r.Bonus_Commission_Multiplier__c ,
+
+/*HG doesn&#39;t get the multiplier for TSRs*/  
+(( Individual_Revenue_Credit__c - Individual_HG_Revenue__c ) * Sales_Rep_Target__r.Multiplier__c ) + Individual_HG_Revenue__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Potential Bonus &amp; Commission Credit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pulse__c</fullName>
+    <externalId>false</externalId>
+    <label>Pulse</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Severe Risk</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+                <label>Severe Risk</label>
+            </value>
+            <value>
+                <fullName>High Risk</fullName>
+                <color>#FF9900</color>
+                <default>false</default>
+                <label>High Risk</label>
+            </value>
+            <value>
+                <fullName>Some Risk</fullName>
+                <color>#FFFF66</color>
+                <default>false</default>
+                <label>Some Risk</label>
+            </value>
+            <value>
+                <fullName>Fairly Satisfied</fullName>
+                <color>#33FFFF</color>
+                <default>false</default>
+                <label>Fairly Satisfied</label>
+            </value>
+            <value>
+                <fullName>Very Satisfied</fullName>
+                <color>#33CCFF</color>
+                <default>false</default>
+                <label>Very Satisfied</label>
+            </value>
+            <value>
+                <fullName>Extremely Satisfied</fullName>
+                <color>#3333FF</color>
+                <default>false</default>
+                <label>Extremely Satisfied</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

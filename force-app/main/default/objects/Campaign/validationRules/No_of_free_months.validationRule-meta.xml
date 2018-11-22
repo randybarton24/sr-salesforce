@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_of_free_months</fullName>
+    <active>true</active>
+    <description>Number of free months exceeding 5 as value, need to be editable just by Sales Managers and System Administrator profiles.</description>
+    <errorConditionFormula>$Profile.Name &lt;&gt; &quot;Sales Manager&quot;  &amp;&amp; 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;  &amp;&amp;
+
+  
+OR(
+ISPICKVAL(PRIORVALUE(free_months__c), &quot;6&quot;),
+ISPICKVAL(PRIORVALUE(free_months__c), &quot;7&quot;),
+ISPICKVAL(PRIORVALUE(free_months__c), &quot;8&quot;),
+ISPICKVAL(PRIORVALUE(free_months__c), &quot;9&quot;),
+ISPICKVAL(PRIORVALUE(free_months__c), &quot;10&quot;),
+ISPICKVAL(PRIORVALUE(free_months__c), &quot;11&quot;),
+ISPICKVAL(PRIORVALUE(free_months__c), &quot;12&quot;),
+
+ISPICKVAL(free_months__c, &quot;6&quot;),
+ISPICKVAL(free_months__c, &quot;7&quot;),
+ISPICKVAL(free_months__c, &quot;8&quot;),
+ISPICKVAL(free_months__c, &quot;9&quot;),
+ISPICKVAL(free_months__c, &quot;10&quot;),
+ISPICKVAL(free_months__c, &quot;11&quot;),
+ISPICKVAL(free_months__c, &quot;12&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>free_months__c</errorDisplayField>
+    <errorMessage>You don&#39;t have rights to edit this field.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_Rep_Experience__c</fullName>
+    <externalId>false</externalId>
+    <formula>VALUE(IF( FS_Overall_Rep_Experience__c = &quot;None&quot;,&quot;&quot;, TRIM( RIGHT(  FS_Overall_Rep_Experience__c  , 2) ) ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>How would you rate the overall experience provided to you by the Solutionreach representative who assisted you?</inlineHelpText>
+    <label>Overall Rep Experience</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

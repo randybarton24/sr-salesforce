@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pct_Survey_Responses_Last_90_Days__c</fullName>
+    <description>pct_survey_responses_90_days</description>
+    <externalId>false</externalId>
+    <label>Percent Survey Responses Last 90 Days</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

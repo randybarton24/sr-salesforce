@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Save_Info</fullName>
+    <active>true</active>
+    <description>Requires certain fields when closing as a Save.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Stage__c, &quot;Save&quot;),
+    OR(ISBLANK(Save_MSF__c),
+       ISBLANK(Months_Gained__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>You must put in Save MSF and Months Gained when closing as a Save.</errorMessage>
+</ValidationRule>

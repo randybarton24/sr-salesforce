@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Industry_Picklist</fullName>
+    <active>true</active>
+    <errorConditionFormula>TEXT(Industry) != &quot;Dental&quot; &amp;&amp;
+TEXT(Industry) != &quot;Vision&quot; &amp;&amp;
+TEXT(Industry) != &quot;Medical&quot; &amp;&amp;
+TEXT(Industry) != &quot;Non-Medical&quot; &amp;&amp;
+TEXT(Industry) != &quot;Physical Rehabilitation&quot; &amp;&amp;
+TEXT(Industry) != &quot;&quot;</errorConditionFormula>
+    <errorDisplayField>Industry</errorDisplayField>
+    <errorMessage>Please select a valid Vertical</errorMessage>
+</ValidationRule>

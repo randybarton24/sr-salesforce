@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Object_needed_for_Load_Balanced</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( ParentObject__c ) &amp;&amp;
+ISPICKVAL( Distribution_Type__c , &#39;Load Balanced&#39;)</errorConditionFormula>
+    <errorDisplayField>ParentObject__c</errorDisplayField>
+    <errorMessage>You need to have a Parent Object to Balance. Please work with someone on the System Ops team</errorMessage>
+</ValidationRule>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Friday_s_Lead_List</fullName>
+    <booleanFilter>1 AND (2 OR 3) AND 4 And 5 AND (6 OR 7) AND 8</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Last_ROE_Task_Date__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>List Upload</value>
+    </filters>
+    <filters>
+        <field>SR_Date_Created__c</field>
+        <operation>equals</operation>
+        <value>1/27/2015 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>SR_Date_Created__c</field>
+        <operation>equals</operation>
+        <value>11/18/2013 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Contacted,No Response,Dead</value>
+    </filters>
+    <filters>
+        <field>LEAD.LAST_ACTIVITY</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_DAYS:7</value>
+    </filters>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_DAYS:45</value>
+    </filters>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>LEAD.INDUSTRY</field>
+        <operation>equals</operation>
+        <value>Vision,Medical,Physical Rehabilitation</value>
+    </filters>
+    <label>Friday&#39;s Lead List**</label>
+</ListView>

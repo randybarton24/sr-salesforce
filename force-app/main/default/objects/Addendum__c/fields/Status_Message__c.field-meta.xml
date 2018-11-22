@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Message__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Minimum_Number_of_Modifications__c = 0 , &quot;There are still products on this Addendum without any modifications. Either update the product modifications or remove any products not being modified.&quot; ,
+    CASE( Status__c ,
+    &quot;New&quot; , &quot;Ready&quot; /*&quot;This Addendum hasn&#39;t been submitted for processing yet.&quot;*/ ,
+    &quot;Needs Accounting Data&quot; , &quot;This Addendum still requires Accounting data, and hasn&#39;t been submitted for processing yet.&quot; , 
+    &quot;Accounting Data Received&quot; , &quot;Ready&quot; /*&quot;This Addendum hasn&#39;t been submitted for processing yet.&quot;*/ ,
+    &quot;Ready For Processing&quot; , &quot;Ready&quot; ,
+    &quot;Not Approved&quot; , &quot;This Addendum hasn&#39;t been re-submitted for processing yet.&quot; ,
+    &quot;Signature Requested&quot; , &quot;This Addendum has already been submitted for processing.&quot; ,
+    &quot;Signature Expired&quot; , &quot;The signature request expired for this Addendum and it hasn&#39;t been re-submitted for processing yet.&quot; ,
+    &quot;Signature Declined&quot; , &quot;The signature request was declined for this Addendum and it hasn&#39;t been re-submitted for processing yet.&quot; ,
+    &quot;Signature Received&quot; , &quot;The signature has been received for this Addendum.&quot; ,
+    &quot;Closed&quot; , &quot;The signature has been received for this Addendum.&quot; ,
+    &quot;Ready&quot;)
+			)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status Message</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

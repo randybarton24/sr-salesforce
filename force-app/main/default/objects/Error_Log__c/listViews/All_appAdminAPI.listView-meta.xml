@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_appAdminAPI</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Error__c</columns>
+    <columns>Error_Type__c</columns>
+    <columns>Error_Message__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Error_Type__c</field>
+        <operation>equals</operation>
+        <value>AppAdmin Sync Error</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>6/21/2018 12:00 AM</value>
+    </filters>
+    <label>All appAdminAPI errors</label>
+</ListView>

@@ -1,0 +1,249 @@
+<apex:component ><div id="search" class="CoveoSearchInterface" data-design="new" data-enable-history="true" data-maximum-age="0" data-pipeline="SR Community" data-results-per-page="15">
+
+<div class="CoveoAnalytics"></div>
+   
+<div class="coveo-tab-section"><a class="CoveoTab" data-id="All" data-caption="All " data-expression="(@objecttype==(Tips_Tricks, Getting_Started, Webinar, How_to_Article, Training_Video, Success_Formula)  AND (@sfisvisibleincsp == true OR @sfisvisibleinprm == true OR @sfisvisibleinpkb == true))  OR (@sfnetworkscope AND NOT @sfbody*= &quot;Level*&quot;)"></a><a class="CoveoTab" data-id="SalesforceArticle" data-caption="Articles" data-expression="@objecttype==(Webinar, How_to_Article, Training_Video) AND (@sfisvisibleincsp == true OR @sfisvisibleinprm == true OR @sfisvisibleinpkb == true)"></a><a class="CoveoTab" data-id="SalesforceChatter" data-caption="Discussions" data-expression="(@sfcommenttype=&quot;TextComment&quot; OR @sftype==&quot;QuestionPost&quot;) AND (@sfnetworkscope==(&quot;0DB0Z000000TODRWA4&quot;) AND NOT @sfbody*= &quot;Level*&quot;)"></a><div class="CoveoTab" data-id="TrainingVideos" data-caption="Training Videos" data-expression="@objecttype==(Tips_Tricks, Webinar, Getting_Started,Success_Formula)"></div></div>
+<div class="coveo-search-section"><div class="CoveoCommunityStateManager"></div></div>
+<div class="coveo-main-section">
+    <div id="facetColumn" class="coveo-facet-column">
+<div id="articleFilter" class="CoveoFacet" data-title="Article Type" data-field="@objecttype" data-tab="TrainingVideos"></div></div>
+    <div class="coveo-results-column">
+        
+        
+        <div class="CoveoTriggers"></div>
+        <div class="CoveoBreadcrumb"></div>
+        <div class="coveo-results-header">
+            <div class="coveo-summary-section">
+                <span class="CoveoQuerySummary"><div class="coveo-show-if-no-results"></div></span>
+                <span class="CoveoQueryDuration"></span>
+            </div>
+            <div class="coveo-result-layout-section">
+                <span class="CoveoResultLayout"></span>
+            </div>
+            <div class="coveo-sort-section">
+                
+
+            </div>
+        </div>
+        <div class="CoveoHiddenQuery"></div>
+        <div class="CoveoDidYouMean"></div>
+        <div class="CoveoErrorReport" data-pop-up="false"></div>
+        <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-fields-to-include="@Sf" data-infinite-scroll-page-size=""><script type="text/html" data-field-objecttype="feeditem,feedcomment" class="result-template" id="Discussions"><div class="coveo-result-frame">
+  <div class="coveo-result-row">
+    <div class="coveo-result-cell" style="width:85px;text-align:center;padding-top:7px;">
+     <img src="https://community.solutionreach.com/resource/1525372243000/KATypeDiscussions
+" width="60px" height="60px"/>
+      
+    </div>
+    <div class="coveo-result-cell" style="padding-left:15px;">
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="font-size:18px;">
+<a class="CoveoResultLink" data-href-template="https://community.solutionreach.com/s/question/${raw.sfid}"><span class="CoveoFieldValue" data-field="@sftitle"></span></a>
+</div>
+        <div class="coveo-result-cell" style="width:120px; text-align:right; font-size:12px">
+          
+        </div>
+      </div>
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell"><span class="CoveoFieldValue" data-field="@sfbody" data-html-value="true"></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="coveo-result-row">
+    <div class="coveo-result-cell" style="width:85px;text-align:center">
+    </div>
+    <div class="coveo-result-cell" style="font-size:13px;padding-left: 15px;">
+      
+    </div>
+  </div>
+</div>
+</script><script type="text/html" data-field-objecttype="getting_started,tips_tricks,Success_Formula" class="result-template" id="Video Getting Started and Quick Tips"><div class="coveo-result-frame">
+  <div class="coveo-result-row">
+    <div class="coveo-result-cell" style="width:85px; text-align:center; padding-top:7px">
+     <img src="https://community.solutionreach.com/resource/1525372243000/KATypeVideo" width="60px" height="60px"/>
+    </div>
+    <div class="coveo-result-cell" style="padding-left:15px">
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="font-size:18px">
+<span class="CoveoSalesforceResultLink"></span></div>
+        <div class="coveo-result-cell" style="width:120px; text-align:right;font-size:12px">
+          
+        </div>
+      </div>
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="padding-top:5px; padding-bottom:5px">
+          <div class="CoveoExcerpt">
+          </div>
+        </div>
+      </div>
+      <div class="coveo-result-row">
+        
+      </div>
+    </div>
+  </div>
+</div>
+</script><script type="text/html" data-field-objecttype="how_to_article" class="result-template" id="How To Article"><div class="coveo-result-frame">
+  <div class="coveo-result-row">
+    <div class="coveo-result-cell" style="width:85px; text-align:center; padding-top:7px">
+     <img src="https://community.solutionreach.com/resource/KATypeArticle" width="60px" height="60px"/>
+    </div>
+    <div class="coveo-result-cell" style="padding-left:15px">
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="font-size:18px"><span class="CoveoSalesforceResultLink" data-title-template="${raw.sftitle}"></span></div>
+        <div class="coveo-result-cell" style="width:120px; text-align:right;font-size:12px">
+          
+        </div>
+      </div>
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="padding-top:5px; padding-bottom:5px">
+          <div class="CoveoExcerpt">
+          </div>
+        </div>
+      </div>
+      <div class="coveo-result-row">
+        
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+            
+        <script type="text/html" data-field-objecttype="getting_started,tips_tricks,webinar	" class="result-template" id="Training Vid Template"><div class="coveo-result-frame">
+  <div class="coveo-result-row">
+          <div class="coveo-result-cell" style="width:85px; text-align:center; padding-top:7px">
+             <img src="https://community.solutionreach.com/resource/1525372243000/KATypeVideo" width="60px" height="60px"/>
+      </span>
+      </span>
+      </div>
+    <div class="coveo-result-cell" style="padding-left:15px">
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="font-size:18px"><span class="CoveoSalesforceResultLink"></span>
+</div>
+        <div class="coveo-result-cell" style="width:120px; text-align:right;font-size:12px">
+          
+        </div>
+      </div>
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="padding-top:5px; padding-bottom:5px">
+<span class="CoveoFieldValue" data-field="@SfSummary"></span></div>
+      </div>
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="padding-top:5px; padding-bottom:5px; font-size:13px;">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script><script type="text/html" data-field-objecttype="how_to_article,webinar,Training_Video" class="result-template" id="HowTo_Webinar_Training"><div class="coveo-result-frame">
+  <div class="coveo-result-row">
+      <div class="coveo-result-cell" style="width:85px; text-align:center; padding-top:7px">
+      <img src="https://community.solutionreach.com/resource/KATypeWebinars" width="60px" height="60px"/>
+      </div>
+    <div class="coveo-result-cell" style="padding-left:15px">
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="font-size:18px"><span class="CoveoSalesforceResultLink" data-field="@sftitle"></span>
+</div>
+        <div class="coveo-result-cell" style="width:120px; text-align:right;font-size:12px">
+          
+        </div>
+      </div>
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="padding-top:5px; padding-bottom:5px">
+<span class="CoveoFieldValue" data-field="@sfsummary"></span></div>
+      </div>
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="padding-top:5px; padding-bottom:5px; font-size:13px;">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script><script type="text/html" data-field-objecttype="feeditem" class="result-template" id="My Chatter Template"><div class="coveo-result-frame">
+  <div class="coveo-result-row">
+    
+    <div class="coveo-result-cell" style="padding-left:15px">
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="font-size:13px">
+          <span class="CoveoChatterPostedBy">
+          </span>
+        </div>
+        <div class="coveo-result-cell" style="width:120px;text-align:right;font-size:12px"></div>
+      </div>
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="font-size:18px; padding-top:5px; padding-bottom:5px"><span class="CoveoSalesforceResultLink"></span>
+<span class="CoveoFieldValue" data-field="@Sfdescription" data-html-value="true"></span>
+</div>
+      </div>
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="padding-bottom:5px; padding-top:5px; font-size:13px;"><span class="CoveoChatterLikedBy" data-nb-likes-to-render="1">
+          </span>
+<span class="CoveoFieldValue" data-field="@sflastmodifieddate" data-helper="date" data-text-caption="Last Modified Date"></span></div>
+      </div>
+      <div class="coveo-result-row">
+        <div class="coveo-result-cell" style="padding-top:5px; padding-bottom:5px; font-size:13px;">
+          <span class="CoveoChatterPostAttachment">
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script><script id="SalesforceKnowledgeArticle" class="result-template" type="text/html" data-field-objecttype="KnowledgeArticleVersion"><div class="coveo-result-frame" style="padding:0 16px 16px 0;">
+    
+    <div class="coveo-result-cell" style="vertical-align: top;padding-left: 16px;">
+        <div class="coveo-result-row" style="margin-top:0;">
+            <div class="coveo-result-cell coveo-no-wrap" style="vertical-align: top; font-size: 16px;">
+                <a class="CoveoSalesforceResultLink"></a>
+            </div>
+            <div class="coveo-result-cell" style="width:120px;text-align:right;font-size:12px">
+                <div class="coveo-result-row">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="coveo-result-row" style="margin-top:12px;">
+            <div class="coveo-result-cell">
+                <span class="CoveoFieldValue" data-field="@sfsummary"></span>
+            </div>
+        </div>
+        <div class="coveo-result-row" style="margin-top:8px;">
+            <div class="coveo-result-cell" style="line-height:1.5em;">
+                
+                
+                
+            </div>
+        </div>
+        <div class="coveo-result-row" style="margin-top:8px;">
+            <div class="coveo-result-cell">
+                
+            </div>
+        </div>
+    </div>
+</div></script></div>
+        <div class="CoveoPager"></div><style>
+        .coveo-facet-value-count {
+          visibility: hidden;
+        }
+        div.coveo-tab-section{
+            background-color: white;
+        }
+        div.coveo-list-layout.CoveoResult{
+            margin: 0px !important;
+            border-bottom: 1px solid #EAEAEA;
+        }
+        div.coveo-facet-header{
+            background-color: white;
+        }
+        
+        </style>
+        <div class=""></div> 
+        <div class="CoveoResultsPerPage"></div>
+    </div>
+    
+</div>
+<div class="CoveoFoldingForThread" data-child-field="@sffeeditemid" data-field="@sffeeditemid" data-parent-field="@sfid" data-range="2" data-rearrange="date ascending" data-tab="SalesforceChatter" data-expand-expression="@objecttype==(FeedItem, FeedComment)">
+    </div></div>
+</apex:component>

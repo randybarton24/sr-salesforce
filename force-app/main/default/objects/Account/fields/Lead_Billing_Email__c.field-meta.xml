@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Billing_Email__c</fullName>
+    <description>Allows us to copy the lead&#39;s email to two places instead of just the Contact&#39;s email</description>
+    <externalId>false</externalId>
+    <label>Lead Billing Email</label>
+    <length>80</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<apex:page Controller="PCUTargetController" TabStyle="ICU_Target__c">
+    <flow:interview name="PCU_Creation" interview="{!pcuFlowInterview}" finishlocation="{!varTargetID}">
+        <apex:param name="varUserID" value="{!$CurrentPage.parameters.UserID}"/>
+        <apex:param name="varTeamAssignment" value="{!$CurrentPage.parameters.Team}"/>
+    </flow:interview> 
+</apex:page>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Create_Addendum</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create Addendum</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!requireScript(&quot;/soap/ajax/20.0/connection.js&quot;)} 
+{!requireScript(&quot;/soap/ajax/20.0/apex.js&quot;)}
+
+var haveSubscriptions = sforce.apex.execute(&quot;RecurSoft/AddendumQueryHandler&quot;,&quot;haveSubscriptions&quot;,{oppotrunityId: &quot;{!Opportunity.Id}&quot;});
+if (haveSubscriptions &amp;&amp; !haveSubscriptions.faultcode &amp;&amp; haveSubscriptions[0] == &quot;true&quot;) {
+    window.open(&#39;apex/RecurSoft__CreateAddendum?oppId={!Opportunity.Id}&#39;, &#39;_blank&#39;);
+}
+else {
+    if(&quot;{!Opportunity.StageName}&quot; == &quot;Closed Won&quot;) {
+        alert(&quot;This opportunity has no product subscription(s). Please ensure the opportunity has the product subscription(s) generated, then try again.&quot;);
+    }
+    else {
+        alert(&quot;Stage of the opportunity is not Closed Won.&quot;);
+    }
+}</url>
+</WebLink>

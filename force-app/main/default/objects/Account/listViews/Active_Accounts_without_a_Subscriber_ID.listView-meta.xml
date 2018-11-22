@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Accounts_without_a_Subscriber_ID</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Subscriber_ID__c</columns>
+    <columns>RecurSoft__IntacctID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Account,Account.Multi_Location_Account</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>equals</operation>
+        <value>Customer,Enterprise</value>
+    </filters>
+    <filters>
+        <field>RecurSoft__Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Subscriber_ID__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Active Accounts without a Subscriber ID</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

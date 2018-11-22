@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assist_Requested__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Get&#39;s checked automatically when a Client Engagement rep requests help</description>
+    <externalId>false</externalId>
+    <label>Assist Requested</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

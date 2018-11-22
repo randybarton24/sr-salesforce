@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Laser_Dentistry_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Laser Dentistry Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Canker Sore</fullName>
+                <default>false</default>
+                <label>Canker Sore</label>
+            </value>
+            <value>
+                <fullName>Cold Sore</fullName>
+                <default>false</default>
+                <label>Cold Sore</label>
+            </value>
+            <value>
+                <fullName>Gummy Smile (Oversized Gingiva)</fullName>
+                <default>false</default>
+                <label>Gummy Smile (Oversized Gingiva)</label>
+            </value>
+            <value>
+                <fullName>Mouth Lesions</fullName>
+                <default>false</default>
+                <label>Mouth Lesions</label>
+            </value>
+            <value>
+                <fullName>Periodontitis</fullName>
+                <default>false</default>
+                <label>Periodontitis</label>
+            </value>
+            <value>
+                <fullName>Sensitive Teeth</fullName>
+                <default>false</default>
+                <label>Sensitive Teeth</label>
+            </value>
+            <value>
+                <fullName>Stained Teeth</fullName>
+                <default>false</default>
+                <label>Stained Teeth</label>
+            </value>
+            <value>
+                <fullName>Tooth Decay</fullName>
+                <default>false</default>
+                <label>Tooth Decay</label>
+            </value>
+            <value>
+                <fullName>Tooth Discoloration</fullName>
+                <default>false</default>
+                <label>Tooth Discoloration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

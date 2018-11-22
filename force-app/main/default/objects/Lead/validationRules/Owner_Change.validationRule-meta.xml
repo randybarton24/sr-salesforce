@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_Change</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( OwnerId ) &amp;&amp;
+Last_Owner_Change__c &gt;= NOW()- 0.0013</errorConditionFormula>
+    <errorMessage>You must wait for 1 minute before changing the Lead owner again.</errorMessage>
+</ValidationRule>

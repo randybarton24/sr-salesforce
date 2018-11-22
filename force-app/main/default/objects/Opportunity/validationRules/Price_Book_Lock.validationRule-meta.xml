@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Book_Lock</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( Pricebook2Id ) &amp;&amp;
+ISPICKVAL( StageName , &quot;Closed Won&quot; )</errorConditionFormula>
+    <errorMessage>You cannot change the Price Book for a Closed Won Opportunity</errorMessage>
+</ValidationRule>

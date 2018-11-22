@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Needs_Checkup_Case__c</fullName>
+    <description>Checks to see if it&#39;s been 6 months (180 days) since the last checkup or if they are going to renew in the next 2 months and there hasn&#39;t been a checkup in the last 30 days.</description>
+    <externalId>false</externalId>
+    <formula>OR( Last_Check_up_Date__c &lt; Today()-180,  And( RecurSoft__Anniversary_Date__c &lt; Today() + 60,Last_Check_up_Date__c &lt;Today()-30))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>They need a new check-up case if this is checked</inlineHelpText>
+    <label>Needs Checkup Case</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

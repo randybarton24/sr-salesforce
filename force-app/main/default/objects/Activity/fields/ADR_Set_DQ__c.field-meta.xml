@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ADR_Set_DQ__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>ADR Manager Override</description>
+    <externalId>false</externalId>
+    <label>ADR Set DQ</label>
+    <type>Checkbox</type>
+</CustomField>

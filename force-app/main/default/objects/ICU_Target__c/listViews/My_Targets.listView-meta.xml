@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Targets</fullName>
+    <columns>Account__c</columns>
+    <columns>NAME</columns>
+    <columns>Renewal_Date__c</columns>
+    <columns>Cancel_Request_Type__c</columns>
+    <columns>Target_Status__c</columns>
+    <columns>Save_Opportunity_Stage__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Save_Opportunity_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Target_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>ICU_Target__c.ICU_Record</value>
+    </filters>
+    <filters>
+        <field>Save_Opportunity_Owner__c</field>
+        <operation>equals</operation>
+        <value>Sam Simister</value>
+    </filters>
+    <filters>
+        <field>Save_Opportunity_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled,Save,No Sale,Closed</value>
+    </filters>
+    <label>My Open ICU Targets</label>
+</ListView>

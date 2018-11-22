@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In-Person Cold Call</fullName>
+                <default>false</default>
+                <label>In-Person Cold Call</label>
+            </value>
+            <value>
+                <fullName>In-Person Demo</fullName>
+                <default>false</default>
+                <label>In-Person Demo</label>
+            </value>
+            <value>
+                <fullName>In-Person Follow Up</fullName>
+                <default>false</default>
+                <label>In-Person Follow Up</label>
+            </value>
+            <value>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+                <label>Inbound Call</label>
+            </value>
+            <value>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+                <label>Outbound Call</label>
+            </value>
+            <value>
+                <fullName>Phone Cold Call</fullName>
+                <default>false</default>
+                <label>Phone Cold Call</label>
+            </value>
+            <value>
+                <fullName>Phone Demo</fullName>
+                <default>false</default>
+                <label>Phone Demo</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Administrative/Other</fullName>
+                <default>false</default>
+                <label>Administrative/Other</label>
+            </value>
+            <value>
+                <fullName>OSR Event</fullName>
+                <default>false</default>
+                <label>OSR Event</label>
+            </value>
+            <value>
+                <fullName>ESR Event</fullName>
+                <default>false</default>
+                <label>ESR Event</label>
+            </value>
+            <value>
+                <fullName>Graphics Setup</fullName>
+                <default>false</default>
+                <label>Graphics Setup</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Sync Install</fullName>
+                <default>false</default>
+                <label>Sync Install</label>
+            </value>
+            <value>
+                <fullName>Custom Settings</fullName>
+                <default>false</default>
+                <label>Custom Settings</label>
+            </value>
+            <value>
+                <fullName>Kick Off Call</fullName>
+                <default>false</default>
+                <label>Kick Off Call</label>
+            </value>
+            <value>
+                <fullName>Midway Decision Maker Call</fullName>
+                <default>false</default>
+                <label>Midway Decision Maker Call</label>
+            </value>
+            <value>
+                <fullName>Final Call</fullName>
+                <default>false</default>
+                <label>Final Call</label>
+            </value>
+            <value>
+                <fullName>LinkedIn Message</fullName>
+                <default>false</default>
+                <label>LinkedIn Message</label>
+            </value>
+            <value>
+                <fullName>Group Practice</fullName>
+                <default>false</default>
+                <label>Group Practice</label>
+            </value>
+            <value>
+                <fullName>PRT</fullName>
+                <default>false</default>
+                <label>PRT</label>
+            </value>
+            <value>
+                <fullName>Newsletters</fullName>
+                <default>false</default>
+                <label>Newsletters</label>
+            </value>
+            <value>
+                <fullName>Groups</fullName>
+                <default>false</default>
+                <label>Groups</label>
+            </value>
+            <value>
+                <fullName>SR Portal</fullName>
+                <default>false</default>
+                <label>SR Portal</label>
+            </value>
+            <value>
+                <fullName>Online Presence</fullName>
+                <default>false</default>
+                <label>Online Presence</label>
+            </value>
+            <value>
+                <fullName>New Integration</fullName>
+                <default>false</default>
+                <label>New Integration</label>
+            </value>
+            <value>
+                <fullName>General Training</fullName>
+                <default>false</default>
+                <label>General Training</label>
+            </value>
+            <value>
+                <fullName>Tech Help</fullName>
+                <default>false</default>
+                <label>Tech Help</label>
+            </value>
+            <value>
+                <fullName>Recall</fullName>
+                <default>false</default>
+                <label>Recall</label>
+            </value>
+            <value>
+                <fullName>Reminders</fullName>
+                <default>false</default>
+                <label>Reminders</label>
+            </value>
+            <value>
+                <fullName>Action List</fullName>
+                <default>false</default>
+                <label>Action List</label>
+            </value>
+            <value>
+                <fullName>Surveys</fullName>
+                <default>false</default>
+                <label>Surveys</label>
+            </value>
+            <value>
+                <fullName>Settings</fullName>
+                <default>false</default>
+                <label>Settings</label>
+            </value>
+            <value>
+                <fullName>Cleanup</fullName>
+                <default>false</default>
+                <label>Cleanup</label>
+            </value>
+            <value>
+                <fullName>Tradeshow Contact</fullName>
+                <default>false</default>
+                <label>Tradeshow Contact</label>
+            </value>
+            <value>
+                <fullName>Internal Conversation</fullName>
+                <default>false</default>
+                <label>Internal Conversation</label>
+            </value>
+            <value>
+                <fullName>Healthgrades</fullName>
+                <default>false</default>
+                <label>Healthgrades</label>
+            </value>
+            <value>
+                <fullName>Limelight</fullName>
+                <default>false</default>
+                <label>Limelight</label>
+            </value>
+            <value>
+                <fullName>ADR Set</fullName>
+                <default>false</default>
+                <label>ADR Set</label>
+            </value>
+            <value>
+                <fullName>ADR Re-Set</fullName>
+                <default>false</default>
+                <label>ADR Re-Set</label>
+            </value>
+            <value>
+                <fullName>Sr. Assist Help</fullName>
+                <default>false</default>
+                <label>Sr. Assist Help</label>
+            </value>
+            <value>
+                <fullName>ADR Hunt Set</fullName>
+                <default>false</default>
+                <label>ADR Hunt Set</label>
+            </value>
+            <value>
+                <fullName>ADR Roe Set</fullName>
+                <default>false</default>
+                <label>ADR Roe Set</label>
+            </value>
+            <value>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+                <label>Follow Up</label>
+            </value>
+            <value>
+                <fullName>ADR Doctor Set</fullName>
+                <default>false</default>
+                <label>ADR Doctor Set</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

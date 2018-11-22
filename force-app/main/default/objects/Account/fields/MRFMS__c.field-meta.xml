@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRFMS__c</fullName>
+    <description>Most Recent First Message Sent - used to help track reactivates</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Most Recent First Message Sent</inlineHelpText>
+    <label>MRFMS</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

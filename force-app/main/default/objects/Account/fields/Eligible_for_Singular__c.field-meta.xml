@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eligible_for_Singular__c</fullName>
+    <description>Checks to see if the account is a Smile Source Partner or if their Management System is a CareStream System (Softdent, WinOMS, PracticeWorks or Orthotrac)</description>
+    <externalId>false</externalId>
+    <formula>IF(OR(CONTAINS( Practice_Management_Software__r.Name , &quot;Carestream&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;Alpha&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;Cobb&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;Computer Age&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;Datatrac&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;DentalMac&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;Exact Dental&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;Infologic&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;Intellident&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;KComp&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;PatientBase&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;Practice Outlook&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;OMS Comp Navigator&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;Rovak&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;OPMS&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;OrthoSoft&quot;), CONTAINS( Practice_Management_Software__r.Name , &quot;OrthoWare&quot;), CONTAINS(Practice_Management_Software__c , &quot;WinOMS&quot;), CONTAINS( Practice_Management_Software__c , &quot;PracticeWorks&quot;), CONTAINS(Practice_Management_Software__c , &quot;OrthoTrac&quot;), CONTAINS(  RecurSoft__Primary_Partner__r.Name , &quot;Smile Source&quot; ), CONTAINS(  RecurSoft__Secondary_Partner__r.Name  , &quot;Smile Source&quot; )),FALSE,TRUE)</formula>
+    <inlineHelpText>Customer is eligible for Singular Payments (in-office processing)  if this is checked</inlineHelpText>
+    <label>Eligible for Singular</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

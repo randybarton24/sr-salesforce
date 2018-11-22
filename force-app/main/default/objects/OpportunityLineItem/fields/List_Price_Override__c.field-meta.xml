@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_Price_Override__c</fullName>
+    <description>Used for products that are discounted from regular List Price because of a bundle purchase, but shouldn&#39;t be treated as a discount for approval purposes.  
+
+For example, SR Elite with Limelight Bundle discounts the SR Elite List Price by the List Price of Limelight Bundle.  This field is then used as the new base for pricing discount approvals.  
+
+The field is set via Apex.</description>
+    <externalId>false</externalId>
+    <label>List Price Override</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

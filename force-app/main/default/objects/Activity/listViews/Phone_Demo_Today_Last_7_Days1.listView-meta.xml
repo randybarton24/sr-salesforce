@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Demo_Today_Last_7_Days1</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>Due_Time__c</columns>
+    <columns>EVENT.START_DATE_TIME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>TASK.LAST_UPDATE</columns>
+    <columns>ADR_Set__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACTIVITY.TASK</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Activity_Type__c</field>
+        <operation>equals</operation>
+        <value>Phone Demo,ADR Set</value>
+    </filters>
+    <filters>
+        <field>TASK.DUE_DATE</field>
+        <operation>equals</operation>
+        <value>TOMORROW</value>
+    </filters>
+    <filters>
+        <field>TASK.STATUS</field>
+        <operation>equals</operation>
+        <value>Scheduled,Not Started</value>
+    </filters>
+    <filters>
+        <field>OWNER_ROLE</field>
+        <operation>equals</operation>
+        <value>SAE rep 2</value>
+    </filters>
+    <label>Phone Demo Tomorrow - Team Nick</label>
+    <sharedTo>
+        <role>SAE_Manager_1</role>
+        <role>SAE_Manager_2</role>
+        <role>SAE_Manager_3</role>
+        <role>SAE_Rep_1</role>
+        <role>SAE_Rep_2</role>
+        <role>SAE_Rep_3</role>
+    </sharedTo>
+</ListView>

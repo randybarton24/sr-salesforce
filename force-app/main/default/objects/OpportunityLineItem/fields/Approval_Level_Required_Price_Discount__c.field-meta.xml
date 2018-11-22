@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Level_Required_Price_Discount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Opportunity.Owner.Approval_Exempt__c = true , 0 ,
+	IF( List_Price_Override__c &gt; 0 ,
+		IF( UnitPrice &gt;= /*If the price discount is less than level 1 threshold, 0 Approval Level*/ 
+			(List_Price_Override__c - 
+				(List_Price_Override__c * 
+					MAX( Approved_Price_Discount__c,PricebookEntry.Level_0_Limit_Price_Discount__c )
+				)
+			) , 0 ,
+			IF( UnitPrice &gt;= 
+				(List_Price_Override__c - 
+					(List_Price_Override__c * 
+						MAX( Approved_Price_Discount__c, PricebookEntry.Level_1_Limit_Price_Discount__c )
+					)
+				) , 1 ,
+				IF( UnitPrice &gt;= 
+					(List_Price_Override__c - 
+						(List_Price_Override__c * 
+							MAX( Approved_Price_Discount__c, PricebookEntry.Level_2_Limit_Price_Discount__c )
+						)
+					) , 2 , 3
+				)
+			)
+		)  ,
+		IF( UnitPrice &gt;= 
+			(PricebookEntry.UnitPrice - 
+				(PricebookEntry.UnitPrice * 
+					MAX( Approved_Price_Discount__c, PricebookEntry.Level_0_Limit_Price_Discount__c )
+				)
+			) , 0 ,
+			IF( UnitPrice &gt;= 
+				(PricebookEntry.UnitPrice - 
+					(PricebookEntry.UnitPrice * 
+						MAX( Approved_Price_Discount__c, PricebookEntry.Level_1_Limit_Price_Discount__c )
+					)
+				) , 1 ,
+				IF( UnitPrice &gt;= 
+					(PricebookEntry.UnitPrice - 
+						(PricebookEntry.UnitPrice * 
+							MAX( Approved_Price_Discount__c, PricebookEntry.Level_2_Limit_Price_Discount__c )
+						)
+					) , 2,  3
+				)
+			)
+		)
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approval Level Required - Price Discount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

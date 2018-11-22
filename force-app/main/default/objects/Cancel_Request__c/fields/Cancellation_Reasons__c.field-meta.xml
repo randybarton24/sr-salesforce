@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Reasons__c</fullName>
+    <externalId>false</externalId>
+    <label>Cancellation Reasons</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Cancel_Sub_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Staff Change/Resistance</fullName>
+                <color>#66FFFF</color>
+                <default>false</default>
+                <label>Staff Change/Resistance</label>
+            </value>
+            <value>
+                <fullName>Patient complaints</fullName>
+                <color>#33CCFF</color>
+                <default>false</default>
+                <label>Patient complaints</label>
+            </value>
+            <value>
+                <fullName>Acquired/Office Closing</fullName>
+                <color>#66CCCC</color>
+                <default>false</default>
+                <label>Acquired/Office Closing</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <color>#000000</color>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Financial Hardship</fullName>
+                <color>#3366FF</color>
+                <default>false</default>
+                <label>Financial Hardship</label>
+            </value>
+            <value>
+                <fullName>Buyer&#39;s Remorse</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Buyer&#39;s Remorse</label>
+            </value>
+            <value>
+                <fullName>Contract Averse</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Contract Averse</label>
+            </value>
+            <value>
+                <fullName>Timing</fullName>
+                <color>#6666CC</color>
+                <default>false</default>
+                <label>Timing</label>
+            </value>
+            <value>
+                <fullName>ROI/Price</fullName>
+                <color>#000099</color>
+                <default>false</default>
+                <label>ROI/Price</label>
+            </value>
+            <value>
+                <fullName>Incorrect Use of PM</fullName>
+                <default>false</default>
+                <label>Incorrect Use of PM</label>
+            </value>
+            <value>
+                <fullName>Outdated Technology</fullName>
+                <default>false</default>
+                <label>Outdated Technology</label>
+            </value>
+            <value>
+                <fullName>No Access/Permission To Server</fullName>
+                <default>false</default>
+                <label>No Access/Permission To Server</label>
+            </value>
+            <value>
+                <fullName>Provisioned</fullName>
+                <color>#333399</color>
+                <default>false</default>
+                <label>Provisioned</label>
+            </value>
+            <value>
+                <fullName>Invoicing Errors</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Invoicing Errors</label>
+            </value>
+            <value>
+                <fullName>Unable to Collect</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Unable to Collect</label>
+            </value>
+            <value>
+                <fullName>Unavailable Feature</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+                <label>Unavailable Feature</label>
+            </value>
+            <value>
+                <fullName>Functionality of Current Feature</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Functionality of Current Feature</label>
+            </value>
+            <value>
+                <fullName>User Experience/Interface</fullName>
+                <color>#CC0000</color>
+                <default>false</default>
+                <label>User Experience/Interface</label>
+            </value>
+            <value>
+                <fullName>No Integration</fullName>
+                <color>#FF6666</color>
+                <default>false</default>
+                <label>No Integration</label>
+            </value>
+            <value>
+                <fullName>Quality/Features</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Quality/Features</label>
+            </value>
+            <value>
+                <fullName>Export</fullName>
+                <color>#990000</color>
+                <default>false</default>
+                <label>Export</label>
+            </value>
+            <value>
+                <fullName>Contract/Billing</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Contract/Billing</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <color>#CC33CC</color>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <color>#CC66CC</color>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>Bundle (HG/LL Only)</fullName>
+                <color>#FF99FF</color>
+                <default>false</default>
+                <label>Bundle (HG/LL Only)</label>
+            </value>
+            <value>
+                <fullName>Experience</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Experience</label>
+            </value>
+            <value>
+                <fullName>Responsiveness</fullName>
+                <color>#FFCC66</color>
+                <default>false</default>
+                <label>Responsiveness</label>
+            </value>
+            <value>
+                <fullName>Recurring issues</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Recurring issues</label>
+            </value>
+            <value>
+                <fullName>Outreach</fullName>
+                <color>#FFCC33</color>
+                <default>false</default>
+                <label>Outreach</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Technology</controllingFieldValue>
+            <valueName>Incorrect Use of PM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology</controllingFieldValue>
+            <valueName>Outdated Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology</controllingFieldValue>
+            <valueName>No Access/Permission To Server</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relationship</controllingFieldValue>
+            <valueName>Staff Change/Resistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relationship</controllingFieldValue>
+            <valueName>Patient complaints</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relationship</controllingFieldValue>
+            <valueName>Acquired/Office Closing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relationship</controllingFieldValue>
+            <valueName>Unknown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>Financial Hardship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>Buyer&#39;s Remorse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>Contract Averse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>Timing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>ROI/Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>Provisioned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <valueName>Invoicing Errors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Collections</controllingFieldValue>
+            <valueName>Unable to Collect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Features</controllingFieldValue>
+            <valueName>Unavailable Feature</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Features</controllingFieldValue>
+            <valueName>Functionality of Current Feature</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Features</controllingFieldValue>
+            <valueName>User Experience/Interface</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Integration</controllingFieldValue>
+            <valueName>No Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Integration</controllingFieldValue>
+            <valueName>Quality/Features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Integration</controllingFieldValue>
+            <valueName>Export</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Expectations</controllingFieldValue>
+            <valueName>Contract/Billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Expectations</controllingFieldValue>
+            <valueName>Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Expectations</controllingFieldValue>
+            <valueName>Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Expectations</controllingFieldValue>
+            <valueName>Bundle (HG/LL Only)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Problem Resolution</controllingFieldValue>
+            <valueName>Responsiveness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Problem Resolution</controllingFieldValue>
+            <valueName>Recurring issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lifecycle Management</controllingFieldValue>
+            <valueName>Outreach</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

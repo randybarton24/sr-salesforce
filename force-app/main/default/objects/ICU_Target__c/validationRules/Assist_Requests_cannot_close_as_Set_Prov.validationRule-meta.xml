@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assist_Requests_cannot_close_as_Set_Prov</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Assist_Requested__c = True ,  ISPICKVAL ( Target_Status__c , &quot;Set Provided&quot;))</errorConditionFormula>
+    <errorMessage>You cannot provide a set for this Target because an assist was requested.  Change the Target Status to Assist Provided</errorMessage>
+</ValidationRule>

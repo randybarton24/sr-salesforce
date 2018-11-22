@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Cancellation_Details_required</fullName>
+    <active>false</active>
+    <description>Requires something in the final cancellation details field when closed as a Cancelled or No Sale</description>
+    <errorConditionFormula>(ISPICKVAL ( Stage__c , &quot;Cancelled&quot; ) ||
+ ISPICKVAL ( Stage__c , &quot;No Sale&quot; )) &amp;&amp;
+ ISBLANK ( Cancellation_Details__c )</errorConditionFormula>
+    <errorDisplayField>Cancellation_Details__c</errorDisplayField>
+    <errorMessage>Please enter something in the  Final Cancellation Details field when closing as Cancelled/No Sale</errorMessage>
+</ValidationRule>

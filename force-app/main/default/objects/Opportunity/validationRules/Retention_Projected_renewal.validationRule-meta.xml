@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retention_Projected_renewal</fullName>
+    <active>false</active>
+    <description>Make sure the Projected Contract Expiration/Renewal date is not in the past</description>
+    <errorConditionFormula>Projected_Contract_Expiration_Renewal_Mo__c &lt;  datevalue(CreatedDate)</errorConditionFormula>
+    <errorDisplayField>Projected_Contract_Expiration_Renewal_Mo__c</errorDisplayField>
+    <errorMessage>Please select a future Expiration/Renewal date</errorMessage>
+</ValidationRule>

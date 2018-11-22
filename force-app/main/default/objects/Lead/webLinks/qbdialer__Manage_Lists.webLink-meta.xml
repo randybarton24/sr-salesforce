@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>qbdialer__Manage_Lists</fullName>
+    <availability>online</availability>
+    <description>For Beta</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Manage Lists</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&#39;/js/functions.js&#39;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/lib/jquery.min.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/lib/jsonp.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/lib/persist.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/ISConference.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/c2c/ISClickToCall.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/c2csf.js&quot;)}
+
+var openPopup = function() { 
+    pd.requestSalesforceInstance(sforce.connection.sessionId);
+    pd.makeRequest(&#39;getAuthToken&#39;,
+        function (result) {
+            var jwt = typeof result == &#39;object&#39; &amp;&amp; &#39;token&#39; in result ? result.token : &#39;&#39;;
+            var use_jwt = jwt != &#39;&#39;;
+            var html = &quot;&lt;html&gt;&lt;body&gt;&lt;form id=&#39;createList&#39; name=&#39;createList&#39; method=&#39;post&#39; action=&#39;https://{!$User.qbdialer__is_subdomain__c}.insidesales.com/noauth/manage_sf_lists?&quot;;
+            html += &quot;salesforce_package_version=6.36.21&quot;;
+            if (!use_jwt) {
+                html += &quot;&amp;organization_id={!$Organization.Id}&quot;;
+                html += &quot;&amp;token={!User.qbdialer__is_token__c}&quot;;
+            }
+            html += &quot;&amp;agent_phone={!User.Phone}&#39;&gt;&quot;; 
+            if (use_jwt) {
+                html += &quot;&lt;input type=&#39;hidden&#39; name=&#39;Authorization&#39; value=&#39;&quot;+jwt+&quot;&#39;&gt;&quot;;
+            }
+            html += &quot;&lt;input type=&#39;submit&#39; style=&#39;visibility:hidden&#39;&gt;&lt;&quot;+&quot;/form&gt;&quot;; 
+            html += &quot;&lt;script&gt;document.createList.submit();&lt;&quot;+&quot;/script&gt;&lt;/body&gt;&lt;/html&gt;&quot;; 
+            var host = document.location.protocol+&quot;//&quot;+ 
+            document.location.hostname; 
+            var w = window.open(host, &quot;&quot;, &quot;height=200,width=600,menubar=0,resizable=1,scrollbars=1,status=0,titlebar=0,toolbar=0,location=0&quot;); 
+            w.document.write(html); 
+        }
+    );
+} 
+
+var user_oauth_token = &#39;{!JSENCODE($User.qbdialer__is_token__c)}&#39;;
+if (!user_oauth_token) {
+    window.location.href=&quot;/apex/qbdialer__InsideSales_OAuth_Setup&quot;;
+} else {
+    openPopup();
+}</url>
+</WebLink>

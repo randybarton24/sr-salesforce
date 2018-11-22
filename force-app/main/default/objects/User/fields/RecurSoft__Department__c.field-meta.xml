@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Department__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Mapping with Intacct Department codes.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>100 General&amp;Admin
+110 Finance&amp;Accounting
+120 HR
+200 OSR
+210 ISR
+220 ESR
+300 Business Dev
+400 Marketing
+500 Research &amp; Dev
+510 Integrations
+520 Information Systems
+600 Customer Relationship Management
+610 Retention
+620 Tier2Technical Support</inlineHelpText>
+    <label>Intacct Department</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>100</fullName>
+                <default>true</default>
+                <label>100</label>
+            </value>
+            <value>
+                <fullName>110</fullName>
+                <default>false</default>
+                <label>110</label>
+            </value>
+            <value>
+                <fullName>120</fullName>
+                <default>false</default>
+                <label>120</label>
+            </value>
+            <value>
+                <fullName>200</fullName>
+                <default>false</default>
+                <label>200</label>
+            </value>
+            <value>
+                <fullName>210</fullName>
+                <default>false</default>
+                <label>210</label>
+            </value>
+            <value>
+                <fullName>220</fullName>
+                <default>false</default>
+                <label>220</label>
+            </value>
+            <value>
+                <fullName>230</fullName>
+                <default>false</default>
+                <label>230</label>
+            </value>
+            <value>
+                <fullName>240</fullName>
+                <default>false</default>
+                <label>240</label>
+            </value>
+            <value>
+                <fullName>300</fullName>
+                <default>false</default>
+                <label>300</label>
+            </value>
+            <value>
+                <fullName>310</fullName>
+                <default>false</default>
+                <label>310</label>
+            </value>
+            <value>
+                <fullName>400</fullName>
+                <default>false</default>
+                <label>400</label>
+            </value>
+            <value>
+                <fullName>500</fullName>
+                <default>false</default>
+                <label>500</label>
+            </value>
+            <value>
+                <fullName>510</fullName>
+                <default>false</default>
+                <label>510</label>
+            </value>
+            <value>
+                <fullName>520</fullName>
+                <default>false</default>
+                <label>520</label>
+            </value>
+            <value>
+                <fullName>600</fullName>
+                <default>false</default>
+                <label>600</label>
+            </value>
+            <value>
+                <fullName>610</fullName>
+                <default>false</default>
+                <label>610</label>
+            </value>
+            <value>
+                <fullName>620</fullName>
+                <default>false</default>
+                <label>620</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

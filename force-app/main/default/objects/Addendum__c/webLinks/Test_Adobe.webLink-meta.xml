@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Adobe</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Test Adobe</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/echosign_dev1__AgreementTemplateProcess?masterId={!Addendum__c.Id}&amp;templateId=a3Q310000008neA</url>
+</WebLink>

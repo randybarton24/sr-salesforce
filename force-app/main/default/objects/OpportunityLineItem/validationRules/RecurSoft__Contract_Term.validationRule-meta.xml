@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Contract_Term</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    ISCHANGED(RecurSoft__Contract_Term1__c) &amp;&amp;
+    NOT(ISNUMBER(RecurSoft__Contract_Term1__c)) &amp;&amp;
+    RecurSoft__Contract_Term1__c &lt;&gt; &quot;Evergreen&quot;
+)</errorConditionFormula>
+    <errorDisplayField>RecurSoft__Contract_Term1__c</errorDisplayField>
+    <errorMessage>Please insert a valid number or &quot;Evergreen&quot; name.</errorMessage>
+</ValidationRule>

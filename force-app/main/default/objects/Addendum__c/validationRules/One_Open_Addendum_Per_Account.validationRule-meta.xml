@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_Open_Addendum_Per_Account</fullName>
+    <active>true</active>
+    <errorConditionFormula>(
+				(
+								ISNEW() &amp;&amp; 
+								Account__r.Number_of_Open_Addenda__c &gt; 0 &amp;&amp;
+								NOT( ISPICKVAL( Status__c , &quot;Closed&quot; ) ) &amp;&amp;
+								NOT( ISPICKVAL( Status__c , &quot;Signature Expired&quot; ) ) &amp;&amp;
+								NOT( ISPICKVAL( Status__c , &quot;Signature Declined&quot; ) )
+				) 
+				|| 
+				Account__r.Number_of_Open_Addenda__c &gt; 1
+) 
+
+&amp;&amp;
+
+(
+				NOT
+				(
+								ISCHANGED(Status__c) &amp;&amp;
+								(
+												ISPICKVAL( Status__c , &quot;Closed&quot; ) ||
+												ISPICKVAL( Status__c , &quot;Signature Expired&quot; ) ||
+												ISPICKVAL( Status__c , &quot;Signature Declined&quot; )
+				   	)
+				)
+)</errorConditionFormula>
+    <errorMessage>Only one Addendum can be open per Account.  Please use the other Addendum that is currently open.</errorMessage>
+</ValidationRule>

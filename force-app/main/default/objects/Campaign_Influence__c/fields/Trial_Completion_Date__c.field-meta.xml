@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trial_Completion_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( or(ispickval( Opportunity__r.Account.RecurSoft__Status__c , &quot;Active&quot;),ispickval( Opportunity__r.Account.RecurSoft__Status__c , &quot;Pending Setup&quot;)), Opportunity__r.Trial_End_Date__c, null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Trial Completion Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

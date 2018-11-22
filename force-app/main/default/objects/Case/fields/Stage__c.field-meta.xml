@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Contact</fullName>
+                <default>false</default>
+                <label>No Contact</label>
+            </value>
+            <value>
+                <fullName>Made Contact</fullName>
+                <default>false</default>
+                <label>Made Contact</label>
+            </value>
+            <value>
+                <fullName>Contact Attempted</fullName>
+                <default>false</default>
+                <label>Contact Attempted</label>
+            </value>
+            <value>
+                <fullName>Sync Scheduled</fullName>
+                <default>false</default>
+                <label>Sync Scheduled</label>
+            </value>
+            <value>
+                <fullName>Sync Installed</fullName>
+                <default>false</default>
+                <label>Sync Installed</label>
+            </value>
+            <value>
+                <fullName>Training Scheduled</fullName>
+                <default>false</default>
+                <label>Training Scheduled</label>
+            </value>
+            <value>
+                <fullName>Training Completed</fullName>
+                <default>false</default>
+                <label>Training Completed</label>
+            </value>
+            <value>
+                <fullName>Activated</fullName>
+                <default>false</default>
+                <label>Activated</label>
+            </value>
+            <value>
+                <fullName>Resolving Issues</fullName>
+                <default>false</default>
+                <label>Resolving Issues</label>
+            </value>
+            <value>
+                <fullName>Made Offer</fullName>
+                <default>false</default>
+                <label>Made Offer</label>
+            </value>
+            <value>
+                <fullName>Sent Addendum</fullName>
+                <default>false</default>
+                <label>Sent Addendum</label>
+            </value>
+            <value>
+                <fullName>Offer Rejected</fullName>
+                <default>false</default>
+                <label>Offer Rejected</label>
+            </value>
+            <value>
+                <fullName>Dispute Resolution</fullName>
+                <default>false</default>
+                <label>Dispute Resolution</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

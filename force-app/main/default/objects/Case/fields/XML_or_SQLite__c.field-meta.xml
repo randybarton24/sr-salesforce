@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>XML_or_SQLite__c</fullName>
+    <externalId>false</externalId>
+    <label>XML or SQLite</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>XML</fullName>
+                <default>false</default>
+                <label>XML</label>
+            </value>
+            <value>
+                <fullName>SQLite</fullName>
+                <default>false</default>
+                <label>SQLite</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

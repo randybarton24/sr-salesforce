@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Activation_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Activation date of the subscription. Triggers generation of the billing schedule for products set up with Billing based on Activation date.</inlineHelpText>
+    <label>Activation Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

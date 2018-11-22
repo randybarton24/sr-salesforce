@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Closed_Won_Account_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISPICKVAL( $User.UserType , &quot;AutomatedProcess&quot; )) &amp;&amp; 
+NOT( Apex_Override_Validation__c ) &amp;&amp;
+NOT( RecordType.Name = &quot;Acute/Ambulatory New Business&quot; ) &amp;&amp;
+OR(
+ISBLANK( Account.RecurSoft__Intacct_Entity__c ), 
+ISPICKVAL(Account.RecurSoft__Channel__c, &quot;&quot;),
+ISPICKVAL(Account.Industry, &quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please set the Account fields Intacct Entity, Channel and Vertical</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PM_for_No_Current_Integration__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the name of the integration if it is not a current integration.</inlineHelpText>
+    <label>PM for No Current Integration</label>
+    <length>75</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

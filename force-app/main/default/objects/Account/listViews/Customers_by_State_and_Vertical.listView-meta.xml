@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customers_by_State_and_Vertical</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ApptegicEngagement__c</columns>
+    <columns>ApptegicEngagementTrend__c</columns>
+    <columns>ApptegicFilters__c</columns>
+    <columns>ApptegicLastActivity__c</columns>
+    <columns>Practice_Management_Software__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.INDUSTRY</field>
+        <operation>equals</operation>
+        <value>Vision</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.ADDRESS1_STATE</field>
+        <operation>equals</operation>
+        <value>Montana</value>
+    </filters>
+    <filters>
+        <field>RecurSoft__Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <label>Customers by State &amp; Vertical w/Evergage</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

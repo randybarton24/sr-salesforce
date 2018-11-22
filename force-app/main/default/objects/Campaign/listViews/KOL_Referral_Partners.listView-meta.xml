@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KOL_Referral_Partners</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>Referral_Partner_ID__c</columns>
+    <columns>Related_Customer_Account__c</columns>
+    <columns>Related_Contact__c</columns>
+    <columns>Speaker_KOL__c</columns>
+    <columns>Has_Been_Contacted__c</columns>
+    <columns>Agreed_to_Terms_of_Service__c</columns>
+    <columns>X1099_or_W9_Status__c</columns>
+    <columns>W9_Pay_to_Name__c</columns>
+    <columns>W9_Address__c</columns>
+    <columns>Referral_Partner_Contract_Date__c</columns>
+    <columns>Industry__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.NAME</field>
+        <operation>startsWith</operation>
+        <value>KOL/Referral Partner -</value>
+    </filters>
+    <label>KOL/Referral Partners</label>
+    <sharedTo>
+        <role>Business_Development</role>
+        <role>Business_Development_Manager</role>
+        <role>SVP_Sales</role>
+        <role>VP_Outside_Sales</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Book_Unauthorized</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( Pricebook2Id ) &amp;&amp; 
+
+((Pricebook2.Name = &quot;Standard Price Book&quot; &amp;&amp; 
+NOT( $Permission.Standard_Price_Book )) ||
+
+((Pricebook2.Name = &quot;8. Add Product - CE&quot; ||
+Pricebook2.Name = &quot;8. Add Product - CE - Advance Billing&quot;) &amp;&amp; 
+NOT( $Permission.X8_Add_Product_CE )) ||
+
+((Pricebook2.Name = &quot;8. Add Product - ICU&quot; ||
+Pricebook2.Name = &quot;8. Add Product - ICU - Advance Billing&quot;) &amp;&amp; 
+NOT( $Permission.X8_Add_Product_ICU )) ||
+
+((Pricebook2.Name = &quot;8. Add Product - PCU&quot; ||
+Pricebook2.Name = &quot;8. Add Product - PCU&quot;) &amp;&amp; 
+NOT( $Permission.X8_Add_Product_PCU )))</errorConditionFormula>
+    <errorMessage>You are not authorized to choose this Price Book</errorMessage>
+</ValidationRule>

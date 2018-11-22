@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Count_Aggregated_Monthly_Min__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Deprecated-Count Aggregated Monthly Min</label>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.RecurSoft__Counter_Aggregated_Monthly_Min__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

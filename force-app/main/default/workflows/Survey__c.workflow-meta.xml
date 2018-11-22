@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>EBR_Survey_Invite</fullName>
+        <description>EBR Survey Invite</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>srreplies@solutionreach.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Client_Success_Folder/Solutionreach_EBR_Survey</template>
+    </alerts>
+    <alerts>
+        <fullName>Google_Review_Request</fullName>
+        <description>Google Review Request</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>srreplies@solutionreach.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Client_Success_Folder/Google_Review_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Playbook_Case_Survey_Email</fullName>
+        <description>Playbook Case Survey Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>srreplies@solutionreach.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Client_Success_Folder/Solutionreach_Post_Success_Coach_Survey</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Post_Case_Survey</fullName>
+        <description>Send Post Case Survey</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>srreplies@solutionreach.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Client_Success_Folder/New_Post_Case_Survey_Invite</template>
+    </alerts>
+    <alerts>
+        <fullName>Yelp_Review_Request</fullName>
+        <description>Yelp Review Request</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>srreplies@solutionreach.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Client_Success_Folder/Yelp_Review_Request</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Survey_Completed_Checkbox</fullName>
+        <field>Survey_Completed__c</field>
+        <literalValue>1</literalValue>
+        <name>Survey Completed Checkbox</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Survey_Completed_Date</fullName>
+        <field>Survey_Completion_Date__c</field>
+        <formula>Now()</formula>
+        <name>Survey Completed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>Survey_Message</fullName>
+        <apiVersion>30.0</apiVersion>
+        <endpointUrl>http://www.solutionreach.com</endpointUrl>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>ryanb@solutionreach.com</integrationUser>
+        <name>Survey Message</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Sending email for EBR Case Survey</fullName>
+        <actions>
+            <name>EBR_Survey_Invite</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecurSoft__Status__c</field>
+            <operation>equals</operation>
+            <value>Active,Pending Setup</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Survey__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>EBR Case Survey</value>
+        </criteriaItems>
+        <description>Sends out the Playbook Survey email to the contacts email address.  Matt Schetselaar</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sending email for Playbook Survey</fullName>
+        <actions>
+            <name>Playbook_Case_Survey_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecurSoft__Status__c</field>
+            <operation>equals</operation>
+            <value>Active,Pending Setup</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Survey__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Playbook Case Survey</value>
+        </criteriaItems>
+        <description>Sends out the Playbook Survey email to the contacts email address.  Matt Schetselaar</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sending email for Survey</fullName>
+        <actions>
+            <name>Send_Post_Case_Survey</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecurSoft__Status__c</field>
+            <operation>equals</operation>
+            <value>Active,Pending Setup</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Survey__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Post Case Survey</value>
+        </criteriaItems>
+        <description>Sends out the Survey email to the contacts email address.  Matt Schetselaar</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Survey Completed Date</fullName>
+        <actions>
+            <name>Survey_Completed_Checkbox</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Survey_Completed_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Survey__c.FS_Survey_ID__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Adds a Completed Date when a Survey comes in from Fluid Surveys - Matthew Schetselaar</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

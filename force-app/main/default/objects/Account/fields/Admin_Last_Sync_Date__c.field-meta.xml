@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin_Last_Sync_Date__c</fullName>
+    <description>Stores the date of the last Sync</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is updated every morning and shows when the last time the office had a successful sync</inlineHelpText>
+    <label>Admin Last Sync Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

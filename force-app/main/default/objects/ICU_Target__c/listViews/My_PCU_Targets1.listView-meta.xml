@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_PCU_Targets1</fullName>
+    <columns>NAME</columns>
+    <columns>Target_Status__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>PCU_Call_Priority__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>ICU_Target__c.PCU_Record</value>
+    </filters>
+    <label>My PCU Targets</label>
+</ListView>

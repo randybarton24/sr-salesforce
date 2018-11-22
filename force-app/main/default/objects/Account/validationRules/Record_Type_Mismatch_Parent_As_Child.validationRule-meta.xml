@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Type_Mismatch_Parent_As_Child</fullName>
+    <active>false</active>
+    <errorConditionFormula>((RecordType.Name = &quot;Grandparent Account&quot; &amp;&amp; 
+ParentId != null)) &amp;&amp;
+(ISBLANK( Subscriber_ID__c ) ||
+ISNULL( Subscriber_ID__c )) &amp;&amp;
+(ISBLANK( Parent.Subscriber_ID__c ) ||
+ISNULL( Parent.Subscriber_ID__c )) &amp;&amp;
+(Parent.RecordType.Name != &quot;Partner&quot;)</errorConditionFormula>
+    <errorMessage>This Account record type cannot have a parent Account.  Please change the record type to a child record type if a parent Account exists.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Usage_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Determines the pricing calculation of usage records.</inlineHelpText>
+    <label>Usage Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>RecurSoft__Product_Based_On__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Period</fullName>
+                <default>false</default>
+                <label>Period</label>
+            </value>
+            <value>
+                <fullName>Cumulative</fullName>
+                <default>false</default>
+                <label>Cumulative</label>
+            </value>
+            <value>
+                <fullName>Usage only</fullName>
+                <default>false</default>
+                <label>Usage only</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Aggregated Monthly Minimum Amount</fullName>
+                <default>false</default>
+                <label>Aggregated Monthly Minimum Amount</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Tiers - Usage</controllingFieldValue>
+            <controllingFieldValue>Brackets - Usage</controllingFieldValue>
+            <valueName>Period</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiers - Usage</controllingFieldValue>
+            <controllingFieldValue>Brackets - Usage</controllingFieldValue>
+            <valueName>Cumulative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiers - Usage</controllingFieldValue>
+            <controllingFieldValue>Brackets - Usage</controllingFieldValue>
+            <controllingFieldValue>Each</controllingFieldValue>
+            <valueName>Usage only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiers - Usage</controllingFieldValue>
+            <controllingFieldValue>Brackets - Usage</controllingFieldValue>
+            <controllingFieldValue>Each</controllingFieldValue>
+            <valueName>Not Applicable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiers - Usage</controllingFieldValue>
+            <controllingFieldValue>Brackets - Usage</controllingFieldValue>
+            <controllingFieldValue>Each</controllingFieldValue>
+            <valueName>Aggregated Monthly Minimum Amount</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

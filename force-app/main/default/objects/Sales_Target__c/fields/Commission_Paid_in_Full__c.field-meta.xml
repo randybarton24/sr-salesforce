@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commission_Paid_in_Full__c</fullName>
+    <externalId>false</externalId>
+    <formula>Paid_Commission__c =  Earned_Commission__c</formula>
+    <label>Commission Paid in Full</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

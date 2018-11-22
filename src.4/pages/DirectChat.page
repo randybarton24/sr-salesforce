@@ -1,0 +1,92 @@
+<apex:page standardController="User" showHeader="false">
+    <body  style="background-image:url(https://cdn2.hubspot.net/hubfs/2332687/assets/bg/photo-sr-bg-mrk2165.jpg);     background-size: cover; margin: 80px 0; display: block;"> 
+       <div style="    width: 550px; position: relative;
+    
+    margin: 0 auto;
+    text-align: center;">
+
+      <div style="position: absolute;
+    top: -50px;
+    left: 50%;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    background-color: #00a8e2;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;">
+          <img style="vertical-align: middle; border:0; text-align:center;" src="https://www.smilereminder.com/sr/images/logo-login.png" alt="SR Logo" />
+      </div>
+
+      <div style="position: relative;
+    padding: 65px 25px 50px 25px;
+    margin-bottom: 1em;
+    background-color: #FFF;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.65);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.65);">
+
+        <h3>Welcome to Solutionreach</h3>
+        <p>Please ensure the following steps are completed before initializing your chat with Solutionreach as these are the most common reasons for synchronization issues.
+</p>
+<p>
+<ol align="left">1. Ensure that the computer with the Solutionreach Sync Launcher is currently powered on and logged in. If already on and logged in, please restart the computer.</ol>
+<ol align="left">2. If you are required to run reports from your practice management software, please ensure they are run and in the designated folder.</ol>
+<ol align="left">3. If it has been 24 hours since you took action on Steps 1 and 2, please click below to chat with a technical representative.</ol>
+</p>
+    
+      <!-- dta_online is displayed whenever the specific agent is available to chat. -->
+<!--  <div id="dta_online" style="display: none;"> -->
+
+    <!-- A valid button is required here even though it's direct-to-agent - some button settings still apply. -->
+    <!-- {!left(user.id,15)} is needed to truncate an 18-char ID to the 15-char version that Live Agent uses. -->
+<!--    <a href="javascript://Chat" onclick="liveagent.startChat('57331000000NZza', '{!left(user.id,15)}')">Chat with {!user.name}!</a> -->
+ 
+<!--  </div>  -->
+ 
+  <!-- dta_offline is displayed if the specific agent is unavailable. -->
+<!--  <div id="dta_offline" style="display: none;">  -->
+ 
+    <!-- button_online is displayed if any agents are available to chat for the button. -->
+    <div id="button_online" style="display: none;">If you&rsquo;d like to chat, 
+      <a href="javascript://Chat" onclick="liveagent.startChat('57331000000NZza')">click here to chat with an agent</a>.
+    </div>
+ 
+    <!-- button_offline is displayed if no agents are available to chat for the button. -->
+    <div id="button_offline" style="display: none;">Sorry, all agents appear to be unavailable.</div>
+ 
+<!--  </div>  -->
+ 
+  <!-- Change the domain name to the correct one for your org. -->
+  <script type='text/javascript' src='https://d.la1-c1cs-phx.salesforceliveagent.com/content/g/js/39.0/deployment.js'></script>
+ 
+  <script type='text/javascript'>
+    /* The following calls pass the user ID as the first argument and show whether the agent is online.*/
+    liveagent.showWhenOnline('{!left(user.id,15)}', document.getElementById('dta_online'));
+    liveagent.showWhenOffline('{!left(user.id,15)}', document.getElementById('dta_offline'));
+ 
+    /* The following calls pass the button ID as the first argument and show whether
+    any agents are available to handle chats from the button. */
+    liveagent.showWhenOnline('57331000000NZza', document.getElementById('button_online'));
+    liveagent.showWhenOffline('57331000000NZza', document.getElementById('button_offline'));
+ 
+    /* This domain and the IDs are specific to your org, so replace these with your own. */
+    liveagent.init('https://d.la4-c2-was.salesforceliveagent.com/chat', '572i00000002cc4', '00Di0000000dHcr');
+  </script>
+
+
+       
+
+      </div> 
+
+
+    </div> 
+    </body>
+
+    
+</apex:page>

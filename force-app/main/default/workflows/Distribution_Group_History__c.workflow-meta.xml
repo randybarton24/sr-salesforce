@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>DistGroupHistory_Email_NewAssignment</fullName>
+        <description>DistGroupHistory_Email_NewAssignment</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>randy@solutionreach.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>srreplies@solutionreach.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/DistGroupHistory_Email_NewAssignment</template>
+    </alerts>
+</Workflow>

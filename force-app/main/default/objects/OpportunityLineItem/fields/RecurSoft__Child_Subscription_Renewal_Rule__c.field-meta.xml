@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Child_Subscription_Renewal_Rule__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Used in Master Subscription process.</inlineHelpText>
+    <label>Child Subscription Renewal Rule</label>
+    <referenceTo>RecurSoft__Renewal_Rule__c</referenceTo>
+    <relationshipLabel>Opportunity Product (Child Subscription Renewal Rule)</relationshipLabel>
+    <relationshipName>Opportunity_Product</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

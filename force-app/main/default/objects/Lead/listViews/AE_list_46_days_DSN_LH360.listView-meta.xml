@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AE_list_46_days_DSN_LH360</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>Competitor__c</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Last_ROE_Task_Date__c</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Practice_Software__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>lessThan</operation>
+        <value>N_DAYS_AGO:31</value>
+    </filters>
+    <filters>
+        <field>Practice_Software__c</field>
+        <operation>contains</operation>
+        <value>DSN</value>
+    </filters>
+    <label>AE list: 46 days - DSN - LH360</label>
+    <sharedTo>
+        <role>SAE_Manager_5</role>
+        <role>SAE_Rep_5</role>
+    </sharedTo>
+</ListView>

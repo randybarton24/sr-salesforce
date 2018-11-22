@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_SRSR</fullName>
+    <active>false</active>
+    <description>Blocks the sale of SR Smart Reviews.  For pre-release period.</description>
+    <errorConditionFormula>$Profile.Name != &quot;System Administrator&quot; &amp;&amp;
+$User.Username != &quot;nroberts@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;judd@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;zach@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;matt@solutionreach.com&quot; &amp;&amp; 
+ ISPICKVAL( Product2.Family , &quot;SR Smart Reviews&quot; )</errorConditionFormula>
+    <errorMessage>SR Smart Reviews is not currently available.</errorMessage>
+</ValidationRule>

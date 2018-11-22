@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ADR_Phone_Demo_Today_Team_Tom</fullName>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>Due_Time__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>TASK.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACTIVITY.TASK</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Activity_Type__c</field>
+        <operation>equals</operation>
+        <value>ADR Set,Phone Demo,ADR Re-Set</value>
+    </filters>
+    <filters>
+        <field>TASK.DUE_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>TASK.STATUS</field>
+        <operation>equals</operation>
+        <value>Scheduled,Not Started</value>
+    </filters>
+    <filters>
+        <field>OWNER_ROLE</field>
+        <operation>equals</operation>
+        <value>SAE Rep 2</value>
+    </filters>
+    <label>ADR Phone Demo Today - Team Tom</label>
+    <sharedTo>
+        <role>SAE_Manager_6</role>
+        <role>SAE_Rep_6</role>
+    </sharedTo>
+</ListView>

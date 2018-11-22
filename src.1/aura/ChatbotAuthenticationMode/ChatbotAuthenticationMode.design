@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="bot" label="Bot" description="Configuration name of the bot to be connected."/>
+  	<design:attribute name="customAttributesProcessor" label="Custom Attributes Processor" description="Custom JSON that will be sent to NLP with first call"/>
+</design:component>

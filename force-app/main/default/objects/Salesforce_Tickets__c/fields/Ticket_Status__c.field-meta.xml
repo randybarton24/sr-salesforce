@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ticket_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Where the ticket status is</inlineHelpText>
+    <label>Ticket Status</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+                <label>Assigned</label>
+            </value>
+            <value>
+                <fullName>More Information needed</fullName>
+                <default>false</default>
+                <label>More Information needed</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Closed No Resolution</fullName>
+                <default>false</default>
+                <label>Closed No Resolution</label>
+            </value>
+            <value>
+                <fullName>Closed Fixed</fullName>
+                <default>false</default>
+                <label>Closed Fixed</label>
+            </value>
+            <value>
+                <fullName>Closed No Fix</fullName>
+                <default>false</default>
+                <label>Closed No Fix</label>
+            </value>
+            <value>
+                <fullName>Open Project</fullName>
+                <default>false</default>
+                <label>Open Project</label>
+            </value>
+            <value>
+                <fullName>Closed Project</fullName>
+                <default>false</default>
+                <label>Closed Project</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

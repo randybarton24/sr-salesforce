@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROE_Task__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(
+(((OwnerProfile__c = &quot;Enterprise Sales&quot; ||
+    OwnerProfile__c = &quot;Extended Sales&quot; ||
+    OwnerProfile__c = &quot;Inside Sales&quot; ||
+    OwnerProfile__c = &quot;Outside Sales&quot; ||
+    OwnerProfile__c = &quot;Sales VP&quot; ||
+OwnerProfile__c = &quot;Sales Manager&quot;) &amp;&amp;
+
+    ispickval(Status, &quot;Completed&quot;) &amp;&amp;
+    
+    ((ispickval(Activity_Type__c,&quot;Outbound Call&quot;) &amp;&amp;
+        ispickval(Activity_Results__c,&quot;Spoke with-&quot;)) ||
+
+      ispickval(Activity_Type__c,&quot;Inbound Call&quot;) ||
+
+      (ispickval(Activity_Type__c,&quot;In-Person Follow up&quot;) &amp;&amp;
+        ispickval(Activity_Results__c,&quot;Spoke with-&quot;)) ||
+
+      (ispickval(Activity_Type__c,&quot;In-Person Cold Call&quot;) &amp;&amp;
+        ispickval(Activity_Results__c,&quot;Spoke with-&quot;)) ||
+
+      (ispickval(Activity_Type__c,&quot;Email&quot;) &amp;&amp;
+        ispickval(Activity_Results__c,&quot;Received&quot;)) ||
+
+      (ispickval(Activity_Type__c,&quot;In-Person Demo&quot;) &amp;&amp;
+        ispickval(Activity_Results__c,&quot;Spoke with-&quot;)) ||
+
+      ispickval(Activity_Type__c,&quot;ESR Event&quot;) ||
+
+      ispickval(Activity_Type__c,&quot;OSR Event&quot;) ||
+
+      (ispickval(Activity_Type__c,&quot;Phone Demo&quot;) &amp;&amp;
+        ispickval(Activity_Results__c,&quot;Spoke with-&quot;)) ||
+
+      (ispickval(Activity_Type__c,&quot;Phone Cold Call&quot;) &amp;&amp;
+        ispickval(Activity_Results__c,&quot;Spoke with-&quot;)))) ||
+
+ADR_Set_Received__c = true),
+true,
+false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ROE Task</label>
+    <type>Checkbox</type>
+</CustomField>

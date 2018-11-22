@@ -1,0 +1,18 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,force:lightningQuickAction" access="global">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="sObjectName" type="String" />
+ 
+     <force:recordData aura:id="recordLoaderChild"
+      recordId="{!v.recordId}"
+      fields="Id,Status__c,QueueID__c"
+      targetFields="{!v.childRecord}"
+      targetError="{!v.recordError}"
+      recordUpdated="{!c.doInit}"
+      mode = "EDIT"
+      />
+    
+    <div id="waitingGifDiv" style="padding-left:190px;padding-top:70px; display: block">
+         <img src="{!'/img/loading.gif'}" width="25" height="25" style="float:center-right;" ></img>
+         Processing, Please wait...
+    </div>	
+</aura:component>

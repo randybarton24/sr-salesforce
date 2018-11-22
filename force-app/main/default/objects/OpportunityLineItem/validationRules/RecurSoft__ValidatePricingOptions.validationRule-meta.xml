@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__ValidatePricingOptions</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    AND(
+        NOT(
+            ISNEW()
+        ),
+        AND(
+            AND(
+                OR(
+                    RecurSoft__Price_Based_On__c = &#39;Tiers - Usage&#39;,
+                    RecurSoft__Price_Based_On__c = &#39;Absolute Tiers - Usage&#39;,
+                    RecurSoft__Price_Based_On__c = &#39;Brackets - Usage&#39;
+                ),
+                RecurSoft__Usage_Type__c &lt;&gt; &#39;Not Applicable&#39;
+            ),
+            OR(
+                AND(
+                    OR(
+                        ISBLANK(RecurSoft__Tier_1_Price__c),
+                        ISBLANK(RecurSoft__Tier_1_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_2_Price__c),
+                        ISBLANK(RecurSoft__Tier_2_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_3_Price__c),
+                        ISBLANK(RecurSoft__Tier_3_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_4_Price__c),
+                        ISBLANK(RecurSoft__Tier_4_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_5_Price__c),
+                        ISBLANK(RecurSoft__Tier_5_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_6_Price__c),
+                        ISBLANK(RecurSoft__Tier_6_Qty__c)
+                    )
+                ),
+                AND(
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_1__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_1__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_2__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_2__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_3__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_3__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_4__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_4__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_5__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_5__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_6__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_6__c)
+                    )
+                )
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Pricing Options and Usage rates should have at least one tier populated.</errorMessage>
+</ValidationRule>

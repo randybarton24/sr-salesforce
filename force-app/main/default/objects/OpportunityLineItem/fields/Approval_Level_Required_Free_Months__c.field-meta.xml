@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Level_Required_Free_Months__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Opportunity.Owner.Approval_Exempt__c = true , 0 ,
+	IF( Number_of_Free_Months__c &gt; 
+		MAX(Approved_Free_Months__c, PricebookEntry.Level_2_Limit_Free_Months__c ) , 3 , 
+		IF( Number_of_Free_Months__c &gt; 
+			MAX(Approved_Free_Months__c, PricebookEntry.Level_1_Limit_Free_Months__c ) , 2 , 
+			IF( Number_of_Free_Months__c &gt; 
+				MAX(Approved_Free_Months__c, PricebookEntry.Level_0_Limit_Free_Months__c ) , 1 , 0
+			)
+		)
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approval Level Required - Free Months</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

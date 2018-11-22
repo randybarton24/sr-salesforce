@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsRoundRobin__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is checked by Pardot automatically or should be checked if manually assigning leads to the Round Robin queues.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is checked by Pardot automatically or should be checked if manually assigning leads to the Round Robin queues.</inlineHelpText>
+    <label>IsRoundRobin</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

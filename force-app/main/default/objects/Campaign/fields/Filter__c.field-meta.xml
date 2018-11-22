@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filter__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Type , &quot;Trade Show/Event&quot; ) , IF( StartDate &gt;= Today()-14 , true, false ) , true )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Filter</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,25 @@
+<!--
+ * File:        CustomerContactSync.page
+ * Project:     Subscription Billing 
+ * Date:        May 20, 2014
+ * Created By:  Ionut Boghean
+ * *************************************************************************
+ * Description: The page is used to start the customer/contact sync via button or link
+ * *************************************************************************
+ * History:
+ -->
+<apex:page standardController="Opportunity" extensions="IntacctIntegrationSyncHandler" action="{!startIntegration}" showHeader="false" sidebar="false">
+    <apex:pageMessages escape="false">
+    </apex:pageMessages>
+    <apex:form id="notClosedWon" >
+    <apex:outputPanel id="test" >
+            <apex:commandButton style="margin-left:50px!important; margin-top: 10px!important;" id="confirm"  value="Close Window"  onclick="javascript:closePopupAndRefreshOpp();"/>
+    </apex:outputPanel>
+    </apex:form>
+    <script language="JavaScript" type="text/javascript">
+       function closePopupAndRefreshOpp() {
+            window.opener.location.href="/{!$CurrentPage.parameters.id}" ;
+            window.top.close();
+       }
+</script>
+</apex:page>

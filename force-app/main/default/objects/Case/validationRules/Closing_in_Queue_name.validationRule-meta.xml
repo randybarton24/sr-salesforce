@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closing_in_Queue_name</fullName>
+    <active>true</active>
+    <description>Blocking the closing of a case while still assigned to a Queue</description>
+    <errorConditionFormula>AND(
+     Not(Owner:Queue.Id=&quot;00Gi0000003T8Bg&quot;), 
+     NOT(ISBLANK(Owner:Queue.Id)), 
+     ISPICKVAL(Status, &quot;Closed&quot;),
+				Account.Do_Not_Support_Sync__c = false
+)</errorConditionFormula>
+    <errorMessage>You cannot close a case that is still assigned to a Queue.  Please claim the Case and then try closing it again.</errorMessage>
+</ValidationRule>

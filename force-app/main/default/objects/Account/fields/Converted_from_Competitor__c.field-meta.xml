@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Converted_from_Competitor__c</fullName>
+    <externalId>false</externalId>
+    <label>Converted from Competitor</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>4 Patient Care</fullName>
+                <default>false</default>
+                <label>4 Patient Care</label>
+            </value>
+            <value>
+                <fullName>DemandForce</fullName>
+                <default>false</default>
+                <label>DemandForce</label>
+            </value>
+            <value>
+                <fullName>eCentral</fullName>
+                <default>false</default>
+                <label>eCentral</label>
+            </value>
+            <value>
+                <fullName>eReminders</fullName>
+                <default>false</default>
+                <label>eReminders</label>
+            </value>
+            <value>
+                <fullName>Lighthouse</fullName>
+                <default>false</default>
+                <label>Lighthouse</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Patient Activator</fullName>
+                <default>false</default>
+                <label>Patient Activator</label>
+            </value>
+            <value>
+                <fullName>Phone Tree</fullName>
+                <default>false</default>
+                <label>Phone Tree</label>
+            </value>
+            <value>
+                <fullName>Practice Mojo</fullName>
+                <default>false</default>
+                <label>Practice Mojo</label>
+            </value>
+            <value>
+                <fullName>Revenue Wel</fullName>
+                <default>false</default>
+                <label>Revenue Wel</label>
+            </value>
+            <value>
+                <fullName>Sesame</fullName>
+                <default>false</default>
+                <label>Sesame</label>
+            </value>
+            <value>
+                <fullName>Teledental</fullName>
+                <default>false</default>
+                <label>Teledental</label>
+            </value>
+            <value>
+                <fullName>Televox</fullName>
+                <default>false</default>
+                <label>Televox</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Websystem3</fullName>
+                <default>false</default>
+                <label>Websystem3</label>
+            </value>
+            <value>
+                <fullName>1800 Dentists</fullName>
+                <default>false</default>
+                <label>1800 Dentists</label>
+            </value>
+            <value>
+                <fullName>AbleDent</fullName>
+                <default>false</default>
+                <label>AbleDent</label>
+            </value>
+            <value>
+                <fullName>Weave</fullName>
+                <default>false</default>
+                <label>Weave</label>
+            </value>
+            <value>
+                <fullName>Updox</fullName>
+                <default>false</default>
+                <label>Updox</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

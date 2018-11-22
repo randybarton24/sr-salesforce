@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Cancel_Request_Case</fullName>
+    <availability>online</availability>
+    <description>Creates a Cancel Request Case Type and assigns to Client Engagement Que</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Create Cancel Request Case</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>https://solutionreach.my.salesforce.com/500/e?retURL=/{!Account.Id}&amp;def_account_id={!Account.Id}&amp;Cas4={!Account.Id}&amp;newOwn=Client+Engagement&amp;newOwn_lkid=00Gi00000034hSn&amp;RecordType=012i0000001EFvk&amp;ent=Case</url>
+</WebLink>

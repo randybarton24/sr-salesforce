@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>CS Round Robin</label>
+    <nameField>
+        <label>CS Round Robin Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>CS Round Robin</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts>
+        <customTabListAdditionalFields>Rep_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Team_Assignment__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Case_Limit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Load__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Number_of_Cases_Assigned__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Open_Activation_Cases__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Rep_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Team_Assignment__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Rep_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Team_Assignment__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Uncheck this box to stop receiving new Assignments</inlineHelpText>
+        <label>Active?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Case_Limit__c</fullName>
+        <defaultValue>1</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total number of Open Cases this rep can handle</inlineHelpText>
+        <label>Case Limit</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Load__c</fullName>
+        <externalId>false</externalId>
+        <formula>Case(  RecordType.Name ,&quot;Success Coach&quot;, (Open_Onboarding_Cases__c + Open_Opportunities_Assigned__c ) / Case_Limit__c, &quot;Implementation Rep&quot;, Open_Activation_Cases__c / Case_Limit__c, &quot;Tech Rep&quot;, Open_Sync_Cases__c / Case_Limit__c,  &quot;ICU Rep&quot;, Open_Targets__c / Target_Limit__c, Open_Activation_Cases__c / Case_Limit__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Load %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Name_Safe_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Name)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Name Safe ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Cases_Assigned__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Cases assigned since Round Robin instituted</inlineHelpText>
+        <label>Number of Cases Assigned</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Activation_Cases__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Number of Open Activation Cases</inlineHelpText>
+        <label>Open Activation Cases</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Onboarding_Cases__c</fullName>
+        <externalId>false</externalId>
+        <label>Open Onboarding Cases</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Opportunities_Assigned__c</fullName>
+        <externalId>false</externalId>
+        <label>Open Opportunities Assigned</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Sync_Cases__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Total number of sync cases that are currently open</inlineHelpText>
+        <label>Open Sync Cases</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Targets__c</fullName>
+        <externalId>false</externalId>
+        <label>Open Targets</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Sync_Team_to_work__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the primary team this rep should be assigned Sync cases for.</inlineHelpText>
+        <label>Primary Sync Team to work</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dentrix 1 Team</fullName>
+                    <default>false</default>
+                    <label>Dentrix 1 Team</label>
+                </value>
+                <value>
+                    <fullName>Dentrix 2 Team</fullName>
+                    <default>false</default>
+                    <label>Dentrix 2 Team</label>
+                </value>
+                <value>
+                    <fullName>EagleSoft Team</fullName>
+                    <default>false</default>
+                    <label>EagleSoft Team</label>
+                </value>
+                <value>
+                    <fullName>SCOPE Team</fullName>
+                    <default>false</default>
+                    <label>SCOPE Team</label>
+                </value>
+                <value>
+                    <fullName>Global Team</fullName>
+                    <default>false</default>
+                    <label>Global Team</label>
+                </value>
+                <value>
+                    <fullName>Vision Team</fullName>
+                    <default>false</default>
+                    <label>Vision Team</label>
+                </value>
+                <value>
+                    <fullName>Medical 1 Team</fullName>
+                    <default>false</default>
+                    <label>Medical 1 Team</label>
+                </value>
+                <value>
+                    <fullName>Medical 2 Team</fullName>
+                    <default>false</default>
+                    <label>Medical 2 Team</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rep_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rep Name</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CS_Round_Robin</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Secondary_Sync_Team_to_work__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This would be a secondary team that the rep could also work on</inlineHelpText>
+        <label>Secondary Sync Team to work</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dentrix 1 Team</fullName>
+                    <default>false</default>
+                    <label>Dentrix 1 Team</label>
+                </value>
+                <value>
+                    <fullName>Dentrix 2 Team</fullName>
+                    <default>false</default>
+                    <label>Dentrix 2 Team</label>
+                </value>
+                <value>
+                    <fullName>EagleSoft Team</fullName>
+                    <default>false</default>
+                    <label>EagleSoft Team</label>
+                </value>
+                <value>
+                    <fullName>SCOPE Team</fullName>
+                    <default>false</default>
+                    <label>SCOPE Team</label>
+                </value>
+                <value>
+                    <fullName>Global Team</fullName>
+                    <default>false</default>
+                    <label>Global Team</label>
+                </value>
+                <value>
+                    <fullName>Vision Team</fullName>
+                    <default>false</default>
+                    <label>Vision Team</label>
+                </value>
+                <value>
+                    <fullName>Medical 1 Team</fullName>
+                    <default>false</default>
+                    <label>Medical 1 Team</label>
+                </value>
+                <value>
+                    <fullName>Medical 2 Team</fullName>
+                    <default>false</default>
+                    <label>Medical 2 Team</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Target_Limit__c</fullName>
+        <defaultValue>1</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total number of Open Targets this rep can handle</inlineHelpText>
+        <label>Target Limit</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Team_Assignment__c</fullName>
+        <externalId>false</externalId>
+        <label>Team Assignment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dentrix 1 Team</fullName>
+                    <default>false</default>
+                    <label>Dentrix 1 Team</label>
+                </value>
+                <value>
+                    <fullName>Dentrix 2 Team</fullName>
+                    <default>false</default>
+                    <label>Dentrix 2 Team</label>
+                </value>
+                <value>
+                    <fullName>EagleSoft Team</fullName>
+                    <default>false</default>
+                    <label>EagleSoft Team</label>
+                </value>
+                <value>
+                    <fullName>SCOPE Team</fullName>
+                    <default>false</default>
+                    <label>SCOPE Team</label>
+                </value>
+                <value>
+                    <fullName>Global Team</fullName>
+                    <default>false</default>
+                    <label>Global Team</label>
+                </value>
+                <value>
+                    <fullName>Vision Team</fullName>
+                    <default>false</default>
+                    <label>Vision Team</label>
+                </value>
+                <value>
+                    <fullName>Medical 1 Team</fullName>
+                    <default>false</default>
+                    <label>Medical 1 Team</label>
+                </value>
+                <value>
+                    <fullName>Medical 2 Team</fullName>
+                    <default>false</default>
+                    <label>Medical 2 Team</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Vertical_Practice_Management_System__c</fullName>
+        <externalId>false</externalId>
+        <label>Vertical/Practice Management System</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dentrix</fullName>
+                    <default>false</default>
+                    <label>Dentrix</label>
+                </value>
+                <value>
+                    <fullName>Vision</fullName>
+                    <default>false</default>
+                    <label>Vision</label>
+                </value>
+                <value>
+                    <fullName>Medical</fullName>
+                    <default>false</default>
+                    <label>Medical</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <recordTypes>
+        <fullName>ICU_Rep</fullName>
+        <active>true</active>
+        <description>Used for ICU Targets</description>
+        <label>ICU Rep</label>
+        <picklistValues>
+            <picklist>Team_Assignment__c</picklist>
+            <values>
+                <fullName>Dentrix 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentrix 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EagleSoft Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCOPE Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vertical_Practice_Management_System__c</picklist>
+            <values>
+                <fullName>Dentrix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Implementation_Rep</fullName>
+        <active>true</active>
+        <description>Used for setting limits for Implementation Reps for Activation Assignments</description>
+        <label>Implementation Rep</label>
+        <picklistValues>
+            <picklist>Team_Assignment__c</picklist>
+            <values>
+                <fullName>Dentrix 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentrix 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EagleSoft Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCOPE Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vertical_Practice_Management_System__c</picklist>
+            <values>
+                <fullName>Dentrix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Scheduler_Rep</fullName>
+        <active>true</active>
+        <description>Used to round robin the scheduler Rep</description>
+        <label>Scheduler Rep</label>
+        <picklistValues>
+            <picklist>Team_Assignment__c</picklist>
+            <values>
+                <fullName>Dentrix 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentrix 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EagleSoft Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCOPE Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vertical_Practice_Management_System__c</picklist>
+            <values>
+                <fullName>Dentrix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Success_Coach</fullName>
+        <active>true</active>
+        <label>Success Coach</label>
+        <picklistValues>
+            <picklist>Team_Assignment__c</picklist>
+            <values>
+                <fullName>Dentrix 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentrix 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EagleSoft Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCOPE Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vertical_Practice_Management_System__c</picklist>
+            <values>
+                <fullName>Dentrix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Team_Assignments</fullName>
+        <active>true</active>
+        <description>Used for assigning accounts out to different teams</description>
+        <label>Team Assignments</label>
+        <picklistValues>
+            <picklist>Team_Assignment__c</picklist>
+            <values>
+                <fullName>Dentrix 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentrix 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EagleSoft Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCOPE Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vertical_Practice_Management_System__c</picklist>
+            <values>
+                <fullName>Dentrix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Tech_Rep</fullName>
+        <active>true</active>
+        <description>Used to Automate Sync Case assignment</description>
+        <label>Tech Rep</label>
+        <picklistValues>
+            <picklist>Primary_Sync_Team_to_work__c</picklist>
+            <values>
+                <fullName>Dentrix 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentrix 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EagleSoft Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCOPE Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Secondary_Sync_Team_to_work__c</picklist>
+            <values>
+                <fullName>Dentrix 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentrix 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EagleSoft Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCOPE Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Team_Assignment__c</picklist>
+            <values>
+                <fullName>Dentrix 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentrix 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EagleSoft Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 1 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical 2 Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCOPE Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vertical_Practice_Management_System__c</picklist>
+            <values>
+                <fullName>Dentrix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Name_Safe_ID__c</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <columns>Number_of_Cases_Assigned__c</columns>
+        <columns>Open_Activation_Cases__c</columns>
+        <columns>Open_Onboarding_Cases__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Active_ICU_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Open_Targets__c</columns>
+        <columns>Target_Limit__c</columns>
+        <columns>Load__c</columns>
+        <columns>Active__c</columns>
+        <columns>Rep_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.ICU_Rep</value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Active ICU Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Active_Implementation_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Activation_Cases__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Target_Limit__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.Implementation_Rep</value>
+        </filters>
+        <filters>
+            <field>Team_Assignment__c</field>
+            <operation>notEqual</operation>
+            <value>Enterprise Team</value>
+        </filters>
+        <label>All Active Implementation Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Active_Success_Coach</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Onboarding_Cases__c</columns>
+        <columns>Open_Opportunities_Assigned__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Name_Safe_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.Success_Coach</value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Active Success Coach</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Active_Tech_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Sync_Cases__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.Tech_Rep</value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Active Tech Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>All_ICU_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Open_Targets__c</columns>
+        <columns>Target_Limit__c</columns>
+        <columns>Load__c</columns>
+        <columns>Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.ICU_Rep</value>
+        </filters>
+        <label>All ICU Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Scheduler_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Active__c</columns>
+        <columns>Number_of_Cases_Assigned__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Load__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.Scheduler_Rep</value>
+        </filters>
+        <filters>
+            <field>Team_Assignment__c</field>
+            <operation>notEqual</operation>
+            <value>Enterprise Team</value>
+        </filters>
+        <label>All Scheduler Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Success_Coach</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Onboarding_Cases__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Name_Safe_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.Success_Coach</value>
+        </filters>
+        <label>All Success Coach</label>
+    </listViews>
+    <listViews>
+        <fullName>Dentrix_1_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Activation_Cases__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.Implementation_Rep</value>
+        </filters>
+        <filters>
+            <field>Team_Assignment__c</field>
+            <operation>equals</operation>
+            <value>Dentrix 1 Team</value>
+        </filters>
+        <label>Dentrix 1 Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>Dentrix_2_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Activation_Cases__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.Implementation_Rep</value>
+        </filters>
+        <filters>
+            <field>Team_Assignment__c</field>
+            <operation>equals</operation>
+            <value>Dentrix 2 Team</value>
+        </filters>
+        <label>Dentrix 2 Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>EagleSoft_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Activation_Cases__c</columns>
+        <columns>Open_Onboarding_Cases__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Team_Assignment__c</field>
+            <operation>equals</operation>
+            <value>EagleSoft Team</value>
+        </filters>
+        <label>EagleSoft Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>Global_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Activation_Cases__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.Implementation_Rep</value>
+        </filters>
+        <filters>
+            <field>Team_Assignment__c</field>
+            <operation>equals</operation>
+            <value>Global Team</value>
+        </filters>
+        <label>Global Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>Medical_1_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Activation_Cases__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Team_Assignment__c</field>
+            <operation>equals</operation>
+            <value>Medical 1 Team</value>
+        </filters>
+        <label>Medical 1 Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>SCOPE_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Activation_Cases__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.Implementation_Rep</value>
+        </filters>
+        <filters>
+            <field>Team_Assignment__c</field>
+            <operation>equals</operation>
+            <value>SCOPE Team</value>
+        </filters>
+        <label>SCOPE Reps</label>
+    </listViews>
+    <listViews>
+        <fullName>Vision_Reps</fullName>
+        <columns>NAME</columns>
+        <columns>Rep_Name__c</columns>
+        <columns>Team_Assignment__c</columns>
+        <columns>Active__c</columns>
+        <columns>Open_Activation_Cases__c</columns>
+        <columns>Case_Limit__c</columns>
+        <columns>Load__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CS_Round_Robin__c.Implementation_Rep</value>
+        </filters>
+        <filters>
+            <field>Team_Assignment__c</field>
+            <operation>equals</operation>
+            <value>Vision Team</value>
+        </filters>
+        <label>Vision Reps</label>
+    </listViews>
+</CustomObject>

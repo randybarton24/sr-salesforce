@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Free_Month_Setting__c</fullName>
+    <externalId>false</externalId>
+    <label>Free Month Setting</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Extend Contract - At the Beginning</fullName>
+                <default>false</default>
+                <label>Extend Contract - At the Beginning</label>
+            </value>
+            <value>
+                <fullName>Include in Contract Period - At the Beginning</fullName>
+                <default>false</default>
+                <label>Include in Contract Period - At the Beginning</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Sales_Price_Per_Month__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(  ISPICKVAL(PricebookEntry.Product2.RecurSoft__Revenue_Schedule_Type__c, &quot;Divide Amount into multiple installments&quot;) &amp;&amp;
+ AND(PricebookEntry.Product2.RecurSoft__Number_of_Revenue_Installments__c &lt;&gt; 0,  NOT(ISNULL(PricebookEntry.Product2.RecurSoft__Number_of_Revenue_Installments__c)) ) , 
+
+UnitPrice / PricebookEntry.Product2.RecurSoft__Number_of_Revenue_Installments__c, 
+
+ UnitPrice)</formula>
+    <label>Sales Price Per Month</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

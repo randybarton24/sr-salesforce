@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Practice_Business</fullName>
+    <active>true</active>
+    <businessProcess>Standard</businessProcess>
+    <compactLayoutAssignment>LEX_Sales_Opportunity</compactLayoutAssignment>
+    <label>New Practice Business</label>
+    <picklistValues>
+        <picklist>Addendum_Type__c</picklist>
+        <values>
+            <fullName>Billing Change - Change Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing Change - Defer%2FPause</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing Change - Refund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing Change - Skip %28Free Month%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing Change - Voice Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing Change - Voice Remove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None - Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other - No Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Addendum - Active Presence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Addendum - Assignment Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Addendum - Extended Term %28Same MSF%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Addendum - Simpletrac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Addendum - Trail Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Addendum - Trial Waive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_Comment_Check__c</picklist>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Required</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bill_To_Partner__c</picklist>
+        <values>
+            <fullName>Eyefinity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inneractive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QSI</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cancel_Request_Type__c</picklist>
+        <values>
+            <fullName>Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reactivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trial</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cancellation_Reasons__c</picklist>
+        <values>
+            <fullName>Bankruptcy%2FCollections%2FOut of business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clean-up %2F Backlog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract term %2F length</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In contract with other provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Never trained %2F not ready</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not satisfied - Sales %2F personnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not satisfied - Support %2F personnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not satisfied - current features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not satisfied - unavailable features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient complaints</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refused to give reason %2F unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff resistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Issue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competitor__c</picklist>
+        <values>
+            <fullName>4 Patient Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Point</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DemandForce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doctable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lighthouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other%28Note name in Other Competitor%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM%2FEMR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Activator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Pop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Tree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phresia %28Tablet%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice Mojo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RevenueWell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sesame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teledental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Televox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Websystem3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yapi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZocDoc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eCentral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eReminders</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>E_T_Reason__c</picklist>
+        <values>
+            <fullName>Bankruptcy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed Collections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOL%2FVIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Litigation Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P%2ER%2E Reasons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>ADR Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show%2FEvent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outside_Sales_Rep_Lead__c</picklist>
+        <values>
+            <fullName>Adam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Al</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brandon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daisy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Danny</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JoshQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korbin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Claimed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robbie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tennli</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating__c</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_closing__c</picklist>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer%2FDuplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreign Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Future Interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RecurSoft__DeliveryInstallationStatus__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yet to begin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RecurSoft__Free_Months_Setting__c</picklist>
+        <values>
+            <fullName>Extend Contract - At the Beginning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Include in Contract Period - At the Beginning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RecurSoft__Number_of_Free_Months__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RecurSoft__Payment_Method__c</picklist>
+        <values>
+            <fullName>ACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Other %28Check etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RecurSoft__Trial__c</picklist>
+        <values>
+            <fullName>0 - Waived</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>90</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Engineer_Call_Result__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Engineer__c</picklist>
+        <values>
+            <fullName>Michael Bellon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ruben Popoca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travis Taylor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Path__c</picklist>
+        <values>
+            <fullName>ESR closed sale from lead generated from an OSR Trade Show in the last 60 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESR closed sale given from an ISR in the last 45 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESR closed sale that had been worked by an ISR in the last 45 days and was not given the lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESR closed sale that had no other communication in the last 45 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESR closed sale that was found at an ESR Trade Show%2F Study Group%2F CE Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESR closed sale that was given to them and was being worked by an OSR AND ISR in the last 60 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESR closed sale working with an ISR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISR closed sale that had communication with an ESR in the last 45 days and was not given the lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISR closed sale that had no other communication in the last 45 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISR closed sale that was generated at an ESR trade show in the last 45 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISR closed sale that was generated at an OSR trade show in the last 60 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISR closed sale that was given to them by an OSR and ESR in the last 45 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISR closed sale working with an ESR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSR closed sale after a Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSR closed sale that had communication with an ESR and ISR in the last 45 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSR closed sale that had communication with an ESR in the last 45 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSR closed sale that had communication with an ISR in the last 45 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSR closed sale that had no communication in the last 45 days</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_Offer_Deffered_Months__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_Offer_Extended_Trial__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_Offer_Free_Voice__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_Offer_Free_Writeback__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_Offer_Free_Xtend__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_Offer_Free_iPad__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_Offer_Gift_Card__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_Offer_Lower_MSF__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_Offer_Lower_Term__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_Offer_Waived_Months__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Save_offer_free_PRT_licence__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

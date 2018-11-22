@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Closed_Won_Counter_Aggregated</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    ISPICKVAL(StageName, &quot;Closed Won&quot;) &amp;&amp;
+    (
+        (RecurSoft__Count_Aggregated_Monthly_Min__c &gt; 1) ||
+        (Account.RecurSoft__No_of_Aggregated_Opp_Products__c &gt; 0)
+    )
+)</errorConditionFormula>
+    <errorMessage>Count Aggregated Monthly Min must not be greater than 1 and No of Aggregated Opp Products per Account must not be greater than 1.</errorMessage>
+</ValidationRule>

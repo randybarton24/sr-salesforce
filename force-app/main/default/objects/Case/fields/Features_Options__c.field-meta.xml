@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Features_Options__c</fullName>
+    <externalId>false</externalId>
+    <label>Features/Options</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Questions</fullName>
+                <default>false</default>
+                <label>Account Questions</label>
+            </value>
+            <value>
+                <fullName>Action List</fullName>
+                <default>false</default>
+                <label>Action List</label>
+            </value>
+            <value>
+                <fullName>AppAdmin</fullName>
+                <default>false</default>
+                <label>AppAdmin</label>
+            </value>
+            <value>
+                <fullName>Birthdays</fullName>
+                <default>false</default>
+                <label>Birthdays</label>
+            </value>
+            <value>
+                <fullName>Business Associates Agreement</fullName>
+                <default>false</default>
+                <label>Business Associates Agreement</label>
+            </value>
+            <value>
+                <fullName>Care Credit</fullName>
+                <default>false</default>
+                <label>Care Credit</label>
+            </value>
+            <value>
+                <fullName>Community</fullName>
+                <default>false</default>
+                <label>Community</label>
+            </value>
+            <value>
+                <fullName>Contract</fullName>
+                <default>false</default>
+                <label>Contract</label>
+            </value>
+            <value>
+                <fullName>Contract Addendum</fullName>
+                <default>false</default>
+                <label>Contract Addendum</label>
+            </value>
+            <value>
+                <fullName>Conversations</fullName>
+                <default>false</default>
+                <label>Conversations</label>
+            </value>
+            <value>
+                <fullName>Determine Need</fullName>
+                <default>false</default>
+                <label>Determine Need</label>
+            </value>
+            <value>
+                <fullName>Dynamic Messaging</fullName>
+                <default>false</default>
+                <label>Dynamic Messaging</label>
+            </value>
+            <value>
+                <fullName>Email Request</fullName>
+                <default>false</default>
+                <label>Email Request</label>
+            </value>
+            <value>
+                <fullName>Eyewear</fullName>
+                <default>false</default>
+                <label>Eyewear</label>
+            </value>
+            <value>
+                <fullName>Groups</fullName>
+                <default>false</default>
+                <label>Groups</label>
+            </value>
+            <value>
+                <fullName>Groups/Newsletter</fullName>
+                <default>false</default>
+                <label>Groups/Newsletter</label>
+            </value>
+            <value>
+                <fullName>Healthgrades</fullName>
+                <default>false</default>
+                <label>Healthgrades</label>
+            </value>
+            <value>
+                <fullName>Information</fullName>
+                <default>false</default>
+                <label>Information</label>
+            </value>
+            <value>
+                <fullName>Initial Troubleshooting</fullName>
+                <default>false</default>
+                <label>Initial Troubleshooting</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Marketing/Sales Promotions</fullName>
+                <default>false</default>
+                <label>Marketing/Sales Promotions</label>
+            </value>
+            <value>
+                <fullName>New Features</fullName>
+                <default>false</default>
+                <label>New Features</label>
+            </value>
+            <value>
+                <fullName>Newsletters</fullName>
+                <default>false</default>
+                <label>Newsletters</label>
+            </value>
+            <value>
+                <fullName>Online Presence</fullName>
+                <default>false</default>
+                <label>Online Presence</label>
+            </value>
+            <value>
+                <fullName>Password</fullName>
+                <default>false</default>
+                <label>Password</label>
+            </value>
+            <value>
+                <fullName>Patient Call</fullName>
+                <default>false</default>
+                <label>Patient Call</label>
+            </value>
+            <value>
+                <fullName>Patient Profile</fullName>
+                <default>false</default>
+                <label>Patient Profile</label>
+            </value>
+            <value>
+                <fullName>Payment Reminders</fullName>
+                <default>false</default>
+                <label>Payment Reminders</label>
+            </value>
+            <value>
+                <fullName>PRM</fullName>
+                <default>false</default>
+                <label>PRM</label>
+            </value>
+            <value>
+                <fullName>PRP</fullName>
+                <default>false</default>
+                <label>PRP</label>
+            </value>
+            <value>
+                <fullName>PR Portal</fullName>
+                <default>false</default>
+                <label>PR Portal</label>
+            </value>
+            <value>
+                <fullName>PRT</fullName>
+                <default>false</default>
+                <label>PRT</label>
+            </value>
+            <value>
+                <fullName>Recall</fullName>
+                <default>false</default>
+                <label>Recall</label>
+            </value>
+            <value>
+                <fullName>Referrals</fullName>
+                <default>false</default>
+                <label>Referrals</label>
+            </value>
+            <value>
+                <fullName>Reminders</fullName>
+                <default>false</default>
+                <label>Reminders</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Settings</fullName>
+                <default>false</default>
+                <label>Settings</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <label>Social Media</label>
+            </value>
+            <value>
+                <fullName>SR Huddle</fullName>
+                <default>false</default>
+                <label>SR Huddle</label>
+            </value>
+            <value>
+                <fullName>SR Notify</fullName>
+                <default>false</default>
+                <label>SR Notify</label>
+            </value>
+            <value>
+                <fullName>SR Schedule</fullName>
+                <default>false</default>
+                <label>SR Schedule</label>
+            </value>
+            <value>
+                <fullName>Surveys</fullName>
+                <default>false</default>
+                <label>Surveys</label>
+            </value>
+            <value>
+                <fullName>Sync</fullName>
+                <default>false</default>
+                <label>Sync</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Voice</fullName>
+                <default>false</default>
+                <label>Voice</label>
+            </value>
+            <value>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+                <label>Voicemail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

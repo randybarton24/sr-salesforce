@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDR_Set_Revenue_Paid__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked if we paid the SDR for the revenue attached to this opportunity/task.</description>
+    <externalId>false</externalId>
+    <label>SDR Set Revenue Paid</label>
+    <type>Checkbox</type>
+</CustomField>

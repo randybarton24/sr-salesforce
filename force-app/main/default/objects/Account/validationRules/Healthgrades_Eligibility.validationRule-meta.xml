@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Healthgrades_Eligibility</fullName>
+    <active>false</active>
+    <description>Checks if a Customer is eligible for Healthgrades</description>
+    <errorConditionFormula>AND(  Healthgrades_Interest__c  = True, Healthgrades_Eligible__c = False)</errorConditionFormula>
+    <errorDisplayField>Healthgrades_Interest__c</errorDisplayField>
+    <errorMessage>This Customer is not Eligible for Healthgrades</errorMessage>
+</ValidationRule>

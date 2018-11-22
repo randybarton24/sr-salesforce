@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Qualified_Lead_SQL__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This box will be set to true by clicking the &quot;Sales Qualified&quot; button and will be reset to false when the Contact is put through a Distribution Group. For ROE purposes.</description>
+    <externalId>false</externalId>
+    <label>Sales Qualified Lead (SQL)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

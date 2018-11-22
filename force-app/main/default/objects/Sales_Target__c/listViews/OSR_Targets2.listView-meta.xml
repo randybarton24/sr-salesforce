@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSR_Targets2</fullName>
+    <columns>NAME</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>Owner_Profile__c</columns>
+    <columns>Target_Month__c</columns>
+    <columns>Target_Date__c</columns>
+    <columns>Target_Year__c</columns>
+    <columns>Target__c</columns>
+    <columns>Revenue_Target__c</columns>
+    <columns>Sales_Rep_Revenue_Credit__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Owner_Profile__c</field>
+        <operation>equals</operation>
+        <value>Outside Sales</value>
+    </filters>
+    <filters>
+        <field>Target_Year__c</field>
+        <operation>equals</operation>
+        <value>2017</value>
+    </filters>
+    <label>OSR Targets</label>
+</ListView>

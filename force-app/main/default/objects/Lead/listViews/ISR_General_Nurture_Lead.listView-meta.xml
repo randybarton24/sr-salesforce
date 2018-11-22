@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ISR_General_Nurture_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ISR General Nurture</label>
+    <queue>ISR_General_Nurture</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

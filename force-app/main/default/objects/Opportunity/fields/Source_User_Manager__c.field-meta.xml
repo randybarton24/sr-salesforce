@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_User_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Identifies the Manager of the User that created the record at the time of creation.  May be different than CreatedBy.Manager because of automations.  Set via Apex.</description>
+    <externalId>false</externalId>
+    <label>Source User Manager</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Opportunities_Manager</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

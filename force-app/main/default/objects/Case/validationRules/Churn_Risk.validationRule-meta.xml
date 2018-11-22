@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Churn_Risk</fullName>
+    <active>true</active>
+    <description>When a rep has spoken to the decision maker they also need to fill out the Churn Risk.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Churn_Risk__c,&quot;&quot;),Spoke_with_Decision_Maker__c = TRUE)</errorConditionFormula>
+    <errorDisplayField>Churn_Risk__c</errorDisplayField>
+    <errorMessage>You must assess a Churn Risk after you have spoken with the decision maker</errorMessage>
+</ValidationRule>

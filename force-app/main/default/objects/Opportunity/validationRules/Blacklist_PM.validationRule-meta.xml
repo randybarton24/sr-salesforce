@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blacklist_PM</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISPICKVAL( Account.Practice_Management_Software__r.SYNC_Availability__c , &quot;Blacklist - DO NOT SELL&quot; )</errorConditionFormula>
+    <errorMessage>Practice Management Software is not supported. DO NOT SELL!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reconstructive_Dentistry_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Reconstructive Dentistry Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anodontia</fullName>
+                <default>false</default>
+                <label>Anodontia</label>
+            </value>
+            <value>
+                <fullName>Broken Tooth</fullName>
+                <default>false</default>
+                <label>Broken Tooth</label>
+            </value>
+            <value>
+                <fullName>Chipped Tooth</fullName>
+                <default>false</default>
+                <label>Chipped Tooth</label>
+            </value>
+            <value>
+                <fullName>Cracked Tooth</fullName>
+                <default>false</default>
+                <label>Cracked Tooth</label>
+            </value>
+            <value>
+                <fullName>Crooked Teeth</fullName>
+                <default>false</default>
+                <label>Crooked Teeth</label>
+            </value>
+            <value>
+                <fullName>Dental Crowding</fullName>
+                <default>false</default>
+                <label>Dental Crowding</label>
+            </value>
+            <value>
+                <fullName>Dental Trauma</fullName>
+                <default>false</default>
+                <label>Dental Trauma</label>
+            </value>
+            <value>
+                <fullName>Excessive Tooth Wear</fullName>
+                <default>false</default>
+                <label>Excessive Tooth Wear</label>
+            </value>
+            <value>
+                <fullName>Gaps Between Teeth</fullName>
+                <default>false</default>
+                <label>Gaps Between Teeth</label>
+            </value>
+            <value>
+                <fullName>Jaw Bone Tissue Deterioration</fullName>
+                <default>false</default>
+                <label>Jaw Bone Tissue Deterioration</label>
+            </value>
+            <value>
+                <fullName>Jaw Misalignment Leading to TMJ</fullName>
+                <default>false</default>
+                <label>Jaw Misalignment Leading to TMJ</label>
+            </value>
+            <value>
+                <fullName>Loose Teeth</fullName>
+                <default>false</default>
+                <label>Loose Teeth</label>
+            </value>
+            <value>
+                <fullName>Misshapen Teeth</fullName>
+                <default>false</default>
+                <label>Misshapen Teeth</label>
+            </value>
+            <value>
+                <fullName>Periodontitis</fullName>
+                <default>false</default>
+                <label>Periodontitis</label>
+            </value>
+            <value>
+                <fullName>Tooth Discoloration Whitening Resistant</fullName>
+                <default>false</default>
+                <label>Tooth Discoloration Whitening Resistant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

@@ -1,0 +1,59 @@
+<!--
+ - Created by mschetselaar on 9/6/2018.
+ -->
+
+<aura:component description="PB_relatedActivityTable" controller="PlaybookControllerApxc">
+    <aura:attribute name="rEvent" type="Event" />
+    <aura:attribute name="rTask" type="Task" />
+    <aura:attribute name="completed" type="Boolean" default="false" />
+    <aura:attribute name="isTask" type="Boolean" />
+    <aura:attribute name="linkToRecord" type="String" default="https://solutionreach--dev2.cs9.my.salesforce.com/" />
+
+    <aura:registerEvent name="updateSpinner" type="c:PlaybookSpinner" />
+
+    <aura:if isTrue="{!v.isTask}">
+        <aura:if isTrue="{!v.completed}" >
+            <tr>
+                <td><lightning:input label="" type="checkbox" checked="{!v.completed}" value="{!v.completed}" onchange="{!c.updateTask}" /></td>
+                <td><strike>{!v.rTask.Subject}</strike></td>
+                <td><strike><ui:outputDate value="{!v.rTask.ActivityDate}" /></strike></td>
+                <td><strike>{!v.rTask.Status}</strike></td>
+                <td><strike>{!v.rTask.Priority}</strike></td>
+                <td><strike>{!v.rTask.Owner.Name}</strike></td>
+            </tr>
+            <aura:set attribute="else">
+                <tr style="background:lightgoldenrodyellow">
+                    <td><lightning:input label="" type="checkbox" checked="{!v.completed}" value="{!v.completed}" onchange="{!c.updateTask}" /></td>
+                    <td><a href="{!v.linkToRecord + v.rTask.Id}" target="_blank" >{!v.rTask.Subject}</a></td>
+                    <td><ui:outputDate value="{!v.rTask.ActivityDate}" /></td>
+                    <td>{!v.rTask.Status}</td>
+                    <td>{!v.rTask.Priority}</td>
+                    <td>{!v.rTask.Owner.Name}</td>
+                </tr>
+            </aura:set>
+        </aura:if>
+        <aura:set attribute="else">
+            <aura:if isTrue="{!v.completed}">
+                <tr>
+                    <td><lightning:input label="" type="checkbox" checked="{!v.completed}" value="{!v.completed}" onchange="{!c.updateEvent}" /></td>
+                    <td><strike>{!v.rEvent.Subject}</strike></td>
+                    <td><strike><ui:outputDateTime value="{!v.rEvent.StartDateTime}" /></strike></td>
+                    <td><strike>{!v.rEvent.Activity_Results__c}</strike></td>
+                    <td><strike>{!v.rEvent.Activity_Type__c}</strike></td>
+                    <td><strike>{!v.rEvent.Owner.Name}</strike></td>
+                </tr>
+                <aura:set attribute="else">
+                    <tr style="background:lightgoldenrodyellow">
+                        <td><lightning:input label="" type="checkbox" checked="{!v.completed}" value="{!v.completed}" onchange="{!c.updateEvent}" /></td>
+                        <td><a href="{!v.linkToRecord + v.rEvent.Id}" target="_blank" > {!v.rEvent.Subject} </a></td>
+                        <td><ui:outputDateTime value="{!v.rEvent.StartDateTime}" /></td>
+                        <td>{!v.rEvent.Activity_Results__c}</td>
+                        <td>{!v.rEvent.Activity_Type__c}</td>
+                        <td>{!v.rEvent.Owner.Name}</td>
+                    </tr>
+                </aura:set>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+
+</aura:component>

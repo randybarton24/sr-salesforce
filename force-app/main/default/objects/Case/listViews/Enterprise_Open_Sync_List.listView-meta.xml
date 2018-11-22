@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enterprise_Open_Sync_List</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notContain</operation>
+        <value>Closed,Rejected</value>
+    </filters>
+    <filters>
+        <field>Case_Owner_Team_Assignment__c</field>
+        <operation>equals</operation>
+        <value>Enterprise Team</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Sync_List_Case</value>
+    </filters>
+    <label>Enterprise Open Sync Cases</label>
+    <sharedTo>
+        <group>CS_Enterprise_Support</group>
+    </sharedTo>
+</ListView>

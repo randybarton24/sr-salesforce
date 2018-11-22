@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_MSP</fullName>
+    <active>true</active>
+    <description>Blocks the sale of MSP to only authorized users.</description>
+    <errorConditionFormula>$Profile.Name != &quot;System Administrator&quot; &amp;&amp;
+$User.Username != &quot;nroberts@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;judd@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;zach@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;matt@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;bchristensen@solutionreach.com&quot; &amp;&amp; 
+$User.Username != &quot;bbutterfield@solutionreach.com&quot; &amp;&amp; 
+ ISPICKVAL( Product2.Family , &quot;My Social Practice&quot; )</errorConditionFormula>
+    <errorMessage>You are not currently authorized to sell this product.</errorMessage>
+</ValidationRule>

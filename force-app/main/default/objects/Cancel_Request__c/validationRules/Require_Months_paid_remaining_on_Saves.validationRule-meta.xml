@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Months_paid_remaining_on_Saves</fullName>
+    <active>true</active>
+    <description>For all Saves Months paid for trials and months remaining for annuals is required</description>
+    <errorConditionFormula>ISPICKVAL ( Stage__c , &quot;Save&quot; ) &amp;&amp;
+
+((ISPICKVAL (Cancel_Request_Type__c , &quot;Annual&quot; ) &amp;&amp;  ISNULL (Months_Remaining_Annual__c ) ) || (ISPICKVAL (Cancel_Request_Type__c , &quot;Trial&quot; ) &amp;&amp;  ISNULL (Months_Paid_Trial__c )))</errorConditionFormula>
+    <errorMessage>When closing as a Save, Months Paid is required for Trials and Months Remaining is required for Annuals.</errorMessage>
+</ValidationRule>

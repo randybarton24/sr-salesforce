@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Projected_Renewal_when_closing</fullName>
+    <active>true</active>
+    <description>When a CRO is closed, the Projected Renewal Date is needed.</description>
+    <errorConditionFormula>AND (OR (ISPICKVAL(Stage__c , &quot;Cancelled&quot;          ),
+         ISPICKVAL(Stage__c , &quot;No Sale&quot;            ), 
+         ISPICKVAL(Stage__c , &quot;Save&quot;               ),
+         ISPICKVAL(Stage__c , &quot;Resume - No Change&quot; )
+         ) ,
+     ISBLANK ( Projected_Contract_Expiration_Renewal__c )
+     )</errorConditionFormula>
+    <errorDisplayField>Projected_Contract_Expiration_Renewal__c</errorDisplayField>
+    <errorMessage>The Projected Contract Expiration/Renewal Date is required when closing a Cancel Request.</errorMessage>
+</ValidationRule>

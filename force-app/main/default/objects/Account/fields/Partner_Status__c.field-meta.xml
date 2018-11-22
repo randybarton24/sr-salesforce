@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Partner Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Qualification</fullName>
+                <default>false</default>
+                <label>Qualification</label>
+            </value>
+            <value>
+                <fullName>SR Executive Approval</fullName>
+                <default>false</default>
+                <label>SR Executive Approval</label>
+            </value>
+            <value>
+                <fullName>Proposal to Partner</fullName>
+                <default>false</default>
+                <label>Proposal to Partner</label>
+            </value>
+            <value>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+                <label>Negotiation</label>
+            </value>
+            <value>
+                <fullName>Signed Agreement</fullName>
+                <default>false</default>
+                <label>Signed Agreement</label>
+            </value>
+            <value>
+                <fullName>On-boarding</fullName>
+                <default>false</default>
+                <label>On-boarding</label>
+            </value>
+            <value>
+                <fullName>On-going Management</fullName>
+                <default>false</default>
+                <label>On-going Management</label>
+            </value>
+            <value>
+                <fullName>Contract Renewal Approaching</fullName>
+                <default>false</default>
+                <label>Contract Renewal Approaching</label>
+            </value>
+            <value>
+                <fullName>Renegotiate Contract</fullName>
+                <default>false</default>
+                <label>Renegotiate Contract</label>
+            </value>
+            <value>
+                <fullName>Extend Current Contract</fullName>
+                <default>false</default>
+                <label>Extend Current Contract</label>
+            </value>
+            <value>
+                <fullName>Terminate Relationship</fullName>
+                <default>false</default>
+                <label>Terminate Relationship</label>
+            </value>
+            <value>
+                <fullName>Dead</fullName>
+                <default>false</default>
+                <label>Dead</label>
+            </value>
+            <value>
+                <fullName>Recycle</fullName>
+                <default>false</default>
+                <label>Recycle</label>
+            </value>
+            <value>
+                <fullName>Radar</fullName>
+                <default>false</default>
+                <label>Radar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

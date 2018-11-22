@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plastic_Surgery_Practicing_Specialties__c</fullName>
+    <externalId>false</externalId>
+    <label>SecondaryPlasticSurgeryPracticingSpecial</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Breast Reconstruction Surgery</fullName>
+                <default>false</default>
+                <label>Breast Reconstruction Surgery</label>
+            </value>
+            <value>
+                <fullName>Cosmetic &amp; Reconstructive Surgery</fullName>
+                <default>false</default>
+                <label>Cosmetic &amp; Reconstructive Surgery</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Dermatologic Surgery</fullName>
+                <default>false</default>
+                <label>Cosmetic Dermatologic Surgery</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Surgery</fullName>
+                <default>false</default>
+                <label>Cosmetic Surgery</label>
+            </value>
+            <value>
+                <fullName>Craniofacial Surgery</fullName>
+                <default>false</default>
+                <label>Craniofacial Surgery</label>
+            </value>
+            <value>
+                <fullName>Facial Cosmetic Surgery</fullName>
+                <default>false</default>
+                <label>Facial Cosmetic Surgery</label>
+            </value>
+            <value>
+                <fullName>Facial Plastic Surgery</fullName>
+                <default>false</default>
+                <label>Facial Plastic Surgery</label>
+            </value>
+            <value>
+                <fullName>Microvascular Reconstructive Surgery</fullName>
+                <default>false</default>
+                <label>Microvascular Reconstructive Surgery</label>
+            </value>
+            <value>
+                <fullName>Minimally Invasive Cosmetic Surgery</fullName>
+                <default>false</default>
+                <label>Minimally Invasive Cosmetic Surgery</label>
+            </value>
+            <value>
+                <fullName>Oculoplastic Surgery</fullName>
+                <default>false</default>
+                <label>Oculoplastic Surgery</label>
+            </value>
+            <value>
+                <fullName>Oncoplastic Surgery</fullName>
+                <default>false</default>
+                <label>Oncoplastic Surgery</label>
+            </value>
+            <value>
+                <fullName>Pediatric Plastic Surgery</fullName>
+                <default>false</default>
+                <label>Pediatric Plastic Surgery</label>
+            </value>
+            <value>
+                <fullName>Plastic &amp; Reconstructive Surgery</fullName>
+                <default>false</default>
+                <label>Plastic &amp; Reconstructive Surgery</label>
+            </value>
+            <value>
+                <fullName>Plastic Surgery</fullName>
+                <default>false</default>
+                <label>Plastic Surgery</label>
+            </value>
+            <value>
+                <fullName>Plastic Surgery-Head &amp; Neck</fullName>
+                <default>false</default>
+                <label>Plastic Surgery-Head &amp; Neck</label>
+            </value>
+            <value>
+                <fullName>Plastic Surgery of the Hand</fullName>
+                <default>false</default>
+                <label>Plastic Surgery of the Hand</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

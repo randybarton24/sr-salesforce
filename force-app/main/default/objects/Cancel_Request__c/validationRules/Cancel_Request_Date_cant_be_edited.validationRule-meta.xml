@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_Request_Date_cant_be_edited</fullName>
+    <active>true</active>
+    <description>The Cancel Request date can only be edited in the first 7 days from creating the CRO - Matthew Schetselaar</description>
+    <errorConditionFormula>AND( ISCHANGED( Cancel_Request_Date__c ),  CreatedDate &lt; Now()-7 , $Profile.Name &lt;&gt; &quot;System Administrator&quot;, $Profile.Name &lt;&gt; &quot;Finance&quot;,$Profile.Name &lt;&gt; &quot;Client Engagement Manager&quot; , 
+$Profile.Name &lt;&gt; &quot;Support Exec&quot;)</errorConditionFormula>
+    <errorDisplayField>Cancel_Request_Date__c</errorDisplayField>
+    <errorMessage>You cannot edit the Cancel Request Date after 7 days of CRO creation.  Please see your manager.</errorMessage>
+</ValidationRule>

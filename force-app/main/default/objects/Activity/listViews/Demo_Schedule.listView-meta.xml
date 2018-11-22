@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Schedule</fullName>
+    <booleanFilter>1 and 2</booleanFilter>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>TASK.STATUS</columns>
+    <columns>Event_Status__c</columns>
+    <columns>TASK.PRIORITY</columns>
+    <columns>EVENT.START_DATE_TIME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>TASK.LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>TASK.STATUS</field>
+        <operation>equals</operation>
+        <value>Scheduled,Planned</value>
+    </filters>
+    <filters>
+        <field>Activity_Type__c</field>
+        <operation>equals</operation>
+        <value>Phone Demo,ADR Set,ADR Re-Set</value>
+    </filters>
+    <label>Upcoming Demo Schedule</label>
+    <sharedTo>
+        <role>ADR_Manager_1</role>
+        <role>ADR_Rep_1</role>
+        <role>Inside_Sales_Coordinator</role>
+        <role>SAE_Manager_1</role>
+        <role>SAE_Manager_2</role>
+        <role>SAE_Manager_3</role>
+        <role>SAE_Rep_1</role>
+        <role>SAE_Rep_2</role>
+        <role>SAE_Rep_3</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Medical_Cases_48_hour_no_contact1</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Support,Case.Sync_List_Case</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Assigned,Actively Working,Resolved,Rejected</value>
+    </filters>
+    <filters>
+        <field>CASES.LAST_UPDATE_DATE_ONLY</field>
+        <operation>notEqual</operation>
+        <value>LAST_N_DAYS:2</value>
+    </filters>
+    <filters>
+        <field>Case_Owner_Team_Assignment__c</field>
+        <operation>equals</operation>
+        <value>Medical 1 Team,Medical 2 Team</value>
+    </filters>
+    <filters>
+        <field>Team_Assignment__c</field>
+        <operation>equals</operation>
+        <value>Medical 1 Team,Medical 2 Team</value>
+    </filters>
+    <label>Medical Cases  - 48 hour no contact</label>
+    <sharedTo>
+        <role>CSR_Director</role>
+        <role>CSR_Manager</role>
+        <role>CSR_Team_Lead</role>
+    </sharedTo>
+</ListView>

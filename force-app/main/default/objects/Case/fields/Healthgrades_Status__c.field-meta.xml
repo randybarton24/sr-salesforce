@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Healthgrades_Status__c</fullName>
+    <description>Set on Activation cases for customers who signup with Healthgrades before their SR Activation case has closed.</description>
+    <externalId>false</externalId>
+    <label>Healthgrades Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>true</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Setup Required</fullName>
+                <default>false</default>
+                <label>Setup Required</label>
+            </value>
+            <value>
+                <fullName>Setup Completed</fullName>
+                <default>false</default>
+                <label>Setup Completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

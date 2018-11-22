@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Country_Required</fullName>
+    <active>true</active>
+    <description>When entering an address, the Billing Country is required</description>
+    <errorConditionFormula>IF(
+    $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c, false, 
+    AND(
+        NOT(
+            ISBLANK(BillingCity)
+        ),
+        ISBLANK(BillingCountry)
+    )
+)</errorConditionFormula>
+    <errorDisplayField>BillingCountry</errorDisplayField>
+    <errorMessage>Billing Address must include a Billing City and Country.  
+Please use United States as the entry for any US address.</errorMessage>
+</ValidationRule>

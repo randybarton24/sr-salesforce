@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+                <label>Assigned</label>
+            </value>
+            <value>
+                <fullName>Actively working</fullName>
+                <default>false</default>
+                <label>Actively working</label>
+            </value>
+            <value>
+                <fullName>Dispute Resolution</fullName>
+                <default>false</default>
+                <label>Dispute Resolution</label>
+            </value>
+            <value>
+                <fullName>Pending Cancel</fullName>
+                <default>false</default>
+                <label>Pending Cancel</label>
+            </value>
+            <value>
+                <fullName>Pending Save</fullName>
+                <default>false</default>
+                <label>Pending Save</label>
+            </value>
+            <value>
+                <fullName>Future Cancel</fullName>
+                <default>false</default>
+                <label>Future Cancel</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

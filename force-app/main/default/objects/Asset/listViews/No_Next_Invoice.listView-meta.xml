@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Next_Invoice</fullName>
+    <columns>ASSET.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>PRODUCT2.FAMILY_ENUM</columns>
+    <columns>Active__c</columns>
+    <columns>Next_Invoice_Date__c</columns>
+    <columns>Contract_End_Date__c</columns>
+    <columns>Provider__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Next_Invoice_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Contract_End_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>No Next Invoice</label>
+</ListView>

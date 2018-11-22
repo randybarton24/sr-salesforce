@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:searchInterface,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="searchText" type="String" default=""/>
+    <aura:attribute name="searchPlaceHolder" type="String" default=""/>
+     <div>        
+    	<div class="welcome-search-sec welcome-search-sec-small">			
+            <div class="search">
+                <div class="search-wrapper">
+                    <form class="search-form">
+                        <div class="search-input-wrapper">
+                            <input onkeydown="{!c.enterPress}" value="{!v.searchText}" aura:id="inputText" class="search-input slds-input" type="text" placeholder="{!v.searchPlaceHolder}"/>
+                            <lightning:buttonIcon iconName="utility:search" variant="bare" onclick="{!c.handleClick}" alternativeText="Search"/>
+                        </div>
+                        <input type="hidden" name="language" value="en" />
+                    </form>
+                </div>
+            </div>
+        </div>               
+    </div>
+</aura:component>

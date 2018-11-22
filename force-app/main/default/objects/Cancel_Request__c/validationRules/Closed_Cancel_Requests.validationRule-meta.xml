@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Cancel_Requests</fullName>
+    <active>true</active>
+    <description>Makes it so reps can&#39;t edit closed Cancel Requests - Matthew Schetselaar</description>
+    <errorConditionFormula>AND(OR(PRIORVALUE(Stage__c) = &quot;Cancelled&quot;,PRIORVALUE(Stage__c) = &quot;No Sale&quot;, PRIORVALUE(Stage__c) = &quot;Save&quot;, PRIORVALUE(Stage__c) = &quot;Resume - No Change&quot;), $Profile.Name &lt;&gt; &quot;System Administrator&quot;, $Profile.Name &lt;&gt; &quot;Finance&quot;,$Profile.Name &lt;&gt; &quot;Client Engagement Manager&quot; , 
+$Profile.Name &lt;&gt; &quot;Support Exec&quot;)</errorConditionFormula>
+    <errorMessage>You cannot edit a closed Cancel Request.  Please see your manager.</errorMessage>
+</ValidationRule>

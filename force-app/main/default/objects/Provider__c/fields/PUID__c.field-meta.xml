@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PUID__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( FIND( &quot;-&quot;, RIGHT( Healthgrades_ID__c, LEN(Healthgrades_ID__c) - FIND(&quot;-&quot;, Healthgrades_ID__c, LEN(Healthgrades_ID__c) - 11))) &gt; 0, 
+
+IF( FIND( &quot;-&quot;, RIGHT( Healthgrades_ID__c, LEN(Healthgrades_ID__c) - FIND( &quot;-&quot;, Healthgrades_ID__c, FIND(&quot;-&quot;, Healthgrades_ID__c, LEN(Healthgrades_ID__c) - 11) +1 ))) &gt; 0 , 
+
+IF( FIND( &quot;-&quot;, RIGHT( Healthgrades_ID__c, LEN(Healthgrades_ID__c) - FIND( &quot;-&quot;, Healthgrades_ID__c, FIND( &quot;-&quot;, Healthgrades_ID__c, FIND(&quot;-&quot;, Healthgrades_ID__c, LEN(Healthgrades_ID__c) - 11) +1 )+1))) &gt; 0 ,
+
+RIGHT( Healthgrades_ID__c, LEN(Healthgrades_ID__c) - FIND( &quot;-&quot;, Healthgrades_ID__c, FIND( &quot;-&quot;, Healthgrades_ID__c, FIND( &quot;-&quot;, Healthgrades_ID__c, FIND(&quot;-&quot;, Healthgrades_ID__c, LEN(Healthgrades_ID__c) - 11) +1 )+1)+1)),
+
+RIGHT( Healthgrades_ID__c, LEN(Healthgrades_ID__c) - FIND( &quot;-&quot;, Healthgrades_ID__c, FIND( &quot;-&quot;, Healthgrades_ID__c, FIND(&quot;-&quot;, Healthgrades_ID__c, LEN(Healthgrades_ID__c) - 11) +1 )+1))),
+
+RIGHT( Healthgrades_ID__c, LEN(Healthgrades_ID__c) - FIND( &quot;-&quot;, Healthgrades_ID__c, FIND(&quot;-&quot;, Healthgrades_ID__c, LEN(Healthgrades_ID__c) - 11) +1 ))),
+
+RIGHT( Healthgrades_ID__c, LEN(Healthgrades_ID__c) - FIND(&quot;-&quot;, Healthgrades_ID__c, LEN(Healthgrades_ID__c) - 11)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>PUID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

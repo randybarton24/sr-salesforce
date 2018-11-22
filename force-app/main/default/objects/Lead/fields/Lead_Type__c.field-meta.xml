@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Enterprise</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Enterprise</label>
+            </value>
+            <value>
+                <fullName>Practice</fullName>
+                <color>#78C953</color>
+                <default>true</default>
+                <label>Practice</label>
+            </value>
+            <value>
+                <fullName>Group Practice</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Group Practice</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Referral Partner</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Referral Partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

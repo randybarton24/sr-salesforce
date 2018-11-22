@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dentistry_Practicing_Specialties__c</fullName>
+    <externalId>false</externalId>
+    <label>SecondaryDentistry PracticingSpecialties</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cosmetic Dentistry</fullName>
+                <default>false</default>
+                <label>Cosmetic Dentistry</label>
+            </value>
+            <value>
+                <fullName>Dentistry</fullName>
+                <default>false</default>
+                <label>Dentistry</label>
+            </value>
+            <value>
+                <fullName>Emergency Dentistry</fullName>
+                <default>false</default>
+                <label>Emergency Dentistry</label>
+            </value>
+            <value>
+                <fullName>Endodontics</fullName>
+                <default>false</default>
+                <label>Endodontics</label>
+            </value>
+            <value>
+                <fullName>Laser Dentistry</fullName>
+                <default>false</default>
+                <label>Laser Dentistry</label>
+            </value>
+            <value>
+                <fullName>Minimally Invasive Dentistry</fullName>
+                <default>false</default>
+                <label>Minimally Invasive Dentistry</label>
+            </value>
+            <value>
+                <fullName>Neuromuscular Dentistry</fullName>
+                <default>false</default>
+                <label>Neuromuscular Dentistry</label>
+            </value>
+            <value>
+                <fullName>Orofacial Pain Dentistry</fullName>
+                <default>false</default>
+                <label>Orofacial Pain Dentistry</label>
+            </value>
+            <value>
+                <fullName>Orthodontics</fullName>
+                <default>false</default>
+                <label>Orthodontics</label>
+            </value>
+            <value>
+                <fullName>Orthodontics &amp; Dentofacial Orthopedics</fullName>
+                <default>false</default>
+                <label>Orthodontics &amp; Dentofacial Orthopedics</label>
+            </value>
+            <value>
+                <fullName>Pediatric Dentistry</fullName>
+                <default>false</default>
+                <label>Pediatric Dentistry</label>
+            </value>
+            <value>
+                <fullName>Reconstructive Dentistry</fullName>
+                <default>false</default>
+                <label>Reconstructive Dentistry</label>
+            </value>
+            <value>
+                <fullName>Sedation Dentistry</fullName>
+                <default>false</default>
+                <label>Sedation Dentistry</label>
+            </value>
+            <value>
+                <fullName>Sleep Medicine Dentistry</fullName>
+                <default>false</default>
+                <label>Sleep Medicine Dentistry</label>
+            </value>
+            <value>
+                <fullName>Sports Dentistry</fullName>
+                <default>false</default>
+                <label>Sports Dentistry</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

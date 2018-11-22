@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Id_Prefix_Text__c</fullName>
+    <description>Populated by an workflow rule. Contains the prefix of the parent id (first 3 characters).</description>
+    <externalId>false</externalId>
+    <label>SFDC Id Prefix Text</label>
+    <length>3</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

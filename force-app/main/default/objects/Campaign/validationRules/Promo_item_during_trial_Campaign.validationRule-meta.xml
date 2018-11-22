@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promo_item_during_trial_Campaign</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(NOT ISBLANK( Promo_Product1__c),OR(AND(NOT ISBLANK(TEXT( free_months__c )),TEXT( free_months__c ) != &#39;0&#39;),AND(NOT ISBLANK(TEXT( Trial_Period__c )),TEXT( Trial_Period__c ) != &#39;0 - Waived&#39;)))</errorConditionFormula>
+    <errorMessage>You cannot provide a promotional item along with free months or trial period.</errorMessage>
+</ValidationRule>

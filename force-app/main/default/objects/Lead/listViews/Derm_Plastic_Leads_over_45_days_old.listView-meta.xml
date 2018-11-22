@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Derm_Plastic_Leads_over_45_days_old</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.INDUSTRY</field>
+        <operation>equals</operation>
+        <value>Medical</value>
+    </filters>
+    <filters>
+        <field>Sub_industry__c</field>
+        <operation>equals</operation>
+        <value>Dermatology,Plastic Surgery</value>
+    </filters>
+    <filters>
+        <field>LEAD.LAST_ACTIVITY</field>
+        <operation>equals</operation>
+        <value>N_DAYS_AGO:45</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Contacted</value>
+    </filters>
+    <label>Derm/Plastic Leads over 45 days old</label>
+    <sharedTo>
+        <roleAndSubordinates>SAE_Rep_2</roleAndSubordinates>
+    </sharedTo>
+</ListView>

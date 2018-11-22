@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pediatric_Dentistry_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Pediatric Dentistry Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ankylosis of Tooth</fullName>
+                <default>false</default>
+                <label>Ankylosis of Tooth</label>
+            </value>
+            <value>
+                <fullName>Bad Taste in Mouth</fullName>
+                <default>false</default>
+                <label>Bad Taste in Mouth</label>
+            </value>
+            <value>
+                <fullName>Bleeding Gums</fullName>
+                <default>false</default>
+                <label>Bleeding Gums</label>
+            </value>
+            <value>
+                <fullName>Broken Tooth</fullName>
+                <default>false</default>
+                <label>Broken Tooth</label>
+            </value>
+            <value>
+                <fullName>Canker Sore</fullName>
+                <default>false</default>
+                <label>Canker Sore</label>
+            </value>
+            <value>
+                <fullName>Cavity</fullName>
+                <default>false</default>
+                <label>Cavity</label>
+            </value>
+            <value>
+                <fullName>Chipped Tooth</fullName>
+                <default>false</default>
+                <label>Chipped Tooth</label>
+            </value>
+            <value>
+                <fullName>Cleft Lip</fullName>
+                <default>false</default>
+                <label>Cleft Lip</label>
+            </value>
+            <value>
+                <fullName>Cleft Lip and Palate</fullName>
+                <default>false</default>
+                <label>Cleft Lip and Palate</label>
+            </value>
+            <value>
+                <fullName>Cleft Palate</fullName>
+                <default>false</default>
+                <label>Cleft Palate</label>
+            </value>
+            <value>
+                <fullName>Cold Sore</fullName>
+                <default>false</default>
+                <label>Cold Sore</label>
+            </value>
+            <value>
+                <fullName>Cracked Tooth</fullName>
+                <default>false</default>
+                <label>Cracked Tooth</label>
+            </value>
+            <value>
+                <fullName>Dental Abnormalities</fullName>
+                <default>false</default>
+                <label>Dental Abnormalities</label>
+            </value>
+            <value>
+                <fullName>Dental Disorders</fullName>
+                <default>false</default>
+                <label>Dental Disorders</label>
+            </value>
+            <value>
+                <fullName>Dental Trauma</fullName>
+                <default>false</default>
+                <label>Dental Trauma</label>
+            </value>
+            <value>
+                <fullName>Dentin Dysplasia, Coronal</fullName>
+                <default>false</default>
+                <label>Dentin Dysplasia, Coronal</label>
+            </value>
+            <value>
+                <fullName>Dentin Dysplasia, Radicular</fullName>
+                <default>false</default>
+                <label>Dentin Dysplasia, Radicular</label>
+            </value>
+            <value>
+                <fullName>Dentinogenesis Imperfecta</fullName>
+                <default>false</default>
+                <label>Dentinogenesis Imperfecta</label>
+            </value>
+            <value>
+                <fullName>Gingivitis</fullName>
+                <default>false</default>
+                <label>Gingivitis</label>
+            </value>
+            <value>
+                <fullName>Grinding of Teeth</fullName>
+                <default>false</default>
+                <label>Grinding of Teeth</label>
+            </value>
+            <value>
+                <fullName>Gum Disease</fullName>
+                <default>false</default>
+                <label>Gum Disease</label>
+            </value>
+            <value>
+                <fullName>Halitosis</fullName>
+                <default>false</default>
+                <label>Halitosis</label>
+            </value>
+            <value>
+                <fullName>Loose Teeth</fullName>
+                <default>false</default>
+                <label>Loose Teeth</label>
+            </value>
+            <value>
+                <fullName>Oral Infection</fullName>
+                <default>false</default>
+                <label>Oral Infection</label>
+            </value>
+            <value>
+                <fullName>Orofacial Pain</fullName>
+                <default>false</default>
+                <label>Orofacial Pain</label>
+            </value>
+            <value>
+                <fullName>Periodontitis</fullName>
+                <default>false</default>
+                <label>Periodontitis</label>
+            </value>
+            <value>
+                <fullName>Plaque</fullName>
+                <default>false</default>
+                <label>Plaque</label>
+            </value>
+            <value>
+                <fullName>Plaque Buildup</fullName>
+                <default>false</default>
+                <label>Plaque Buildup</label>
+            </value>
+            <value>
+                <fullName>Teething</fullName>
+                <default>false</default>
+                <label>Teething</label>
+            </value>
+            <value>
+                <fullName>Thumb Sucking</fullName>
+                <default>false</default>
+                <label>Thumb Sucking</label>
+            </value>
+            <value>
+                <fullName>Toothache</fullName>
+                <default>false</default>
+                <label>Toothache</label>
+            </value>
+            <value>
+                <fullName>Tooth Decay</fullName>
+                <default>false</default>
+                <label>Tooth Decay</label>
+            </value>
+            <value>
+                <fullName>Tooth Decay Caused by Acid Attack</fullName>
+                <default>false</default>
+                <label>Tooth Decay Caused by Acid Attack</label>
+            </value>
+            <value>
+                <fullName>Traumatic Dental Injuries</fullName>
+                <default>false</default>
+                <label>Traumatic Dental Injuries</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

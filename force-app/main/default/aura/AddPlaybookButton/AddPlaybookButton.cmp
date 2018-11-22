@@ -1,0 +1,62 @@
+<!--
+ - Created by mschetselaar on 9/1/2018.
+ -->
+
+<aura:component description="AddPlaybookButton" controller="PlaybookControllerApxc">
+    <aura:attribute name="playbooks" type="Playbook__c[]" />
+    <aura:attribute name="selectedPlaybook" type="Id" />
+    <aura:attribute name="acctId" type="Id" />
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="options" type="List"  />
+
+
+    <aura:registerEvent name="updateSpinner" type="c:PlaybookSpinner" />
+    <aura:registerEvent name="updateCases" type="c:UpdatePlaybookCases" />
+
+    <!--Use "slds-m-around_xx-large" class to add standard X-Large padding to the component-->
+    <div class="slds-m-horizontal--medium slds-text-align--left slds-p-top--small">
+
+        <lightning:button variant="brand"
+                          label="Add New Playbook"
+                          title="Add New Playbook"
+                          iconName="action:add_relationship"
+                          onclick="{! c.openModel }"
+        />
+
+        <!--Use aura:if tag to display Model Box, on the bese of conditions. [isOpen boolean attribute] -->
+        <aura:if isTrue="{!v.isOpen}">
+
+            <!--###### MODAL BOX Start######-->
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">
+                <div class="slds-modal__container" style="height: 450px" >
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header">
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Choose a Playbook to Add</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="height: 400px">
+
+                        <lightning:combobox label="Playbooks" options="{!v.options}" name="Playbooks" placeholder="Select a Playbook" onchange="{!c.handleChange}" />
+
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral"
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"
+                        />
+                        <lightning:button variant="brand"
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{! c.addPlaybook }"
+                        />
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+
+        </aura:if>
+    </div>
+</aura:component>

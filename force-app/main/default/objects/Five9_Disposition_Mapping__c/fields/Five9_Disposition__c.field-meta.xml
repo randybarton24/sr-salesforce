@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Five9_Disposition__c</fullName>
+    <externalId>false</externalId>
+    <label>Five9 Disposition</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blacklisted</fullName>
+                <default>false</default>
+                <label>Blacklisted</label>
+            </value>
+            <value>
+                <fullName>Bogus</fullName>
+                <default>false</default>
+                <label>Bogus</label>
+            </value>
+            <value>
+                <fullName>Cold Call</fullName>
+                <default>false</default>
+                <label>Cold Call</label>
+            </value>
+            <value>
+                <fullName>Demo</fullName>
+                <default>false</default>
+                <label>Demo</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+                <label>Existing Customer</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+            <value>
+                <fullName>Inbound-Blacklisted PM</fullName>
+                <default>false</default>
+                <label>Inbound-Blacklisted PM</label>
+            </value>
+            <value>
+                <fullName>Inbound-Demo</fullName>
+                <default>false</default>
+                <label>Inbound-Demo</label>
+            </value>
+            <value>
+                <fullName>Inbound-Existing Customer</fullName>
+                <default>false</default>
+                <label>Inbound-Existing Customer</label>
+            </value>
+            <value>
+                <fullName>Inbound-Info Requested</fullName>
+                <default>false</default>
+                <label>Inbound-Info Requested</label>
+            </value>
+            <value>
+                <fullName>Inbound-Non-healthcare</fullName>
+                <default>false</default>
+                <label>Inbound-Non-healthcare</label>
+            </value>
+            <value>
+                <fullName>Inbound-Sales Transfer</fullName>
+                <default>false</default>
+                <label>Inbound-Sales Transfer</label>
+            </value>
+            <value>
+                <fullName>Left live message</fullName>
+                <default>false</default>
+                <label>Left live message</label>
+            </value>
+            <value>
+                <fullName>Left voicemail</fullName>
+                <default>false</default>
+                <label>Left voicemail</label>
+            </value>
+            <value>
+                <fullName>No answer Busy signal</fullName>
+                <default>false</default>
+                <label>No answer Busy signal</label>
+            </value>
+            <value>
+                <fullName>Non-healthcare</fullName>
+                <default>false</default>
+                <label>Non-healthcare</label>
+            </value>
+            <value>
+                <fullName>Spoke with-</fullName>
+                <default>false</default>
+                <label>Spoke with-</label>
+            </value>
+            <value>
+                <fullName>Set 1-Day Callback</fullName>
+                <default>false</default>
+                <label>Set 1-Day Callback</label>
+            </value>
+            <value>
+                <fullName>Set 3-Day Callback</fullName>
+                <default>false</default>
+                <label>Set 3-Day Callback</label>
+            </value>
+            <value>
+                <fullName>Set 7-Day Callback</fullName>
+                <default>false</default>
+                <label>Set 7-Day Callback</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

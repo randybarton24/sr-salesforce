@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Singular_Payment_Eligibility</fullName>
+    <active>true</active>
+    <description>Checks if a customer is eligible for Singular Payment and if they are not it will not allow the Interested in Singular Payments checkbox</description>
+    <errorConditionFormula>AND( Singular_Interest__c = True,  Eligible_for_Singular__c = False )</errorConditionFormula>
+    <errorDisplayField>Singular_Interest__c</errorDisplayField>
+    <errorMessage>This Customer is ineligible for Singular Payments</errorMessage>
+</ValidationRule>

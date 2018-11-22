@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Healthgrades_Interest_Received__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For the AE working Healthgrades deals to check when received.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For the AE working Healthgrades deals to check when received.</inlineHelpText>
+    <label>Healthgrades Interest Received</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

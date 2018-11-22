@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Composer_Process_Addendum</fullName>
+    <availability>online</availability>
+    <description>Originally created by Conga Solution Manager. Date of last use of Update Button from Conga Solution record: https://solutionreach--apxtconga4.na25.visual.force.com/a3A31000002VyqjEAC
+08-Dec-2016 09:35:56 AM</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>660</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Process Addendum Old</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer 
+?serverUrl={!API.Partner_Server_URL_370} 
+&amp;id={!Addendum__c.Id} 
+
+&amp;ReportId=[AddendaSR]00O31000006nrjE,
+[AddendaLL]00O31000006nrjO,
+[AddendaHG]00O31000006nrjJ,
+[Addenda]00O31000006nuSp
+&amp;QueryId=[Addenda]a340Z000000hu2K
+
+&amp;SertifiVisible=1
+&amp;SertifiFileName=Solutionreach+Addendum+-+Subscriber+ID:+{!Addendum__c.Subscriber_ID__c}
+&amp;SertifiCustomSettings=AddendumSettings
+&amp;OFN=Solutionreach+Addendum+-+Subscriber+ID+{!Addendum__c.Subscriber_ID__c}
+&amp;TemplateId=a3C0Z000000R4KK 
+&amp;DS4=1
+&amp;DS0=1
+&amp;DC={!Addendum__c.Template_Available__c}
+&amp;DCL=The+combination+of+products+and+modifications+selected+is+not+currently+supported.
+&amp;SertifiSigner1Id={!Addendum__c.Addendum_SignerId__c}
+&amp;SC0=0</url>
+    <width>900</width>
+</WebLink>

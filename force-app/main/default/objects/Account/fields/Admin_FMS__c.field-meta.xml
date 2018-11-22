@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin_FMS__c</fullName>
+    <description>Stores the date the office first sent a message through their SR account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the official Activation Date that is Auto-populated every morning.</inlineHelpText>
+    <label>Admin FMS</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OppLine003_Provider_on_non_HG_Product</fullName>
+    <active>true</active>
+    <description>The Provider lookup field should only be populated on a Healthgrades product</description>
+    <errorConditionFormula>Product2.ProductCode != &quot;3005&quot; &amp;&amp;
+ Provider__c != null</errorConditionFormula>
+    <errorMessage>OppLine003 - A Provider should only be selected for the Healthgrades Premium Profile product</errorMessage>
+</ValidationRule>

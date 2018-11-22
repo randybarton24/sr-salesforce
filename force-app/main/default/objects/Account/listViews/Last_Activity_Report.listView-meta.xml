@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Activity_Report</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Subscriber_ID__c</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>RecurSoft__Status__c</columns>
+    <columns>Admin_Status__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Practice_Management_Software__c</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>Team_Assignment__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RecurSoft__Status__c</field>
+        <operation>equals</operation>
+        <value>Active,Pending Setup</value>
+    </filters>
+    <filters>
+        <field>Special_Considerations__c</field>
+        <operation>equals</operation>
+        <value>VIP,KOL</value>
+    </filters>
+    <label>KOL Last Activity Report</label>
+    <sharedTo>
+        <group>CS_Enterprise_Support</group>
+    </sharedTo>
+</ListView>

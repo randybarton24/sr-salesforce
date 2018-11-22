@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_OphthalmologyPracticingSpecialty__c</fullName>
+    <externalId>false</externalId>
+    <label>Primary OphthalmologyPracticingSpecialty</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anterior Segment Ophthalmology</fullName>
+                <default>false</default>
+                <label>Anterior Segment Ophthalmology</label>
+            </value>
+            <value>
+                <fullName>Anterior Segment Surgery</fullName>
+                <default>false</default>
+                <label>Anterior Segment Surgery</label>
+            </value>
+            <value>
+                <fullName>Cataract Surgery</fullName>
+                <default>false</default>
+                <label>Cataract Surgery</label>
+            </value>
+            <value>
+                <fullName>Cornea &amp; External Diseases</fullName>
+                <default>false</default>
+                <label>Cornea &amp; External Diseases</label>
+            </value>
+            <value>
+                <fullName>Cornea &amp; Refractive Surgery</fullName>
+                <default>false</default>
+                <label>Cornea &amp; Refractive Surgery</label>
+            </value>
+            <value>
+                <fullName>Glaucoma</fullName>
+                <default>false</default>
+                <label>Glaucoma</label>
+            </value>
+            <value>
+                <fullName>Neuro-Ophthalmology</fullName>
+                <default>false</default>
+                <label>Neuro-Ophthalmology</label>
+            </value>
+            <value>
+                <fullName>Ocular Immunology</fullName>
+                <default>false</default>
+                <label>Ocular Immunology</label>
+            </value>
+            <value>
+                <fullName>Ocular Oncology</fullName>
+                <default>false</default>
+                <label>Ocular Oncology</label>
+            </value>
+            <value>
+                <fullName>Oculoplastic Surgery</fullName>
+                <default>false</default>
+                <label>Oculoplastic Surgery</label>
+            </value>
+            <value>
+                <fullName>Ophthalmic Plastic Surgery</fullName>
+                <default>false</default>
+                <label>Ophthalmic Plastic Surgery</label>
+            </value>
+            <value>
+                <fullName>Ophthalmic Reconstructive Surgery</fullName>
+                <default>false</default>
+                <label>Ophthalmic Reconstructive Surgery</label>
+            </value>
+            <value>
+                <fullName>Ophthalmic Surgery</fullName>
+                <default>false</default>
+                <label>Ophthalmic Surgery</label>
+            </value>
+            <value>
+                <fullName>Ophthalmic Vitreous Surgery</fullName>
+                <default>false</default>
+                <label>Ophthalmic Vitreous Surgery</label>
+            </value>
+            <value>
+                <fullName>Ophthalmology</fullName>
+                <default>false</default>
+                <label>Ophthalmology</label>
+            </value>
+            <value>
+                <fullName>Orbital Disorders</fullName>
+                <default>false</default>
+                <label>Orbital Disorders</label>
+            </value>
+            <value>
+                <fullName>Orbital Surgery</fullName>
+                <default>false</default>
+                <label>Orbital Surgery</label>
+            </value>
+            <value>
+                <fullName>Pediatric Ophthalmology</fullName>
+                <default>false</default>
+                <label>Pediatric Ophthalmology</label>
+            </value>
+            <value>
+                <fullName>Retinal Diseases</fullName>
+                <default>false</default>
+                <label>Retinal Diseases</label>
+            </value>
+            <value>
+                <fullName>Uveitis</fullName>
+                <default>false</default>
+                <label>Uveitis</label>
+            </value>
+            <value>
+                <fullName>Vitreoretinal Disease &amp; Surgery</fullName>
+                <default>false</default>
+                <label>Vitreoretinal Disease &amp; Surgery</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

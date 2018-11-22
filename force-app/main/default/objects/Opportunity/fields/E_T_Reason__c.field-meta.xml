@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E_T_Reason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select one if we are letting them out of their contract early.</inlineHelpText>
+    <label>E.T. Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>P.R. Reasons</fullName>
+                <default>false</default>
+                <label>P.R. Reasons</label>
+            </value>
+            <value>
+                <fullName>Litigation Risk</fullName>
+                <default>false</default>
+                <label>Litigation Risk</label>
+            </value>
+            <value>
+                <fullName>KOL/VIP</fullName>
+                <default>false</default>
+                <label>KOL/VIP</label>
+            </value>
+            <value>
+                <fullName>Settlement</fullName>
+                <default>false</default>
+                <label>Settlement</label>
+            </value>
+            <value>
+                <fullName>Failed Collections</fullName>
+                <default>false</default>
+                <label>Failed Collections</label>
+            </value>
+            <value>
+                <fullName>Bankruptcy</fullName>
+                <default>false</default>
+                <label>Bankruptcy</label>
+            </value>
+            <value>
+                <fullName>Never Billed/ Billing Error</fullName>
+                <default>false</default>
+                <label>Never Billed/ Billing Error</label>
+            </value>
+            <value>
+                <fullName>Month 2 Month</fullName>
+                <default>false</default>
+                <label>Month 2 Month</label>
+            </value>
+            <value>
+                <fullName>Out of Business</fullName>
+                <default>false</default>
+                <label>Out of Business</label>
+            </value>
+            <value>
+                <fullName>Sync Issues</fullName>
+                <default>false</default>
+                <label>Sync Issues</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

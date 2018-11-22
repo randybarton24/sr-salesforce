@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Topics__c</fullName>
+    <externalId>false</externalId>
+    <label>Topics</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active Monitor</fullName>
+                <default>false</default>
+                <label>Active Monitor</label>
+            </value>
+            <value>
+                <fullName>Active Push</fullName>
+                <default>false</default>
+                <label>Active Push</label>
+            </value>
+            <value>
+                <fullName>Active Review</fullName>
+                <default>false</default>
+                <label>Active Review</label>
+            </value>
+            <value>
+                <fullName>Admin</fullName>
+                <default>false</default>
+                <label>Admin</label>
+            </value>
+            <value>
+                <fullName>Birthdays</fullName>
+                <default>false</default>
+                <label>Birthdays</label>
+            </value>
+            <value>
+                <fullName>Contract Addendum</fullName>
+                <default>false</default>
+                <label>Contract Addendum</label>
+            </value>
+            <value>
+                <fullName>Dashboard</fullName>
+                <default>false</default>
+                <label>Dashboard</label>
+            </value>
+            <value>
+                <fullName>Eyewear</fullName>
+                <default>false</default>
+                <label>Eyewear</label>
+            </value>
+            <value>
+                <fullName>Filters</fullName>
+                <default>false</default>
+                <label>Filters</label>
+            </value>
+            <value>
+                <fullName>General Training</fullName>
+                <default>false</default>
+                <label>General Training</label>
+            </value>
+            <value>
+                <fullName>Groups</fullName>
+                <default>false</default>
+                <label>Groups</label>
+            </value>
+            <value>
+                <fullName>Installation</fullName>
+                <default>false</default>
+                <label>Installation</label>
+            </value>
+            <value>
+                <fullName>Local Listing</fullName>
+                <default>false</default>
+                <label>Local Listing</label>
+            </value>
+            <value>
+                <fullName>Maps</fullName>
+                <default>false</default>
+                <label>Maps</label>
+            </value>
+            <value>
+                <fullName>Messaging</fullName>
+                <default>false</default>
+                <label>Messaging</label>
+            </value>
+            <value>
+                <fullName>New Integration</fullName>
+                <default>false</default>
+                <label>New Integration</label>
+            </value>
+            <value>
+                <fullName>Newsletters</fullName>
+                <default>false</default>
+                <label>Newsletters</label>
+            </value>
+            <value>
+                <fullName>Password</fullName>
+                <default>false</default>
+                <label>Password</label>
+            </value>
+            <value>
+                <fullName>Patient Manager</fullName>
+                <default>false</default>
+                <label>Patient Manager</label>
+            </value>
+            <value>
+                <fullName>PatientReach</fullName>
+                <default>false</default>
+                <label>PatientReach</label>
+            </value>
+            <value>
+                <fullName>PatientView</fullName>
+                <default>false</default>
+                <label>PatientView</label>
+            </value>
+            <value>
+                <fullName>Recall</fullName>
+                <default>false</default>
+                <label>Recall</label>
+            </value>
+            <value>
+                <fullName>Referrals</fullName>
+                <default>false</default>
+                <label>Referrals</label>
+            </value>
+            <value>
+                <fullName>Reminders</fullName>
+                <default>false</default>
+                <label>Reminders</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Schedule</fullName>
+                <default>false</default>
+                <label>Schedule</label>
+            </value>
+            <value>
+                <fullName>SmileDash</fullName>
+                <default>false</default>
+                <label>SmileDash</label>
+            </value>
+            <value>
+                <fullName>Social Networking</fullName>
+                <default>false</default>
+                <label>Social Networking</label>
+            </value>
+            <value>
+                <fullName>Surveys</fullName>
+                <default>false</default>
+                <label>Surveys</label>
+            </value>
+            <value>
+                <fullName>Sync Down</fullName>
+                <default>false</default>
+                <label>Sync Down</label>
+            </value>
+            <value>
+                <fullName>Sync Launcher</fullName>
+                <default>false</default>
+                <label>Sync Launcher</label>
+            </value>
+            <value>
+                <fullName>Video</fullName>
+                <default>false</default>
+                <label>Video</label>
+            </value>
+            <value>
+                <fullName>Voice</fullName>
+                <default>false</default>
+                <label>Voice</label>
+            </value>
+            <value>
+                <fullName>Xtend Training</fullName>
+                <default>false</default>
+                <label>Xtend Training</label>
+            </value>
+            <value>
+                <fullName>PatientReach Mobile</fullName>
+                <default>false</default>
+                <label>PatientReach Mobile</label>
+            </value>
+            <value>
+                <fullName>Healthgrades</fullName>
+                <default>false</default>
+                <label>Healthgrades</label>
+            </value>
+            <value>
+                <fullName>Singular Payments</fullName>
+                <default>false</default>
+                <label>Singular Payments</label>
+            </value>
+            <value>
+                <fullName>CareCredit</fullName>
+                <default>false</default>
+                <label>CareCredit</label>
+            </value>
+            <value>
+                <fullName>Requested Contract</fullName>
+                <default>false</default>
+                <label>Requested Contract</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

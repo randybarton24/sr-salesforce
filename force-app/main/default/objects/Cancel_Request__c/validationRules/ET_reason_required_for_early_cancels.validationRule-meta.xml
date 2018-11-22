@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ET_reason_required_for_early_cancels</fullName>
+    <active>true</active>
+    <description>If the Cancel Month is before the Projected Renewal date on Annuals SR and HG CRO&#39;s the ET Reason is required</description>
+    <errorConditionFormula>( RecordType.Name = &quot;SR Platform&quot; ||
+  RecordType.Name = &quot;Healthgrades&quot; ) &amp;&amp;
+
+ ISPICKVAL (Cancel_Request_Type__c , &quot;Annual&quot; ) &amp;&amp;
+ Projected_Contract_Expiration_Renewal__c &gt; Cancel_Month__c &amp;&amp;
+ ISPICKVAL (  E_T_Reason__c  , &quot;&quot; )</errorConditionFormula>
+    <errorDisplayField>E_T_Reason__c</errorDisplayField>
+    <errorMessage>E.T. Reason is Required when the Cancel Month is before the Projected renewal date</errorMessage>
+</ValidationRule>

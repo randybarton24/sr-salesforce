@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>For each field  and value on a controller picklist entry, it will display the corresponding dependen values</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Case Field Controlling Values Map</label>
+    <visibility>Public</visibility>
+    <fields>
+        <fullName>ControllingFieldValue__c</fullName>
+        <description>Value for the current field, this will control the dependent values</description>
+        <externalId>false</externalId>
+        <label>Controlling Field Value</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DependentFields__c</fullName>
+        <description>Comma separated list of api names of fields that depend this field</description>
+        <externalId>false</externalId>
+        <label>Dependent Fields</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>FieldAPIName__c</fullName>
+        <description>Controlled field api name</description>
+        <externalId>false</externalId>
+        <label>Field API Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

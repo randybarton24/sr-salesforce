@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DB_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>DB Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Database</fullName>
+                <default>false</default>
+                <label>Database</label>
+            </value>
+            <value>
+                <fullName>API/SOAP</fullName>
+                <default>false</default>
+                <label>API/SOAP</label>
+            </value>
+            <value>
+                <fullName>Automated Export</fullName>
+                <default>false</default>
+                <label>Automated Export</label>
+            </value>
+            <value>
+                <fullName>Manual Export</fullName>
+                <default>false</default>
+                <label>Manual Export</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

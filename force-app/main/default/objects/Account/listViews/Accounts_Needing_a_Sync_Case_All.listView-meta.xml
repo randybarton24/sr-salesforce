@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounts_Needing_a_Sync_Case_All</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+    <columns>Subscriber_ID__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Admin_FMS__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Admin_Last_Sync_Date__c</columns>
+    <columns>Admin_Status__c</columns>
+    <columns>of_Open_Sync_Cases__c</columns>
+    <columns>Team_Assignment__c</columns>
+    <columns>Create_Sync_Case__c</columns>
+    <columns>Practice_Management_Software__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Last_Sync_Date_5_Days__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Account</value>
+    </filters>
+    <filters>
+        <field>RecurSoft__Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>of_Open_Sync_Cases__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Admin_Last_Sync_Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:30</value>
+    </filters>
+    <filters>
+        <field>Team_Assignment__c</field>
+        <operation>equals</operation>
+        <value>Groups Team</value>
+    </filters>
+    <label>Accounts Needing a Sync Case - Multi-Loc</label>
+    <sharedTo>
+        <group>CS_Dentrix_1</group>
+        <role>CSR_Tech</role>
+    </sharedTo>
+</ListView>

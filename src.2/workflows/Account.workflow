@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_Innereactive_an_email_when_an_account_activates</fullName>
+        <ccEmails>activated@solutionreach.com, innexus@innereactive.com</ccEmails>
+        <description>Send Innereactive an email when an account activates</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>matt@solutionreach.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>srreplies@solutionreach.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>CSR_Email_Templates/Innereactive_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Sends_an_email_to_the_Billing_address_when_a_new_HG_Scorecard_is_available</fullName>
+        <description>Sends an email to the Billing address when a new HG Scorecard is available</description>
+        <protected>false</protected>
+        <recipients>
+            <field>RecurSoft__Billing_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>customers@solutionreach.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Client_Success_Folder/Healthgrades_Scorecard_Email</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Intacct_Vertical_Update</fullName>
+        <description>Intacct Vertical Update</description>
+        <field>RecurSoft__Intacct_Vertical__c</field>
+        <formula>Intacct_Vertical__c</formula>
+        <name>Intacct Vertical Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Mass_email_Site_update</fullName>
+        <description>Using to gage when an email goes out for Healthgrades Scorecards</description>
+        <field>Site</field>
+        <formula>Site + &quot; &quot; + TEXT(Today())</formula>
+        <name>Mass email Site update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RecurSoft__Updated_Customer_ID</fullName>
+        <description>Updated Customer ID with value from Subscriber ID</description>
+        <field>RecurSoft__IntacctID__c</field>
+        <formula>RecurSoft__Subscriber_ID__c</formula>
+        <name>Updated Customer ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SR_Date_Created_Account_Update</fullName>
+        <description>Sets the Account.SR_Date_Created field to the value of Account.CreatedDate</description>
+        <field>SR_Date_Created__c</field>
+        <formula>CreatedDate</formula>
+        <name>SR Date Created Account Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Account_Number_to_Subscriber_ID</fullName>
+        <description>Sets the Account.Account Number field to the value of the Account.Subscriber_ID__c field</description>
+        <field>AccountNumber</field>
+        <formula>Subscriber_ID__c</formula>
+        <name>Set Account Number to Subscriber ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Singular_Payment_Referrer</fullName>
+        <description>Marks the account with the rep who spoke with the office about Singular Payments</description>
+        <field>Singular_Referrer__c</field>
+        <formula>$User.FirstName &amp; &quot; &quot; &amp; $User.LastName</formula>
+        <name>Singular Payment Referrer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Intacct_Location</fullName>
+        <field>Intacct_Location__c</field>
+        <formula>IF( ISPICKVAL( Industry , &quot;Dental&quot;) , &quot;E001&quot;,  
+ IF(ISPICKVAL( Industry , &quot;Vision&quot;), &quot;E002&quot;, 
+ IF(ISPICKVAL( Industry , &quot;Medical&quot;), &quot;E006&quot;, 
+ IF(ISPICKVAL( Industry , &quot;Physical Rehabilitation&quot;), &quot;E004&quot;, 
+ IF(ISPICKVAL( Industry , &quot;Non-medical&quot;), &quot;E999&quot;, 
+NULL) ) ) ) )</formula>
+        <name>Update Intacct Location</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_RecurSoft_Billing_Address</fullName>
+        <field>RecurSoft__Billing_Email__c</field>
+        <formula>Lead_Billing_Email__c</formula>
+        <name>Update RecurSoft Billing Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_field</fullName>
+        <field>RecurSoft__Status__c</field>
+        <literalValue>Active</literalValue>
+        <name>Update Status field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Sync_Manager_Field</fullName>
+        <description>Updates Sync_Manager_Group__c to Admin_Username__c value if blank.</description>
+        <field>Sync_Manager_Group__c</field>
+        <formula>Admin_Username__c</formula>
+        <name>Update Sync Manager Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Updated_Customer_ID</fullName>
+        <description>Updated Customer ID with value from Subscriber ID</description>
+        <field>RecurSoft__IntacctID__c</field>
+        <formula>Subscriber_ID__c</formula>
+        <name>Updated Customer ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Healthgrades Scorecard Alert</fullName>
+        <actions>
+            <name>Sends_an_email_to_the_Billing_address_when_a_new_HG_Scorecard_is_available</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Mass_email_Site_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Last_Healthgrades_Scorecard_Sent_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecurSoft__Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <description>Sends an email to the Billing email address when a new Healthgrades scorecard is available</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Intacct Location</fullName>
+        <actions>
+            <name>Update_Intacct_Location</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Intacct Vertical Update</fullName>
+        <actions>
+            <name>Intacct_Vertical_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Intacct Vertical Update</description>
+        <formula>OR  (ISNEW(),  ISCHANGED (Industry)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RecurSoft__Updated Customer ID</fullName>
+        <actions>
+            <name>RecurSoft__Updated_Customer_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Updated Customer ID with value from Subscriber ID</description>
+        <formula>AND    (       OR       (        ISNEW(),        ISCHANGED( RecurSoft__Subscriber_ID__c )        ),      NOT ISBLANK(RecurSoft__Subscriber_ID__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RecurSoft__sync billing auto</fullName>
+        <active>false</active>
+        <formula>ISCHANGED(RecurSoft__Billing_Automation_On__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SR Date Created Account Update</fullName>
+        <actions>
+            <name>SR_Date_Created_Account_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.SR_Date_Created__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>Sets the Account.SR_Date_Created to the value of Account.CreatedDate on Creation of the Account, if there is no value in the field</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Singular payment Tracking</fullName>
+        <actions>
+            <name>Singular_Payment_Referrer</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Singular_Interest__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Singular_Referrer__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>Records the name of the Rep that checks the box to say the customer is interested in Singular Payments - Matthew Schetselaar</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sync Manager Group</fullName>
+        <actions>
+            <name>Update_Sync_Manager_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Updates Sync_Manager_Group__c field to Admin_Username__c if blank.</description>
+        <formula>AND(NOT(ISBLANK(Admin_Username__c)), ISBLANK(Sync_Manager_Group__c))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Account Number to Subscriber ID</fullName>
+        <actions>
+            <name>Set_Account_Number_to_Subscriber_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Updates the Account Number to the value of the Subscriber ID anytime the Subscriber ID is changed. This allows the Communities SSO to function</description>
+        <formula>ISCHANGED(Subscriber_ID__c) || 
+(ISNEW() &amp;&amp; Subscriber_ID__c != null)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Billing Email on Account</fullName>
+        <actions>
+            <name>Update_RecurSoft_Billing_Address</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Updates the Billing Email Address on the Account when a lead is converted - Matthew Schetselaar</description>
+        <formula>OR( ISNEW( ), IsChanged( Lead_Billing_Email__c ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Status when a message is setn</fullName>
+        <actions>
+            <name>Update_Status_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Admin_FMS__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Admin_Status__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Enterprise</value>
+        </criteriaItems>
+        <description>Updates Enterprise Accounts when a message is first sent - Matt Schetselaar</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Updated Customer ID</fullName>
+        <actions>
+            <name>Updated_Customer_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Updated Customer ID with value from Subscriber ID</description>
+        <formula>AND  (  OR  (  ISNEW(),  ISCHANGED(Subscriber_ID__c )  ),  NOT ISBLANK(Subscriber_ID__c)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

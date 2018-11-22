@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Physical_Therapy_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Physical Therapy Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mobility Exercise</fullName>
+                <default>false</default>
+                <label>Mobility Exercise</label>
+            </value>
+            <value>
+                <fullName>Orthopedic Rehabilitation</fullName>
+                <default>false</default>
+                <label>Orthopedic Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Pain Management Through Physical Therapy</fullName>
+                <default>false</default>
+                <label>Pain Management Through Physical Therapy</label>
+            </value>
+            <value>
+                <fullName>Pediatric Rehabilitation Services</fullName>
+                <default>false</default>
+                <label>Pediatric Rehabilitation Services</label>
+            </value>
+            <value>
+                <fullName>Physical Therapy</fullName>
+                <default>false</default>
+                <label>Physical Therapy</label>
+            </value>
+            <value>
+                <fullName>Post-Surgical Rehabilitaion</fullName>
+                <default>false</default>
+                <label>Post-Surgical Rehabilitaion</label>
+            </value>
+            <value>
+                <fullName>Rehabilitation Therapy</fullName>
+                <default>false</default>
+                <label>Rehabilitation Therapy</label>
+            </value>
+            <value>
+                <fullName>Trauma Rehabilitation</fullName>
+                <default>false</default>
+                <label>Trauma Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Wellness Coaching</fullName>
+                <default>false</default>
+                <label>Wellness Coaching</label>
+            </value>
+            <value>
+                <fullName>Active Release Technique</fullName>
+                <default>false</default>
+                <label>Active Release Technique</label>
+            </value>
+            <value>
+                <fullName>Aquatic Therapy</fullName>
+                <default>false</default>
+                <label>Aquatic Therapy</label>
+            </value>
+            <value>
+                <fullName>Dry Needling</fullName>
+                <default>false</default>
+                <label>Dry Needling</label>
+            </value>
+            <value>
+                <fullName>Electrical Stimulation</fullName>
+                <default>false</default>
+                <label>Electrical Stimulation</label>
+            </value>
+            <value>
+                <fullName>Muscular Endurance Development Exercise</fullName>
+                <default>false</default>
+                <label>Muscular Endurance Development Exercise</label>
+            </value>
+            <value>
+                <fullName>Myofascial Release Therapy</fullName>
+                <default>false</default>
+                <label>Myofascial Release Therapy</label>
+            </value>
+            <value>
+                <fullName>Neurological Rehabilitation</fullName>
+                <default>false</default>
+                <label>Neurological Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Range of Motion Testing</fullName>
+                <default>false</default>
+                <label>Range of Motion Testing</label>
+            </value>
+            <value>
+                <fullName>Rehabilitation After Stroke or Trauma</fullName>
+                <default>false</default>
+                <label>Rehabilitation After Stroke or Trauma</label>
+            </value>
+            <value>
+                <fullName>Spine and Sports Musculoskeletal Rehab</fullName>
+                <default>false</default>
+                <label>Spine and Sports Musculoskeletal Rehab</label>
+            </value>
+            <value>
+                <fullName>Spine Physical Therapy</fullName>
+                <default>false</default>
+                <label>Spine Physical Therapy</label>
+            </value>
+            <value>
+                <fullName>Stroke Rehabilitation</fullName>
+                <default>false</default>
+                <label>Stroke Rehabilitation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Open_PCU_Targets</fullName>
+    <columns>NAME</columns>
+    <columns>Target_Status__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>PCU_Call_Priority__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>ICU_Target__c.PCU_Record</value>
+    </filters>
+    <filters>
+        <field>Target_Status__c</field>
+        <operation>equals</operation>
+        <value>New,Contact Attempted,Actively Working</value>
+    </filters>
+    <filters>
+        <field>OWNER.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>Hunt,Henkel,Ostler,Varner,Staley,Garcia,Holtby,Thomas,Brough</value>
+    </filters>
+    <label>All Open PCU Targets</label>
+</ListView>

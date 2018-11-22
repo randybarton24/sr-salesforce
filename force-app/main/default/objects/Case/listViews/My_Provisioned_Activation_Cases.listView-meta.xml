@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Provisioned_Activation_Cases</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>Subscriber_ID__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Stage__c</columns>
+    <columns>tz__Timezone__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>SR_Date_Created__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Activation</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Provisioned,Pending Cancel</value>
+    </filters>
+    <label>My Provisioned Activation Cases</label>
+    <sharedTo>
+        <role>CSR_Implementation</role>
+    </sharedTo>
+</ListView>

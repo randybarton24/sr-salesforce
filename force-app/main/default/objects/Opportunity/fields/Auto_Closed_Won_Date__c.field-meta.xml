@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auto_Closed_Won_Date__c</fullName>
+    <description>Used by Accounting to set a date in the future that an Opportunity should be set to Closed Won. This allows them to let an existing Opportunity run out without a renewal and setup a new Opportunity without creating the subscription right away.</description>
+    <externalId>false</externalId>
+    <label>Auto Closed Won Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

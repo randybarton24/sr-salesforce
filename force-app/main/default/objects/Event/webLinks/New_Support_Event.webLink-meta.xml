@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Support_Event</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Support Event</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>if (typeof(srcSelf) == &#39;function&#39;) {
+    srcUp(&#39;00U/e?what_id={!Case.Id}&amp;retURL={!Case.Id}&amp;who_id={!Case.ContactId}&amp;RecordType=012i0000001EAM4&amp;ent=Event&#39;);
+}
+else {
+window.open(&#39;00U/e?what_id={!Case.Id}&amp;retURL={!Case.Id}&amp;who_id={!Case.ContactId}&amp;RecordType=012i0000001EAM4&amp;ent=Event&#39;);
+}</url>
+</WebLink>

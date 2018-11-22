@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Bonus_Commission_Credit__c</fullName>
+    <description>The actual Bonus &amp; Commission Credit based on the sale going active within 120 days.  The Override B&amp;C Activation checkbox is for exceptions to the rule.</description>
+    <externalId>false</externalId>
+    <formula>ROUND( IF( ( Opportunity__r.Account.MRFMS__c - Opportunity__r.RecurSoft__Contract_Signed_Date__c  &lt;= 120 &amp;&amp; 
+Opportunity__r.Account.MRFMS__c  &gt;=  Opportunity__r.RecurSoft__Contract_Signed_Date__c ) ||
+Override_B_C_Activation__c 
+, Potential_Bonus_Commission_Credit__c , 0 ) , 2 )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Actual Bonus Commission Credit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

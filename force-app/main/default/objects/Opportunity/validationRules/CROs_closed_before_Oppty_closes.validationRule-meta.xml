@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CROs_closed_before_Oppty_closes</fullName>
+    <active>true</active>
+    <description>All CRO&#39;s must be closed before the Save Opportunity can be closed</description>
+    <errorConditionFormula>Open_Cancel_Requests__c &gt; 0 &amp;&amp;
+IsClosed = True</errorConditionFormula>
+    <errorDisplayField>Open_Cancel_Requests__c</errorDisplayField>
+    <errorMessage>You must close all Cancel Request Objects before closing the Opportunity</errorMessage>
+</ValidationRule>

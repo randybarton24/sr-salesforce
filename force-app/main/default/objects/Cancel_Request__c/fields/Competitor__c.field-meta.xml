@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor__c</fullName>
+    <externalId>false</externalId>
+    <label>Competitor</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>4 Patient Care</fullName>
+                <default>false</default>
+                <label>4 Patient Care</label>
+            </value>
+            <value>
+                <fullName>DemandForce</fullName>
+                <default>false</default>
+                <label>DemandForce</label>
+            </value>
+            <value>
+                <fullName>eCentral</fullName>
+                <default>false</default>
+                <label>eCentral</label>
+            </value>
+            <value>
+                <fullName>eReminders</fullName>
+                <default>false</default>
+                <label>eReminders</label>
+            </value>
+            <value>
+                <fullName>Lighthouse</fullName>
+                <default>false</default>
+                <label>Lighthouse</label>
+            </value>
+            <value>
+                <fullName>Patient Activator</fullName>
+                <default>false</default>
+                <label>Patient Activator</label>
+            </value>
+            <value>
+                <fullName>Phone Tree</fullName>
+                <default>false</default>
+                <label>Phone Tree</label>
+            </value>
+            <value>
+                <fullName>PM/EMR</fullName>
+                <default>false</default>
+                <label>PM/EMR</label>
+            </value>
+            <value>
+                <fullName>Practice Mojo</fullName>
+                <default>false</default>
+                <label>Practice Mojo</label>
+            </value>
+            <value>
+                <fullName>Sesame</fullName>
+                <default>false</default>
+                <label>Sesame</label>
+            </value>
+            <value>
+                <fullName>Teledental</fullName>
+                <default>false</default>
+                <label>Teledental</label>
+            </value>
+            <value>
+                <fullName>Televox</fullName>
+                <default>false</default>
+                <label>Televox</label>
+            </value>
+            <value>
+                <fullName>Weave</fullName>
+                <default>false</default>
+                <label>Weave</label>
+            </value>
+            <value>
+                <fullName>Websystem3</fullName>
+                <default>false</default>
+                <label>Websystem3</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>RevenueWell</fullName>
+                <default>false</default>
+                <label>RevenueWell</label>
+            </value>
+            <value>
+                <fullName>ZocDoc</fullName>
+                <default>false</default>
+                <label>ZocDoc</label>
+            </value>
+            <value>
+                <fullName>Other(Note name in Other Competitor)</fullName>
+                <default>false</default>
+                <label>Other(Note name in Other Competitor)</label>
+            </value>
+            <value>
+                <fullName>1800Dentists</fullName>
+                <default>false</default>
+                <label>1800Dentists</label>
+            </value>
+            <value>
+                <fullName>AbleDent</fullName>
+                <default>false</default>
+                <label>AbleDent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

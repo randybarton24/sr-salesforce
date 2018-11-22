@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Logo_Size_Active_Customer__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( ParentId ) || ISNULL( ParentId ) ,
+
+/*If this is the top level parent then calculate based on own values*/
+ (IF( ISPICKVAL( Type , &quot;Customer&quot; ) &amp;&amp; ISPICKVAL( RecurSoft__Status__c , &quot;Active&quot; ) , 1 , 0 ) + 
+ Child_Accts_Active_Customer__c + 
+ Grandchild_Accts_Active_Customer__c) ,
+
+ IF( ISBLANK( Parent.ParentId ) || ISNULL( Parent.ParentId ) ,
+
+  /*If there isn&#39;t a grandparent then calculate based on parent values*/
+  (IF( ISPICKVAL( Parent.Type , &quot;Customer&quot; ) &amp;&amp; ISPICKVAL( Parent.RecurSoft__Status__c , &quot;Active&quot; ) , 1 , 0 ) + 
+  Parent.Child_Accts_Active_Customer__c + 
+  Parent.Grandchild_Accts_Active_Customer__c) ,
+
+  /*Otherwise calculate based on grandparent values*/
+  (IF( ISPICKVAL( Parent.Parent.Type , &quot;Customer&quot; ) &amp;&amp; ISPICKVAL( Parent.Parent.RecurSoft__Status__c , &quot;Active&quot; ) , 1 , 0 ) + 
+  Parent.Parent.Child_Accts_Active_Customer__c + 
+  Parent.Parent.Grandchild_Accts_Active_Customer__c)
+ )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Logo Size - Active Customer</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,7 @@
+<!--
+ - Created by mschetselaar on 9/10/2018.
+ -->
+
+<aura:event type="COMPONENT" description="UpdatePlaybookCases">
+    <aura:attribute name="success" type="Boolean" />
+</aura:event>

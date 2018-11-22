@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Support_Team_Assignment__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Which Support team is this employee a part of</inlineHelpText>
+    <label>Support Team Assignment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dentrix 1 Team</fullName>
+                <default>false</default>
+                <label>Dentrix 1 Team</label>
+            </value>
+            <value>
+                <fullName>Dentrix 2 Team</fullName>
+                <default>false</default>
+                <label>Dentrix 2 Team</label>
+            </value>
+            <value>
+                <fullName>EagleSoft Team</fullName>
+                <default>false</default>
+                <label>EagleSoft Team</label>
+            </value>
+            <value>
+                <fullName>SCOPE Team</fullName>
+                <default>false</default>
+                <label>SCOPE Team</label>
+            </value>
+            <value>
+                <fullName>Global Team</fullName>
+                <default>false</default>
+                <label>Global Team</label>
+            </value>
+            <value>
+                <fullName>Vision Team</fullName>
+                <default>false</default>
+                <label>Vision Team</label>
+            </value>
+            <value>
+                <fullName>Medical 1 Team</fullName>
+                <default>false</default>
+                <label>Medical 1 Team</label>
+            </value>
+            <value>
+                <fullName>Medical 2 Team</fullName>
+                <default>false</default>
+                <label>Medical 2 Team</label>
+            </value>
+            <value>
+                <fullName>Enterprise Team</fullName>
+                <default>false</default>
+                <label>Enterprise Team</label>
+            </value>
+            <value>
+                <fullName>Groups Team</fullName>
+                <default>false</default>
+                <label>Groups Team</label>
+            </value>
+            <value>
+                <fullName>Rapid Response 1 Team</fullName>
+                <default>false</default>
+                <label>Rapid Response 1 Team</label>
+            </value>
+            <value>
+                <fullName>Rapid Response 2 Team</fullName>
+                <default>false</default>
+                <label>Rapid Response 2 Team</label>
+            </value>
+            <value>
+                <fullName>Rapid Response 3 Team</fullName>
+                <default>false</default>
+                <label>Rapid Response 3 Team</label>
+            </value>
+            <value>
+                <fullName>Rapid Response 4 Team</fullName>
+                <default>false</default>
+                <label>Rapid Response 4 Team</label>
+            </value>
+            <value>
+                <fullName>Rapid Response 5 Team</fullName>
+                <default>false</default>
+                <label>Rapid Response 5 Team</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

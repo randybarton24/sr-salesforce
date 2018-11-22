@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Rev_Rec_End_Based_On_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c, false, 
+    ISBLANK(TEXT(RecurSoft__Rev_Rec_End_Based_On__c))
+)</errorConditionFormula>
+    <errorDisplayField>RecurSoft__Rev_Rec_End_Based_On__c</errorDisplayField>
+    <errorMessage>Please select a value for Rev Rec End Based On.</errorMessage>
+</ValidationRule>

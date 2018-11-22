@@ -1,0 +1,160 @@
+<apex:page renderAs="pdf" sidebar="false" showheader="false" standardStylesheets="false" cache="false" applyHtmlTag="false" >
+    
+<html lang="en">
+  <head>
+      <meta charset="utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="description" content=""/>
+      <meta name="author" content=""/>
+
+
+    <title>Solutionreach Agreement</title>
+
+    <!-- Bootstrap core CSS -->
+	    <apex:stylesheet value="{!URLFOR($Resource.bootstrapPDF, 'css/bootstrap.min.css')}" />
+	    <apex:stylesheet value="{!URLFOR($Resource.bootstrap, 'css/bootstrap-theme.min.css')}" />
+    	<apex:stylesheet value="{!URLFOR($Resource.style)}" />
+
+    <style type="text/css">
+	    
+	    @page {
+	    	size: A4;
+	    }
+
+	    * {
+	    	font-size: 10px;
+	    }
+
+	    sup {
+	    	font-size: 6px;
+	    }
+
+	    ol {
+	    	margin-right: 10px;
+	    }
+
+    	.table > tbody > tr > td {
+    		height: 10px;
+    		padding: 10px;
+    		margin: 10px;
+    		padding-left: 10px;
+			vertical-align: middle;
+			white-space: nowrap;
+		}
+
+		.table > tbody > tr > td > p {
+    		padding: 10px;
+    		margin: 10px;
+    		padding-left: 10px;
+			vertical-align: middle;
+			white-space: nowrap;
+		}
+
+		.table > thead > tr > td {
+    		height: 10px;
+    		padding: 10px;
+    		margin: 10px;
+    		padding-left: 10px;
+			vertical-align: middle;
+			white-space: nowrap;
+		}
+
+		.table > thead > tr > td > p {
+    		padding: 10px;
+    		margin: 10px;
+    		padding-left: 10px;
+			vertical-align: middle;
+			white-space: nowrap;
+		}
+
+		.nobreak-div {
+			page-break-inside: avoid;
+		}
+
+		.EULA-BOLD {
+
+			font-size:10px;
+			font-weight:bold;
+			padding: 0px;
+    		margin: 0px;
+    		border: 0px;
+    		line-height: normal;
+		}
+
+		.EULA-NORMAL {
+
+			font-size:10px;
+			font-weight:normal;
+			padding: 0px;
+    		margin: 0px;
+    		border: 0px;
+    		line-height: normal;
+		}
+		
+    </style>
+    
+
+  </head>
+
+  <body >
+	
+	<div class="container theme-showcase" role="main">
+	<apex:form >
+	    <div class="EULA-BOLD" >
+	    	<h6 class="text-center"><strong>Exhibit I</strong>
+	    	<br/>
+	    	<span class="text-uppercase text-center"><strong>END-USER LICENSE AGREEMENT</strong></span></h6>
+	        SOLUTIONREACH, INC. End-user License Agreement - <span class="EULA-NORMAL"> Please read the following license agreement. You must accept the agreement to use our system and services.
+	        <br/>
+	        <br/>
+	        This End-user License Agreement ("Agreement") is a legal document that binds you, as a customer or user, to certain obligations. You should read this Agreement carefully before accepting its terms. You understand and agree that the wireless messaging, communication and other services, and software offered via the Solutionreach.com or SmileReminder.com website, our other websites or otherwise (collectively referred to as "Services") are provided to you under this Agreement by us. In this Agreement, "us," "we" and "our" mean Solutionreach.com or SmileReminder.com, our other websites, and our owner, Solutionreach, Inc., unless the context requires otherwise. By signing our Services Agreement or clicking the "AGREE" or similar option (if accepting online), you are stating that you are 18 years or older, that you have read and understand this Agreement, and that you agree to be bound by the terms in effect as updated by us from time to time. If you do not understand or agree with the terms of this Agreement, please do not sign the Services Agreement or click the "DISAGREE" or similar option and/or discontinue use of the Services.</span>
+	        <br/>
+	        <br/>
+	        1. License to Application Services-<span class="EULA-NORMAL"> In consideration of your obligations under this Agreement, we grant you a limited, non-transferable, non-exclusive, revocable right and license for the term of this Agreement to obtain access to the Services for internal business purposes.</span>
+	        <br/>
+	        <br/>
+	        2. Availability of Services-<span class="EULA-NORMAL"> Subject to the terms and conditions of this Agreement, we will use commercially reasonable efforts to provide access to the Services twenty-four (24) hours a day, seven (7) days a week throughout the term of this Agreement. You agree that from time to time the Services may be inaccessible or inoperable for various reasons, including periodic maintenance procedures or upgrades, service malfunctions, and causes beyond our control or which are not foreseeable by us, including the interruption or failure of telecommunication or digital transmission links, hostile network attacks or network congestion, or other failures.</span>
+	        <br/>
+	        <br/>
+	        3. Services Subject to Change-<span class="EULA-NORMAL"> You acknowledge that the Services may change from time to time and that we necessarily rely on various programs, products and services provided by independent third parties in order to offer our Services. Because these third parties may modify, suspend or cancel their programs, products, and services at any time, the Services offered by us may be affected, including the termination of specific features, benefits, and Services. No modification, suspension, or cancellation by any third party that causes us to change or terminate specific features, benefits, or Services shall release you from your obligation to pay for the Services or otherwise affect your obligations under this Agreement or the Services Agreement (as defined herein).</span>
+	        <br/>
+	        <br/>
+	        4. Operation and Security-<span class="EULA-NORMAL"> We will use commercially reasonable efforts to operate and maintain our websites and systems and to ensure the security, confidentiality, and integrity of all text, data, video and other information provided by you, your patients, customers and/or clients, or otherwise related to your organization ("User Content") transmitted through or stored on our system. It is your responsibility to perform regular backups of your User Content. You will bear full risk of loss or damage to all User Content. The Services and our systems are not an archive for any User Content.</span>
+	        <br/>
+	        <br/>
+	        5. Data Access-<span class="EULA-NORMAL"> You hereby grant us full read and write access to your Practice Management Software (your “PM”). The data access provided for herein shall allow us to, among other things, read data such as appointment information from the PM and write data such as appointment confirmations to the PM (the “Data Access”). You acknowledge that your PM is the system of record and you agree to regularly back up the data contained in your PM. Except for the responsibility and liability imposed on us, including indemnification of you by us, related to any unauthorized or improper disclosure of electronic protected health information (“ePHI”) by us as described in a separate Business Associate Agreement (“BAA”) between you and us, you hereby agree for yourself, your partners, and your affiliates to release, acquit, and forever discharge us or anyone claiming by or through us of and from any and all claims, demands, actions, or causes of action, whether at law or in equity, breaches of any duty or any responsibility, controversies (“Claims”) and any and all losses, including loss or corruption of data, damages, liabilities, deficiencies, interest, awards, judgments, penalties, fees, costs, and expenses (including reasonable attorneys’ fees, and costs and other out-of- pocket expenses incurred in investigating, preparing or defending the foregoing), whether existing or which could, might, or may be claimed to exist, of whatever kind or name, whether known or unknown, suspected or unsuspected, liquidated or unliquidated, that may arise or be suffered or may relate to, either directly or indirectly, the Data Access. You further agree not to bring, induce any party to bring, or assist any party in bringing, any Claim with respect to the Data Access. Further, you agree to perform regular maintenance on your computer systems and networks, including taking all actions necessary to detect, prevent, and patch relevant security vulnerabilities and threats, and you agree to maintain your computer systems and networks so they meet or exceed the minimum system requirements recommended for the Services, which minimum requirements are published at www.solutionreach.com/system-requirements.</span>
+	        <br/>
+	        <br/>
+	        6. Warranty and Liability Limitations-<span class="EULA-NORMAL"> a. Warranty Limitations. THE SERVICES ARE PROVIDED ON AN "AS IS" BASIS, AND YOUR USE OF THE SERVICES IS AT YOUR OWN RISK. WE WILL USE COMMERCIALLY REASONABLE EFFORTS TO MAINTAIN ACCEPTABLE PERFORMANCE OF THE SERVICES. HOWEVER, WE PROVIDE NO WARRANTIES WHATSOEVER AND WE DO NOT MAKE, AND HEREBY DISCLAIM, ANY AND ALL EXPRESS AND IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NONINFRINGEMENT, AND ANY WARRANTIES ARISING FROM COURSE OF DEALING, USAGE, OR TRADE PRACTICE. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR COMPLETELY SECURE. WE DO NOT MAKE ANY REPRESENTATIONS REGARDING THE USE OR THE RESULTS OF THE USE OF THE SERVICES IN TERMS OF ACCURACY, RELIABILITY OR OTHERWISE. YOU ASSUME SOLE RESPONSIBILITY FOR YOUR USE OF THE SERVICES TO ACHIEVE YOUR INTENDED RESULTS. WE DO NOT AND CANNOT CONTROL THE FLOW OF INFORMATION TO OR FROM OUR SYSTEM AND OTHER PORTIONS OF THE INTERNET. SUCH FLOW DEPENDS IN LARGE PART ON THE PERFORMANCE OF INTERNET SERVICE PROVIDED OR CONTROLLED BY THIRD PARTIES. AT TIMES, ACTIONS OR INACTIONS OF SUCH THIRD PARTIES CAN IMPAIR OR DISRUPT YOUR AND/OR OUR CONNECTIONS TO THE INTERNET. b. Liability Limitation. IN NO EVENT SHALL WE HAVE ANY LIABILITY TO YOU, YOUR PATIENTS, CUSTOMERS OR CLIENTS, OR ANY OTHER THIRD PARTY ARISING FROM OUR OBLIGATIONS UNDER THIS AGREEMENT OR OTHERWISE FOR CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, EVEN IF ADVISED IN ADVANCE OF THE POSSIBILITY OF SUCH DAMAGES. SOME STATE STATUTES MAY APPLY RESTRICTIONS REGARDING LIMITATIONS OF LIABILITY. OUR SOLE AND MAXIMUM LIABILITY, AND YOUR SOLE AND EXCLUSIVE REMEDY FOR ANY CLAIMS WHATSOEVER, WHETHER BASED ON BREACH OF CONTRACT, BREACH OF WARRANTY, TORT, INCLUDING NEGLIGENCE, PRODUCT LIABILITY, OR OTHERWISE, SHALL BE LIMITED TO THE AMOUNT YOU PAID FOR THE SERVICES WITHIN THE THREE (3) MONTHS IMMEDIATELY PRECEDING A CLAIM IN WHICH WE ARE LIABLE TO YOU FOR SUCH CLAIM. c. Reliance on Limitations. YOU AND WE ACKNOWLEDGE THAT WE HAVE SET OUR PRICES AND ENTERED INTO THIS AGREEMENT IN RELIANCE UPON THE LIMITATIONS OF LIABILITY AND THE DISCLAIMERS OF WARRANTIES AND DAMAGES SET FORTH IN THIS AGREEMENT AND THAT THESE PROVISIONS FORM AN ESSENTIAL BASIS OF THE BARGAIN BETWEEN THE PARTIES. THE PARTIES AGREE THAT THE LIMITATIONS OF LIABILITY AND DISCLAIMERS SPECIFIED IN THIS AGREEMENT WILL SURVIVE AND APPLY EVEN IF PORTIONS OF THIS AGREEMENT ARE FOUND TO HAVE FAILED IN THEIR ESSENTIAL PURPOSE.</span>
+	        <br/>
+	        <br/>
+	        7. Fees and Payment Terms-<span class="EULA-NORMAL"> You agree to pay for the Services as set forth in the separate Solutionreach Services Agreement between you and us, which agreement is incorporated herein by this reference ("Services Agreement"). You acknowledge that you have signed and received a copy of the Services Agreement and that it forms a part of this Agreement. Fees for the Services will be billed and charged to you. Any payment not received within thirty (30) days of the billing date will accrue interest at a rate of one and one-half percent (1 1/2%) per month, or the highest rate allowed by applicable law, whichever is lower. If you are delinquent in your payments, we may, upon notice to you, require full payment for the remainder of the term and suspend the Services until payment in full is received; we also reserve the right to terminate this Agreement for non-payment. All fees charged by us for Services are exclusive of taxes and similar fees now in force or enacted in the future imposed on the transaction, all of which you will be responsible for, except for taxes based on our net income.</span>
+	        <br/>
+	        <br/>
+	        8. Proprietary Rights-<span class="EULA-NORMAL"> Exclusive of User Content, we will retain all right, title, and interest (including copyright and other proprietary or intellectual property rights) relating to the Services and all legally protectable elements or derivative works thereto. We will not obtain any right, title, or interest in the User Content. We may place copyright and/or proprietary notices, including hypertext links, within our website, system, and software applications. You may not alter or remove such notices without our written permission. You will not, directly or indirectly, reverse engineer, decompile, modify, sublicense, or otherwise attempt to derive source code, trade secrets, or other intellectual property from us.</span>
+	        <br/>
+	        <br/>
+	        9. Acceptable Use Restrictions-<span class="EULA-NORMAL"> You are solely responsible for all acts, omissions and use under and charges incurred with your account or password. You are also solely responsible for any User Content displayed, linked, posted, transmitted through, or stored on our system or any third-party website or system. You agree not to engage in unacceptable use of the Services, which includes, without limitation: (i) to disseminate or transmit unsolicited messages, chain letters, or unsolicited commercial email; (ii) to disseminate or transmit any material that, to a reasonable person, may be abusive, obscene, pornographic, defamatory, harassing, offensive, vulgar, threatening, or malicious; (iii) to disseminate or transmit files, data, or other material, information or work that actually or potentially infringes the copyright, trademark, patent, trade secret, or other intellectual property right of any person; (iv) to create a false identity or to otherwise attempt to mislead any person as to the identity, source, or origin of any communication or do any act in violation of applicable laws and regulations; (v) to export, re-export or permit downloading of any message or content in violation of any export or import law, regulation, or restriction of the United States and its agencies or authorities, or without all required approvals, licenses, and/or exemptions; (vi) to interfere, disrupt, or attempt to gain unauthorized access to any computer system, server, network, or account for which you do not have authorization to access or at a level exceeding your authorization; (vii) to disseminate or transmit any virus, trojan horse, or other malicious, harmful or disabling data, work, code, or program; (viii) to conduct, if applicable, any bank card or other financial transactions except as specifically authorized in each case by your respective customers, clients, and patients; (ix) to engage in any conduct that is not in compliance, if applicable, with the consumer protection and/or privacy requirements of the Health Insurance Portability and Accountability Act (HIPAA) and related Omnibus Rule, the Health Information Technology for Economic and Clinical Health Act (HITECH Act), the Telephone Consumer Protection Act of 1991 (TCPA), the Controlling the Assault of Non-Solicited Pornography And Marketing Act of 2003 (CAN-SPAM), and Canada’s Anti-Spam Legislation (CASL); or (x) to engage in any other activity deemed by us to be in conflict with the spirit or intent of this Agreement or any policy of ours. If you are a HIPAA Covered Entity, or if otherwise applicable to you in your jurisdiction, you agree to include a description of all intended uses of patient information in the HIPAA Notice of Privacy Practices, or other similar notice, you give to your patients. Additionally, you agree to promptly respond if a patient indicates they no longer wish to receive messages of any given type via the Services by disabling in the Services the associated message type(s) or device(s) for the patient making the request. You will indemnify us for any and all claims, damages, liabilities, costs, and expenses, including attorneys' fees and court costs, related to any breach of this Agreement by you.</span>
+	        <br/>
+	        <br/>
+	        10. Protected Information and Actions as Agent-<span class="EULA-NORMAL"> You acknowledge that User Content may include protected and confidential customer or client patient information that is transmitted through or stored on our system. Applicable federal and state laws, as well as ethical and licensure requirements of your profession, may impose obligations with respect to patient confidentiality that may limit your ability to use the Services or to transmit certain information to third parties. You represent and warrant that, at all times during and after the term of this Agreement, you will comply with all laws, rules, and regulations directly or indirectly applicable to you or your organization that may now or hereafter govern the gathering, use, transmission, processing, receipt, reporting, disclosure, maintenance, and storage of customer, client and patient information. Moreover, you will use your best efforts to cause all persons or entities under your direct or indirect direction or control to comply with such laws, rules, and regulations. You are, at all times during and after the term of this Agreement, solely responsible for obtaining and maintaining or verifying that you and your organization have obtained and are maintaining all customer, client, and patient consents and all other legally necessary consents, authorizations, software licenses, or other permissions required or advisable to process, access, retrieve, transmit, monitor, post, store, disclose and view any customer, client or patient information that is transmitted and stored on our system or any third-party website or system. You agree that we, acting on your behalf as your agent, have the right to process, access, retrieve, transmit, monitor, store, disclose, and view customer, client, or patient information in connection with our providing the Services pursuant to this Agreement. We reserve the right to use and disclose to third parties information obtained while providing Services for purposes of complying with all applicable laws, rules, and regulations. You will indemnify us for any and all claims, damages, liabilities, costs, and expenses, including attorneys' fees and court costs, related to any Services we provide or action we may take on your behalf as your agent to process, access, retrieve, transmit, monitor, post, store, disclose, and view any customer, client, or patient information or other User Content pursuant to this Agreement.</span>
+	        <br/>
+	        <br/>
+	        11. Term-<span class="EULA-NORMAL"> The initial term for the Services and this Agreement shall be set forth in the Services Agreement. Upon the expiration of the initial term, the Services Agreement and this Agreement will renew and continue automatically on an annual basis unless you notify us in writing at least fifteen (15) days prior to the end of the initial term or any applicable renewal term of your intention not to renew. Renewal will be at contract rates and terms.</span>
+	        <br/>
+	        <br/>
+	        12. Termination-<span class="EULA-NORMAL"> a. Termination. We may terminate this Agreement at any time if you breach a material term or condition of this Agreement. Notwithstanding the forgoing, we may terminate this Agreement for any reason at the end of the initial term or any renewal term provided we notify you in writing at least fifteen (15) days prior to the end of the then-current term. You may terminate this Agreement at the expiration of the initial term or any renewal term if you notify us in writing at least fifteen (15) days prior to the end of the term of your intention not to renew. You may also terminate this Agreement at any time if we breach a material term or condition of this Agreement and we fail to cure such breach within thirty (30) days following written notice thereof to us by you. Either party may terminate this Agreement if the other party becomes the subject of a voluntary or involuntary petition in bankruptcy or any proceeding relating to insolvency, receivership, liquidation, or composition for the benefit of creditors. b. Effect of Termination. Upon the effective date of termination of this Agreement, we will cease providing access to the Services, you will cease using the Services and will immediately uninstall any of our software in your possession or control related to the use of the Services, and all your outstanding payment obligations through the effective date of termination will immediately become due.</span>
+	        <br/>
+	        <br/>
+	        13. General-<span class="EULA-NORMAL"> a. Assignment. You may not assign any of your rights, duties or obligations under this Agreement to any person or entity, in whole or in part, unless in the context of a professional practice transfer such as a sale or merger, and any attempt to do so shall be deemed void and/or a material breach of this Agreement (in which case this Agreement shall continue in full force and be binding on you, unless agreed to by us in writing). b. Waiver. No waiver of any provision hereof or of any right or remedy hereunder shall be effective unless in writing and signed by the party against whom such waiver is sought to be enforced. No delay in exercising, no course of dealing with respect to, or no partial exercise of any right or remedy hereunder, shall constitute a waiver of such right or remedy or any other right or remedy, or future exercise thereof. c. Severability. If any provision of this Agreement is determined to be invalid under any applicable statute or rule of law, it is to that extent to be deemed omitted, and the balance of the Agreement shall remain in effect. d. Applicable Law. This Agreement shall be governed in all respects by the laws of the State of Utah except for its conflict of laws provisions. The parties expressly agree that all disputes relating to the enforcement and/or interpretation of this Agreement shall be litigated before a court located in Salt Lake City, Utah. e. Recorded Calls. You hereby grant express consent for calls made for any purpose between you or your representatives or agents and us to be recorded, regardless of whether a call is made or received by a landline, wireless, cordless, or mobile phone. f. Communication. You agree to provide and maintain valid contact information, including an email address and phone number, throughout the term of this Agreement, which will be used to communicate account-related information to you from time to time, including, but not limited to, billing notifications, updates to this Agreement and other agreements that may impact you, new product announcements, and notifications about scheduled or emergency maintenance of the Services. g. Digital Signature Provisions. You represent and warrant that the individual electronically agreeing to the terms of this Agreement is authorized and empowered to agree to this Agreement on your behalf. You further agree that checking a box to acknowledge your assent to this Agreement and/or clicking the "AGREE" button and/or performing any other similar electronic affirmation constitutes an electronic signature as defined by the Electronic Signatures in Global and National Commerce Act and that this Agreement is completely valid, has legal effect, is enforceable, and is binding on and non-refutable by you. h. Entire Agreement. This Agreement, together with the Services Agreement and any other agreement incorporated by reference herein, constitutes the complete and exclusive statement of the agreement and mutual understanding between the parties with respect to the subject matter hereof, superseding all prior proposals, communications, and understandings, whether oral or written. i. Contact Information. Our contact information is as follows: 2600 N. Ashton Blvd. Lehi, UT 84043; Phone: (801) 331-7100.</span>
+
+	        </div>
+
+		</apex:form>
+    </div> <!-- /container -->
+
+  </body>
+</html>
+
+</apex:page>

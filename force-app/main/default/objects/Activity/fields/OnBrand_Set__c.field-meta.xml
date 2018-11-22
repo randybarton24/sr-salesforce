@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OnBrand_Set__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked if Event came from an OnBrand Set</description>
+    <externalId>false</externalId>
+    <label>OnBrand Set</label>
+    <type>Checkbox</type>
+</CustomField>

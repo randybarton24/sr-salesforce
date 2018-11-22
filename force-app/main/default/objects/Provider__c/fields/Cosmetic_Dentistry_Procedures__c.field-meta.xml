@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cosmetic_Dentistry_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Cosmetic Dentistry Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dental Gum Flap Surgery</fullName>
+                <default>false</default>
+                <label>Dental Gum Flap Surgery</label>
+            </value>
+            <value>
+                <fullName>e.max® Dental Crowns</fullName>
+                <default>false</default>
+                <label>e.max® Dental Crowns</label>
+            </value>
+            <value>
+                <fullName>Endodontic Treatment</fullName>
+                <default>false</default>
+                <label>Endodontic Treatment</label>
+            </value>
+            <value>
+                <fullName>Implant-Supported Dentures</fullName>
+                <default>false</default>
+                <label>Implant-Supported Dentures</label>
+            </value>
+            <value>
+                <fullName>Laser Assisted Periodontal Therapy</fullName>
+                <default>false</default>
+                <label>Laser Assisted Periodontal Therapy</label>
+            </value>
+            <value>
+                <fullName>Porcelain Dental Inlays</fullName>
+                <default>false</default>
+                <label>Porcelain Dental Inlays</label>
+            </value>
+            <value>
+                <fullName>Porcelain Dental Onlays</fullName>
+                <default>false</default>
+                <label>Porcelain Dental Onlays</label>
+            </value>
+            <value>
+                <fullName>Porcelain Fixed Bridges</fullName>
+                <default>false</default>
+                <label>Porcelain Fixed Bridges</label>
+            </value>
+            <value>
+                <fullName>Rotary Endodontics</fullName>
+                <default>false</default>
+                <label>Rotary Endodontics</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>33.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>A Calendar for ADR&#39;s to use when scheduling for SAE&#39;s</description>
+    <label>SAE Calendars</label>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>9</minorNumber>
+        <namespace>SLCA2</namespace>
+    </packageVersions>
+</ApexPage>

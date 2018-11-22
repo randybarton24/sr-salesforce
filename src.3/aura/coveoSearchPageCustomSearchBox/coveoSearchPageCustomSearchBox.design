@@ -1,0 +1,6 @@
+<design:component label="SearchPage CoveoBox">
+  <design:attribute name="placeholder" label="The placeholder text to put in the searchbox when no query is typed." />
+  <design:attribute name="name" label="The name of the Visualforce Coveo Search component where your Standalone Search Box should redirect." />
+  <design:attribute name="searchHub" label="The name of the searchHub, used for Coveo Analytics." />
+  <design:attribute name="searchPageName" label="The location of your search component in your community." />
+</design:component>

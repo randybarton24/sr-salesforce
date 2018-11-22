@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plastic_Surgery_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Plastic Surgery Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adult Acne</fullName>
+                <default>false</default>
+                <label>Adult Acne</label>
+            </value>
+            <value>
+                <fullName>Age Spots</fullName>
+                <default>false</default>
+                <label>Age Spots</label>
+            </value>
+            <value>
+                <fullName>Aging Face</fullName>
+                <default>false</default>
+                <label>Aging Face</label>
+            </value>
+            <value>
+                <fullName>Amputated Finger</fullName>
+                <default>false</default>
+                <label>Amputated Finger</label>
+            </value>
+            <value>
+                <fullName>Amputated Thumb</fullName>
+                <default>false</default>
+                <label>Amputated Thumb</label>
+            </value>
+            <value>
+                <fullName>Atypical Mole</fullName>
+                <default>false</default>
+                <label>Atypical Mole</label>
+            </value>
+            <value>
+                <fullName>Basosquamous Carcinoma</fullName>
+                <default>false</default>
+                <label>Basosquamous Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Bennett&#39;s Fracture</fullName>
+                <default>false</default>
+                <label>Bennett&#39;s Fracture</label>
+            </value>
+            <value>
+                <fullName>Blepharochalasis</fullName>
+                <default>false</default>
+                <label>Blepharochalasis</label>
+            </value>
+            <value>
+                <fullName>Blepharoptosis</fullName>
+                <default>false</default>
+                <label>Blepharoptosis</label>
+            </value>
+            <value>
+                <fullName>Body Disproportion</fullName>
+                <default>false</default>
+                <label>Body Disproportion</label>
+            </value>
+            <value>
+                <fullName>Breast, Unilateral Giant</fullName>
+                <default>false</default>
+                <label>Breast, Unilateral Giant</label>
+            </value>
+            <value>
+                <fullName>Breast Diseases</fullName>
+                <default>false</default>
+                <label>Breast Diseases</label>
+            </value>
+            <value>
+                <fullName>Breast Disorders</fullName>
+                <default>false</default>
+                <label>Breast Disorders</label>
+            </value>
+            <value>
+                <fullName>Broken Finger</fullName>
+                <default>false</default>
+                <label>Broken Finger</label>
+            </value>
+            <value>
+                <fullName>Broken Hand</fullName>
+                <default>false</default>
+                <label>Broken Hand</label>
+            </value>
+            <value>
+                <fullName>Carpal Fractures</fullName>
+                <default>false</default>
+                <label>Carpal Fractures</label>
+            </value>
+            <value>
+                <fullName>Chemical Burn</fullName>
+                <default>false</default>
+                <label>Chemical Burn</label>
+            </value>
+            <value>
+                <fullName>Chest Wall Deformity</fullName>
+                <default>false</default>
+                <label>Chest Wall Deformity</label>
+            </value>
+            <value>
+                <fullName>Congenital Anomaly</fullName>
+                <default>false</default>
+                <label>Congenital Anomaly</label>
+            </value>
+            <value>
+                <fullName>Congenital Deformity</fullName>
+                <default>false</default>
+                <label>Congenital Deformity</label>
+            </value>
+            <value>
+                <fullName>Congenital Hand Anomaly</fullName>
+                <default>false</default>
+                <label>Congenital Hand Anomaly</label>
+            </value>
+            <value>
+                <fullName>Congenital Nasal Deformity</fullName>
+                <default>false</default>
+                <label>Congenital Nasal Deformity</label>
+            </value>
+            <value>
+                <fullName>Contracture</fullName>
+                <default>false</default>
+                <label>Contracture</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Conditions</fullName>
+                <default>false</default>
+                <label>Cosmetic Conditions</label>
+            </value>
+            <value>
+                <fullName>Craniofacial Disorders</fullName>
+                <default>false</default>
+                <label>Craniofacial Disorders</label>
+            </value>
+            <value>
+                <fullName>Cutaneous Squamous Cell Carcinoma</fullName>
+                <default>false</default>
+                <label>Cutaneous Squamous Cell Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Dermal Melanoma</fullName>
+                <default>false</default>
+                <label>Dermal Melanoma</label>
+            </value>
+            <value>
+                <fullName>Dog Bite</fullName>
+                <default>false</default>
+                <label>Dog Bite</label>
+            </value>
+            <value>
+                <fullName>Ear Cancer</fullName>
+                <default>false</default>
+                <label>Ear Cancer</label>
+            </value>
+            <value>
+                <fullName>Electrical Burn</fullName>
+                <default>false</default>
+                <label>Electrical Burn</label>
+            </value>
+            <value>
+                <fullName>External Ear Disorders</fullName>
+                <default>false</default>
+                <label>External Ear Disorders</label>
+            </value>
+            <value>
+                <fullName>Eyelid Disorders</fullName>
+                <default>false</default>
+                <label>Eyelid Disorders</label>
+            </value>
+            <value>
+                <fullName>Eyelid Lesions</fullName>
+                <default>false</default>
+                <label>Eyelid Lesions</label>
+            </value>
+            <value>
+                <fullName>Face Skin Lesions</fullName>
+                <default>false</default>
+                <label>Face Skin Lesions</label>
+            </value>
+            <value>
+                <fullName>Facial Birth Defect</fullName>
+                <default>false</default>
+                <label>Facial Birth Defect</label>
+            </value>
+            <value>
+                <fullName>Facial Diseases</fullName>
+                <default>false</default>
+                <label>Facial Diseases</label>
+            </value>
+            <value>
+                <fullName>Facial Disorders</fullName>
+                <default>false</default>
+                <label>Facial Disorders</label>
+            </value>
+            <value>
+                <fullName>Facial Lesions</fullName>
+                <default>false</default>
+                <label>Facial Lesions</label>
+            </value>
+            <value>
+                <fullName>Facial Palsy</fullName>
+                <default>false</default>
+                <label>Facial Palsy</label>
+            </value>
+            <value>
+                <fullName>Facial Skin Cancer</fullName>
+                <default>false</default>
+                <label>Facial Skin Cancer</label>
+            </value>
+            <value>
+                <fullName>Facial Trauma</fullName>
+                <default>false</default>
+                <label>Facial Trauma</label>
+            </value>
+            <value>
+                <fullName>Ganglion Cyst</fullName>
+                <default>false</default>
+                <label>Ganglion Cyst</label>
+            </value>
+            <value>
+                <fullName>Gorlin Syndrome</fullName>
+                <default>false</default>
+                <label>Gorlin Syndrome</label>
+            </value>
+            <value>
+                <fullName>Hand Conditions</fullName>
+                <default>false</default>
+                <label>Hand Conditions</label>
+            </value>
+            <value>
+                <fullName>Hand Ligament Rupture</fullName>
+                <default>false</default>
+                <label>Hand Ligament Rupture</label>
+            </value>
+            <value>
+                <fullName>Hand Tendon Injuries</fullName>
+                <default>false</default>
+                <label>Hand Tendon Injuries</label>
+            </value>
+            <value>
+                <fullName>Head Soft Tissue Trauma</fullName>
+                <default>false</default>
+                <label>Head Soft Tissue Trauma</label>
+            </value>
+            <value>
+                <fullName>Hemangioma</fullName>
+                <default>false</default>
+                <label>Hemangioma</label>
+            </value>
+            <value>
+                <fullName>Hidradenitis Suppurativa</fullName>
+                <default>false</default>
+                <label>Hidradenitis Suppurativa</label>
+            </value>
+            <value>
+                <fullName>Hyperpigmentation</fullName>
+                <default>false</default>
+                <label>Hyperpigmentation</label>
+            </value>
+            <value>
+                <fullName>Hyperthrophic Scar</fullName>
+                <default>false</default>
+                <label>Hyperthrophic Scar</label>
+            </value>
+            <value>
+                <fullName>Invasive Breast Cancer</fullName>
+                <default>false</default>
+                <label>Invasive Breast Cancer</label>
+            </value>
+            <value>
+                <fullName>Keratosis</fullName>
+                <default>false</default>
+                <label>Keratosis</label>
+            </value>
+            <value>
+                <fullName>Laceration</fullName>
+                <default>false</default>
+                <label>Laceration</label>
+            </value>
+            <value>
+                <fullName>Large Breasts</fullName>
+                <default>false</default>
+                <label>Large Breasts</label>
+            </value>
+            <value>
+                <fullName>Lesion</fullName>
+                <default>false</default>
+                <label>Lesion</label>
+            </value>
+            <value>
+                <fullName>Lipodystrophy</fullName>
+                <default>false</default>
+                <label>Lipodystrophy</label>
+            </value>
+            <value>
+                <fullName>Localized Fat Deposits</fullName>
+                <default>false</default>
+                <label>Localized Fat Deposits</label>
+            </value>
+            <value>
+                <fullName>Nasal Septal Perforation</fullName>
+                <default>false</default>
+                <label>Nasal Septal Perforation</label>
+            </value>
+            <value>
+                <fullName>Neurofibromatosis</fullName>
+                <default>false</default>
+                <label>Neurofibromatosis</label>
+            </value>
+            <value>
+                <fullName>Nose Cancer</fullName>
+                <default>false</default>
+                <label>Nose Cancer</label>
+            </value>
+            <value>
+                <fullName>Nose Disorders</fullName>
+                <default>false</default>
+                <label>Nose Disorders</label>
+            </value>
+            <value>
+                <fullName>Nose Injuries</fullName>
+                <default>false</default>
+                <label>Nose Injuries</label>
+            </value>
+            <value>
+                <fullName>Polydactyly</fullName>
+                <default>false</default>
+                <label>Polydactyly</label>
+            </value>
+            <value>
+                <fullName>Pre-Invasive Breast Cancer</fullName>
+                <default>false</default>
+                <label>Pre-Invasive Breast Cancer</label>
+            </value>
+            <value>
+                <fullName>Premature Aging</fullName>
+                <default>false</default>
+                <label>Premature Aging</label>
+            </value>
+            <value>
+                <fullName>Protruding Ears</fullName>
+                <default>false</default>
+                <label>Protruding Ears</label>
+            </value>
+            <value>
+                <fullName>Rhinophyma</fullName>
+                <default>false</default>
+                <label>Rhinophyma</label>
+            </value>
+            <value>
+                <fullName>Sebaceous Cysts</fullName>
+                <default>false</default>
+                <label>Sebaceous Cysts</label>
+            </value>
+            <value>
+                <fullName>Skin Aging</fullName>
+                <default>false</default>
+                <label>Skin Aging</label>
+            </value>
+            <value>
+                <fullName>Skin Laxity</fullName>
+                <default>false</default>
+                <label>Skin Laxity</label>
+            </value>
+            <value>
+                <fullName>Solar Keratoses</fullName>
+                <default>false</default>
+                <label>Solar Keratoses</label>
+            </value>
+            <value>
+                <fullName>Spider Veins</fullName>
+                <default>false</default>
+                <label>Spider Veins</label>
+            </value>
+            <value>
+                <fullName>Stretch Marks</fullName>
+                <default>false</default>
+                <label>Stretch Marks</label>
+            </value>
+            <value>
+                <fullName>Sun-Damaged Skin</fullName>
+                <default>false</default>
+                <label>Sun-Damaged Skin</label>
+            </value>
+            <value>
+                <fullName>Superficial Basal Cell Carcinoma</fullName>
+                <default>false</default>
+                <label>Superficial Basal Cell Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Surgical Weight Loss</fullName>
+                <default>false</default>
+                <label>Surgical Weight Loss</label>
+            </value>
+            <value>
+                <fullName>Syndactyly</fullName>
+                <default>false</default>
+                <label>Syndactyly</label>
+            </value>
+            <value>
+                <fullName>Wounds</fullName>
+                <default>false</default>
+                <label>Wounds</label>
+            </value>
+            <value>
+                <fullName>Wrinkles</fullName>
+                <default>false</default>
+                <label>Wrinkles</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

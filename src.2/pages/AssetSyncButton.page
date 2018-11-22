@@ -1,0 +1,6 @@
+<apex:page standardController="Asset" extensions="AssetSyncButton_Controller" action="{!autoRun}" >
+  <apex:sectionHeader title="Auto-Running Apex Code"/>
+  <apex:outputPanel >
+      Sync failed.
+  </apex:outputPanel>
+</apex:page>

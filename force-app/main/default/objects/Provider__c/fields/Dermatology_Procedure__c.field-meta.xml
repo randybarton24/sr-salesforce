@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dermatology_Procedure__c</fullName>
+    <externalId>false</externalId>
+    <label>Dermatology Procedure</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acne Scar Removal</fullName>
+                <default>false</default>
+                <label>Acne Scar Removal</label>
+            </value>
+            <value>
+                <fullName>Acne Surgery</fullName>
+                <default>false</default>
+                <label>Acne Surgery</label>
+            </value>
+            <value>
+                <fullName>Adjacent Tissue Transfer</fullName>
+                <default>false</default>
+                <label>Adjacent Tissue Transfer</label>
+            </value>
+            <value>
+                <fullName>Aged or Sun-Damaged Skin Treatment</fullName>
+                <default>false</default>
+                <label>Aged or Sun-Damaged Skin Treatment</label>
+            </value>
+            <value>
+                <fullName>Belotero® Injection</fullName>
+                <default>false</default>
+                <label>Belotero® Injection</label>
+            </value>
+            <value>
+                <fullName>Biopsy of Affected Tissue</fullName>
+                <default>false</default>
+                <label>Biopsy of Affected Tissue</label>
+            </value>
+            <value>
+                <fullName>Blu-U® Acne Light Treatment</fullName>
+                <default>false</default>
+                <label>Blu-U® Acne Light Treatment</label>
+            </value>
+            <value>
+                <fullName>Botox® Injection</fullName>
+                <default>false</default>
+                <label>Botox® Injection</label>
+            </value>
+            <value>
+                <fullName>Captique™ Injection</fullName>
+                <default>false</default>
+                <label>Captique™ Injection</label>
+            </value>
+            <value>
+                <fullName>Chemical Peel</fullName>
+                <default>false</default>
+                <label>Chemical Peel</label>
+            </value>
+            <value>
+                <fullName>Chemodenervation</fullName>
+                <default>false</default>
+                <label>Chemodenervation</label>
+            </value>
+            <value>
+                <fullName>CO2 Laser Skin Resurfacing Treatment</fullName>
+                <default>false</default>
+                <label>CO2 Laser Skin Resurfacing Treatment</label>
+            </value>
+            <value>
+                <fullName>Collagen Injection</fullName>
+                <default>false</default>
+                <label>Collagen Injection</label>
+            </value>
+            <value>
+                <fullName>Condyloma Destruction</fullName>
+                <default>false</default>
+                <label>Condyloma Destruction</label>
+            </value>
+            <value>
+                <fullName>Condyloma Fulguration</fullName>
+                <default>false</default>
+                <label>Condyloma Fulguration</label>
+            </value>
+            <value>
+                <fullName>CoolSculpting®</fullName>
+                <default>false</default>
+                <label>CoolSculpting®</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Botox® Injection</fullName>
+                <default>false</default>
+                <label>Cosmetic Botox® Injection</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Laser Surgery</fullName>
+                <default>false</default>
+                <label>Cosmetic Laser Surgery</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Neck Surgery</fullName>
+                <default>false</default>
+                <label>Cosmetic Neck Surgery</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Procedure</fullName>
+                <default>false</default>
+                <label>Cosmetic Procedure</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Xeomin® Injection</fullName>
+                <default>false</default>
+                <label>Cosmetic Xeomin® Injection</label>
+            </value>
+            <value>
+                <fullName>Cryosurgery</fullName>
+                <default>false</default>
+                <label>Cryosurgery</label>
+            </value>
+            <value>
+                <fullName>Cryosurgery for Skin Lesions</fullName>
+                <default>false</default>
+                <label>Cryosurgery for Skin Lesions</label>
+            </value>
+            <value>
+                <fullName>Cryotherapy for Warts</fullName>
+                <default>false</default>
+                <label>Cryotherapy for Warts</label>
+            </value>
+            <value>
+                <fullName>Cyst Aspiration</fullName>
+                <default>false</default>
+                <label>Cyst Aspiration</label>
+            </value>
+            <value>
+                <fullName>Dermabrasion</fullName>
+                <default>false</default>
+                <label>Dermabrasion</label>
+            </value>
+            <value>
+                <fullName>Dermabrasion and Dermaplaning</fullName>
+                <default>false</default>
+                <label>Dermabrasion and Dermaplaning</label>
+            </value>
+            <value>
+                <fullName>Dermal Filler</fullName>
+                <default>false</default>
+                <label>Dermal Filler</label>
+            </value>
+            <value>
+                <fullName>Dermatology Procedure</fullName>
+                <default>false</default>
+                <label>Dermatology Procedure</label>
+            </value>
+            <value>
+                <fullName>Destruction of Benign Skin Lesion</fullName>
+                <default>false</default>
+                <label>Destruction of Benign Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Destruction of Malignant Skin Lesion</fullName>
+                <default>false</default>
+                <label>Destruction of Malignant Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Destruction of Penile Lesion</fullName>
+                <default>false</default>
+                <label>Destruction of Penile Lesion</label>
+            </value>
+            <value>
+                <fullName>Destruction of Vaginal Lesion</fullName>
+                <default>false</default>
+                <label>Destruction of Vaginal Lesion</label>
+            </value>
+            <value>
+                <fullName>Dysport Injection</fullName>
+                <default>false</default>
+                <label>Dysport Injection</label>
+            </value>
+            <value>
+                <fullName>Ear Piercing</fullName>
+                <default>false</default>
+                <label>Ear Piercing</label>
+            </value>
+            <value>
+                <fullName>Electrocautery</fullName>
+                <default>false</default>
+                <label>Electrocautery</label>
+            </value>
+            <value>
+                <fullName>Electrocoagulation</fullName>
+                <default>false</default>
+                <label>Electrocoagulation</label>
+            </value>
+            <value>
+                <fullName>Electrosurgery</fullName>
+                <default>false</default>
+                <label>Electrosurgery</label>
+            </value>
+            <value>
+                <fullName>Endovenous Laser Treatment</fullName>
+                <default>false</default>
+                <label>Endovenous Laser Treatment</label>
+            </value>
+            <value>
+                <fullName>Excision</fullName>
+                <default>false</default>
+                <label>Excision</label>
+            </value>
+            <value>
+                <fullName>Excisional Biopsy</fullName>
+                <default>false</default>
+                <label>Excisional Biopsy</label>
+            </value>
+            <value>
+                <fullName>Excision of Benign Skin Lesion</fullName>
+                <default>false</default>
+                <label>Excision of Benign Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Excision of Cyst</fullName>
+                <default>false</default>
+                <label>Excision of Cyst</label>
+            </value>
+            <value>
+                <fullName>Excision of Lipoma</fullName>
+                <default>false</default>
+                <label>Excision of Lipoma</label>
+            </value>
+            <value>
+                <fullName>Excision of Malignant Skin Lesion</fullName>
+                <default>false</default>
+                <label>Excision of Malignant Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Excision of Skin Cancer</fullName>
+                <default>false</default>
+                <label>Excision of Skin Cancer</label>
+            </value>
+            <value>
+                <fullName>Excision of Skin Lesion</fullName>
+                <default>false</default>
+                <label>Excision of Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Excision of Small Cyst</fullName>
+                <default>false</default>
+                <label>Excision of Small Cyst</label>
+            </value>
+            <value>
+                <fullName>Excision of Soft Tissue Lesion</fullName>
+                <default>false</default>
+                <label>Excision of Soft Tissue Lesion</label>
+            </value>
+            <value>
+                <fullName>Facial</fullName>
+                <default>false</default>
+                <label>Facial</label>
+            </value>
+            <value>
+                <fullName>Facial Contour Alteration</fullName>
+                <default>false</default>
+                <label>Facial Contour Alteration</label>
+            </value>
+            <value>
+                <fullName>Facial Peel</fullName>
+                <default>false</default>
+                <label>Facial Peel</label>
+            </value>
+            <value>
+                <fullName>Facial Rejuvenation</fullName>
+                <default>false</default>
+                <label>Facial Rejuvenation</label>
+            </value>
+            <value>
+                <fullName>Facial Rejuvenation, Advanced, Laser</fullName>
+                <default>false</default>
+                <label>Facial Rejuvenation, Advanced, Laser</label>
+            </value>
+            <value>
+                <fullName>Fractional Ablative Laser Treatment</fullName>
+                <default>false</default>
+                <label>Fractional Ablative Laser Treatment</label>
+            </value>
+            <value>
+                <fullName>Fractional Non-Ablative Laser Treatment</fullName>
+                <default>false</default>
+                <label>Fractional Non-Ablative Laser Treatment</label>
+            </value>
+            <value>
+                <fullName>Glycolic Acid Skin Care Treatment</fullName>
+                <default>false</default>
+                <label>Glycolic Acid Skin Care Treatment</label>
+            </value>
+            <value>
+                <fullName>Hair Removal</fullName>
+                <default>false</default>
+                <label>Hair Removal</label>
+            </value>
+            <value>
+                <fullName>Hair Transplants</fullName>
+                <default>false</default>
+                <label>Hair Transplants</label>
+            </value>
+            <value>
+                <fullName>Hylaform Injection</fullName>
+                <default>false</default>
+                <label>Hylaform Injection</label>
+            </value>
+            <value>
+                <fullName>In-Office Skin Procedure</fullName>
+                <default>false</default>
+                <label>In-Office Skin Procedure</label>
+            </value>
+            <value>
+                <fullName>Intense Pulse Light</fullName>
+                <default>false</default>
+                <label>Intense Pulse Light</label>
+            </value>
+            <value>
+                <fullName>Juvéderm® Injection</fullName>
+                <default>false</default>
+                <label>Juvéderm® Injection</label>
+            </value>
+            <value>
+                <fullName>Juvéderm® Ultra Plus XC Injection</fullName>
+                <default>false</default>
+                <label>Juvéderm® Ultra Plus XC Injection</label>
+            </value>
+            <value>
+                <fullName>Juvéderm® Voluma® Injection</fullName>
+                <default>false</default>
+                <label>Juvéderm® Voluma® Injection</label>
+            </value>
+            <value>
+                <fullName>KTP Laser Treatment</fullName>
+                <default>false</default>
+                <label>KTP Laser Treatment</label>
+            </value>
+            <value>
+                <fullName>Laser Ablation</fullName>
+                <default>false</default>
+                <label>Laser Ablation</label>
+            </value>
+            <value>
+                <fullName>Laser Hair Removal</fullName>
+                <default>false</default>
+                <label>Laser Hair Removal</label>
+            </value>
+            <value>
+                <fullName>Laser Microsurgery</fullName>
+                <default>false</default>
+                <label>Laser Microsurgery</label>
+            </value>
+            <value>
+                <fullName>Laser Nail Treatment</fullName>
+                <default>false</default>
+                <label>Laser Nail Treatment</label>
+            </value>
+            <value>
+                <fullName>Laser Office Procedure</fullName>
+                <default>false</default>
+                <label>Laser Office Procedure</label>
+            </value>
+            <value>
+                <fullName>Laser Resurfacing</fullName>
+                <default>false</default>
+                <label>Laser Resurfacing</label>
+            </value>
+            <value>
+                <fullName>Laser Skin Resurfacing</fullName>
+                <default>false</default>
+                <label>Laser Skin Resurfacing</label>
+            </value>
+            <value>
+                <fullName>Laser Spider Vein Treatment</fullName>
+                <default>false</default>
+                <label>Laser Spider Vein Treatment</label>
+            </value>
+            <value>
+                <fullName>Laser Surgery</fullName>
+                <default>false</default>
+                <label>Laser Surgery</label>
+            </value>
+            <value>
+                <fullName>Laser Surgery for Skin Conditions</fullName>
+                <default>false</default>
+                <label>Laser Surgery for Skin Conditions</label>
+            </value>
+            <value>
+                <fullName>Laser Tattoo Removal</fullName>
+                <default>false</default>
+                <label>Laser Tattoo Removal</label>
+            </value>
+            <value>
+                <fullName>Laser Treatment of Varicose Veins</fullName>
+                <default>false</default>
+                <label>Laser Treatment of Varicose Veins</label>
+            </value>
+            <value>
+                <fullName>Laser Vein Removal</fullName>
+                <default>false</default>
+                <label>Laser Vein Removal</label>
+            </value>
+            <value>
+                <fullName>Laser Vein Treatment</fullName>
+                <default>false</default>
+                <label>Laser Vein Treatment</label>
+            </value>
+            <value>
+                <fullName>Lash Enhancer</fullName>
+                <default>false</default>
+                <label>Lash Enhancer</label>
+            </value>
+            <value>
+                <fullName>LED Light Treatment for Acne</fullName>
+                <default>false</default>
+                <label>LED Light Treatment for Acne</label>
+            </value>
+            <value>
+                <fullName>LightSheer® Hair Removal Procedure</fullName>
+                <default>false</default>
+                <label>LightSheer® Hair Removal Procedure</label>
+            </value>
+            <value>
+                <fullName>Lip Augmentation</fullName>
+                <default>false</default>
+                <label>Lip Augmentation</label>
+            </value>
+            <value>
+                <fullName>Lipomas Sebacious Cyst Removal</fullName>
+                <default>false</default>
+                <label>Lipomas Sebacious Cyst Removal</label>
+            </value>
+            <value>
+                <fullName>Melanoma Removal</fullName>
+                <default>false</default>
+                <label>Melanoma Removal</label>
+            </value>
+            <value>
+                <fullName>Mesotherapy</fullName>
+                <default>false</default>
+                <label>Mesotherapy</label>
+            </value>
+            <value>
+                <fullName>Microdermabrasion</fullName>
+                <default>false</default>
+                <label>Microdermabrasion</label>
+            </value>
+            <value>
+                <fullName>Minor Skin Surgery</fullName>
+                <default>false</default>
+                <label>Minor Skin Surgery</label>
+            </value>
+            <value>
+                <fullName>Mohs Surgery</fullName>
+                <default>false</default>
+                <label>Mohs Surgery</label>
+            </value>
+            <value>
+                <fullName>Mole Evaluation</fullName>
+                <default>false</default>
+                <label>Mole Evaluation</label>
+            </value>
+            <value>
+                <fullName>Mole Removal</fullName>
+                <default>false</default>
+                <label>Mole Removal</label>
+            </value>
+            <value>
+                <fullName>Nail Care</fullName>
+                <default>false</default>
+                <label>Nail Care</label>
+            </value>
+            <value>
+                <fullName>Nail Surgery</fullName>
+                <default>false</default>
+                <label>Nail Surgery</label>
+            </value>
+            <value>
+                <fullName>Narrow Band UVB Light for Psoriasis</fullName>
+                <default>false</default>
+                <label>Narrow Band UVB Light for Psoriasis</label>
+            </value>
+            <value>
+                <fullName>Non-Ablative Laser Skin Rejuvenation</fullName>
+                <default>false</default>
+                <label>Non-Ablative Laser Skin Rejuvenation</label>
+            </value>
+            <value>
+                <fullName>Non-Cosmetic Botox® Injection</fullName>
+                <default>false</default>
+                <label>Non-Cosmetic Botox® Injection</label>
+            </value>
+            <value>
+                <fullName>Non-Cosmetic Chemodenervation</fullName>
+                <default>false</default>
+                <label>Non-Cosmetic Chemodenervation</label>
+            </value>
+            <value>
+                <fullName>Perlane® Injection</fullName>
+                <default>false</default>
+                <label>Perlane® Injection</label>
+            </value>
+            <value>
+                <fullName>Phlebectomy</fullName>
+                <default>false</default>
+                <label>Phlebectomy</label>
+            </value>
+            <value>
+                <fullName>Photodynamic Therapy (PDT)</fullName>
+                <default>false</default>
+                <label>Photodynamic Therapy (PDT)</label>
+            </value>
+            <value>
+                <fullName>Photorejuvenation</fullName>
+                <default>false</default>
+                <label>Photorejuvenation</label>
+            </value>
+            <value>
+                <fullName>Phototherapy</fullName>
+                <default>false</default>
+                <label>Phototherapy</label>
+            </value>
+            <value>
+                <fullName>Pulsed Dye Laser Treatment</fullName>
+                <default>false</default>
+                <label>Pulsed Dye Laser Treatment</label>
+            </value>
+            <value>
+                <fullName>Q-Switched Nd:YAG Laser</fullName>
+                <default>false</default>
+                <label>Q-Switched Nd:YAG Laser</label>
+            </value>
+            <value>
+                <fullName>Radiesse® Injections</fullName>
+                <default>false</default>
+                <label>Radiesse® Injections</label>
+            </value>
+            <value>
+                <fullName>Radio Frequency Treatment</fullName>
+                <default>false</default>
+                <label>Radio Frequency Treatment</label>
+            </value>
+            <value>
+                <fullName>Removal of Condyloma</fullName>
+                <default>false</default>
+                <label>Removal of Condyloma</label>
+            </value>
+            <value>
+                <fullName>Repair of Pigmentation Defect</fullName>
+                <default>false</default>
+                <label>Repair of Pigmentation Defect</label>
+            </value>
+            <value>
+                <fullName>Restylane® Injections</fullName>
+                <default>false</default>
+                <label>Restylane® Injections</label>
+            </value>
+            <value>
+                <fullName>Rmvl of Benign &amp; Cancer Skin Lesns Mass</fullName>
+                <default>false</default>
+                <label>Rmvl of Benign &amp; Cancer Skin Lesns Mass</label>
+            </value>
+            <value>
+                <fullName>Scar Revision Surgery</fullName>
+                <default>false</default>
+                <label>Scar Revision Surgery</label>
+            </value>
+            <value>
+                <fullName>Sculptra™ Injection</fullName>
+                <default>false</default>
+                <label>Sculptra™ Injection</label>
+            </value>
+            <value>
+                <fullName>Shaving of Skin Lesion</fullName>
+                <default>false</default>
+                <label>Shaving of Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Skin Biopsy</fullName>
+                <default>false</default>
+                <label>Skin Biopsy</label>
+            </value>
+            <value>
+                <fullName>Skin Cancer Surgery With Reconstruction</fullName>
+                <default>false</default>
+                <label>Skin Cancer Surgery With Reconstruction</label>
+            </value>
+            <value>
+                <fullName>Skin Cancer Tumor Treatment</fullName>
+                <default>false</default>
+                <label>Skin Cancer Tumor Treatment</label>
+            </value>
+            <value>
+                <fullName>Skin Excision for Hidradenitis</fullName>
+                <default>false</default>
+                <label>Skin Excision for Hidradenitis</label>
+            </value>
+            <value>
+                <fullName>Skin Grafts</fullName>
+                <default>false</default>
+                <label>Skin Grafts</label>
+            </value>
+            <value>
+                <fullName>Skin Lesion Biopsy</fullName>
+                <default>false</default>
+                <label>Skin Lesion Biopsy</label>
+            </value>
+            <value>
+                <fullName>Skin Lesion Repair</fullName>
+                <default>false</default>
+                <label>Skin Lesion Repair</label>
+            </value>
+            <value>
+                <fullName>Skin Procedures</fullName>
+                <default>false</default>
+                <label>Skin Procedures</label>
+            </value>
+            <value>
+                <fullName>Skin Resurfacing</fullName>
+                <default>false</default>
+                <label>Skin Resurfacing</label>
+            </value>
+            <value>
+                <fullName>Skin Screenings</fullName>
+                <default>false</default>
+                <label>Skin Screenings</label>
+            </value>
+            <value>
+                <fullName>Skin Surgery</fullName>
+                <default>false</default>
+                <label>Skin Surgery</label>
+            </value>
+            <value>
+                <fullName>Skin Tag Removal</fullName>
+                <default>false</default>
+                <label>Skin Tag Removal</label>
+            </value>
+            <value>
+                <fullName>Smartlipo Triplex® Laser Liposuction</fullName>
+                <default>false</default>
+                <label>Smartlipo Triplex® Laser Liposuction</label>
+            </value>
+            <value>
+                <fullName>Soft Tissue Tumor Removal</fullName>
+                <default>false</default>
+                <label>Soft Tissue Tumor Removal</label>
+            </value>
+            <value>
+                <fullName>Tattoo removal</fullName>
+                <default>false</default>
+                <label>Tattoo removal</label>
+            </value>
+            <value>
+                <fullName>Thermage Facelift</fullName>
+                <default>false</default>
+                <label>Thermage Facelift</label>
+            </value>
+            <value>
+                <fullName>Titan Skin Tightening</fullName>
+                <default>false</default>
+                <label>Titan Skin Tightening</label>
+            </value>
+            <value>
+                <fullName>Ulthera® Ultrasonic Skin Tightening</fullName>
+                <default>false</default>
+                <label>Ulthera® Ultrasonic Skin Tightening</label>
+            </value>
+            <value>
+                <fullName>Varicose Vein Surgery</fullName>
+                <default>false</default>
+                <label>Varicose Vein Surgery</label>
+            </value>
+            <value>
+                <fullName>Vein Laser Ablation</fullName>
+                <default>false</default>
+                <label>Vein Laser Ablation</label>
+            </value>
+            <value>
+                <fullName>Vein Stripping</fullName>
+                <default>false</default>
+                <label>Vein Stripping</label>
+            </value>
+            <value>
+                <fullName>Wart Removal</fullName>
+                <default>false</default>
+                <label>Wart Removal</label>
+            </value>
+            <value>
+                <fullName>Wart Treatment</fullName>
+                <default>false</default>
+                <label>Wart Treatment</label>
+            </value>
+            <value>
+                <fullName>Wrinkle Reduction by Injection</fullName>
+                <default>false</default>
+                <label>Wrinkle Reduction by Injection</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

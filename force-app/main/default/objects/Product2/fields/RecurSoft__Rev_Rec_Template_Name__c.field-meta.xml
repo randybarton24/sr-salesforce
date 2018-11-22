@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Rev_Rec_Template_Name__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Corresponding template defined in Intacct.</inlineHelpText>
+    <label>Revenue Recognition Template Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>RecurSoft__Revenue_Recognition_Method__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>12 Months Period</fullName>
+                <default>false</default>
+                <label>12 Months Period</label>
+            </value>
+            <value>
+                <fullName>Contract Term</fullName>
+                <default>true</default>
+                <label>Contract Term</label>
+            </value>
+            <value>
+                <fullName>Contract Term1</fullName>
+                <default>false</default>
+                <label>Contract Term1</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>Services - Upon Completion</fullName>
+                <default>false</default>
+                <label>Services - Upon Completion</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Revenue Transaction</controllingFieldValue>
+            <controllingFieldValue>Revenue Recognition Template</controllingFieldValue>
+            <valueName>Contract Term</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revenue Recognition Template</controllingFieldValue>
+            <valueName>12 Months Period</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revenue Recognition Template</controllingFieldValue>
+            <valueName>Contract Term1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revenue Recognition Template</controllingFieldValue>
+            <valueName>Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revenue Recognition Template</controllingFieldValue>
+            <valueName>Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revenue Recognition Template</controllingFieldValue>
+            <valueName>Services - Upon Completion</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

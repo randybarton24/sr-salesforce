@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Months_Remaining_Annual__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the number of Months the customer would pay to fulfill the original contract</inlineHelpText>
+    <label>Months Remaining - Annual</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

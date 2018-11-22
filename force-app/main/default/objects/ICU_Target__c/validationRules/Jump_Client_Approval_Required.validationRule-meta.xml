@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jump_Client_Approval_Required</fullName>
+    <active>true</active>
+    <description>If Jump Client is installed then approval is required</description>
+    <errorConditionFormula>Jump_Client_Approved__c  = FALSE &amp;&amp;
+ Jump_Client_Installed__c = TRUE</errorConditionFormula>
+    <errorDisplayField>Jump_Client_Approved__c</errorDisplayField>
+    <errorMessage>You must have approval before installing the jump client.</errorMessage>
+</ValidationRule>

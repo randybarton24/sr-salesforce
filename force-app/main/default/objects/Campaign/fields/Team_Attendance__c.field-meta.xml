@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team_Attendance__c</fullName>
+    <externalId>false</externalId>
+    <label>Team Attendance</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Outside Sales</fullName>
+                <default>false</default>
+                <label>Outside Sales</label>
+            </value>
+            <value>
+                <fullName>Extended Sales</fullName>
+                <default>false</default>
+                <label>Extended Sales</label>
+            </value>
+            <value>
+                <fullName>KOL/BD</fullName>
+                <default>false</default>
+                <label>KOL/BD</label>
+            </value>
+            <value>
+                <fullName>Partner Event</fullName>
+                <default>false</default>
+                <label>Partner Event</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

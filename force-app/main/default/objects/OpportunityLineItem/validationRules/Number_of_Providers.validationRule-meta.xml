@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Providers</fullName>
+    <active>true</active>
+    <errorConditionFormula>Opportunity.RecordType.Name != &quot;Add-On Business&quot; &amp;&amp;
+Product2.ProductCode = &quot;3001&quot; &amp;&amp;
+ (Quantity +     
+ Opportunity.Pricebook2.Number_of_Providers_Included__c)
+ != Opportunity.Number_of_Providers__c</errorConditionFormula>
+    <errorMessage>Please add Additional Providers by changing the Number of Providers field on the Opportunity</errorMessage>
+</ValidationRule>

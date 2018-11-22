@@ -1,0 +1,86 @@
+<apex:page standardController="Opportunity" extensions="ProductEditController" showHeader="true" sidebar="true">
+	<apex:outputPanel id="thePanel">
+	<apex:form >
+		
+		<apex:pageBlock id="contractDetails" title="Contract Term Details">
+			<apex:pageMessages id="msgs"/>
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!saveOppLis}" value="Save" id="saveButton"
+					rendered="{!renderEdit}" reRender="table, oppDetail"
+					oncomplete="if(!{!error}){window.top.location='/{!opportunity.AccountId}';}" />
+				<apex:commandButton action="{!edit}" value="Edit" id="editButton"
+					rendered="{!!renderEdit}" />
+				<apex:commandButton action="{!cancel}" value="Cancel"
+					id="cancelButton" rendered="{!renderEdit}"
+					onclick="window.top.location='/{!opportunity.id}';" />
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection collapsible="false" columns="2" rendered="{!!renderEdit}">
+				<apex:outputField value="{!Opportunity.RecurSoft__Initial_Contract_Term__c}"/>
+				<apex:outputField value="{!Opportunity.RecurSoft__Bill_to_Account__c}"/>
+				<apex:outputField value="{!Opportunity.RecurSoft__Contract_Signed_Date__c}"/>
+				<apex:outputField value="{!Opportunity.RecurSoft__Billing_Contact__c}"/>
+				<apex:pageBlockSectionItem />
+				<apex:outputField value="{!Opportunity.RecurSoft__Shipping_Contact__c}"/>
+			</apex:pageBlockSection>
+			<br/>
+			<apex:pageBlockTable value="{!listOppLis}" var="oppLi" rendered="{!!renderEdit}">
+				<apex:column value="{!oppLi.PricebookEntry.Product2.Name}"/>>
+				<apex:column headerValue="Sales Price">
+					<apex:outputField value="{!oppLi.UnitPrice}"/>
+				</apex:column>
+				<apex:column headerValue="Trial Period">
+					<apex:outputField rendered="{!oppLi.Product2.RecurSoft__Billing_Frequency__c == 'Monthly'}" value="{!oppLi.Trial__c}"/>
+				</apex:column>
+				<apex:column headerValue="Orientation Price">
+					<apex:outputField rendered="{!oppLi.Product2.RecurSoft__Billing_Frequency__c == 'Monthly'}" value="{!oppLi.Promotional_Price__c}"/>
+				</apex:column>
+				<apex:column headerValue="Number of Orientation Months">
+					<apex:outputField rendered="{!oppLi.Product2.RecurSoft__Billing_Frequency__c == 'Monthly'}" value="{!oppLi.Number_of_Free_Months__c}"/>
+				</apex:column>
+				<apex:column headerValue="Orientation Month Setting">
+					<apex:outputField rendered="{!oppLi.Product2.RecurSoft__Billing_Frequency__c == 'Monthly'}" value="{!oppLi.Free_Month_Setting__c}"/>
+				</apex:column>
+				<apex:column headerValue="Contract Term Start Date">
+					<apex:outputField value="{!oppLi.RecurSoft__Contract_Term_Start_Date_New__c}"/>
+				</apex:column>	
+				<apex:column headerValue="Contract Term End Date">
+					<apex:outputField value="{!oppLi.RecurSoft__Contract_Term_End_Date_Editable__c}"/>
+				</apex:column>		
+			</apex:pageBlockTable>
+			<apex:pageBlockSection id="oppDetail" collapsible="false" columns="2" rendered="{!renderEdit}">
+				<apex:inputField value="{!Opportunity.RecurSoft__Initial_Contract_Term__c}"/>
+				<apex:inputField value="{!Opportunity.RecurSoft__Bill_to_Account__c}"/>
+				<apex:inputField value="{!Opportunity.RecurSoft__Contract_Signed_Date__c}"/>
+				<apex:inputField value="{!Opportunity.RecurSoft__Billing_Contact__c}"/>
+				<apex:pageBlockSectionItem />
+				<apex:inputField value="{!Opportunity.RecurSoft__Shipping_Contact__c}"/>
+			</apex:pageBlockSection>
+			<br/>
+			<apex:pageBlockTable id="table" value="{!listOppLis}" var="oppLi" rendered="{!renderEdit}">
+				<apex:column value="{!oppLi.PricebookEntry.Product2.Name}"/>>
+				<apex:column headerValue="Sales Price">
+					<apex:inputField value="{!oppLi.UnitPrice}"/>
+				</apex:column>
+				<apex:column headerValue="Trial Period">
+					<apex:inputField rendered="{!oppLi.Product2.RecurSoft__Billing_Frequency__c == 'Monthly'}" value="{!oppLi.Trial__c}"/>
+				</apex:column>
+				<apex:column headerValue="Orientation Price">
+					<apex:inputField rendered="{!oppLi.Product2.RecurSoft__Billing_Frequency__c == 'Monthly'}" value="{!oppLi.Promotional_Price__c}"/>
+				</apex:column>
+				<apex:column headerValue="Number of Orientation Months">
+					<apex:inputField rendered="{!oppLi.Product2.RecurSoft__Billing_Frequency__c == 'Monthly'}" value="{!oppLi.Number_of_Free_Months__c}"/>
+				</apex:column>
+				<apex:column headerValue="Orientation Month Setting">
+					<apex:inputField rendered="{!oppLi.Product2.RecurSoft__Billing_Frequency__c == 'Monthly'}" value="{!oppLi.Free_Month_Setting__c}"/>
+				</apex:column>
+				<apex:column headerValue="Contract Term Start Date">
+					<apex:inputField value="{!oppLi.RecurSoft__Contract_Term_Start_Date_New__c}"/>
+				</apex:column>	
+				<apex:column headerValue="Contract Term End Date">
+					<apex:inputField value="{!oppLi.RecurSoft__Contract_Term_End_Date_Editable__c}"/>
+				</apex:column>		
+			</apex:pageBlockTable>
+		</apex:pageBlock>
+	</apex:form>
+	</apex:outputPanel>
+</apex:page>

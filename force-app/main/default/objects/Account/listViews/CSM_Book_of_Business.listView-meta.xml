@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSM_Book_of_Business</fullName>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Number_of_Child_Accounts__c</columns>
+    <columns>Number_of_Child_Customer_Accounts__c</columns>
+    <columns>Child_Accts_Active_Customer__c</columns>
+    <columns>Child_Accts_Inactive_Customer__c</columns>
+    <columns>Current_Pulse__c</columns>
+    <columns>Current_Pulse_Date__c</columns>
+    <columns>Probable_Most_Recent_K_Date__c</columns>
+    <columns>RecurSoft__Anniversary_Date__c</columns>
+    <columns>Practice_Management_Software__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Multi_Location_Account</value>
+    </filters>
+    <filters>
+        <field>RecurSoft__Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <label>CSM Book of Business</label>
+    <sharedTo>
+        <allInternalUsers/>
+        <group>Groups_Team</group>
+    </sharedTo>
+</ListView>

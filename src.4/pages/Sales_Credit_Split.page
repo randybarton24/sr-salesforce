@@ -1,0 +1,137 @@
+<apex:page standardController="Opportunity" extensions="oppSalesCreditSplit" lightningStylesheets="true">
+    
+    <apex:pageMessages ></apex:pageMessages>
+    
+    <apex:form >
+        <apex:pageBlock title="Sales Credit Split Calculator">
+            <apex:pageBlockButtons location="bottom" >
+                <apex:commandButton value="Calculate" action="{!Save}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1">
+<!--                <apex:pageBlockSectionItem >
+                    <label>Sales Path</label>
+                    <apex:selectList value="{!Opportunity.Sales_Path__c}" size="1">
+                        <apex:selectOptions value="{!pathOptions}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>-->
+                <apex:pageBlockSectionItem >
+                    <label>User:</label>
+                    <apex:outputPanel styleClass="ui-widget">
+                        <apex:inputText id="userLookup"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <label>Partner/Affiliate/KOL Involved:</label>
+                    <apex:outputPanel styleClass="ui-widget">
+                        <apex:inputCheckbox id="Partner_KOL_Affiliate_Involved__c" value="{!Opportunity.Partner_KOL_Affiliate_Involved__c}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <label>Partner/Affiliate/KOL:</label>
+                    <apex:outputPanel styleClass="ui-widget">
+                        <apex:inputText id="Partner_KOL_At_Sale__c" value="{!Opportunity.Partner_KOL_At_Sale__c}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+<!--                <apex:pageBlockSectionItem >
+                    <label>Top Features - 1st Choice/2nd Choice/3rd Choice:</label>
+                    <apex:outputPanel styleClass="ui-widget">
+                        <apex:selectList value="{!featureId1}" title="1st Choice">
+                            <apex:selectOptions value="{!featureOptions}"/>
+                        </apex:selectList>
+                        <apex:selectList value="{!featureId2}" title="2nd Choice">
+                            <apex:selectOptions value="{!featureOptions}"/>
+                        </apex:selectList>
+                        <apex:selectList value="{!featureId3}" title="3rd Choice">
+                            <apex:selectOptions value="{!featureOptions}"/>
+                        </apex:selectList>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <label>Currently Using or Recently Used Competitor(select all that apply):</label>
+                    <apex:outputPanel >
+                        <apex:inputField value="{!Opportunity.Competitor__c}">
+                            <apex:selectOptions value="{!competitorOptions}"/>
+                        </apex:inputField>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <label>Other Competitor: </label>
+                    <apex:outputPanel >
+                        <apex:inputField value="{!Opportunity.Other_Competitor__c}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+-->
+                <apex:inputHidden value="{!Opportunity.Office_Locations__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="userLists" columns="3">
+                <apex:pageBlockTable value="{!esrs}" var="esr" title="ESR">
+                    <apex:column headerValue="ESR Name" value="{!esrs[esr].Name}"/>
+                    <apex:column headerValue="Delete">
+                        <apex:commandLink value="Remove" reRender="userLists" action="{!removeUser}">
+                            <apex:param value="{!esrs[esr].Id}" name="userid" assignTo="{!userid}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                </apex:pageBlockTable>
+                <apex:pageBlockTable value="{!isrs}" var="isr">
+                    <apex:column headerValue="ISR Name" value="{!isrs[isr].Name}"/>
+                    <apex:column headerValue="Delete">
+                        <apex:commandLink value="Remove" reRender="userLists" action="{!removeUser}">
+                            <apex:param value="{!isrs[isr].Id}" name="userid" assignTo="{!userid}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                </apex:pageBlockTable>
+                <apex:pageBlockTable value="{!osrs}" var="osr">
+                    <apex:column headerValue="OSR Name" value="{!osrs[osr].Name}"/>
+                    <apex:column headerValue="Delete">
+                        <apex:commandLink value="Remove" reRender="userLists" action="{!removeUser}">
+                            <apex:param value="{!osrs[osr].Id}" name="userid" assignTo="{!userid}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:actionFunction action="{!addUserToList}" name="rerenderUserList" rerender="userLists">
+            <apex:param name="userId" value="" assignTo="{!userid}"/>
+        </apex:actionFunction>
+    </apex:form>
+    
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"/>
+    <apex:stylesheet value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css"/>
+    
+    <script>
+$( '[id$=userLookup]' ).autocomplete({
+    minLength:2,
+    source: function(request, response){
+        queryTerm = request.term;
+        oppSalesCreditSplit.searchUsers(request.term, function(result, event){
+            if(event.type == 'exception'){
+                alert(event.message);
+            }else{
+                response(result);
+            }
+        });
+    },
+    focus: function(event, ui){
+        return false;
+    },
+    select: function(event,ui){
+        rerenderUserList(ui.item.Id);
+        $('[id$=userLookup]').val(null);
+        return false;
+    },
+
+})
+.data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+    var entry = "<a>" + item.Name + ' - ' + item.Profile.Name;
+
+    entry = entry + "</a>";
+    entry = entry.replace(queryTerm, "<b>" + queryTerm + "</b>");
+    return $( "<li></li>" )
+        .data( "item.autocomplete", item )
+        .append( entry )
+        .appendTo( ul );
+};
+    </script>
+</apex:page>

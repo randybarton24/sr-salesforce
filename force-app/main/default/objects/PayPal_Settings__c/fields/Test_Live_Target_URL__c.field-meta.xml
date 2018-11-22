@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Live_Target_URL__c</fullName>
+    <description>https://pilot-payflowpro.paypal.com</description>
+    <externalId>false</externalId>
+    <inlineHelpText>https://pilot-payflowpro.paypal.com</inlineHelpText>
+    <label>Test Live Target URL</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

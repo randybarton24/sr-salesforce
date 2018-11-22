@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jared_SAE_5_Team_leads_No_ROE2</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>SR_Date_Created__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Contacted</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>jtchr,jstead,twrid,mnels,jhans,mshel,jdew,jwill,jyoung.cruss,athor,mbra</value>
+    </filters>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>LAST_N_DAYS:30</value>
+    </filters>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Jared - SAE 5 Team leads - No ROE</label>
+    <sharedTo>
+        <role>SAE_Manager_5</role>
+        <role>SAE_Rep_5</role>
+    </sharedTo>
+</ListView>

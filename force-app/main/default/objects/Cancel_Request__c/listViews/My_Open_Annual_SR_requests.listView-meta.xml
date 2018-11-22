@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Open_Annual_SR_requests</fullName>
+    <columns>Cancel_Request_Date__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Projected_Contract_Expiration_Renewal__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Current_MSF__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Asset__c</field>
+        <operation>contains</operation>
+        <value>SR Platform</value>
+    </filters>
+    <filters>
+        <field>Cancel_Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Annual</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled,No Sale,Save,Resume - No Change</value>
+    </filters>
+    <label>My Open Annual SR requests</label>
+    <sharedTo>
+        <group>Client_Engagement</group>
+    </sharedTo>
+</ListView>

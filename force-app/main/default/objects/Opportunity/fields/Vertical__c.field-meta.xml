@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vertical__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(TEXT(Account.Industry), 
+  &quot;Dental&quot;, &quot;Dental&quot;, 
+  &quot;Vision&quot;, &quot;Vision&quot;, 
+  &quot;Non-Medical&quot;, &quot;Non-Medical&quot;, 
+  &quot;Physical Rehabilitation&quot;, &quot;Physical Rehabilitation&quot;, 
+  &quot;Medical&quot;,&quot;Medical&quot;, 
+  &quot;Unknown&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Vertical</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

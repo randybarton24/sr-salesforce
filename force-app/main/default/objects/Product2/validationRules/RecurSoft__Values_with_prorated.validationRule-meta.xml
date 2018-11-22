@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Values_with_prorated</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c, false, 
+    AND(
+        RecurSoft__Prorated__c,
+        OR(
+            ISPICKVAL(RecurSoft__Invoicing_Date__c , &#39;Based on contract start date&#39;),
+            ISPICKVAL( RecurSoft__Invoicing_Date__c , &#39;Based on contract signed date&#39;),
+            ISPICKVAL(RecurSoft__Invoicing_Date__c, &#39;Based on activation date&#39;)
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>You cannot have Prorated checked and Invoicing Date - Based on contract start date / Based on activation date selected at the same time.</errorMessage>
+</ValidationRule>

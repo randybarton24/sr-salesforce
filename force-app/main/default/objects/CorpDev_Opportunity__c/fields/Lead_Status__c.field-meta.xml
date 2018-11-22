@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Identified, Not Contacted</fullName>
+                <default>true</default>
+                <label>Identified, Not Contacted</label>
+            </value>
+            <value>
+                <fullName>Contacted, No Reply</fullName>
+                <default>false</default>
+                <label>Contacted, No Reply</label>
+            </value>
+            <value>
+                <fullName>Do Not Contact</fullName>
+                <default>false</default>
+                <label>Do Not Contact</label>
+            </value>
+            <value>
+                <fullName>Not Interesting</fullName>
+                <default>false</default>
+                <label>Not Interesting</label>
+            </value>
+            <value>
+                <fullName>Stay Close, Follow-Up Scheduled</fullName>
+                <default>false</default>
+                <label>Stay Close, Follow-Up Scheduled</label>
+            </value>
+            <value>
+                <fullName>CorpDev Pipeline</fullName>
+                <default>false</default>
+                <label>CorpDev Pipeline</label>
+            </value>
+            <value>
+                <fullName>Partner Pipeline</fullName>
+                <default>false</default>
+                <label>Partner Pipeline</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,69 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForRecordHome,force:hasRecordId" access="GLOBAL" description="AddendumLineItemsButtonAddRemove" controller="AddendumLineItemsApxc" >	    
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="addId" type="Id" />    
+    <aura:attribute name="statusAddendum" type="String" />
+    <aura:attribute name="options" type="List"  />
+    <aura:attribute name="optionsPricebook" type="List"  />
+    <aura:attribute name="data" type="Asset"/>
+    <aura:attribute name="pbEntries" type="PricebookEntry[]"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="data1" type="Addendum_Line_Item__c"/>
+    <aura:attribute name="columns1" type="List"/>
+    <aura:attribute name="maxRowSelection" type="Integer"/>
+    <aura:attribute name="selectedRows" type="List" />
+    <aura:attribute name="selectedRows1" type="List" />
+    <aura:attribute name="rowsSelectedAsset" type="List" />
+    <aura:attribute name="rowsSelectedAli" type="List" />       
+     <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>  
+    <div>   
+        <aura:if isTrue="{!v.Spinner}">
+           <div aura:id="spinnerId" class="slds-spinner_container" style="background-color: transparent !important">
+               <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                 <span class="slds-assistive-text">Loading</span>
+                 <div class="slds-spinner__dot-a"></div>
+                 <div class="slds-spinner__dot-b"></div>
+               </div>
+            </div>
+        </aura:if>
+        <br></br>
+        <div class="slds-align_absolute-center">            
+            <lightning:button variant="brand" label="Add/Remove Items" title="Add/Remove Items" onclick="{!c.addRemoveProducts}" disabled="{!v.statusAddendum == 'Closed' || v.statusAddendum == 'Signature Requested' || v.statusAddendum == 'Signature Received'}" />       
+        </div>
+        <aura:if isTrue="{!v.isOpen}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">                               
+                <div class="slds-modal__container" style="height: 500px">
+                    <header class="slds-modal__header">
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add/Remove Products</h2>                        
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2" style="height: 450px">
+                        <div>Choose an Item to Add</div>
+                        <lightning:datatable
+                                             columns="{!v.columns}"
+                                             data="{!v.data}"
+                                             keyField="id" 
+                                             selectedRows="{!v.selectedRows}"
+                                             maxRowSelection="{! v.maxRowSelection }"
+                                             onrowselection="{! c.updateSelectedAssetText }"/>
+                    </div>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="height: 450px">
+                        <div>Choose an Item to Remove</div>
+                        <lightning:datatable
+                                             columns="{!v.columns1}"
+                                             data="{!v.data1}"
+                                             keyField="id"
+                                             selectedRows="{!v.selectedRows}"
+                                             maxRowSelection="{!v.maxRowSelection }"
+                                             onrowselection="{!c.updateSelectedAliText}"/>
+                    </div>     
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.saveAddRemove }" />
+                        <lightning:button variant="brand" label="Cancel" title="Cancel" onclick="{! c.closeModelAddRemove }" />       
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>               
+    </div>
+</aura:component>

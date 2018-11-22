@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Intacct_Customer_ID__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>Opportunity.RecurSoft__Intacct_Customer_ID__c</formula>
+    <inlineHelpText>Corresponding Intacct ID. Updated via Intacct sync.</inlineHelpText>
+    <label>Intacct Customer ID</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MicroVertical_Specify_Other</fullName>
+    <active>true</active>
+    <errorConditionFormula>and(ISPICKVAL(Micro_Vertical__c , &quot;Other, Please Specify --&gt;&quot;), ISBLANK(Not_Listed_Speciality__c))</errorConditionFormula>
+    <errorDisplayField>Not_Listed_Speciality__c</errorDisplayField>
+    <errorMessage>If you selected Other, Please Specify --&gt; you must enter a value</errorMessage>
+</ValidationRule>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Case_Surveys</fullName>
+    <columns>NAME</columns>
+    <columns>Rep_Name__c</columns>
+    <columns>Overall_Rep_Experience__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Survey_Completion_Date__c</columns>
+    <columns>How_can_we_improve__c</columns>
+    <columns>FS_Survey_ID__c</columns>
+    <columns>FS_Would_you_Recommend__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Survey__c.Post_Case_Survey</value>
+    </filters>
+    <filters>
+        <field>Survey_Completed__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Post Case Surveys</label>
+    <sharedTo>
+        <role>VP_CSR</role>
+    </sharedTo>
+</ListView>

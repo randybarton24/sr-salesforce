@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Cancel_Survey</fullName>
+    <active>true</active>
+    <description>Survey sent out after an office cancels their subscription</description>
+    <label>Post Cancel Survey</label>
+    <picklistValues>
+        <picklist>CS_makes_it_easy_to_get_answers__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_No_show_Rate__c</picklist>
+        <values>
+            <fullName>12-14%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15-17%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18-20%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-5%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6-8%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9-11%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 2%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 20%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Time_Spent_on_Reminders__c</picklist>
+        <values>
+            <fullName>1-2 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-3 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 minutes-1 hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 30 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 3 hours</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Time_Spent_on_Social_Media__c</picklist>
+        <values>
+            <fullName>1-2 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-3 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 minutes-1 hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 30 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 3 hours</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EBR_Valuable__c</picklist>
+        <values>
+            <fullName>Extremely Valuable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Valuable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Not Valuable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valuable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Easy_to_do_business_with_SR__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_Many_Interactions__c</picklist>
+        <values>
+            <fullName>1 time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 %E2%80%93 4 times</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 %E2%80%93 7 times</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%2B times</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Nature_of_Issue__c</picklist>
+        <values>
+            <fullName>Administrative - needed help with something you were not able to do yourself in the SR Platform %28i%2Ee%2E%2C reset password%2C enable a feature in the platform%2C change billing information%2C etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical - needed help with a technical problem or product malfunction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training - needed to be taught%2Fshown how to do something</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Patients_seen_per_month__c</picklist>
+        <values>
+            <fullName>1001-2500</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>500-1000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 500</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 2500</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Percent_of_Appointments_Scheduled_via_LL__c</picklist>
+        <values>
+            <fullName>11-20%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21-30%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31-50%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6-10%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 5%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 50%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prior_to_SR_No_Show_rate__c</picklist>
+        <values>
+            <fullName>12-14%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15-17%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18-20%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-5%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6-8%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9-11%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 2%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 20%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prior_to_SR_Time_Spent_on_Social_Media__c</picklist>
+        <values>
+            <fullName>1-2 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-3 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 minutes-1 hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 30 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 3 hours</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prior_to_SR_Time_on_Recalls_per_Day__c</picklist>
+        <values>
+            <fullName>1-2 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-3 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 minutes-1 hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 30 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 3 hours</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prior_to_SR_time_spent_on_reminders__c</picklist>
+        <values>
+            <fullName>1-2 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-3 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 minutes-1 hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 30 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 3 hours</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_does_what_is_expected__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rank_of_Newsletters__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rank_of_Online_Scheduling__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rank_of_Patient_Mobile_App__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rank_of_Recall_Messages__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rank_of_Social_Media_Integration__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rank_of_Surveys_and_Reviews__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rank_of_Tablet_Check_In__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rank_of_Text_and_email_Reminders__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Recall_Revenue_Added_per_Month__c</picklist>
+        <values>
+            <fullName>%241%2C000-%242%2C500</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2410%2C000-%2425%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%242%2C500-%245%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%245%2C000-%2410%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than %241%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than %2425%2C000</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Responsible_for_Decision__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SR_product_important_to_success__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Action_List__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Appointment_Reminders__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Birthday_Messaging__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Conversations__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Custom_Group_Creation__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Eyewear_Notifications__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Limelight__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Newsletters__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Online_Review_Manage__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_PatientReach_Mobile__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_PatientReach_Portal__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_PatientReach_Tablet__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Recall__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Reporting_Analytics__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_SR_Schedule__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_SR_Smart_Reviews__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Social_Networking__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_with_Surveys__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Unsatisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Time_Spent_on_Additional_Recall_per_Day__c</picklist>
+        <values>
+            <fullName>1-2 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-3 hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 minutes-1 hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 30 minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 3 hours</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Using_Limelight_Online_Scheduling__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Using_SR_for_Recall__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Using_SR_for_Reviews_and_Social_Media__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>of_Providers_in_practice__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11-30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6-10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 30</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>of_Reviews_Through_SR_per_Month__c</picklist>
+        <values>
+            <fullName>1-2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11-15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16-20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3-5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6-10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 20</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

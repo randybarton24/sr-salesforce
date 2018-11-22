@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Risk Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Risk_Sub_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Cancel_Reason</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Relationship</controllingFieldValue>
+            <valueName>Staff Changes/Resistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relationship</controllingFieldValue>
+            <valueName>Patient Complaints</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relationship</controllingFieldValue>
+            <valueName>Acquired/Office Closing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>Financial Hardship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>Buyer&#39;s Remorse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>Contract Averse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>Timing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>ROI/Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commitment</controllingFieldValue>
+            <valueName>Provisioned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <valueName>Invoicing Errors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Collections</controllingFieldValue>
+            <valueName>Unable to Collect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Features</controllingFieldValue>
+            <valueName>Unavailable Feature</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Features</controllingFieldValue>
+            <valueName>Functionality of Current Feature</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Features</controllingFieldValue>
+            <valueName>User Experience/Interface</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Integration</controllingFieldValue>
+            <valueName>No Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Integration</controllingFieldValue>
+            <valueName>Quality/Features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Integration</controllingFieldValue>
+            <valueName>Export</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Expectations</controllingFieldValue>
+            <valueName>Contract/Billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Expectations</controllingFieldValue>
+            <controllingFieldValue>Lifecycle Management</controllingFieldValue>
+            <valueName>Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Expectations</controllingFieldValue>
+            <valueName>Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Expectations</controllingFieldValue>
+            <valueName>Bundle (HG/LL Only)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Problem Resolution</controllingFieldValue>
+            <valueName>Responsiveness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Problem Resolution</controllingFieldValue>
+            <valueName>Recurring Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lifecycle Management</controllingFieldValue>
+            <valueName>Outreach</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

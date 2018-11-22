@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All1</fullName>
+    <columns>NAME</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>Team__c</columns>
+    <columns>Sub_Team__c</columns>
+    <columns>Target_Date__c</columns>
+    <columns>Actual_Credits__c</columns>
+    <columns>Pre_November_Sales__c</columns>
+    <columns>Total_Sales__c</columns>
+    <columns>Target__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Owner_Name__c</field>
+        <operation>equals</operation>
+        <value>Tennli Toole</value>
+    </filters>
+    <label>Tennli Targets</label>
+    <sharedTo>
+        <role>Manager_Major_Accounts</role>
+        <role>SAE_Manager_1</role>
+        <role>SAE_Manager_2</role>
+        <role>SAE_Manager_3</role>
+        <role>SVP_Sales</role>
+        <role>VP_Extended_Sales</role>
+        <role>VP_Outside_Sales</role>
+    </sharedTo>
+</ListView>

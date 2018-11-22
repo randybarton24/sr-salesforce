@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Details__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( PricebookEntry.Product2.RecurSoft__Billing_Frequency__c , &quot;Monthly&quot; ) ,
+PricebookEntry.Product2.Name &amp; &quot;: &lt;br&gt;&quot;  &amp;
+			&quot;$&quot; &amp; TEXT(UnitPrice) &amp; &quot;(&quot; &amp; TEXT(ROUND(Price_Discount__c, 4) * 100) &amp; &quot;% Discount) &lt;br&gt;&quot;  &amp;
+IF(Number_of_Free_Months__c &gt; 0 , TEXT(Number_of_Free_Months__c) &amp; &quot; Orientation Months at $&quot; &amp; TEXT(Promotional_Price__c) &amp; &quot; &lt;br&gt;&quot; , &quot;&quot; ) &amp;
+IF(ISBLANK(TEXT(Trial__c)), &quot;0&quot; , TEXT(Trial__c)) &amp; &quot; Day Trial &lt;br&gt;&quot;  &amp;
+			IF( PricebookEntry.Product2.Default_Contract_Term__c = 1 , &quot;1&quot; , TEXT(Opportunity.RecurSoft__Initial_Contract_Term__c)) &amp; &quot; Month Term&quot;,
+
+PricebookEntry.Product2.Name &amp; &quot;: &lt;br&gt;&quot;  &amp;
+			&quot;$&quot; &amp; TEXT(UnitPrice) &amp; 
+&quot;(&quot; &amp; TEXT(ROUND(Price_Discount__c, 4) * 100) &amp; &quot;% Discount)&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approval Details</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

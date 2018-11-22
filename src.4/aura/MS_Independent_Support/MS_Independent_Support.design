@@ -1,0 +1,5 @@
+<design:component >
+	<!--design:attribute name="ourMission" label="Our Mission"/>
+    <design:attribute name="webelieve" label="We Believe"/-->
+    <design:attribute name="messageBox" label="Message to Non-Login User"/>
+</design:component>

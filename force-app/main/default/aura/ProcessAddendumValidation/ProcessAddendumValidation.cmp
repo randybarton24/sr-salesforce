@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" controller="ProcessAddendumValidationController" >
+    <aura:attribute name="childRecord" type="Object" />
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>      
+    
+    <div id="processDiv" style="padding-left:190px;padding-top:70px; display: block">
+        <img src="{!'/img/loading.gif'}" width="25" height="25" style="float:center-right;" ></img>
+        Processing, Please wait...
+    </div>	
+</aura:component>

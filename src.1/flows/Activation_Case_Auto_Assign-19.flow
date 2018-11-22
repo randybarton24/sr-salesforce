@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Auto Assigns the Activation Case and Scheduler based on the Team Assignment and Reps CS Round Robin Load % - Includes Parent Account Flow w/Ophthalmology. Adds Compliance Call task for scheduler when Oppty has Free Months</description>
+    <label>Activation Case Auto Assign</label>
+    <processType>AutoLaunchedFlow</processType>
+</Flow>

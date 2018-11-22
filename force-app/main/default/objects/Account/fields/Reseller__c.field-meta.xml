@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reseller__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Selected to show the Reseller or Partner that we bill</inlineHelpText>
+    <label>Reseller</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Eyefinity</fullName>
+                <default>false</default>
+                <label>Eyefinity</label>
+            </value>
+            <value>
+                <fullName>Innereactive</fullName>
+                <default>false</default>
+                <label>Innereactive</label>
+            </value>
+            <value>
+                <fullName>QSI</fullName>
+                <default>false</default>
+                <label>QSI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

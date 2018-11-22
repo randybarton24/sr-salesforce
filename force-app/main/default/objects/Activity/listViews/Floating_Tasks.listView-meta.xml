@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Floating_Tasks</fullName>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>Date_Completed__c</columns>
+    <columns>TASK.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Activity_Type__c</columns>
+    <columns>Activity_Results__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Floating Tasks</label>
+    <sharedTo>
+        <role>Extended_Sales_Coordinator</role>
+    </sharedTo>
+</ListView>

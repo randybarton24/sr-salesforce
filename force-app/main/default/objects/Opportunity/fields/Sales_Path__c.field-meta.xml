@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Path__c</fullName>
+    <externalId>false</externalId>
+    <label>Sales Path</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ESR closed sale from lead generated from an OSR Trade Show in the last 60 days</fullName>
+                <default>false</default>
+                <label>ESR closed sale from lead generated from an OSR Trade Show in the last 60 days</label>
+            </value>
+            <value>
+                <fullName>ESR closed sale given from an ISR in the last 45 days</fullName>
+                <default>false</default>
+                <label>ESR closed sale given from an ISR in the last 45 days</label>
+            </value>
+            <value>
+                <fullName>ESR closed sale that had been worked by an ISR in the last 45 days and was not given the lead</fullName>
+                <default>false</default>
+                <label>ESR closed sale that had been worked by an ISR in the last 45 days and was not given the lead</label>
+            </value>
+            <value>
+                <fullName>ESR closed sale that had no other communication in the last 45 days</fullName>
+                <default>false</default>
+                <label>ESR closed sale that had no other communication in the last 45 days</label>
+            </value>
+            <value>
+                <fullName>ESR closed sale that was found at an ESR Trade Show/ Study Group/ CE Event</fullName>
+                <default>false</default>
+                <label>ESR closed sale that was found at an ESR Trade Show/ Study Group/ CE Event</label>
+            </value>
+            <value>
+                <fullName>ESR closed sale that was given to them and was being worked by an OSR AND ISR in the last 60 days</fullName>
+                <default>false</default>
+                <label>ESR closed sale that was given to them and was being worked by an OSR AND ISR in the last 60 days</label>
+            </value>
+            <value>
+                <fullName>ESR closed sale working with an ISR</fullName>
+                <default>false</default>
+                <label>ESR closed sale working with an ISR</label>
+            </value>
+            <value>
+                <fullName>ISR closed sale that had communication with an ESR in the last 45 days and was not given the lead</fullName>
+                <default>false</default>
+                <label>ISR closed sale that had communication with an ESR in the last 45 days and was not given the lead</label>
+            </value>
+            <value>
+                <fullName>ISR closed sale that had no other communication in the last 45 days</fullName>
+                <default>false</default>
+                <label>ISR closed sale that had no other communication in the last 45 days</label>
+            </value>
+            <value>
+                <fullName>ISR closed sale that was generated at an OSR trade show in the last 60 days</fullName>
+                <default>false</default>
+                <label>ISR closed sale that was generated at an OSR trade show in the last 60 days</label>
+            </value>
+            <value>
+                <fullName>ISR closed sale that was given to them by an OSR and ESR in the last 45 days</fullName>
+                <default>false</default>
+                <label>ISR closed sale that was given to them by an OSR and ESR in the last 45 days</label>
+            </value>
+            <value>
+                <fullName>ISR closed sale working with an ESR</fullName>
+                <default>false</default>
+                <label>ISR closed sale working with an ESR</label>
+            </value>
+            <value>
+                <fullName>OSR closed sale after a Trade Show</fullName>
+                <default>false</default>
+                <label>OSR closed sale after a Trade Show</label>
+            </value>
+            <value>
+                <fullName>OSR closed sale that had communication with an ESR and ISR in the last 45 days</fullName>
+                <default>false</default>
+                <label>OSR closed sale that had communication with an ESR and ISR in the last 45 days</label>
+            </value>
+            <value>
+                <fullName>OSR closed sale that had communication with an ESR in the last 45 days</fullName>
+                <default>false</default>
+                <label>OSR closed sale that had communication with an ESR in the last 45 days</label>
+            </value>
+            <value>
+                <fullName>OSR closed sale that had communication with an ISR in the last 45 days</fullName>
+                <default>false</default>
+                <label>OSR closed sale that had communication with an ISR in the last 45 days</label>
+            </value>
+            <value>
+                <fullName>OSR closed sale that had no communication in the last 45 days</fullName>
+                <default>false</default>
+                <label>OSR closed sale that had no communication in the last 45 days</label>
+            </value>
+            <value>
+                <fullName>ISR closed sale that was generated at an ESR trade show in the last 45 days</fullName>
+                <default>false</default>
+                <label>ISR closed sale that was generated at an ESR trade show in the last 45 days</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

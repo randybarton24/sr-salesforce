@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Discount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( List_Price_Override__c &gt; 0 , 
+IF( List_Price_Override__c = 0 , 0 , (List_Price_Override__c - UnitPrice) / List_Price_Override__c) ,
+IF( PricebookEntry.UnitPrice = 0 , 0 , (PricebookEntry.UnitPrice - UnitPrice) / PricebookEntry.UnitPrice))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Price Discount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Percent</type>
+</CustomField>

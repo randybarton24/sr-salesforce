@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ambassador_Commission_Paid__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set via Apex after successful API call</description>
+    <externalId>false</externalId>
+    <label>Ambassador Commission Paid</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

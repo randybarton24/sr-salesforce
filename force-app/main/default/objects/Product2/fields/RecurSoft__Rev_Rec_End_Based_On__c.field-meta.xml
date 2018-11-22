@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Rev_Rec_End_Based_On__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Controls the default behavior for the Revenue Recognition End Date on the billing schedules.</inlineHelpText>
+    <label>Rev Rec End Based On</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Revenue Schedule Entry</fullName>
+                <default>true</default>
+                <label>Revenue Schedule Entry</label>
+            </value>
+            <value>
+                <fullName>Contract Term End Date</fullName>
+                <default>false</default>
+                <label>Contract Term End Date</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

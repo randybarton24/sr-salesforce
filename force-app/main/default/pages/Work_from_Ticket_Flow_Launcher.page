@@ -1,0 +1,27 @@
+<apex:page standardController="Salesforce_Tickets__c" sidebar="false">
+     <br/>
+ <Center><Font size ="6" Color = "DarkBlue">Work Request</font></Center>
+ <br/>
+ <Center><Font size = "4" Color = "Blue">Please add a Subject and Description</font></Center><br/>
+ <style type="text/css">
+.FlowText {
+     color: crimson;
+     }
+.FlowTextArea {
+     color: crimson;
+     }
+.FlowDropdown{
+     color: black;
+     }
+    
+</style>
+    <apex:pageblock >
+        <apex:pageBlockSection title="New Work Request" columns="1" collapsible="false" html-style="height: 120%; font-size: 16px;">
+            <flow:interview name="Work_Item_Creation" finishLocation="/{!Salesforce_Tickets__c.Id}" buttonLocation="bottom" buttonStyle="">
+                <apex:param name="varDescription" value="{!Salesforce_Tickets__c.Description__c}"/>
+            </flow:interview> 
+        </apex:pageBlockSection>
+        
+    </apex:pageblock>
+     
+</apex:page>

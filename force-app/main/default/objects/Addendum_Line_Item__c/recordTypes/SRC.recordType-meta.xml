@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SRC</fullName>
+    <active>true</active>
+    <label>SRC</label>
+    <picklistValues>
+        <picklist>New_Free_Month_Setting__c</picklist>
+        <values>
+            <fullName>Extend Contract - At the Beginning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Include in Contract Period - At the Beginning</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Promo_Item__c</picklist>
+        <values>
+            <fullName>Apple iPad</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

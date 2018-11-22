@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dental_Hygiene_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Dental Hygiene Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bad Taste in Mouth</fullName>
+                <default>false</default>
+                <label>Bad Taste in Mouth</label>
+            </value>
+            <value>
+                <fullName>Gum Disease</fullName>
+                <default>false</default>
+                <label>Gum Disease</label>
+            </value>
+            <value>
+                <fullName>Halitosis</fullName>
+                <default>false</default>
+                <label>Halitosis</label>
+            </value>
+            <value>
+                <fullName>Oral Infection</fullName>
+                <default>false</default>
+                <label>Oral Infection</label>
+            </value>
+            <value>
+                <fullName>Plaque</fullName>
+                <default>false</default>
+                <label>Plaque</label>
+            </value>
+            <value>
+                <fullName>Plaque Buildup</fullName>
+                <default>false</default>
+                <label>Plaque Buildup</label>
+            </value>
+            <value>
+                <fullName>Sensitive Teeth</fullName>
+                <default>false</default>
+                <label>Sensitive Teeth</label>
+            </value>
+            <value>
+                <fullName>Tartar Buildup</fullName>
+                <default>false</default>
+                <label>Tartar Buildup</label>
+            </value>
+            <value>
+                <fullName>Tooth Abscess</fullName>
+                <default>false</default>
+                <label>Tooth Abscess</label>
+            </value>
+            <value>
+                <fullName>Tooth Decay</fullName>
+                <default>false</default>
+                <label>Tooth Decay</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

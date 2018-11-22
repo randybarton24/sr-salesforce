@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Contract_Info_Required</fullName>
+    <active>true</active>
+    <description>Requires Original Setup Fee, Current MSF, Competitor, Most Recent Contract Date and Cancellation Reasons before closing.</description>
+    <errorConditionFormula>AND( 
+    OR(ISPICKVAL( Stage__c, &quot;Save&quot;),
+       ISPICKVAL( Stage__c, &quot;No Sale&quot;),
+       ISPICKVAL( Stage__c, &quot;Cancelled&quot;),
+       ISPICKVAL( Stage__c, &quot;Resume No-Change&quot;)
+       ),
+     OR ( ISBLANK( Original_Setup_Fee__c ), 
+          ISBLANK( Current_MSF__c ),
+          ISBLANK( Most_Recent_Contract_Date__c ), 
+          ISPICKVAL( Cancellation_Reasons__c , &quot;&quot;),
+          ISPICKVAL(  Cancel_Request_Type__c , &quot;&quot;)
+         )
+   )</errorConditionFormula>
+    <errorMessage>The following fields are required when closing this Request: Original Setup Fee, Current MSF, Most Recent Contract Date and Cancellation Reasons.</errorMessage>
+</ValidationRule>

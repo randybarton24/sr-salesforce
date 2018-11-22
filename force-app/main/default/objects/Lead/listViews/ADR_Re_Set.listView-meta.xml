@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ADR_Re_Set</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>SR_Date_Created__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>ADR Re-Set</value>
+    </filters>
+    <label>ADR Re-Set</label>
+    <sharedTo>
+        <role>SAE_Manager_5</role>
+        <role>SAE_Rep_5</role>
+    </sharedTo>
+</ListView>

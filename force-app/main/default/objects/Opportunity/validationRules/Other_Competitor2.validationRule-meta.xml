@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Competitor2</fullName>
+    <active>true</active>
+    <description>Doesn&#39;t allow Other Competitor in free text field without selecting in picklist.</description>
+    <errorConditionFormula>not(includes(Competitor__c,&quot;Other(Note name in Other Competitor)&quot;)) &amp;&amp;
+Other_Competitor__c != null</errorConditionFormula>
+    <errorDisplayField>Competitor__c</errorDisplayField>
+    <errorMessage>Please add &quot;Other(Note name in Other Competitor)&quot; as a Competitor.</errorMessage>
+</ValidationRule>

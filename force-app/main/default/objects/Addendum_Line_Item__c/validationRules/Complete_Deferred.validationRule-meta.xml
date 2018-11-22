@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_Deferred</fullName>
+    <active>true</active>
+    <errorConditionFormula>(Defer_Billing__c = true &amp;&amp;
+ISBLANK( Deferred_Months__c )) ||
+(Defer_Billing__c = false &amp;&amp;
+NOT(ISBLANK( Deferred_Months__c )))</errorConditionFormula>
+    <errorMessage>The Defer Billing modification isn&#39;t complete.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+.THIS .slds-form-element__static
+{
+	display:inline-block;
+}
+.THIS .slds-checkbox [type=checkbox][disabled]+.slds-checkbox__label.slds-checkbox_faux
+{
+	background:rgb(255, 255, 255);
+}
+.THIS .slds-checkbox [type=checkbox][disabled]+.slds-checkbox__label.slds-checkbox_faux:after
+{
+	border-color:rgba(27, 82, 151, 1.0);
+}

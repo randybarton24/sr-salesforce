@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Round Robin Activation Case(Assings to Mike for Enterprise), Round Robin Onboarding when sync install is complete, updates first contact date if a Sales rep schedules the account</description>
+    <label>Activation Case Process</label>
+    <processType>Workflow</processType>
+</Flow>

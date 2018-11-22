@@ -1,0 +1,56 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForRecordHome,force:hasRecordId" access="GLOBAL" description="AddendumLineItemsButton" controller="AddendumLineItemsApxc" >	   
+    <aura:attribute name="addId" type="Id" />
+    <aura:attribute name="statusAddendum" type="String" />
+    <aura:attribute name="isOpen1" type="boolean" default="false"/>
+    <aura:attribute name="options" type="List"  />
+    <aura:attribute name="optionsPricebook" type="List"  />
+    <aura:attribute name="pbEntries" type="PricebookEntry[]"/>
+    <aura:attribute name="pb" type="Id"/>
+    <aura:attribute name="priceAddProduct" type="integer" default="00"/>
+    <aura:attribute name="quantityAddProduct" type="integer" default="1"/>    
+    <aura:attribute name="pricebookSelected" type="String" default=""/>         
+    <aura:attribute name="pricebookEntryNameSelected" type="String" default=""/>   
+    <aura:attribute name="pricebookEntryContractSelected" type="String" default=""/>   
+    <aura:attribute name="pricebookEntryFamily" type="String" default=""/> 
+    <aura:attribute name="pricebookEntrySelected" type="String" default=""/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="existingAddendumLineItems" type="Addendum_Line_Item__c[]" />    
+    <aura:attribute name="newAddendumLineItem" type="Addendum_Line_Item__c" default="{ 'sobjectType': 'Addendum_Line_Item__c' }" />
+    
+    <div>        
+        <br></br>
+        <div class="slds-align_absolute-center">
+            <lightning:button variant="brand" label="Add Product" disabled="{!v.statusAddendum == 'Closed' || v.statusAddendum == 'Signature Requested' || v.statusAddendum == 'Signature Received'}" title="Add Product" onclick="{!c.addPricebooks}" />                
+        </div>        
+        <aura:if isTrue="{!v.isOpen1}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">                               
+                <div class="slds-modal__container" style="height: 500px">
+                    <header class="slds-modal__header">
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add Products</h2>                        
+                    </header>                                            
+                    
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="height: 450px">
+                        <div>Choose a Product to Add</div> 
+                        <aura:if isTrue="{! v.pb == NULL}">
+                                <lightning:combobox name="pricebooks" label="Pricebook:" placeholder="Select Pricebook" value="{!v.pricebookSelected}" options="{!v.optionsPricebook}" onchange="{!c.searchProducts }" readonly="{!v.pb != null}" required="true"/> 
+                        </aura:if>   
+
+                        <lightning:combobox name="products" label="Product" placeholder="Select Product" options="{!v.options}" value="{!v.pricebookEntrySelected}" onchange="{!c.setPrice }" required="true"/>    
+
+                        <lightning:input type="number" style="disabled:true" formatter="currency" name="price" label="Price" class="field" value="{!v.priceAddProduct}" updateOn="keyup" required="true"/>
+                        
+                        <lightning:input type="number" name="quantity" label="Quantity" class="field" value="{!v.quantityAddProduct}" updateOn="keyup" required="true"/>
+                    </div>                                     
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.saveAddProduct }" />
+
+                        <lightning:button variant="brand" label="Cancel" title="Cancel" onclick="{! c.closeModalAddProduct }" />       
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>     
+    </div>
+</aura:component>

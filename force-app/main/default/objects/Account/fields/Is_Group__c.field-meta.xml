@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Group__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Use this field to determine if an account is part of a group of accounts that should be billed together. A set of group accounts will use the parent account to sign/approve contracts or invoice.</description>
+    <externalId>false</externalId>
+    <label>Is Group</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

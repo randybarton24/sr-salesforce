@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Contract</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send Contract</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+var id=sforce.apex.execute(&quot;ValidateOppData&quot;,&quot;Validate&quot;,{OppID:&quot;{!Opportunity.Id}&quot;}); 
+if(id==&#39;clear&#39;) 
+{ 
+window.open(&#39;/email/author/emailauthor.jsp?retURL=/{!Opportunity.AccountId}&amp;p3_lkid={!Opportunity.Id}&amp;template_id=00Xi0000000Zjea&amp;p5=&amp;Save=1&#39;);
+} 
+else 
+{ 
+window.alert(id); 
+}</url>
+</WebLink>

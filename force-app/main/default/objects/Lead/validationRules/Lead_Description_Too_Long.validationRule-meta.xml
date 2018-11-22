@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Description_Too_Long</fullName>
+    <active>true</active>
+    <description>Limits the Description on the Lead to less than 501 characters</description>
+    <errorConditionFormula>LEN( Description ) &gt; 500</errorConditionFormula>
+    <errorDisplayField>Description</errorDisplayField>
+    <errorMessage>Lead Description should be less than 500 characters</errorMessage>
+</ValidationRule>

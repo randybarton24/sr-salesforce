@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition__c</fullName>
+    <externalId>false</externalId>
+    <label>Disposition</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Retention</fullName>
+                <default>false</default>
+                <label>Retention</label>
+            </value>
+            <value>
+                <fullName>Retention - Trial Extension</fullName>
+                <default>false</default>
+                <label>Retention - Trial Extension</label>
+            </value>
+            <value>
+                <fullName>Save</fullName>
+                <default>false</default>
+                <label>Save</label>
+            </value>
+            <value>
+                <fullName>No Sale</fullName>
+                <default>false</default>
+                <label>No Sale</label>
+            </value>
+            <value>
+                <fullName>Cancel - Trial</fullName>
+                <default>false</default>
+                <label>Cancel - Trial</label>
+            </value>
+            <value>
+                <fullName>Cancel - Annual</fullName>
+                <default>false</default>
+                <label>Cancel - Annual</label>
+            </value>
+            <value>
+                <fullName>Cancel - Backlog</fullName>
+                <default>false</default>
+                <label>Cancel - Backlog</label>
+            </value>
+            <value>
+                <fullName>Resume - No Change</fullName>
+                <default>false</default>
+                <label>Resume - No Change</label>
+            </value>
+            <value>
+                <fullName>Cancel - Stream</fullName>
+                <default>false</default>
+                <label>Cancel - Stream</label>
+            </value>
+            <value>
+                <fullName>Cancel - Contract Buyout</fullName>
+                <default>false</default>
+                <label>Cancel - Contract Buyout</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

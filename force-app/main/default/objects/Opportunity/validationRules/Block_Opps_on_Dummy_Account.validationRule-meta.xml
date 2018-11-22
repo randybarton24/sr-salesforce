@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Opps_on_Dummy_Account</fullName>
+    <active>true</active>
+    <errorConditionFormula>AccountId = &#39;001i0000017jk3mAAA&#39;</errorConditionFormula>
+    <errorMessage>Not able to create Opportunities for this Account.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,69 @@
+<!--
+ - Created by mschetselaar on 9/6/2018.
+ -->
+
+<aura:component description="PlaybookCasesTabs" controller="PlaybookControllerApxc" >
+    <aura:attribute name="case" type="Case" />
+    <aura:attribute name="allTasks" type="Task[]" />
+    <aura:attribute name="closedTasks" type="Task[]" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="updateTask" event="c:taskLineItemUpdate"
+                  action="{!c.handleUpdateTask}" />
+
+    <lightning:tab label="{!v.case.Subject}">
+        <div class="slds-align_absolute-center">
+            <c:closeCaseButton CaseID = "{!v.case.Id}" />
+        </div>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-size_1-of-1" title="To Do">
+            <caption>To Do</caption>
+            <thead>
+            <tr class="slds-text-title_caps">
+                <th scope="col">Complete</th>
+                <th scope="col">Task Subject</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Play Type</th>
+                <th scope="col">Task Status</th>
+                <th scope="col">Priority</th>
+                <th scope="col">Assigned To</th>
+                <th scope="col">Add Activity</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <aura:iteration items="{!v.allTasks}" var="task">
+                <aura:if isTrue="{!task.Related_Playbook__c == null}" >
+                    <aura:if isTrue="{!task.Status == 'Scheduled'}" >
+                        <c:taskLineItem task ="{!task}" CaseId="{!v.case.Id}"/>
+                    </aura:if>
+                </aura:if>
+            </aura:iteration>
+            </tbody>
+        </table>
+
+        <br/>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-size_1-of-1" title="Completed">
+            <caption>Completed</caption>
+            <thead>
+            <tr class="slds-text-title_caps">
+                <th scope="col">Complete</th>
+                <th scope="col">Task Subject</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Play Type</th>
+                <th scope="col">Task Status</th>
+                <th scope="col">Priority</th>
+                <th scope="col">Assigned To</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <aura:iteration items="{!v.allTasks}" var="task">
+                <aura:if isTrue="{!task.Status != 'Scheduled'}" >
+                    <c:taskLineItem task ="{!task}" CaseId = "{!v.case.Id}" />
+                </aura:if>
+            </aura:iteration>
+            </tbody>
+        </table>
+    </lightning:tab>
+
+</aura:component>

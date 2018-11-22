@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AE</fullName>
+    <columns>Campaign__c</columns>
+    <columns>Campaign_Add_Date__c</columns>
+    <columns>New_Lead_Created__c</columns>
+    <columns>Lead_Re_warmed__c</columns>
+    <columns>Closed_Won__c</columns>
+    <columns>Orphaned__c</columns>
+    <columns>Associated_Rep__c</columns>
+    <columns>Lead__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campaign__c</field>
+        <operation>contains</operation>
+        <value>ISR Cold Call</value>
+    </filters>
+    <filters>
+        <field>Associated_Rep__c</field>
+        <operation>equals</operation>
+        <value>michael nelson</value>
+    </filters>
+    <label>AE</label>
+</ListView>

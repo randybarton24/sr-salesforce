@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Podiatry_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Podiatry Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Flatfoot Correction</fullName>
+                <default>false</default>
+                <label>Flatfoot Correction</label>
+            </value>
+            <value>
+                <fullName>Foot and Ankle Dislocation Treatment, Closed</fullName>
+                <default>false</default>
+                <label>Foot and Ankle Dislocation Treatment, Closed</label>
+            </value>
+            <value>
+                <fullName>Foot and Ankle Fracture and Dislocation Treatment</fullName>
+                <default>false</default>
+                <label>Foot and Ankle Fracture and Dislocation Treatment</label>
+            </value>
+            <value>
+                <fullName>Foot and Ankle Surgery</fullName>
+                <default>false</default>
+                <label>Foot and Ankle Surgery</label>
+            </value>
+            <value>
+                <fullName>Foot Surgery</fullName>
+                <default>false</default>
+                <label>Foot Surgery</label>
+            </value>
+            <value>
+                <fullName>Fracture and-or Dislocation Treatment</fullName>
+                <default>false</default>
+                <label>Fracture and-or Dislocation Treatment</label>
+            </value>
+            <value>
+                <fullName>Fracture Care</fullName>
+                <default>false</default>
+                <label>Fracture Care</label>
+            </value>
+            <value>
+                <fullName>Nail Avulsion and Excision</fullName>
+                <default>false</default>
+                <label>Nail Avulsion and Excision</label>
+            </value>
+            <value>
+                <fullName>Tendon Repair</fullName>
+                <default>false</default>
+                <label>Tendon Repair</label>
+            </value>
+            <value>
+                <fullName>Wound Care and Management</fullName>
+                <default>false</default>
+                <label>Wound Care and Management</label>
+            </value>
+            <value>
+                <fullName>Abscess Incision and Drainage</fullName>
+                <default>false</default>
+                <label>Abscess Incision and Drainage</label>
+            </value>
+            <value>
+                <fullName>Achilles Tendon Reconstruction</fullName>
+                <default>false</default>
+                <label>Achilles Tendon Reconstruction</label>
+            </value>
+            <value>
+                <fullName>Achilles Tendon Rupture Repair</fullName>
+                <default>false</default>
+                <label>Achilles Tendon Rupture Repair</label>
+            </value>
+            <value>
+                <fullName>Bunion Surgery</fullName>
+                <default>false</default>
+                <label>Bunion Surgery</label>
+            </value>
+            <value>
+                <fullName>Hammer Toe Repair</fullName>
+                <default>false</default>
+                <label>Hammer Toe Repair</label>
+            </value>
+            <value>
+                <fullName>Ingrown Toenail Surgery</fullName>
+                <default>false</default>
+                <label>Ingrown Toenail Surgery</label>
+            </value>
+            <value>
+                <fullName>Ingrown Toenail Treatment</fullName>
+                <default>false</default>
+                <label>Ingrown Toenail Treatment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

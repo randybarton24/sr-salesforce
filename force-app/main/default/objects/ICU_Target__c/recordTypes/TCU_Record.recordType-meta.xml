@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TCU_Record</fullName>
+    <active>true</active>
+    <label>TCU Record</label>
+    <picklistValues>
+        <picklist>Diagnostic__c</picklist>
+        <values>
+            <fullName>Closed 5 days a week</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Database connectivity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Database%2FPM issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flaky front office computer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet connectivity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office behavior issue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Offer_Suggestions__c</picklist>
+        <values>
+            <fullName>Free Months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ipad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lower MSF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PCU_Type__c</picklist>
+        <values>
+            <fullName>Early PCU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal PCU</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Target_Status__c</picklist>
+        <values>
+            <fullName>Actively Working</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Attempted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

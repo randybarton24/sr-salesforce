@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Initial_Description_on_closing</fullName>
+    <active>true</active>
+    <description>When a CRO is closed the Initial Description should be filled out.</description>
+    <errorConditionFormula>AND (OR (ISPICKVAL(Stage__c , &quot;Cancelled&quot;          ),
+         ISPICKVAL(Stage__c , &quot;No Sale&quot;            ), 
+         ISPICKVAL(Stage__c , &quot;Save&quot;               ),
+         ISPICKVAL(Stage__c , &quot;Resume - No Change&quot; )
+         ) ,
+     ISBLANK ( Description__c )
+     )</errorConditionFormula>
+    <errorDisplayField>Description__c</errorDisplayField>
+    <errorMessage>You must provide Initial Details before closing a Cancel Request</errorMessage>
+</ValidationRule>

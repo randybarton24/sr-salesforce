@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dermatology_Practicing_Specialties__c</fullName>
+    <externalId>false</externalId>
+    <label>SecondarDermatologyPracticingSpecialties</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anti-Aging Medicine</fullName>
+                <default>false</default>
+                <label>Anti-Aging Medicine</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Dermatologic Surgery</fullName>
+                <default>false</default>
+                <label>Cosmetic Dermatologic Surgery</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Dermatology</fullName>
+                <default>false</default>
+                <label>Cosmetic Dermatology</label>
+            </value>
+            <value>
+                <fullName>Dermatologic Oncology</fullName>
+                <default>false</default>
+                <label>Dermatologic Oncology</label>
+            </value>
+            <value>
+                <fullName>Dermatologic Surgery</fullName>
+                <default>false</default>
+                <label>Dermatologic Surgery</label>
+            </value>
+            <value>
+                <fullName>Mohs Micrographic Surgery</fullName>
+                <default>false</default>
+                <label>Mohs Micrographic Surgery</label>
+            </value>
+            <value>
+                <fullName>Occupational Skin Diseases</fullName>
+                <default>false</default>
+                <label>Occupational Skin Diseases</label>
+            </value>
+            <value>
+                <fullName>Pediatric Dermatology</fullName>
+                <default>false</default>
+                <label>Pediatric Dermatology</label>
+            </value>
+            <value>
+                <fullName>Procedural Dermatology</fullName>
+                <default>false</default>
+                <label>Procedural Dermatology</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

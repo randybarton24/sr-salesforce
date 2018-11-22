@@ -1,0 +1,18 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <!--HubSpot Call-to-Action Code -->
+    <span class="hs-cta-wrapper" id="hs-cta-wrapper-6e870d5c-dcf1-4180-9f3c-49d8eb5e6ede">
+        <span class="hs-cta-node hs-cta-6e870d5c-dcf1-4180-9f3c-49d8eb5e6ede" id="hs-cta-6e870d5c-dcf1-4180-9f3c-49d8eb5e6ede">
+            <!--[if lte IE 8]>
+    <div id="hs-cta-ie-element">
+    </div>
+   <![endif]-->
+            <a target="_blank" href="{!$Label.c.HubspotAd}" >
+                <img class="hs-cta-img" id="hs-cta-img-6e870d5c-dcf1-4180-9f3c-49d8eb5e6ede" style="border-width:0px;" height="300" width="250" src="{!$Resource.HubSpotAd}" /></a>
+        </span>
+        <ltng:require scripts="/resource/0810n0000004Vs2/HubspotScripts" />
+<!--            <script charset="utf-8" src="https://js.hscta.net/cta/current.js">
+        </script>
+        <script type="text/javascript"> hbspt.cta.load(2332687, '6e870d5c-dcf1-4180-9f3c-49d8eb5e6ede', {}); </script>
+-->    </span>
+    <!-- end HubSpot Call-to-Action Code -->
+</aura:component>

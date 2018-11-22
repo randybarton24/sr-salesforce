@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OppLine002_Provider_Bill_to_Doesnt_match</fullName>
+    <active>true</active>
+    <description>The Provider Bill-to-Account should match the Opportunity Bill-to-Account</description>
+    <errorConditionFormula>Provider__c != null &amp;&amp;
+Opportunity.RecurSoft__Bill_to_Account__c !=  Provider__r.Bill_to_Account__c &amp;&amp;
+Opportunity.AccountId != Provider__r.Bill_to_Account__c</errorConditionFormula>
+    <errorMessage>OppLine002 - The Provider Bill-to-Account should match the Opportunity Bill-to-Account.</errorMessage>
+</ValidationRule>

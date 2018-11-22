@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Earned_Commission__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Activation_Percentage__c &gt;= Comp_Plan__r.Activation_Minimum_Threshold__c, IF(Activation_Percentage__c &gt;= Comp_Plan__r.Activation_100_Threshold__c,Available_Commission__c,Available_Commission__c * Activation_Percentage__c), 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Earned Commission</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

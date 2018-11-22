@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Won</fullName>
+    <columns>Contract_Signed__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>RecurSoft__Intacct_Customer_ID__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Account_Phone__c</columns>
+    <columns>MSFPrice__c</columns>
+    <columns>SFPrice__c</columns>
+    <columns>RecurSoft__Contract_Signed_Date__c</columns>
+    <columns>RecurSoft__Trial__c</columns>
+    <columns>RecurSoft__Number_of_Free_Months__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Contract_Signed__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>RecurSoft__Contract_Signed_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <label>Won</label>
+</ListView>

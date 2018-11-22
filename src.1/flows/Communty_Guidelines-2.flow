@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <decisions>
+        <name>Has_the_user_already_accepted</name>
+        <label>Has the user already accepted</label>
+        <locationX>45</locationX>
+        <locationY>78</locationY>
+        <defaultConnector>
+            <targetReference>Community_Guidlines</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Needs to accept</defaultConnectorLabel>
+        <rules>
+            <name>Already_Accepted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vAccepted</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Already Accepted</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>vAccepted</name>
+        <dataType>Boolean</dataType>
+        <expression>{!$User.Accepted_Community_Guidelines__c}</expression>
+    </formulas>
+    <formulas>
+        <name>vUserID</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Id}</expression>
+    </formulas>
+    <interviewLabel>Communty Guidelines {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Communty Guidelines</label>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_User</name>
+        <label>Update User</label>
+        <locationX>564</locationX>
+        <locationY>78</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vUserID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Accepted_Community_Guidelines__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>User</object>
+    </recordUpdates>
+    <screens>
+        <name>Community_Guidlines</name>
+        <label>Community Guidlines</label>
+        <locationX>326</locationX>
+        <locationY>81</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Update_User</targetReference>
+        </connector>
+        <fields>
+            <name>CommunityGuidelines</name>
+            <dataType>Boolean</dataType>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;I understand &amp;amp; agree to follow the &lt;A HREF=&quot;https://solutionreach.force.com/SRCustomer/s/communityguidelines&quot; TARGET=&quot;_blank&quot;&gt;Community Guidelines&lt;/A&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <isVisible>true</isVisible>
+        </fields>
+    </screens>
+    <startElementReference>Has_the_user_already_accepted</startElementReference>
+</Flow>

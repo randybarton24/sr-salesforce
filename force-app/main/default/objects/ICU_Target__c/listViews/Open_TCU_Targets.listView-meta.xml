@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_TCU_Targets</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Contact__c</columns>
+    <columns>Admin_Active_Status__c</columns>
+    <columns>Last_Sync_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>ICU_Target__c.TCU_Record</value>
+    </filters>
+    <filters>
+        <field>Closed__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Open TCU Targets</label>
+</ListView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mass_Close</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Mass Close</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+var records = {!GETRECORDIDS($ObjectType.Case)}; 
+if (records[0] == null) { 
+    alert(&quot;Please select at least one case to close.&quot;) 
+} else { 
+    //Get more info on the cases that were selected and generate a query out of it 
+    var updateRecords = []; 
+    //Iterate through the returned results 
+    for (var recordIndex=0;recordIndex&lt;records.length;recordIndex++) { 
+        var caseUpdate = new sforce.SObject(&quot;Case&quot;); 
+        caseUpdate.Id = records[recordIndex]; 
+        caseUpdate.Status = &#39;Closed&#39;; 
+        caseUpdate.Resolution = &#39;Fixed&#39;;
+        updateRecords.push(caseUpdate); 
+    } 
+    var result = sforce.connection.update(updateRecords);
+    
+    //handle errors here 
+    if (result.error) { 
+        alert(&#39;There was an error processing one or more cases&#39;); 
+    } 
+    
+    //Reload the list view to show what he now owns 
+    parent.window.location.reload(); 
+}</url>
+</WebLink>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Cancel_Request_Type</fullName>
+    <active>true</active>
+    <description>Makes it so Cancel Request Type is required after creation</description>
+    <errorConditionFormula>AND(CreatedDate  &lt;&gt; Now(), ISPICKVAL( Cancel_Request_Type__c , &quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>Cancel_Request_Type__c</errorDisplayField>
+    <errorMessage>Please select Annual or Trial for Cancel Request Type.</errorMessage>
+</ValidationRule>

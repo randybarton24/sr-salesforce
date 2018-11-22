@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Major_Accounts__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For Distribution Groups that contain only one Major Account rep.  Also, changes the Opportunity Record Type to Enterprise New Practice Business.</description>
+    <externalId>false</externalId>
+    <label>Major Accounts</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

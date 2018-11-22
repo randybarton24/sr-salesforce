@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ADR_Set_Test_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ADR Dental Round Robin</label>
+    <queue>ADR_Dental_Round_Robin</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

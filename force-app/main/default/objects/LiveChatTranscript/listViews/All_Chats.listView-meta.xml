@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Chats</fullName>
+    <columns>Name</columns>
+    <columns>LiveChatVisitor</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Status</columns>
+    <columns>WaitTime</columns>
+    <columns>ChatDuration</columns>
+    <columns>AverageResponseTimeVisitor</columns>
+    <columns>AverageResponseTimeOperator</columns>
+    <columns>OperatorMessageCount</columns>
+    <columns>VisitorMessageCount</columns>
+    <columns>Owner</columns>
+    <columns>CreatedDate</columns>
+    <columns>Account</columns>
+    <columns>EndedBy</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Owner</field>
+        <operation>equals</operation>
+        <value>jbolton</value>
+    </filters>
+    <label>All Chats</label>
+</ListView>

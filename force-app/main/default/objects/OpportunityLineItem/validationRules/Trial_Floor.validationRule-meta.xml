@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trial_Floor</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISBLANK( PricebookEntry.Trial_Period_Floor__c )) &amp;&amp;
+VALUE(TEXT(Trial__c)) &gt; PricebookEntry.Trial_Period_Floor__c</errorConditionFormula>
+    <errorMessage>The trial period is greater than the maximum allowable length.</errorMessage>
+</ValidationRule>

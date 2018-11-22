@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>qbdialer__Call_Ring_Time__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Ring Time of the phone call</description>
+    <externalId>false</externalId>
+    <label>Call Ring Time</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

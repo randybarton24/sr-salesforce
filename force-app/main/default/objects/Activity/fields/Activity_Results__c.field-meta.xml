@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Results__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity Results</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Activity_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Future Event</fullName>
+                <default>false</default>
+                <label>Future Event</label>
+            </value>
+            <value>
+                <fullName>Left Brochure</fullName>
+                <default>false</default>
+                <label>Left Brochure</label>
+            </value>
+            <value>
+                <fullName>Left Voice Mail</fullName>
+                <default>false</default>
+                <label>Left Voice Mail</label>
+            </value>
+            <value>
+                <fullName>No Answer/ Busy Signal</fullName>
+                <default>false</default>
+                <label>No Answer/ Busy Signal</label>
+            </value>
+            <value>
+                <fullName>No-Show</fullName>
+                <default>false</default>
+                <label>No-Show</label>
+            </value>
+            <value>
+                <fullName>Received</fullName>
+                <default>false</default>
+                <label>Received</label>
+            </value>
+            <value>
+                <fullName>Rescheduled</fullName>
+                <default>false</default>
+                <label>Rescheduled</label>
+            </value>
+            <value>
+                <fullName>Sent</fullName>
+                <default>false</default>
+                <label>Sent</label>
+            </value>
+            <value>
+                <fullName>Spoke with-</fullName>
+                <default>false</default>
+                <label>Spoke with-</label>
+            </value>
+            <value>
+                <fullName>Ownership Change</fullName>
+                <default>false</default>
+                <label>Ownership Change</label>
+            </value>
+            <value>
+                <fullName>Note</fullName>
+                <default>false</default>
+                <label>Note</label>
+            </value>
+            <value>
+                <fullName>Reminder</fullName>
+                <default>false</default>
+                <label>Reminder</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>Remoted in</fullName>
+                <default>false</default>
+                <label>Remoted in</label>
+            </value>
+            <value>
+                <fullName>Answered Reps Questions</fullName>
+                <default>false</default>
+                <label>Answered Reps Questions</label>
+            </value>
+            <value>
+                <fullName>Missed</fullName>
+                <default>false</default>
+                <label>Missed</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Sr. Assist Help</controllingFieldValue>
+            <controllingFieldValue>Tech Help</controllingFieldValue>
+            <valueName>Answered Reps Questions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Training</controllingFieldValue>
+            <controllingFieldValue>ADR Hunt Set</controllingFieldValue>
+            <controllingFieldValue>ADR Set</controllingFieldValue>
+            <controllingFieldValue>ADR Roe Set</controllingFieldValue>
+            <controllingFieldValue>ADR Re-Set</controllingFieldValue>
+            <controllingFieldValue>Kick Off Call</controllingFieldValue>
+            <controllingFieldValue>Midway Decision Maker Call</controllingFieldValue>
+            <controllingFieldValue>Recall</controllingFieldValue>
+            <controllingFieldValue>Final Call</controllingFieldValue>
+            <controllingFieldValue>Reminders</controllingFieldValue>
+            <controllingFieldValue>Action List</controllingFieldValue>
+            <controllingFieldValue>Newsletters</controllingFieldValue>
+            <controllingFieldValue>Groups</controllingFieldValue>
+            <controllingFieldValue>Surveys</controllingFieldValue>
+            <controllingFieldValue>Online Presence</controllingFieldValue>
+            <controllingFieldValue>Settings</controllingFieldValue>
+            <controllingFieldValue>Phone Demo</controllingFieldValue>
+            <controllingFieldValue>ADR Doctor Set</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>In-Person Demo - CE</controllingFieldValue>
+            <controllingFieldValue>Sync Install</controllingFieldValue>
+            <controllingFieldValue>Custom Settings</controllingFieldValue>
+            <controllingFieldValue>PRT</controllingFieldValue>
+            <controllingFieldValue>Graphics Setup</controllingFieldValue>
+            <controllingFieldValue>In-Person Demo</controllingFieldValue>
+            <controllingFieldValue>Healthgrades</controllingFieldValue>
+            <controllingFieldValue>Limelight</controllingFieldValue>
+            <controllingFieldValue>SR Portal</controllingFieldValue>
+            <valueName>Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Training</controllingFieldValue>
+            <controllingFieldValue>Kick Off Call</controllingFieldValue>
+            <controllingFieldValue>Midway Decision Maker Call</controllingFieldValue>
+            <controllingFieldValue>Recall</controllingFieldValue>
+            <controllingFieldValue>Final Call</controllingFieldValue>
+            <controllingFieldValue>Reminders</controllingFieldValue>
+            <controllingFieldValue>Action List</controllingFieldValue>
+            <controllingFieldValue>Newsletters</controllingFieldValue>
+            <controllingFieldValue>Groups</controllingFieldValue>
+            <controllingFieldValue>Surveys</controllingFieldValue>
+            <controllingFieldValue>Online Presence</controllingFieldValue>
+            <controllingFieldValue>Settings</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Sync Install</controllingFieldValue>
+            <controllingFieldValue>Custom Settings</controllingFieldValue>
+            <controllingFieldValue>PRT</controllingFieldValue>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <controllingFieldValue>Graphics Setup</controllingFieldValue>
+            <controllingFieldValue>Healthgrades</controllingFieldValue>
+            <controllingFieldValue>Limelight</controllingFieldValue>
+            <controllingFieldValue>SR Portal</controllingFieldValue>
+            <valueName>Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Training</controllingFieldValue>
+            <controllingFieldValue>ADR Hunt Set</controllingFieldValue>
+            <controllingFieldValue>ADR Set</controllingFieldValue>
+            <controllingFieldValue>ADR Roe Set</controllingFieldValue>
+            <controllingFieldValue>ADR Re-Set</controllingFieldValue>
+            <controllingFieldValue>Kick Off Call</controllingFieldValue>
+            <controllingFieldValue>Midway Decision Maker Call</controllingFieldValue>
+            <controllingFieldValue>Recall</controllingFieldValue>
+            <controllingFieldValue>Final Call</controllingFieldValue>
+            <controllingFieldValue>Reminders</controllingFieldValue>
+            <controllingFieldValue>Action List</controllingFieldValue>
+            <controllingFieldValue>Newsletters</controllingFieldValue>
+            <controllingFieldValue>Groups</controllingFieldValue>
+            <controllingFieldValue>Surveys</controllingFieldValue>
+            <controllingFieldValue>Online Presence</controllingFieldValue>
+            <controllingFieldValue>Settings</controllingFieldValue>
+            <controllingFieldValue>Phone Cold Call</controllingFieldValue>
+            <controllingFieldValue>Phone Demo</controllingFieldValue>
+            <controllingFieldValue>ADR Doctor Set</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>In-Person Demo - CE</controllingFieldValue>
+            <controllingFieldValue>Sync Install</controllingFieldValue>
+            <controllingFieldValue>Custom Settings</controllingFieldValue>
+            <controllingFieldValue>In-Person Follow Up</controllingFieldValue>
+            <controllingFieldValue>PRT</controllingFieldValue>
+            <controllingFieldValue>ESR Event</controllingFieldValue>
+            <controllingFieldValue>In-Person Cold Call</controllingFieldValue>
+            <controllingFieldValue>In-Person Demo</controllingFieldValue>
+            <controllingFieldValue>OSR Event</controllingFieldValue>
+            <controllingFieldValue>Outbound Call</controllingFieldValue>
+            <controllingFieldValue>Healthgrades</controllingFieldValue>
+            <controllingFieldValue>Limelight</controllingFieldValue>
+            <controllingFieldValue>SR Portal</controllingFieldValue>
+            <valueName>Future Event</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Training</controllingFieldValue>
+            <controllingFieldValue>ADR Hunt Set</controllingFieldValue>
+            <controllingFieldValue>ADR Set</controllingFieldValue>
+            <controllingFieldValue>ADR Roe Set</controllingFieldValue>
+            <controllingFieldValue>ADR Re-Set</controllingFieldValue>
+            <controllingFieldValue>Kick Off Call</controllingFieldValue>
+            <controllingFieldValue>Midway Decision Maker Call</controllingFieldValue>
+            <controllingFieldValue>Recall</controllingFieldValue>
+            <controllingFieldValue>Final Call</controllingFieldValue>
+            <controllingFieldValue>Reminders</controllingFieldValue>
+            <controllingFieldValue>Action List</controllingFieldValue>
+            <controllingFieldValue>Newsletters</controllingFieldValue>
+            <controllingFieldValue>Groups</controllingFieldValue>
+            <controllingFieldValue>Surveys</controllingFieldValue>
+            <controllingFieldValue>Online Presence</controllingFieldValue>
+            <controllingFieldValue>Settings</controllingFieldValue>
+            <controllingFieldValue>Phone Demo</controllingFieldValue>
+            <controllingFieldValue>ADR Doctor Set</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>In-Person Demo - CE</controllingFieldValue>
+            <controllingFieldValue>Sync Install</controllingFieldValue>
+            <controllingFieldValue>Custom Settings</controllingFieldValue>
+            <controllingFieldValue>PRT</controllingFieldValue>
+            <controllingFieldValue>In-Person Demo</controllingFieldValue>
+            <controllingFieldValue>Healthgrades</controllingFieldValue>
+            <controllingFieldValue>Limelight</controllingFieldValue>
+            <controllingFieldValue>SR Portal</controllingFieldValue>
+            <valueName>No-Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Training</controllingFieldValue>
+            <controllingFieldValue>Kick Off Call</controllingFieldValue>
+            <controllingFieldValue>Midway Decision Maker Call</controllingFieldValue>
+            <controllingFieldValue>Recall</controllingFieldValue>
+            <controllingFieldValue>Final Call</controllingFieldValue>
+            <controllingFieldValue>Reminders</controllingFieldValue>
+            <controllingFieldValue>Action List</controllingFieldValue>
+            <controllingFieldValue>Newsletters</controllingFieldValue>
+            <controllingFieldValue>Groups</controllingFieldValue>
+            <controllingFieldValue>Surveys</controllingFieldValue>
+            <controllingFieldValue>Online Presence</controllingFieldValue>
+            <controllingFieldValue>Settings</controllingFieldValue>
+            <controllingFieldValue>Phone Demo</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>In-Person Demo - CE</controllingFieldValue>
+            <controllingFieldValue>Sync Install</controllingFieldValue>
+            <controllingFieldValue>Custom Settings</controllingFieldValue>
+            <controllingFieldValue>PRT</controllingFieldValue>
+            <controllingFieldValue>Graphics Setup</controllingFieldValue>
+            <controllingFieldValue>In-Person Demo</controllingFieldValue>
+            <controllingFieldValue>Healthgrades</controllingFieldValue>
+            <controllingFieldValue>Limelight</controllingFieldValue>
+            <controllingFieldValue>SR Portal</controllingFieldValue>
+            <valueName>Rescheduled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Training</controllingFieldValue>
+            <controllingFieldValue>Newsletters</controllingFieldValue>
+            <controllingFieldValue>Groups</controllingFieldValue>
+            <controllingFieldValue>Online Presence</controllingFieldValue>
+            <controllingFieldValue>PRT</controllingFieldValue>
+            <controllingFieldValue>Healthgrades</controllingFieldValue>
+            <controllingFieldValue>Limelight</controllingFieldValue>
+            <controllingFieldValue>SR Portal</controllingFieldValue>
+            <valueName>Declined</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ADR Hunt Set</controllingFieldValue>
+            <controllingFieldValue>ADR Set</controllingFieldValue>
+            <controllingFieldValue>ADR Roe Set</controllingFieldValue>
+            <controllingFieldValue>ADR Re-Set</controllingFieldValue>
+            <controllingFieldValue>Kick Off Call</controllingFieldValue>
+            <controllingFieldValue>Midway Decision Maker Call</controllingFieldValue>
+            <controllingFieldValue>Final Call</controllingFieldValue>
+            <controllingFieldValue>Phone Cold Call</controllingFieldValue>
+            <controllingFieldValue>Phone Demo</controllingFieldValue>
+            <controllingFieldValue>ADR Doctor Set</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>In-Person Demo - CE</controllingFieldValue>
+            <controllingFieldValue>Sync Install</controllingFieldValue>
+            <controllingFieldValue>Custom Settings</controllingFieldValue>
+            <controllingFieldValue>In-Person Follow Up</controllingFieldValue>
+            <controllingFieldValue>ESR Event</controllingFieldValue>
+            <controllingFieldValue>Inbound Call</controllingFieldValue>
+            <controllingFieldValue>In-Person Cold Call</controllingFieldValue>
+            <controllingFieldValue>In-Person Demo</controllingFieldValue>
+            <controllingFieldValue>OSR Event</controllingFieldValue>
+            <controllingFieldValue>Outbound Call</controllingFieldValue>
+            <valueName>Spoke with-</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ADR Hunt Set</controllingFieldValue>
+            <controllingFieldValue>ADR Set</controllingFieldValue>
+            <controllingFieldValue>ADR Roe Set</controllingFieldValue>
+            <controllingFieldValue>ADR Re-Set</controllingFieldValue>
+            <controllingFieldValue>ADR Doctor Set</controllingFieldValue>
+            <valueName>Missed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kick Off Call</controllingFieldValue>
+            <controllingFieldValue>Midway Decision Maker Call</controllingFieldValue>
+            <controllingFieldValue>Final Call</controllingFieldValue>
+            <controllingFieldValue>Phone Cold Call</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Sync Install</controllingFieldValue>
+            <controllingFieldValue>Custom Settings</controllingFieldValue>
+            <controllingFieldValue>Outbound Call</controllingFieldValue>
+            <valueName>Left Voice Mail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kick Off Call</controllingFieldValue>
+            <controllingFieldValue>Midway Decision Maker Call</controllingFieldValue>
+            <controllingFieldValue>Final Call</controllingFieldValue>
+            <controllingFieldValue>Phone Cold Call</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Sync Install</controllingFieldValue>
+            <controllingFieldValue>Custom Settings</controllingFieldValue>
+            <controllingFieldValue>In-Person Follow Up</controllingFieldValue>
+            <controllingFieldValue>Outbound Call</controllingFieldValue>
+            <valueName>No Answer/ Busy Signal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tech Help</controllingFieldValue>
+            <valueName>Remoted in</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In-Person Follow Up</controllingFieldValue>
+            <controllingFieldValue>In-Person Cold Call</controllingFieldValue>
+            <valueName>Left Brochure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative/Other</controllingFieldValue>
+            <valueName>Ownership Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative/Other</controllingFieldValue>
+            <valueName>Note</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative/Other</controllingFieldValue>
+            <valueName>Reminder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <valueName>Received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <valueName>Sent</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

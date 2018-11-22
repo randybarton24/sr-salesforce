@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OppLine004_Additional_Providers</fullName>
+    <active>false</active>
+    <description>Only sales managers and sys admin profile are allowed to update Sales Price.</description>
+    <errorConditionFormula>$Profile.Name &lt;&gt; &quot;System Administrator&quot;  &amp;&amp;  
+$Profile.Name &lt;&gt; &quot;Sales Administrator&quot;  &amp;&amp;
+$Profile.Name &lt;&gt; &quot;Sales Manager&quot; &amp;&amp;  
+ISCHANGED( UnitPrice )&amp;&amp;
+CONTAINS(Product2.Name , &quot;Additional Providers&quot;)</errorConditionFormula>
+    <errorDisplayField>UnitPrice</errorDisplayField>
+    <errorMessage>OppLine004 - You are not allowed to update Sales Price.</errorMessage>
+</ValidationRule>

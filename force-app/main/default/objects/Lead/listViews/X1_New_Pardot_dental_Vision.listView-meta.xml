@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X1_New_Pardot_dental_Vision</fullName>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Practice_Software__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.INDUSTRY</columns>
+    <columns>tz__Timezone__c</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>,New,Contacted,Bogus,Duplicate,Converted,No Response,Dead,No Integration</value>
+    </filters>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>Trade Show/Event,Email,Web,SEO/SEM</value>
+    </filters>
+    <filters>
+        <field>LEAD.INDUSTRY</field>
+        <operation>equals</operation>
+        <value>Dental,Vision,Non-Medical,Physical Rehabilitation</value>
+    </filters>
+    <label>1.  New Pardot dental Vision</label>
+    <sharedTo>
+        <group>Inside_Sales</group>
+        <role>SAE_Rep_4</role>
+    </sharedTo>
+</ListView>

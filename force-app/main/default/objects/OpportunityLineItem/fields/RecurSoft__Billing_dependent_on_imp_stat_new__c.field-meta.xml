@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Billing_dependent_on_imp_stat_new__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this if invoicing for this opportunity product should be based on later Activation date.</inlineHelpText>
+    <label>Billing dependent on IMP (transactional)</label>
+    <type>Checkbox</type>
+</CustomField>

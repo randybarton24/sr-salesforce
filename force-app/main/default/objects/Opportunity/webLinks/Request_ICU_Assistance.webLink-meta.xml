@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_ICU_Assistance</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Request ICU Assistance</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/flow/Assist_Request_for_ICU_Target?varSaveOpptyID={!Opportunity.Id}&amp;varAccountID={!Opportunity.AccountId}&amp;varAccountName={!Opportunity.Account}&amp;varAssistRequested={!Opportunity.Assist_Requested__c}&amp;retURL=/{!Opportunity.Id}</url>
+</WebLink>

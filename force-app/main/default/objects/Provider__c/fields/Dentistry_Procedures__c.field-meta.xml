@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dentistry_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Dentistry Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tooth Extraction</fullName>
+                <default>false</default>
+                <label>Tooth Extraction</label>
+            </value>
+            <value>
+                <fullName>Root Canal</fullName>
+                <default>false</default>
+                <label>Root Canal</label>
+            </value>
+            <value>
+                <fullName>Amalgam Dental Fillings</fullName>
+                <default>false</default>
+                <label>Amalgam Dental Fillings</label>
+            </value>
+            <value>
+                <fullName>Dental Crown</fullName>
+                <default>false</default>
+                <label>Dental Crown</label>
+            </value>
+            <value>
+                <fullName>Teeth Whitening</fullName>
+                <default>false</default>
+                <label>Teeth Whitening</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Procedure</fullName>
+                <default>false</default>
+                <label>Cosmetic Procedure</label>
+            </value>
+            <value>
+                <fullName>Dental Implant</fullName>
+                <default>false</default>
+                <label>Dental Implant</label>
+            </value>
+            <value>
+                <fullName>Teeth Extraction</fullName>
+                <default>false</default>
+                <label>Teeth Extraction</label>
+            </value>
+            <value>
+                <fullName>Routine General Exams</fullName>
+                <default>false</default>
+                <label>Routine General Exams</label>
+            </value>
+            <value>
+                <fullName>Dental Cleaning</fullName>
+                <default>false</default>
+                <label>Dental Cleaning</label>
+            </value>
+            <value>
+                <fullName>3rd Molar Extraction</fullName>
+                <default>false</default>
+                <label>3rd Molar Extraction</label>
+            </value>
+            <value>
+                <fullName>Abscess Incision and Drainage</fullName>
+                <default>false</default>
+                <label>Abscess Incision and Drainage</label>
+            </value>
+            <value>
+                <fullName>Air Abrasion</fullName>
+                <default>false</default>
+                <label>Air Abrasion</label>
+            </value>
+            <value>
+                <fullName>All-on-4™ Procedure</fullName>
+                <default>false</default>
+                <label>All-on-4™ Procedure</label>
+            </value>
+            <value>
+                <fullName>Arestin® Therapy</fullName>
+                <default>false</default>
+                <label>Arestin® Therapy</label>
+            </value>
+            <value>
+                <fullName>Athletic Mouthguards</fullName>
+                <default>false</default>
+                <label>Athletic Mouthguards</label>
+            </value>
+            <value>
+                <fullName>Bite Adjustment</fullName>
+                <default>false</default>
+                <label>Bite Adjustment</label>
+            </value>
+            <value>
+                <fullName>Bone Regeneration Procedure</fullName>
+                <default>false</default>
+                <label>Bone Regeneration Procedure</label>
+            </value>
+            <value>
+                <fullName>CAD-CAM Dentistry</fullName>
+                <default>false</default>
+                <label>CAD-CAM Dentistry</label>
+            </value>
+            <value>
+                <fullName>Cancer Screening</fullName>
+                <default>false</default>
+                <label>Cancer Screening</label>
+            </value>
+            <value>
+                <fullName>Ceramic Dental Crowns</fullName>
+                <default>false</default>
+                <label>Ceramic Dental Crowns</label>
+            </value>
+            <value>
+                <fullName>Cerec® Tooth Restoration Procedure</fullName>
+                <default>false</default>
+                <label>Cerec® Tooth Restoration Procedure</label>
+            </value>
+            <value>
+                <fullName>Clear Dental Braces</fullName>
+                <default>false</default>
+                <label>Clear Dental Braces</label>
+            </value>
+            <value>
+                <fullName>ClearCorrect™ Invisible Braces</fullName>
+                <default>false</default>
+                <label>ClearCorrect™ Invisible Braces</label>
+            </value>
+            <value>
+                <fullName>Cold Laser Therapy</fullName>
+                <default>false</default>
+                <label>Cold Laser Therapy</label>
+            </value>
+            <value>
+                <fullName>Complex Tooth Extraction</fullName>
+                <default>false</default>
+                <label>Complex Tooth Extraction</label>
+            </value>
+            <value>
+                <fullName>Composite Fillings</fullName>
+                <default>false</default>
+                <label>Composite Fillings</label>
+            </value>
+            <value>
+                <fullName>Computer Imaging for Dental Crowns</fullName>
+                <default>false</default>
+                <label>Computer Imaging for Dental Crowns</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Contouring  (Dental)</fullName>
+                <default>false</default>
+                <label>Cosmetic Contouring  (Dental)</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Oral Evaluation</fullName>
+                <default>false</default>
+                <label>Cosmetic Oral Evaluation</label>
+            </value>
+            <value>
+                <fullName>Crown Lengthening</fullName>
+                <default>false</default>
+                <label>Crown Lengthening</label>
+            </value>
+            <value>
+                <fullName>da Vinci® Veneers</fullName>
+                <default>false</default>
+                <label>da Vinci® Veneers</label>
+            </value>
+            <value>
+                <fullName>Deep Bleaching</fullName>
+                <default>false</default>
+                <label>Deep Bleaching</label>
+            </value>
+            <value>
+                <fullName>Dental Bonding</fullName>
+                <default>false</default>
+                <label>Dental Bonding</label>
+            </value>
+            <value>
+                <fullName>Dental Brace</fullName>
+                <default>false</default>
+                <label>Dental Brace</label>
+            </value>
+            <value>
+                <fullName>Dental Bridge</fullName>
+                <default>false</default>
+                <label>Dental Bridge</label>
+            </value>
+            <value>
+                <fullName>Dental Extraction</fullName>
+                <default>false</default>
+                <label>Dental Extraction</label>
+            </value>
+            <value>
+                <fullName>Dental Hygiene Services</fullName>
+                <default>false</default>
+                <label>Dental Hygiene Services</label>
+            </value>
+            <value>
+                <fullName>Dental Procedure</fullName>
+                <default>false</default>
+                <label>Dental Procedure</label>
+            </value>
+            <value>
+                <fullName>Dental Restoration</fullName>
+                <default>false</default>
+                <label>Dental Restoration</label>
+            </value>
+            <value>
+                <fullName>Dental Veneer</fullName>
+                <default>false</default>
+                <label>Dental Veneer</label>
+            </value>
+            <value>
+                <fullName>Dento Alveolar Surgery</fullName>
+                <default>false</default>
+                <label>Dento Alveolar Surgery</label>
+            </value>
+            <value>
+                <fullName>Denture Repair</fullName>
+                <default>false</default>
+                <label>Denture Repair</label>
+            </value>
+            <value>
+                <fullName>Dentures</fullName>
+                <default>false</default>
+                <label>Dentures</label>
+            </value>
+            <value>
+                <fullName>Device Implantation and Extraction</fullName>
+                <default>false</default>
+                <label>Device Implantation and Extraction</label>
+            </value>
+            <value>
+                <fullName>DIAGNOdent® Laser Cavity Detection</fullName>
+                <default>false</default>
+                <label>DIAGNOdent® Laser Cavity Detection</label>
+            </value>
+            <value>
+                <fullName>Diagnostic Imaging</fullName>
+                <default>false</default>
+                <label>Diagnostic Imaging</label>
+            </value>
+            <value>
+                <fullName>Digital Impression System</fullName>
+                <default>false</default>
+                <label>Digital Impression System</label>
+            </value>
+            <value>
+                <fullName>Digital Tomography</fullName>
+                <default>false</default>
+                <label>Digital Tomography</label>
+            </value>
+            <value>
+                <fullName>Digital X-Ray (CDR)</fullName>
+                <default>false</default>
+                <label>Digital X-Ray (CDR)</label>
+            </value>
+            <value>
+                <fullName>Diode Laser Soft Tissue Treatment</fullName>
+                <default>false</default>
+                <label>Diode Laser Soft Tissue Treatment</label>
+            </value>
+            <value>
+                <fullName>e.max® Dental Crowns</fullName>
+                <default>false</default>
+                <label>e.max® Dental Crowns</label>
+            </value>
+            <value>
+                <fullName>Edgewise Dental Braces</fullName>
+                <default>false</default>
+                <label>Edgewise Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Electrocautery</fullName>
+                <default>false</default>
+                <label>Electrocautery</label>
+            </value>
+            <value>
+                <fullName>Electrosurgery</fullName>
+                <default>false</default>
+                <label>Electrosurgery</label>
+            </value>
+            <value>
+                <fullName>Endodontic Retreatment</fullName>
+                <default>false</default>
+                <label>Endodontic Retreatment</label>
+            </value>
+            <value>
+                <fullName>Endodontic Surgery</fullName>
+                <default>false</default>
+                <label>Endodontic Surgery</label>
+            </value>
+            <value>
+                <fullName>Extraction of Wisdom Tooth</fullName>
+                <default>false</default>
+                <label>Extraction of Wisdom Tooth</label>
+            </value>
+            <value>
+                <fullName>Fixed Orthodontic Correction</fullName>
+                <default>false</default>
+                <label>Fixed Orthodontic Correction</label>
+            </value>
+            <value>
+                <fullName>Frenectomy</fullName>
+                <default>false</default>
+                <label>Frenectomy</label>
+            </value>
+            <value>
+                <fullName>Full Mouth Reconstruction</fullName>
+                <default>false</default>
+                <label>Full Mouth Reconstruction</label>
+            </value>
+            <value>
+                <fullName>Geneva 2000™ Dentures</fullName>
+                <default>false</default>
+                <label>Geneva 2000™ Dentures</label>
+            </value>
+            <value>
+                <fullName>Glow in the Dark Dental Braces</fullName>
+                <default>false</default>
+                <label>Glow in the Dark Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Gold Dental Braces</fullName>
+                <default>false</default>
+                <label>Gold Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Gold Dental Inlays</fullName>
+                <default>false</default>
+                <label>Gold Dental Inlays</label>
+            </value>
+            <value>
+                <fullName>Gum Surgery</fullName>
+                <default>false</default>
+                <label>Gum Surgery</label>
+            </value>
+            <value>
+                <fullName>Implant-Supported Bridge</fullName>
+                <default>false</default>
+                <label>Implant-Supported Bridge</label>
+            </value>
+            <value>
+                <fullName>Implant-Supported Crown</fullName>
+                <default>false</default>
+                <label>Implant-Supported Crown</label>
+            </value>
+            <value>
+                <fullName>Implant-Supported Dentures</fullName>
+                <default>false</default>
+                <label>Implant-Supported Dentures</label>
+            </value>
+            <value>
+                <fullName>In-Office Teeth Whitening</fullName>
+                <default>false</default>
+                <label>In-Office Teeth Whitening</label>
+            </value>
+            <value>
+                <fullName>Intraoral Camera</fullName>
+                <default>false</default>
+                <label>Intraoral Camera</label>
+            </value>
+            <value>
+                <fullName>Invisalign Teen®</fullName>
+                <default>false</default>
+                <label>Invisalign Teen®</label>
+            </value>
+            <value>
+                <fullName>Invisalign®</fullName>
+                <default>false</default>
+                <label>Invisalign®</label>
+            </value>
+            <value>
+                <fullName>Invisible Dental Braces</fullName>
+                <default>false</default>
+                <label>Invisible Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Jaw Implant Surgery</fullName>
+                <default>false</default>
+                <label>Jaw Implant Surgery</label>
+            </value>
+            <value>
+                <fullName>KöR Whitening Deep Bleaching™</fullName>
+                <default>false</default>
+                <label>KöR Whitening Deep Bleaching™</label>
+            </value>
+            <value>
+                <fullName>Laser Assisted Periodontal Therapy</fullName>
+                <default>false</default>
+                <label>Laser Assisted Periodontal Therapy</label>
+            </value>
+            <value>
+                <fullName>Laser Cavity Detection</fullName>
+                <default>false</default>
+                <label>Laser Cavity Detection</label>
+            </value>
+            <value>
+                <fullName>Laser Microsurgery</fullName>
+                <default>false</default>
+                <label>Laser Microsurgery</label>
+            </value>
+            <value>
+                <fullName>Laser Office Procedure</fullName>
+                <default>false</default>
+                <label>Laser Office Procedure</label>
+            </value>
+            <value>
+                <fullName>Laser Treatment for Dental Fillings</fullName>
+                <default>false</default>
+                <label>Laser Treatment for Dental Fillings</label>
+            </value>
+            <value>
+                <fullName>Lesion Removal</fullName>
+                <default>false</default>
+                <label>Lesion Removal</label>
+            </value>
+            <value>
+                <fullName>Light Activated Teeth Whitening</fullName>
+                <default>false</default>
+                <label>Light Activated Teeth Whitening</label>
+            </value>
+            <value>
+                <fullName>Limited Gum Surgery</fullName>
+                <default>false</default>
+                <label>Limited Gum Surgery</label>
+            </value>
+            <value>
+                <fullName>Local Anesthesia</fullName>
+                <default>false</default>
+                <label>Local Anesthesia</label>
+            </value>
+            <value>
+                <fullName>Lumineers®</fullName>
+                <default>false</default>
+                <label>Lumineers®</label>
+            </value>
+            <value>
+                <fullName>MAC Veneers™</fullName>
+                <default>false</default>
+                <label>MAC Veneers™</label>
+            </value>
+            <value>
+                <fullName>Maxillofacial Surgery</fullName>
+                <default>false</default>
+                <label>Maxillofacial Surgery</label>
+            </value>
+            <value>
+                <fullName>MDI Mini Dental Implant</fullName>
+                <default>false</default>
+                <label>MDI Mini Dental Implant</label>
+            </value>
+            <value>
+                <fullName>Metal Dental Braces</fullName>
+                <default>false</default>
+                <label>Metal Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Microsonic Dental Cleanings</fullName>
+                <default>false</default>
+                <label>Microsonic Dental Cleanings</label>
+            </value>
+            <value>
+                <fullName>Microsurgical Procedure</fullName>
+                <default>false</default>
+                <label>Microsurgical Procedure</label>
+            </value>
+            <value>
+                <fullName>Moderate Sedation</fullName>
+                <default>false</default>
+                <label>Moderate Sedation</label>
+            </value>
+            <value>
+                <fullName>Molar Endodontics</fullName>
+                <default>false</default>
+                <label>Molar Endodontics</label>
+            </value>
+            <value>
+                <fullName>Nightguard</fullName>
+                <default>false</default>
+                <label>Nightguard</label>
+            </value>
+            <value>
+                <fullName>Nitrous Oxide Administration</fullName>
+                <default>false</default>
+                <label>Nitrous Oxide Administration</label>
+            </value>
+            <value>
+                <fullName>Nitrous Oxide Sedation</fullName>
+                <default>false</default>
+                <label>Nitrous Oxide Sedation</label>
+            </value>
+            <value>
+                <fullName>Nobel Teeth in an Hour™</fullName>
+                <default>false</default>
+                <label>Nobel Teeth in an Hour™</label>
+            </value>
+            <value>
+                <fullName>Non-Surgical Bite Correction</fullName>
+                <default>false</default>
+                <label>Non-Surgical Bite Correction</label>
+            </value>
+            <value>
+                <fullName>Non-Surgical Gum Treatment</fullName>
+                <default>false</default>
+                <label>Non-Surgical Gum Treatment</label>
+            </value>
+            <value>
+                <fullName>Non-Surgical Orthodontic Procedures</fullName>
+                <default>false</default>
+                <label>Non-Surgical Orthodontic Procedures</label>
+            </value>
+            <value>
+                <fullName>Nu Radiance® Teeth Whitening</fullName>
+                <default>false</default>
+                <label>Nu Radiance® Teeth Whitening</label>
+            </value>
+            <value>
+                <fullName>Opalescence® Tooth Whitening System</fullName>
+                <default>false</default>
+                <label>Opalescence® Tooth Whitening System</label>
+            </value>
+            <value>
+                <fullName>Oral and Maxillofacial Surgery</fullName>
+                <default>false</default>
+                <label>Oral and Maxillofacial Surgery</label>
+            </value>
+            <value>
+                <fullName>Oral Surgical Procedures</fullName>
+                <default>false</default>
+                <label>Oral Surgical Procedures</label>
+            </value>
+            <value>
+                <fullName>Orthodontic Treatment, Adult</fullName>
+                <default>false</default>
+                <label>Orthodontic Treatment, Adult</label>
+            </value>
+            <value>
+                <fullName>Orthodontic Treatment, Early</fullName>
+                <default>false</default>
+                <label>Orthodontic Treatment, Early</label>
+            </value>
+            <value>
+                <fullName>Osseous Surgery</fullName>
+                <default>false</default>
+                <label>Osseous Surgery</label>
+            </value>
+            <value>
+                <fullName>Panorex FMX</fullName>
+                <default>false</default>
+                <label>Panorex FMX</label>
+            </value>
+            <value>
+                <fullName>Pediatric Dental Exam</fullName>
+                <default>false</default>
+                <label>Pediatric Dental Exam</label>
+            </value>
+            <value>
+                <fullName>Periodontal Exam</fullName>
+                <default>false</default>
+                <label>Periodontal Exam</label>
+            </value>
+            <value>
+                <fullName>Periodontal Treatment</fullName>
+                <default>false</default>
+                <label>Periodontal Treatment</label>
+            </value>
+            <value>
+                <fullName>Porcelain Bridge</fullName>
+                <default>false</default>
+                <label>Porcelain Bridge</label>
+            </value>
+            <value>
+                <fullName>Porcelain Crown</fullName>
+                <default>false</default>
+                <label>Porcelain Crown</label>
+            </value>
+            <value>
+                <fullName>Porcelain Dental Braces</fullName>
+                <default>false</default>
+                <label>Porcelain Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Porcelain Dental Inlays</fullName>
+                <default>false</default>
+                <label>Porcelain Dental Inlays</label>
+            </value>
+            <value>
+                <fullName>Porcelain Dental Onlays</fullName>
+                <default>false</default>
+                <label>Porcelain Dental Onlays</label>
+            </value>
+            <value>
+                <fullName>Porcelain Fixed Bridges</fullName>
+                <default>false</default>
+                <label>Porcelain Fixed Bridges</label>
+            </value>
+            <value>
+                <fullName>Porcelain Veneers</fullName>
+                <default>false</default>
+                <label>Porcelain Veneers</label>
+            </value>
+            <value>
+                <fullName>Post-Operative Care</fullName>
+                <default>false</default>
+                <label>Post-Operative Care</label>
+            </value>
+            <value>
+                <fullName>Power Teeth Whitening</fullName>
+                <default>false</default>
+                <label>Power Teeth Whitening</label>
+            </value>
+            <value>
+                <fullName>Propel® Orthodontics</fullName>
+                <default>false</default>
+                <label>Propel® Orthodontics</label>
+            </value>
+            <value>
+                <fullName>Prophy Jet Air Polishing</fullName>
+                <default>false</default>
+                <label>Prophy Jet Air Polishing</label>
+            </value>
+            <value>
+                <fullName>Prosthetic</fullName>
+                <default>false</default>
+                <label>Prosthetic</label>
+            </value>
+            <value>
+                <fullName>Removable Appliances</fullName>
+                <default>false</default>
+                <label>Removable Appliances</label>
+            </value>
+            <value>
+                <fullName>Removal of Bone Spur</fullName>
+                <default>false</default>
+                <label>Removal of Bone Spur</label>
+            </value>
+            <value>
+                <fullName>Restoration of Dental Implants</fullName>
+                <default>false</default>
+                <label>Restoration of Dental Implants</label>
+            </value>
+            <value>
+                <fullName>Retainer Therapy</fullName>
+                <default>false</default>
+                <label>Retainer Therapy</label>
+            </value>
+            <value>
+                <fullName>Root Planing</fullName>
+                <default>false</default>
+                <label>Root Planing</label>
+            </value>
+            <value>
+                <fullName>Rotary Endodontics</fullName>
+                <default>false</default>
+                <label>Rotary Endodontics</label>
+            </value>
+            <value>
+                <fullName>Same-Day Dental Crowns</fullName>
+                <default>false</default>
+                <label>Same-Day Dental Crowns</label>
+            </value>
+            <value>
+                <fullName>Screening</fullName>
+                <default>false</default>
+                <label>Screening</label>
+            </value>
+            <value>
+                <fullName>Simple Tooth Extractions</fullName>
+                <default>false</default>
+                <label>Simple Tooth Extractions</label>
+            </value>
+            <value>
+                <fullName>Single Visit Root Canals</fullName>
+                <default>false</default>
+                <label>Single Visit Root Canals</label>
+            </value>
+            <value>
+                <fullName>Sinus Augmentation</fullName>
+                <default>false</default>
+                <label>Sinus Augmentation</label>
+            </value>
+            <value>
+                <fullName>Six Month Smiles</fullName>
+                <default>false</default>
+                <label>Six Month Smiles</label>
+            </value>
+            <value>
+                <fullName>Sleep Apnea Oral Appliances</fullName>
+                <default>false</default>
+                <label>Sleep Apnea Oral Appliances</label>
+            </value>
+            <value>
+                <fullName>Smile Makeovers</fullName>
+                <default>false</default>
+                <label>Smile Makeovers</label>
+            </value>
+            <value>
+                <fullName>Snap-On-Smile®</fullName>
+                <default>false</default>
+                <label>Snap-On-Smile®</label>
+            </value>
+            <value>
+                <fullName>Snoring Prevention</fullName>
+                <default>false</default>
+                <label>Snoring Prevention</label>
+            </value>
+            <value>
+                <fullName>Sterilization</fullName>
+                <default>false</default>
+                <label>Sterilization</label>
+            </value>
+            <value>
+                <fullName>Surgical Extractions</fullName>
+                <default>false</default>
+                <label>Surgical Extractions</label>
+            </value>
+            <value>
+                <fullName>Tooth-Borne Denture</fullName>
+                <default>false</default>
+                <label>Tooth-Borne Denture</label>
+            </value>
+            <value>
+                <fullName>Tooth-Conserving Dentistry</fullName>
+                <default>false</default>
+                <label>Tooth-Conserving Dentistry</label>
+            </value>
+            <value>
+                <fullName>Trèswhite Teeth Whitening</fullName>
+                <default>false</default>
+                <label>Trèswhite Teeth Whitening</label>
+            </value>
+            <value>
+                <fullName>Ultrasonic Dental Cleaning</fullName>
+                <default>false</default>
+                <label>Ultrasonic Dental Cleaning</label>
+            </value>
+            <value>
+                <fullName>Upper Dentures</fullName>
+                <default>false</default>
+                <label>Upper Dentures</label>
+            </value>
+            <value>
+                <fullName>VELscope® Vx System</fullName>
+                <default>false</default>
+                <label>VELscope® Vx System</label>
+            </value>
+            <value>
+                <fullName>ViziLite® Plus</fullName>
+                <default>false</default>
+                <label>ViziLite® Plus</label>
+            </value>
+            <value>
+                <fullName>Zoom!® Teeth Whitening</fullName>
+                <default>false</default>
+                <label>Zoom!® Teeth Whitening</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

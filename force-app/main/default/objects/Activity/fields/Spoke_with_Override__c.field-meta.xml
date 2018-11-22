@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spoke_with_Override__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Use to note that we have a recorded call on file and do not need the Spoke with- field completed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use to note that we have a recorded call on file and do not need the Spoke with- field completed, can only be used with calls made thru Five9. Recommended that you document who you spoke with in the comments.</inlineHelpText>
+    <label>Spoke with- Override</label>
+    <type>Checkbox</type>
+</CustomField>

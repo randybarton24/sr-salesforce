@@ -1,0 +1,22 @@
+<apex:page showHeader="false" showChat="false"
+standardController="Case" sidebar="false">
+<p>All Times are MST Time</p>
+<br />
+<br />
+<div style="page-break-after: always;">&nbsp;</div>
+<style>
+/* To Remove the Standard Calendar Section */
+.JQ_CA > .CA_l > div[data-type="sf"] {
+display:none;
+}
+/* To Remove the Web Calendar Section */
+.JQ_CA > .CA_l > div[data-type="web"] {
+display:none;
+}
+</style>
+<SLCA2:calendar namespace="SLCA2"
+ calendar=""
+ settings="[]"
+ urlparams="v=w&sb=0&l_ds=0&r_g=0&r_c=0&r_a=0">
+</SLCA2:calendar>
+</apex:page>

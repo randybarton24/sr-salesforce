@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Major_Accounts</fullName>
+    <columns>NAME</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>Target_Date__c</columns>
+    <columns>Total_Revenue_Credit__c</columns>
+    <columns>Revenue_Target__c</columns>
+    <columns>Revenue_To_Target__c</columns>
+    <columns>Revenue_Double_Counted__c</columns>
+    <columns>Team__c</columns>
+    <columns>Sub_Team__c</columns>
+    <columns>Ramped__c</columns>
+    <columns>Manager__c</columns>
+    <columns>VP__c</columns>
+    <columns>Sales_Rep_SR_Credit__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Owner_Role__c</field>
+        <operation>equals</operation>
+        <value>Major Accounts Rep,Manager Major Accounts</value>
+    </filters>
+    <filters>
+        <field>Target_Year__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>2017</value>
+    </filters>
+    <label>Major Accounts</label>
+</ListView>

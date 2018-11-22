@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Subcategory</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Add/Edit Locations</fullName>
+                <default>false</default>
+                <label>Add/Edit Locations</label>
+            </value>
+            <value>
+                <fullName>Add/Edit Providers</fullName>
+                <default>false</default>
+                <label>Add/Edit Providers</label>
+            </value>
+            <value>
+                <fullName>Need/Updating Contact Email</fullName>
+                <default>false</default>
+                <label>Need/Updating Contact Email</label>
+            </value>
+            <value>
+                <fullName>Need/Updating Password</fullName>
+                <default>false</default>
+                <label>Need/Updating Password</label>
+            </value>
+            <value>
+                <fullName>Portal Cards</fullName>
+                <default>false</default>
+                <label>Portal Cards</label>
+            </value>
+            <value>
+                <fullName>BAA</fullName>
+                <default>false</default>
+                <label>BAA</label>
+            </value>
+            <value>
+                <fullName>Deferrals/Incentives</fullName>
+                <default>false</default>
+                <label>Incentives</label>
+            </value>
+            <value>
+                <fullName>Gathering Contact Info</fullName>
+                <default>false</default>
+                <label>Gathering Contact Info</label>
+            </value>
+            <value>
+                <fullName>Updating Contact Info</fullName>
+                <default>false</default>
+                <label>Updating Contact Info</label>
+            </value>
+            <value>
+                <fullName>Campaign Setup</fullName>
+                <default>false</default>
+                <label>Campaign Setup</label>
+            </value>
+            <value>
+                <fullName>Creation</fullName>
+                <default>false</default>
+                <label>Creation</label>
+            </value>
+            <value>
+                <fullName>Groups</fullName>
+                <default>false</default>
+                <label>Groups</label>
+            </value>
+            <value>
+                <fullName>Activate Account</fullName>
+                <default>false</default>
+                <label>Activate Account</label>
+            </value>
+            <value>
+                <fullName>Customer Education</fullName>
+                <default>false</default>
+                <label>Customer Education</label>
+            </value>
+            <value>
+                <fullName>Line Provisioning</fullName>
+                <default>false</default>
+                <label>Line Provisioning</label>
+            </value>
+            <value>
+                <fullName>Requesting</fullName>
+                <default>false</default>
+                <label>Requesting</label>
+            </value>
+            <value>
+                <fullName>Set Permissions</fullName>
+                <default>false</default>
+                <label>Set Permissions</label>
+            </value>
+            <value>
+                <fullName>SR Huddle</fullName>
+                <default>false</default>
+                <label>SR Huddle</label>
+            </value>
+            <value>
+                <fullName>SR Notify</fullName>
+                <default>false</default>
+                <label>SR Notify</label>
+            </value>
+            <value>
+                <fullName>Sync Filter Adjustment</fullName>
+                <default>false</default>
+                <label>Sync Filter Adjustment</label>
+            </value>
+            <value>
+                <fullName>Template Adjustment</fullName>
+                <default>false</default>
+                <label>Template Adjustment</label>
+            </value>
+            <value>
+                <fullName>Updating</fullName>
+                <default>false</default>
+                <label>Updating</label>
+            </value>
+            <value>
+                <fullName>Platform Down</fullName>
+                <default>false</default>
+                <label>Platform Down</label>
+            </value>
+            <value>
+                <fullName>Admin Privileges</fullName>
+                <default>false</default>
+                <label>Admin Privileges</label>
+            </value>
+            <value>
+                <fullName>Database Connections</fullName>
+                <default>false</default>
+                <label>Database Connections</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>Sync Filters</fullName>
+                <default>false</default>
+                <label>Sync Filters</label>
+            </value>
+            <value>
+                <fullName>System Resources</fullName>
+                <default>false</default>
+                <label>System Resources</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Low CSAT/RSAT</fullName>
+                <default>false</default>
+                <label>Low CSAT/RSAT</label>
+            </value>
+            <value>
+                <fullName>Escalation</fullName>
+                <default>false</default>
+                <label>Escalation</label>
+            </value>
+            <value>
+                <fullName>Delivery/Timing</fullName>
+                <default>false</default>
+                <label>Delivery Settings</label>
+            </value>
+            <value>
+                <fullName>Templates</fullName>
+                <default>false</default>
+                <label>Templates</label>
+            </value>
+            <value>
+                <fullName>Language</fullName>
+                <default>false</default>
+                <label>Language</label>
+            </value>
+            <value>
+                <fullName>Old Birthday Template (multiple settings pages)</fullName>
+                <default>false</default>
+                <label>Old Birthday Template (multiple settings pages)</label>
+            </value>
+            <value>
+                <fullName>New Birthday Template (single settings page)</fullName>
+                <default>false</default>
+                <label>New Birthday Template (single settings page)</label>
+            </value>
+            <value>
+                <fullName>Settings</fullName>
+                <default>false</default>
+                <label>Settings</label>
+            </value>
+            <value>
+                <fullName>Template</fullName>
+                <default>false</default>
+                <label>Template</label>
+            </value>
+            <value>
+                <fullName>Criteria Group</fullName>
+                <default>false</default>
+                <label>Criteria Group</label>
+            </value>
+            <value>
+                <fullName>Custom Group</fullName>
+                <default>false</default>
+                <label>Custom Group</label>
+            </value>
+            <value>
+                <fullName>Group Template</fullName>
+                <default>false</default>
+                <label>Group Template</label>
+            </value>
+            <value>
+                <fullName>Incorrect Data</fullName>
+                <default>false</default>
+                <label>Incorrect Data</label>
+            </value>
+            <value>
+                <fullName>Filter Report Data</fullName>
+                <default>false</default>
+                <label>Filter Report Data</label>
+            </value>
+            <value>
+                <fullName>Detailed Report</fullName>
+                <default>false</default>
+                <label>Detailed Report</label>
+            </value>
+            <value>
+                <fullName>Editing Surveys</fullName>
+                <default>false</default>
+                <label>Editing Surveys</label>
+            </value>
+            <value>
+                <fullName>Social Post/Status</fullName>
+                <default>false</default>
+                <label>Social Post/Status</label>
+            </value>
+            <value>
+                <fullName>Account Settings</fullName>
+                <default>false</default>
+                <label>Account Settings</label>
+            </value>
+            <value>
+                <fullName>Need/Updating Personnel Username</fullName>
+                <default>false</default>
+                <label>Need/Updating Personnel Username</label>
+            </value>
+            <value>
+                <fullName>Need/Updating Admin/Sync Username</fullName>
+                <default>false</default>
+                <label>Need/Updating Admin/Sync Username</label>
+            </value>
+            <value>
+                <fullName>Delivery Issues</fullName>
+                <default>false</default>
+                <label>Delivery Issues</label>
+            </value>
+            <value>
+                <fullName>Patient Opt-In/Out</fullName>
+                <default>false</default>
+                <label>Patient Opt-In/Out</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Newsletters</controllingFieldValue>
+            <valueName>Campaign Setup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Newsletters</controllingFieldValue>
+            <valueName>Creation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Newsletters</controllingFieldValue>
+            <valueName>Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sync</controllingFieldValue>
+            <valueName>Admin Privileges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sync</controllingFieldValue>
+            <valueName>Database Connections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sync</controllingFieldValue>
+            <valueName>Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sync</controllingFieldValue>
+            <valueName>Sync Filters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sync</controllingFieldValue>
+            <valueName>System Resources</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Experience</controllingFieldValue>
+            <valueName>Low CSAT/RSAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Experience</controllingFieldValue>
+            <valueName>Escalation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recall</controllingFieldValue>
+            <controllingFieldValue>Reminders</controllingFieldValue>
+            <valueName>Delivery/Timing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recall</controllingFieldValue>
+            <controllingFieldValue>Reminders</controllingFieldValue>
+            <valueName>Templates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recall</controllingFieldValue>
+            <controllingFieldValue>Reminders</controllingFieldValue>
+            <valueName>Language</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recall</controllingFieldValue>
+            <controllingFieldValue>Reminders</controllingFieldValue>
+            <valueName>Delivery Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recall</controllingFieldValue>
+            <controllingFieldValue>Reminders</controllingFieldValue>
+            <valueName>Patient Opt-In/Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>None</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reports</controllingFieldValue>
+            <valueName>Incorrect Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reports</controllingFieldValue>
+            <valueName>Filter Report Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Networking</controllingFieldValue>
+            <valueName>Social Post/Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Networking</controllingFieldValue>
+            <valueName>Account Settings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information</controllingFieldValue>
+            <valueName>Add/Edit Locations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information</controllingFieldValue>
+            <valueName>Add/Edit Providers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information</controllingFieldValue>
+            <valueName>Need/Updating Contact Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information</controllingFieldValue>
+            <valueName>Need/Updating Password</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information</controllingFieldValue>
+            <valueName>Portal Cards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information</controllingFieldValue>
+            <valueName>Need/Updating Personnel Username</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information</controllingFieldValue>
+            <valueName>Need/Updating Admin/Sync Username</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SR Conversations</controllingFieldValue>
+            <valueName>Activate Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SR Conversations</controllingFieldValue>
+            <controllingFieldValue>SR Schedule</controllingFieldValue>
+            <valueName>Customer Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SR Conversations</controllingFieldValue>
+            <valueName>Line Provisioning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SR Conversations</controllingFieldValue>
+            <controllingFieldValue>SR Schedule</controllingFieldValue>
+            <controllingFieldValue>SR Smart Reviews</controllingFieldValue>
+            <valueName>Requesting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SR Conversations</controllingFieldValue>
+            <valueName>Set Permissions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SR Conversations</controllingFieldValue>
+            <valueName>SR Huddle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SR Conversations</controllingFieldValue>
+            <valueName>SR Notify</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Birthday Messages</controllingFieldValue>
+            <valueName>Old Birthday Template (multiple settings pages)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Birthday Messages</controllingFieldValue>
+            <valueName>New Birthday Template (single settings page)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SR Schedule</controllingFieldValue>
+            <valueName>Sync Filter Adjustment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SR Schedule</controllingFieldValue>
+            <valueName>Template Adjustment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract Information</controllingFieldValue>
+            <valueName>BAA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract Information</controllingFieldValue>
+            <valueName>Deferrals/Incentives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract Information</controllingFieldValue>
+            <valueName>Gathering Contact Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract Information</controllingFieldValue>
+            <valueName>Updating Contact Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SR Smart Reviews</controllingFieldValue>
+            <valueName>Updating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eyewear</controllingFieldValue>
+            <valueName>Settings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eyewear</controllingFieldValue>
+            <valueName>Template</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surveys</controllingFieldValue>
+            <valueName>Detailed Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surveys</controllingFieldValue>
+            <valueName>Editing Surveys</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Messaging</controllingFieldValue>
+            <valueName>Criteria Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Messaging</controllingFieldValue>
+            <valueName>Custom Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Messaging</controllingFieldValue>
+            <valueName>Group Template</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Error</controllingFieldValue>
+            <valueName>Platform Down</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

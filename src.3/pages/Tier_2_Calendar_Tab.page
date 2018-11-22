@@ -1,0 +1,55 @@
+<apex:page sideBar="false" showheader="false">
+<p> </p>
+<div style="position:relative;height:750px">
+
+
+<style>
+/* To Remove the Standard Calendar Section */
+
+.JQ_CA > .CA_l > div[data-type="sf"] {
+display:none;
+}
+/* To Remove the Web Calendar Section */
+.JQ_CA > .CA_l > div[data-type="web"] {
+display:none;
+}
+</style>
+
+    <apex:variable value="a2A0Z000000Knu2UAC" var="JanelMcD"/>
+    <apex:variable value="a2A0Z000000KoKpUAK" var="BrandiS"/>
+    <apex:variable value="a2A0Z000000KoKkUAK" var="DustinC"/>
+    <apex:variable value="a2A0Z000000KoKuUAK" var="JakeH"/>
+    <apex:variable value="a2A0Z000000KnskUAC" var="ChantalR"/>
+    
+    
+ <!--  Add a variable above and then add the name below to add Calendars to the list    -->
+
+<SLCA2:calendar date="" 
+
+    calendar="{!JanelMcD},{!BrandiS},{!DustinC},{!JakeH},{!ChantalR}"
+    createable=""
+    filter="{}" 
+    namespace=""
+    enabled="{'{!JanelMcD}':false}"
+    settings="[]"
+    view="week"
+    urlparams="l_ds=0&r_g=0&r_a=0&r_c=0&r_s=0"
+    userAdditionalSettings="{'startHourPeriod':'6','stopHourPeriod':'17','dayModeArea':'0_1','nonWorkingHoursDisplay':'hide','showWeekEnds':'5'}"
+    
+
+    readonly="{
+        cloneSharing    : true,
+        edit            : true, 
+        create          : true, 
+        detail          : true, 
+        move            : true, 
+        hover           : true, 
+/* To disable More button and right click options in Calendar use contextEvent as false */
+        contextEvent    : false, 
+        contextCalendar : true, 
+        contextArea     : true
+    }"
+></SLCA2:calendar>
+
+</div>
+</apex:page>

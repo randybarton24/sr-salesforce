@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+NOT(ISBLANK( Asset__c ))
+&amp;&amp;
+(
+				(
+								ISBLANK( Current_Price__c ) || 
+								ISBLANK( Current_Renewal_Date__c )
+				) 
+				||
+				(
+								ISBLANK( New_Next_Invoice_Date__c ) 
+								&amp;&amp;
+								(
+												Defer_Billing__c = true
+												||
+												Waive_Billing__c = true
+								)
+				)
+				||
+				(
+								(
+												ISNULL( Asset__r.Current_Product_Subscription__c ) ||
+												(
+																Asset__r.Current_Product_Subscription__r.RecurSoft__Unit_Price__c = 0 &amp;&amp;
+																ISPICKVAL( Asset__r.Product2.Family , &quot;SR Platform&quot; )
+												)
+								) 
+								&amp;&amp; 
+								Asset__r.Accounting_Data_Request_Completed__c &lt;=  NOW()-30 
+				)) ,
+				&quot;Needs Accounting Data&quot; ,
+				&quot;Complete&quot; 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Data</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

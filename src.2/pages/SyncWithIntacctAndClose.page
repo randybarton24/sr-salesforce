@@ -1,0 +1,89 @@
+<apex:page standardController="Opportunity" extensions="SyncWithIntacctAndClose_Controller" showHeader="false" sidebar="false" action="{!validateIsEligible}">
+
+    <apex:form id="formSync">
+    	<apex:pageBlock rendered="{!NOT($Permission.SyncWithIntacct)}">
+			<apex:pageMessage severity="Error" summary="You do not have permission to sync with Intacct"  escape="false">			
+			</apex:pageMessage>
+			<apex:pageBlock id="pbReturn">
+				<apex:commandButton value="Cancel" action="{!cancel}" status="waitingProcessSync"/>
+			</apex:pageBlock>
+		</apex:pageBlock>
+		<apex:pageBlock rendered="{!$Permission.SyncWithIntacct}">
+			<apex:pageMessages escape="false">
+			</apex:pageMessages>	
+			<apex:pageBlock id="pbCancel" rendered="{! NOT(isEligible)}">
+				<apex:commandButton value="Cancel"  action="{!cancel}" status="waitingProcessSync"/>
+			</apex:pageBlock>
+		
+			<apex:pageBlock id="pbSync" rendered="{!isEligible}">
+			 	<apex:pageBlockSection title="Billing Account" collapsible="false" columns="2"> 
+			 		<apex:inputField value="{!billingAccount.Name}" style="width:300px" />
+			 		<apex:outputField rendered="{! NOT(ISNULL(billingAccount.Parent.Name))}" value="{!billingAccount.Parent.Name}" label="Parent Account Name" style="width:300px"/> 			 		
+			 		<apex:outputField value="{!billingAccount.Subscriber_ID__c}" style="width:300px"/>
+			 		<apex:outputField rendered="{! NOT(ISNULL(billingAccount.Parent.Subscriber_ID__c))}" value="{!billingAccount.Parent.Subscriber_ID__c}" label="Parent Subscriber ID" style="width:300px"/>  
+			 		<apex:inputField value="{!billingAccount.BillingStreet}" style="width:300px"/>				 		
+			 		<apex:inputField value="{!billingAccount.ShippingStreet}" style="width:300px"/>				 		   
+			 		<apex:inputField value="{!billingAccount.BillingCity}" style="width:300px"/>
+			 		<apex:inputField value="{!billingAccount.ShippingCity}" style="width:300px"/><apex:inputField value="{!billingAccount.BillingStateCode}" label="Billing State" style="width:300px"/>   
+		            <apex:inputField value="{!billingAccount.ShippingStateCode}" label="Shipping State" style="width:300px"/> 		            
+		            <apex:inputField value="{!billingAccount.BillingCountryCode}" label="Billing Country" style="width:300px"/>	           	
+		      		<apex:inputField value="{!billingAccount.ShippingCountryCode}" label="Shipping Country" style="width:300px"/>	
+		      		<apex:inputField value="{!billingAccount.BillingPostalCode}" label="Billing Postal Code" style="width:300px"/>		      		
+		            <apex:inputField value="{!billingAccount.ShippingPostalCode}" label="Shipping Postal Code" style="width:300px"/>		                      	 
+		            
+		            
+		        </apex:pageBlockSection>
+
+		        <apex:pageBlockSection title="Billing Contact" collapsible="false" columns="2" >	
+		        	<apex:inputField value="{!billingContact.FirstName}" style="width:300px" />
+		        	<apex:inputField value="{!billingContact.MailingStreet}" style="width:300px"/>		        	
+		        	<apex:inputField value="{!billingContact.LastName}" style="width:300px" />
+		        	<apex:inputField value="{!billingContact.MailingCity}" style="width:300px"/>
+		            <apex:inputField value="{!billingContact.Email}" style="width:300px"/>
+		            <apex:inputField value="{!billingContact.MailingStateCode}" label="Mailing State" style="width:300px"/>		            
+		            <apex:inputField value="{!billingContact.Phone}" style="width:300px"/>
+		            <apex:inputField value="{!billingContact.MailingCountryCode}" label="Mailing Country" style="width:300px"/>		            
+		            <apex:param value=""></apex:param>
+		            <apex:inputField value="{!billingContact.MailingPostalCode}" label="Mailing Postal Code" style="width:300px"/>		            
+		        </apex:pageBlockSection>
+
+		        <apex:pageBlockSection title="Shipping Contact" collapsible="false" columns="2" >	
+		        	<apex:inputField value="{!shippingContact.FirstName}" style="width:300px" />
+		        	<apex:inputField value="{!shippingContact.MailingStreet}" style="width:300px"/>			        
+		        	<apex:inputField value="{!shippingContact.LastName}" style="width:300px" />
+		        	<apex:inputField value="{!shippingContact.MailingCity}" style="width:300px"/>
+		             <apex:inputField value="{!shippingContact.Email}" style="width:300px"/>
+		        	<apex:inputField value="{!shippingContact.MailingStateCode}" label="Mailing State" style="width:300px"/> 
+		            <apex:inputField value="{!shippingContact.Phone}" style="width:300px"/>
+		            <apex:inputField value="{!shippingContact.MailingCountryCode}" label="Mailing Country" style="width:300px"/>
+		            <apex:param value=""></apex:param>
+		            <apex:inputField value="{!shippingContact.MailingPostalCode}" label="Mailing Postal Code" style="width:300px"/>
+		                  
+		        </apex:pageBlockSection>
+		        
+		        <apex:pageBlockButtons location="top">
+		        	<div id="waitingGifDiv" style="padding-left:150px; display: none">
+                        <apex:image id="WaitingGif" url="/img/loading.gif" width="25" height="25" style="float:center-right;"/>
+                         Processing, Please wait...
+                    </div>	
+		        	<div id="buttonsDiv">
+		        		<apex:commandButton value="Update Account & Contact Data" action="{!updateAccountAndContactData}" onclick="processing();" rerender="formSync" />
+		        		<apex:commandButton value="Sync with Intacct & Close" action="{!syncWithIntacctAndClose}" rerender="formSync" onclick="processing();" />
+			       		<apex:commandButton value="Cancel" onclick="processing();" action="{!cancel}" rerender="formSync"/>
+			       	</div>		        		
+
+			       					    
+			    </apex:pageBlockButtons>
+		    </apex:pageBlock>
+		 </apex:pageBlock>
+		
+	    <script>
+	    	function processing()
+	    	{
+	    		document.getElementById("buttonsDiv").style.display = "none"; 
+	    		document.getElementById("waitingGifDiv").style.display = "block"; 
+	    	}
+    	</script>   	
+    </apex:form>
+
+</apex:page>

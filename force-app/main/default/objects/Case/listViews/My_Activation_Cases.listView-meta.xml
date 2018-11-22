@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Activation_Cases</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Subscriber_ID__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Training_Scheduled_For__c</columns>
+    <columns>Sync_Install_Scheduled_For__c</columns>
+    <columns>Custom_Settings_Scheduled_For__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Activation</value>
+    </filters>
+    <filters>
+        <field>CASES.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>My Activation Cases</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

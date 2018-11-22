@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nov_Sales</fullName>
+    <columns>NAME</columns>
+    <columns>Target__c</columns>
+    <columns>Actual_Credits__c</columns>
+    <columns>Owner__c</columns>
+    <columns>Sub_Team__c</columns>
+    <columns>Target_Month__c</columns>
+    <columns>Target_Year__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Target_Date__c</columns>
+    <columns>Owner_Profile__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Target_Month__c</field>
+        <operation>equals</operation>
+        <value>March</value>
+    </filters>
+    <filters>
+        <field>Target_Year__c</field>
+        <operation>equals</operation>
+        <value>2016</value>
+    </filters>
+    <label>Sale Targets This Month</label>
+</ListView>

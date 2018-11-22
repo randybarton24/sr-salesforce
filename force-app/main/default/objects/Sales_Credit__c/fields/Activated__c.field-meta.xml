@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activated__c</fullName>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK(Opportunity__r.Admin_FMS__c)) &amp;&amp; 
+NOT(ISNULL(Opportunity__r.Admin_FMS__c))</formula>
+    <label>Activated</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

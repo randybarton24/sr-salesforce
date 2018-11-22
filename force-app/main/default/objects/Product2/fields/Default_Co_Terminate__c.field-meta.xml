@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Co_Terminate__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Sets the default for co-termination on the related Opportunity Products.  Can be overridden at the Opportunity Product level.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Sets the default for co-termination on the related Opportunity Products.  Can be overridden at the Opportunity Product level.</inlineHelpText>
+    <label>Default Co-Terminate</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

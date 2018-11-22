@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROE_Rollup_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ADR_Set__c = true &amp;&amp; ISBLANK( Date_Completed_New__c ),  SR_Date_Created__c ,  Date_Completed_New__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ROE Rollup Date</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

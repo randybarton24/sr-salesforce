@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SR_Timezone__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(tz__Timezone__c,
+&quot;HAST&quot;,&quot;Pacific/Honolulu&quot;,
+&quot;HADT&quot;,&quot;Pacific/Honolulu&quot;,
+&quot;PST&quot;,
+	IF(BillingCountry=&quot;Canada&quot;,&quot;America/Vancouver&quot;,&quot;America/Los_Angeles&quot;),
+&quot;PDT&quot;,
+	IF(BillingCountry=&quot;Canada&quot;,&quot;America/Vancouver&quot;,&quot;America/Los_Angeles&quot;),
+&quot;MST&quot;,
+	IF(BillingCountry=&quot;Canada&quot;,&quot;America/Edmonton&quot;,&quot;America/Denver&quot;),
+&quot;MDT&quot;,
+	IF(BillingCountry=&quot;Canada&quot;,&quot;America/Edmonton&quot;,&quot;America/Denver&quot;),
+&quot;CST&quot;,
+	IF(BillingCountry=&quot;Canada&quot;,&quot;America/Winnipeg&quot;,&quot;America/Chicago&quot;),
+&quot;CDT&quot;,
+	IF(BillingCountry=&quot;Canada&quot;,&quot;America/Winnipeg&quot;,&quot;America/Chicago&quot;),
+&quot;EST&quot;,
+	IF(BillingCountry=&quot;Canada&quot;,&quot;America/Toronto&quot;,
+		IF(BillingCountry=&quot;Australia&quot;,&quot;America/Toronto&quot;,&quot;America/New_York&quot;)),
+&quot;EDT&quot;,
+	IF(BillingCountry=&quot;Canada&quot;,&quot;America/Toronto&quot;,
+		IF(BillingCountry=&quot;Australia&quot;,&quot;America/Toronto&quot;,&quot;America/New_York&quot;)),
+&quot;ADT&quot;,
+	IF(BillingCountry=&quot;Canada&quot;,&quot;America/Halifax&quot;,
+		IF(BillingCountry=&quot;Bermuda&quot;,&quot;Atlantic/Bermuda&quot;,
+			IF(BillingState=&quot;Puerto Rico&quot;,&quot;America/Puerto_Rico&quot;,
+				&quot;America/Anchorage&quot;))),
+&quot;AST&quot;,
+	IF(BillingCountry=&quot;Canada&quot;,&quot;America/Halifax&quot;,
+		IF(BillingCountry=&quot;Bermuda&quot;,&quot;Atlantic/Bermuda&quot;,
+			IF(BillingState=&quot;Puerto Rico&quot;,&quot;America/Puerto_Rico&quot;,
+				&quot;America/Anchorage&quot;))),
+&quot;NST&quot;,&quot;America/St_Johns&quot;,
+&quot;NDT&quot;,&quot;America/St_Johns&quot;,
+&quot;GMT&quot;,&quot;Europe/London&quot;,
+&quot;SAST&quot;,&quot;Africa/Johannesburg&quot;,
+&quot;GST&quot;,&quot;Asia/Dubai&quot;,
+&quot;ICT&quot;,&quot;Asia/Ho_Chi_Minh&quot;,
+&quot;ChST&quot;,&quot;Pacific/Guam&quot;,
+&quot;NSW&quot;,&quot;Australia/NSW&quot;,
+&quot;ACT&quot;,&quot;Australia/ACT&quot;,
+&quot;America/Denver&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Timezone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

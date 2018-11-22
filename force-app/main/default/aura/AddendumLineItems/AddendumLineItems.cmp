@@ -1,0 +1,44 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForRecordHome,force:hasRecordId" access="GLOBAL" description="AddendumLineItems" controller="AddendumLineItemsApxc">        
+    <aura:attribute name="isOpen" type="Boolean" default="false"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="statusAddendum" type="String"/>
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="childRecord" type="Object"/>    
+    <aura:attribute name="openAddendumLineItems" type="Addendum_Line_Item__c[]" />
+    <aura:attribute name="key" type="String" default="0"/>    
+    <aura:handler event="force:refreshView" value="{!this}" action="{!c.doInit}" />
+
+    <force:recordData aura:id="recordLoaderChild"
+          recordId="{!v.recordId}"
+          fields="Id,Price_Book__c,Status__c"
+          targetFields="{!v.childRecord}"
+          targetError="{!v.recordError}"
+          recordUpdated="{!c.doInit}"
+          mode = "VIEW"
+          />
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <div style="float:right;padding-right:20px">
+                        <c:AddendumLineItemsButton addId ="{!v.recordId}" pb="{!v.childRecord.Price_Book__c}" statusAddendum="{!v.childRecord.Status__c}" existingAddendumLineItems="{!v.openAddendumLineItems}" />
+                    </div>
+                </td>
+                <td>
+                    <div style="float:left">
+                        <c:AddendumLineItemsButtonAddRemove statusAddendum="{!v.childRecord.Status__c}" addId ="{!v.recordId}"/>
+                    </div>
+                </td>
+            </tr>            
+        </table>                
+    </div>
+    <br></br>
+    <div class="slds-m-horizontal--medium slds-m-top--small">    
+        <aura:if isTrue="{!v.openAddendumLineItems.length > 0}" >
+            <lightning:tabset variant="scoped" aura:id="tabs" selectedTabId="{!v.key}">    <aura:iteration items="{!v.openAddendumLineItems}" indexVar="i" var="addLineItem">                   
+                    <c:AddendumLineItemsDetail numberTab="{! 'tabId' + i}"  addendumLineItem ="{!addLineItem}" />                
+                </aura:iteration>               
+            </lightning:tabset>
+        </aura:if>
+    </div>
+</aura:component>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_del__c</fullName>
+    <description>Billing Services Request description for the case.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Billing Services description of the Case Request.</inlineHelpText>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing</fullName>
+                <default>true</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Sync</fullName>
+                <default>false</default>
+                <label>Sync</label>
+            </value>
+            <value>
+                <fullName>Agreement &amp; Renewals</fullName>
+                <default>false</default>
+                <label>Agreement &amp; Renewals</label>
+            </value>
+            <value>
+                <fullName>How-To</fullName>
+                <default>false</default>
+                <label>How-To</label>
+            </value>
+            <value>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+                <label>Data Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

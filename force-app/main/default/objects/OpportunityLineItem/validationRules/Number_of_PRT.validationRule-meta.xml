@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_PRT</fullName>
+    <active>true</active>
+    <errorConditionFormula>Opportunity.RecordType.Name != &quot;Add-On Business&quot; &amp;&amp;
+Product2.ProductCode = &quot;1002&quot; &amp;&amp; 
+(Quantity + 
+Opportunity.Pricebook2.Number_of_PRT_Included__c) 
+!= Opportunity.Number_of_PRT__c</errorConditionFormula>
+    <errorMessage>Please add Patient Reach Tablet licenses by changing the Number of PRT field on the Opportunity</errorMessage>
+</ValidationRule>

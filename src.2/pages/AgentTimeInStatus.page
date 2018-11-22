@@ -1,0 +1,310 @@
+<apex:page sidebar="false" showheader="false" showChat="false" showQuickActionVfHeader="false" doctype="html-5.0" cache="false">
+    <apex:includescript value="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js" />
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources,'js/ConnectsIntegrationAPI.min.js')}"/>
+    
+    <style> body { overflow:hidden;} </style>
+    
+    <!-- Settings for Toolbar in Call Center Definition -->
+    <!-- key: 'enabled'; value: 'true'/'false'; enables or disables the toolbar -->
+    <!-- key: 'showLogoutTime'; value: 'true'/'false'; show or hide time in logout state -->
+    <!-- key: 'updateInterval'; value: number; the interval at which the times are updated -->
+
+    <script>
+        // List of reason codes and labels
+        var reasonCodes = {};
+        // List of states for each channel
+        var channelStates = {};
+        // List of timers for each channel
+        var channelTimers = {};
+        
+        // Is the toolbar enabled (displaying channels/states)
+        var bEnabled = true;
+        // Should time in 'logout' state be displayed too
+        var bShowLogoutTime = true;
+        // Channel table line height
+        var lineHeight = 19;
+        // Update interval at which the timers display is refreshed
+        var updateInterval = 100;
+        
+        // Starts a timer for a state of a channel
+        function startStateTimer(channel) {
+            if (!channelTimers.hasOwnProperty(channel)) {
+                channelTimers[channel] = {};
+            }
+            
+            channelTimers[channel].clock = 0;
+            channelTimers[channel].interval = setInterval(updateTime, updateInterval);
+        }
+        
+        // Refreshes the display of state times in the channels table
+        function updateTime() {
+            for (var key in channelTimers) {
+                if (channelTimers.hasOwnProperty(key)) {
+                    // If logout times should not be displayed, clear the display of this channel
+                    if (channelStates[key].state === "LOGOUT" && !bShowLogoutTime) {
+                        $("#" + key + "_ChannelCell").text("");
+                        $("#" + key + "_StateCell").text("");
+                        $("#" + key + "_ReasonCell").text("");
+                        $("#" + key + "_TimeCell").text("");
+                        
+                        $("#" + key + "_TableRow").hide();
+                        continue;
+                    }
+                    
+                    // Update the channel time
+                    channelTimers[key].clock = Date.now() - Date.parse(channelStates[key].time);
+                    var reasonText = getReasonText(channelStates[key].state, channelStates[key].reason);
+                    
+                    // If there's a reason, put it in ()
+                    if (reasonText !== undefined && reasonText !== "") {
+                        reasonText = " (" + reasonText + ")";
+                    }
+                    
+                    // Update the channel table cells
+                    $("#" + key + "_ChannelCell").text(getChannelName(key) + ": ");
+                    $("#" + key + "_StateCell").text(getAgentStateText(channelStates[key].state));
+                    $("#" + key + "_ReasonCell").text(reasonText);
+                    $("#" + key + "_TimeCell").text(render(key));
+                    $("#" + key + "_TableRow").show();
+                }
+            }
+        }
+        
+        // Renders a time string from the time value
+        function render(channel) {
+            if (channelTimers[channel].clock === undefined || isNaN(channelTimers[channel].clock)) {
+                return "";
+            }
+            
+            var time = Math.floor(channelTimers[channel].clock / 1000);
+
+            var sec = time % 60;
+            var min = ((time - sec) / 60) % 60;
+            var hour = ((time - sec) / 60 - min) / 60;
+
+            if (hour > 0) {
+                return " (" + ('0' + hour).slice(-2) + ':' + ('0' + min).slice(-2) + ")";
+            } else {
+                return " (" + ('0' + min).slice(-2) + ':' + ('0' + sec).slice(-2) + ")";
+            }
+        }
+        
+        // Returns a properly formated state text for a channel state
+        function getAgentStateText(agentState) {
+            switch (agentState) {
+                case "READY":
+                    return "ready";
+                case "NOTREADY":
+                    return "not ready";
+                case "LOGOUT":
+                    return "logout";
+                default:
+                    if (agentState === undefined) {
+                        return "";
+                    }
+                    
+                    return agentState.toLowerCase();
+            }
+        }
+        
+        // Returns a properly formated name for a channel
+        function getChannelName(channelName) {
+            switch (channelName) {
+                case "OVERALL":
+                    return "Overall";
+                case "VOICE":
+                    return "Voice";
+                case "TICKET":
+                    return "E-Mail";
+                case "CHAT":
+                    return "Chat";
+                default:
+                    return channelName.charAt(0).toUpperCase() + channelName.slice(1).toLowerCase();
+            }
+        }
+        
+        // Returns the reason label for a reason code
+        function getReasonText(reasonType, reasonCode) {
+            if (reasonCodes[reasonType] !== undefined && reasonCodes[reasonType][reasonCode] !== undefined) {
+                return reasonCodes[reasonType][reasonCode];
+            }
+            
+            return "";
+        }
+        
+        // Handles agent state changes coming in from the Connects Integration API
+        function onAgentStateChange(event) {
+            // Only do something if the display of times is enabled
+            if (bEnabled) {
+                // Hide the general logout dummy row
+                $("#GeneralLogout_TableRow").hide();
+                
+                // If the channel table has no entry for this channel yet, create one
+                if (!channelStates.hasOwnProperty(event.channelType)) {
+                    channelStates[event.channelType] = {};
+                    
+                    $("#agentStatesTable").append("<tr id=\"" + event.channelType + "_TableRow\"/>");
+                    $("#" + event.channelType + "_TableRow").append("<td id=\"" + event.channelType + "_ChannelCell\">");
+                    $("#" + event.channelType + "_TableRow").append("<td id=\"" + event.channelType + "_StateCell\">");
+                    $("#" + event.channelType + "_TableRow").append("<td id=\"" + event.channelType + "_ReasonCell\">");
+                    $("#" + event.channelType + "_TableRow").append("<td id=\"" + event.channelType + "_TimeCell\">");
+                    
+                    channelStates[event.channelType].reasonCodesRetrieved = false;
+                }
+                
+                // If the reason codes haven't been retrieved yet, do it now
+                if (event.newState.State !== "LOGOUT" && !channelStates[event.channelType].reasonCodesRetrieved) {
+                    // Get reason code list for not ready
+                    ConnectsIntegrationAPI.getReasonCodeList(ConnectsIntegrationAPI.REASON.TYPE.NOTREADY, 
+                        function (response) {
+                            var reasonData = JSON.parse(response.data);
+                            reasonCodes["NOTREADY"] = {};
+                            
+                            for (var key in reasonData) {
+                                if (reasonData.hasOwnProperty(key)) {
+                                    reasonCodes["NOTREADY"][reasonData[key].ReasonCode] = reasonData[key].Label;
+                                }
+                            }
+                            
+                            // Get reason code list for logout
+                            ConnectsIntegrationAPI.getReasonCodeList(ConnectsIntegrationAPI.REASON.TYPE.LOGOUT, 
+                                function (response) {
+                                    var reasonData = JSON.parse(response.data);
+                                    reasonCodes["LOGOUT"] = {};
+                                    
+                                    for (var key in reasonData) {
+                                        if (reasonData.hasOwnProperty(key)) {
+                                            reasonCodes["LOGOUT"][reasonData[key].ReasonCode] = reasonData[key].Label;
+                                        }
+                                    }
+                                    
+                                    channelStates[event.channelType].reasonCodesRetrieved = true;
+                                    setToolbarHeight();
+                                }
+                            );
+                        }
+                    );
+                }
+                
+                
+                var channelStateChanged = channelStates[event.channelType].state !== event.newState.State;
+                channelStates[event.channelType].state = event.newState.State;
+                channelStates[event.channelType].reason = event.newState.ReasonCode;
+                channelStates[event.channelType].time = event.newState.StateChangeTime;
+                
+                // If the channel state has changed, (re)start the timer
+                if (channelStateChanged) {
+                    startStateTimer(event.channelType);
+                }
+                
+                // Recalculate the toolbar height
+                setToolbarHeight();
+            }
+        }
+        
+        // Sets the toolbar height according to the contents of the channel table
+        function setToolbarHeight() {
+            // Calculate how many channels are there
+            var itemCount = 0;
+            for (var key in channelStates) {
+                if (channelStates.hasOwnProperty(key)) {
+                    if (channelStates[key].state !== "LOGOUT" || bShowLogoutTime) {
+                        itemCount++;
+                    }
+                }
+            }
+            
+            // Set the height for each channel row
+            for (var key in channelStates) {
+                if (channelStates.hasOwnProperty(key)) {
+                    $("#" + key + "_TableRow").attr('style','min-height:' + (100 / itemCount) + '%;');
+                }
+            }
+            
+            var height = $("#agentStateDiv").outerHeight(true);
+            
+            // AgentStateDiv height is not always correct, so we set a minimum height
+            if (height < itemCount * lineHeight) {
+                height = itemCount * lineHeight;
+            }
+            
+            // Set the height of the toolbar container
+            ConnectsIntegrationAPI.setCustomToolbarSize(ConnectsIntegrationAPI.GENERAL.TOOLBAR_POSITION.TOP, height);
+        };
+        
+        // Parses the settings from the Call Center Definition
+        var parseCustomSettings = function (settings) {
+            // Parse the custom settings
+            try {
+                var i, key, value;
+                var pairs = settings.split(";");
+                for (i = 0; i < pairs.length; i++) {
+                    key = pairs[i].split("=")[0];
+                    value = pairs[i].split("=")[1];
+    
+                    if (key && value) {
+                        if (key === "showLogoutTime") {
+                            bShowLogoutTime = (value === 'true');
+                        } else if (key === "lineHeight") {
+                            lineHeight = value;
+                        } else if (key === "updateInterval") {
+                            updateInterval = value;
+                        } else if (key === "enabled") {
+                            bEnabled = (value === 'true');
+                        }
+                    }
+                }
+            }
+            catch (e) {
+                ConnectsIntegrationAPI.writeLogError("AgentTimeInState: Exception while parsing custom settings: " + e);
+                showError("Error when loading component", "AgentTimeInState: Exception while parsing custom settings: " + e);
+            }
+        };
+        
+        ConnectsIntegrationAPI.onAgentStateChange = function (event) {
+            onAgentStateChange(event);
+        };
+        
+        // Startup function
+        $(function() {
+            if (channelStates === undefined) {
+                channelStates = {};
+            }
+            
+            // Create a dummy 'logout' row to display while the agent is logged out and we don't have any info about the channels yet
+            $("#agentStatesTable").append("<tr id=\"GeneralLogout_TableRow\"/>");
+            $("#GeneralLogout_TableRow").append("<td id=\"GeneralLogout_ChannelCell\">");
+            $("#GeneralLogout_TableRow").append("<td id=\"GeneralLogout_StateCell\">");
+            $("#GeneralLogout_ChannelCell").text("All Channels:");
+            $("#GeneralLogout_StateCell").text("logout");
+            $("#GeneralLogout_TableRow").hide();
+            
+            ConnectsIntegrationAPI.getCustomSettings("AgentTimeInState", function (response) {
+                if (response.success) {
+                    parseCustomSettings(response.data);
+                    
+                    // If the toolbar is enabled and we're supposed to show logout times, show the dummy channel row
+                    if (bEnabled && bShowLogoutTime) {
+                        $("#GeneralLogout_TableRow").show();
+                    }
+                }
+                else {
+                    ConnectsIntegrationAPI.writeLogDebug("Get custom settings failed : " + response.error);
+                    // If we don't have a configuration, show the dummy channel row (bShowLogoutTime is true by default)
+                    $("#GeneralLogout_TableRow").show();
+                }
+                
+                // Recalculate the toolbar height
+                setToolbarHeight();
+            });
+        });
+    </script>
+    
+    <div id="container">
+        <div id="content">
+            <div id="agentStateDiv" style="height:100%;">
+                <table id="agentStatesTable" style="height:100%"/>
+            </div>
+        </div>
+    </div>
+</apex:page>

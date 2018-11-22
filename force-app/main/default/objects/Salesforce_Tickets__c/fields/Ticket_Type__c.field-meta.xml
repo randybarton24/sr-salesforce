@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ticket_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select which best meets your needs</inlineHelpText>
+    <label>Ticket Type</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Ticket_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bug</fullName>
+                <default>false</default>
+                <label>Bug</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Enhancement Request</fullName>
+                <default>false</default>
+                <label>Enhancement Request</label>
+            </value>
+            <value>
+                <fullName>Needs Subscriber ID</fullName>
+                <default>false</default>
+                <label>Needs Subscriber ID</label>
+            </value>
+            <value>
+                <fullName>Mark as Closed Won</fullName>
+                <default>false</default>
+                <label>Mark as Closed Won</label>
+            </value>
+            <value>
+                <fullName>New User</fullName>
+                <default>false</default>
+                <label>New User</label>
+            </value>
+            <value>
+                <fullName>Permissions</fullName>
+                <default>false</default>
+                <label>Permissions</label>
+            </value>
+            <value>
+                <fullName>Report/Dashboard Help</fullName>
+                <default>false</default>
+                <label>Report/Dashboard Help</label>
+            </value>
+            <value>
+                <fullName>Salesforce Error</fullName>
+                <default>false</default>
+                <label>Salesforce Error</label>
+            </value>
+            <value>
+                <fullName>Update Needed</fullName>
+                <default>false</default>
+                <label>Update Needed</label>
+            </value>
+            <value>
+                <fullName>List</fullName>
+                <default>false</default>
+                <label>List</label>
+            </value>
+            <value>
+                <fullName>Insidesales.com</fullName>
+                <default>false</default>
+                <label>Insidesales.com</label>
+            </value>
+            <value>
+                <fullName>CalendarAnything</fullName>
+                <default>false</default>
+                <label>CalendarAnything</label>
+            </value>
+            <value>
+                <fullName>MRFMS Update</fullName>
+                <default>false</default>
+                <label>MRFMS Update</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Fix</controllingFieldValue>
+            <valueName>Bug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fix</controllingFieldValue>
+            <valueName>Salesforce Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>List Upload</controllingFieldValue>
+            <valueName>List</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Feature</controllingFieldValue>
+            <valueName>Enhancement Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Update/Help</controllingFieldValue>
+            <valueName>Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Update/Help</controllingFieldValue>
+            <valueName>Needs Subscriber ID</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Update/Help</controllingFieldValue>
+            <valueName>Mark as Closed Won</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Update/Help</controllingFieldValue>
+            <valueName>New User</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Update/Help</controllingFieldValue>
+            <valueName>Permissions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Update/Help</controllingFieldValue>
+            <valueName>Report/Dashboard Help</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Update/Help</controllingFieldValue>
+            <valueName>Update Needed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Update/Help</controllingFieldValue>
+            <valueName>Insidesales.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Update/Help</controllingFieldValue>
+            <valueName>CalendarAnything</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Update/Help</controllingFieldValue>
+            <valueName>MRFMS Update</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

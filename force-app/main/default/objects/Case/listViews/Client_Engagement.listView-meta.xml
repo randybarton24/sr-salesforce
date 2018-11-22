@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Engagement</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>SR_Date_Created__c</columns>
+    <columns>Subscriber_ID__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>Client Engagement</label>
+    <queue>Client_Engagement</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

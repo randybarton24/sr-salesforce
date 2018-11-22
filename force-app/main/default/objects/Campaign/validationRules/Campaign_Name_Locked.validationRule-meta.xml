@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Name_Locked</fullName>
+    <active>true</active>
+    <errorConditionFormula>CI_From_Task__c &amp;&amp;
+ISCHANGED( Name ) &amp;&amp;
+ $User.Email != &quot;randy@solutionreach.com&quot;</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>The Campaign Name is locked for this Campaign</errorMessage>
+</ValidationRule>

@@ -1,0 +1,2842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Approval_Details__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( PricebookEntry.Product2.RecurSoft__Billing_Frequency__c , &quot;Monthly&quot; ) ,
+PricebookEntry.Product2.Name &amp; &quot;: &lt;br&gt;&quot;  &amp;
+			&quot;$&quot; &amp; TEXT(UnitPrice) &amp; &quot;(&quot; &amp; TEXT(ROUND(Price_Discount__c, 4) * 100) &amp; &quot;% Discount) &lt;br&gt;&quot;  &amp;
+IF(Number_of_Free_Months__c &gt; 0 , TEXT(Number_of_Free_Months__c) &amp; &quot; Orientation Months at $&quot; &amp; TEXT(Promotional_Price__c) &amp; &quot; &lt;br&gt;&quot; , &quot;&quot; ) &amp;
+IF(ISBLANK(TEXT(Trial__c)), &quot;0&quot; , TEXT(Trial__c)) &amp; &quot; Day Trial &lt;br&gt;&quot;  &amp;
+			IF( PricebookEntry.Product2.Default_Contract_Term__c = 1 , &quot;1&quot; , TEXT(Opportunity.RecurSoft__Initial_Contract_Term__c)) &amp; &quot; Month Term&quot;,
+
+PricebookEntry.Product2.Name &amp; &quot;: &lt;br&gt;&quot;  &amp;
+			&quot;$&quot; &amp; TEXT(UnitPrice) &amp; 
+&quot;(&quot; &amp; TEXT(ROUND(Price_Discount__c, 4) * 100) &amp; &quot;% Discount)&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Approval Details</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Level_Required_Free_Months__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Opportunity.Owner.Approval_Exempt__c = true , 0 ,
+	IF( Number_of_Free_Months__c &gt; 
+		MAX(Approved_Free_Months__c, PricebookEntry.Level_2_Limit_Free_Months__c ) , 3 , 
+		IF( Number_of_Free_Months__c &gt; 
+			MAX(Approved_Free_Months__c, PricebookEntry.Level_1_Limit_Free_Months__c ) , 2 , 
+			IF( Number_of_Free_Months__c &gt; 
+				MAX(Approved_Free_Months__c, PricebookEntry.Level_0_Limit_Free_Months__c ) , 1 , 0
+			)
+		)
+	)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Approval Level Required - Free Months</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Level_Required_Price_Discount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Opportunity.Owner.Approval_Exempt__c = true , 0 ,
+	IF( List_Price_Override__c &gt; 0 ,
+		IF( UnitPrice &gt;= /*If the price discount is less than level 1 threshold, 0 Approval Level*/ 
+			(List_Price_Override__c - 
+				(List_Price_Override__c * 
+					MAX( Approved_Price_Discount__c,PricebookEntry.Level_0_Limit_Price_Discount__c )
+				)
+			) , 0 ,
+			IF( UnitPrice &gt;= 
+				(List_Price_Override__c - 
+					(List_Price_Override__c * 
+						MAX( Approved_Price_Discount__c, PricebookEntry.Level_1_Limit_Price_Discount__c )
+					)
+				) , 1 ,
+				IF( UnitPrice &gt;= 
+					(List_Price_Override__c - 
+						(List_Price_Override__c * 
+							MAX( Approved_Price_Discount__c, PricebookEntry.Level_2_Limit_Price_Discount__c )
+						)
+					) , 2 , 3
+				)
+			)
+		)  ,
+		IF( UnitPrice &gt;= 
+			(PricebookEntry.UnitPrice - 
+				(PricebookEntry.UnitPrice * 
+					MAX( Approved_Price_Discount__c, PricebookEntry.Level_0_Limit_Price_Discount__c )
+				)
+			) , 0 ,
+			IF( UnitPrice &gt;= 
+				(PricebookEntry.UnitPrice - 
+					(PricebookEntry.UnitPrice * 
+						MAX( Approved_Price_Discount__c, PricebookEntry.Level_1_Limit_Price_Discount__c )
+					)
+				) , 1 ,
+				IF( UnitPrice &gt;= 
+					(PricebookEntry.UnitPrice - 
+						(PricebookEntry.UnitPrice * 
+							MAX( Approved_Price_Discount__c, PricebookEntry.Level_2_Limit_Price_Discount__c )
+						)
+					) , 2,  3
+				)
+			)
+		)
+	)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Approval Level Required - Price Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Level_Required_Term1__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Level Required - Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Level_Required_Term__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Opportunity.Owner.Approval_Exempt__c = true , 0 ,
+	IF( Opportunity.RecordType.Name = &quot;New Practice Business&quot; , /*The term is usually set to coterminate in other record types*/
+		IF( Opportunity.RecurSoft__Initial_Contract_Term__c  &gt;= 
+			MIN( Approved_Term__c, PricebookEntry.Level_0_Limit_Term__c ) , 0 , 
+			IF( Opportunity.RecurSoft__Initial_Contract_Term__c &gt;= 
+				MIN( Approved_Term__c, PricebookEntry.Level_1_Limit_Term__c ) , 1 , 
+				IF( Opportunity.RecurSoft__Initial_Contract_Term__c  &gt;=
+					MIN( Approved_Term__c, PricebookEntry.Level_2_Limit_Term__c ) , 2 , 3
+				)
+			)
+		) , 0
+	)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Approval Level Required - Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Level_Required_Trial__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Opportunity.Owner.Approval_Exempt__c = true , 0 ,
+	IF( VALUE(TEXT( Trial__c)) &gt; 
+		MAX( Approved_Trial__c, PricebookEntry.Level_2_Limit_Trial__c ) , 3 , 
+		IF( VALUE(TEXT( Trial__c)) &gt; 
+			MAX( Approved_Trial__c, PricebookEntry.Level_1_Limit_Trial__c ) , 2 , 
+			IF( VALUE(TEXT( Trial__c)) &gt; 
+				MAX( Approved_Trial__c, PricebookEntry.Level_0_Limit_Trial__c ) , 1 , 0
+			)
+		)
+	)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Approval Level Required - Trial</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Level_Required__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Approval Level Required</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approved_Free_Months__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Approved - Free Months</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approved_Price_Discount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Approved - Price Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Approved_Term__c</fullName>
+        <defaultValue>24</defaultValue>
+        <externalId>false</externalId>
+        <label>Approved - Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approved_Trial__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Approved - Trial</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Base_Contract_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Contract Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competitor_Buyout__c</fullName>
+        <externalId>false</externalId>
+        <label>Competitor Buyout</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>None</fullName>
+                    <default>true</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>4 Patient Care</fullName>
+                    <default>false</default>
+                    <label>4 Patient Care</label>
+                </value>
+                <value>
+                    <fullName>DemandForce</fullName>
+                    <default>false</default>
+                    <label>DemandForce</label>
+                </value>
+                <value>
+                    <fullName>eCentral</fullName>
+                    <default>false</default>
+                    <label>eCentral</label>
+                </value>
+                <value>
+                    <fullName>eReminders</fullName>
+                    <default>false</default>
+                    <label>eReminders</label>
+                </value>
+                <value>
+                    <fullName>Lighthouse</fullName>
+                    <default>false</default>
+                    <label>Lighthouse</label>
+                </value>
+                <value>
+                    <fullName>Patient Activator</fullName>
+                    <default>false</default>
+                    <label>Patient Activator</label>
+                </value>
+                <value>
+                    <fullName>Phone Tree</fullName>
+                    <default>false</default>
+                    <label>Phone Tree</label>
+                </value>
+                <value>
+                    <fullName>PM/EMR</fullName>
+                    <default>false</default>
+                    <label>PM/EMR</label>
+                </value>
+                <value>
+                    <fullName>Practice Mojo</fullName>
+                    <default>false</default>
+                    <label>Practice Mojo</label>
+                </value>
+                <value>
+                    <fullName>Sesame</fullName>
+                    <default>false</default>
+                    <label>Sesame</label>
+                </value>
+                <value>
+                    <fullName>Teledental</fullName>
+                    <default>false</default>
+                    <label>Teledental</label>
+                </value>
+                <value>
+                    <fullName>Televox</fullName>
+                    <default>false</default>
+                    <label>Televox</label>
+                </value>
+                <value>
+                    <fullName>Weave</fullName>
+                    <default>false</default>
+                    <label>Weave</label>
+                </value>
+                <value>
+                    <fullName>Websystem3</fullName>
+                    <default>false</default>
+                    <label>Websystem3</label>
+                </value>
+                <value>
+                    <fullName>RevenueWell</fullName>
+                    <default>false</default>
+                    <label>RevenueWell</label>
+                </value>
+                <value>
+                    <fullName>ZocDoc</fullName>
+                    <default>false</default>
+                    <label>ZocDoc</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>$Setup.Healthgrades_Contract_URL__c.Contract_URL__c &amp; &quot;/HealthgradesContractReview?id=&quot; &amp; Provider__r.Id &amp; &quot;&amp;oppId=&quot; &amp;  OpportunityId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract URL</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Co_Terminate__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Determines if the Opportunity Product should be forced to co-terminate with all other Opportunity Products, regardless of free months.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if the Opportunity Product should be forced to co-terminate with all other Opportunity Products, regardless of free months.</inlineHelpText>
+        <label>Co-Terminate</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Current_SR_Subscription__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Current SR Subscription</label>
+        <referenceTo>RecurSoft__Product_Subscription__c</referenceTo>
+        <relationshipLabel>Opportunity Product (Current SR Subscription)</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Discount</fullName>
+    </fields>
+    <fields>
+        <fullName>Free_Month_Setting__c</fullName>
+        <description>Override opportunity free months</description>
+        <externalId>false</externalId>
+        <label>Orientation Month Setting</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Extend Contract - At the Beginning</fullName>
+                    <default>false</default>
+                    <label>Extend Contract - At the Beginning</label>
+                </value>
+                <value>
+                    <fullName>Include in Contract Period - At the Beginning</fullName>
+                    <default>false</default>
+                    <label>Include in Contract Period - At the Beginning</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HG_Monthly_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <label>HG Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Invoiced_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoiced Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Is_Monthly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Scheduled revenue is monthly</description>
+        <externalId>false</externalId>
+        <label>Is Monthly</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Promo_Item__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Promo Item</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Approved_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Approved Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ListPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>List_Price_Override__c</fullName>
+        <description>Used for products that are discounted from regular List Price because of a bundle purchase, but shouldn&#39;t be treated as a discount for approval purposes.  
+
+For example, SR Elite with Limelight Bundle discounts the SR Elite List Price by the List Price of Limelight Bundle.  This field is then used as the new base for pricing discount approvals.  
+
+The field is set via Apex.</description>
+        <externalId>false</externalId>
+        <label>List Price Override</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LL_Monthly_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <label>LL Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Modified_Subscription__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Modified Subscription</label>
+        <referenceTo>RecurSoft__Product_Subscription__c</referenceTo>
+        <relationshipLabel>Opportunity Product (Modified Subscription)</relationshipLabel>
+        <relationshipName>Opportunity_Product1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Free_Months__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Override opportunity free months</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Override opportunity free months</inlineHelpText>
+        <label>Number of Orientation Months</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Approval_Change__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Opportunity Approval Change</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>OpportunityId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Monthly_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Override_Current_SR_Subscription__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Override Current SR Subscription</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Override_Modified_Subscription__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Override Modified Subscription</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Price_Discount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( List_Price_Override__c &gt; 0 , 
+IF( List_Price_Override__c = 0 , 0 , (List_Price_Override__c - UnitPrice) / List_Price_Override__c) ,
+IF( PricebookEntry.UnitPrice = 0 , 0 , (PricebookEntry.UnitPrice - UnitPrice) / PricebookEntry.UnitPrice))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Price Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Product2Id</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+    </fields>
+    <fields>
+        <fullName>Product_Code_Formula__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Code Formula</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Code_Value__c</fullName>
+        <description>Stores the Product Code, needed for a Summary Roll up Field on the Opportunity.</description>
+        <externalId>false</externalId>
+        <label>Product Code Value</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Code__c</fullName>
+        <description>Intacct ID of the product.</description>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.ProductCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Code</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Family_Duplicate__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Set via Apex.  Creates a key with Opportunity Id and Product Family so that only one Product from each Family can be added to an Opportunity.</description>
+        <externalId>false</externalId>
+        <label>Product Family Duplicate</label>
+        <length>36</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Name Value</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Terms__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( PricebookEntry.Product2.RecurSoft__Billing_Frequency__c , &quot;Monthly&quot; ) ,
+			PricebookEntry.Product2.Name &amp; &quot;: &lt;br&gt;&quot;  &amp;
+			&quot;$&quot; &amp; TEXT(UnitPrice) &amp; &quot;(&quot; &amp; TEXT(ROUND(Price_Discount__c, 4) * 100) &amp; &quot;% Discount) &lt;br&gt;&quot;  &amp;
+			IF(Number_of_Free_Months__c &gt; 0 , 
+						TEXT(Number_of_Free_Months__c) &amp; &quot; Orientation Months at $&quot; &amp; TEXT(Promotional_Price__c) &amp; &quot; &lt;br&gt;&quot; , &quot;&quot; ) &amp;
+			IF(ISBLANK(TEXT(Trial__c)), 
+						&quot;0&quot; , TEXT(Trial__c)) &amp; &quot; Day Trial&quot;,
+			PricebookEntry.Product2.Name &amp; &quot;: &lt;br&gt;&quot;  &amp; 
+			&quot;$&quot; &amp; TEXT(UnitPrice) &amp; &quot;(&quot; &amp; TEXT(ROUND(Price_Discount__c, 4) * 100) &amp; &quot;% Discount)&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Terms</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Promotional_Price__c</fullName>
+        <description>Allows for giving promotional months at a discounted price.</description>
+        <externalId>false</externalId>
+        <label>Orientation Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Provider__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The related Provider for the Healthgrades Premium Profile</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The related Provider for the Healthgrades Premium Profile</inlineHelpText>
+        <label>Provider</label>
+        <referenceTo>Provider__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quantity</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Account_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Opportunity.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Activation_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Activation date of the subscription. Triggers generation of the billing schedule for products set up with Billing based on Activation date.</inlineHelpText>
+        <label>Activation Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Activation_Fee_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price Book unit price of the Activation Fee Product.</inlineHelpText>
+        <label>Activation Fee Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Activation_Fee_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Activation fee product used in Master Subscription process.</inlineHelpText>
+        <label>Activation Fee Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Addendum_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Addendum Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AS-01: Purchase Additional Quantity (No Price Change)</fullName>
+                    <default>false</default>
+                    <label>AS-01: Purchase Additional Quantity (No Price Change)</label>
+                </value>
+                <value>
+                    <fullName>AS-02: Increase/Decrease Source Quantity and Price</fullName>
+                    <default>false</default>
+                    <label>AS-02: Increase/Decrease Source Quantity and Price</label>
+                </value>
+                <value>
+                    <fullName>AS-03: Purchase New Product</fullName>
+                    <default>false</default>
+                    <label>AS-03: Purchase New Product</label>
+                </value>
+                <value>
+                    <fullName>AS-04: Purchase New Product and Change Source Subscription Price</fullName>
+                    <default>false</default>
+                    <label>AS-04: Purchase New Product and Change Source Subscription Price</label>
+                </value>
+                <value>
+                    <fullName>AS-05: Product Upgrade: Replace Product</fullName>
+                    <default>false</default>
+                    <label>AS-05: Product Upgrade: Replace Product</label>
+                </value>
+                <value>
+                    <fullName>AS-06: Product Downgrade: Replace Product</fullName>
+                    <default>false</default>
+                    <label>AS-06: Product Downgrade: Replace Product</label>
+                </value>
+                <value>
+                    <fullName>AS-07: Product Downgrade: Decrease Product Quantity</fullName>
+                    <default>false</default>
+                    <label>AS-07: Product Downgrade: Decrease Product Quantity</label>
+                </value>
+                <value>
+                    <fullName>AS-08: User Defined</fullName>
+                    <default>false</default>
+                    <label>AS-08: User Defined</label>
+                </value>
+                <value>
+                    <fullName>AS-09: Change Subscription Bill-to Account/Owner</fullName>
+                    <default>false</default>
+                    <label>AS-09: Change Subscription Bill-to Account/Owner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Aggregated_Monthly_Minimum_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.RecurSoft__Aggregated_Monthly_Minimum_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The usage for this product is billed based on Aggregated Monthly Minimum Amount logic.</inlineHelpText>
+        <label>Aggregated Monthly Minimum Amount</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Billing_dependent_on_imp_stat_new__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this if invoicing for this opportunity product should be based on later Activation date.</inlineHelpText>
+        <label>Billing dependent on IMP (transactional)</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Billing_Frequency_New__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing frequency of the opportunity product.</inlineHelpText>
+        <label>Billing frequency (transactional)</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>One-Time</fullName>
+                    <default>false</default>
+                    <label>One-Time</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Semi-annual</fullName>
+                    <default>false</default>
+                    <label>Semi-annual</label>
+                </value>
+                <value>
+                    <fullName>Yearly</fullName>
+                    <default>false</default>
+                    <label>Yearly</label>
+                </value>
+                <value>
+                    <fullName>Milestones</fullName>
+                    <default>false</default>
+                    <label>Milestones</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Billing_Frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;One-Time&quot;), &quot;One-Time&quot;,
+IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;Monthly&quot;), &quot;Monthly&quot;,
+IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;Quarterly&quot;), &quot;Quarterly&quot; ,
+IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;Semi-Annual&quot;), &quot;Semi-Annual&quot;,
+IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;Yearly&quot;), &quot;Yearly&quot; ,
+IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;Milestones&quot;), &quot;Milestones&quot; , &quot;&quot;
+)
+)
+)
+)
+)
+)</formula>
+        <inlineHelpText>Default billing frequency of the product.</inlineHelpText>
+        <label>Billing Frequency</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Bundled_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates this product is part of a bundle on the originating opportunity.</description>
+        <externalId>false</externalId>
+        <label>Bundled Product</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Child_Subscription_Renewal_Rule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in Master Subscription process.</inlineHelpText>
+        <label>Child Subscription Renewal Rule</label>
+        <referenceTo>RecurSoft__Renewal_Rule__c</referenceTo>
+        <relationshipLabel>Opportunity Product (Child Subscription Renewal Rule)</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Contract_Term1__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract duration.</inlineHelpText>
+        <label>Contract Term</label>
+        <length>15</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Contract_Term_End_Date_Editable__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contract Term End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Contract_Term_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>DATE(
+year(RecurSoft__Contract_Term_Start_Date_New__c)+ floor((month(RecurSoft__Contract_Term_Start_Date_New__c) + VALUE(RecurSoft__Contract_Term1__c))/12) + if(and(month(RecurSoft__Contract_Term_Start_Date_New__c)=12,VALUE(RecurSoft__Contract_Term1__c)&gt;=12),-1,0)
+,if( mod( month(RecurSoft__Contract_Term_Start_Date_New__c) + VALUE(RecurSoft__Contract_Term1__c) , 12 ) = 0, 12 , mod( month(RecurSoft__Contract_Term_Start_Date_New__c) + VALUE(RecurSoft__Contract_Term1__c) , 12 ))
+,min(day(RecurSoft__Contract_Term_Start_Date_New__c),case(max( mod( month(RecurSoft__Contract_Term_Start_Date_New__c) + VALUE(RecurSoft__Contract_Term1__c) , 12 ) , 1),9,30,4,30,6,30,11,30,2,28,31))
+)-1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Deprecated - Contract Term End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Contract_Term_Setting__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract duration options: months, days.</inlineHelpText>
+        <label>Contract Term Setting</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Months</fullName>
+                    <default>false</default>
+                    <label>Months</label>
+                </value>
+                <value>
+                    <fullName>Days</fullName>
+                    <default>false</default>
+                    <label>Days</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Contract_Term_Start_Date_New__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contract Term Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Contract_Term_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Opportunity.RecurSoft__Contract_Term_Start_Date1__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Deprecated - Contract Term Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Counter_Aggregated_Monthly_Min__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>DeprecatedCounter Aggregated Monthly Min</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Co_Termination__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Sets the Contract Term End Date as per original/source subscription.</inlineHelpText>
+        <label>Co-Termination</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__CPI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if the Consumer Price Index is applied to to the product price.</inlineHelpText>
+        <label>CPI</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Create_Implementation_Case__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Used to indicate an Implementation case is desired for this product. It is only necessary to use on one-time revenue products.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to indicate an Implementation case is desired for this product. It is only necessary to use on one-time revenue products.</inlineHelpText>
+        <label>Deprecated - Create Implementation Case</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Discount_from_List_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(ListPrice  &lt;&gt; 0,( ListPrice  -   UnitPrice  ) / ListPrice , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The discount in the final Sales Price.</inlineHelpText>
+        <label>Discount % from List Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Intacct_Customer_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Opportunity.RecurSoft__Intacct_Customer_ID__c</formula>
+        <inlineHelpText>Corresponding Intacct ID. Updated via Intacct sync.</inlineHelpText>
+        <label>Intacct Customer ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Intacct_Item_ID_form__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.ProductCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Intacct product ID/code.</inlineHelpText>
+        <label>Intacct Item ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Intacct_Vendor_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>RecurSoft__Vendor__r.RecurSoft__Intacct_Vendor_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Intacct Vendor ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Invoice_date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Custom date for the first invoice</inlineHelpText>
+        <label>Deprecated - Invoice date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__isCreditLine__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Is Credit Line</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Is_Commissionable__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.RecurSoft__Is_Commissionable__c</formula>
+        <inlineHelpText>Product eligible for commission.</inlineHelpText>
+        <label>Is Commissionable</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Is_Master__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Use this field to determine if this opportunity product should generate a Master subscription instead of a regular subscription.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if a Master subscription will be generated at closed-won.</inlineHelpText>
+        <label>Is Master</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_1_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>First amount to be invoiced.</inlineHelpText>
+        <label>Milestone 1 Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_1_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of the first invoice.</inlineHelpText>
+        <label>Milestone 1 Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_2_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Second amount to be invoiced.</inlineHelpText>
+        <label>Milestone 2 Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_2_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of the second invoice.</inlineHelpText>
+        <label>Milestone 2 Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_3_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Third amount to be invoiced.</inlineHelpText>
+        <label>Milestone 3 Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_3_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of the third invoice.</inlineHelpText>
+        <label>Milestone 3 Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_4_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Fourth amount to be invoiced.</inlineHelpText>
+        <label>Milestone 4 Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_4_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of the fourth invoice.</inlineHelpText>
+        <label>Milestone 4 Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_5_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Fifth amount to be invoiced.</inlineHelpText>
+        <label>Milestone 5 Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_5_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of the fifth invoice.</inlineHelpText>
+        <label>Milestone 5 Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_6_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Sixth amount to be invoiced.</inlineHelpText>
+        <label>Milestone 6 Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Milestone_6_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of the sixth invoice.</inlineHelpText>
+        <label>Milestone 6 Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Number_Of_Revenue_Installments__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.RecurSoft__Number_of_Revenue_Installments__c</formula>
+        <label>DeprecatedNumber Of Revenue Installments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Original_Contract_Term_Days__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Original Contract Term(Days)</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Price_Based_On__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.RecurSoft__Product_Based_On__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Determines the pricing based on each unit, vs tiered or bracketed pricing.</inlineHelpText>
+        <label>Price Based On</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Product_Subscription__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This field contains product subscription for current opportunity product.</inlineHelpText>
+        <label>Product Subscription</label>
+        <referenceTo>RecurSoft__Product_Subscription__c</referenceTo>
+        <relationshipLabel>Opportunity Product (Product Subscription)</relationshipLabel>
+        <relationshipName>RecurSoft_Opportunity_Product3</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Promo_Pricing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Check when you want to keep the MRR for this item out of the calculated Item MRR.</inlineHelpText>
+        <label>Deprecated - Promo Pricing</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Pro__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.RecurSoft__Prorated__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prorated</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Purchase_Price_formula__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.RecurSoft__Purchase_Price__c</formula>
+        <inlineHelpText>Price at which product being sold was initially purchased.</inlineHelpText>
+        <label>Purchase Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Renewal_Rule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines the system behaviour at the time of renewing the subscription.</inlineHelpText>
+        <label>Renewal Rule</label>
+        <referenceTo>RecurSoft__Renewal_Rule__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>RecurSoft_Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Revenue_Recognition_End_Date_form__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF ( ISNULL(RecurSoft__Revenue_Recognition_Start_Date__c ), RecurSoft__Revenue_Recognition_Start_Date__c, 
+
+IF 
+(ISPICKVAL(PricebookEntry.Product2.RecurSoft__Rev_Rec_End_Based_On__c, &quot;Revenue Schedule Entry&quot;),  RecurSoft__Revenue_Recognition_Start_Date__c  +  PricebookEntry.Product2.RecurSoft__Number_of_Revenue_Installments__c, 
+  IF
+(ISPICKVAL(PricebookEntry.Product2.RecurSoft__Rev_Rec_End_Based_On__c, &quot;Contract Term End Date&quot;),  RecurSoft__Contract_Term_End_Date_Editable__c, NULL
+  )
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Deprecated -Revenue Recognition End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Revenue_Recognition_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.RecurSoft__Revenue_Recognition_Method__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Deprecated - Revenue Recognition Method</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Revenue_Recognition_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &#39;One-Time&#39;),
+     Opportunity.RecurSoft__Contract_Signed_Date__c,
+     RecurSoft__Contract_Term_Start_Date_New__c +  PricebookEntry.Product2.RecurSoft__Rev_Rec_Start__c
+)</formula>
+        <label>DeprecatedRevenue Recognition Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Sales_Price_Per_Month__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(  ISPICKVAL(PricebookEntry.Product2.RecurSoft__Revenue_Schedule_Type__c, &quot;Divide Amount into multiple installments&quot;) &amp;&amp;
+ AND(PricebookEntry.Product2.RecurSoft__Number_of_Revenue_Installments__c &lt;&gt; 0,  NOT(ISNULL(PricebookEntry.Product2.RecurSoft__Number_of_Revenue_Installments__c)) ) , 
+
+UnitPrice / PricebookEntry.Product2.RecurSoft__Number_of_Revenue_Installments__c, 
+
+ UnitPrice)</formula>
+        <label>Sales Price Per Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Source_Opportunity_Close_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Opportunity.CloseDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Source Opportunity Close Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Source_Opportunity_Stage__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity.StageName)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Source Opportunity Stage</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Source_Subscription_Billing_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Source Subscription Billing Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Subscription_Total_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Price of the generated subscription after Closed Won</description>
+        <externalId>false</externalId>
+        <label>Subscription Total Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_1_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the first tier (subscription pricing)</inlineHelpText>
+        <label>Price 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_1_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the first tier (product subscription)</inlineHelpText>
+        <label>Quantity 1</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_2_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the second tier (subscription pricing)</inlineHelpText>
+        <label>Price 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_2_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the second tier (product subscription)</inlineHelpText>
+        <label>Quantity 2</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_3_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the third tier (subscription pricing)</inlineHelpText>
+        <label>Price 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_3_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the third tier (product subscription)</inlineHelpText>
+        <label>Quantity 3</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_4_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the fourth tier (subscription pricing)</inlineHelpText>
+        <label>Price 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_4_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the fourth tier (product subscription)</inlineHelpText>
+        <label>Quantity 4</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_5_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the fifth tier (subscription pricing)</inlineHelpText>
+        <label>Price 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_5_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the fifth tier (product subscription)</inlineHelpText>
+        <label>Quantity 5</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_6_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the sixth tier (subscription pricing)</inlineHelpText>
+        <label>Price 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Tier_6_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the sixth tier (product subscription)</inlineHelpText>
+        <label>Quantity 6</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Quantity_1__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the first tier (usage).</inlineHelpText>
+        <label>Usage Quantity 1</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Quantity_2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the second tier (usage).</inlineHelpText>
+        <label>Usage Quantity 2</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Quantity_3__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the third tier (usage).</inlineHelpText>
+        <label>Usage Quantity 3</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Quantity_4__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the fourth tier (usage).</inlineHelpText>
+        <label>Usage Quantity 4</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Quantity_5__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the fifth tier (usage).</inlineHelpText>
+        <label>Usage Quantity 5</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Quantity_6__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of the sixth tier (usage).</inlineHelpText>
+        <label>Usage Quantity 6</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Rate_1__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the first tier (usage pricing).</inlineHelpText>
+        <label>Usage Rate 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Rate_2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the second tier (usage pricing).</inlineHelpText>
+        <label>Usage Rate 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Rate_3__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the third tier (usage pricing).</inlineHelpText>
+        <label>Usage Rate 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Rate_4__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the fourth tier (usage pricing).</inlineHelpText>
+        <label>Usage Rate 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Rate_5__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the fifth tier (usage pricing).</inlineHelpText>
+        <label>Usage Rate 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Rate_6__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Price of the sixth tier (usage pricing).</inlineHelpText>
+        <label>Usage Rate 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Usage_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.RecurSoft__Usage_Type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Determines the pricing calculation of usage records.</inlineHelpText>
+        <label>Usage Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurSoft__Vendor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Vendor</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunity Product (Vendor)</relationshipLabel>
+        <relationshipName>RecurSoft_Opportunity_Product1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ServiceDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Set_Product_Approvals__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Set Product Approvals</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SRC_Monthly_Revenue__c</fullName>
+        <description>Total revenue from the SR Conversations product family. Updated by WFR.  This will rollup to the Opportunity, Sales Credits, and Sales Targets.</description>
+        <externalId>false</externalId>
+        <label>SRC Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SRSR_Monthly_Revenue__c</fullName>
+        <description>Total revenue from the SR Smart Reviews product family. Updated by WFR. This will rollup to the Opportunity, Sales Credits, and Sales Targets.</description>
+        <externalId>false</externalId>
+        <label>SRSR Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SR_Conversations_Phone_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>SR Conversations Phone Number</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>SR_Monthly_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <label>SR Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Subtotal</fullName>
+    </fields>
+    <fields>
+        <fullName>Sugar_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Sugar ID</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Sugar_Owner_Username__c</fullName>
+        <externalId>false</externalId>
+        <label>Sugar Owner Username</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Total_Contract_Term__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Free_Month_Setting__c , &quot;Extend Contract - At the Beginning&quot; ), 
+Base_Contract_Term__c + Number_of_Free_Months__c , 
+Base_Contract_Term__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Contract Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Monthly_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Trial_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Is_Monthly__c ,
+IF( TEXT( Trial__c ) = &quot;&quot; ,
+ null ,
+ RecurSoft__Contract_Term_Start_Date_New__c + VALUE( TEXT( Trial__c ))) ,
+null )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Trial End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Trial__c</fullName>
+        <externalId>false</externalId>
+        <label>Trial Period</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                    <label>0</label>
+                </value>
+                <value>
+                    <fullName>30</fullName>
+                    <default>false</default>
+                    <label>30</label>
+                </value>
+                <value>
+                    <fullName>60</fullName>
+                    <default>false</default>
+                    <label>60</label>
+                </value>
+                <value>
+                    <fullName>90</fullName>
+                    <default>false</default>
+                    <label>90</label>
+                </value>
+                <value>
+                    <fullName>120</fullName>
+                    <default>false</default>
+                    <label>120</label>
+                </value>
+                <value>
+                    <fullName>180</fullName>
+                    <default>false</default>
+                    <label>180</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>UnitPrice</fullName>
+    </fields>
+    <webLinks>
+        <fullName>RecurSoft__Generate_Credit</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Generate Credit</masterLabel>
+        <openType>newWindow</openType>
+        <page>RecurSoft__GenerateCreditPage</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
+    <validationRules>
+        <fullName>Block_Limelight</fullName>
+        <active>true</active>
+        <description>Blocks the sale of Limelight.  For pre-release period.</description>
+        <errorConditionFormula>$Profile.Name != &quot;System Administrator&quot; &amp;&amp;
+$User.Username != &quot;nroberts@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;jasonb@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;emiller@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;dsherman@solutionreach.com&quot; &amp;&amp; 
+Opportunity.IsLegacy__c = false &amp;&amp;
+ ISPICKVAL( Product2.Family , &quot;SR Schedule&quot; ) &amp;&amp;
+Opportunity.Account.Practice_Management_Software__r.Limelight__c = false</errorConditionFormula>
+        <errorMessage>SR Schedule is not currently available for this Management System</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Block_MSP</fullName>
+        <active>true</active>
+        <description>Blocks the sale of MSP to only authorized users.</description>
+        <errorConditionFormula>$Profile.Name != &quot;System Administrator&quot; &amp;&amp;
+$User.Username != &quot;nroberts@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;judd@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;zach@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;matt@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;bchristensen@solutionreach.com&quot; &amp;&amp; 
+$User.Username != &quot;bbutterfield@solutionreach.com&quot; &amp;&amp; 
+ ISPICKVAL( Product2.Family , &quot;My Social Practice&quot; )</errorConditionFormula>
+        <errorMessage>You are not currently authorized to sell this product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Block_SRC_NonUSA</fullName>
+        <active>true</active>
+        <description>Blocks the sale of Conversations for Canada customers.</description>
+        <errorConditionFormula>ISPICKVAL( Product2.Family , &quot;SR Conversations&quot; ) &amp;&amp;
+Opportunity.Account.BillingCountry != &quot;United States&quot; &amp;&amp; Opportunity.Account.BillingCountry != &quot;Canada&quot; &amp;&amp;
+Opportunity.Account.BillingCountry != &quot;Puerto Rico&quot;</errorConditionFormula>
+        <errorMessage>SR Conversations is not currently available outside the United States and Canada.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Block_SRSR</fullName>
+        <active>false</active>
+        <description>Blocks the sale of SR Smart Reviews.  For pre-release period.</description>
+        <errorConditionFormula>$Profile.Name != &quot;System Administrator&quot; &amp;&amp;
+$User.Username != &quot;nroberts@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;judd@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;zach@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;matt@solutionreach.com&quot; &amp;&amp; 
+ ISPICKVAL( Product2.Family , &quot;SR Smart Reviews&quot; )</errorConditionFormula>
+        <errorMessage>SR Smart Reviews is not currently available.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Contract_End_before_Contract_Start</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( NOT( ISNULL( RecurSoft__Contract_Term_End_Date_Editable__c ) ) , RecurSoft__Contract_Term_End_Date_Editable__c &lt;= RecurSoft__Contract_Term_Start_Date_New__c )</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Contract_Term_End_Date_Editable__c</errorDisplayField>
+        <errorMessage>Contract Term End Date must be greater than Contract Term Start Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Contract_Start_in_Past</fullName>
+        <active>false</active>
+        <errorConditionFormula>RecurSoft__Contract_Term_Start_Date_New__c &lt; Today() &amp;&amp;
+ $Profile.Name != &quot;System Administrator&quot; &amp;&amp;
+$Profile.Name != &quot;Finance&quot;</errorConditionFormula>
+        <errorMessage>The Contract Term Start Date cannot be in the past</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Free_Months_Floor</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(ISBLANK( PricebookEntry.Free_Months_Floor__c )) &amp;&amp;
+Number_of_Free_Months__c &gt; PricebookEntry.Free_Months_Floor__c &amp;&amp;
+$User.Approval_Exempt__c = false &amp;&amp;
+ $Profile.Name != &quot;Finance&quot;</errorConditionFormula>
+        <errorMessage>The number of free months is greater than the maximum allowable.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Number_of_Providers</fullName>
+        <active>true</active>
+        <errorConditionFormula>Opportunity.RecordType.Name != &quot;Add-On Business&quot; &amp;&amp;
+Product2.ProductCode = &quot;3001&quot; &amp;&amp;
+ (Quantity +     
+ Opportunity.Pricebook2.Number_of_Providers_Included__c)
+ != Opportunity.Number_of_Providers__c</errorConditionFormula>
+        <errorMessage>Please add Additional Providers by changing the Number of Providers field on the Opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Number_of_PRT</fullName>
+        <active>true</active>
+        <errorConditionFormula>Opportunity.RecordType.Name != &quot;Add-On Business&quot; &amp;&amp;
+Product2.ProductCode = &quot;1002&quot; &amp;&amp; 
+(Quantity + 
+Opportunity.Pricebook2.Number_of_PRT_Included__c) 
+!= Opportunity.Number_of_PRT__c</errorConditionFormula>
+        <errorMessage>Please add Patient Reach Tablet licenses by changing the Number of PRT field on the Opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OppLine001_Lock_w_Product_Subscription</fullName>
+        <active>true</active>
+        <description>Provider can&#39;t be changed if there is an existing Product Subscription.</description>
+        <errorConditionFormula>RecurSoft__Product_Subscription__c != null &amp;&amp;
+ ISCHANGED( Provider__c ) &amp;&amp;
+$Profile.Name != &quot;System Administrator&quot;</errorConditionFormula>
+        <errorMessage>OppLine001 - There is active billing for this Healthgrades Premium Profile.  Please contact Accounting if there is a mistake with the related Provider.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OppLine002_Provider_Bill_to_Doesnt_match</fullName>
+        <active>true</active>
+        <description>The Provider Bill-to-Account should match the Opportunity Bill-to-Account</description>
+        <errorConditionFormula>Provider__c != null &amp;&amp;
+Opportunity.RecurSoft__Bill_to_Account__c !=  Provider__r.Bill_to_Account__c &amp;&amp;
+Opportunity.AccountId != Provider__r.Bill_to_Account__c</errorConditionFormula>
+        <errorMessage>OppLine002 - The Provider Bill-to-Account should match the Opportunity Bill-to-Account.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OppLine003_Provider_on_non_HG_Product</fullName>
+        <active>true</active>
+        <description>The Provider lookup field should only be populated on a Healthgrades product</description>
+        <errorConditionFormula>Product2.ProductCode != &quot;3005&quot; &amp;&amp;
+ Provider__c != null</errorConditionFormula>
+        <errorMessage>OppLine003 - A Provider should only be selected for the Healthgrades Premium Profile product</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OppLine004_Additional_Providers</fullName>
+        <active>false</active>
+        <description>Only sales managers and sys admin profile are allowed to update Sales Price.</description>
+        <errorConditionFormula>$Profile.Name &lt;&gt; &quot;System Administrator&quot;  &amp;&amp;  
+$Profile.Name &lt;&gt; &quot;Sales Administrator&quot;  &amp;&amp;
+$Profile.Name &lt;&gt; &quot;Sales Manager&quot; &amp;&amp;  
+ISCHANGED( UnitPrice )&amp;&amp;
+CONTAINS(Product2.Name , &quot;Additional Providers&quot;)</errorConditionFormula>
+        <errorDisplayField>UnitPrice</errorDisplayField>
+        <errorMessage>OppLine004 - You are not allowed to update Sales Price.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OppLine005_HG_Provider</fullName>
+        <active>true</active>
+        <description>Ensure a Provider is linked to the Healthgrades Opportunity Product</description>
+        <errorConditionFormula>Product2.Name = &quot;Healthgrades Premium Profile&quot; &amp;&amp; 
+ISBLANK( Provider__c ) &amp;&amp;
+Opportunity.RecordType.Name != &quot;Renewal&quot; &amp;&amp;
+ $Profile.Name  != &quot;System Administrator&quot; &amp;&amp;
+  $User.Username != &quot;nroberts@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;melissap@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;patriciac@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;beldredge@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;awhitaker@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;mrichards@solutionreach.com&quot;</errorConditionFormula>
+        <errorMessage>You must link the Healthgrades Premium Profile to a specific Provider. Click the Add Healthgrades Provider button on the Account.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OppLine006_Free_Month_Setting</fullName>
+        <active>true</active>
+        <description>Ensure a Free Month Setting is chosen when Free Months are added.</description>
+        <errorConditionFormula>Number_of_Free_Months__c &gt; 0 &amp;&amp;
+(ISBLANK( TEXT( Free_Month_Setting__c )) ||
+ ISPICKVAL( Free_Month_Setting__c, &quot;None&quot; ))</errorConditionFormula>
+        <errorMessage>Please select a Free Month Setting</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OppLine007_Invalid_Free_Months</fullName>
+        <active>true</active>
+        <description>A product must always have more months in the Contract Term than Free Months included.</description>
+        <errorConditionFormula>(Base_Contract_Term__c  &lt;=  Number_of_Free_Months__c) &amp;&amp; 
+ISPICKVAL( Free_Month_Setting__c, 
+&quot;Include in Contract Period - At the Beginning&quot;)</errorConditionFormula>
+        <errorMessage>The number of Free Months exceeds the number of months in the Contract period.  Please adjust the Number of Free Months or the Free Month Setting.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OppLine008_One_Time_Product_Free_Months</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Product2.RecurSoft__Billing_Frequency__c , &quot;One-Time&quot; ) &amp;&amp;
+Number_of_Free_Months__c &gt; 0</errorConditionFormula>
+        <errorMessage>One-Time products cannot have Free Months.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OppLine009_One_Time_Product_Trial_Period</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Product2.RecurSoft__Billing_Frequency__c , &quot;One-Time&quot; ) &amp;&amp;
+NOT(ISPICKVAL( Trial__c , &quot;&quot; ))</errorConditionFormula>
+        <errorMessage>One-Time products cannot have a Trial Period.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Price_Floor</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(ISBLANK( PricebookEntry.Price_Discount_Floor__c )) &amp;&amp;
+UnitPrice &lt; PricebookEntry.Price_Discount_Floor__c &amp;&amp;
+ $User.Approval_Exempt__c = false &amp;&amp;
+ $UserRole.Name != &quot;CSR Enterprise&quot; &amp;&amp;
+ $Profile.Name != &quot;Finance&quot;</errorConditionFormula>
+        <errorMessage>The price is below the minimum allowable price.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Activation_Date_ReadOnly_on_Closed_Won</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    AND(
+        ISPICKVAL(Opportunity.StageName, &#39;Closed Won&#39;),
+        ISCHANGED( RecurSoft__Activation_Date__c)
+    )
+)</errorConditionFormula>
+        <errorMessage>You cannot update Activation Date after the Opportunity Stage is set to Closed Won</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Amount2_shouldnt_be_negative</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    !ISNEW() &amp;&amp;
+    ISPICKVAL(RecurSoft__Billing_Frequency_New__c,  &#39;Milestones&#39;) &amp;&amp;
+    RecurSoft__Milestone_2_Amount__c &lt; 0
+)</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Milestone_2_Amount__c</errorDisplayField>
+        <errorMessage>Please enter only positive value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Amount3_shouldnt_be_negative</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false,
+    !ISNEW() &amp;&amp;
+    ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp;
+    RecurSoft__Milestone_3_Amount__c &lt; 0
+)</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Milestone_3_Amount__c</errorDisplayField>
+        <errorMessage>Please enter only positive value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Amount4_shouldnt_be_negative</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    !ISNEW() &amp;&amp;
+    ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp;
+    RecurSoft__Milestone_4_Amount__c &lt; 0
+)</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Milestone_4_Amount__c</errorDisplayField>
+        <errorMessage>Please enter only positive value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Amount5_shouldnt_be_negative</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    !ISNEW() &amp;&amp;
+    ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp;
+    RecurSoft__Milestone_5_Amount__c &lt; 0
+)</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Milestone_5_Amount__c</errorDisplayField>
+        <errorMessage>Please enter only positive value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Amount6_shouldnt_be_negative</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    !ISNEW() &amp;&amp;
+    ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp;
+    RecurSoft__Milestone_6_Amount__c &lt; 0
+)</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Milestone_6_Amount__c</errorDisplayField>
+        <errorMessage>Please enter only positive value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Amount_shouldnt_be_negative</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    !ISNEW() &amp;&amp; 
+    ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp;
+    RecurSoft__Milestone_1_Amount__c &lt; 0
+)</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Milestone_1_Amount__c</errorDisplayField>
+        <errorMessage>Please enter only positive value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__at_least_one_milestone_is_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    AND(
+        NOT(
+            ISNEW()
+        ),
+        ISPICKVAL(RecurSoft__Billing_Frequency_New__c,   &#39;Milestones&#39;), 
+        OR(
+            ISNULL(RecurSoft__Milestone_1_Amount__c),
+            ISNULL(RecurSoft__Milestone_1_Date__c),
+            RecurSoft__Milestone_1_Amount__c &lt;= 0
+        )
+    )
+)</errorConditionFormula>
+        <errorMessage>At least 1 Milestone date and amount should be set</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Contract_Term</fullName>
+        <active>false</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    ISCHANGED(RecurSoft__Contract_Term1__c) &amp;&amp;
+    NOT(ISNUMBER(RecurSoft__Contract_Term1__c)) &amp;&amp;
+    RecurSoft__Contract_Term1__c &lt;&gt; &quot;Evergreen&quot;
+)</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Contract_Term1__c</errorDisplayField>
+        <errorMessage>Please insert a valid number or &quot;Evergreen&quot; name.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Contract_Term_Setting_is_missing</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    ISCHANGED(RecurSoft__Contract_Term1__c) &amp;&amp;
+    NOT( ISBLANK( RecurSoft__Contract_Term1__c ) ) &amp;&amp;
+    ISPICKVAL( RecurSoft__Contract_Term_Setting__c , &#39;&#39;)
+)</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Contract_Term_Setting__c</errorDisplayField>
+        <errorMessage>Please choose Days or Months setting, when you change the Contract Term field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Fee_Req_for_Master_Subscription</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    RecurSoft__Is_Master__c &amp;&amp;
+    (
+        ISBLANK(RecurSoft__Activation_Fee_Price__c) &amp;&amp;
+        ISNULL(RecurSoft__Activation_Fee_Product__c)
+    )
+)</errorConditionFormula>
+        <errorMessage>Activation fee fields are required if this Opportunity Product should generate a Master Subscription.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Milestone_amount_required_for_date</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    !ISNEW() &amp;&amp;
+    ISPICKVAL(RecurSoft__Billing_Frequency_New__c,  &#39;Milestones&#39;) &amp;&amp;
+    (
+        OR(
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_1_Date__c)
+                ),
+                ISNULL(RecurSoft__Milestone_1_Amount__c)
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_2_Date__c)
+                ),
+                ISNULL(RecurSoft__Milestone_2_Amount__c)
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_3_Date__c)
+                ),
+                ISNULL(RecurSoft__Milestone_3_Amount__c)
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_4_Date__c)
+                ),
+                ISNULL(RecurSoft__Milestone_4_Amount__c)
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_5_Date__c)
+                ),
+                ISNULL(RecurSoft__Milestone_5_Amount__c)
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_6_Date__c)
+                ),
+                ISNULL(RecurSoft__Milestone_6_Amount__c)
+            )
+        )
+    )
+)</errorConditionFormula>
+        <errorMessage>Milestone Amount is mandatory for a Milestone Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__milestone_dates_less_then_contract_start</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false,
+    !ISNEW() &amp;&amp; ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp; 
+    ( 
+        OR(
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_1_Date__c)
+                ),
+                RecurSoft__Contract_Term_Start_Date_New__c &gt; RecurSoft__Milestone_1_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_2_Date__c)
+                ),
+                RecurSoft__Contract_Term_Start_Date_New__c &gt; RecurSoft__Milestone_2_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_3_Date__c)
+                ),
+                RecurSoft__Contract_Term_Start_Date_New__c &gt; RecurSoft__Milestone_3_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_4_Date__c)
+                ),
+                RecurSoft__Contract_Term_Start_Date_New__c &gt; RecurSoft__Milestone_4_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_5_Date__c)
+                ),
+                RecurSoft__Contract_Term_Start_Date_New__c &gt; RecurSoft__Milestone_5_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_6_Date__c)
+                ),
+                RecurSoft__Contract_Term_Start_Date_New__c &gt; RecurSoft__Milestone_6_Date__c
+            ) 
+        )        
+    )
+)</errorConditionFormula>
+        <errorMessage>Milestone dates should be more then Contract Term Start Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__milestone_dates_should_be_in_chrono_orde</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    !ISNEW() &amp;&amp; ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp;
+    (
+        OR(
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_1_Date__c)
+                ),
+                NOT(
+                    ISNULL(RecurSoft__Milestone_2_Date__c)
+                ),
+                RecurSoft__Milestone_1_Date__c &gt; RecurSoft__Milestone_2_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_2_Date__c)
+                ),
+                NOT(
+                    ISNULL(RecurSoft__Milestone_3_Date__c)
+                ),
+                RecurSoft__Milestone_2_Date__c &gt; RecurSoft__Milestone_3_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_3_Date__c)
+                ),
+                NOT(
+                    ISNULL(RecurSoft__Milestone_4_Date__c)
+                ),
+                RecurSoft__Milestone_3_Date__c &gt; RecurSoft__Milestone_4_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_4_Date__c)
+                ),
+                NOT(
+                    ISNULL(RecurSoft__Milestone_5_Date__c)
+                ),
+                RecurSoft__Milestone_4_Date__c &gt; RecurSoft__Milestone_5_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_5_Date__c)
+                ),
+                NOT(
+                    ISNULL(RecurSoft__Milestone_6_Date__c)
+                ),
+                RecurSoft__Milestone_5_Date__c &gt; RecurSoft__Milestone_6_Date__c
+            )
+        )
+    )
+)</errorConditionFormula>
+        <errorMessage>Milestones dates should be in chronological order</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Milestone_date_required_for_amount</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    !ISNEW() &amp;&amp; ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp;
+    (
+        OR(
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_1_Amount__c)
+                ),
+                ISNULL(RecurSoft__Milestone_1_Date__c)
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_2_Amount__c)
+                ),
+                ISNULL(RecurSoft__Milestone_2_Date__c)
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_3_Amount__c)
+                ),
+                ISNULL(RecurSoft__Milestone_3_Date__c)
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_4_Amount__c)
+                ),
+                ISNULL(RecurSoft__Milestone_4_Date__c)
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_5_Amount__c)
+                ),
+                ISNULL(RecurSoft__Milestone_5_Date__c)
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_6_Amount__c)
+                ),
+                ISNULL(RecurSoft__Milestone_6_Date__c)
+            )
+        )
+    )
+)</errorConditionFormula>
+        <errorMessage>Milestone Date is mandatory for a Milestone Amount</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__previous_milestone_is_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false,
+    !ISNEW() &amp;&amp; ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp;
+    (
+        OR(
+	    AND(
+		OR(
+                    NOT(
+                        ISNULL(RecurSoft__Milestone_6_Date__c)
+                    ),
+		    NOT(
+                        ISNULL(RecurSoft__Milestone_6_Amount__c)
+                    )
+		),
+		AND(
+                    (
+                        ISNULL(RecurSoft__Milestone_5_Date__c)
+                    ),
+		    (
+                        ISNULL(RecurSoft__Milestone_5_Amount__c)
+                    )
+		)
+	    ),
+	    AND(
+		OR(
+                    NOT(
+                        ISNULL(RecurSoft__Milestone_5_Date__c)
+                    ),
+		    NOT(
+                        ISNULL(RecurSoft__Milestone_5_Amount__c)
+                    )
+		),
+		AND(
+                    (
+                        ISNULL(RecurSoft__Milestone_4_Date__c)
+                    ),
+		    (
+                        ISNULL(RecurSoft__Milestone_4_Amount__c)
+                    )
+		)
+	    ),
+	    AND(
+		OR(
+                    NOT(
+                        ISNULL(RecurSoft__Milestone_4_Date__c)
+                    ),
+                    NOT(
+                        ISNULL(RecurSoft__Milestone_4_Amount__c)
+                        )
+		    ),
+		AND(
+                    (
+                        ISNULL(RecurSoft__Milestone_3_Date__c)
+                    ),
+		    (
+                        ISNULL(RecurSoft__Milestone_3_Amount__c)
+                    )
+		)
+	    ),
+	    AND(
+		OR(
+                    NOT(
+                        ISNULL(RecurSoft__Milestone_3_Date__c)
+                    ),
+		    NOT(
+                        ISNULL(RecurSoft__Milestone_3_Amount__c)
+                    )
+		),
+		AND(
+                    (
+                        ISNULL(RecurSoft__Milestone_2_Date__c)
+                    ),
+		    (
+                        ISNULL(RecurSoft__Milestone_2_Amount__c)
+                    )
+		)
+	    ),
+	    AND(
+	        OR(
+                    NOT(
+                        ISNULL(RecurSoft__Milestone_2_Date__c)
+                    ),
+		    NOT(
+                        ISNULL(RecurSoft__Milestone_2_Amount__c)
+                    )
+		),
+		AND(
+                    (
+                        ISNULL(RecurSoft__Milestone_1_Date__c)
+                    ),
+		    (
+                        ISNULL(RecurSoft__Milestone_1_Amount__c)
+                    )
+		)
+	    )
+        )
+    )
+)</errorConditionFormula>
+        <errorMessage>Previous milestone is required</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Renewal_rule_update_after_Closing_Won</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c, false, 
+    AND(
+        ISPICKVAL(Opportunity.StageName, &#39;Closed Won&#39;),
+        ISCHANGED(RecurSoft__Renewal_Rule__c)
+    )
+)</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Renewal_Rule__c</errorDisplayField>
+        <errorMessage>You can not update Renewal Rule after Closing Won the Opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__sum_of_milestones_is_higher_salesprice</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false,
+    !ISNEW() &amp;&amp; ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp; 
+    (
+        IF(ISNULL(RecurSoft__Milestone_1_Amount__c),0,RecurSoft__Milestone_1_Amount__c) +
+        IF(ISNULL(RecurSoft__Milestone_2_Amount__c),0,RecurSoft__Milestone_2_Amount__c) +
+        IF(ISNULL(RecurSoft__Milestone_3_Amount__c),0,RecurSoft__Milestone_3_Amount__c) +
+        IF(ISNULL(RecurSoft__Milestone_4_Amount__c),0,RecurSoft__Milestone_4_Amount__c) +
+        IF(ISNULL(RecurSoft__Milestone_5_Amount__c),0,RecurSoft__Milestone_5_Amount__c) +
+        IF(ISNULL(RecurSoft__Milestone_6_Amount__c),0,RecurSoft__Milestone_6_Amount__c)
+    ) &gt; TotalPrice
+)</errorConditionFormula>
+        <errorMessage>The sum of the Milestones amount is higher than the Opportunity Product Sales Price. Please correct the Milestones amount or the Total Price.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__sum_of_milestones_is_lower_salesprice</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false,
+    NOT(ISNEW()) &amp;&amp; ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp; 
+    (
+        IF(ISNULL(RecurSoft__Milestone_1_Amount__c),0,RecurSoft__Milestone_1_Amount__c) +
+        IF(ISNULL(RecurSoft__Milestone_2_Amount__c),0,RecurSoft__Milestone_2_Amount__c) +
+        IF(ISNULL(RecurSoft__Milestone_3_Amount__c),0,RecurSoft__Milestone_3_Amount__c) +
+        IF(ISNULL(RecurSoft__Milestone_4_Amount__c),0,RecurSoft__Milestone_4_Amount__c) +
+        IF(ISNULL(RecurSoft__Milestone_5_Amount__c),0,RecurSoft__Milestone_5_Amount__c) +
+        IF(ISNULL(RecurSoft__Milestone_6_Amount__c),0,RecurSoft__Milestone_6_Amount__c)
+    ) &lt;   TotalPrice
+)</errorConditionFormula>
+        <errorMessage>The sum of the Milestones amount is lower than the Opportunity Product Sales Price. Please correct the Milestones amount or the Total Price.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__ValidateBillingFrecvency</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    AND(
+        ISBLANK(
+            TEXT(RecurSoft__Billing_Frequency_New__c)
+        ),
+        ISCHANGED(
+            RecurSoft__Billing_Frequency_New__c
+        )
+    )
+)</errorConditionFormula>
+        <errorDisplayField>RecurSoft__Billing_Frequency_New__c</errorDisplayField>
+        <errorMessage>Please select a value for Billing Frequency.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__ValidateBillingFrecvencyClosedWonStage</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    RecurSoft__Source_Opportunity_Stage__c == &#39;Closed Won&#39; &amp;&amp;
+    ISCHANGED(
+        RecurSoft__Billing_Frequency_New__c
+    )
+)</errorConditionFormula>
+        <errorMessage>Billing frequency cannot be changed with opportunity set to &#39;Closed Won&#39;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__ValidatePricingOptions</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    AND(
+        NOT(
+            ISNEW()
+        ),
+        AND(
+            AND(
+                OR(
+                    RecurSoft__Price_Based_On__c = &#39;Tiers - Usage&#39;,
+                    RecurSoft__Price_Based_On__c = &#39;Absolute Tiers - Usage&#39;,
+                    RecurSoft__Price_Based_On__c = &#39;Brackets - Usage&#39;
+                ),
+                RecurSoft__Usage_Type__c &lt;&gt; &#39;Not Applicable&#39;
+            ),
+            OR(
+                AND(
+                    OR(
+                        ISBLANK(RecurSoft__Tier_1_Price__c),
+                        ISBLANK(RecurSoft__Tier_1_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_2_Price__c),
+                        ISBLANK(RecurSoft__Tier_2_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_3_Price__c),
+                        ISBLANK(RecurSoft__Tier_3_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_4_Price__c),
+                        ISBLANK(RecurSoft__Tier_4_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_5_Price__c),
+                        ISBLANK(RecurSoft__Tier_5_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_6_Price__c),
+                        ISBLANK(RecurSoft__Tier_6_Qty__c)
+                    )
+                ),
+                AND(
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_1__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_1__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_2__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_2__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_3__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_3__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_4__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_4__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_5__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_5__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Usage_Rate_6__c),
+                        ISBLANK(RecurSoft__Usage_Quantity_6__c)
+                    )
+                )
+            )
+        )
+    )
+)</errorConditionFormula>
+        <errorMessage>Pricing Options and Usage rates should have at least one tier populated.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__ValidatePricingOptionsNotApplicable</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    AND(
+        NOT(ISNEW()), 
+        AND( 
+            AND( 
+                OR( 
+                    RecurSoft__Price_Based_On__c = &#39;Tiers - Usage&#39;,
+                    RecurSoft__Price_Based_On__c = &#39;Absolute Tiers - Usage&#39;, 
+                    RecurSoft__Price_Based_On__c = &#39;Brackets - Usage&#39;
+                ),
+                RecurSoft__Usage_Type__c = &#39;Not Applicable&#39;
+            ), 
+            OR( 
+                AND( 
+                    OR(
+                        ISBLANK(RecurSoft__Tier_1_Price__c),
+                        ISBLANK(RecurSoft__Tier_1_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_2_Price__c),
+                        ISBLANK(RecurSoft__Tier_2_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_3_Price__c),
+                        ISBLANK(RecurSoft__Tier_3_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_4_Price__c),
+                        ISBLANK(RecurSoft__Tier_4_Qty__c)
+                    ), 
+                    OR(
+                        ISBLANK(RecurSoft__Tier_5_Price__c),
+                        ISBLANK(RecurSoft__Tier_5_Qty__c)
+                    ),
+                    OR(
+                        ISBLANK(RecurSoft__Tier_6_Price__c),
+                        ISBLANK(RecurSoft__Tier_6_Qty__c)
+                    )
+                )
+            )
+        )
+    )
+)</errorConditionFormula>
+        <errorMessage>Pricing Options should have at least one tier populated.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Validate_IMP_on_Closed_Won_stage</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    AND(
+        ISPICKVAL(Opportunity.StageName, &#39;Closed Won&#39;),
+        ISCHANGED(RecurSoft__Billing_dependent_on_imp_stat_new__c)
+    )
+)</errorConditionFormula>
+        <errorMessage>You cannot update Billing dependent on IMP status after the Opportunity Stage is set to Closed Won.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Validation_rule_invoicing_date</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    ISCHANGED(RecurSoft__Billing_Frequency_New__c) &amp;&amp; 
+    ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;One-Time&#39;) &amp;&amp;
+    (
+        !ISPICKVAL( Product2.RecurSoft__Invoicing_Date__c, &#39;Based on contract start date&#39;) ||
+        !ISPICKVAL( Product2.RecurSoft__Invoicing_Date__c, &#39;Based on contract start date&#39;)
+    )
+)</errorConditionFormula>
+        <errorMessage>One time without invoicing date based on contract start date is not allowed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Validation_rule_product_invoicing_date</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false,
+    ISCHANGED(RecurSoft__Billing_Frequency_New__c) &amp;&amp;
+    OR(
+        ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Semi-annual&#39;),
+        ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;)
+    ) &amp;&amp; 
+    OR(
+        ISPICKVAL(Product2.RecurSoft__Invoicing_Date__c, &#39;First day of the month&#39;),
+        ISPICKVAL(Product2.RecurSoft__Invoicing_Date__c, &#39;Last day of the month&#39;)
+    )
+)</errorConditionFormula>
+        <errorMessage>Semi-annual and Milestones billing frequency with First/Last Day of the month invoicing date are not allowed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RecurSoft__Validation_rule_prorated</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    ISCHANGED(
+        RecurSoft__Billing_Frequency_New__c
+    ) &amp;&amp;
+    !ISPICKVAL(
+        RecurSoft__Billing_Frequency_New__c, &quot;Monthly&quot;
+    ) &amp;&amp;
+    Product2.RecurSoft__Prorated__c == true
+)</errorConditionFormula>
+        <errorMessage>Prorated only works for monthly billing frequency.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Trial_Floor</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(ISBLANK( PricebookEntry.Trial_Period_Floor__c )) &amp;&amp;
+VALUE(TEXT(Trial__c)) &gt; PricebookEntry.Trial_Period_Floor__c</errorConditionFormula>
+        <errorMessage>The trial period is greater than the maximum allowable length.</errorMessage>
+    </validationRules>
+    <fieldSets>
+        <fullName>pandadoc__OPPORTUNITYLINEITEM_PANDADOC</fullName>
+        <description>PandaDocHelper</description>
+        <displayedFields>
+            <field>TotalPrice</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Discount</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>OPPORTUNITYLINEITEM_PANDADOC</label>
+    </fieldSets>
+</CustomObject>

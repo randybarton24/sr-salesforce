@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retention_Annual_No_sale</fullName>
+    <active>true</active>
+    <description>For Retention Opportunities you cannot No Sale an Annual Request - MS 6/5/2014</description>
+    <errorConditionFormula>AND(or(RecordTypeId = &quot;012i0000001Dyv7&quot;,RecordTypeId = &quot;012i0000001Dyv4&quot;), ispickval(Cancel_Request_Type__c, &quot;Annual&quot;) ,  ispickval(StageName,&quot;No Sale&quot;))</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>You cannot mark an Annual Request as a No Sale</errorMessage>
+</ValidationRule>

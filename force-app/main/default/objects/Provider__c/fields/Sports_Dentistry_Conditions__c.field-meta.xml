@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sports_Dentistry_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Sports Dentistry Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Broken Tooth</fullName>
+                <default>false</default>
+                <label>Broken Tooth</label>
+            </value>
+            <value>
+                <fullName>Chipped Tooth</fullName>
+                <default>false</default>
+                <label>Chipped Tooth</label>
+            </value>
+            <value>
+                <fullName>Cracked Tooth</fullName>
+                <default>false</default>
+                <label>Cracked Tooth</label>
+            </value>
+            <value>
+                <fullName>Dental Injury</fullName>
+                <default>false</default>
+                <label>Dental Injury</label>
+            </value>
+            <value>
+                <fullName>Dental Trauma</fullName>
+                <default>false</default>
+                <label>Dental Trauma</label>
+            </value>
+            <value>
+                <fullName>Excessive Tooth Wear</fullName>
+                <default>false</default>
+                <label>Excessive Tooth Wear</label>
+            </value>
+            <value>
+                <fullName>Loose Teeth</fullName>
+                <default>false</default>
+                <label>Loose Teeth</label>
+            </value>
+            <value>
+                <fullName>Oral and-or Facial Athletic Injury</fullName>
+                <default>false</default>
+                <label>Oral and-or Facial Athletic Injury</label>
+            </value>
+            <value>
+                <fullName>Tooth Displacement</fullName>
+                <default>false</default>
+                <label>Tooth Displacement</label>
+            </value>
+            <value>
+                <fullName>Tooth Loss</fullName>
+                <default>false</default>
+                <label>Tooth Loss</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

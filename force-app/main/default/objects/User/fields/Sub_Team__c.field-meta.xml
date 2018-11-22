@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Team__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-Team</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inside Sales</fullName>
+                <default>false</default>
+                <label>Inside Sales</label>
+            </value>
+            <value>
+                <fullName>Territory Sales</fullName>
+                <default>false</default>
+                <label>Territory Sales</label>
+            </value>
+            <value>
+                <fullName>Outside Sales</fullName>
+                <default>false</default>
+                <label>Outside Sales</label>
+            </value>
+            <value>
+                <fullName>Major Accounts</fullName>
+                <default>false</default>
+                <label>Major Accounts</label>
+            </value>
+            <value>
+                <fullName>Mid-Market</fullName>
+                <default>false</default>
+                <label>Mid-Market</label>
+            </value>
+            <value>
+                <fullName>Upsell</fullName>
+                <default>false</default>
+                <label>Upsell</label>
+            </value>
+            <value>
+                <fullName>Client Engagement</fullName>
+                <default>false</default>
+                <label>Client Engagement</label>
+            </value>
+            <value>
+                <fullName>Client Success</fullName>
+                <default>false</default>
+                <label>Client Success</label>
+            </value>
+            <value>
+                <fullName>Enterprise Client Success</fullName>
+                <default>false</default>
+                <label>Enterprise Client Success</label>
+            </value>
+            <value>
+                <fullName>Mid-Market Client Success</fullName>
+                <default>false</default>
+                <label>Mid-Market Client Success</label>
+            </value>
+            <value>
+                <fullName>Independent Client Success</fullName>
+                <default>false</default>
+                <label>Independent Client Success</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

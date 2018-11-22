@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>South_Texas_Evergage</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Subscriber_ID__c</columns>
+    <columns>EvergageEngagementTrend__c</columns>
+    <columns>ApptegicEngagement__c</columns>
+    <columns>ApptegicFilters__c</columns>
+    <columns>ApptegicLastActivity__c</columns>
+    <columns>RecurSoft__Status__c</columns>
+    <columns>Admin_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PARENT_NAME</field>
+        <operation>contains</operation>
+        <value>south texas</value>
+    </filters>
+    <filters>
+        <field>Admin_Status__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <label>South Texas Evergage</label>
+    <sharedTo>
+        <group>CS_Enterprise_Support</group>
+    </sharedTo>
+</ListView>

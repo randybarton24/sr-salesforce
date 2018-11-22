@@ -1,0 +1,1934 @@
+<apex:page renderAs="pdf" controller="ContractPDF_Controller" sidebar="false" showheader="false" standardStylesheets="false" cache="false" applyHtmlTag="false" >
+    
+    <html lang="en">
+        <head>
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <meta name="description" content=""/>
+            <meta name="author" content=""/>
+            
+            
+            <title>Solutionreach Agreement</title>
+            
+            <!-- Bootstrap core CSS -->
+            <apex:stylesheet value="{!URLFOR($Resource.bootstrapPDF, 'css/bootstrap.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.bootstrap, 'css/bootstrap-theme.min.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.style)}" />
+            
+            <style type="text/css">
+                
+                @page {
+                size: A4;
+                }
+                
+                * {
+                font-size: 10px;
+                }
+                
+                sup {
+                font-size: 6px;
+                }
+                
+                ol {
+                margin-right: 10px;
+                }
+                
+                .table > tbody > tr > td {
+                height: 10px;
+                padding: 1px;
+                margin: 1px;
+                padding-left: 3px;
+                vertical-align: middle;
+                white-space: nowrap;
+                }
+                
+                .table > tbody > tr > td > p {
+                padding: 1px;
+                margin: 1px;
+                padding-left: 3px;
+                vertical-align: middle;
+                white-space: nowrap;
+                }
+                
+                .table > thead > tr > td {
+                height: 10px;
+                padding: 1px;
+                margin: 1px;
+                padding-left: 3px;
+                vertical-align: middle;
+                white-space: nowrap;
+                }
+                
+                .table > thead > tr > td > p {
+                padding: 1px;
+                margin: 1px;
+                padding-left: 3px;
+                vertical-align: middle;
+                white-space: nowrap;
+                }
+                
+                .nobreak-div {
+                page-break-inside: avoid;
+                }
+                
+                .EULA-BOLD {
+                
+                font-size:10px;
+                font-weight:bold;
+                padding: 0px;
+                margin: 0px;
+                border: 0px;
+                line-height: normal;
+                }
+                
+                .EULA-NORMAL {
+                
+                font-size:10px;
+                font-weight:normal;
+                padding: 0px;
+                margin: 0px;
+                border: 0px;
+                line-height: normal;
+                }
+                
+                .nobr {
+                white-space: nowrap;
+                }
+                
+            </style>
+            
+            
+        </head>
+        
+        <body >
+            
+            <div class="container theme-showcase" role="main">
+                <apex:form >
+                    <apex:outputPanel id="Header">
+                        <div id="Heading" style="padding: 1px; margin: 1px;" class="page-header">
+                            <header style="height: 92px; border-bottom: none; background: #FFFFFF url('{!$Resource.bgSRLogo}') no-repeat center center;"/>
+                            <apex:outputPanel id="HeaderTitle" rendered="{!!isAPI}">
+                                <div>
+                                    <p class="text-uppercase text-center"><strong>Solutionreach Services Agreement</strong></p>
+                                </div>
+                            </apex:outputPanel>
+                        </div>
+                        <apex:outputPanel id="Preamble" rendered="{!!isAPI}">
+                            <div id="Preamble">
+                                <p>This Services Agreement (“Agreement”) is entered into on <apex:outputText value="{0,date, MMMM d',' yyyy}"><apex:param Value="{!TODAY()}"/></apex:outputText> ("Effective Date") by and between Solutionreach, Inc. (the “Company”), with its principal place of business at 2600 N. Ashton Blvd. Lehi, UT 84043, and Client, with its principal place of business listed below. This Agreement governs the rights and responsibilities of the parties with respect to the Services identified below, and in consideration of the mutual promises contained herein, the parties agree to be legally bound by its terms.</p>
+                            </div>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <apex:outputPanel id="InformationTable" rendered="{!!isAPI}">
+                        <div id="Information Table">
+                            <div class="row">
+                                <div>
+                                    <table class="table table-bordered" style="padding: 1px;">
+                                        <thead>
+                                            <tr>
+                                                <td colspan="6" class="bg-black">
+                                                    <p><strong>Client Account Information ("Client")</strong></p>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Legal Business Name</strong></p>
+                                                </td>    
+                                                <td colspan="5">
+                                                    <apex:outputText value="{!acctWrapper.BusinessName}" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Business Address</strong></p>
+                                                </td>
+                                                <td colspan="5">
+                                                    <apex:outputText value="{!acctWrapper.Address1}" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>City</strong></p>
+                                                </td>
+                                                <td colspan="1">
+                                                    <apex:outputText value="{!acctWrapper.City}" />
+                                                </td>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>State</strong></p>
+                                                </td>
+                                                <td colspan="1">
+                                                    <apex:outputText value="{!acctWrapper.State}" />
+                                                </td>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Zip</strong></p>
+                                                </td>
+                                                <td colspan="1" valign="center">
+                                                    <apex:outputText value="{!acctWrapper.Zip}" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Country</strong></p>
+                                                </td>
+                                                <td colspan="5">
+                                                    <apex:outputText value="{!acctWrapper.Country}" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Website Address</strong></p>
+                                                </td>
+                                                <td colspan="5">
+                                                    <apex:outputText value="{!acctWrapper.Website}" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Practice Software</strong></p>
+                                                </td>
+                                                <td colspan="2">
+                                                    <apex:outputText value="{!opp.Account.Practice_Management_Software__r.Name}"/>
+                                                </td>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Version</strong></p>
+                                                </td>
+                                                <td colspan="2">
+                                                    <apex:outputText value="{!opp.Account.Practice_Management_Software__r.Version__c}"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                    </apex:outputPanel>
+                    <apex:outputPanel id="ContactTable" rendered="{!!isAPI}">
+                        
+                        <apex:outputText value="TEST - NON PAYWALL: This Contact Grid is displayed for all sales." rendered="{!isTest}"/>
+                        <div id="Contact Table">
+                            <div class="row text-center">
+                                <div>
+                                    <apex:outputPanel rendered="{!hasSR || hasSRMonthly || hasSRAdvance || hasSRAnnual || isTest}">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="7" class="bg-black" style="text-align: left;">
+                                                        <p><strong>Office Contact Information</strong></p>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>Office Role</strong></p>
+                                                    </td>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>First Name</strong></p>
+                                                    </td>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>Last Name</strong></p>
+                                                    </td>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>Title</strong></p>
+                                                    </td>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>Phone</strong></p>
+                                                    </td>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>Email</strong></p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1" height="30">
+                                                        Primary Doctor/Owner
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!primaryDoctorWrapper.FirstName}"/>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!primaryDoctorWrapper.LastName}"/>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!primaryDoctorWrapper.Title}"/>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!primaryDoctorWrapper.DirectPhone}"/>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!primaryDoctorWrapper.Email}"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1" height="30">
+                                                        Business Contact
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!businessContactWrapper.FirstName}"/>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!businessContactWrapper.LastName}"/>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!businessContactWrapper.Title}"/>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!businessContactWrapper.DirectPhone}"/>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!businessContactWrapper.Email}"/>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel id="BillingContact" rendered="{!!isAPI}">
+                        <apex:outputText value="TEST - NON PAYWALL: This Billing Contact Section is displayed for all sales." rendered="{!isTest}"/>
+                        <div id="Billing Contact">
+                            <div class="row">
+                                <div>
+                                    <apex:outputPanel rendered="{!hasSR || hasSRMonthly || hasSRAdvance || hasSRAnnual || isTest}">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="6" class="bg-black" style="text-align: left;">
+                                                        <p><strong>Billing Contact Information</strong></p>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>First Name</strong></p>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!billingContactWrapper.FirstName}"/>
+                                                    </td>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>Last Name</strong></p>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!billingContactWrapper.LastName}"/>
+                                                    </td>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>Title</strong></p>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!billingContactWrapper.Title}"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>Phone</strong></p>
+                                                    </td>
+                                                    <td colspan="1">
+                                                        <apex:outputText value="{!billingContactWrapper.DirectPhone}"/>
+                                                    </td>
+                                                    <td colspan="1" class="bg-gray">
+                                                        <p><strong>Email</strong></p>
+                                                    </td>
+                                                    <td colspan="3">
+                                                        <apex:outputText value="{!billingContactWrapper.Email}"/>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                    <br/>
+                    <apex:outputPanel id="ProductsGrid" rendered="{!!isAPI}">
+                        <div id="Products Main">
+                            <apex:outputPanel id="NoDiscount" rendered="{!!hasDiscount || isTest}">
+                                <apex:outputText value="TEST - NON PAYWALL: This Product Grid is displayed for all sales without a discount." rendered="{!isTest}"/>
+                                <div id="Product Grid">
+                                    <div class="row text-center">
+                                        <div>
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <td colspan="7" class="bg-black" style="text-align: left;">
+                                                            <p><strong>Product Selections</strong></p>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Product Name</strong></p>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Term</strong></p>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Setup<br/>Fee</strong></p>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                                    
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!!hasSRAnnual}">
+                                                                <p><strong>Monthly<br/>Service Fee</strong></p>
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!hasSRAnnual}">
+                                                                <p><strong>Annual<br/>Service Fee</strong></p>
+                                                            </apex:outputText> 
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Additional<br/>Providers</strong></p>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                                    
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!!hasSRAnnual}">
+                                                                <p><strong>Total Monthly<br/>Service Fees</strong></p>
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!hasSRAnnual}">
+                                                                <p><strong>Total Annual<br/>Service Fees</strong></p>
+                                                            </apex:outputText>  
+                                                        </td>
+                                                    </tr>
+                                                    <apex:repeat value="{!wrapProductList}" var="product">
+                                                        <tr>
+                                                            <td colspan="1" height="30">
+                                                                <apex:outputText value="{!product.productName}"/>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                <apex:outputText value="{!product.term}"/>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                <apex:outputText value="{0, Number, Currency}">
+                                                                    <apex:param value="{!product.setupFee}"/>
+                                                                </apex:outputText>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                <apex:outputText value="{0, Number, Currency}">
+                                                                    <apex:param value="{!product.monthlyFee}"/>
+                                                                </apex:outputText>
+                                                                &nbsp;
+                                                                <apex:outputText value="{!product.promoPriceText}"/>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                <apex:outputText value="N/A" rendered="{!product.addtlProviderQty = 0}"/>
+                                                                <apex:outputText value="# Addtl: {0, Number, Integer}" rendered="{!product.addtlProviderQty != 0}">
+                                                                    <apex:param value="{!product.addtlProviderQty}"/>
+                                                                </apex:outputText>
+                                                                <br/>
+                                                                <apex:outputText value="x {0, Number, Currency} = {1, Number, Currency}" rendered="{!product.addtlProviderQty != 0}">
+                                                                    <apex:param value="{!product.addtlProviderPrice}"/>
+                                                                    <apex:param value="{!product.addtlProviderPrice * product.addtlProviderQty}"/>
+                                                                </apex:outputText>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                        
+                                                                <!-- Annual vs. Monthly -->
+                                                                <apex:outputText value="{0, Number, Currency}/mo"  rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                    <apex:param value="{!product.totalMonthlyFee}"/>
+                                                                </apex:outputText>
+                                                                <apex:outputText value="{0, Number, Currency}/yr"  rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                    <apex:param value="{!product.totalMonthlyFee}"/>
+                                                                </apex:outputText>
+                                                            </td>
+                                                        </tr>
+                                                    </apex:repeat>
+                                                    <tr>
+                                                        <td class="text-left" colspan="5">
+                                                                    
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!!hasSRAnnual}">
+                                                                <p><strong>Grand Total Monthly Service Fees:</strong></p>
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!hasSRAnnual}">
+                                                                <p><strong>Grand Total Annual Service Fees:</strong></p>
+                                                            </apex:outputText>
+                                                        </td>
+                                                        <td colspan="1">
+                                                            
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText value="{0, Number, Currency} per month" rendered="{!!hasSRAnnual}">
+                                                                <apex:param value="{!grandTotalMonthlyFee}"/>
+                                                            </apex:outputText>
+                                                            <apex:outputText value="{0, Number, Currency} per year" rendered="{!hasSRAnnual}">
+                                                                <apex:param value="{!grandTotalMonthlyFee}"/>
+                                                            </apex:outputText>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Discount" rendered="{!hasDiscount || isTest}">
+                                <apex:outputText value="TEST - NON PAYWALL: This Product Grid is displayed for all sales with a discount." rendered="{!isTest}"/>
+                                <div id="Product Grid">
+                                    <div class="row text-center">
+                                        <div>
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <td colspan="7" class="bg-black"  style="text-align: left;">
+                                                            <p><strong>Product Selections</strong></p>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Product Name</strong></p>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Term</strong></p>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Setup<br/>Fee</strong></p>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                                    
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!!hasSRAnnual}">
+                                                                <p><strong>Monthly<br/>Service Fee</strong></p>
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!hasSRAnnual}">
+                                                                <p><strong>Annual<br/>Service Fee</strong></p>
+                                                            </apex:outputText> 
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Promotional<br/>Discount</strong></p>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Additional<br/>Providers</strong></p>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                                    
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!!hasSRAnnual}">
+                                                                <p><strong>Total Monthly<br/>Service Fees</strong></p>
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!hasSRAnnual}">
+                                                                <p><strong>Total Annual<br/>Service Fees</strong></p>
+                                                            </apex:outputText>  
+                                                        </td>
+                                                    </tr>
+                                                    <apex:repeat value="{!wrapProductList}" var="product">
+                                                        <tr>
+                                                            <td colspan="1" height="30">
+                                                                <apex:outputText value="{!product.productName}"/>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                <apex:outputText value="{!product.term}"/>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                <apex:outputText value="{0, Number, Currency}">
+                                                                    <apex:param value="{!product.setupFee}"/>
+                                                                </apex:outputText>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                <apex:outputText value="{0, Number, Currency}">
+                                                                    <apex:param value="{!product.monthlyFee}"/>
+                                                                </apex:outputText>
+                                                                &nbsp;
+                                                                <apex:outputText value="{!product.promoPriceText}"/>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                <apex:outputText value="{0, Number, Currency}">
+                                                                    <apex:param value="{! -product.discountAmount}"/>
+                                                                </apex:outputText>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                <apex:outputText value="N/A" rendered="{!product.addtlProviderQty = 0}"/>
+                                                                <apex:outputText value="# Addtl: {0, Number, Integer}" rendered="{!product.addtlProviderQty != 0}">
+                                                                    <apex:param value="{!product.addtlProviderQty}"/>
+                                                                </apex:outputText>
+                                                                <br/>
+                                                                <apex:outputText value="x {0, Number, Currency} = {1, Number, Currency}" rendered="{!product.addtlProviderQty != 0}">
+                                                                    <apex:param value="{!product.addtlProviderPrice}"/>
+                                                                    <apex:param value="{!product.addtlProviderPrice * product.addtlProviderQty}"/>
+                                                                </apex:outputText>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                        
+                                                                <!-- Annual vs. Monthly -->
+                                                                <apex:outputText value="{0, Number, Currency}/mo"  rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                    <apex:param value="{!product.totalMonthlyFee}"/>
+                                                                </apex:outputText>
+                                                                <apex:outputText value="{0, Number, Currency}/yr"  rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                    <apex:param value="{!product.totalMonthlyFee}"/>
+                                                                </apex:outputText>
+                                                            </td>
+                                                        </tr>
+                                                    </apex:repeat>
+                                                    <tr>
+                                                        <td class="text-left" colspan="6">
+                                                                    
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!!hasSRAnnual}">
+                                                                <p><strong>Grand Total Monthly Service Fees:</strong></p>
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!hasSRAnnual}">
+                                                                <p><strong>Grand Total Annual Service Fees:</strong></p>
+                                                            </apex:outputText>
+                                                        </td>
+                                                        <td colspan="1">
+                                                            
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText value="{0, Number, Currency} per month" rendered="{!!hasSRAnnual}">
+                                                                <apex:param value="{!grandTotalMonthlyFee}"/>
+                                                            </apex:outputText>
+                                                            <apex:outputText value="{0, Number, Currency} per year" rendered="{!hasSRAnnual}">
+                                                                <apex:param value="{!grandTotalMonthlyFee}"/>
+                                                            </apex:outputText>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </apex:outputPanel>
+                            <apex:outputPanel id="Services" rendered="{!hasPS && !hasDiscountPS}">    
+                                        <div id="Service Grid">
+                                            <div class="row text-center">
+                                                <div>
+                                                    <table class="table table-bordered">    <tbody>
+                                                            <tr>
+                                                                <td colspan="1" class="bg-gray">
+                                                                    <p><strong>Professional Services</strong></p>
+                                                                </td>
+                                                                <td colspan="1" class="bg-gray">
+                                                                    <p><strong>Term</strong></p>
+                                                                </td>
+                                                                <td colspan="1" class="bg-gray">
+                                                                    <p><strong>Fee</strong></p>
+                                                                </td>
+                                                                
+                                                                <td colspan="1" class="bg-gray">
+                                                                    <p><strong>Quantity
+                                                                    </strong></p>
+                                                                </td>
+                                                                <td colspan="1" class="bg-gray">
+                                                                    
+                                                                    <p><strong>Subtotal</strong></p>
+                                                      
+                                                                </td>
+                                                            </tr>
+                                                            <apex:repeat value="{!wrapServicesList}" var="product">
+                                                                <tr>
+                                                                    <td colspan="1" height="30">
+                                                                        <apex:outputText value="{!product.productName}"/>
+                                                                    </td>
+                                                                    <td colspan="1">
+                                                                        <apex:outputText rendered="{!!product.hasPSOneTime}" value="{!product.term}" />
+                                                                        
+                                                                        <apex:outputText rendered="{!product.hasPSOneTime}" value="One time" />
+                                                                        
+                                                                    </td>
+                                                                    <td colspan="1">
+                                                                        <apex:outputText value="{0, Number, Currency}">
+                                                                            <apex:param value="{!product.setupFee}"/>
+                                                                        </apex:outputText>
+                                                                    </td>
+                                                                    
+                                                                    <td colspan="1">
+                                                                        <apex:outputText value="N/A" rendered="{!product.addtlProviderQty = 0}"/>
+                                                                        <apex:outputText value="{!product.addtlProviderQty}" rendered="{!product.addtlProviderQty != 0}"/>
+                                                                        
+                                                                    </td>
+                                                                    <td colspan="1">
+                                                                                                                                              
+                                                                        <apex:outputText value="{0, Number, Currency}/mo"  rendered="{!!product.hasPSOneTime}">
+                                                                            <apex:param value="{!product.totalMonthlyFee}"/>
+                                                                        </apex:outputText>
+                                                                        <apex:outputText value="{0, Number, Currency}"  rendered="{!product.hasPSOneTime}">
+                                                                            <apex:param value="{!product.totalMonthlyFee}"/>
+                                                                        </apex:outputText>
+                                                                    </td>
+                                                                </tr>
+                                                            </apex:repeat>
+                                                            <!--<tr>
+                                                                <td class="text-left" colspan="2">
+                                      
+                                                                    <apex:outputText >
+                                                                        <p>Professional Services fees quoted are one-time fees, unless otherwise noted.</p>
+                                                                    </apex:outputText>
+                                                                   
+                                                                </td>
+                                                                <td class="text-left" colspan="2">
+                                      
+                                                                    <apex:outputText >
+                                                                        <p><strong>Grand Total Professional Services Fees</strong></p>
+                                                                    </apex:outputText>
+                                                                   
+                                                                </td>
+                                                                <td colspan="1">
+                                                                                                                                    
+                                                                    <apex:outputText value="{0, Number, Currency}">
+                                                                        <apex:param value="{!grandTotalServicesFee}"/>
+                                                                    </apex:outputText>
+                                                                    
+                                                                </td>
+                                                            </tr>-->
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                             </apex:outputPanel>
+                             <apex:outputPanel id="ServicesWithDiscount" rendered="{!hasPS && hasDiscountPS}">    
+                                        <div id="Service Grid">
+                                            <div class="row text-center">
+                                                <div>
+                                                    <table class="table table-bordered">    <tbody>
+                                                            <tr>
+                                                                <td colspan="1" class="bg-gray">
+                                                                    <p><strong>Professional Services</strong></p>
+                                                                </td>
+                                                                <td colspan="1" class="bg-gray">
+                                                                    <p><strong>Term</strong></p>
+                                                                </td>
+                                                                <td colspan="1" class="bg-gray">
+                                                                    <p><strong>Fee</strong></p>
+                                                                </td>
+                                                                <td colspan="1" class="bg-gray">
+                                                                    <p><strong>Discount</strong></p>
+                                                                </td>
+                                                                <td colspan="1" class="bg-gray">
+                                                                    <p><strong>Quantity
+                                                                    </strong></p>
+                                                                </td>
+                                                                <td colspan="1" class="bg-gray">
+                                                                    
+                                                                    <p><strong>Subtotal</strong></p>
+                                                      
+                                                                </td>
+                                                            </tr>
+                                                            <apex:repeat value="{!wrapServicesList}" var="product">
+                                                                <tr>
+                                                                    <td colspan="1" height="30">
+                                                                        <apex:outputText value="{!product.productName}"/>
+                                                                    </td>
+                                                                    <td colspan="1">
+                                                                        <apex:outputText rendered="{!!product.hasPSOneTime}" value="{!product.term}" />
+                                                                        
+                                                                        <apex:outputText rendered="{!product.hasPSOneTime}" value="One time" />
+                                                                        
+                                                                    </td>
+                                                                    <td colspan="1">
+                                                                        <apex:outputText value="{0, Number, Currency}">
+                                                                            <apex:param value="{!product.setupFee}"/>
+                                                                        </apex:outputText>
+                                                                    </td>
+                                                                    <td colspan="1">
+                                                                        <apex:outputText value="{0, Number, Currency}">
+                                                                            <apex:param value="{! -product.discountAmount}"/>
+                                                                        </apex:outputText>
+                                                                    </td>
+                                                                    <td colspan="1">
+                                                                        <apex:outputText value="N/A" rendered="{!product.addtlProviderQty = 0}"/>
+                                                                        <apex:outputText value="{!product.addtlProviderQty}" rendered="{!product.addtlProviderQty != 0}"/>
+                                                                        
+                                                                    </td>
+                                                                    <td colspan="1">
+                                                                                                                                              
+                                                                        <apex:outputText value="{0, Number, Currency}/mo"  rendered="{!!product.hasPSOneTime}">
+                                                                            <apex:param value="{!product.totalMonthlyFee}"/>
+                                                                        </apex:outputText>
+                                                                        <apex:outputText value="{0, Number, Currency}"  rendered="{!product.hasPSOneTime}">
+                                                                            <apex:param value="{!product.totalMonthlyFee}"/>
+                                                                        </apex:outputText>
+                                                                    </td>
+                                                                </tr>
+                                                            </apex:repeat>
+                                                            <!--<tr>
+                                                                <td class="text-left" colspan="2">
+                                      
+                                                                    <apex:outputText >
+                                                                        <p>Professional Services fees quoted are one-time fees, unless otherwise noted.</p>
+                                                                    </apex:outputText>
+                                                                   
+                                                                </td>
+                                                                <td class="text-left" colspan="3">
+                                      
+                                                                    <apex:outputText >
+                                                                        <p><strong>Grand Total Professional Services Fees</strong></p>
+                                                                    </apex:outputText>
+                                                                   
+                                                                </td>
+                                                                <td colspan="1">
+                                                                                                                                    
+                                                                    <apex:outputText value="{0, Number, Currency}">
+                                                                        <apex:param value="{!grandTotalServicesFee}"/>
+                                                                    </apex:outputText>
+                                                                    
+                                                                </td>
+                                                            </tr>-->
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                             </apex:outputPanel>
+                        </div>
+                    </apex:outputPanel>
+                    <div id="FinePrint">
+                                <apex:repeat value="{!wrapProductList}" var="product" rendered="{!!isAPI}">
+                                    <apex:outputPanel id="SRPlatformTerms" rendered="{!product.productName = 'SR Platform'}">
+                                        <apex:outputText value="TEST: SR Platform" rendered="{!isTest}"/>
+                                        <h5 class="text-center"><strong>Solutionreach Platform Services Agreement Terms and Conditions</strong></h5>
+                                        <div id="Terms and Conditions">
+                                            <br/>
+                                            <ol>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            <u>Rights Granted to the Services: </u>
+                                                            The Company agrees to grant Client a non-exclusive, non-assignable, royalty free, worldwide limited right to access and use the Solutionreach Platform software (the “Services”) via a digital information processing, transmission, and storage system (“Servers”) maintained by the Company and located at the Company’s facilities, solely for Client’s internal business operations and subject to the Terms and Conditions of this Services Agreement. The Company shall make the Services and Servers available on and via the internet. The Company represents and warrants that (i) it is the lawful licensee or owner of the Services; (ii) it has all the necessary rights in the Services to grant the use of the Services to Client; (iii) to the Company’s knowledge, it has not received any written notice or claim, and is not otherwise aware that the Services infringes or misappropriates the proprietary rights of any other third party, and (iv) it will indemnify Client against any infringement by the Company of the copyright, trademark, patent, trade secret, or other intellectual property right of any other third party.
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            <u>Fees and Payment:</u> 
+                                                            Subject to any modifications contained herein, Client agrees to the following payment terms: (i) Client agrees pay a one-time, non-refundable Setup Fee of&nbsp;
+                                                            <apex:outputText value="{0, Number, Currency}">
+                                                                <apex:param value="{!product.setupFee}"/>
+                                                            </apex:outputText> 
+                                                            immediately upon the execution of this Agreement; (ii) Client agrees to pay the recurring 
+
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                Monthly
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                Annual
+                                                            </apex:outputText>
+                                                            Service Fee of&nbsp;
+                                                            <apex:outputText value="{0, Number, Currency}">
+                                                                <apex:param value="{!product.monthlyFee - product.discountAmount}"/>
+                                                            </apex:outputText> 
+                                                            for the Solutionreach Platform subscription. The 
+
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                Monthly
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                Annual
+                                                            </apex:outputText>
+                                                            Service Fee for the Solutionreach Platform subscription shall be charged to Client’s credit card or bank account at the
+                                                            
+                                                            <!-- Billing in Arrears vs Advance Billing -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'Arrears'}">
+                                                                beginning
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'Arrears'}">
+                                                                end
+                                                            </apex:outputText>
+                                                            
+
+                                                            of each 
+
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                monthly
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                annual
+                                                            </apex:outputText>
+                                                            billing cycle throughout the Term of this Agreement. The initial 
+
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                monthly
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                annual
+                                                            </apex:outputText>
+                                                            billing cycle will commence on the Effective Date.
+                                                            
+
+                                                            <!-- Month-to-Month vs Contract -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'Monthly'}">
+                                                                
+                                                                <!-- Annual vs. Monthly -->
+                                                                <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                     The Monthly Service Fee is based on (i) multi-annual agreement (
+                                                                    <apex:outputText value="{!product.termMonths}"/> 
+                                                                    months), (ii) per Location, (iii) Services, and (iv) includes up to&nbsp;
+                                                                    <apex:outputText value="{!includedProviders}"/> 
+                                                                    Providers per Location.
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                     The Annual Service Fee is based on (i) annual agreement (
+                                                                    <apex:outputText value="{!product.termMonths}"/> 
+                                                                    months), (ii) per Location, (iii) Services, (iv) includes up to&nbsp;
+                                                                    <apex:outputText value="{!includedProviders}"/> 
+                                                                    Providers per Location, and (v) annual pre-payment discount.
+                                                                </apex:outputText>
+
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'Monthly'}">
+                                                                Pricing includes up to&nbsp;
+                                                                <apex:outputText value="{!includedProviders}"/> 
+                                                                Providers per Location.
+                                                            </apex:outputText>&nbsp;
+                                                            
+
+                                                            Each additional Provider per Location shall increase the 
+
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                Monthly Service Fee for that Location by&nbsp;
+                                                                <apex:outputText value="{0, Number, Currency}">
+                                                                    <apex:param value="{!addtlProviderPrice}"/>
+                                                                </apex:outputText>
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                Annual Service Fee for that Location by&nbsp;
+                                                                <apex:outputText value="{0, Number, Currency}">
+                                                                    <apex:param value="{!addtlProviderPrice * 12}"/>
+                                                                </apex:outputText>
+                                                            </apex:outputText>
+                                                            
+                                                            per additional Provider. For the purposes of this Agreement, “Location” means an office or physical facility established for the diagnosis or treatment of healthcare services, usually consisting of a physical building, structure, and independent business address, but may include a separate and distinct department within such office or physical facility that provides specialized healthcare services not offered by other departments within the office or physical facility. “Provider” shall mean a healthcare practitioner for which the Service is used to schedule healthcare appointment reminders.
+                                                            <apex:outputText rendered="{!product.freeMonths > 0 || isTest}">
+                                                                <strong>Orientation Period:</strong> 
+                                                                Client shall receive the 
+                                                                <strong>first&nbsp;
+                                                                    <apex:outputText value="{!product.freeMonths}"/> 
+                                                                    month(s) of service for&nbsp;
+                                                                    <apex:outputText value="{0, Number, Currency}">
+                                                                        <apex:param value="{!product.promoPrice}"/>
+                                                                    </apex:outputText>
+                                                                </strong> 
+                                                                ("Orientation Period”). Billing of the Monthly Service Fee will automatically begin following the Orientation Period, unless Client has terminated its Solutionreach Platform Subscription as provided for herein. 
+                                                            </apex:outputText>
+                                                            All fees are in U.S. Dollars.
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            <u>License Term; Automatic Renewal:</u>&nbsp;
+                                                            
+                                                            <!-- Month-to-Month vs Contract -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'Monthly'}">
+                                                                The Initial Term of this Agreement shall commence on the Effective Date and continue for&nbsp;
+                                                                <apex:outputText value="{!product.termMonths}"/> 
+                                                                months from the Effective Date (“Renewal Date”). This Agreement shall renew automatically on the Renewal Date for an additional 12-month Term and annually thereafter upon each subsequent anniversary of the Renewal Date, unless Client provides written notice of cancellation to Company according to the terms described in section 4&nbsp;
+                                                                
+                                                                <!-- Sat Period vs No Sat -->
+                                                                <apex:outputText rendered="{!product.trialDays != 0}">
+                                                                    (“Satisfaction Guarantee; Termination”) or section 5 (“Termination after Satisfaction Guarantee”).
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.trialDays = 0}">
+                                                                    ("Termination")
+                                                                </apex:outputText>
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'Monthly'}">
+                                                                The Term of this Agreement shall be month-to-month and shall automatically renew on a month-to-month basis, unless the Company is notified in writing at least 15 days prior to the end of the then-current monthly Term of the intent to cancel.
+                                                            </apex:outputText>
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <apex:outputPanel rendered="{!product.trialDays != 0 && product.billingTerm != 'Monthly'}">
+                                                    <li style="font-weight: bold;">
+                                                        <p>
+                                                            <span style="font-weight: normal;">
+                                                                <u>Satisfaction Guarantee; Termination:</u> 
+                                                                Client shall have a satisfaction guarantee period beginning on the first day of the initial monthly billing cycle and continuing for a period of&nbsp;
+                                                                <apex:outputText value="{!product.trialDays}"/> 
+                                                                days (“Satisfaction Guarantee Period”), regardless of when the data sync software program installation, initial training, and active use of the Services occur. Client may terminate this Agreement for any reason prior to the end of the Satisfaction Guarantee Period if Client has completed initial training, completed installation of the Solutionreach data sync software program and the Services have been actively in use (e.g., sending messages) for at least 30 days, provided (i) Client has not waived the Satisfaction Guarantee Period, and (ii) Client notifies the Company in writing of its intent to cancel within and prior to the expiration of the Satisfaction Guarantee Period.
+                                                            </span>
+                                                        </p>
+                                                    </li>
+                                                </apex:outputPanel>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            
+                                                        <!-- Month-to-Month vs Contract -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'Monthly'}">
+                                                                <u>Termination</u> 
+                                                                
+                                                                <!-- Sat Period vs No Sat -->
+                                                                <apex:outputText rendered="{!product.trialDays != 0}">&nbsp;
+                                                                    <u>after Satisfaction Guarantee:</u>
+                                                                    Following the expiration of the Satisfaction Guarantee Period,
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.trialDays = 0}">&nbsp;
+                                                                    <u>:</u>
+                                                                </apex:outputText>
+                                                                
+                                                                Client may terminate its Solutionreach Platform Subscription by notifying the Company in writing of its intent to cancel its subscription at least fifteen (15) days prior to the end of the then-current Term, meaning prior to the Renewal Date or next applicable anniversary of the Renewal Date. Following such written notice, termination shall become effective at the end of the then-current Term.
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'Monthly'}">
+                                                                Client may terminate its Solutionreach Platform Subscription by notifying the Company in writing of its intent to cancel its Solutionreach Platform Subscription at least fifteen (15) days prior to the end of the then-current monthly Term.
+                                                            </apex:outputText>
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            <u>Termination for Integration Failure:</u>
+                                                            Notwithstanding the foregoing or anything else in this Agreement to the contrary, in the event of an Integration Failure (as defined herein), Client may, without liability, terminate this Agreement upon no less than 10 days’ written notice to the Company. Such termination will be effective 10 days from the date of notice if the Integration Failure is not corrected within 10 days. The right to terminate this Agreement as described in this paragraph is Client’s sole and exclusive remedy for an Integration Failure. 
+                                                            <br/><br/>
+                                                            An “Integration Failure” shall exist if the Company is not able to successfully establish and maintain for general release a working integration between its Services and the practice management software or electronic health records software (“Practice Software”) used by Client, which integration is necessary in order to provide the essential features of the Services.
+                                                            <br/><br/>
+                                                            An Integration Failure shall not be deemed to have occurred if: (a) the Client is not satisfied with the method of integration, which may be determined at the Company’s sole discretion (e.g. API, ODBC, export file, flat file, etc.); (b) integration functionality becomes unavailable due to a short-term period of disruption, inaccessibility, or inoperability based on temporary events, including periodic maintenance procedures or upgrades, minor service malfunctions, or causes beyond the Company’s control or which are not foreseeable by the Company, including the interruption or failure of any telecommunication or digital transmission links (including internet access), hostile network attacks or network congestion, or other temporary failures in integration services due to circumstances outside of the Company’s control; (c) a trivial subset of non-essential or minor features of the Services are permanently unavailable due to technical limitations of the supported integration between the Services and the Client’s Practice Software; or (d) Client changes from the Practice Software named on this Agreement to another Practice Software title with which the Company does not integrate.
+
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            <u>Other:</u> 
+                                                            This Agreement includes and incorporates all terms and conditions of the Company’s online End-user License Agreement (“EULA”) included below in the attached Exhibit I (including changes and updates from time to time), which must be accepted by Client
+
+                                                            <!-- Only Month-to-Month -->
+                                                            <apex:outputText rendered="{!product.billingTerm = 'Monthly'}">
+                                                                , excluding its automatic annual renewal provision; the EULA will renew on a month-to-month basis and shall be coterminous with this Agreement
+                                                            </apex:outputText>
+                                                            . In the event of a practice transfer, both the Client and the new practice owner are liable for all obligations under this Agreement, unless specifically agreed to in a signed writing by the Company. Client shall pay all collection and attorney fees if collection procedures are commenced. By signing this Agreement, Client authorizes the Company to directly charge the credit card or debit the bank account, as indicated below, for all applicable fees described herein.
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            <u>Product Descriptions:</u> 
+                                                            (i) 
+                                                            <i>Solutionreach Platform</i> 
+                                                            shall mean the SaaS-based online product and/or services at www.solutionreach.com, known as the Solutionreach Platform
+                                                            <sup>TM</sup>
+                                                            , SR Platform
+                                                            <sup>TM</sup>
+                                                            , SR Premier
+                                                            <sup>TM</sup>
+                                                            , SR Elite
+                                                            <sup>TM</sup>
+                                                            , or Solutionreach
+                                                            <sup>TM</sup> 
+                                                            provided as a subscription service to the Client for patient relationship management services, including but not limited to appointment reminders, recall, online reputation management, care management, and other features, depending on the Solutionreach Platform subscription version; (ii) 
+                                                            <i>SR Schedule</i> 
+                                                            shall mean the SaaS-based online product and/or services known as SR Schedule
+                                                            <sup>TM</sup> 
+                                                            provided as a subscription to the Client for digital self-scheduling, online patient appointment scheduling, and related services; (iii) 
+                                                            <i>SR Conversations</i> 
+                                                            shall mean the SaaS-based online product and/or services known as SR Conversations
+                                                            <sup>TM</sup> 
+                                                            provided as a subscription to the Client for 2-way conversational text messaging and related services; (iv) 
+                                                            <i>SR Smart Reviews</i> 
+                                                            shall mean the SaaS-based online product and/or services known as SR Smart Reviews
+                                                            <sup>TM</sup> 
+                                                            provided as a subscription to the Client for collecting and managing online feedback and reviews.
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <br/>
+                                        <div id="Terms Checkboxes">
+                                            <label>
+                                                <img src="/img/checkbox_checked.gif"/> 
+                                                <span style="font-weight: normal;">
+                                                    Check here to indicate that you accept and agree to the Terms and Conditions of this Services Agreement.
+                                                </span>
+                                            </label>
+                                            <label>
+                                                <img src="/img/checkbox_checked.gif"/> 
+                                                <span style="font-weight: normal;">
+                                                    Check here to indicate that you understand and acknowledge the automatic renewal terms of this Services Agreement. This Services Agreement shall 
+                                                    <strong>automatically renew</strong>&nbsp;
+
+                                                    <!-- Contract Only -->
+                                                    <apex:outputText rendered="{!product.billingTerm != 'Monthly'}">
+                                                        <apex:outputText value="{!product.termMonths}"/> 
+                                                        months after the Effective Date (the "Renewal Date") for an additional one year term and annually thereafter on each anniversary of the Renewal Date
+                                                    </apex:outputText>
+
+                                                    , unless the Company is notified in writing at least 15 days prior to the&nbsp;
+
+                                                    <!-- Month-to-Month vs Contract -->
+                                                    <apex:outputText rendered="{!product.billingTerm != 'Monthly'}">
+                                                        next Renewal Date
+                                                    </apex:outputText>
+                                                    <apex:outputText rendered="{!product.billingTerm = 'Monthly'}">
+                                                        end of the then-current Term
+                                                    </apex:outputText>&nbsp;
+                                                    of your intent to cancel.
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <br/>
+                                    </apex:outputPanel>
+                                </apex:repeat>
+                                
+                                <apex:repeat value="{!wrapProductList}" var="product" rendered="{!!isAPI}">
+                                    <apex:outputPanel id="NonSRPlatformTerms" rendered="{!product.productName != 'SR Platform'}">
+                                        <apex:outputText value="TEST: AnyProduct" rendered="{!isTest}"/>
+                                        <h5 class="text-center"><strong><apex:outputText value="{!product.productName}"/>&nbsp;Subscription Agreement Terms and Conditions</strong></h5>
+                                        <div id="Terms and Conditions">
+                                            <br/>
+                                            <ol>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            <u>Rights Granted: </u> 
+                                                            Company agrees to grant Client a nonexclusive, non-assignable, royalty free, worldwide limited right to access and use the&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription solely for Client’s internal business operations and subject to the Terms and Conditions of this&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription Agreement and the incorporated Services Agreement.
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            <u>Fees and Payment: </u>
+                                                            Client agrees to pay a recurring 
+
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                Monthly
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                Annual
+                                                            </apex:outputText>
+                                                            Service Fee of&nbsp;
+                                                            <apex:outputText value="{0, Number, Currency}">
+                                                                <apex:param value="{!product.monthlyFee - product.discountAmount}"/>
+                                                            </apex:outputText> 
+                                                            per 
+
+                                                            <!-- Annual vs. Monthly -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                month
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                year
+                                                            </apex:outputText>
+                                                            for the&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription. Client authorizes the Company to charge this fee to the same credit card or bank account Client is using to pay for the Services of the Solutionreach Platform Subscription under the Solutionreach Platform Services Agreement; however, billing for the subscriptions provided under each agreement may occur on different days of the month. Client agrees to promptly pay all fees due or that become due under this&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription Agreement.&nbsp;
+                                                            <apex:outputText rendered="{!product.freeMonths > 0 || isTest}">
+                                                                <strong>Orientation Period:</strong> 
+                                                                Client shall receive the 
+                                                                <strong>first&nbsp;
+                                                                    <apex:outputText value="{!product.freeMonths}"/> 
+                                                                    month(s) of service for&nbsp;
+                                                                    <apex:outputText value="{0, Number, Currency}">
+                                                                        <apex:param value="{!product.promoPrice}"/>
+                                                                    </apex:outputText> 
+                                                                </strong> 
+                                                                ("Orientation Period”). Billing of the Monthly Service Fee will automatically begin following the Orientation Period, unless Client has terminated its&nbsp;
+                                                                <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                Subscription as described herein.
+                                                            </apex:outputText>
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            <u>Term:</u> 
+                                                            The Term of the Client’s&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription Agreement shall be&nbsp;
+                                                            
+                                                            <!-- Month-to-Month vs Contract -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'Monthly'}">
+                                                                coterminous with the Client’s Solutionreach Platform Services Agreement.
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'Monthly'}">
+                                                                Month-to-Month.
+                                                            </apex:outputText>
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <apex:outputPanel rendered="{!product.trialDays!=0 && product.billingTerm != 'Monthly'}">
+                                                    <li style="font-weight: bold;">
+                                                        <p>
+                                                            <span style="font-weight: normal;">
+                                                                <u>Satisfaction Guarantee; Termination:</u> 
+                                                                Client shall have a satisfaction guarantee period beginning on the first day of the initial 
+
+
+                                                                <!-- Annual vs. Monthly -->
+                                                                <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                    monthly
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                    yearly
+                                                                </apex:outputText>
+                                                                billing cycle and continuing for a period of&nbsp;
+                                                                <apex:outputText value="{!product.trialDays}"/> 
+                                                                days (“Satisfaction Guarantee Period”). Client may terminate this&nbsp;
+                                                                <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                Subscription Agreement for any reason prior to the end of the Satisfaction Guarantee Period by notifying the Company in writing of its intent to cancel within and prior to the expiration of the Satisfaction Guarantee Period.
+                                                            </span>
+                                                        </p>
+                                                    </li>
+                                                </apex:outputPanel>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            
+                                                            <!-- Month-to-Month vs Contract -->
+                                                            <apex:outputText rendered="{!product.billingTerm != 'Monthly'}">
+                                                                <u>Termination</u> 
+                                                                
+                                                                <!-- Sat Period vs No Sat -->
+                                                                <apex:outputText rendered="{!product.trialDays != 0}">&nbsp;
+                                                                    <u>after Satisfaction Guarantee:</u>
+                                                                    Following the expiration of the Satisfaction Guarantee Period,
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.trialDays = 0}">&nbsp;
+                                                                    <u>:</u>
+                                                                </apex:outputText>
+                                                                
+                                                                Client may terminate this&nbsp;
+                                                                <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                Subscription Agreement and accompanying&nbsp;
+                                                                <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                Subscription only in accordance with the termination provisions of the Solutionreach Platform Services Agreement.
+                                                            </apex:outputText>
+                                                            <apex:outputText rendered="{!product.billingTerm = 'Monthly'}">
+                                                               Client may terminate this&nbsp;
+                                                                <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                Subscription Agreement and accompanying&nbsp;
+                                                                <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                Subscription at any time by notifying the Company in writing of its intent to cancel its&nbsp;
+                                                                <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                Subscription at least 15 days prior to the end of the current billing period, upon receipt of which the subscription shall terminate at the end of the then-current monthly billing period.
+                                                            </apex:outputText>
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <li style="font-weight: bold;">
+                                                    <p>
+                                                        <span style="font-weight: normal;">
+                                                            <u>Incorporation by Reference:</u> 
+                                                            The terms and conditions of the Services Agreement executed between the Client and the Company prior to or contemporaneous with this&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription Agreement shall be incorporated by reference into this&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription Agreement, and such terms and conditions shall apply as if expressly included in this&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription Agreement. The terms and conditions of the Company’s End User License Agreement (“EULA”) shall also be incorporated by reference. In the event a provision of this&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription Agreement conflicts with a provision of the Services Agreement or the EULA, the provision in this&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription Agreement shall control with respect to the&nbsp;
+                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                            Subscription.
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                                <li style="font-weight: bold;">
+                                                    <p><span style="font-weight: normal;"><u>Definitions.</u></span></p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li>
+                                                            <p>
+                                                                <span style="font-weight: normal;">
+                                                                    <i>Solutionreach Platform </i>
+                                                                    shall mean the SaaS-based online product and/or services at www.solutionreach.com, known as the Solutionreach Platform
+                                                                    <sup>TM</sup>
+                                                                    , SR Platform
+                                                                    <sup>TM</sup>
+                                                                    , SR Premier
+                                                                    <sup>TM</sup>
+                                                                    , SR Elite
+                                                                    <sup>TM</sup>
+                                                                    , or Solutionreach
+                                                                    <sup>TM</sup> 
+                                                                    provided as a subscription service to the Client for patient relationship management services, including but not limited to appointment reminders, recall, online reputation management, care management, and other features, governed by the Services Agreement entered into between the Client and the Company prior to or contemporaneously with this&nbsp;
+                                                                    <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                    Agreement.
+                                                                </span>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="font-weight: normal;">
+                                                                    <i>Solutionreach Platform Services Agreement</i> 
+                                                                    or 
+                                                                    <i>Services Agreement</i> 
+                                                                    shall mean the SaaS subscription agreement entered into between the Client and the Company prior to or contemporaneously with the execution of this&nbsp;
+                                                                    <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                    Subscription Agreement, which governs the rights and obligations of the parties with respect to the subscription Services provided as the Solutionreach Platform.
+                                                                </span>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <span style="font-weight: normal;">
+                                                                    <i>
+                                                                        <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                        Subscription
+                                                                    </i> 
+                                                                    shall mean the SaaS-based online product and/or services known as&nbsp;
+                                                                    <apex:outputText value="{!product.productName}"/>
+                                                                    <sup>TM</sup> 
+                                                                    provided as a subscription to the Client for&nbsp;
+
+                                                                    <!-- Product Descriptions -->
+                                                                    <apex:outputText rendered="{!product.productName = 'SR Conversations'}">
+                                                                        2-way conversational text messaging and related services.
+                                                                    </apex:outputText>
+                                                                    <apex:outputText rendered="{!product.productName = 'SR Smart Reviews'}">
+                                                                        collecting and managing online feedback and reviews.
+                                                                    </apex:outputText>
+                                                                    <apex:outputText rendered="{!product.productName = 'SR Schedule'}">
+                                                                        digital self-scheduling, online patient appointment scheduling, and related services.
+                                                                    </apex:outputText>
+                                                                </span>
+                                                            </p>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <br/>
+                                        <div id="Terms Checkboxes">
+                                            <label>
+                                                <img src="/img/checkbox_checked.gif"/>
+                                                <span style="font-weight: normal;">
+                                                    Check here to indicate that you accept and agree to the Terms and Conditions of this&nbsp;
+                                                    <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                    Subscription Agreement.
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <br/>
+                                    </apex:outputPanel>
+                                </apex:repeat>
+
+                                <apex:repeat value="{!wrapProductList}" var="product" rendered="{!isAPI}">
+                                    <apex:outputPanel id="InAppPaywallTerms" rendered="{!isAPI || isTest}">
+                                        <apex:outputText value="TEST: PAYWALL AnyProduct" rendered="{!isTest}"/>
+                                        
+                                        <!--SRC Only-->
+                                        <apex:outputPanel id="SRCHeader" rendered="{!product.productName = 'SR Conversations'}">
+                                            <h5 class="text-center"><strong>SR Conversations<sup>TM</sup> SaaS Subscription Agreement and Letter of Authorization</strong></h5>
+                                            <h5><strong>Client Name:</strong>&nbsp;<apex:outputText value="{!acctWrapper.BusinessName}" /></h5>
+                                            <h5><strong>Phone Number to Provision (Text-enable):</strong>&nbsp;<apex:outputText value="{!srcNumber}" /></h5>
+                                            <br/>
+                                        </apex:outputPanel>
+                                        
+                                        <!--Non-SRC-->
+                                        <apex:outputPanel id="AnyProductHeader" rendered="{!product.productName != 'SR Conversations'}">
+                                            <h5 class="text-center"><strong><apex:outputText value="{!product.productName}"/><sup>TM</sup> SaaS Subscription Agreement</strong></h5>
+                                            <br/>
+                                        </apex:outputPanel>
+                                        
+                                        <div style="font-size: 12px;">
+                                            <br/>
+                                            <h5 class="text-center"><strong><apex:outputText value="{!product.productName}"/>&nbsp;Agreement</strong></h5>
+                                            <p style="margin-left: 15px;">This&nbsp;<apex:outputText value="{!product.productName}"/><sup>TM</sup> SaaS Subscription Agreement ("&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Agreement") is entered into on <apex:outputText value="{0,date, MMMM d',' yyyy}"><apex:param Value="{!TODAY()}"/></apex:outputText> ("Effective Date") between Solutionreach, Inc. (the "Company") and&nbsp;<apex:outputText value="{!acctWrapper.BusinessName}" /> (the "Client"). The parties agree as follows:</p>
+                                            <div id="AnyProduct In-App Agreement">
+                                                <br/>
+                                                <ol>
+                                                    <li style="font-weight: bold;">
+                                                        <p>
+                                                            <span style="font-weight: normal;"> 
+                                                                <u>Rights Granted: </u>&nbsp;
+                                                                Company grants Client a nonexclusive, non-assignable, royalty free, worldwide limited right to access and use the&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Subscription solely for Client’s internal business operations and subject to the terms of this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Subscription Agreement.
+                                                            </span>
+                                                        </p>
+                                                    </li>
+                                                    <li style="font-weight: bold;">
+                                                        <p>
+                                                            <span style="font-weight: normal;"> 
+                                                                <u>Trial Period: </u>&nbsp;
+                                                                Client shall have a 30-day risk-free trial period beginning on the Effective Date (“Trial Period”). Client may terminate this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Agreement at any time during the Trial Period without incurring any performance obligations under this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Agreement by notifying the Company in writing.
+                                                            </span>
+                                                        </p>
+                                                    </li>
+                                                    <li style="font-weight: bold;">
+                                                        <p>
+                                                            <span style="font-weight: normal;">
+                                                                <u>Fees and Payment:</u>&nbsp;
+                                                                After the Trial Period, Client agrees to pay a recurring 
+
+                                                                <!-- Annual vs. Monthly -->
+                                                                <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                    Monthly
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                    Annual
+                                                                </apex:outputText>
+                                                                
+                                                                Service Fee of&nbsp;
+                                                                <apex:outputText value="{0, Number, Currency}">
+                                                                    <apex:param value="{!product.monthlyFee - product.discountAmount}"/>
+                                                                </apex:outputText> 
+                                                                per 
+
+                                                                <!-- Annual vs. Monthly -->
+                                                                <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                    month
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                    year
+                                                                </apex:outputText>
+                                                                for the&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Subscription, beginning on the Effective Date or at the conclusion of any applicable Trial Period(if Client has not terminated this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Agreement) and repeating 
+                                                                
+                                                                <!-- Annual vs. Monthly -->
+                                                                <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                    monthly
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                    yearly
+                                                                </apex:outputText>
+
+                                                                thereafter throughout the Term.  Billing will occur at the 
+
+                                                                <!-- Billing in Arrears vs Advance Billing -->
+                                                                <apex:outputText rendered="{!product.billingTerm != 'Arrears'}">
+                                                                    beginning
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.billingTerm = 'Arrears'}">
+                                                                    end
+                                                                </apex:outputText>
+                                                                
+                                                                of each 
+
+                                                                <!-- Annual vs. Monthly -->
+                                                                <apex:outputText rendered="{!product.billingTerm != 'AdvanceAnnual'}">
+                                                                    monthly
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.billingTerm = 'AdvanceAnnual'}">
+                                                                    yearly
+                                                                </apex:outputText>
+
+                                                                billing cycle. Client authorizes the Company to charge this fee to the same credit card or bank account Client is using to pay for the Services of the Solutionreach Platform Subscription under the Solutionreach Platform Services Agreement; however, billing for the subscriptions provided under each agreement may occur on different days of the month. Client agrees to promptly pay all fees due or that become due under this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                Subscription Agreement.
+                                                            </span>
+                                                        </p>
+                                                    </li>
+                                                    <li style="font-weight: bold;">
+                                                        <p>
+                                                            <span style="font-weight: normal;">
+                                                                <u>Term:</u> 
+                                                                The Term of the Client’s&nbsp;
+                                                                <apex:outputText value="{!product.productName}"/>
+                                                                Subscription Agreement shall be
+                                                                
+                                                                <!-- Month-to-Month vs Contract -->
+                                                                <apex:outputText rendered="{!product.billingTerm != 'Monthly'}">
+                                                                    coterminous with the Client’s Solutionreach Platform Services Agreement.
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.billingTerm = 'Monthly'}">
+                                                                    Month-to-Month.
+                                                                </apex:outputText>
+                                                            </span>
+                                                        </p>
+                                                    </li>
+                                                    <li style="font-weight: bold;">
+                                                        <p>
+                                                            <span style="font-weight: normal;">
+                                                                <u>Termination:</u>
+                                                                <!-- Month-to-Month vs Contract -->
+                                                                <apex:outputText rendered="{!product.billingTerm != 'Monthly'}">
+                                                                    Following the Trial Period, Client may terminate this&nbsp;
+                                                                    <apex:outputText value="{!product.productName}"/>
+                                                                    Subscription Agreement and accompanying&nbsp;
+                                                                    <apex:outputText value="{!product.productName}"/>
+                                                                    Subscription only in accordance with the termination provisions of the Solutionreach Platform Services Agreement.
+                                                                </apex:outputText>
+                                                                <apex:outputText rendered="{!product.billingTerm = 'Monthly'}">
+                                                                    Client may terminate this&nbsp;
+                                                                    <apex:outputText value="{!product.productName}"/>
+                                                                    Subscription Agreement and accompanying&nbsp;
+                                                                    <apex:outputText value="{!product.productName}"/>
+                                                                    Subscription at any time by notifying the Company in writing of its intent to cancel its&nbsp;
+                                                                    <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                    Subscription at least 15 days prior to the end of the current billing period, upon receipt of which the subscription shall terminate at the end of the then-current monthly billing period.
+                                                                </apex:outputText>
+                                                            </span>
+                                                        </p>
+                                                    </li>
+                                                    <li style="font-weight: bold;">
+                                                        <p>
+                                                            <span style="font-weight: normal;"> 
+                                                                <u>Incorporation by Reference: </u>&nbsp;
+                                                                The terms and conditions of the Service Agreement executed between the Client and the Company prior to or contemporaneous with this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Subscription Agreement shall be incorporated by reference into this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Subscription Agreement, and such terms and conditions shall apply as if expressly included in this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Subscription Agreement. The terms and conditions of the Company’s End User License Agreement (“EULA”) shall also be incorporated by reference. In the event a provision of this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Subscription Agreement conflicts with a provision of the Services Agreement or the EULA, the provision in this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Subscription Agreement shall control with respect to the&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Subscription.
+                                                            </span>
+                                                        </p>
+                                                    </li>
+                                                    <li style="font-weight: bold;">
+                                                        <p><span style="font-weight: normal;"><u>Definitions.</u></span></p>
+                                                        <ol style="list-style-type: lower-alpha;">
+                                                            <li>
+                                                                <p>
+                                                                    <span style="font-weight: normal;">
+                                                                        <i>Solutionreach Platform </i>
+                                                                        shall mean the SaaS-based online product and/or services at www.solutionreach.com, known as the Solutionreach Platform
+                                                                        <sup>TM</sup>
+                                                                        , SR Platform
+                                                                        <sup>TM</sup>
+                                                                        , or Solutionreach
+                                                                        <sup>TM</sup> 
+                                                                        provided as a subscription service to the Client for patient relationship management services, including but not limited to appointment reminders, recall, online reputation management, care management, and other features, governed by the Services Agreement entered into between the Client and the Company prior to or contemporaneously with this&nbsp;
+                                                                        <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                        Agreement.
+                                                                    </span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>
+                                                                    <span style="font-weight: normal;">
+                                                                        <i>Solutionreach Platform Services Agreement</i> 
+                                                                        or 
+                                                                        <i>Services Agreement</i> 
+                                                                        shall mean the SaaS subscription agreement entered into between the Client and the Company prior to or contemporaneously with the execution of this&nbsp;
+                                                                        <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                        Subscription Agreement, which governs the rights and obligations of the parties with respect to the subscription Services provided as the Solutionreach Platform.
+                                                                    </span>
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>
+                                                                    <span style="font-weight: normal;">
+                                                                        <i>
+                                                                            <apex:outputText value="{!product.productName}"/>&nbsp;
+                                                                            Subscription
+                                                                        </i> 
+                                                                        shall mean the SaaS-based online product and/or services known as&nbsp;
+                                                                        <apex:outputText value="{!product.productName}"/>
+                                                                        <sup>TM</sup> 
+                                                                        provided as a subscription to the Client for&nbsp;
+
+                                                                        <!-- Product Descriptions -->
+                                                                        <apex:outputText rendered="{!product.productName = 'SR Conversations'}">
+                                                                            2-way conversational text messaging and related services.
+                                                                        </apex:outputText>
+                                                                        <apex:outputText rendered="{!product.productName = 'SR Smart Reviews'}">
+                                                                            collecting and managing online feedback and reviews.
+                                                                        </apex:outputText>
+                                                                        <apex:outputText rendered="{!product.productName = 'SR Schedule'}">
+                                                                            digital self-scheduling, online patient appointment scheduling, and related services.
+                                                                        </apex:outputText>
+                                                                    </span>
+                                                                </p>
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                    
+                                                </ol>
+                                                <br/>
+                                                <apex:outputPanel id="SRCLOA" rendered="{!product.productName = 'SR Conversations'}">
+                                                    <h5 class="text-center"><strong>Letter of Authorization</strong></h5>
+                                                    <p style="margin-left: 15px;"><u>Authorization.</u> Client authorizes Solutionreach, Inc., together with its designees, affiliates, subcontractors and/or assigns (the “Company”), to text-enable (“Provision”) Client’s 10-digit non-wireless telephone number submitted with this Letter of Authorization (“Number”) and operate as the routing destination for text messaging (SMS/MMS) and related services (“Texting Services”) through the Company network of Services:</p>
+                                                    <p style="margin-left: 15px;"><u>Representations and Covenants.</u> Client represents, covenants, and warrants that:</p>
+                                                    <ol type="a">
+                                                        <li>
+                                                            <p>Client is the lawful owner of the Number to be Provisioned;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Client has the right and all necessary authority to enter into this Letter of Authorization agreement;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Client has full power and authority and has procured all rights and licenses necessary to use, control, and Provision the Number for use in connection with the Texting Services without the consent of any third party; </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>In the event the Number is a shared use phone number (i.e., the Number is used by third party entities in addition to Client), Client is the owner of the Number; </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Client shall use the Texting Services only in compliance with all applicable governing law, including but not limited to the Health Insurance Portability and Accountability Act (HIPAA) and the Telephone Consumer Protection Act (TCPA);</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Client will not send spam or otherwise inappropriate content using the Texting Services, and Client understands that doing so may result in immediate deactivation of the Texting Services; and</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Neither the Company nor its service providers shall be liable in any way for claims arising from or relating to a breach of any representation or warranty hereunder.</p>
+                                                        </li>
+                                                    </ol>
+                                                    <p style="margin-left: 15px;"><u>DISCLAIMER OF WARRANTIES.</u> EXCEPT AS OTHERWISE CONTAINED HEREIN, THE COMPANY DISCLAIMS TO THE MAXIMUM EXTENT PERMITTED BY LAW ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT, AND TITLE.</p>
+                                                    <p style="margin-left: 15px;"><u>LIMITATIONS OF LIABILITY.</u> IN NO EVENT WILL THE COMPANY BE LIABLE TO CLIENT FOR ANY INCIDENTAL, INDIRECT, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO CLIENT’S USE OF THE TEXTING SERVICES, REGARDLESS OF THE NATURE OF THE CLAIM, INCLUDING, WITHOUT LIMITATION, LOST PROFITS, COSTS OF DELAY, FAILURE OF DELIVERY, BUSINESS INTERRUPTION, AND COSTS OF LOST OR DAMAGED DATA IN CONNECTION WITH THE TEXTING SERVICES, EVEN IF AND REGARDLESS OF WHETHER THE COMPANY HAS BEEN ADVISED OR IS AWARE OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+                                                    <p style="margin-left: 15px;"><u>Indemnification.</u> Client shall defend, indemnify, and hold harmless the Company, its officers, directors, and employees from and against any third-party claim, demand, or cause of action arising out of or related to Client’s use of the Texting Services, including, without limitation, any liability arising out of, resulting from, or caused by any text message generated by Client.</p>
+                                                </apex:outputPanel>
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <div id="In-App Terms Checkboxes">
+                                            <label>
+                                                <img src="/img/checkbox_checked.gif"/>
+                                                <span style="font-weight: normal;">
+                                                    Check here to indicate that you accept and agree to the Terms and Conditions of this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Subscription Agreement<apex:outputText rendered="{!product.productName = 'SR Conversations'}">&nbsp;and Letter of Authorization</apex:outputText>.
+                                                </span>
+                                            </label>
+                                            <br/>
+                                            <apex:outputPanel id="SignatureSRCBundleInApp" rendered="{!isAPI || isTest}">
+                                                <p>By signing this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Agreement<apex:outputText rendered="{!product.productName = 'SR Conversations'}">&nbsp;and Letter of Authorization</apex:outputText>, you represent and warrant that you are duly authorized by Client and have legal capacity to execute and deliver this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Agreement<apex:outputText rendered="{!product.productName = 'SR Conversations'}">&nbsp;and Letter of Authorization</apex:outputText>&nbsp;on behalf of Client. You further agree that submitting this form digitally, affixing your name electronically, and/or performing any other similar electronic affirmation constitutes an electronic signature as defined by the Electronic Signatures in Global and National Commerce Act and that this&nbsp;<apex:outputText value="{!product.productName}"/>&nbsp;Agreement<apex:outputText rendered="{!product.productName = 'SR Conversations'}">&nbsp;and Letter of Authorization</apex:outputText>&nbsp;are non-refutable, valid, and binding legal agreements enforceable in accordance with their terms.</p>
+                                            </apex:outputPanel>
+                                        </div>
+                                    </apex:outputPanel>
+                                </apex:repeat>
+
+                        <apex:outputPanel id="HGTerms" rendered="{!hasHG}">
+                            <h5 class="text-center"><strong>Healthgrades® Premium Profiles Addendum to Services Agreement</strong></h5>
+                            <div id="HG Terms and Conditions">
+                                <br/>
+                                <ol>
+                                    <li style="font-weight: bold;">
+                                        <p><span style="font-weight: normal;">The Company agrees to assist the individual medical practitioners in Client’s practice listed below (collectively, “Practitioners”) with procuring Healthgrades® Premium Profiles offered by Healthgrades Operating Company, Inc. (“Healthgrades”) via the www.healthgrades.com website (“Premium Profile Services”), pursuant to the terms specified herein.<br/>Individual Names of Medical Practitioners:</span></p>
+                                    </li>
+                                    <li style="font-weight: bold;">
+                                        <p><span style="font-weight: normal;">Notwithstanding anything to the contrary in Company’s privacy policy or the Agreement, Client, on behalf of itself and the Practitioners, grants to Company and hereby authorizes Company to grant to Healthgrades, the right to use Practitioners’ name(s), photograph(s), medical license information, medical practice information, Client’s name and logos, and other information requested by Company or Healthgrades in connection with the Premium Profile Services, on a worldwide, royalty-free, perpetual, irrevocable basis.  As between Client and Practitioners on the one hand, and Company on the other hand, the foregoing information, content, and materials shall be considered “User Content” under the Agreement.  As between Practitioners on the one hand, and Healthgrades on the other hand, the foregoing information, content, and materials shall be considered “Content” under the Physician Agreement (defined below).</span></p>
+                                    </li>
+                                    <li style="font-weight: bold;">
+                                        <p><span style="font-weight: normal;">Client agrees to the following payment terms in connection with the Premium Profile Services:<br/>Addendum will be coterminous with Client’s Solutionreach Services Agreement. Client agrees to a monthly charge of <apex:outputText value="{0, Number, Currency}"><apex:param value="{!hgPrice}"/></apex:outputText> for each Practitioner named above.</span></p>
+                                    </li>
+                                    <li style="font-weight: bold;">
+                                        <p><span style="font-weight: normal;">The Premium Profile Services are governed by Healthgrades’ Physician User Agreement located at http://www.healthgrades.com/content/user-agreement (“Physician Agreement”) and other Healthgrades agreements incorporated therein, and Company’s ability to assist Client and the Practitioners in obtaining the Premium Profile Services is conditioned upon each Practitioner’s acceptance of the terms of the Physician Agreement.  Client, on behalf of itself and its Practitioners, hereby releases Company from any and all liability related to the User Content (as defined in the Agreement), Content (as defined in the Physician Agreement), and Premium Profile Services.  Client shall indemnify and defend Company from and against all damages resulting from any third-party claims brought by Practitioners in connection with the User Content, Content, and Premium Profile Services.</span></p>
+                                    </li>
+                                </ol>
+                            </div>
+                            <br/>
+                            <div id="HG Bundle Terms Checkboxes">
+                                <label>
+                                    <img src="/img/checkbox_checked.gif"/> <span style="font-weight: normal;">Check here to indicate that you accept and agree to the Terms and Conditions of this Healthgrades® Premium Profiles Addendum to Services Agreement.</span>
+                                </label>
+                            </div>
+                        </apex:outputPanel>
+
+                          <apex:outputPanel id="ProfessionalTerms" rendered="{! hasPS}">
+                                    <h5 class="text-center"><strong>Professional Services Addendum</strong></h5>
+                                    <div id="PS Terms and Conditions">
+                                        <br/>
+                                        <ol>
+                                            <li style="font-weight: bold;">
+                                             <p><span style="font-weight: normal;"><u>Professional Services</u></span></p>
+                                            <ol style="list-style-type: lower-alpha;">
+                                                <li>
+                                                    <p style="font-weight: normal">
+                                                    <span style="text-decoration: underline;">Professional Services Provided.</span> Company agrees to provide Client the professional services identified herein (the <strong>“Professional Services”</strong>) and at the fees described herein. Company has no obligation to provide any other professional or consulting services to Client, and nothing in this Addendum prohibits Company from providing the Professional Services to any other party. Client acknowledges that results based on the Professional Services are not guaranteed.
+                                                    </p>
+                                               </li>
+                                               <li>  
+                                                   <p style="font-weight: normal">
+                                                    <span style="text-decoration: underline;">Control of Professional Services.</span> Company shall determine the time, place, method, details, and means of performing the Professional Services. Client agrees to furnish any and all information, resources, and personnel necessary to facilitate Company's providing the Professional Services. Client will immediately advise Company in writing as soon as it becomes aware of any developments that may delay completion of the Professional Services.</p>
+                                               </li>
+                                                <li>
+                                                    <p style="font-weight: normal">
+                                                    <span style="text-decoration: underline;">Warranty.</span> Company warrants that each of its employees assigned to perform Professional Services shall have the proper skill, training, and background to perform in a competent and professional manner.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p style="font-weight: normal">
+                                                    <span style="text-decoration: underline;">Proprietary Rights.</span> All Professional Services provided and all materials developed or prepared by Company relating to the Professional Services (the “Materials”) are the intellectual property and confidential information of Company and all rights, title, and interest therein, including patent rights, copyright, derivative rights, trade secrets, and trademarks, shall remain in or vest in Company. Company grants Client a non-exclusive, limited, royalty free license to use the Materials solely for Client’s internal business operations throughout the Term. Upon termination of this Addendum or the Agreement for any reason, this license shall expire and Client shall immediately cease using the Materials.</p>
+                                                </li>
+                                            </ol>
+                                            </li>
+                                            <li style="font-weight: bold;">
+                                                <p><span style="font-weight: normal;"><span style="text-decoration: underline;">Fees.</span> Client agrees to pay all one-time fees and recurring monthly fees for the Professional Services (<strong>“Professional Services Fee”</strong> or <strong>“PSF”</strong>), as applicable, indicated herein. All fees are in U.S. Dollars.
+                                                </span></p>
+                                            </li>
+                                            <li style="font-weight: bold;">
+                                                <p><span style="font-weight: normal;"><span style="text-decoration: underline;">Term.</span> The term of the Professional Services provided herein shall be coterminous with the Term of the Agreement. Notwithstanding the foregoing, in the event the next renewal date of the Agreement is less than 6 months from the Addendum Effective Date, Client agrees to a new Agreement Term of 12 months from the Addendum Effective Date (<strong>“New Term”</strong>) and the New Term shall renew according to the terms of the Agreement.
+                                                </span></p>
+                                            </li>
+                                            <li style="font-weight: bold;">
+                                                <p><span style="font-weight: normal;"><u>Definitions</u></span></p>
+                                                 <ol>
+                                                    <li style="font-weight: bold;">     
+                                                        <p style="font-weight: normal">
+                                                                “<span style="text-decoration: underline;font-weight: bold">SR Fast Track Program.</span>” means the required professional services, known as SR Fast TrackSM Program, provided to Client in the form of expertise, consulting, and best practices in order to ensure the best probability of success using the Solutionreach Services, usually consisting of multiple live coaching sessions. Includes installation of integration software, software configuration, and SR Success Formula training. Results may vary and are not guaranteed.
+                                                                </p>
+                                                    </li>
+                                                             
+                                                    <li>  
+                                                                
+                                                        <p style="font-weight: normal">“
+                                                                <span style="text-decoration: underline;font-weight: bold">SR Practice Accelerator Program</span>” means the program of professional services, known as SR Practice Accelerator, provided to Client in the form of expertise, consulting, and best practices consisting of a business accelerator using the SR Practice Success Formula, a regular periodic business assessment, and a designated support representative for the life of the engagement. Results may vary and are not guaranteed.
+                                                                </p>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-weight: normal">
+                                                                “<span style="text-decoration: underline;font-weight: bold">SR Practice Marketing Program</span>” means the program of professional services, known as SR Practice Marketing, provided to Client in the form of expertise, consulting, and best practices in order to build, map out, and support Client’s monthly patient outreach and targeted email marketing efforts. Results may vary and are not guaranteed.
+                                                                </p>
+                                                    </li>
+                                                    <li>
+                                                            <p style="font-weight: normal">
+                                                                “<span style="text-decoration: underline;font-weight: bold">SR Practice Success Bundle</span>” means the program of bundled professional services, known as SR Practice Success, which includes both SR Practice Accelerator and SR Practice Marketing. Results may vary and are not guaranteed.
+                                                                </p>
+                                                    </li>
+
+                                                        
+                                                   
+                                                 </ol>
+                                            </li>
+                                            <li style="font-weight: bold;">
+                                                <p><span style="font-weight: normal;"><span style="text-decoration: underline;font-weight: :bold">No Modification.</span> Except as modified or amended by this Addendum, all of the terms and provisions of the Agreement shall remain in full force and effect. In the event any term or provision of this Addendum is inconsistent with or conflicts with any provision of the Agreement, the provision of this Addendum shall govern and control with respect to the subject matter herein.
+                                                </span></p>
+                                            </li>
+                                            
+                                        </ol>
+                                    
+                                    </div>
+                                    <br/>
+                                    <div id="PS Terms Checkboxes">
+                                        <label>
+                                            <img src="/img/checkbox_checked.gif"/> <span style="font-weight: normal;">Check here to indicate that you accept and agree to the Terms and Conditions of this Professional Services Addendum.</span>
+                                        </label>
+                                    </div>
+                                    <br/>
+                                </apex:outputPanel>
+                    </div>
+
+                    <apex:outputPanel id="CCInfo" rendered="{!hasSR || hasSRMonthly || hasSRAdvance || hasSRAnnual || isTest}">
+                        <br/>
+                        <apex:outputText value="TEST NON PAYWALL: This Credit Card section is displayed for all sales with SR Platform." rendered="{!isTest}"/>
+                        <div id="CC Info">
+                            <div class="row; nobreak-div">
+                                <div>
+                                    <table class="table table-bordered" style="padding: 1px;">
+                                        <thead>
+                                            <tr>
+                                                <td colspan="9" class="bg-black">
+                                                    <p><strong>Credit Card Information</strong></p>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Card Type</strong></p>
+                                                </td>
+                                                <td valign="bottom" colspan="1">
+                                                    <apex:outputText value="{!cardType}" />
+                                                </td>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Card Number</strong></p>
+                                                </td>
+                                                <td valign="bottom" colspan="1">
+                                                    <apex:outputText value="**** **** **** {!cardNumber}" />
+                                                </td>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Expiration Date</strong></p>
+                                                </td>
+                                                <td valign="bottom" colspan="1">
+                                                    <apex:outputText value="{!cardMonth}" />
+                                                </td>
+                                                <td valign="bottom" colspan="1">
+                                                    <apex:outputText value="{!cardYear}" />
+                                                </td>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Name on Card</strong></p>
+                                                </td>
+                                                <td valign="bottom" colspan="1">
+                                                    <apex:outputText value="{!cardName}" />
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td colspan="9" class="bg-black">
+                                                    <p><strong>Billing Address &nbsp;&nbsp;</strong></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Street</strong></p>
+                                                </td>
+                                                <td colspan="8">
+                                                    <apex:outputText id="billingstreet" value="{!billingContactWrapper.Street}" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>City</strong></p>
+                                                </td>
+                                                <td colspan="2">
+                                                    <apex:outputText id="billingcity" value="{!billingContactWrapper.City}" />
+                                                </td>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>State/Province</strong></p>
+                                                </td>
+                                                <td colspan="2">
+                                                    <apex:outputText id="billingstate" value="{!billingContactWrapper.State}" />
+                                                </td>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Postal Code</strong></p>
+                                                </td>
+                                                <td colspan="2" valign="center">
+                                                    <apex:outputText id="billingzip" value="{!billingContactWrapper.Zip}" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" class="bg-gray">
+                                                    <p><strong>Country</strong></p>
+                                                </td>
+                                                <td colspan="8">
+                                                    <apex:outputText id="billingcountry" value="{!billingContactWrapper.Country}" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel id="CCandEULA" rendered="{!!isAPI || isTest}">
+                        <br/>
+                        <apex:outputText value="TEST NON PAYWALL: These checkboxes are displayed for all Non-Paywall sales." rendered="{!isTest}"/>
+                        <div id="CC and EULA Checkboxes">
+                            <label>
+                                <img src="/img/checkbox_checked.gif"/> <span style="font-weight: normal;"><u>Credit Card Authorization.</u> Check here to authorize the Company to charge your credit card according to the payment terms described herein. You agree to promptly pay all fees due or that become due as described herein.</span>
+                            </label>
+                            <label>
+                                <img src="/img/checkbox_checked.gif"/> <span style="font-weight: normal;"><u>End-user License Agreement.</u> Check here to indicate that you accept and agree to the Terms and Conditions of the Solutionreach End-user License Agreement.</span>
+                            </label>
+                        </div>
+                    </apex:outputPanel>
+                    <div id="Signature Block">
+                        <br/>
+                        <apex:outputPanel id="SignatureNormal" rendered="{!!isAPI || isTest}">
+                            <apex:outputText value="TEST NON PAYWALL: This is the standard language for Non-Paywall sales." rendered="{!isTest}"/>            
+                            <p><strong>By signing this Agreement, you represent and warrant that you are duly authorized by Client and have legal capacity to execute and deliver this Agreement on behalf of Client. You further agree that submitting this form digitally, affixing your name electronically, and/or performing any other similar electronic affirmation constitutes an electronic signature as defined by the Electronic Signatures in Global and National Commerce Act and that the Agreement is a non-refutable valid and binding legal agreement enforceable in accordance with its terms.</strong></p>
+                        </apex:outputPanel>
+                        <br/>
+
+                        <apex:outputPanel id="ContractSignerPanel" rendered="{!!isAPI || isTest}">
+                        <apex:outputText value="TEST - NON PAYWALL: This editable Contract Signer Information section is displayed for all sales." rendered="{!isTest}"/>
+                            <div id="Contract Signer">
+                                <div class="row">
+                                    <div>
+                                        <apex:outputPanel rendered="{!hasSR || hasSRMonthly || hasSRAdvance || hasSRAnnual || isTest}">
+                                            <table class="table table-bordered" style="padding: 1px;">
+                                                <thead>
+                                                    <tr>
+                                                        <td colspan="6" class="bg-black">
+                                                            <p><strong>Contract Signer Information</strong></p>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>First Name<font style="color:#ff0101;"> *</font></strong></p>
+                                                        </td>
+                                                        <td colspan="1">
+                                                            <apex:outputText value="{!contractSignerWrapper.FirstName}"/>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Last Name</strong><font style="color:#ff0101;"> *</font></p>
+                                                        </td>
+                                                        <td colspan="1">
+                                                            <apex:outputText value="{!contractSignerWrapper.LastName}"/>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Title</strong><font style="color:#ff0101;"> *</font></p>
+                                                        </td>
+                                                        <td colspan="1">
+                                                            <apex:outputText value="{!contractSignerWrapper.Title}"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Phone</strong><font style="color:#ff0101;"> *</font></p>
+                                                        </td>
+                                                        <td colspan="1">
+                                                            <apex:outputText value="{!contractSignerWrapper.DirectPhone}"/>
+                                                        </td>
+                                                        <td colspan="1" class="bg-gray">
+                                                            <p><strong>Email</strong><font style="color:#ff0101;"> *</font></p>
+                                                        </td>
+                                                        <td colspan="3">
+                                                            <apex:outputText value="{!contractSignerWrapper.Email}"/>
+                                                        </td>                                                    
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+
+
+                        <p class="text-uppercase">Electronic Signature</p>
+                        <p>Client's authorized representative:&nbsp;<span><strong><apex:outputText value="{!contractSigner}" style="font-size: 12px;"/></strong></span></p>     
+                        <hr style="width: 100%; color: black; height: 2px; background-color:black; margin-bottom: 5px; margin-top: 5px;" />
+                        <p>IP Address: &nbsp;&nbsp;<apex:outputText value="{!ipAddress}" /></p>
+                        <p>Timestamp: &nbsp;&nbsp;<apex:outputText value="{!contractDateTime}"/></p> 
+                    </div>
+                    <apex:outputPanel id="EULA" rendered="{!hasSR || hasSRMonthly || hasSRAdvance || hasSRAnnual || isTest}">
+                        <apex:outputText value="TEST NON PAYWALL: EULA is included with all SR Platform sales." rendered="{!isTest}"/>
+                        <div style="page-break-after: always;">&nbsp;</div>
+                        <div class="EULA-BOLD" >
+                            <p class="text-center"><strong>Exhibit I</strong>
+                                <br/>
+                                <span class="text-uppercase text-center"><strong>END-USER LICENSE AGREEMENT</strong></span></p>
+                            SOLUTIONREACH, INC. End-user License Agreement - <span class="EULA-NORMAL"> Please read the following license agreement. You must accept the agreement to use our system and services.
+                            <br/>
+                            <br/>
+                            This End-user License Agreement ("Agreement") is a legal document that binds you, as a customer or user, to certain obligations. You should read this Agreement carefully before accepting its terms. You understand and agree that the wireless messaging, communication and other services, and software offered via the Solutionreach.com or SmileReminder.com website, our other websites or otherwise (collectively referred to as "Services") are provided to you under this Agreement by us. In this Agreement, "us," "we" and "our" mean Solutionreach.com or SmileReminder.com, our other websites, and our owner, Solutionreach, Inc., unless the context requires otherwise. By signing our Services Agreement or clicking the "AGREE" or similar option (if accepting online), you are stating that you are 18 years or older, that you have read and understand this Agreement, and that you agree to be bound by the terms in effect as updated by us from time to time. If you do not understand or agree with the terms of this Agreement, please do not sign the Services Agreement or click the "DISAGREE" or similar option and/or discontinue use of the Services.</span>
+                            <br/>
+                            <br/>
+                            1. License to Application Services-<span class="EULA-NORMAL"> In consideration of your obligations under this Agreement, we grant you a limited, non-transferable, non-exclusive, revocable right and license for the term of this Agreement to obtain access to the Services for internal business purposes.</span>
+                            <br/>
+                            <br/>
+                            2. Availability of Services-<span class="EULA-NORMAL"> Subject to the terms and conditions of this Agreement, we will use commercially reasonable efforts to provide access to the Services twenty-four (24) hours a day, seven (7) days a week throughout the term of this Agreement. You agree that from time to time the Services may be inaccessible or inoperable for various reasons, including periodic maintenance procedures or upgrades, service malfunctions, and causes beyond our control or which are not foreseeable by us, including the interruption or failure of telecommunication or digital transmission links, hostile network attacks or network congestion, or other failures.</span>
+                            <br/>
+                            <br/>
+                            3. Services Subject to Change-<span class="EULA-NORMAL"> You acknowledge that the Services may change from time to time and that we necessarily rely on various programs, products and services provided by independent third parties in order to offer our Services. Because these third parties may modify, suspend or cancel their programs, products, and services at any time, the Services offered by us may be affected, including the termination of specific features, benefits, and Services. No modification, suspension, or cancellation by any third party that causes us to change or terminate specific features, benefits, or Services shall release you from your obligation to pay for the Services or otherwise affect your obligations under this Agreement or the Services Agreement (as defined herein).</span>
+                            <br/>
+                            <br/>
+                            4. Operation and Security-<span class="EULA-NORMAL"> We will use commercially reasonable efforts to operate and maintain our websites and systems and to ensure the security, confidentiality, and integrity of all text, data, video and other information provided by you, your patients, customers and/or clients, or otherwise related to your organization ("User Content") transmitted through or stored on our system. It is your responsibility to perform regular backups of your User Content. You will bear full risk of loss or damage to all User Content. The Services and our systems are not an archive for any User Content.</span>
+                            <br/>
+                            <br/>
+                            5. Data Access-<span class="EULA-NORMAL"> You hereby grant us full read and write access to your Practice Management Software (your “PM”). The data access provided for herein shall allow us to, among other things, read data such as appointment information from the PM and write data such as appointment confirmations to the PM (the “Data Access”). You acknowledge that your PM is the system of record and you agree to regularly back up the data contained in your PM. Except for the responsibility and liability imposed on us, including indemnification of you by us, related to any unauthorized or improper disclosure of electronic protected health information (“ePHI”) by us as described in a separate Business Associate Agreement (“BAA”) between you and us, you hereby agree for yourself, your partners, and your affiliates to release, acquit, and forever discharge us or anyone claiming by or through us of and from any and all claims, demands, actions, or causes of action, whether at law or in equity, breaches of any duty or any responsibility, controversies (“Claims”) and any and all losses, including loss or corruption of data, damages, liabilities, deficiencies, interest, awards, judgments, penalties, fees, costs, and expenses (including reasonable attorneys’ fees, and costs and other out-of- pocket expenses incurred in investigating, preparing or defending the foregoing), whether existing or which could, might, or may be claimed to exist, of whatever kind or name, whether known or unknown, suspected or unsuspected, liquidated or unliquidated, that may arise or be suffered or may relate to, either directly or indirectly, the Data Access. You further agree not to bring, induce any party to bring, or assist any party in bringing, any Claim with respect to the Data Access. Further, you agree to perform regular maintenance on your computer systems and networks, including taking all actions necessary to detect, prevent, and patch relevant security vulnerabilities and threats, and you agree to maintain your computer systems and networks so they meet or exceed the minimum system requirements recommended for the Services, which minimum requirements are published at www.solutionreach.com/system-requirements.</span>
+                            <br/>
+                            <br/>
+                            6. Warranty and Liability Limitations-<span class="EULA-NORMAL"> a. Warranty Limitations. THE SERVICES ARE PROVIDED ON AN "AS IS" BASIS, AND YOUR USE OF THE SERVICES IS AT YOUR OWN RISK. WE WILL USE COMMERCIALLY REASONABLE EFFORTS TO MAINTAIN ACCEPTABLE PERFORMANCE OF THE SERVICES. HOWEVER, WE PROVIDE NO WARRANTIES WHATSOEVER AND WE DO NOT MAKE, AND HEREBY DISCLAIM, ANY AND ALL EXPRESS AND IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NONINFRINGEMENT, AND ANY WARRANTIES ARISING FROM COURSE OF DEALING, USAGE, OR TRADE PRACTICE. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR COMPLETELY SECURE. WE DO NOT MAKE ANY REPRESENTATIONS REGARDING THE USE OR THE RESULTS OF THE USE OF THE SERVICES IN TERMS OF ACCURACY, RELIABILITY OR OTHERWISE. YOU ASSUME SOLE RESPONSIBILITY FOR YOUR USE OF THE SERVICES TO ACHIEVE YOUR INTENDED RESULTS. WE DO NOT AND CANNOT CONTROL THE FLOW OF INFORMATION TO OR FROM OUR SYSTEM AND OTHER PORTIONS OF THE INTERNET. SUCH FLOW DEPENDS IN LARGE PART ON THE PERFORMANCE OF INTERNET SERVICE PROVIDED OR CONTROLLED BY THIRD PARTIES. AT TIMES, ACTIONS OR INACTIONS OF SUCH THIRD PARTIES CAN IMPAIR OR DISRUPT YOUR AND/OR OUR CONNECTIONS TO THE INTERNET. b. Liability Limitation. IN NO EVENT SHALL WE HAVE ANY LIABILITY TO YOU, YOUR PATIENTS, CUSTOMERS OR CLIENTS, OR ANY OTHER THIRD PARTY ARISING FROM OUR OBLIGATIONS UNDER THIS AGREEMENT OR OTHERWISE FOR CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, EVEN IF ADVISED IN ADVANCE OF THE POSSIBILITY OF SUCH DAMAGES. SOME STATE STATUTES MAY APPLY RESTRICTIONS REGARDING LIMITATIONS OF LIABILITY. OUR SOLE AND MAXIMUM LIABILITY, AND YOUR SOLE AND EXCLUSIVE REMEDY FOR ANY CLAIMS WHATSOEVER, WHETHER BASED ON BREACH OF CONTRACT, BREACH OF WARRANTY, TORT, INCLUDING NEGLIGENCE, PRODUCT LIABILITY, OR OTHERWISE, SHALL BE LIMITED TO THE AMOUNT YOU PAID FOR THE SERVICES WITHIN THE THREE (3) MONTHS IMMEDIATELY PRECEDING A CLAIM IN WHICH WE ARE LIABLE TO YOU FOR SUCH CLAIM. c. Reliance on Limitations. YOU AND WE ACKNOWLEDGE THAT WE HAVE SET OUR PRICES AND ENTERED INTO THIS AGREEMENT IN RELIANCE UPON THE LIMITATIONS OF LIABILITY AND THE DISCLAIMERS OF WARRANTIES AND DAMAGES SET FORTH IN THIS AGREEMENT AND THAT THESE PROVISIONS FORM AN ESSENTIAL BASIS OF THE BARGAIN BETWEEN THE PARTIES. THE PARTIES AGREE THAT THE LIMITATIONS OF LIABILITY AND DISCLAIMERS SPECIFIED IN THIS AGREEMENT WILL SURVIVE AND APPLY EVEN IF PORTIONS OF THIS AGREEMENT ARE FOUND TO HAVE FAILED IN THEIR ESSENTIAL PURPOSE.</span>
+                            <br/>
+                            <br/>
+                            7. Fees and Payment Terms-<span class="EULA-NORMAL"> You agree to pay for the Services as set forth in the separate Solutionreach Services Agreement between you and us, which agreement is incorporated herein by this reference ("Services Agreement"). You acknowledge that you have signed and received a copy of the Services Agreement and that it forms a part of this Agreement. Fees for the Services will be billed and charged to you. Any payment not received within thirty (30) days of the billing date will accrue interest at a rate of one and one-half percent (1 1/2%) per month, or the highest rate allowed by applicable law, whichever is lower. If you are delinquent in your payments, we may, upon notice to you, require full payment for the remainder of the term and suspend the Services until payment in full is received; we also reserve the right to terminate this Agreement for non-payment. All fees charged by us for Services are exclusive of taxes and similar fees now in force or enacted in the future imposed on the transaction, all of which you will be responsible for, except for taxes based on our net income.</span>
+                            <br/>
+                            <br/>
+                            8. Proprietary Rights-<span class="EULA-NORMAL"> Exclusive of User Content, we will retain all right, title, and interest (including copyright and other proprietary or intellectual property rights) relating to the Services and all legally protectable elements or derivative works thereto. We will not obtain any right, title, or interest in the User Content. We may place copyright and/or proprietary notices, including hypertext links, within our website, system, and software applications. You may not alter or remove such notices without our written permission. You will not, directly or indirectly, reverse engineer, decompile, modify, sublicense, or otherwise attempt to derive source code, trade secrets, or other intellectual property from us.</span>
+                            <br/>
+                            <br/>
+                            9. Acceptable Use Restrictions-<span class="EULA-NORMAL"> You are solely responsible for all acts, omissions and use under and charges incurred with your account or password. You are also solely responsible for any User Content displayed, linked, posted, transmitted through, or stored on our system or any third-party website or system. You agree not to engage in unacceptable use of the Services, which includes, without limitation: (i) to disseminate or transmit unsolicited messages, chain letters, or unsolicited commercial email; (ii) to disseminate or transmit any material that, to a reasonable person, may be abusive, obscene, pornographic, defamatory, harassing, offensive, vulgar, threatening, or malicious; (iii) to disseminate or transmit files, data, or other material, information or work that actually or potentially infringes the copyright, trademark, patent, trade secret, or other intellectual property right of any person; (iv) to create a false identity or to otherwise attempt to mislead any person as to the identity, source, or origin of any communication or do any act in violation of applicable laws and regulations; (v) to export, re-export or permit downloading of any message or content in violation of any export or import law, regulation, or restriction of the United States and its agencies or authorities, or without all required approvals, licenses, and/or exemptions; (vi) to interfere, disrupt, or attempt to gain unauthorized access to any computer system, server, network, or account for which you do not have authorization to access or at a level exceeding your authorization; (vii) to disseminate or transmit any virus, trojan horse, or other malicious, harmful or disabling data, work, code, or program; (viii) to conduct, if applicable, any bank card or other financial transactions except as specifically authorized in each case by your respective customers, clients, and patients; (ix) to engage in any conduct that is not in compliance, if applicable, with the consumer protection and/or privacy requirements of the Health Insurance Portability and Accountability Act (HIPAA) and related Omnibus Rule, the Health Information Technology for Economic and Clinical Health Act (HITECH Act), the Telephone Consumer Protection Act of 1991 (TCPA), the Controlling the Assault of Non-Solicited Pornography And Marketing Act of 2003 (CAN-SPAM), and Canada’s Anti-Spam Legislation (CASL); or (x) to engage in any other activity deemed by us to be in conflict with the spirit or intent of this Agreement or any policy of ours. If you are a HIPAA Covered Entity, or if otherwise applicable to you in your jurisdiction, you agree to include a description of all intended uses of patient information in the HIPAA Notice of Privacy Practices, or other similar notice, you give to your patients. Additionally, you agree to promptly respond if a patient indicates they no longer wish to receive messages of any given type via the Services by disabling in the Services the associated message type(s) or device(s) for the patient making the request. You will indemnify us for any and all claims, damages, liabilities, costs, and expenses, including attorneys' fees and court costs, related to any breach of this Agreement by you.</span>
+                            <br/>
+                            <br/>
+                            10. Protected Information and Actions as Agent-<span class="EULA-NORMAL"> You acknowledge that User Content may include protected and confidential customer or client patient information that is transmitted through or stored on our system. Applicable federal and state laws, as well as ethical and licensure requirements of your profession, may impose obligations with respect to patient confidentiality that may limit your ability to use the Services or to transmit certain information to third parties. You represent and warrant that, at all times during and after the term of this Agreement, you will comply with all laws, rules, and regulations directly or indirectly applicable to you or your organization that may now or hereafter govern the gathering, use, transmission, processing, receipt, reporting, disclosure, maintenance, and storage of customer, client and patient information. Moreover, you will use your best efforts to cause all persons or entities under your direct or indirect direction or control to comply with such laws, rules, and regulations. You are, at all times during and after the term of this Agreement, solely responsible for obtaining and maintaining or verifying that you and your organization have obtained and are maintaining all customer, client, and patient consents and all other legally necessary consents, authorizations, software licenses, or other permissions required or advisable to process, access, retrieve, transmit, monitor, post, store, disclose and view any customer, client or patient information that is transmitted and stored on our system or any third-party website or system. You agree that we, acting on your behalf as your agent, have the right to process, access, retrieve, transmit, monitor, store, disclose, and view customer, client, or patient information in connection with our providing the Services pursuant to this Agreement. We reserve the right to use and disclose to third parties information obtained while providing Services for purposes of complying with all applicable laws, rules, and regulations. You will indemnify us for any and all claims, damages, liabilities, costs, and expenses, including attorneys' fees and court costs, related to any Services we provide or action we may take on your behalf as your agent to process, access, retrieve, transmit, monitor, post, store, disclose, and view any customer, client, or patient information or other User Content pursuant to this Agreement.</span>
+                            <br/>
+                            <br/>
+                            11. Term-<span class="EULA-NORMAL"> The initial term for the Services and this Agreement shall be set forth in the Services Agreement. Upon the expiration of the initial term, the Services Agreement and this Agreement will renew and continue automatically on an annual basis unless you notify us in writing at least fifteen (15) days prior to the end of the initial term or any applicable renewal term of your intention not to renew. Renewal will be at contract rates and terms.</span>
+                            <br/>
+                            <br/>
+                            12. Termination-<span class="EULA-NORMAL"> a. Termination. We may terminate this Agreement at any time if you breach a material term or condition of this Agreement. Notwithstanding the forgoing, we may terminate this Agreement for any reason at the end of the initial term or any renewal term provided we notify you in writing at least fifteen (15) days prior to the end of the then-current term. You may terminate this Agreement at the expiration of the initial term or any renewal term if you notify us in writing at least fifteen (15) days prior to the end of the term of your intention not to renew. You may also terminate this Agreement at any time if we breach a material term or condition of this Agreement and we fail to cure such breach within thirty (30) days following written notice thereof to us by you. Either party may terminate this Agreement if the other party becomes the subject of a voluntary or involuntary petition in bankruptcy or any proceeding relating to insolvency, receivership, liquidation, or composition for the benefit of creditors. b. Effect of Termination. Upon the effective date of termination of this Agreement, we will cease providing access to the Services, you will cease using the Services and will immediately uninstall any of our software in your possession or control related to the use of the Services, and all your outstanding payment obligations through the effective date of termination will immediately become due.</span>
+                            <br/>
+                            <br/>
+                            13. General-<span class="EULA-NORMAL"> a. Assignment. You may not assign any of your rights, duties or obligations under this Agreement to any person or entity, in whole or in part, unless in the context of a professional practice transfer such as a sale or merger, and any attempt to do so shall be deemed void and/or a material breach of this Agreement (in which case this Agreement shall continue in full force and be binding on you, unless agreed to by us in writing). b. Waiver. No waiver of any provision hereof or of any right or remedy hereunder shall be effective unless in writing and signed by the party against whom such waiver is sought to be enforced. No delay in exercising, no course of dealing with respect to, or no partial exercise of any right or remedy hereunder, shall constitute a waiver of such right or remedy or any other right or remedy, or future exercise thereof. c. Severability. If any provision of this Agreement is determined to be invalid under any applicable statute or rule of law, it is to that extent to be deemed omitted, and the balance of the Agreement shall remain in effect. d. Applicable Law. This Agreement shall be governed in all respects by the laws of the State of Utah except for its conflict of laws provisions. The parties expressly agree that all disputes relating to the enforcement and/or interpretation of this Agreement shall be litigated before a court located in Salt Lake City, Utah. e. Recorded Calls. You hereby grant express consent for calls made for any purpose between you or your representatives or agents and us to be recorded, regardless of whether a call is made or received by a landline, wireless, cordless, or mobile phone. f. Communication. You agree to provide and maintain valid contact information, including an email address and phone number, throughout the term of this Agreement, which will be used to communicate account-related information to you from time to time, including, but not limited to, billing notifications, updates to this Agreement and other agreements that may impact you, new product announcements, and notifications about scheduled or emergency maintenance of the Services. g. Digital Signature Provisions. You represent and warrant that the individual electronically agreeing to the terms of this Agreement is authorized and empowered to agree to this Agreement on your behalf. You further agree that checking a box to acknowledge your assent to this Agreement and/or clicking the "AGREE" button and/or performing any other similar electronic affirmation constitutes an electronic signature as defined by the Electronic Signatures in Global and National Commerce Act and that this Agreement is completely valid, has legal effect, is enforceable, and is binding on and non-refutable by you. h. Entire Agreement. This Agreement, together with the Services Agreement and any other agreement incorporated by reference herein, constitutes the complete and exclusive statement of the agreement and mutual understanding between the parties with respect to the subject matter hereof, superseding all prior proposals, communications, and understandings, whether oral or written. i. Contact Information. Our contact information is as follows: 2600 N. Ashton Blvd. Lehi, UT 84043; Phone: (801) 331-7100.</span>
+                        </div>
+                    </apex:outputPanel>       
+                </apex:form>
+            </div> <!-- /container -->
+            
+            
+            <!-- Bootstrap core JavaScript
+================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+        </body>
+    </html>
+    
+</apex:page>

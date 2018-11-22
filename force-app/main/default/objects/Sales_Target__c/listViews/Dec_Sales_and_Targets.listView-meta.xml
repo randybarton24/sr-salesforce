@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dec_Sales_and_Targets</fullName>
+    <columns>NAME</columns>
+    <columns>Total_Revenue_Credit__c</columns>
+    <columns>Sales_Rep_Revenue_Credit__c</columns>
+    <columns>Revenue_of_Target__c</columns>
+    <columns>Bonus_Commission_Multiplier__c</columns>
+    <columns>TSR_Bonus_Commission_Multiplier__c</columns>
+    <columns>Sales_Rep_Tier_Qualify_Sales_Credit__c</columns>
+    <columns>Target__c</columns>
+    <columns>Actual_Credits__c</columns>
+    <columns>Owner__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Target_Date__c</columns>
+    <columns>Owner_Role__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Target_Month__c</field>
+        <operation>equals</operation>
+        <value>april</value>
+    </filters>
+    <filters>
+        <field>Target_Year__c</field>
+        <operation>equals</operation>
+        <value>2017</value>
+    </filters>
+    <label>Sales and Targets This Month</label>
+</ListView>

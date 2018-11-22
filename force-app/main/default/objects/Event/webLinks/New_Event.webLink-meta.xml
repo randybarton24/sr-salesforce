@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Event</fullName>
+    <availability>online</availability>
+    <description>New Event for Targets</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Event</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/00U/e?what_id={!ICU_Target__c.Id}&amp;retURL=%2Fa1x7A000000twmA&amp;RecordType=012i0000001EAM4&amp;ent=Event&amp;evt2={!ICU_Target__c.Contact__c}</url>
+</WebLink>

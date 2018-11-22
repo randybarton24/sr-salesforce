@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Accounts_Plastic_Surgery</fullName>
+    <columns>Subscriber_ID__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ApptegicEngagement__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Admin_Status__c</columns>
+    <columns>Practice_Management_Software__c</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RecurSoft__Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.INDUSTRY</field>
+        <operation>equals</operation>
+        <value>Medical</value>
+    </filters>
+    <filters>
+        <field>Sub_Vertical__c</field>
+        <operation>equals</operation>
+        <value>Plastic Surgery</value>
+    </filters>
+    <label>All Accounts - Plastic Surgery</label>
+    <sharedTo>
+        <allInternalUsers/>
+        <group>CS_Vision</group>
+    </sharedTo>
+</ListView>

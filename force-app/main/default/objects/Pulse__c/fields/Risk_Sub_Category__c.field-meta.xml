@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Sub_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Risk Sub-Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Risk_Meta_Theme__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Cancel_Sub_Category</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Relationship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Commitment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Invoicing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Expectations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Success</controllingFieldValue>
+            <valueName>Onboarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Success</controllingFieldValue>
+            <valueName>Problem Resolution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Success</controllingFieldValue>
+            <valueName>Lifecycle Management</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

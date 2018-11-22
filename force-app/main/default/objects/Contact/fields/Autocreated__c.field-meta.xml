@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Autocreated__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to notify if a contact was created through an email to case</description>
+    <externalId>false</externalId>
+    <label>Autocreated</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

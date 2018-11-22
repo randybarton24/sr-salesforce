@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsLegacy__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag for Opportunities imported from Intacct for Legacy billing migration.</description>
+    <externalId>false</externalId>
+    <label>IsLegacy</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

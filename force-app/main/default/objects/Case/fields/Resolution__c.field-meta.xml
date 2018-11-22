@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution__c</fullName>
+    <externalId>false</externalId>
+    <label>Resolution</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+                <label>Fixed</label>
+            </value>
+            <value>
+                <fullName>Wont Fix</fullName>
+                <default>false</default>
+                <label>Wont Fix</label>
+            </value>
+            <value>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+                <label>Incomplete</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Cannot Reproduce</fullName>
+                <default>false</default>
+                <label>Cannot Reproduce</label>
+            </value>
+            <value>
+                <fullName>Resumed</fullName>
+                <default>false</default>
+                <label>Resumed</label>
+            </value>
+            <value>
+                <fullName>Max Attempts Reached</fullName>
+                <default>false</default>
+                <label>Max Attempts Reached</label>
+            </value>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <label>Canceled</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Resolved</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Fixed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resolved</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Wont Fix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resolved</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Incomplete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resolved</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resolved</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Cannot Reproduce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Resumed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Max Attempts Reached</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

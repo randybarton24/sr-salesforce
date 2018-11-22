@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temp_Contract_Term_Total__c</fullName>
+    <description>For Contract until rework done.</description>
+    <externalId>false</externalId>
+    <label>Temp Contract Term Total</label>
+    <summarizedField>OpportunityLineItem.Total_Contract_Term__c</summarizedField>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

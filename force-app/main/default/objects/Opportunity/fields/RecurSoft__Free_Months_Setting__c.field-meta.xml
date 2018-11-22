@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Free_Months_Setting__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Different seting options for contracts with free months.</inlineHelpText>
+    <label>Free Months Setting</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>RecurSoft__Number_of_Free_Months__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Extend Contract - At the Beginning</fullName>
+                <default>false</default>
+                <label>Extend Contract - At the Beginning</label>
+            </value>
+            <value>
+                <fullName>Extend Contract - At the End</fullName>
+                <default>false</default>
+                <label>Extend Contract - At the End</label>
+            </value>
+            <value>
+                <fullName>Include in Contract Period - At the Beginning</fullName>
+                <default>false</default>
+                <label>Include in Contract Period - At the Beginning</label>
+            </value>
+            <value>
+                <fullName>Include in Contract Period - At the End</fullName>
+                <default>false</default>
+                <label>Include in Contract Period - At the End</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>10</controllingFieldValue>
+            <controllingFieldValue>11</controllingFieldValue>
+            <controllingFieldValue>12</controllingFieldValue>
+            <controllingFieldValue>1</controllingFieldValue>
+            <controllingFieldValue>2</controllingFieldValue>
+            <controllingFieldValue>3</controllingFieldValue>
+            <controllingFieldValue>4</controllingFieldValue>
+            <controllingFieldValue>5</controllingFieldValue>
+            <controllingFieldValue>6</controllingFieldValue>
+            <controllingFieldValue>7</controllingFieldValue>
+            <controllingFieldValue>8</controllingFieldValue>
+            <controllingFieldValue>9</controllingFieldValue>
+            <valueName>Extend Contract - At the Beginning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10</controllingFieldValue>
+            <controllingFieldValue>11</controllingFieldValue>
+            <controllingFieldValue>12</controllingFieldValue>
+            <controllingFieldValue>1</controllingFieldValue>
+            <controllingFieldValue>2</controllingFieldValue>
+            <controllingFieldValue>3</controllingFieldValue>
+            <controllingFieldValue>4</controllingFieldValue>
+            <controllingFieldValue>5</controllingFieldValue>
+            <controllingFieldValue>6</controllingFieldValue>
+            <controllingFieldValue>7</controllingFieldValue>
+            <controllingFieldValue>8</controllingFieldValue>
+            <controllingFieldValue>9</controllingFieldValue>
+            <valueName>Extend Contract - At the End</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10</controllingFieldValue>
+            <controllingFieldValue>11</controllingFieldValue>
+            <controllingFieldValue>12</controllingFieldValue>
+            <controllingFieldValue>1</controllingFieldValue>
+            <controllingFieldValue>2</controllingFieldValue>
+            <controllingFieldValue>3</controllingFieldValue>
+            <controllingFieldValue>4</controllingFieldValue>
+            <controllingFieldValue>5</controllingFieldValue>
+            <controllingFieldValue>6</controllingFieldValue>
+            <controllingFieldValue>7</controllingFieldValue>
+            <controllingFieldValue>8</controllingFieldValue>
+            <controllingFieldValue>9</controllingFieldValue>
+            <valueName>Include in Contract Period - At the Beginning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10</controllingFieldValue>
+            <controllingFieldValue>11</controllingFieldValue>
+            <controllingFieldValue>12</controllingFieldValue>
+            <controllingFieldValue>1</controllingFieldValue>
+            <controllingFieldValue>2</controllingFieldValue>
+            <controllingFieldValue>3</controllingFieldValue>
+            <controllingFieldValue>4</controllingFieldValue>
+            <controllingFieldValue>5</controllingFieldValue>
+            <controllingFieldValue>6</controllingFieldValue>
+            <controllingFieldValue>7</controllingFieldValue>
+            <controllingFieldValue>8</controllingFieldValue>
+            <controllingFieldValue>9</controllingFieldValue>
+            <valueName>Include in Contract Period - At the End</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0</controllingFieldValue>
+            <valueName>None</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

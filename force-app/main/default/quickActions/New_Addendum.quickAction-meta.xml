@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Origin</field>
+        <literalValue>Partner Community</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Reason</field>
+        <literalValue>Addendums</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Status</field>
+        <literalValue>New</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Subject</field>
+        <formula>&#39;New Patterson Addendum&#39;</formula>
+    </fieldOverrides>
+    <label>New Addendum</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Description</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>You have successfully created a new addendum.</successMessage>
+    <targetObject>Case</targetObject>
+    <targetRecordType>Case.Accounting</targetRecordType>
+    <type>Create</type>
+</QuickAction>

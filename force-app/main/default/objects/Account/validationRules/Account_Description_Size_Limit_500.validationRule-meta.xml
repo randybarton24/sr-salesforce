@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Description_Size_Limit_500</fullName>
+    <active>true</active>
+    <description>Limits the length of the Account.Description field to less than 500 characters if they don&#39;t have a Subscriber ID</description>
+    <errorConditionFormula>AND(LEN( Description ) &gt; 500, ISBLANK( Subscriber_ID__c ))</errorConditionFormula>
+    <errorDisplayField>Description</errorDisplayField>
+    <errorMessage>Account Description should be between 0 and 500 characters</errorMessage>
+</ValidationRule>

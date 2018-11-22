@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Orthodontics_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Orthodontics Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ankylosis of Tooth</fullName>
+                <default>false</default>
+                <label>Ankylosis of Tooth</label>
+            </value>
+            <value>
+                <fullName>Apert Syndrome</fullName>
+                <default>false</default>
+                <label>Apert Syndrome</label>
+            </value>
+            <value>
+                <fullName>Canine Teeth, Absence Upper Permanent</fullName>
+                <default>false</default>
+                <label>Canine Teeth, Absence Upper Permanent</label>
+            </value>
+            <value>
+                <fullName>Chromosome 22q11 Deletion Syndrome</fullName>
+                <default>false</default>
+                <label>Chromosome 22q11 Deletion Syndrome</label>
+            </value>
+            <value>
+                <fullName>Clefting - Ectropion - Conical Teeth</fullName>
+                <default>false</default>
+                <label>Clefting - Ectropion - Conical Teeth</label>
+            </value>
+            <value>
+                <fullName>Cleft Lip</fullName>
+                <default>false</default>
+                <label>Cleft Lip</label>
+            </value>
+            <value>
+                <fullName>Cleft Lip and Palate</fullName>
+                <default>false</default>
+                <label>Cleft Lip and Palate</label>
+            </value>
+            <value>
+                <fullName>Cleft Palate</fullName>
+                <default>false</default>
+                <label>Cleft Palate</label>
+            </value>
+            <value>
+                <fullName>Cleidocranial Dysostosis</fullName>
+                <default>false</default>
+                <label>Cleidocranial Dysostosis</label>
+            </value>
+            <value>
+                <fullName>Craniofacial Tumors</fullName>
+                <default>false</default>
+                <label>Craniofacial Tumors</label>
+            </value>
+            <value>
+                <fullName>Craniosynostosis</fullName>
+                <default>false</default>
+                <label>Craniosynostosis</label>
+            </value>
+            <value>
+                <fullName>Crooked Teeth</fullName>
+                <default>false</default>
+                <label>Crooked Teeth</label>
+            </value>
+            <value>
+                <fullName>Crossbite</fullName>
+                <default>false</default>
+                <label>Crossbite</label>
+            </value>
+            <value>
+                <fullName>Crouzon Syndrome</fullName>
+                <default>false</default>
+                <label>Crouzon Syndrome</label>
+            </value>
+            <value>
+                <fullName>Dental Abnormalities</fullName>
+                <default>false</default>
+                <label>Dental Abnormalities</label>
+            </value>
+            <value>
+                <fullName>Dental Crowding</fullName>
+                <default>false</default>
+                <label>Dental Crowding</label>
+            </value>
+            <value>
+                <fullName>Dental Disorders</fullName>
+                <default>false</default>
+                <label>Dental Disorders</label>
+            </value>
+            <value>
+                <fullName>Dental Irregularities</fullName>
+                <default>false</default>
+                <label>Dental Irregularities</label>
+            </value>
+            <value>
+                <fullName>Dental Spacing</fullName>
+                <default>false</default>
+                <label>Dental Spacing</label>
+            </value>
+            <value>
+                <fullName>Ectodermal Dysplasia</fullName>
+                <default>false</default>
+                <label>Ectodermal Dysplasia</label>
+            </value>
+            <value>
+                <fullName>Facial Asymmetries</fullName>
+                <default>false</default>
+                <label>Facial Asymmetries</label>
+            </value>
+            <value>
+                <fullName>Facial Fracture</fullName>
+                <default>false</default>
+                <label>Facial Fracture</label>
+            </value>
+            <value>
+                <fullName>Facial Irregularities</fullName>
+                <default>false</default>
+                <label>Facial Irregularities</label>
+            </value>
+            <value>
+                <fullName>Gaps Between Teeth</fullName>
+                <default>false</default>
+                <label>Gaps Between Teeth</label>
+            </value>
+            <value>
+                <fullName>Gingival Fibromatosis - Dntl Abnormality</fullName>
+                <default>false</default>
+                <label>Gingival Fibromatosis - Dntl Abnormality</label>
+            </value>
+            <value>
+                <fullName>Hemifacial Microsomia</fullName>
+                <default>false</default>
+                <label>Hemifacial Microsomia</label>
+            </value>
+            <value>
+                <fullName>Hypodontia</fullName>
+                <default>false</default>
+                <label>Hypodontia</label>
+            </value>
+            <value>
+                <fullName>Jaw Fracture</fullName>
+                <default>false</default>
+                <label>Jaw Fracture</label>
+            </value>
+            <value>
+                <fullName>Malocclusion (Bad Bite)</fullName>
+                <default>false</default>
+                <label>Malocclusion (Bad Bite)</label>
+            </value>
+            <value>
+                <fullName>Malocclusion - Short Stature Syndrome</fullName>
+                <default>false</default>
+                <label>Malocclusion - Short Stature Syndrome</label>
+            </value>
+            <value>
+                <fullName>Maxillary and Malar Fractures</fullName>
+                <default>false</default>
+                <label>Maxillary and Malar Fractures</label>
+            </value>
+            <value>
+                <fullName>Maxillofacial Trauma in Children</fullName>
+                <default>false</default>
+                <label>Maxillofacial Trauma in Children</label>
+            </value>
+            <value>
+                <fullName>Misaligned Teeth</fullName>
+                <default>false</default>
+                <label>Misaligned Teeth</label>
+            </value>
+            <value>
+                <fullName>Open Bite</fullName>
+                <default>false</default>
+                <label>Open Bite</label>
+            </value>
+            <value>
+                <fullName>Orthodontic Disorders</fullName>
+                <default>false</default>
+                <label>Orthodontic Disorders</label>
+            </value>
+            <value>
+                <fullName>Overbite</fullName>
+                <default>false</default>
+                <label>Overbite</label>
+            </value>
+            <value>
+                <fullName>Overjet</fullName>
+                <default>false</default>
+                <label>Overjet</label>
+            </value>
+            <value>
+                <fullName>Pediatric Airway Difficulties</fullName>
+                <default>false</default>
+                <label>Pediatric Airway Difficulties</label>
+            </value>
+            <value>
+                <fullName>Pierre Robin Syndrome</fullName>
+                <default>false</default>
+                <label>Pierre Robin Syndrome</label>
+            </value>
+            <value>
+                <fullName>Post-Traumatic Facial Injuries</fullName>
+                <default>false</default>
+                <label>Post-Traumatic Facial Injuries</label>
+            </value>
+            <value>
+                <fullName>Protruding Front Teeth</fullName>
+                <default>false</default>
+                <label>Protruding Front Teeth</label>
+            </value>
+            <value>
+                <fullName>Sensorineural Deafness</fullName>
+                <default>false</default>
+                <label>Sensorineural Deafness</label>
+            </value>
+            <value>
+                <fullName>Sinusitis</fullName>
+                <default>false</default>
+                <label>Sinusitis</label>
+            </value>
+            <value>
+                <fullName>Sinus Problems</fullName>
+                <default>false</default>
+                <label>Sinus Problems</label>
+            </value>
+            <value>
+                <fullName>Sleep Apnea</fullName>
+                <default>false</default>
+                <label>Sleep Apnea</label>
+            </value>
+            <value>
+                <fullName>Snoring</fullName>
+                <default>false</default>
+                <label>Snoring</label>
+            </value>
+            <value>
+                <fullName>Stickler Syndrome</fullName>
+                <default>false</default>
+                <label>Stickler Syndrome</label>
+            </value>
+            <value>
+                <fullName>Teeth Noneruptn w/ Mxilry Hyplsia &amp; Gnu</fullName>
+                <default>false</default>
+                <label>Teeth Noneruptn w/ Mxilry Hyplsia &amp; Gnu</label>
+            </value>
+            <value>
+                <fullName>Tempormandibular Joint Pain</fullName>
+                <default>false</default>
+                <label>Tempormandibular Joint Pain</label>
+            </value>
+            <value>
+                <fullName>Treacher Collins Syndrome</fullName>
+                <default>false</default>
+                <label>Treacher Collins Syndrome</label>
+            </value>
+            <value>
+                <fullName>Underbite</fullName>
+                <default>false</default>
+                <label>Underbite</label>
+            </value>
+            <value>
+                <fullName>Van der Woude Syndrome</fullName>
+                <default>false</default>
+                <label>Van der Woude Syndrome</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

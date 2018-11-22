@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retention_Closing_a_Support_Case</fullName>
+    <active>true</active>
+    <description>Makes it impossible for a Retention Rep to close a Support or Sync List case as Closed, Fixed</description>
+    <errorConditionFormula>AND ($User.ProfileId = &quot;00ei0000001Zakb&quot; ,   ISPICKVAL(Status , &quot;Closed&quot;) , ISPICKVAL(  Resolution__c , &quot;Fixed&quot;),  OR(RecordTypeId = &quot;012i0000001EALy&quot; , RecordTypeId = &quot;012i0000001EAmd&quot;))</errorConditionFormula>
+    <errorMessage>This Case should be moved to a Cancel Request Type so a Survey is not sent out.</errorMessage>
+</ValidationRule>

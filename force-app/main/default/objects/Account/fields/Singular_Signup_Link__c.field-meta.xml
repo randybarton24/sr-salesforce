@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Singular_Signup_Link__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;http://singularpayments.com/solutionreach-enrollment-form?&quot;
+&amp; &quot;Business_Legal_Name=&quot; &amp; Name &amp; &quot;&amp;&quot;
+&amp; &quot;DBA=&quot; &amp; Name &amp; &quot;&amp;&quot;
+&amp; &quot;Website=&quot; &amp; Website &amp; &quot;&amp;&quot;
+&amp; &quot;Address1=&quot; &amp; BillingStreet &amp; &quot;&amp;&quot;
+&amp; &quot;City=&quot; &amp; BillingCity &amp; &quot;&amp;&quot;
+&amp; &quot;State=&quot; &amp; BillingState &amp; &quot;&amp;&quot;
+&amp; &quot;Zip=&quot; &amp;  BillingPostalCode  &amp; &quot;&amp;&quot;
+&amp; &quot;Phone=&quot; &amp; Phone &amp; &quot;&amp;&quot;
+&amp; &quot;First_Name=&quot; &amp;  Office_Contact__r.FirstName  &amp; &quot;&amp;&quot;
+&amp; &quot;Last_Name=&quot; &amp; Office_Contact__r.LastName &amp; &quot;&amp;&quot;
+&amp; &quot;Title=&quot; &amp; Office_Contact__r.Title &amp; &quot;&amp;&quot;
+&amp; &quot;Contact_Phone=&quot; &amp; Office_Contact__r.Phone &amp; &quot;&amp;&quot;
+&amp; &quot;Email=&quot; &amp;  Office_Contact__r.Email &amp; &quot;&amp;&quot;
+&amp; &quot;Email_Confirm=&quot; &amp; Office_Contact__r.Email, &quot;Singular Payments Signup Link&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Singular Signup Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

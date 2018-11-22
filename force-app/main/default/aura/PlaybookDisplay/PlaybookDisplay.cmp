@@ -1,0 +1,36 @@
+<aura:component controller="PlaybookControllerApxc" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="openCases" type="Case[]" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="updateSpinner" event="c:PlaybookSpinner"
+                  action="{!c.handlePlaybookSpinner}" />
+    <aura:handler name="updateCases" event="c:UpdatePlaybookCases"
+                  action="{!c.handleUpdatePlaybookCases}" />
+
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" />
+    </aura:if>
+
+    <div class="slds-grid slds-grid--align-end">
+        <c:AddPlaybookButton acctId = "{!v.recordId}"/>
+    </div>
+
+    <div class="slds-m-horizontal--medium slds-m-top--small">
+        <aura:if isTrue="{!v.openCases.length > 0}" >
+            <lightning:tabset variant="scoped">
+                <aura:iteration items="{!v.openCases}" var="case">
+                    <c:PlaybookCasesTabs case ="{!case}"/>
+                </aura:iteration>
+            </lightning:tabset>
+        </aura:if>
+    </div>
+    <aura:if isTrue="{!v.openCases.length == 0}" >
+        <div class="slds-p-around--large slds-align--absolute-center">
+            <strong>No Open Playbooks</strong>
+        </div>
+    </aura:if>
+
+    </aura:component>

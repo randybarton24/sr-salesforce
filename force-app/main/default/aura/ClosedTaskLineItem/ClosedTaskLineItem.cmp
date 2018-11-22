@@ -1,0 +1,18 @@
+<!--
+ - Created by mschetselaar on 9/6/2018.
+ -->
+
+<aura:component description="ClosedTaskLineItem">
+    <aura:attribute name="closedTasks" type="Task"/>
+    <aura:attribute name="completed" type="Boolean" default="true" />
+
+    <tr>
+        <td><lightning:input  type="checkbox" label="" value="{!v.completed}" onchange="{!c.updateTask}" /></td>
+        <td>{!v.closedTasks.Subject}</td>
+        <td>{!v.closedTasks.ActivityDate}</td>
+        <td>{!v.closedTasks.Status}</td>
+        <td>{!v.closedTasks.Priority}</td>
+        <td>{!v.closedTasks.AssignedTo}</td>
+
+    </tr>
+</aura:component>

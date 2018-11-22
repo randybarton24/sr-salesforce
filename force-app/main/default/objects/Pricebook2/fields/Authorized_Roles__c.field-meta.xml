@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Authorized_Roles__c</fullName>
+    <externalId>false</externalId>
+    <label>Authorized Roles</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accountant</fullName>
+                <default>false</default>
+                <label>Accountant</label>
+            </value>
+            <value>
+                <fullName>ADR Manager 1</fullName>
+                <default>false</default>
+                <label>ADR Manager 1</label>
+            </value>
+            <value>
+                <fullName>ADR Manager 2</fullName>
+                <default>false</default>
+                <label>ADR Manager 2</label>
+            </value>
+            <value>
+                <fullName>ADR Manager 3</fullName>
+                <default>false</default>
+                <label>ADR Manager 3</label>
+            </value>
+            <value>
+                <fullName>ADR Manager 4</fullName>
+                <default>false</default>
+                <label>ADR Manager 4</label>
+            </value>
+            <value>
+                <fullName>ADR Manager 5</fullName>
+                <default>false</default>
+                <label>ADR Manager 5</label>
+            </value>
+            <value>
+                <fullName>ADR Manager 6</fullName>
+                <default>false</default>
+                <label>ADR Manager 6</label>
+            </value>
+            <value>
+                <fullName>ADR Manager 8</fullName>
+                <default>false</default>
+                <label>ADR Manager 8</label>
+            </value>
+            <value>
+                <fullName>ADR Rep 1</fullName>
+                <default>false</default>
+                <label>ADR Rep 1</label>
+            </value>
+            <value>
+                <fullName>ADR Rep 2</fullName>
+                <default>false</default>
+                <label>ADR Rep 2</label>
+            </value>
+            <value>
+                <fullName>ADR Rep 3</fullName>
+                <default>false</default>
+                <label>ADR Rep 3</label>
+            </value>
+            <value>
+                <fullName>ADR Rep 4</fullName>
+                <default>false</default>
+                <label>ADR Rep 4</label>
+            </value>
+            <value>
+                <fullName>ADR Rep 5</fullName>
+                <default>false</default>
+                <label>ADR Rep 5</label>
+            </value>
+            <value>
+                <fullName>ADR Rep 6</fullName>
+                <default>false</default>
+                <label>ADR Rep 6</label>
+            </value>
+            <value>
+                <fullName>ADR Rep 7</fullName>
+                <default>false</default>
+                <label>ADR Rep 7</label>
+            </value>
+            <value>
+                <fullName>ADR Rep 8</fullName>
+                <default>false</default>
+                <label>ADR Rep 8</label>
+            </value>
+            <value>
+                <fullName>ADR Sr Manager</fullName>
+                <default>false</default>
+                <label>ADR Sr Manager</label>
+            </value>
+            <value>
+                <fullName>AE Manager 1</fullName>
+                <default>false</default>
+                <label>AE Manager 1</label>
+            </value>
+            <value>
+                <fullName>AE Manager 2</fullName>
+                <default>false</default>
+                <label>AE Manager 2</label>
+            </value>
+            <value>
+                <fullName>AE Rep 1</fullName>
+                <default>false</default>
+                <label>AE Rep 1</label>
+            </value>
+            <value>
+                <fullName>AE Rep 2</fullName>
+                <default>false</default>
+                <label>AE Rep 2</label>
+            </value>
+            <value>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+                <label>Business Development</label>
+            </value>
+            <value>
+                <fullName>Business Development Manager</fullName>
+                <default>false</default>
+                <label>Business Development Manager</label>
+            </value>
+            <value>
+                <fullName>Controller</fullName>
+                <default>false</default>
+                <label>Controller</label>
+            </value>
+            <value>
+                <fullName>CSR - Implementation</fullName>
+                <default>false</default>
+                <label>CSR - Implementation</label>
+            </value>
+            <value>
+                <fullName>CSR - Rapid Response</fullName>
+                <default>false</default>
+                <label>CSR - Rapid Response</label>
+            </value>
+            <value>
+                <fullName>CSR - Tech</fullName>
+                <default>false</default>
+                <label>CSR - Tech</label>
+            </value>
+            <value>
+                <fullName>CSR - Tier 1</fullName>
+                <default>false</default>
+                <label>CSR - Tier 1</label>
+            </value>
+            <value>
+                <fullName>CSR Director</fullName>
+                <default>false</default>
+                <label>CSR Director</label>
+            </value>
+            <value>
+                <fullName>CSR Enterprise</fullName>
+                <default>false</default>
+                <label>CSR Enterprise</label>
+            </value>
+            <value>
+                <fullName>CSR ICU Rep</fullName>
+                <default>false</default>
+                <label>CSR ICU Rep</label>
+            </value>
+            <value>
+                <fullName>CSR Manager</fullName>
+                <default>false</default>
+                <label>CSR Manager</label>
+            </value>
+            <value>
+                <fullName>CSR PCU Rep</fullName>
+                <default>false</default>
+                <label>CSR PCU Rep</label>
+            </value>
+            <value>
+                <fullName>CSR Team Lead</fullName>
+                <default>false</default>
+                <label>CSR Team Lead</label>
+            </value>
+            <value>
+                <fullName>CSR Trainer</fullName>
+                <default>false</default>
+                <label>CSR Trainer</label>
+            </value>
+            <value>
+                <fullName>Director of Extended Sales</fullName>
+                <default>false</default>
+                <label>Director of Extended Sales</label>
+            </value>
+            <value>
+                <fullName>Director of Inside Sales</fullName>
+                <default>false</default>
+                <label>Director of Inside Sales</label>
+            </value>
+            <value>
+                <fullName>Director, Sales Operations</fullName>
+                <default>false</default>
+                <label>Director, Sales Operations</label>
+            </value>
+            <value>
+                <fullName>ESR California Manager</fullName>
+                <default>false</default>
+                <label>ESR California Manager</label>
+            </value>
+            <value>
+                <fullName>ESR California Rep</fullName>
+                <default>false</default>
+                <label>ESR California Rep</label>
+            </value>
+            <value>
+                <fullName>ESR Great Lakes Manager</fullName>
+                <default>false</default>
+                <label>ESR Great Lakes Manager</label>
+            </value>
+            <value>
+                <fullName>ESR Great Lakes Rep</fullName>
+                <default>false</default>
+                <label>ESR Great Lakes Rep</label>
+            </value>
+            <value>
+                <fullName>ESR Mid West Manager</fullName>
+                <default>false</default>
+                <label>ESR Mid West Manager</label>
+            </value>
+            <value>
+                <fullName>ESR Mid West Rep</fullName>
+                <default>false</default>
+                <label>ESR Mid West Rep</label>
+            </value>
+            <value>
+                <fullName>ESR New England Manager</fullName>
+                <default>false</default>
+                <label>ESR New England Manager</label>
+            </value>
+            <value>
+                <fullName>ESR New England Rep</fullName>
+                <default>false</default>
+                <label>ESR New England Rep</label>
+            </value>
+            <value>
+                <fullName>ESR North East Manager</fullName>
+                <default>false</default>
+                <label>ESR North East Manager</label>
+            </value>
+            <value>
+                <fullName>ESR North East Rep</fullName>
+                <default>false</default>
+                <label>ESR North East Rep</label>
+            </value>
+            <value>
+                <fullName>ESR South East Manager</fullName>
+                <default>false</default>
+                <label>ESR South East Manager</label>
+            </value>
+            <value>
+                <fullName>ESR South East Rep</fullName>
+                <default>false</default>
+                <label>ESR South East Rep</label>
+            </value>
+            <value>
+                <fullName>ESR South Manager</fullName>
+                <default>false</default>
+                <label>ESR South Manager</label>
+            </value>
+            <value>
+                <fullName>ESR South Rep</fullName>
+                <default>false</default>
+                <label>ESR South Rep</label>
+            </value>
+            <value>
+                <fullName>ESR South West Manager</fullName>
+                <default>false</default>
+                <label>ESR South West Manager</label>
+            </value>
+            <value>
+                <fullName>ESR South West Rep</fullName>
+                <default>false</default>
+                <label>ESR South West Rep</label>
+            </value>
+            <value>
+                <fullName>ESR West Manager</fullName>
+                <default>false</default>
+                <label>ESR West Manager</label>
+            </value>
+            <value>
+                <fullName>ESR West Rep</fullName>
+                <default>false</default>
+                <label>ESR West Rep</label>
+            </value>
+            <value>
+                <fullName>Executive</fullName>
+                <default>false</default>
+                <label>Executive</label>
+            </value>
+            <value>
+                <fullName>Extended Sales Coordinator</fullName>
+                <default>false</default>
+                <label>Extended Sales Coordinator</label>
+            </value>
+            <value>
+                <fullName>Finance Director</fullName>
+                <default>false</default>
+                <label>Finance Director</label>
+            </value>
+            <value>
+                <fullName>Inside Sales Coordinator</fullName>
+                <default>false</default>
+                <label>Inside Sales Coordinator</label>
+            </value>
+            <value>
+                <fullName>Major Accounts ADR</fullName>
+                <default>false</default>
+                <label>Major Accounts ADR</label>
+            </value>
+            <value>
+                <fullName>Major Accounts ADR Manager</fullName>
+                <default>false</default>
+                <label>Major Accounts ADR Manager</label>
+            </value>
+            <value>
+                <fullName>Major Accounts Executive</fullName>
+                <default>false</default>
+                <label>Major Accounts Executive</label>
+            </value>
+            <value>
+                <fullName>Major Accounts Manager</fullName>
+                <default>false</default>
+                <label>Major Accounts Manager</label>
+            </value>
+            <value>
+                <fullName>Major Accounts Rep</fullName>
+                <default>false</default>
+                <label>Major Accounts Rep</label>
+            </value>
+            <value>
+                <fullName>Manager Major Accounts</fullName>
+                <default>false</default>
+                <label>Manager Major Accounts</label>
+            </value>
+            <value>
+                <fullName>Outside Sales Manager</fullName>
+                <default>false</default>
+                <label>Outside Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Outside Sales Rep</fullName>
+                <default>false</default>
+                <label>Outside Sales Rep</label>
+            </value>
+            <value>
+                <fullName>Retention Manager</fullName>
+                <default>false</default>
+                <label>Retention Manager</label>
+            </value>
+            <value>
+                <fullName>Retention Rep</fullName>
+                <default>false</default>
+                <label>Retention Rep</label>
+            </value>
+            <value>
+                <fullName>SAE Manager 1</fullName>
+                <default>false</default>
+                <label>SAE Manager 1</label>
+            </value>
+            <value>
+                <fullName>SAE Manager 2</fullName>
+                <default>false</default>
+                <label>SAE Manager 2</label>
+            </value>
+            <value>
+                <fullName>SAE Manager 3</fullName>
+                <default>false</default>
+                <label>SAE Manager 3</label>
+            </value>
+            <value>
+                <fullName>SAE Manager 4</fullName>
+                <default>false</default>
+                <label>SAE Manager 4</label>
+            </value>
+            <value>
+                <fullName>SAE Manager 5</fullName>
+                <default>false</default>
+                <label>SAE Manager 5</label>
+            </value>
+            <value>
+                <fullName>SAE Manager 6</fullName>
+                <default>false</default>
+                <label>SAE Manager 6</label>
+            </value>
+            <value>
+                <fullName>SAE Rep 1</fullName>
+                <default>false</default>
+                <label>SAE Rep 1</label>
+            </value>
+            <value>
+                <fullName>SAE Rep 2</fullName>
+                <default>false</default>
+                <label>SAE Rep 2</label>
+            </value>
+            <value>
+                <fullName>SAE Rep 3</fullName>
+                <default>false</default>
+                <label>SAE Rep 3</label>
+            </value>
+            <value>
+                <fullName>SAE Rep 4</fullName>
+                <default>false</default>
+                <label>SAE Rep 4</label>
+            </value>
+            <value>
+                <fullName>SAE Rep 5</fullName>
+                <default>false</default>
+                <label>SAE Rep 5</label>
+            </value>
+            <value>
+                <fullName>SAE Rep 6</fullName>
+                <default>false</default>
+                <label>SAE Rep 6</label>
+            </value>
+            <value>
+                <fullName>Sales Operations</fullName>
+                <default>false</default>
+                <label>Sales Operations</label>
+            </value>
+            <value>
+                <fullName>Scheduling Coordinator</fullName>
+                <default>false</default>
+                <label>Scheduling Coordinator</label>
+            </value>
+            <value>
+                <fullName>Scheduling Team Lead</fullName>
+                <default>false</default>
+                <label>Scheduling Team Lead</label>
+            </value>
+            <value>
+                <fullName>Senior CSR</fullName>
+                <default>false</default>
+                <label>Senior CSR</label>
+            </value>
+            <value>
+                <fullName>Specialty Manager</fullName>
+                <default>false</default>
+                <label>Specialty Manager</label>
+            </value>
+            <value>
+                <fullName>SVP Sales</fullName>
+                <default>false</default>
+                <label>SVP Sales</label>
+            </value>
+            <value>
+                <fullName>System Administrator</fullName>
+                <default>false</default>
+                <label>System Administrator</label>
+            </value>
+            <value>
+                <fullName>VP CSR</fullName>
+                <default>false</default>
+                <label>VP CSR</label>
+            </value>
+            <value>
+                <fullName>VP Extended Sales</fullName>
+                <default>false</default>
+                <label>VP Extended Sales</label>
+            </value>
+            <value>
+                <fullName>VP Inside Sales</fullName>
+                <default>false</default>
+                <label>VP Inside Sales</label>
+            </value>
+            <value>
+                <fullName>VP Outside Sales/BD</fullName>
+                <default>false</default>
+                <label>VP Outside Sales/BD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

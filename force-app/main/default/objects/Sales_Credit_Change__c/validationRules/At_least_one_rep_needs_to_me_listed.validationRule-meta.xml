@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>At_least_one_rep_needs_to_me_listed</fullName>
+    <active>true</active>
+    <errorConditionFormula>isblank(Extended_Rep_1__c) &amp;&amp; isblank(Extended_Rep_2__c) &amp;&amp; isblank(Inside_Rep_1__c) &amp;&amp; isblank(Inside_Rep_2__c) &amp;&amp; isblank(Outside_Rep_1__c) &amp;&amp; isblank(SDR_Manager__c)</errorConditionFormula>
+    <errorMessage>All reps involved on this change request must be listed.</errorMessage>
+</ValidationRule>

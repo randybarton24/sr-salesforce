@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Diagnostic__c</fullName>
+    <externalId>false</externalId>
+    <label>Diagnostic</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Target_Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Database connectivity</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Database connectivity</label>
+            </value>
+            <value>
+                <fullName>Internet connectivity</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Internet connectivity</label>
+            </value>
+            <value>
+                <fullName>Flaky front office computer</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Flaky front office computer</label>
+            </value>
+            <value>
+                <fullName>Closed 5 days a week</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Closed 5 days a week</label>
+            </value>
+            <value>
+                <fullName>Environmental issue</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Environmental issue</label>
+            </value>
+            <value>
+                <fullName>Database/PM issue</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Database/PM issue</label>
+            </value>
+            <value>
+                <fullName>Office behavior issue</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Office behavior issue</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Actively Working</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>No Change</controllingFieldValue>
+            <controllingFieldValue>Passed</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Database connectivity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Actively Working</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>No Change</controllingFieldValue>
+            <controllingFieldValue>Passed</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Internet connectivity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Actively Working</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>No Change</controllingFieldValue>
+            <controllingFieldValue>Passed</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Flaky front office computer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Actively Working</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>No Change</controllingFieldValue>
+            <controllingFieldValue>Passed</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Closed 5 days a week</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Actively Working</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>No Change</controllingFieldValue>
+            <controllingFieldValue>Passed</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Environmental issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Actively Working</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>No Change</controllingFieldValue>
+            <controllingFieldValue>Passed</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Database/PM issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Actively Working</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>No Change</controllingFieldValue>
+            <controllingFieldValue>Passed</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Office behavior issue</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

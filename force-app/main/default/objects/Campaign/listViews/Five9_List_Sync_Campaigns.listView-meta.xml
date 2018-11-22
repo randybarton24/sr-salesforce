@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Five9_List_Sync_Campaigns</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.ID</columns>
+    <columns>Five9__Five9list__c</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>Five9__Five9CallNow__c</columns>
+    <columns>Five9__Five9ReportEmail__c</columns>
+    <columns>Five9__Five9User__c</columns>
+    <columns>Five9__Five9Password__c</columns>
+    <columns>Five9__Five9Endpoint__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.NAME</field>
+        <operation>contains</operation>
+        <value>Five9</value>
+    </filters>
+    <label>Five9 List Sync Campaigns</label>
+    <sharedTo>
+        <role>Sales_Operations</role>
+        <role>System_Administrator</role>
+    </sharedTo>
+</ListView>

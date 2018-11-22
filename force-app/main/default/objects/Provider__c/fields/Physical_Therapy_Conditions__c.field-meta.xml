@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Physical_Therapy_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Physical Therapy Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Postoperative Complications</fullName>
+                <default>false</default>
+                <label>Postoperative Complications</label>
+            </value>
+            <value>
+                <fullName>Postoperative Pain</fullName>
+                <default>false</default>
+                <label>Postoperative Pain</label>
+            </value>
+            <value>
+                <fullName>Repetitive Strain Injuries</fullName>
+                <default>false</default>
+                <label>Repetitive Strain Injuries</label>
+            </value>
+            <value>
+                <fullName>Stiffness</fullName>
+                <default>false</default>
+                <label>Stiffness</label>
+            </value>
+            <value>
+                <fullName>Abdominal Muscle Strain</fullName>
+                <default>false</default>
+                <label>Abdominal Muscle Strain</label>
+            </value>
+            <value>
+                <fullName>Accessory Navicular Bone</fullName>
+                <default>false</default>
+                <label>Accessory Navicular Bone</label>
+            </value>
+            <value>
+                <fullName>Adolescent Idiopathic Scoliosis</fullName>
+                <default>false</default>
+                <label>Adolescent Idiopathic Scoliosis</label>
+            </value>
+            <value>
+                <fullName>Ankle Laxity</fullName>
+                <default>false</default>
+                <label>Ankle Laxity</label>
+            </value>
+            <value>
+                <fullName>Bronchiectasis</fullName>
+                <default>false</default>
+                <label>Bronchiectasis</label>
+            </value>
+            <value>
+                <fullName>Dyspareunia</fullName>
+                <default>false</default>
+                <label>Dyspareunia</label>
+            </value>
+            <value>
+                <fullName>Hand Tendon Injuries</fullName>
+                <default>false</default>
+                <label>Hand Tendon Injuries</label>
+            </value>
+            <value>
+                <fullName>Post-Infectious Reactive Arthropathy</fullName>
+                <default>false</default>
+                <label>Post-Infectious Reactive Arthropathy</label>
+            </value>
+            <value>
+                <fullName>Postoperative Hip Fracture</fullName>
+                <default>false</default>
+                <label>Postoperative Hip Fracture</label>
+            </value>
+            <value>
+                <fullName>Renal Failure-Like Electrolyte Imbalance</fullName>
+                <default>false</default>
+                <label>Renal Failure-Like Electrolyte Imbalance</label>
+            </value>
+            <value>
+                <fullName>Strain of Hamstring Muscle</fullName>
+                <default>false</default>
+                <label>Strain of Hamstring Muscle</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

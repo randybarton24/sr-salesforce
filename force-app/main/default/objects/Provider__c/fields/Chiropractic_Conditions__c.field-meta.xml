@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chiropractic_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Chiropractic Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Back Pain</fullName>
+                <default>false</default>
+                <label>Back Pain</label>
+            </value>
+            <value>
+                <fullName>Acute Pain</fullName>
+                <default>false</default>
+                <label>Acute Pain</label>
+            </value>
+            <value>
+                <fullName>Car Accident Injuries</fullName>
+                <default>false</default>
+                <label>Car Accident Injuries</label>
+            </value>
+            <value>
+                <fullName>Foot Pain</fullName>
+                <default>false</default>
+                <label>Foot Pain</label>
+            </value>
+            <value>
+                <fullName>Neck Pain</fullName>
+                <default>false</default>
+                <label>Neck Pain</label>
+            </value>
+            <value>
+                <fullName>Occupational Injuries</fullName>
+                <default>false</default>
+                <label>Occupational Injuries</label>
+            </value>
+            <value>
+                <fullName>Stiffness</fullName>
+                <default>false</default>
+                <label>Stiffness</label>
+            </value>
+            <value>
+                <fullName>Strains</fullName>
+                <default>false</default>
+                <label>Strains</label>
+            </value>
+            <value>
+                <fullName>Whiplash Injuries</fullName>
+                <default>false</default>
+                <label>Whiplash Injuries</label>
+            </value>
+            <value>
+                <fullName>Abdominal Muscle Strain</fullName>
+                <default>false</default>
+                <label>Abdominal Muscle Strain</label>
+            </value>
+            <value>
+                <fullName>Accidental Injuries</fullName>
+                <default>false</default>
+                <label>Accidental Injuries</label>
+            </value>
+            <value>
+                <fullName>Adhesive Capsulitis of Shoulder</fullName>
+                <default>false</default>
+                <label>Adhesive Capsulitis of Shoulder</label>
+            </value>
+            <value>
+                <fullName>Adolescent Idiopathic Scoliosis</fullName>
+                <default>false</default>
+                <label>Adolescent Idiopathic Scoliosis</label>
+            </value>
+            <value>
+                <fullName>Back Injuries</fullName>
+                <default>false</default>
+                <label>Back Injuries</label>
+            </value>
+            <value>
+                <fullName>Back Sprain</fullName>
+                <default>false</default>
+                <label>Back Sprain</label>
+            </value>
+            <value>
+                <fullName>Back Strain</fullName>
+                <default>false</default>
+                <label>Back Strain</label>
+            </value>
+            <value>
+                <fullName>Cervical Spondylolisthesis</fullName>
+                <default>false</default>
+                <label>Cervical Spondylolisthesis</label>
+            </value>
+            <value>
+                <fullName>Chronic Back Pain</fullName>
+                <default>false</default>
+                <label>Chronic Back Pain</label>
+            </value>
+            <value>
+                <fullName>Chronic Neck Pain</fullName>
+                <default>false</default>
+                <label>Chronic Neck Pain</label>
+            </value>
+            <value>
+                <fullName>Familial Hemiplegic Migraine</fullName>
+                <default>false</default>
+                <label>Familial Hemiplegic Migraine</label>
+            </value>
+            <value>
+                <fullName>Foot Conditions</fullName>
+                <default>false</default>
+                <label>Foot Conditions</label>
+            </value>
+            <value>
+                <fullName>Low Back Pain</fullName>
+                <default>false</default>
+                <label>Low Back Pain</label>
+            </value>
+            <value>
+                <fullName>Lower Back Injuries</fullName>
+                <default>false</default>
+                <label>Lower Back Injuries</label>
+            </value>
+            <value>
+                <fullName>Lower Back Muscle Strain</fullName>
+                <default>false</default>
+                <label>Lower Back Muscle Strain</label>
+            </value>
+            <value>
+                <fullName>Lower Back Sprain</fullName>
+                <default>false</default>
+                <label>Lower Back Sprain</label>
+            </value>
+            <value>
+                <fullName>Myofascial Pain</fullName>
+                <default>false</default>
+                <label>Myofascial Pain</label>
+            </value>
+            <value>
+                <fullName>Neck Muscle Strain</fullName>
+                <default>false</default>
+                <label>Neck Muscle Strain</label>
+            </value>
+            <value>
+                <fullName>Neck Soft Tissue Trauma</fullName>
+                <default>false</default>
+                <label>Neck Soft Tissue Trauma</label>
+            </value>
+            <value>
+                <fullName>Occupational Disorders</fullName>
+                <default>false</default>
+                <label>Occupational Disorders</label>
+            </value>
+            <value>
+                <fullName>Pediatric Hip Disorders</fullName>
+                <default>false</default>
+                <label>Pediatric Hip Disorders</label>
+            </value>
+            <value>
+                <fullName>Piriformis Syndrome</fullName>
+                <default>false</default>
+                <label>Piriformis Syndrome</label>
+            </value>
+            <value>
+                <fullName>Sciatica as Seen in Rheumatoid Arthritis</fullName>
+                <default>false</default>
+                <label>Sciatica as Seen in Rheumatoid Arthritis</label>
+            </value>
+            <value>
+                <fullName>Sleep Disturbance-Related Fibromyalgia</fullName>
+                <default>false</default>
+                <label>Sleep Disturbance-Related Fibromyalgia</label>
+            </value>
+            <value>
+                <fullName>Spondylarthritis</fullName>
+                <default>false</default>
+                <label>Spondylarthritis</label>
+            </value>
+            <value>
+                <fullName>Strain of Hamstring Muscle</fullName>
+                <default>false</default>
+                <label>Strain of Hamstring Muscle</label>
+            </value>
+            <value>
+                <fullName>Strain of Muscle &amp;/or Tendon of Forearm</fullName>
+                <default>false</default>
+                <label>Strain of Muscle &amp;/or Tendon of Forearm</label>
+            </value>
+            <value>
+                <fullName>Strain of Tendon of Medial Thigh Muscle</fullName>
+                <default>false</default>
+                <label>Strain of Tendon of Medial Thigh Muscle</label>
+            </value>
+            <value>
+                <fullName>Tension Myositis-Related Fibromyalgia</fullName>
+                <default>false</default>
+                <label>Tension Myositis-Related Fibromyalgia</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

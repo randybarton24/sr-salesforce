@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unique_Target__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>Ensures that the combination of Target Owner, Year, and Month are unique for each target.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ensures that the combination of Target Owner, Year, and Month are unique for each target.</inlineHelpText>
+    <label>Unique Target</label>
+    <length>100</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

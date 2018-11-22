@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Schedule_Training</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Schedule Training</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/00T/e?RecordType=012f00000000GzZ&amp;who_id={!$User.Id}&amp;what_id={!Case.Id}&amp;00Nf0000000awEt=Training&amp;tsk5=Initial%20Training&amp;retURL=%2F{!Case.Id}</url>
+</WebLink>

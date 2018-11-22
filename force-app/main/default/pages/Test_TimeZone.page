@@ -1,0 +1,32 @@
+<apex:page showHeader="false" showChat="false"
+standardController="Case"  sidebar="false">
+{!Case.OwnerID}
+{! IF(Case.Case_Owner_Start_Time__c == null , 6 , Case.Case_Owner_Start_Time__c)}<br/>
+
+{!$User.FirstName}
+
+<br/>
+
+string strOffset = System.now().format('Z');
+string strOffsetHours = strOffset.substring(0,3);
+
+if(strOffsetHours.startsWith('+'))
+{
+  strOffsetHours = strOffsetHours.substring(1);
+}
+
+integer iMinutes = 100 * integer.valueOf(strOffset.substring(3));
+double dOffset = double.valueOf(strOffsetHours + '.' + ((iMinutes) / 60));
+
+
+<apex:outputText value="The formatted time right now is: 
+    {0,date,yyyy.MM.dd G 'at' HH:mm:ss z}">
+    <apex:param value="{!NOW()}" />
+</apex:outputText>
+<br/>
+<apex:outputText value="{!NOW()}" /> <br/>
+<apex:outputText value=" {!NOW()}" />
+
+
+
+</apex:page>

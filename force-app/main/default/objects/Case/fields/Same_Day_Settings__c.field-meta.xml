@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Same_Day_Settings__c</fullName>
+    <description>Checks the box if the Custom settings were completed on the same day as when it was scheduled for</description>
+    <externalId>false</externalId>
+    <formula>DATEVALUE( Custom_Settings_Scheduled_For__c ) = DATEVALUE ( Custom_Settings_Completed__c )</formula>
+    <label>Same Day Settings</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

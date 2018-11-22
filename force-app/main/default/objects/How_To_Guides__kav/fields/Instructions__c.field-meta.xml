@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instructions__c</fullName>
+    <description>A list of instructions on how to do a task</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please list your how to guide in a list format.</inlineHelpText>
+    <label>Instructions</label>
+    <length>32768</length>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

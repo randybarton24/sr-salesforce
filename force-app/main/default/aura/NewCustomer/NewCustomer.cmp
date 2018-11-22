@@ -1,0 +1,92 @@
+<!--
+ - Created by abishop on 9/17/18.
+ -->
+
+<aura:component controller="PartenerNewSaleApxc" access="global" implements="forceCommunity:availableForAllPageTypes">
+	<aura:attribute name="account" type="Account" default="{ 'sobjectType': 'Account' }"/>
+    <aura:attribute name="contact" type="Contact" default="{ 'sobjectType': 'Contact' }"/>
+	<aura:attribute name="opportunity" type="Opportunity" default="{ 'sobjectType':'Opportunity'}"/>
+    <aura:attribute name="province" type="String"/>
+    <aura:attribute name="country" type="String"/>
+    <aura:attribute name="postalCode" type="String"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="provinceOptions" type="List" default="[]"/>
+    <aura:attribute name="countryOptions" type="List" default="[]"/>
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="fieldName" type="String" />
+    <aura:attribute name="comList" type="Object" />
+    <aura:attribute name="pmsList" type="List" />
+    <aura:attribute name="options" type="List" default="[
+        {'label': 'Basic Platform + Conversations $299', 'value': '01s0Z00000419K8'},
+        {'label': 'Basic + Conversations + Reviews $339', 'value': '01s0Z00000419KD'},
+        {'label': 'Basic + Conversations + Reviews + Schedule $399', 'value': '01s0Z00000419KI'},
+        ]"/>
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <aura:handler name="change" value="{!v.country }" action="{!c.updateProvinces }"/>
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" />
+    </aura:if>
+    <lightning:card title="">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-size_1-of-2 slds-p-horizontal--medium">
+                    <span>
+                <lightning:card iconName="action:new_account" title="Account Information" >
+                <lightning:input type="text" label="Account Name" value="{!v.account.Name}" required="true"/>
+                <lightning:input type="tel"  label="Office Phone" value="{!v.account.Phone}" required="true"/>
+                <!--<lightning:input type="" aura:id="accountField" label="Timezone" value="{!v.acccount.Timezone}"/>-->
+                <lightning:input type="text" aura:id="accountField" label="Partner Id" value="{!v.account.Partner_Customer_ID__c}" required="true"/>
+                <lightning:combobox  label="Management Software" placeholder="Select a Management Software" options="{!v.pmsList}" onchange="{!c.handleChangePms}" required="true"/>
+                <lightning:combobox label="Competitive System" placeholder="Select a Competitive System" options="{!v.comList}" onchange="{!c.handleChangeCompetitor}" required="true"/>
+                <lightning:TextArea type="text" style="height: 80px"  label="Notes" value="{!v.account.Description}"/>
+                </lightning:card>
+                    </span>
+            </div>
+            <div class="slds-size_1-of-2 slds-p-horizontal--medium">
+            <span>
+            <lightning:card iconName="action:new_contact" title="Contact Information">
+                <lightning:input type="text" label="First Name" value="{!v.contact.FirstName}" required="true"/>
+                <lightning:input type="text" label="Last Name" value="{!v.contact.LastName}" required="true"/>
+                <lightning:input type="text" label="Phone" value="{!v.contact.Phone}" required="true"/>
+                <lightning:input type="email" label="Email" value="{!v.contact.Email}" required="true"/>
+                <lightning:input type="text" label="Title" value="{!v.contact.Title}" />
+            </lightning:card>
+            </span>
+            </div>
+
+            <div class="slds-size_1-of-2 slds-p-horizontal--medium">
+            <span>
+            <lightning:card iconName="action:map" title="Address Information">
+            <lightning:inputAddress
+                    streetLabel="Street"
+                    cityLabel="City"
+                    countryLabel="Country"
+                    provinceLabel="Province/State"
+                    postalCodeLabel="PostalCode"
+                    street="{! v.account.BillingStreet}"
+                    city="{! v.account.BillingCity}"
+                    postalCode="{! v.account.BillingPostalCode }"
+                    countryOptions="{! v.countryOptions }"
+                    provinceOptions="{! v.provinceOptions }"
+                    province="{! v.account.BillingState}"
+                    country="{! v.country }"
+                    required="true"
+            />
+            </lightning:card>
+            </span>
+            </div>
+            <div class="slds-size_1-of-2 slds-p-horizontal--medium">
+            <span>
+            <lightning:card iconName="action:quote" title="Product Information">
+            <lightning:combobox name="select1" label="Product SR Package Sold" required="true" onchange="{!c.handleChangePriceBook}" placeholder="Select Package" options="{! v.options }">
+            </lightning:combobox>
+            </lightning:card>
+                </span>
+            </div>
+        </div>
+        <div class="slds-grid slds-grid_align-end slds-p-horizontal--medium" >
+            <lightning:notificationsLibrary aura:id="notifLib"/>
+            <lightning:button name="toast" label="Save" variant="brand" onclick="{!c.createPartnerRecord}" class="slds-col"/>
+        </div>
+    </lightning:card>
+</aura:component>

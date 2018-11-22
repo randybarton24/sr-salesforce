@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trial_End_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Is_Monthly__c ,
+IF( TEXT( Trial__c ) = &quot;&quot; ,
+ null ,
+ RecurSoft__Contract_Term_Start_Date_New__c + VALUE( TEXT( Trial__c ))) ,
+null )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Trial End Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,110 @@
+<!--
+ - Created by mschetselaar on 9/6/2018.
+ -->
+
+<aura:component description="OpenTaskLineItem" controller="PlaybookControllerApxc">
+    <aura:attribute name="task" type="Task"/>
+    <aura:attribute name="completed" type="Boolean" default="true" />
+    <aura:attribute name="CaseId" type="Id" />
+    <aura:attribute name="relatedTasks" type="List" />
+    <aura:attribute name="relatedEvents" type="List" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="updateTask" type="c:taskLineItemUpdate" />
+    <aura:registerEvent name="updateSpinner" type="c:PlaybookSpinner" />
+
+    <tr>
+
+        <td class="slds-align-content-center">
+            <lightning:input  type="checkbox-button" label="" value="{!v.completed}" checked="{!v.completed}" onchange="{!c.updateTask}" /> </td>
+        <aura:if isTrue="{!v.completed}" >
+
+            <td><strike>{!v.task.Subject}</strike></td>
+            <td><strike><ui:outputDate value="{!v.task.ActivityDate}" /></strike></td>
+            <td><strike>{!v.task.Play_Type__c}</strike></td>
+            <td><strike>{!v.task.Status}</strike></td>
+            <td><strike>{!v.task.Priority}</strike></td>
+            <td><strike>{!v.task.Owner.Name}</strike></td>
+
+
+
+            <aura:set attribute="else" >
+
+                <td>{!v.task.Subject}</td>
+                <td><ui:outputDate value="{!v.task.ActivityDate}" /></td>
+                <td>{!v.task.Play_Type__c}</td>
+                <td>{!v.task.Status}</td>
+                <td>{!v.task.Priority}</td>
+                <td>{!v.task.Owner.Name}</td>
+
+                <td>
+                    <c.createActivityButton TaskId = "{!v.task.Id}" CaseId = "{!v.CaseId}"/>
+                </td>
+
+            </aura:set>
+        </aura:if>
+
+    </tr>
+    <aura:if isTrue="{!not(empty(v.relatedTasks))}" >
+        <tr>
+            <td colspan="8">
+                Related Tasks
+                <table class="slds-box slds-theme-shade" title="Related Tasks">
+                    <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">Complete</th>
+                        <th scope="col">Task Subject</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">Task Status</th>
+                        <th scope="col">Priority</th>
+                        <th scope="col">Assigned To</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration var="rTask" items="{!v.relatedTasks}" >
+                            <aura:if isTrue="{!rTask.Status == 'Scheduled'}" >
+                                <c:PB_relatedActivityTable rTask = "{!rTask}" isTask = "true" completed = "false" />
+                            </aura:if>
+                        </aura:iteration>
+                        <aura:iteration var="rTask" items="{!v.relatedTasks}" >
+                            <aura:if isTrue="{!rTask.Status != 'Scheduled'}" >
+                                <c:PB_relatedActivityTable rTask = "{!rTask}" isTask = "true" completed = "true" />
+                            </aura:if>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </aura:if>
+    <aura:if isTrue="{!not(empty(v.relatedEvents))}" >
+        <tr>
+            <td colspan="8">
+                Related Events
+                <table class="slds-box slds-theme-shade" title="Related Events">
+                    <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">Complete</th>
+                        <th scope="col">Event Subject</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">Activity Results</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Assigned To</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <aura:iteration var="rEvent" items="{!v.relatedEvents}" >
+                        <aura:if isTrue="{!rEvent.Activity_Results__c == 'Future Event'}" >
+                           <c:PB_relatedActivityTable rEvent = "{!rEvent}" isTask = "false" completed="false" />
+                        </aura:if>
+                    </aura:iteration>
+                    <aura:iteration var="rEvent" items="{!v.relatedEvents}" >
+                        <aura:if isTrue="{!rEvent.Activity_Results__c != 'Future Event'}" >
+                            <c:PB_relatedActivityTable rEvent = "{!rEvent}" isTask = "false" completed="true"/>
+                        </aura:if>
+                    </aura:iteration>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </aura:if>
+</aura:component>

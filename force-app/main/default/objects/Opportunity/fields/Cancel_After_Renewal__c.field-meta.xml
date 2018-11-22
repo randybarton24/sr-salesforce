@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_After_Renewal__c</fullName>
+    <description>Allows a prediction for Future Cancels Matthew Schetselaar 8/12/14</description>
+    <externalId>false</externalId>
+    <formula>Cancel_Month__c &gt;  Projected_Contract_Expiration_Renewal_Mo__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Cancel After Renewal</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

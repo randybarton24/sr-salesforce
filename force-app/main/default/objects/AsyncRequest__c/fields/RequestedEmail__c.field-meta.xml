@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequestedEmail__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used for the contract process email. Customers can choose to not receive the email.</description>
+    <externalId>false</externalId>
+    <label>RequestedEmail</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

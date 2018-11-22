@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Most_Recent_Contract_Signed_Date__c</fullName>
+    <description>Will be the same as the original unless the customer has cancelled and reactivated.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Will be the same as the original unless the customer has cancelled and reactivated.</inlineHelpText>
+    <label>Most Recent Contract Signed Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

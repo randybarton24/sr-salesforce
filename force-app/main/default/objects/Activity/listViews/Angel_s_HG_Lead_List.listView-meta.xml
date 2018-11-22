@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Angel_s_HG_Lead_List</fullName>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>TASK.STATUS</columns>
+    <columns>TASK.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>TASK.LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>tz__Timezone__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TASK.SUBJECT</field>
+        <operation>equals</operation>
+        <value>Call for Healthgrades - From Lead List</value>
+    </filters>
+    <filters>
+        <field>TASK.STATUS</field>
+        <operation>equals</operation>
+        <value>Scheduled</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>Acastill</value>
+    </filters>
+    <label>Angel&#39;s HG Lead List</label>
+    <sharedTo>
+        <role>ADR_Rep_7</role>
+    </sharedTo>
+</ListView>

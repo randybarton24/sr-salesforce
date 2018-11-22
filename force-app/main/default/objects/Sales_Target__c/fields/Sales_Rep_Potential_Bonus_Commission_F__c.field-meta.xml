@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Rep_Potential_Bonus_Commission_F__c</fullName>
+    <description>Calculation of the potential Bonus &amp; Commission total. Used for checking for accuracy against the rollup total.</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Team__c , &quot;Inside Sales&quot; ) , 
+Available_Bonus__c * Bonus_Commission_Multiplier__c , 
+Total_Revenue_Credit__c * Bonus_Commission_Multiplier__c 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sales Rep Potential Bonus &amp; Commission</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

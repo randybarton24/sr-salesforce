@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sync_Install_Class__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( NOT( ISNULL ( Sync_Install_Completed__c )), &#39;complete&#39;, IF( NOW() - CreatedDate &gt;  10, &#39;late&#39;, if( NOW() - CreatedDate &gt; 4, &#39;atrisk&#39;,  &#39;incomplete&#39;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sync Install Class</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

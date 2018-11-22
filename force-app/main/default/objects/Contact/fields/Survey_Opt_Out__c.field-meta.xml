@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey_Opt_Out__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Opts out the Contact from getting Surveys</description>
+    <externalId>false</externalId>
+    <label>Survey Opt Out</label>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

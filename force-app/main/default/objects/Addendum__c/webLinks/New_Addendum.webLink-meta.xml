@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Addendum</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Addendum</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/a3H/e?Name={!&quot;Addendum: &quot;}{!Account.Subscriber_ID__c}{!&quot; - &quot; + TEXT(MONTH(TODAY())) + &quot;/&quot; + TEXT(DAY(TODAY())) + &quot;/&quot; + TEXT(YEAR(TODAY()))}&amp;CF00N3100000GO48j={!Account.Name}&amp;CF00N3100000GO48j_lkid={!Account.Id}</url>
+</WebLink>

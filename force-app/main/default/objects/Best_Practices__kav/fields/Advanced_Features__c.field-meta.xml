@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advanced_Features__c</fullName>
+    <description>Any features that are not normally used</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please list any advanced features the office could use.</inlineHelpText>
+    <label>Advanced Features</label>
+    <length>32768</length>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Compact_Layout</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Represents a change to existing contractual terms</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Addendum</label>
+    <nameField>
+        <label>Addendum Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Addenda</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Addenda</relationshipLabel>
+        <relationshipName>Addenda</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Addendum_Signer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Addendum Signer</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.AccountId</field>
+                <operation>equals</operation>
+                <valueField>$Source.Account__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Addenda</relationshipLabel>
+        <relationshipName>Addenda</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CongaTemplateID__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;a3C31000000DVQW&quot;
+/*CASE( TemplateID__c ,
+&quot;SR Platform&quot;, &quot;a3C31000000DVQW&quot;,
+&quot;SR Platform,SR Schedule&quot;, &quot;a3C31000000DVQb&quot;,
+&quot;SR Platform,Healthgrades&quot;, &quot;a3C31000000DVQg&quot;,
+&quot;SR Platform,SR Schedule,Healthgrades&quot;, &quot;a3C31000000DVQl&quot;,
+&quot;SR Schedule&quot;, &quot;a3C31000000DVQq&quot;,
+&quot;SR Schedule,Healthgrades&quot;, &quot;a3C31000000DVQv&quot;,
+&quot;Healthgrades&quot;, &quot;a3C31000000DVR0&quot;,
+null)*/</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CongaTemplateID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Term_Months__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Term Months</label>
+        <summarizedField>Addendum_Line_Item__c.New_Contract_Term_Months__c</summarizedField>
+        <summaryForeignKey>Addendum_Line_Item__c.Addendum__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CoTerm_Change__c</fullName>
+        <externalId>false</externalId>
+        <label>CoTerm Change</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CoTerm_Dates__c</fullName>
+        <externalId>false</externalId>
+        <label>CoTerm Dates</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data__c</fullName>
+        <description>Rollup from Addendum Line Item</description>
+        <externalId>false</externalId>
+        <label>Data</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Minimum_Number_of_Modifications__c</fullName>
+        <description>Used to validate that all products on Addendum have at least one modification.</description>
+        <externalId>false</externalId>
+        <label>Minimum Number of Modifications</label>
+        <summarizedField>Addendum_Line_Item__c.Number_of_Modifications__c</summarizedField>
+        <summaryForeignKey>Addendum_Line_Item__c.Addendum__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>New_Contract_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>New Contract Start Date</label>
+        <summarizedField>Addendum_Line_Item__c.New_Contract_Start_Date__c</summarizedField>
+        <summaryForeignKey>Addendum_Line_Item__c.Addendum__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>New_Renewal_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>New Renewal Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>New_Subscription_Needed__c</fullName>
+        <externalId>false</externalId>
+        <label>New Subscription Needed</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Addenda</relationshipLabel>
+        <relationshipName>Addenda</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Price_Book__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Price Book</label>
+        <referenceTo>Pricebook2</referenceTo>
+        <relationshipLabel>Addenda</relationshipLabel>
+        <relationshipName>Addenda</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>QueueID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Owner:User.UserRole.Name , 
+&quot;CSR - Implementation&quot;, &quot;00G31000004WOhG&quot;, 
+&quot;00G31000004WOhG&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>QueueID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Signed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Signed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status_Message__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Minimum_Number_of_Modifications__c = 0 , &quot;There are still products on this Addendum without any modifications. Either update the product modifications or remove any products not being modified.&quot; ,
+    CASE( Status__c ,
+    &quot;New&quot; , &quot;Ready&quot; /*&quot;This Addendum hasn&#39;t been submitted for processing yet.&quot;*/ ,
+    &quot;Needs Accounting Data&quot; , &quot;This Addendum still requires Accounting data, and hasn&#39;t been submitted for processing yet.&quot; , 
+    &quot;Accounting Data Received&quot; , &quot;Ready&quot; /*&quot;This Addendum hasn&#39;t been submitted for processing yet.&quot;*/ ,
+    &quot;Ready For Processing&quot; , &quot;Ready&quot; ,
+    &quot;Not Approved&quot; , &quot;This Addendum hasn&#39;t been re-submitted for processing yet.&quot; ,
+    &quot;Signature Requested&quot; , &quot;This Addendum has already been submitted for processing.&quot; ,
+    &quot;Signature Expired&quot; , &quot;The signature request expired for this Addendum and it hasn&#39;t been re-submitted for processing yet.&quot; ,
+    &quot;Signature Declined&quot; , &quot;The signature request was declined for this Addendum and it hasn&#39;t been re-submitted for processing yet.&quot; ,
+    &quot;Signature Received&quot; , &quot;The signature has been received for this Addendum.&quot; ,
+    &quot;Closed&quot; , &quot;The signature has been received for this Addendum.&quot; ,
+    &quot;Ready&quot;)
+			)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status Message</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <defaultValue>&quot;New&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Needs Accounting Data</fullName>
+                    <default>false</default>
+                    <label>Needs Accounting Data</label>
+                </value>
+                <value>
+                    <fullName>Accounting Data Received</fullName>
+                    <default>false</default>
+                    <label>Accounting Data Received</label>
+                </value>
+                <value>
+                    <fullName>Ready For Processing</fullName>
+                    <default>false</default>
+                    <label>Ready For Processing</label>
+                </value>
+                <value>
+                    <fullName>Not Approved</fullName>
+                    <default>false</default>
+                    <label>Not Approved</label>
+                </value>
+                <value>
+                    <fullName>Signature Requested</fullName>
+                    <default>false</default>
+                    <label>Signature Requested</label>
+                </value>
+                <value>
+                    <fullName>Signature Expired</fullName>
+                    <default>false</default>
+                    <label>Signature Expired</label>
+                </value>
+                <value>
+                    <fullName>Signature Declined</fullName>
+                    <default>false</default>
+                    <label>Signature Declined</label>
+                </value>
+                <value>
+                    <fullName>Signature Received</fullName>
+                    <default>false</default>
+                    <label>Signature Received</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subscriber_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Subscriber_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subscriber ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TemplateID__c</fullName>
+        <externalId>false</externalId>
+        <label>TemplateID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Template_Available__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TemplateID__c ,
+&quot;SR Platform&quot; , 0,
+&quot;SR Platform,Limelight&quot; , 0,
+&quot;SR Platform,Healthgrades&quot; , 0,
+&quot;SR Platform,Limelight,Healthgrades&quot; , 0,
+&quot;Limelight&quot; , 0,
+&quot;Limelight,Healthgrades&quot; , 0,
+&quot;Healthgrades&quot; , 0,
+1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Template Available</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <compactLayouts>
+        <fullName>Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Subscriber_ID__c</fields>
+        <fields>Account__c</fields>
+        <fields>Addendum_Signer__c</fields>
+        <fields>Status__c</fields>
+        <fields>OwnerId</fields>
+        <label>Compact Layout</label>
+    </compactLayouts>
+    <webLinks>
+        <fullName>Complete_Data_Request</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Complete Data Request</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/flow/Accounting_Data_Request?AddendumID={!Addendum__c.Id}&amp;retURL={!Addendum__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Conga_Composer_Process_Addendum</fullName>
+        <availability>online</availability>
+        <description>Originally created by Conga Solution Manager. Date of last use of Update Button from Conga Solution record: https://solutionreach--apxtconga4.na25.visual.force.com/a3A31000002VyqjEAC
+08-Dec-2016 09:35:56 AM</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>false</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Process Addendum Old</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/APXTConga4__Conga_Composer 
+?serverUrl={!API.Partner_Server_URL_370} 
+&amp;id={!Addendum__c.Id} 
+
+&amp;ReportId=[AddendaSR]00O31000006nrjE,
+[AddendaLL]00O31000006nrjO,
+[AddendaHG]00O31000006nrjJ,
+[Addenda]00O31000006nuSp
+&amp;QueryId=[Addenda]a340Z000000hu2K
+
+&amp;SertifiVisible=1
+&amp;SertifiFileName=Solutionreach+Addendum+-+Subscriber+ID:+{!Addendum__c.Subscriber_ID__c}
+&amp;SertifiCustomSettings=AddendumSettings
+&amp;OFN=Solutionreach+Addendum+-+Subscriber+ID+{!Addendum__c.Subscriber_ID__c}
+&amp;TemplateId=a3C0Z000000R4KK 
+&amp;DS4=1
+&amp;DS0=1
+&amp;DC={!Addendum__c.Template_Available__c}
+&amp;DCL=The+combination+of+products+and+modifications+selected+is+not+currently+supported.
+&amp;SertifiSigner1Id={!Addendum__c.Addendum_SignerId__c}
+&amp;SC0=0</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Conga_Composer_Process_Addendum_New</fullName>
+        <availability>online</availability>
+        <description>Originally created by Conga Solution Manager. Date of last use of Update Button from Conga Solution record: https://solutionreach--apxtconga4.na25.visual.force.com/a3A31000003EpgIEAS
+01-May-2017 03:58:12 PM</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>false</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Process Addendum</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com?SolMgr=1 
+&amp;sessionId={!API.Session_ID} 
+&amp;serverUrl={!API.Partner_Server_URL_290} 
+&amp;Id={!Addendum__c.Id} 
+
+&amp;QueryId=[Addenda]a340Z000000hu2K 
+
+&amp;DS4=1 
+&amp;DS0=1 
+&amp;DC={!IF( Addendum__c.Status_Message__c = &quot;Ready&quot;, &quot;0&quot;, &quot;1&quot;)} 
+&amp;DCL={!Addendum__c.Status_Message__c} 
+&amp;SC0=0 
+&amp;TemplateId=a3C31000000DYHT 
+&amp;OFN=Solutionreach+Addendum+-+Subscriber+ID+{!Addendum__c.Subscriber_ID__c} 
+&amp;ESVisible=1 
+&amp;ESAgreementTemplateId=a3Q310000008neA 
+&amp;ESSVBA=1 
+&amp;DS7=14</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Addendum</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Addendum</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a3H/e?Name={!&quot;Addendum: &quot;}{!Account.Subscriber_ID__c}{!&quot; - &quot; + TEXT(MONTH(TODAY())) + &quot;/&quot; + TEXT(DAY(TODAY())) + &quot;/&quot; + TEXT(YEAR(TODAY()))}&amp;CF00N3100000GO48j={!Account.Name}&amp;CF00N3100000GO48j_lkid={!Account.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Process_AddendumLightning</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Process Addendum</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/APXTConga4__Conga_Composer
+?serverUrl={!API.Partner_Server_URL_370}
+&amp;id={!Addendum__c.Id} 
+
+&amp;QueryId=[Addenda]a340Z000000hu2K 
+
+&amp;DS4=1 
+&amp;DS0=0 
+&amp;DC={!IF( Addendum__c.Status_Message__c = &quot;Ready&quot;, &quot;0&quot;, &quot;1&quot;)} 
+&amp;DCL={!Addendum__c.Status_Message__c} 
+&amp;SC0=0 
+&amp;TemplateId=a3C0Z000000R4KK 
+&amp;OFN=Solutionreach+Addendum+-+Subscriber+ID+{!Addendum__c.Subscriber_ID__c}
+&amp;ESVisible=1 
+&amp;ESAgreementTemplateId=a3Q310000008neA 
+&amp;ESSVBA=1 
+&amp;DS7=14</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Reject_Addendum</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Reject Addendum</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/flow/Addendum_Rejection?AddendumID={!Addendum__c.Id}&amp;retURL={!Addendum__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Request_Accounting_Data</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Request Accounting Data</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!requireScript(&quot;/soap/ajax/23.0/connection.js&quot;)} 
+
+var newAddendum= new sforce.SObject(&quot;Addendum__c&quot;); 
+
+newAddendum.id = &quot;{!Addendum__c.Id}&quot;; 
+
+if(&quot;{!Addendum__c.Status__c}&quot;==&quot;Needs Accounting Data&quot;)
+{
+  newAddendum.OwnerId=&quot;00Gi00000034JUX&quot;; 
+
+  var result = sforce.connection.update([newAddendum]); 
+
+  if (result[0].getBoolean(&quot;success&quot;)) 
+  { 
+  // Refresh window 
+  window.location.reload(); 
+  } 
+  else 
+  { 
+  alert(&quot;something broke&quot;); 
+  }
+}
+else
+{
+alert(&quot;Data is complete&quot;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit_for_Processing</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Submit for Processing</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)} 
+
+var readyToProcess = &quot;&quot;; 
+var countAssets = sforce.connection.query(&quot;SELECT COUNT() FROM Asset WHERE Active__c = true AND AccountId = &#39;{!Addendum__c.AccountId__c}&#39; AND Contract_Type__c != &#39;Month-to-month&#39; AND Id NOT IN (SELECT Asset__c FROM Addendum_Line_Item__c WHERE Addendum__c = &#39;{!Addendum__c.Id}&#39;)&quot;); 
+
+if(countAssets.size &gt; 0 &amp;&amp; &quot;{!Addendum__c.CoTerm_Change__c}&quot; == &quot;CoTerm&quot;) 
+			{ 
+				readyToProcess += &quot;When changing the renewal date, all coterminous products must also be changed. Please adjust the current modifications or add all coterminous products to the addendum. &quot;; 
+			} 
+			if(&quot;{!Addendum__c.CoTerm_Dates__c}&quot; != 1) 
+			{ 
+				readyToProcess += &quot;The new renewal date must be the same for all products. Please adjust the current modifications. &quot;; 
+			} 
+			if(&quot;{!Addendum__c.Addendum_Signer__c}&quot; == &quot;&quot;) 
+			{ 
+				readyToProcess += &quot;Please select an Addendum Signer. &quot;; 
+			}  
+
+if(readyToProcess == &quot;&quot;) 
+{ 
+var newAddendum= new sforce.SObject(&quot;Addendum__c&quot;); 
+newAddendum.id = &quot;{!Addendum__c.Id}&quot;; 
+newAddendum.OwnerId=&quot;{!Addendum__c.QueueID__c}&quot;; 
+newAddendum.Status__c=&quot;Ready for Processing&quot;; 
+
+var result = sforce.connection.update([newAddendum]); 
+
+if (result[0].getBoolean(&quot;success&quot;)) 
+{ 
+// Refresh window 
+window.location.reload(); 
+} 
+else 
+{ 
+alert(&quot;something broke&quot;); 
+} 
+} 
+else 
+{ 
+alert(readyToProcess); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit_for_Processing_JS</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Submit for Processing</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)} 
+
+var readyToProcess = &quot;&quot;; 
+var countAssets = sforce.connection.query(&quot;SELECT COUNT() FROM Asset WHERE Active__c = true AND AccountId = &#39;{!Addendum__c.AccountId__c}&#39; AND Contract_Type__c != &#39;Month-to-month&#39; AND Id NOT IN (SELECT Asset__c FROM Addendum_Line_Item__c WHERE Addendum__c = &#39;{!Addendum__c.Id}&#39;)&quot;); 
+
+if(countAssets.size &gt; 0 &amp;&amp; &quot;{!Addendum__c.CoTerm_Change__c}&quot; == &quot;CoTerm&quot;) 
+{ 
+readyToProcess += &quot;When changing the renewal date, all coterminous products must also be changed. Please adjust the current modifications or add all coterminous products to the addendum. &quot;; 
+} 
+if(&quot;{!Addendum__c.CoTerm_Dates__c}&quot; != 1) 
+{ 
+readyToProcess += &quot;The new renewal date must be the same for all products. Please adjust the current modifications. &quot;; 
+} 
+if(&quot;{!Addendum__c.Addendum_Signer__c}&quot; == &quot;&quot;) 
+{ 
+readyToProcess += &quot;Please select an Addendum Signer. &quot;; 
+} 
+
+if(readyToProcess == &quot;&quot;) 
+{ 
+var newAddendum= new sforce.SObject(&quot;Addendum__c&quot;); 
+newAddendum.id = &quot;{!Addendum__c.Id}&quot;; 
+newAddendum.OwnerId=&quot;{!Addendum__c.QueueID__c}&quot;; 
+newAddendum.Status__c=&quot;Ready for Processing&quot;; 
+
+var result = sforce.connection.update([newAddendum]); 
+
+if (result[0].getBoolean(&quot;success&quot;)) 
+{ 
+// Refresh window 
+window.location.reload(); 
+} 
+else 
+{ 
+alert(&quot;something broke&quot;); 
+} 
+} 
+else 
+{ 
+alert(readyToProcess); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Test_Adobe</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Test Adobe</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/echosign_dev1__AgreementTemplateProcess?masterId={!Addendum__c.Id}&amp;templateId=a3Q310000008neA</url>
+    </webLinks>
+    <validationRules>
+        <fullName>One_Open_Addendum_Per_Account</fullName>
+        <active>true</active>
+        <errorConditionFormula>(
+				(
+								ISNEW() &amp;&amp; 
+								Account__r.Number_of_Open_Addenda__c &gt; 0 &amp;&amp;
+								NOT( ISPICKVAL( Status__c , &quot;Closed&quot; ) ) &amp;&amp;
+								NOT( ISPICKVAL( Status__c , &quot;Signature Expired&quot; ) ) &amp;&amp;
+								NOT( ISPICKVAL( Status__c , &quot;Signature Declined&quot; ) )
+				) 
+				|| 
+				Account__r.Number_of_Open_Addenda__c &gt; 1
+) 
+
+&amp;&amp;
+
+(
+				NOT
+				(
+								ISCHANGED(Status__c) &amp;&amp;
+								(
+												ISPICKVAL( Status__c , &quot;Closed&quot; ) ||
+												ISPICKVAL( Status__c , &quot;Signature Expired&quot; ) ||
+												ISPICKVAL( Status__c , &quot;Signature Declined&quot; )
+				   	)
+				)
+)</errorConditionFormula>
+        <errorMessage>Only one Addendum can be open per Account.  Please use the other Addendum that is currently open.</errorMessage>
+    </validationRules>
+    <listViews>
+        <fullName>Accounting_Queue_Addendum</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Comments__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Accounting Queue</label>
+        <queue>Accounting_Queue</queue>
+        <sharedTo>
+            <allInternalUsers/>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Account__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Addendum_Signer__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Opportunity__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Created_This_Month</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Account__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Addendum_Signer__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Opportunity__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>Created This Month</label>
+        <sharedTo>
+            <allInternalUsers/>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Created_This_Week</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Account__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Addendum_Signer__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Opportunity__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Signed_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>Created This Week</label>
+    </listViews>
+    <listViews>
+        <fullName>Created_Today</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Account__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Addendum_Signer__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Opportunity__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Signed_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Created Today</label>
+    </listViews>
+    <listViews>
+        <fullName>Onboarding_Addenda_Addendum</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Comments__c</columns>
+        <columns>Account__c</columns>
+        <columns>Addendum_Signer__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>Onboarding Addenda</label>
+        <queue>Onboarding_Addenda</queue>
+        <sharedTo>
+            <allInternalUsers/>
+        </sharedTo>
+    </listViews>
+</CustomObject>

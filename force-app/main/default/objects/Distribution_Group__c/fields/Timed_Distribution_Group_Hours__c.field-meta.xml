@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timed_Distribution_Group_Hours__c</fullName>
+    <description>Time-based Distribution Groups are groups that only allow an Account to pass through once every X hours. The Distribution Group assignment will be blocked by an Apex validation in ContactsService that compares this field with the Timed Distribution Group Date on the Account object.</description>
+    <externalId>false</externalId>
+    <label>Timed Distribution Group Hours</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

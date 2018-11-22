@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Limelight</fullName>
+    <active>true</active>
+    <description>Blocks the sale of Limelight.  For pre-release period.</description>
+    <errorConditionFormula>$Profile.Name != &quot;System Administrator&quot; &amp;&amp;
+$User.Username != &quot;nroberts@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;jasonb@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;emiller@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;dsherman@solutionreach.com&quot; &amp;&amp; 
+Opportunity.IsLegacy__c = false &amp;&amp;
+ ISPICKVAL( Product2.Family , &quot;SR Schedule&quot; ) &amp;&amp;
+Opportunity.Account.Practice_Management_Software__r.Limelight__c = false</errorConditionFormula>
+    <errorMessage>SR Schedule is not currently available for this Management System</errorMessage>
+</ValidationRule>

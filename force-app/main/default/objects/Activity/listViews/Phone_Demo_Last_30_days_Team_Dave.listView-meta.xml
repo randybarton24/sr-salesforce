@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Demo_Last_30_days_Team_Dave</fullName>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Due_Time__c</columns>
+    <columns>TASK.LAST_UPDATE</columns>
+    <columns>ADR_Set__c</columns>
+    <filterScope>Team</filterScope>
+    <filters>
+        <field>Activity_Type__c</field>
+        <operation>equals</operation>
+        <value>Phone Demo,ADR Set</value>
+    </filters>
+    <filters>
+        <field>TASK.DUE_DATE</field>
+        <operation>lessOrEqual</operation>
+        <value>NEXT_N_DAYS:7</value>
+    </filters>
+    <filters>
+        <field>TASK.STATUS</field>
+        <operation>equals</operation>
+        <value>Scheduled,Not Started</value>
+    </filters>
+    <label>Dave Team - Demo Next 7 days</label>
+    <sharedTo>
+        <role>SAE_Rep_3</role>
+    </sharedTo>
+</ListView>

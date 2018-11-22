@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unavailable_Feature_Other_requires_text</fullName>
+    <active>true</active>
+    <description>Require New Unavailable Features when &quot;Other&quot; is selected.</description>
+    <errorConditionFormula>Includes(Unavailable_Feature__c , &quot;Other&quot;) &amp;&amp;  ISBLANK (New_Unavailable_Feature__c )</errorConditionFormula>
+    <errorDisplayField>New_Unavailable_Feature__c</errorDisplayField>
+    <errorMessage>You must enter a New Unavailable Feature when &quot;Other&quot; is selected</errorMessage>
+</ValidationRule>

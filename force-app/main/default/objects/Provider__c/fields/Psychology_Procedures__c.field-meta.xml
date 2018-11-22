@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Psychology_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Psychology Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADHD Testing</fullName>
+                <default>false</default>
+                <label>ADHD Testing</label>
+            </value>
+            <value>
+                <fullName>Adolescent Counseling</fullName>
+                <default>false</default>
+                <label>Adolescent Counseling</label>
+            </value>
+            <value>
+                <fullName>Behavior Management</fullName>
+                <default>false</default>
+                <label>Behavior Management</label>
+            </value>
+            <value>
+                <fullName>Behavior Modification</fullName>
+                <default>false</default>
+                <label>Behavior Modification</label>
+            </value>
+            <value>
+                <fullName>Psychological Counseling</fullName>
+                <default>false</default>
+                <label>Psychological Counseling</label>
+            </value>
+            <value>
+                <fullName>Psychological Testing</fullName>
+                <default>false</default>
+                <label>Psychological Testing</label>
+            </value>
+            <value>
+                <fullName>Cognitive Rehabilitation</fullName>
+                <default>false</default>
+                <label>Cognitive Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Counseling for Gay/Lesbian Individuals</fullName>
+                <default>false</default>
+                <label>Counseling for Gay/Lesbian Individuals</label>
+            </value>
+            <value>
+                <fullName>Dialectical Behavior Therapy (DBT)</fullName>
+                <default>false</default>
+                <label>Dialectical Behavior Therapy (DBT)</label>
+            </value>
+            <value>
+                <fullName>Emotionally Focused Therapy (EFT)</fullName>
+                <default>false</default>
+                <label>Emotionally Focused Therapy (EFT)</label>
+            </value>
+            <value>
+                <fullName>Eye Movmt Desnstztn &amp; Reprocessing(EMDR)</fullName>
+                <default>false</default>
+                <label>Eye Movmt Desnstztn &amp; Reprocessing(EMDR)</label>
+            </value>
+            <value>
+                <fullName>Psychodynamic Therapy</fullName>
+                <default>false</default>
+                <label>Psychodynamic Therapy</label>
+            </value>
+            <value>
+                <fullName>Psychoeducation</fullName>
+                <default>false</default>
+                <label>Psychoeducation</label>
+            </value>
+            <value>
+                <fullName>PSYCH EVAL Prior to Bariatric Surgery</fullName>
+                <default>false</default>
+                <label>PSYCH EVAL Prior to Bariatric Surgery</label>
+            </value>
+            <value>
+                <fullName>Solution-Focused Brief Therapy (SFBT)</fullName>
+                <default>false</default>
+                <label>Solution-Focused Brief Therapy (SFBT)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

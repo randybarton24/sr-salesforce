@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allergists_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Allergists Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allergies</fullName>
+                <default>false</default>
+                <label>Allergies</label>
+            </value>
+            <value>
+                <fullName>Animal Allergies</fullName>
+                <default>false</default>
+                <label>Animal Allergies</label>
+            </value>
+            <value>
+                <fullName>Deviated Septum</fullName>
+                <default>false</default>
+                <label>Deviated Septum</label>
+            </value>
+            <value>
+                <fullName>Earwax Buildup</fullName>
+                <default>false</default>
+                <label>Earwax Buildup</label>
+            </value>
+            <value>
+                <fullName>Food Allergy</fullName>
+                <default>false</default>
+                <label>Food Allergy</label>
+            </value>
+            <value>
+                <fullName>Pinkeye (Conjunctivitis)</fullName>
+                <default>false</default>
+                <label>Pinkeye (Conjunctivitis)</label>
+            </value>
+            <value>
+                <fullName>Pollen Allergy</fullName>
+                <default>false</default>
+                <label>Pollen Allergy</label>
+            </value>
+            <value>
+                <fullName>Acute Pharyngitis</fullName>
+                <default>false</default>
+                <label>Acute Pharyngitis</label>
+            </value>
+            <value>
+                <fullName>Acute Sinusitis</fullName>
+                <default>false</default>
+                <label>Acute Sinusitis</label>
+            </value>
+            <value>
+                <fullName>Allergic Rhinitis</fullName>
+                <default>false</default>
+                <label>Allergic Rhinitis</label>
+            </value>
+            <value>
+                <fullName>Allergic Rhinitis Due to Food</fullName>
+                <default>false</default>
+                <label>Allergic Rhinitis Due to Food</label>
+            </value>
+            <value>
+                <fullName>Allergic Tension Fatigue Syndrome</fullName>
+                <default>false</default>
+                <label>Allergic Tension Fatigue Syndrome</label>
+            </value>
+            <value>
+                <fullName>Anaphylactic Egg Allergy</fullName>
+                <default>false</default>
+                <label>Anaphylactic Egg Allergy</label>
+            </value>
+            <value>
+                <fullName>Anaphylactic Fish Allergy</fullName>
+                <default>false</default>
+                <label>Anaphylactic Fish Allergy</label>
+            </value>
+            <value>
+                <fullName>Anaphylactic Food Additive Allergy</fullName>
+                <default>false</default>
+                <label>Anaphylactic Food Additive Allergy</label>
+            </value>
+            <value>
+                <fullName>Anaphylactic Food Allergies</fullName>
+                <default>false</default>
+                <label>Anaphylactic Food Allergies</label>
+            </value>
+            <value>
+                <fullName>Anaphylactic Fruit and Vegetable Allergy</fullName>
+                <default>false</default>
+                <label>Anaphylactic Fruit and Vegetable Allergy</label>
+            </value>
+            <value>
+                <fullName>Anaphylactic Milk and Dairy Allergy</fullName>
+                <default>false</default>
+                <label>Anaphylactic Milk and Dairy Allergy</label>
+            </value>
+            <value>
+                <fullName>Anaphylactic Peanut Allergy</fullName>
+                <default>false</default>
+                <label>Anaphylactic Peanut Allergy</label>
+            </value>
+            <value>
+                <fullName>Anaphylactic Shell Fish Allergy</fullName>
+                <default>false</default>
+                <label>Anaphylactic Shell Fish Allergy</label>
+            </value>
+            <value>
+                <fullName>Anaphylactic Tree Nut Allergy</fullName>
+                <default>false</default>
+                <label>Anaphylactic Tree Nut Allergy</label>
+            </value>
+            <value>
+                <fullName>Anaphylaxis</fullName>
+                <default>false</default>
+                <label>Anaphylaxis</label>
+            </value>
+            <value>
+                <fullName>Angioedema</fullName>
+                <default>false</default>
+                <label>Angioedema</label>
+            </value>
+            <value>
+                <fullName>Bronchospasm</fullName>
+                <default>false</default>
+                <label>Bronchospasm</label>
+            </value>
+            <value>
+                <fullName>Cholinergic Urticaria</fullName>
+                <default>false</default>
+                <label>Cholinergic Urticaria</label>
+            </value>
+            <value>
+                <fullName>Chronic Pharyngitis</fullName>
+                <default>false</default>
+                <label>Chronic Pharyngitis</label>
+            </value>
+            <value>
+                <fullName>Chronic Sinusitis</fullName>
+                <default>false</default>
+                <label>Chronic Sinusitis</label>
+            </value>
+            <value>
+                <fullName>Chronic Urticaria</fullName>
+                <default>false</default>
+                <label>Chronic Urticaria</label>
+            </value>
+            <value>
+                <fullName>Combined Immunity Deficiency</fullName>
+                <default>false</default>
+                <label>Combined Immunity Deficiency</label>
+            </value>
+            <value>
+                <fullName>Common Variable Immune Deficiency (CVID)</fullName>
+                <default>false</default>
+                <label>Common Variable Immune Deficiency (CVID)</label>
+            </value>
+            <value>
+                <fullName>Dermatitis Due to Drugs</fullName>
+                <default>false</default>
+                <label>Dermatitis Due to Drugs</label>
+            </value>
+            <value>
+                <fullName>Dermatitis Due to Food</fullName>
+                <default>false</default>
+                <label>Dermatitis Due to Food</label>
+            </value>
+            <value>
+                <fullName>Dermatitis Due to Substances Taken</fullName>
+                <default>false</default>
+                <label>Dermatitis Due to Substances Taken</label>
+            </value>
+            <value>
+                <fullName>Dyshydrotic Eczema</fullName>
+                <default>false</default>
+                <label>Dyshydrotic Eczema</label>
+            </value>
+            <value>
+                <fullName>Eczema &amp; Contact Dermatitis - Cosmetics</fullName>
+                <default>false</default>
+                <label>Eczema &amp; Contact Dermatitis - Cosmetics</label>
+            </value>
+            <value>
+                <fullName>Eczema &amp; Contact Dermatitis - Detergents</fullName>
+                <default>false</default>
+                <label>Eczema &amp; Contact Dermatitis - Detergents</label>
+            </value>
+            <value>
+                <fullName>Eczema &amp; Contact Dermatitis - Metals</fullName>
+                <default>false</default>
+                <label>Eczema &amp; Contact Dermatitis - Metals</label>
+            </value>
+            <value>
+                <fullName>Eosinophilia</fullName>
+                <default>false</default>
+                <label>Eosinophilia</label>
+            </value>
+            <value>
+                <fullName>Eosinophilic Esophagitis</fullName>
+                <default>false</default>
+                <label>Eosinophilic Esophagitis</label>
+            </value>
+            <value>
+                <fullName>Erythema Multiforme</fullName>
+                <default>false</default>
+                <label>Erythema Multiforme</label>
+            </value>
+            <value>
+                <fullName>Esophagitis</fullName>
+                <default>false</default>
+                <label>Esophagitis</label>
+            </value>
+            <value>
+                <fullName>Hives</fullName>
+                <default>false</default>
+                <label>Hives</label>
+            </value>
+            <value>
+                <fullName>Hypersensitivity Pneumonitis</fullName>
+                <default>false</default>
+                <label>Hypersensitivity Pneumonitis</label>
+            </value>
+            <value>
+                <fullName>Hypogammaglobulinemia</fullName>
+                <default>false</default>
+                <label>Hypogammaglobulinemia</label>
+            </value>
+            <value>
+                <fullName>IgA Deficiency</fullName>
+                <default>false</default>
+                <label>IgA Deficiency</label>
+            </value>
+            <value>
+                <fullName>IgM Deficiency</fullName>
+                <default>false</default>
+                <label>IgM Deficiency</label>
+            </value>
+            <value>
+                <fullName>Latex Allergy</fullName>
+                <default>false</default>
+                <label>Latex Allergy</label>
+            </value>
+            <value>
+                <fullName>Mast Cell Diseases</fullName>
+                <default>false</default>
+                <label>Mast Cell Diseases</label>
+            </value>
+            <value>
+                <fullName>Nasopharyngitis</fullName>
+                <default>false</default>
+                <label>Nasopharyngitis</label>
+            </value>
+            <value>
+                <fullName>Penicillin Allergy</fullName>
+                <default>false</default>
+                <label>Penicillin Allergy</label>
+            </value>
+            <value>
+                <fullName>Physical Urticaria</fullName>
+                <default>false</default>
+                <label>Physical Urticaria</label>
+            </value>
+            <value>
+                <fullName>Postnasal Drip</fullName>
+                <default>false</default>
+                <label>Postnasal Drip</label>
+            </value>
+            <value>
+                <fullName>Sulfonamide Allergy</fullName>
+                <default>false</default>
+                <label>Sulfonamide Allergy</label>
+            </value>
+            <value>
+                <fullName>Toxic Effect of Venom</fullName>
+                <default>false</default>
+                <label>Toxic Effect of Venom</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

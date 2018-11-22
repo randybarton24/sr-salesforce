@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_Department</fullName>
+    <active>true</active>
+    <description>Intacct Department of Opportunity Owner is mandatory - required for Intacct.</description>
+    <errorConditionFormula>NOT( Apex_Override_Validation__c ) &amp;&amp;
+ISPICKVAL(StageName, &quot;Closed Won&quot;) &amp;&amp;
+ISPICKVAL( Owner.RecurSoft__Department__c, &quot;&quot;)</errorConditionFormula>
+    <errorMessage>A System Administrator should fill in Owner&#39;s Intacct Department.</errorMessage>
+</ValidationRule>

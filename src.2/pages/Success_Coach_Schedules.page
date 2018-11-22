@@ -1,0 +1,84 @@
+<apex:page sideBar="false">
+<p><center><font size="4"><b>Success Coaches Schedules</b></font></center></p>
+<center>This page will be removed soon.  Please use the "Activation Schedules" tab for a view of this calendar</center>
+<div style="position:relative;height:750px">
+
+
+<style>
+/* To Remove the Standard Calendar Section */
+
+.JQ_CA > .CA_l > div[data-type="sf"] {
+display:none;
+}
+/* To Remove the Web Calendar Section */
+.JQ_CA > .CA_l > div[data-type="web"] {
+display:none;
+}
+</style>
+
+    <apex:variable value="a2A3100000073QkEAI" var="JosephD"/>
+    <apex:variable value="a2A3100000073QpEAI" var="AubrieW"/>
+    <apex:variable value="a2A3100000073QuEAI" var="ChelsieW"/>
+    <apex:variable value="a2A3100000073QzEAI" var="AlyH"/>
+    <apex:variable value="a2A3100000073R4EAI" var="LindaE"/>
+    <apex:variable value="a2A3100000073RJEAY" var="JonathanG"/>
+    <apex:variable value="a2A3100000073REEAY" var="TrevorD"/>
+    <apex:variable value="a2A3100000073ROEAY" var="MarkG"/>
+    <apex:variable value="a2A3100000073RTEAY" var="WhitneyS"/>
+    <apex:variable value="a2A3100000073RYEAY" var="JhenaS"/>
+    <apex:variable value="a2A3100000073RnEAI" var="WhitleyG"/>
+    <apex:variable value="a2A3100000073S2EAI" var="AnnathaB"/>
+    <apex:variable value="a2A3100000073RxEAI" var="KarliD"/>
+    <apex:variable value="a2A3100000073RsEAI" var="LawrenceP"/>
+    <apex:variable value="a2A3100000073S7EAI" var="BradonF"/>
+    <apex:variable value="a2A3100000073SCEAY" var="AubreyW"/>
+    <apex:variable value="a2A3100000073SHEAY" var="AlexB"/>
+    <apex:variable value="a2A3100000073SMEAY" var="SannaP"/>
+    <apex:variable value="a2A3100000073SREAY" var="RandileeW"/>
+    <apex:variable value="a2A3100000073SlEAI" var="ChelseaC"/>
+    <apex:variable value="a2A3100000073SgEAI" var="AndreaM"/>
+    <apex:variable value="a2A3100000073R9EAI" var="MorganC"/>
+    <apex:variable value="a2A3100000073VBEAY" var="MichelleM"/>
+    <apex:variable value="a2A31000001dOGrEAM" var="JoseT"/>
+    <apex:variable value="a2A31000001dOGmEAM" var="PaulE"/>
+    <apex:variable value="a2A31000001dOfcEAE" var="ColbyC"/>
+    <apex:variable value="a2A31000001dQNQEA2" var="JanelM"/>
+    <apex:variable value="a2A31000001dROeEAM" var="MattD"/>
+    <apex:variable value="a2A31000001dROZEA2" var="SeanS"/>
+    <apex:variable value="a2A31000001dVooEAE" var="KameronK"/>
+    <apex:variable value="a2A31000001dVotEAE" var="HeatherM"/>
+    <apex:variable value="a2A31000001dVoyEAE" var="JadeL"/>
+    
+    
+    
+ <!--  Add a variable above and then add the name below to add Calendars to the list    -->
+
+<SLCA2:calendar date="" 
+
+    calendar="{!LawrenceP},{!MattD},{!KarliD},{!ChelseaC},{!SeanS},{!MichelleM},{!HeatherM},{!AndreaM},{!JanelM},{!MarkG},{!JadeL},{!TrevorD},{!JonathanG},{!JhenaS},{!JoseT},{!AubreyW},{!JosephD},{!LindaE},{!MorganC},{!ChelsieW},{!AlyH},{!AubrieW},{!AlexB},{!PaulE},{!AnnathaB},{!KameronK},{!RandileeW},{!SannaP},{!ColbyC}"
+    createable=""
+    filter="{}" 
+    namespace=""
+    enabled="{'{!JosephD}':false}"
+    settings="[]"
+    view="week"
+    urlparams="l_ds=0&r_g=0&r_a=0&r_c=0&r_s=0"
+    userAdditionalSettings="{'startHourPeriod':'6','stopHourPeriod':'17','dayModeArea':'0_1','nonWorkingHoursDisplay':'hide','showWeekEnds':'5'}"
+    
+
+    readonly="{
+        cloneSharing    : true,
+        edit            : true, 
+        create          : true, 
+        detail          : true, 
+        move            : true, 
+        hover           : true, 
+/* To disable More button and right click options in Calendar use contextEvent as false */
+        contextEvent    : false, 
+        contextCalendar : true, 
+        contextArea     : true
+    }"
+></SLCA2:calendar>
+
+</div>
+</apex:page>

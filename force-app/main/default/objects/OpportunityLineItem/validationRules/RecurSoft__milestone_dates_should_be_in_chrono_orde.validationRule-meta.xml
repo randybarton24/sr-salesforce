@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__milestone_dates_should_be_in_chrono_orde</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    !ISNEW() &amp;&amp; ISPICKVAL(RecurSoft__Billing_Frequency_New__c, &#39;Milestones&#39;) &amp;&amp;
+    (
+        OR(
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_1_Date__c)
+                ),
+                NOT(
+                    ISNULL(RecurSoft__Milestone_2_Date__c)
+                ),
+                RecurSoft__Milestone_1_Date__c &gt; RecurSoft__Milestone_2_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_2_Date__c)
+                ),
+                NOT(
+                    ISNULL(RecurSoft__Milestone_3_Date__c)
+                ),
+                RecurSoft__Milestone_2_Date__c &gt; RecurSoft__Milestone_3_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_3_Date__c)
+                ),
+                NOT(
+                    ISNULL(RecurSoft__Milestone_4_Date__c)
+                ),
+                RecurSoft__Milestone_3_Date__c &gt; RecurSoft__Milestone_4_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_4_Date__c)
+                ),
+                NOT(
+                    ISNULL(RecurSoft__Milestone_5_Date__c)
+                ),
+                RecurSoft__Milestone_4_Date__c &gt; RecurSoft__Milestone_5_Date__c
+            ),
+            AND(
+                NOT(
+                    ISNULL(RecurSoft__Milestone_5_Date__c)
+                ),
+                NOT(
+                    ISNULL(RecurSoft__Milestone_6_Date__c)
+                ),
+                RecurSoft__Milestone_5_Date__c &gt; RecurSoft__Milestone_6_Date__c
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Milestones dates should be in chronological order</errorMessage>
+</ValidationRule>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Addiction_Psychology_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Addiction Psychology Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Addiction</fullName>
+                <default>false</default>
+                <label>Addiction</label>
+            </value>
+            <value>
+                <fullName>Alcoholism (Alcohol Dependence)</fullName>
+                <default>false</default>
+                <label>Alcoholism (Alcohol Dependence)</label>
+            </value>
+            <value>
+                <fullName>Chemical Addiction</fullName>
+                <default>false</default>
+                <label>Chemical Addiction</label>
+            </value>
+            <value>
+                <fullName>Drug Abuse</fullName>
+                <default>false</default>
+                <label>Drug Abuse</label>
+            </value>
+            <value>
+                <fullName>Drug and Alcohol Dependence</fullName>
+                <default>false</default>
+                <label>Drug and Alcohol Dependence</label>
+            </value>
+            <value>
+                <fullName>Opioid Dependence</fullName>
+                <default>false</default>
+                <label>Opioid Dependence</label>
+            </value>
+            <value>
+                <fullName>Post-Tramatic Stress Disorder (PTSD)</fullName>
+                <default>false</default>
+                <label>Post-Tramatic Stress Disorder (PTSD)</label>
+            </value>
+            <value>
+                <fullName>Substance Abuse</fullName>
+                <default>false</default>
+                <label>Substance Abuse</label>
+            </value>
+            <value>
+                <fullName>Substance Dependence</fullName>
+                <default>false</default>
+                <label>Substance Dependence</label>
+            </value>
+            <value>
+                <fullName>Tobacco Use Disorder</fullName>
+                <default>false</default>
+                <label>Tobacco Use Disorder</label>
+            </value>
+            <value>
+                <fullName>Amphetamine Dependence</fullName>
+                <default>false</default>
+                <label>Amphetamine Dependence</label>
+            </value>
+            <value>
+                <fullName>Anxiolytic Dependence</fullName>
+                <default>false</default>
+                <label>Anxiolytic Dependence</label>
+            </value>
+            <value>
+                <fullName>Cocaine Addiction</fullName>
+                <default>false</default>
+                <label>Cocaine Addiction</label>
+            </value>
+            <value>
+                <fullName>Combination Drug Dependence</fullName>
+                <default>false</default>
+                <label>Combination Drug Dependence</label>
+            </value>
+            <value>
+                <fullName>Drug-Induced Mental Disorders</fullName>
+                <default>false</default>
+                <label>Drug-Induced Mental Disorders</label>
+            </value>
+            <value>
+                <fullName>Hallucinogen Dependence</fullName>
+                <default>false</default>
+                <label>Hallucinogen Dependence</label>
+            </value>
+            <value>
+                <fullName>Hypnotic Dependence</fullName>
+                <default>false</default>
+                <label>Hypnotic Dependence</label>
+            </value>
+            <value>
+                <fullName>Marijuana Addiction</fullName>
+                <default>false</default>
+                <label>Marijuana Addiction</label>
+            </value>
+            <value>
+                <fullName>Nondependent Alcohol Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Alcohol Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Amphetamine Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Amphetamine Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Antidepressant Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Antidepressant Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Anxiolytic Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Anxiolytic Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Cocaine Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Cocaine Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Drug and Alcohol Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Drug and Alcohol Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Hallucinogen Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Hallucinogen Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Hypnotic Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Hypnotic Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Marijuana Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Marijuana Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Opioid Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Opioid Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Sedative Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Sedative Abuse</label>
+            </value>
+            <value>
+                <fullName>Other Psychostimulant Dependence</fullName>
+                <default>false</default>
+                <label>Other Psychostimulant Dependence</label>
+            </value>
+            <value>
+                <fullName>Related Acting Sympathomimetic Abuse</fullName>
+                <default>false</default>
+                <label>Related Acting Sympathomimetic Abuse</label>
+            </value>
+            <value>
+                <fullName>Sedative Dependence</fullName>
+                <default>false</default>
+                <label>Sedative Dependence</label>
+            </value>
+            <value>
+                <fullName>Substance Withdrawal</fullName>
+                <default>false</default>
+                <label>Substance Withdrawal</label>
+            </value>
+            <value>
+                <fullName>Substance-Induced Anxiety Disorders</fullName>
+                <default>false</default>
+                <label>Substance-Induced Anxiety Disorders</label>
+            </value>
+            <value>
+                <fullName>Substance-Induced Delirium Disorders</fullName>
+                <default>false</default>
+                <label>Substance-Induced Delirium Disorders</label>
+            </value>
+            <value>
+                <fullName>Substance-Induced Mood Disorders</fullName>
+                <default>false</default>
+                <label>Substance-Induced Mood Disorders</label>
+            </value>
+            <value>
+                <fullName>Substance-Induced Psychotic Disorders</fullName>
+                <default>false</default>
+                <label>Substance-Induced Psychotic Disorders</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

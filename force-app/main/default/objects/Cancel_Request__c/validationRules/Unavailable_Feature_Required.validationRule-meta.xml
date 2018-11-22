@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unavailable_Feature_Required</fullName>
+    <active>true</active>
+    <description>Requires an Unavailable Feature if that is a Cancel Reason</description>
+    <errorConditionFormula>CONTAINS(Text(Cancellation_Reasons__c), &quot;Unavailable Feature&quot;) &amp;&amp;  ISBLANK(Unavailable_Feature__c )</errorConditionFormula>
+    <errorDisplayField>Unavailable_Feature__c</errorDisplayField>
+    <errorMessage>You must select at least one Unavailable Feature</errorMessage>
+</ValidationRule>

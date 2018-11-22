@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Pending_Stages</fullName>
+    <active>true</active>
+    <description>For initial rollout, only certain people can select these stages.</description>
+    <errorConditionFormula>ISCHANGED( StageName ) &amp;&amp;
+(ISPICKVAL( StageName , &quot;Closed Won - Non-Billing&quot; ) ||
+ISPICKVAL( StageName , &quot;Closed Won - Pending Billing&quot; ) ||
+ISPICKVAL( StageName , &quot;Closed Won - Pending Subscriber Id&quot; )) &amp;&amp;
+$User.Username != &#39;randy@solutionreach.com&#39; &amp;&amp;
+$User.Username != &#39;bellsworth@solutionreach.com&#39; &amp;&amp;
+NOT(ISPICKVAL( $User.UserType , &quot;AutomatedProcess&quot; )) &amp;&amp;
+NOT( $Permission.SyncWithAppAdmin ) &amp;&amp;
+NOT( $Permission.SyncWithIntacct )</errorConditionFormula>
+    <errorMessage>You do not have access to set this stage directly.</errorMessage>
+</ValidationRule>

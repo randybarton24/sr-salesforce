@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Meta_Theme__c</fullName>
+    <externalId>false</externalId>
+    <label>Risk Meta-Theme</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Pulse__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Cancel_Meta_Themes</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Severe Risk</controllingFieldValue>
+            <controllingFieldValue>High Risk</controllingFieldValue>
+            <controllingFieldValue>Some Risk</controllingFieldValue>
+            <valueName>Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Severe Risk</controllingFieldValue>
+            <controllingFieldValue>High Risk</controllingFieldValue>
+            <controllingFieldValue>Some Risk</controllingFieldValue>
+            <valueName>Billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Severe Risk</controllingFieldValue>
+            <controllingFieldValue>High Risk</controllingFieldValue>
+            <controllingFieldValue>Some Risk</controllingFieldValue>
+            <valueName>Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Severe Risk</controllingFieldValue>
+            <controllingFieldValue>High Risk</controllingFieldValue>
+            <controllingFieldValue>Some Risk</controllingFieldValue>
+            <valueName>Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Severe Risk</controllingFieldValue>
+            <controllingFieldValue>High Risk</controllingFieldValue>
+            <controllingFieldValue>Some Risk</controllingFieldValue>
+            <valueName>Client Success</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

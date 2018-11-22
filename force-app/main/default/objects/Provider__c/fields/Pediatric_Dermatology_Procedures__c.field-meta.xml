@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pediatric_Dermatology_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Pediatric Dermatology Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adjacent Tissue Transfer</fullName>
+                <default>false</default>
+                <label>Adjacent Tissue Transfer</label>
+            </value>
+            <value>
+                <fullName>Dermabrasion</fullName>
+                <default>false</default>
+                <label>Dermabrasion</label>
+            </value>
+            <value>
+                <fullName>Dermal Filler</fullName>
+                <default>false</default>
+                <label>Dermal Filler</label>
+            </value>
+            <value>
+                <fullName>Destruction of Benign Skin Lesion</fullName>
+                <default>false</default>
+                <label>Destruction of Benign Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Destruction of Malignant Skin Lesion</fullName>
+                <default>false</default>
+                <label>Destruction of Malignant Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Destruction of Penile Lesion</fullName>
+                <default>false</default>
+                <label>Destruction of Penile Lesion</label>
+            </value>
+            <value>
+                <fullName>Electrocoagulation</fullName>
+                <default>false</default>
+                <label>Electrocoagulation</label>
+            </value>
+            <value>
+                <fullName>Endovenous Laser Treatment</fullName>
+                <default>false</default>
+                <label>Endovenous Laser Treatment</label>
+            </value>
+            <value>
+                <fullName>Excision of Benign Skin Lesion</fullName>
+                <default>false</default>
+                <label>Excision of Benign Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Excision of Malignant Skin Lesion</fullName>
+                <default>false</default>
+                <label>Excision of Malignant Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Laser Surgery</fullName>
+                <default>false</default>
+                <label>Laser Surgery</label>
+            </value>
+            <value>
+                <fullName>Laser Surgery for Skin Conditions</fullName>
+                <default>false</default>
+                <label>Laser Surgery for Skin Conditions</label>
+            </value>
+            <value>
+                <fullName>Mohs Surgery</fullName>
+                <default>false</default>
+                <label>Mohs Surgery</label>
+            </value>
+            <value>
+                <fullName>Narrow Band UVB Light for Psoriasis</fullName>
+                <default>false</default>
+                <label>Narrow Band UVB Light for Psoriasis</label>
+            </value>
+            <value>
+                <fullName>Photodynamic Therapy (PDT)</fullName>
+                <default>false</default>
+                <label>Photodynamic Therapy (PDT)</label>
+            </value>
+            <value>
+                <fullName>Repair of Pigmentation Defect</fullName>
+                <default>false</default>
+                <label>Repair of Pigmentation Defect</label>
+            </value>
+            <value>
+                <fullName>Scar Revision Surgery</fullName>
+                <default>false</default>
+                <label>Scar Revision Surgery</label>
+            </value>
+            <value>
+                <fullName>Shaving of Skin Lesion</fullName>
+                <default>false</default>
+                <label>Shaving of Skin Lesion</label>
+            </value>
+            <value>
+                <fullName>Skin Cancer Removal</fullName>
+                <default>false</default>
+                <label>Skin Cancer Removal</label>
+            </value>
+            <value>
+                <fullName>Skin Excision for Hidradenitis</fullName>
+                <default>false</default>
+                <label>Skin Excision for Hidradenitis</label>
+            </value>
+            <value>
+                <fullName>Skin Grafts</fullName>
+                <default>false</default>
+                <label>Skin Grafts</label>
+            </value>
+            <value>
+                <fullName>Skin Tag Removal</fullName>
+                <default>false</default>
+                <label>Skin Tag Removal</label>
+            </value>
+            <value>
+                <fullName>Soft Tissue Tumor Removal</fullName>
+                <default>false</default>
+                <label>Soft Tissue Tumor Removal</label>
+            </value>
+            <value>
+                <fullName>Venous Sclerotherapy</fullName>
+                <default>false</default>
+                <label>Venous Sclerotherapy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Double_Counted__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( OR( Manager_Revenue_Credit__c = 0 &amp;&amp; Sales_Rep_Revenue_Credit__c = 0 , 
+Manager_Revenue_Credit__c = 0 &amp;&amp; VP_Revenue_Credit__c = 0 , 
+Sales_Rep_Revenue_Credit__c = 0 &amp;&amp; VP_Revenue_Credit__c = 0 ) , 
+FALSE , 
+TRUE )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Revenue Double Counted</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

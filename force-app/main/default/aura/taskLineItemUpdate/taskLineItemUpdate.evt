@@ -1,0 +1,7 @@
+<!--
+ - Created by mschetselaar on 9/6/2018.
+ -->
+
+<aura:event type="COMPONENT" description="taskLineItemUpdate">
+    <aura:attribute name="taskUpdate" type="Task" />
+</aura:event>

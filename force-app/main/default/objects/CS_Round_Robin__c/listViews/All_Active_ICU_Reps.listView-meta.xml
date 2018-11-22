@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Active_ICU_Reps</fullName>
+    <columns>NAME</columns>
+    <columns>Open_Targets__c</columns>
+    <columns>Target_Limit__c</columns>
+    <columns>Load__c</columns>
+    <columns>Active__c</columns>
+    <columns>Rep_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>CS_Round_Robin__c.ICU_Rep</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>All Active ICU Reps</label>
+</ListView>

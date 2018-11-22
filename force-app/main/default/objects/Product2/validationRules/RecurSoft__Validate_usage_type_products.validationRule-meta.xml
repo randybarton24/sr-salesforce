@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Validate_usage_type_products</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(
+    $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c, false, 
+    AND(
+        NOT(
+            OR(
+                ISPICKVAL(RecurSoft__Usage_Type__c, &#39;Not Applicable&#39;),
+                ISPICKVAL(RecurSoft__Usage_Type__c, &#39;Usage only&#39;), ISPICKVAL(RecurSoft__Usage_Type__c, &#39;Aggregated Monthly Minimum Amount&#39;))), 
+        ISPICKVAL(RecurSoft__Product_Based_On__c, &#39;Each&#39;)
+    )
+)</errorConditionFormula>
+    <errorMessage>Products Price Based On can be selected to Each only when Usage type is Not applicable, Usage only or Aggregated Monthly Minimum Amount.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sandboxTargetUrl__c</fullName>
+    <description>URL to POST to AppAdmin Test Server</description>
+    <externalId>false</externalId>
+    <label>sandboxTargetUrl</label>
+    <length>100</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

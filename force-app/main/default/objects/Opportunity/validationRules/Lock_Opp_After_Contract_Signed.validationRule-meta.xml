@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Opp_After_Contract_Signed</fullName>
+    <active>true</active>
+    <description>Locking out the New Practice Business opportunities once the contract is signed - for a selected number of profiles.</description>
+    <errorConditionFormula>AND(
+Apex_Override_Validation__c = FALSE,
+RecordType.DeveloperName = &#39;New_Practice_Business&#39;,
+PRIORVALUE( Contract_Signed__c) = True,
+ISCHANGED( Split_Determined__c ) = FALSE,
+				NOT(ISCHANGED(Competitor__c)),
+				NOT(ISCHANGED(Win_Report_Completed_Date__c)),
+				NOT(ISCHANGED(Other_Competitor__c)),
+OR(
+$Profile.Id= &#39;00ei0000000cDeI&#39;, /* Inside Sales */
+$Profile.Id= &#39;00ei0000000cDeD&#39;, /* Extended Sales */
+$Profile.Id= &#39;00ei0000000cDeN&#39;, /* Outside Sales */
+$Profile.Id= &#39;00ei0000001ZRWm&#39;, /* Enterprise Sales */
+$Profile.Id= &#39;00ei0000000cDeS&#39;, /* Sales Manager */
+$Profile.Id= &#39;00ei0000000cDfB&#39;, /* Support */
+$Profile.Id= &#39;00ei0000001ZSvQ&#39;, /* Support Team Leads */
+$Profile.Id= &#39;00ei0000001ZWel&#39;, /* Support Manager */
+$Profile.Id= &#39;00ei0000001ZWf5&#39; /* Support Exec */
+)
+)</errorConditionFormula>
+    <errorMessage>You don&#39;t have permission to edit this opportunity, since the contract has already been signed.</errorMessage>
+</ValidationRule>

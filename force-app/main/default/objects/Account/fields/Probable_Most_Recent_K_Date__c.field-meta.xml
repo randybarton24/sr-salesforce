@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Probable_Most_Recent_K_Date__c</fullName>
+    <description>Stores the most recent contract date</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the date the contract was likely signed</inlineHelpText>
+    <label>Most Recent Contract Date</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

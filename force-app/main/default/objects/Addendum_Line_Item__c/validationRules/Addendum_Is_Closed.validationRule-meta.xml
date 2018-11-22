@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Addendum_Is_Closed</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( Addendum__r.Status__c , &quot;Closed&quot; ) ||
+ISPICKVAL( Addendum__r.Status__c , &quot;Signature Requested&quot; ) ||
+ISPICKVAL( Addendum__r.Status__c , &quot;Signature Received&quot; )</errorConditionFormula>
+    <errorMessage>This Addendum is locked for editing.</errorMessage>
+</ValidationRule>

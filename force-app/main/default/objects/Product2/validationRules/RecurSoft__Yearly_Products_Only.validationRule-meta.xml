@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Yearly_Products_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c, false, 
+    AND(
+        RecurSoft__Yearly_Special_Behavior__c  = True,
+        NOT(
+            ISPICKVAL(RecurSoft__Rev_Installments_Period__c, &#39;Yearly&#39;)
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>RecurSoft__Yearly_Special_Behavior__c</errorDisplayField>
+    <errorMessage>This can only be checked for yearly products only!</errorMessage>
+</ValidationRule>

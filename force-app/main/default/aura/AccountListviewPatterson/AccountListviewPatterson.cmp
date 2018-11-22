@@ -1,0 +1,12 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+     <lightning:card title="">
+        <lightning:listView aura:id="listViewAccounts"
+                            objectApiName="Account"
+                            listName="Patterson_Accounts"
+                            rows="5"
+                            showActionBar="false"
+                            enableInlineEdit="true"
+                            showRowLevelActions="true"
+                            />
+   </lightning:card>
+</aura:component>

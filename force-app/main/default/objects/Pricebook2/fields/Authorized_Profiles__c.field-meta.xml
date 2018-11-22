@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Authorized_Profiles__c</fullName>
+    <externalId>false</externalId>
+    <label>Authorized Profiles</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Development</fullName>
+                <default>false</default>
+                <label>Account Development</label>
+            </value>
+            <value>
+                <fullName>ADR Manager</fullName>
+                <default>false</default>
+                <label>ADR Manager</label>
+            </value>
+            <value>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+                <label>Business Development</label>
+            </value>
+            <value>
+                <fullName>Client Engagement Manager</fullName>
+                <default>false</default>
+                <label>Client Engagement Manager</label>
+            </value>
+            <value>
+                <fullName>Client Engagement Rep</fullName>
+                <default>false</default>
+                <label>Client Engagement Rep</label>
+            </value>
+            <value>
+                <fullName>Client Success Profile</fullName>
+                <default>false</default>
+                <label>Client Success Profile</label>
+            </value>
+            <value>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+                <label>Engineering</label>
+            </value>
+            <value>
+                <fullName>Enterprise Sales</fullName>
+                <default>false</default>
+                <label>Enterprise Sales</label>
+            </value>
+            <value>
+                <fullName>Executive</fullName>
+                <default>false</default>
+                <label>Executive</label>
+            </value>
+            <value>
+                <fullName>Extended Sales</fullName>
+                <default>false</default>
+                <label>Extended Sales</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>G and A</fullName>
+                <default>false</default>
+                <label>G and A</label>
+            </value>
+            <value>
+                <fullName>Guest License User</fullName>
+                <default>false</default>
+                <label>Guest License User</label>
+            </value>
+            <value>
+                <fullName>Healthgrades Contract Profile</fullName>
+                <default>false</default>
+                <label>Healthgrades Contract Profile</label>
+            </value>
+            <value>
+                <fullName>Inside Sales</fullName>
+                <default>false</default>
+                <label>Inside Sales</label>
+            </value>
+            <value>
+                <fullName>Marketing User</fullName>
+                <default>false</default>
+                <label>Marketing User</label>
+            </value>
+            <value>
+                <fullName>Marketing User SR</fullName>
+                <default>false</default>
+                <label>Marketing User SR</label>
+            </value>
+            <value>
+                <fullName>Outside Sales</fullName>
+                <default>false</default>
+                <label>Outside Sales</label>
+            </value>
+            <value>
+                <fullName>Premier Support User</fullName>
+                <default>false</default>
+                <label>Premier Support User</label>
+            </value>
+            <value>
+                <fullName>Read Only</fullName>
+                <default>false</default>
+                <label>Read Only</label>
+            </value>
+            <value>
+                <fullName>Sales Administrator</fullName>
+                <default>false</default>
+                <label>Sales Administrator</label>
+            </value>
+            <value>
+                <fullName>Sales Coordinator</fullName>
+                <default>false</default>
+                <label>Sales Coordinator</label>
+            </value>
+            <value>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+                <label>Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Sales VP</fullName>
+                <default>false</default>
+                <label>Sales VP</label>
+            </value>
+            <value>
+                <fullName>Solutionreach Client Success Profile</fullName>
+                <default>false</default>
+                <label>Solutionreach Client Success Profile</label>
+            </value>
+            <value>
+                <fullName>SR Contract Form Profile</fullName>
+                <default>false</default>
+                <label>SR Contract Form Profile</label>
+            </value>
+            <value>
+                <fullName>Standard Platform User</fullName>
+                <default>false</default>
+                <label>Standard Platform User</label>
+            </value>
+            <value>
+                <fullName>Standard User</fullName>
+                <default>false</default>
+                <label>Standard User</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>Support Exec</fullName>
+                <default>false</default>
+                <label>Support Exec</label>
+            </value>
+            <value>
+                <fullName>Support Manager</fullName>
+                <default>false</default>
+                <label>Support Manager</label>
+            </value>
+            <value>
+                <fullName>Support Team Leads</fullName>
+                <default>false</default>
+                <label>Support Team Leads</label>
+            </value>
+            <value>
+                <fullName>System Administrator</fullName>
+                <default>false</default>
+                <label>System Administrator</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

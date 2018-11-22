@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Type_Mismatch_Child_Wrong_Parent</fullName>
+    <active>false</active>
+    <errorConditionFormula>((RecordType.Name = &quot;Child Major Account&quot; &amp;&amp; 
+Parent.RecordType.Name != &quot;Major Account&quot;) || 
+(RecordType.Name = &quot;Child Multi-Location Account&quot; &amp;&amp; 
+Parent.RecordType.Name != &quot;Multi-Location Account&quot;) || 
+(RecordType.Name = &quot;Child Account&quot; &amp;&amp; 
+Parent.RecordType.Name != &quot;Account&quot;) ||
+(RecordType.Name = &quot;Major Account&quot; &amp;&amp; 
+ParentId != null &amp;&amp;
+Parent.RecordType.Name != &quot;Grandparent Account&quot;) || 
+(RecordType.Name = &quot;Multi-Location Account&quot; &amp;&amp; 
+ParentId != null &amp;&amp;
+Parent.RecordType.Name != &quot;Grandparent Account&quot;) || 
+(RecordType.Name = &quot;Account&quot; &amp;&amp; 
+ParentId != null &amp;&amp;
+Parent.RecordType.Name != &quot;Grandparent Account&quot;)) &amp;&amp;
+(ISBLANK( Subscriber_ID__c ) ||
+ISNULL( Subscriber_ID__c )) &amp;&amp;
+(ISBLANK( Parent.Subscriber_ID__c ) ||
+ISNULL( Parent.Subscriber_ID__c )) &amp;&amp;
+(Parent.RecordType.Name != &quot;Partner&quot;)</errorConditionFormula>
+    <errorMessage>This Account record type is not correct based on the parent Account record type.  Please check that the parent Account record type is correct.</errorMessage>
+</ValidationRule>

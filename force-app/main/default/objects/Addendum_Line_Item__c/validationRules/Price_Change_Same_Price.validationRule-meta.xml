@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Change_Same_Price</fullName>
+    <active>true</active>
+    <errorConditionFormula>Current_Price__c =  New_MSF__c</errorConditionFormula>
+    <errorMessage>The new MSF is the same as the current MSF</errorMessage>
+</ValidationRule>

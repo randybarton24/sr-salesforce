@@ -1,0 +1,13 @@
+<aura:component controller="TP_LightningComponentHelper" implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:handler name="init" action="{!c.doinit}" value="{!this}" />
+    <aura:attribute name="KB_Webinar" type="sObject" default=""/>
+	<div class="webinar-sec webinar-inner-video">
+    	<h1>{!v.KB_Webinar.Title}</h1>
+        <p>{!v.KB_Webinar.Summary}</p>
+        <div class="inner-video">
+            <iframe width="450" height="350"  frameborder="0" scrolling="no" 
+                       src="{!v.KB_Webinar.Video_link__c}" allowtransparency="true" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true"></iframe>
+        </div>  
+        <p><a href="{!v.KB_Webinar.Video_link__c}" target="_blank">{!v.KB_Webinar.Video_link__c}</a></p>
+    </div>
+</aura:component>

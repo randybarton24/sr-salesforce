@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_Request</fullName>
+    <active>true</active>
+    <businessProcess>Cancel Request</businessProcess>
+    <description>When an office requests to cancel this case type should be used</description>
+    <label>Cancel Request</label>
+    <picklistValues>
+        <picklist>Case_Type__c</picklist>
+        <values>
+            <fullName>Preload</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Experience</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Credit_Memo_Product__c</picklist>
+        <values>
+            <fullName>Patient Reach Tablet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Conversations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Platform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Practice Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Scheduler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Smart Reviews</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Credit_Memo_Reason__c</picklist>
+        <values>
+            <fullName>Billing Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incentive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Issues</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Five9__Five9EmailNotificationStatus__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NL_Groups_Completed_Method__c</picklist>
+        <values>
+            <fullName>One-on-One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Onboarding_Case_Type__c</picklist>
+        <values>
+            <fullName>Newsletters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xtend%2FAP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live-Agent Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PRT_Completed_Method__c</picklist>
+        <values>
+            <fullName>One-on-One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>Account Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Criteria Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery%2FTiming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Editing Surveys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filter Report Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Template</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low CSAT%2FRSAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need%2FUpdating Admin%2FSync Username</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need%2FUpdating Personnel Username</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Birthday Template %28single settings page%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Old Birthday Template %28multiple settings pages%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Opt-In%2FOut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Post%2FStatus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Template</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Templates</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Annual Cancel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trial Cancel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_del__c</picklist>
+        <values>
+            <fullName>Agreement %26 Renewals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Data Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>How-To</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Resolution__c</picklist>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Wont Fix</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SR_Portal_Completed_Method__c</picklist>
+        <values>
+            <fullName>One-on-One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Attempted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispute Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Made Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Made Offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolving Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent Addendum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Installed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Scheduled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Survey_to_be_Sent__c</picklist>
+        <values>
+            <fullName>EBR Case Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fast Track Survey</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Topics__c</picklist>
+        <values>
+            <fullName>Active Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Active Push</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Active Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Birthdays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Addendum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eyewear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Listing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Messaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newsletters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Password</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PatientReach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PatientView</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reminders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SmileDash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Down</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Launcher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xtend Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Xtend_AP_Completed_Method__c</picklist>
+        <values>
+            <fullName>One-on-One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

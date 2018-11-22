@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X4_My_leads_with_recent_activty</fullName>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Practice_Software__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.INDUSTRY</columns>
+    <columns>tz__Timezone__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.LAST_ACTIVITY</field>
+        <operation>notEqual</operation>
+        <value>LAST_N_DAYS:30</value>
+    </filters>
+    <label>4. My leads with recent activty</label>
+    <sharedTo>
+        <group>Inside_Sales</group>
+        <role>SAE_Rep_4</role>
+    </sharedTo>
+</ListView>

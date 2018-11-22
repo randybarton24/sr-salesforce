@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin_LMS__c</fullName>
+    <description>This stores the date of the last message sent by this office</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This date is when the last message was sent by this office</inlineHelpText>
+    <label>Admin LMS</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

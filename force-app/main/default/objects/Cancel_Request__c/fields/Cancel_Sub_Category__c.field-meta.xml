@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_Sub_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Cancel Sub Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Cancel_Meta_Theme__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Relationship</fullName>
+                <color>#33CCFF</color>
+                <default>false</default>
+                <label>Relationship</label>
+            </value>
+            <value>
+                <fullName>Commitment</fullName>
+                <color>#3366FF</color>
+                <default>false</default>
+                <label>Commitment</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <color>#9999FF</color>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+            <value>
+                <fullName>Invoicing</fullName>
+                <color>#33CC00</color>
+                <default>false</default>
+                <label>Invoicing</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <color>#009900</color>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Features</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+                <label>Features</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <color>#FF6666</color>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>Expectations</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Expectations</label>
+            </value>
+            <value>
+                <fullName>Onboarding</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Onboarding</label>
+            </value>
+            <value>
+                <fullName>Problem Resolution</fullName>
+                <color>#FFCC66</color>
+                <default>false</default>
+                <label>Problem Resolution</label>
+            </value>
+            <value>
+                <fullName>Lifecycle Management</fullName>
+                <color>#FFCC33</color>
+                <default>false</default>
+                <label>Lifecycle Management</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Relationship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Commitment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Invoicing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Expectations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Success</controllingFieldValue>
+            <valueName>Onboarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Success</controllingFieldValue>
+            <valueName>Problem Resolution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Success</controllingFieldValue>
+            <valueName>Lifecycle Management</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,105 @@
+<apex:page id="page" standardController="CorpDev_Account__c" extensions="CorpDevQuickAdd_Controller" showHeader="true" sidebar="true" >
+    
+    <apex:stylesheet value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"/>
+
+    <script type="text/javascript">
+
+        j$ = jQuery.noConflict();
+        j$(document).ready(function() {
+           //code when page is ready 
+           j$('.waitingGifDiv').hide();
+
+           j$('.claimAccountButton').on('click',function() {
+               j$('.waitingGifDiv').show();
+               j$('.ClaimAccountButtonDiv').hide();
+            });
+        });
+    </script>
+    
+    <apex:form >
+    	<apex:pageBlock title="Account Details" tabStyle="CorpDev_Account__c">
+    		<apex:pageBlockButtons location="top">
+    			<apex:commandButton title="Save" value="Save" action="{!saveRecords}" />
+    			<apex:commandButton title="Cancel" value="Cancel" action="{!cancel}" />
+    		</apex:pageBlockButtons>
+    		<apex:pageMessages />
+    		<apex:pageBlockSection collapsible="true" title="Basic Account Details" columns="2">
+    			<apex:inputField value="{!a.Name}" />
+    			<apex:inputField value="{!a.Relationship_Owner__c}" />
+    			<apex:inputField value="{!a.Description__c}" required="false" />
+    			<apex:inputField value="{!a.Website__c}" />
+    			<apex:inputField value="{!a.End_Markets__c}" />
+    			<apex:inputField value="{!a.LinkedIn_URL__c}" />
+    			<apex:inputField value="{!a.End_Markets_Detail__c}" />
+    		</apex:pageBlockSection>
+    		<apex:pageBlockSection collapsible="true" title="Company Information">
+    			<apex:inputField value="{!a.Company_Type__c}" />
+    			<apex:inputField value="{!a.Existing_SR_Relationship__c}" />
+    			<apex:inputField value="{!a.Revenue_M__c}" />
+    			<apex:inputField value="{!a.Year_Founded__c}" />
+    			<apex:inputField value="{!a.Revenue_Growth_Rate__c}" />
+    			<apex:inputField value="{!a.FTE_Count__c}" />
+    			<apex:inputField value="{!a.Churn_Rate__c}" />
+    			<apex:inputField value="{!a.Ownership__c}" />
+    			<apex:inputField value="{!a.EBITDA_M__c}" />
+    			<apex:inputField value="{!a.Funding__c}" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!a.Capital_Raised_M__c}" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!a.Date_of_Latest_Investment__c}" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!a.Investors__c}" />
+    		</apex:pageBlockSection>
+    		<apex:pageBlockSection collapsible="true" title="Address">
+    			<apex:inputField value="{!a.Street__c}" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!a.City__c}" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!a.State__c}" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!a.Country__c}" />
+    		</apex:pageBlockSection>
+    	</apex:pageBlock>
+    	<apex:pageBlock title="Opportunity Details" tabStyle="CorpDev_Opportunity__c">
+    		<apex:pageBlockSection collapsible="true" title="Basic Opportunity Details" columns="2">
+    			<apex:inputField value="{!o.Name}" />
+    			<apex:inputField value="{!o.Internal_Theme__c}" />
+    			<apex:inputField value="{!o.Lead_Status__c}" required="false" />
+    			<apex:inputField value="{!o.Comments_Next_Steps__c}" />
+    			<apex:inputField value="{!o.Deal_Stage__c}" required="false" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!o.Source__c}" required="false" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!o.Source_Name__c}" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!o.Source_Firm__c}" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!o.Internal_Source__c}" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!o.Source_Notes__c}" />
+    		</apex:pageBlockSection>
+    	</apex:pageBlock>
+    	<apex:pageBlock title="Contact Details" tabStyle="CorpDev_Contact__c">
+    		<apex:pageBlockButtons location="bottom">
+    			<apex:commandButton title="Save" value="Save" action="{!saveRecords}" />
+    			<apex:commandButton title="Cancel" value="Cancel" action="{!cancel}" />
+    		</apex:pageBlockButtons>
+    		<apex:pageBlockSection collapsible="true" title="Basic Contact Details" columns="2">
+    			<apex:inputField value="{!c.Salutation__c}" />
+    			<apex:inputField value="{!c.Key_Contact__c}" />
+    			<apex:inputField value="{!c.Name}" required="false" />
+    			<apex:pageBlockSectionItem />
+    			<apex:inputField value="{!c.Title__c}" />
+    		</apex:pageBlockSection>
+    		<apex:pageBlockSection collapsible="true" title="Contact Details" columns="2">
+    			<apex:inputField value="{!c.Phone__c}" />
+    			<apex:inputField value="{!c.Mobile__c}" />
+    			<apex:inputField value="{!c.Email__c}" />
+    		</apex:pageBlockSection>
+    	</apex:pageBlock>
+    </apex:form>
+    
+    
+</apex:page>

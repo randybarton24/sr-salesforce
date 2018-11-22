@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Set_Offices_Not_Yet_Saved</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Target_Status__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Save_Opportunity__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>Renewal_Date__c</columns>
+    <columns>Cancel_Request_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Save_Opportunity_Owner__c</field>
+        <operation>equals</operation>
+        <value>Cole Dayton</value>
+    </filters>
+    <filters>
+        <field>Target_Status__c</field>
+        <operation>equals</operation>
+        <value>Set Provided,Assist Provided</value>
+    </filters>
+    <filters>
+        <field>Save_Opportunity_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Save</value>
+    </filters>
+    <filters>
+        <field>Save_Opportunity_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled</value>
+    </filters>
+    <filters>
+        <field>Save_Opportunity_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>**My Set Offices Not Yet Saved</label>
+    <sharedTo>
+        <group>Client_Engagement</group>
+    </sharedTo>
+</ListView>

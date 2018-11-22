@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ophthalmology_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Ophthalmology Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accidental Eye Injuries</fullName>
+                <default>false</default>
+                <label>Accidental Eye Injuries</label>
+            </value>
+            <value>
+                <fullName>Acute Angle-Closure Glaucoma</fullName>
+                <default>false</default>
+                <label>Acute Angle-Closure Glaucoma</label>
+            </value>
+            <value>
+                <fullName>Allergic Conjunctivitis</fullName>
+                <default>false</default>
+                <label>Allergic Conjunctivitis</label>
+            </value>
+            <value>
+                <fullName>Amaurosis Fugax</fullName>
+                <default>false</default>
+                <label>Amaurosis Fugax</label>
+            </value>
+            <value>
+                <fullName>Aphakia</fullName>
+                <default>false</default>
+                <label>Aphakia</label>
+            </value>
+            <value>
+                <fullName>Asthenopia</fullName>
+                <default>false</default>
+                <label>Asthenopia</label>
+            </value>
+            <value>
+                <fullName>Astigmatism</fullName>
+                <default>false</default>
+                <label>Astigmatism</label>
+            </value>
+            <value>
+                <fullName>Bacterial Conjunctivitis</fullName>
+                <default>false</default>
+                <label>Bacterial Conjunctivitis</label>
+            </value>
+            <value>
+                <fullName>Binocular Vision Disorder</fullName>
+                <default>false</default>
+                <label>Binocular Vision Disorder</label>
+            </value>
+            <value>
+                <fullName>Black Eye</fullName>
+                <default>false</default>
+                <label>Black Eye</label>
+            </value>
+            <value>
+                <fullName>Blepharitis</fullName>
+                <default>false</default>
+                <label>Blepharitis</label>
+            </value>
+            <value>
+                <fullName>Blepharochalasis</fullName>
+                <default>false</default>
+                <label>Blepharochalasis</label>
+            </value>
+            <value>
+                <fullName>Blepharoptosis</fullName>
+                <default>false</default>
+                <label>Blepharoptosis</label>
+            </value>
+            <value>
+                <fullName>Blurred Vision</fullName>
+                <default>false</default>
+                <label>Blurred Vision</label>
+            </value>
+            <value>
+                <fullName>Cataract, Anterior Polar, Dominant</fullName>
+                <default>false</default>
+                <label>Cataract, Anterior Polar, Dominant</label>
+            </value>
+            <value>
+                <fullName>Cataract, Congenital, Autosomal Dominant</fullName>
+                <default>false</default>
+                <label>Cataract, Congenital, Autosomal Dominant</label>
+            </value>
+            <value>
+                <fullName>Cataract, Congenital, Volkmann Type</fullName>
+                <default>false</default>
+                <label>Cataract, Congenital, Volkmann Type</label>
+            </value>
+            <value>
+                <fullName>Cataract, Crystalline Coralliform</fullName>
+                <default>false</default>
+                <label>Cataract, Crystalline Coralliform</label>
+            </value>
+            <value>
+                <fullName>Cataract, Microphthalmia - Nystagmus</fullName>
+                <default>false</default>
+                <label>Cataract, Microphthalmia - Nystagmus</label>
+            </value>
+            <value>
+                <fullName>Cataract, Total Congenital</fullName>
+                <default>false</default>
+                <label>Cataract, Total Congenital</label>
+            </value>
+            <value>
+                <fullName>Cataract, Zonular</fullName>
+                <default>false</default>
+                <label>Cataract, Zonular</label>
+            </value>
+            <value>
+                <fullName>Cataract - Alopecia - Sclerodactyly</fullName>
+                <default>false</default>
+                <label>Cataract - Alopecia - Sclerodactyly</label>
+            </value>
+            <value>
+                <fullName>Cataract - Ataxia - Deafness</fullName>
+                <default>false</default>
+                <label>Cataract - Ataxia - Deafness</label>
+            </value>
+            <value>
+                <fullName>Cataract - Cardiomyopathy</fullName>
+                <default>false</default>
+                <label>Cataract - Cardiomyopathy</label>
+            </value>
+            <value>
+                <fullName>Cataract Congenital Dominant Non Nuclear</fullName>
+                <default>false</default>
+                <label>Cataract Congenital Dominant Non Nuclear</label>
+            </value>
+            <value>
+                <fullName>Cataract - Congenital Ichthyosis</fullName>
+                <default>false</default>
+                <label>Cataract - Congenital Ichthyosis</label>
+            </value>
+            <value>
+                <fullName>Cataract Dental Syndrome</fullName>
+                <default>false</default>
+                <label>Cataract Dental Syndrome</label>
+            </value>
+            <value>
+                <fullName>Cataract Hutterite Type</fullName>
+                <default>false</default>
+                <label>Cataract Hutterite Type</label>
+            </value>
+            <value>
+                <fullName>Cataract - Microcornea Syndrome</fullName>
+                <default>false</default>
+                <label>Cataract - Microcornea Syndrome</label>
+            </value>
+            <value>
+                <fullName>Chalazion</fullName>
+                <default>false</default>
+                <label>Chalazion</label>
+            </value>
+            <value>
+                <fullName>Chemical Burn - Eyes</fullName>
+                <default>false</default>
+                <label>Chemical Burn - Eyes</label>
+            </value>
+            <value>
+                <fullName>Chronic Eye Diseases</fullName>
+                <default>false</default>
+                <label>Chronic Eye Diseases</label>
+            </value>
+            <value>
+                <fullName>Color Blindness</fullName>
+                <default>false</default>
+                <label>Color Blindness</label>
+            </value>
+            <value>
+                <fullName>Congenital Glaucoma</fullName>
+                <default>false</default>
+                <label>Congenital Glaucoma</label>
+            </value>
+            <value>
+                <fullName>Conjunctival Disorders</fullName>
+                <default>false</default>
+                <label>Conjunctival Disorders</label>
+            </value>
+            <value>
+                <fullName>Convergence Insufficiency</fullName>
+                <default>false</default>
+                <label>Convergence Insufficiency</label>
+            </value>
+            <value>
+                <fullName>Cornea Guttata w/Anterior Polar ctrct</fullName>
+                <default>false</default>
+                <label>Cornea Guttata w/Anterior Polar ctrct</label>
+            </value>
+            <value>
+                <fullName>Corneal Flash Burns</fullName>
+                <default>false</default>
+                <label>Corneal Flash Burns</label>
+            </value>
+            <value>
+                <fullName>Corneal Scar</fullName>
+                <default>false</default>
+                <label>Corneal Scar</label>
+            </value>
+            <value>
+                <fullName>Cornl Dstrphy, Epthial bsmt mbrane</fullName>
+                <default>false</default>
+                <label>Cornl Dstrphy, Epthial bsmt mbrane</label>
+            </value>
+            <value>
+                <fullName>ctrct, autosml Recessive, Cngnitl 2</fullName>
+                <default>false</default>
+                <label>ctrct, autosml Recessive, Cngnitl 2</label>
+            </value>
+            <value>
+                <fullName>ctrct, Congenital, With Microcornea</fullName>
+                <default>false</default>
+                <label>ctrct, Congenital, With Microcornea</label>
+            </value>
+            <value>
+                <fullName>ctrct, Crystalline Aculeiform/Frosted</fullName>
+                <default>false</default>
+                <label>ctrct, Crystalline Aculeiform/Frosted</label>
+            </value>
+            <value>
+                <fullName>ctrct, Juvenile, w/Microcornea</fullName>
+                <default>false</default>
+                <label>ctrct, Juvenile, w/Microcornea</label>
+            </value>
+            <value>
+                <fullName>ctrct- Aberrant Oral Frenula - Delay</fullName>
+                <default>false</default>
+                <label>ctrct- Aberrant Oral Frenula - Delay</label>
+            </value>
+            <value>
+                <fullName>Dbts Insipids-Diabetes Melits</fullName>
+                <default>false</default>
+                <label>Dbts Insipids-Diabetes Melits</label>
+            </value>
+            <value>
+                <fullName>Diabetes-Like Blepharitis</fullName>
+                <default>false</default>
+                <label>Diabetes-Like Blepharitis</label>
+            </value>
+            <value>
+                <fullName>Diabetes-Like Retinal Edema</fullName>
+                <default>false</default>
+                <label>Diabetes-Like Retinal Edema</label>
+            </value>
+            <value>
+                <fullName>Dilatation</fullName>
+                <default>false</default>
+                <label>Dilatation</label>
+            </value>
+            <value>
+                <fullName>Disease of Eye</fullName>
+                <default>false</default>
+                <label>Disease of Eye</label>
+            </value>
+            <value>
+                <fullName>Esophoria</fullName>
+                <default>false</default>
+                <label>Esophoria</label>
+            </value>
+            <value>
+                <fullName>Esotropia</fullName>
+                <default>false</default>
+                <label>Esotropia</label>
+            </value>
+            <value>
+                <fullName>Exophoria</fullName>
+                <default>false</default>
+                <label>Exophoria</label>
+            </value>
+            <value>
+                <fullName>Exotropia</fullName>
+                <default>false</default>
+                <label>Exotropia</label>
+            </value>
+            <value>
+                <fullName>Eyebrow Disorders</fullName>
+                <default>false</default>
+                <label>Eyebrow Disorders</label>
+            </value>
+            <value>
+                <fullName>Eye Defects-Arachnodactyly-Cardiopathy</fullName>
+                <default>false</default>
+                <label>Eye Defects-Arachnodactyly-Cardiopathy</label>
+            </value>
+            <value>
+                <fullName>Eye Disorders</fullName>
+                <default>false</default>
+                <label>Eye Disorders</label>
+            </value>
+            <value>
+                <fullName>Eye Infections</fullName>
+                <default>false</default>
+                <label>Eye Infections</label>
+            </value>
+            <value>
+                <fullName>Eyelid Disorders</fullName>
+                <default>false</default>
+                <label>Eyelid Disorders</label>
+            </value>
+            <value>
+                <fullName>Eyelid Eczema</fullName>
+                <default>false</default>
+                <label>Eyelid Eczema</label>
+            </value>
+            <value>
+                <fullName>Eyelid Lesions</fullName>
+                <default>false</default>
+                <label>Eyelid Lesions</label>
+            </value>
+            <value>
+                <fullName>Eye Movement Abnormality</fullName>
+                <default>false</default>
+                <label>Eye Movement Abnormality</label>
+            </value>
+            <value>
+                <fullName>Eye Muscle Disorders</fullName>
+                <default>false</default>
+                <label>Eye Muscle Disorders</label>
+            </value>
+            <value>
+                <fullName>Eye Palsy</fullName>
+                <default>false</default>
+                <label>Eye Palsy</label>
+            </value>
+            <value>
+                <fullName>Eye Paresis</fullName>
+                <default>false</default>
+                <label>Eye Paresis</label>
+            </value>
+            <value>
+                <fullName>Eye Strain</fullName>
+                <default>false</default>
+                <label>Eye Strain</label>
+            </value>
+            <value>
+                <fullName>Eye Trauma</fullName>
+                <default>false</default>
+                <label>Eye Trauma</label>
+            </value>
+            <value>
+                <fullName>Farsightedness</fullName>
+                <default>false</default>
+                <label>Farsightedness</label>
+            </value>
+            <value>
+                <fullName>Fcl Chorioretin/Fcl Retinochoroid</fullName>
+                <default>false</default>
+                <label>Fcl Chorioretin/Fcl Retinochoroid</label>
+            </value>
+            <value>
+                <fullName>Floaters</fullName>
+                <default>false</default>
+                <label>Floaters</label>
+            </value>
+            <value>
+                <fullName>Foreign Body in Eye</fullName>
+                <default>false</default>
+                <label>Foreign Body in Eye</label>
+            </value>
+            <value>
+                <fullName>Foveal and-or Macular Hypoplasia</fullName>
+                <default>false</default>
+                <label>Foveal and-or Macular Hypoplasia</label>
+            </value>
+            <value>
+                <fullName>Fuchs&#39; Corneal Dystrophy</fullName>
+                <default>false</default>
+                <label>Fuchs&#39; Corneal Dystrophy</label>
+            </value>
+            <value>
+                <fullName>Giant Papillary Conjunctivitis</fullName>
+                <default>false</default>
+                <label>Giant Papillary Conjunctivitis</label>
+            </value>
+            <value>
+                <fullName>Glaucoma</fullName>
+                <default>false</default>
+                <label>Glaucoma</label>
+            </value>
+            <value>
+                <fullName>Glaucoma, Normal Tension, Susceptibility</fullName>
+                <default>false</default>
+                <label>Glaucoma, Normal Tension, Susceptibility</label>
+            </value>
+            <value>
+                <fullName>Glaucoma Diabetic Eye Disease</fullName>
+                <default>false</default>
+                <label>Glaucoma Diabetic Eye Disease</label>
+            </value>
+            <value>
+                <fullName>Glaucoma in Ciliochorodial Detachment</fullName>
+                <default>false</default>
+                <label>Glaucoma in Ciliochorodial Detachment</label>
+            </value>
+            <value>
+                <fullName>Glaucoma in Epithelial Ingrowth</fullName>
+                <default>false</default>
+                <label>Glaucoma in Epithelial Ingrowth</label>
+            </value>
+            <value>
+                <fullName>Glaucoma in Intra Ocular Tumours</fullName>
+                <default>false</default>
+                <label>Glaucoma in Intra Ocular Tumours</label>
+            </value>
+            <value>
+                <fullName>Glaucoma in Iridoschisis.</fullName>
+                <default>false</default>
+                <label>Glaucoma in Iridoschisis.</label>
+            </value>
+            <value>
+                <fullName>Glaucoma in Phacomatoses</fullName>
+                <default>false</default>
+                <label>Glaucoma in Phacomatoses</label>
+            </value>
+            <value>
+                <fullName>Glaucoma - Iridogoniodysgenesia</fullName>
+                <default>false</default>
+                <label>Glaucoma - Iridogoniodysgenesia</label>
+            </value>
+            <value>
+                <fullName>Glaucoma - Sleep Apnea</fullName>
+                <default>false</default>
+                <label>Glaucoma - Sleep Apnea</label>
+            </value>
+            <value>
+                <fullName>Glcma-Ectpa Mcrosphrophaka-Stf Jnts</fullName>
+                <default>false</default>
+                <label>Glcma-Ectpa Mcrosphrophaka-Stf Jnts</label>
+            </value>
+            <value>
+                <fullName>Hazy Vision</fullName>
+                <default>false</default>
+                <label>Hazy Vision</label>
+            </value>
+            <value>
+                <fullName>Hypermetropia</fullName>
+                <default>false</default>
+                <label>Hypermetropia</label>
+            </value>
+            <value>
+                <fullName>Hypertensive Retinopathy</fullName>
+                <default>false</default>
+                <label>Hypertensive Retinopathy</label>
+            </value>
+            <value>
+                <fullName>Hypotropia</fullName>
+                <default>false</default>
+                <label>Hypotropia</label>
+            </value>
+            <value>
+                <fullName>Iritis</fullName>
+                <default>false</default>
+                <label>Iritis</label>
+            </value>
+            <value>
+                <fullName>Ligmnt Recnstrctn/Tendon Interposition</fullName>
+                <default>false</default>
+                <label>Ligmnt Recnstrctn/Tendon Interposition</label>
+            </value>
+            <value>
+                <fullName>Low Vision</fullName>
+                <default>false</default>
+                <label>Low Vision</label>
+            </value>
+            <value>
+                <fullName>Macular Amyloidosis</fullName>
+                <default>false</default>
+                <label>Macular Amyloidosis</label>
+            </value>
+            <value>
+                <fullName>Macular Corneal Dystrophy, Type I</fullName>
+                <default>false</default>
+                <label>Macular Corneal Dystrophy, Type I</label>
+            </value>
+            <value>
+                <fullName>Macular Degeneration, Polymorphic</fullName>
+                <default>false</default>
+                <label>Macular Degeneration, Polymorphic</label>
+            </value>
+            <value>
+                <fullName>Macular Dystrophy, Atypical Vitelliform</fullName>
+                <default>false</default>
+                <label>Macular Dystrophy, Atypical Vitelliform</label>
+            </value>
+            <value>
+                <fullName>Macular Dystrophy, Concentric Annular</fullName>
+                <default>false</default>
+                <label>Macular Dystrophy, Concentric Annular</label>
+            </value>
+            <value>
+                <fullName>Mcular Dystrphy,Vitelifrm,Adult-On</fullName>
+                <default>false</default>
+                <label>Mcular Dystrphy,Vitelifrm,Adult-On</label>
+            </value>
+            <value>
+                <fullName>Mechanical Strabismus</fullName>
+                <default>false</default>
+                <label>Mechanical Strabismus</label>
+            </value>
+            <value>
+                <fullName>Meibomitis</fullName>
+                <default>false</default>
+                <label>Meibomitis</label>
+            </value>
+            <value>
+                <fullName>Monofixation Syndrome</fullName>
+                <default>false</default>
+                <label>Monofixation Syndrome</label>
+            </value>
+            <value>
+                <fullName>Myopia, Infantile Severe</fullName>
+                <default>false</default>
+                <label>Myopia, Infantile Severe</label>
+            </value>
+            <value>
+                <fullName>Myopia, Type 6</fullName>
+                <default>false</default>
+                <label>Myopia, Type 6</label>
+            </value>
+            <value>
+                <fullName>Nearsightedness</fullName>
+                <default>false</default>
+                <label>Nearsightedness</label>
+            </value>
+            <value>
+                <fullName>Night Blindness</fullName>
+                <default>false</default>
+                <label>Night Blindness</label>
+            </value>
+            <value>
+                <fullName>North Carolina Macular Dystrophy</fullName>
+                <default>false</default>
+                <label>North Carolina Macular Dystrophy</label>
+            </value>
+            <value>
+                <fullName>Nystagmus</fullName>
+                <default>false</default>
+                <label>Nystagmus</label>
+            </value>
+            <value>
+                <fullName>Ocular Cicatricial Pemphigoid</fullName>
+                <default>false</default>
+                <label>Ocular Cicatricial Pemphigoid</label>
+            </value>
+            <value>
+                <fullName>Ocular Convergence Spasm</fullName>
+                <default>false</default>
+                <label>Ocular Convergence Spasm</label>
+            </value>
+            <value>
+                <fullName>Ocular Deviation</fullName>
+                <default>false</default>
+                <label>Ocular Deviation</label>
+            </value>
+            <value>
+                <fullName>Ocular Histoplasmosis Syndrome</fullName>
+                <default>false</default>
+                <label>Ocular Histoplasmosis Syndrome</label>
+            </value>
+            <value>
+                <fullName>Ocular Hypertension</fullName>
+                <default>false</default>
+                <label>Ocular Hypertension</label>
+            </value>
+            <value>
+                <fullName>Ocular Motility Disorders</fullName>
+                <default>false</default>
+                <label>Ocular Motility Disorders</label>
+            </value>
+            <value>
+                <fullName>Ocular Myasthenia Gravis</fullName>
+                <default>false</default>
+                <label>Ocular Myasthenia Gravis</label>
+            </value>
+            <value>
+                <fullName>Optic Nerve Disorder</fullName>
+                <default>false</default>
+                <label>Optic Nerve Disorder</label>
+            </value>
+            <value>
+                <fullName>Optic Neuropathy</fullName>
+                <default>false</default>
+                <label>Optic Neuropathy</label>
+            </value>
+            <value>
+                <fullName>Pediatric Strabismus</fullName>
+                <default>false</default>
+                <label>Pediatric Strabismus</label>
+            </value>
+            <value>
+                <fullName>Poor Color Vision</fullName>
+                <default>false</default>
+                <label>Poor Color Vision</label>
+            </value>
+            <value>
+                <fullName>Presbyopia</fullName>
+                <default>false</default>
+                <label>Presbyopia</label>
+            </value>
+            <value>
+                <fullName>Primary Open Angle Glaucoma</fullName>
+                <default>false</default>
+                <label>Primary Open Angle Glaucoma</label>
+            </value>
+            <value>
+                <fullName>Pterygium</fullName>
+                <default>false</default>
+                <label>Pterygium</label>
+            </value>
+            <value>
+                <fullName>Reading Disorders</fullName>
+                <default>false</default>
+                <label>Reading Disorders</label>
+            </value>
+            <value>
+                <fullName>Refractive Error</fullName>
+                <default>false</default>
+                <label>Refractive Error</label>
+            </value>
+            <value>
+                <fullName>Refractive Eye Disorders</fullName>
+                <default>false</default>
+                <label>Refractive Eye Disorders</label>
+            </value>
+            <value>
+                <fullName>Retinal Artery Occlusion</fullName>
+                <default>false</default>
+                <label>Retinal Artery Occlusion</label>
+            </value>
+            <value>
+                <fullName>Retinal Degeneration</fullName>
+                <default>false</default>
+                <label>Retinal Degeneration</label>
+            </value>
+            <value>
+                <fullName>Retinal Dgneratn-Nanophthalmos</fullName>
+                <default>false</default>
+                <label>Retinal Dgneratn-Nanophthalmos</label>
+            </value>
+            <value>
+                <fullName>Retinal Dysplasia, X - Linked</fullName>
+                <default>false</default>
+                <label>Retinal Dysplasia, X - Linked</label>
+            </value>
+            <value>
+                <fullName>Retinal Edema</fullName>
+                <default>false</default>
+                <label>Retinal Edema</label>
+            </value>
+            <value>
+                <fullName>Retinal Migraine</fullName>
+                <default>false</default>
+                <label>Retinal Migraine</label>
+            </value>
+            <value>
+                <fullName>Retinal Scarring</fullName>
+                <default>false</default>
+                <label>Retinal Scarring</label>
+            </value>
+            <value>
+                <fullName>Retinitis Punctata Albescens</fullName>
+                <default>false</default>
+                <label>Retinitis Punctata Albescens</label>
+            </value>
+            <value>
+                <fullName>Retinopathy</fullName>
+                <default>false</default>
+                <label>Retinopathy</label>
+            </value>
+            <value>
+                <fullName>Retinopathy, Arteriosclerotic</fullName>
+                <default>false</default>
+                <label>Retinopathy, Arteriosclerotic</label>
+            </value>
+            <value>
+                <fullName>Retinoschisis, Autosomal Dominant</fullName>
+                <default>false</default>
+                <label>Retinoschisis, Autosomal Dominant</label>
+            </value>
+            <value>
+                <fullName>Retinoschisis of Fovea</fullName>
+                <default>false</default>
+                <label>Retinoschisis of Fovea</label>
+            </value>
+            <value>
+                <fullName>Severe Myopia</fullName>
+                <default>false</default>
+                <label>Severe Myopia</label>
+            </value>
+            <value>
+                <fullName>Strabismus-Like Double Vision</fullName>
+                <default>false</default>
+                <label>Strabismus-Like Double Vision</label>
+            </value>
+            <value>
+                <fullName>Stye</fullName>
+                <default>false</default>
+                <label>Stye</label>
+            </value>
+            <value>
+                <fullName>Vertical Heterophoria</fullName>
+                <default>false</default>
+                <label>Vertical Heterophoria</label>
+            </value>
+            <value>
+                <fullName>Vision Impairment</fullName>
+                <default>false</default>
+                <label>Vision Impairment</label>
+            </value>
+            <value>
+                <fullName>Vision Loss</fullName>
+                <default>false</default>
+                <label>Vision Loss</label>
+            </value>
+            <value>
+                <fullName>Visual Aura</fullName>
+                <default>false</default>
+                <label>Visual Aura</label>
+            </value>
+            <value>
+                <fullName>Visual Dysfunction</fullName>
+                <default>false</default>
+                <label>Visual Dysfunction</label>
+            </value>
+            <value>
+                <fullName>Visual Field Loss</fullName>
+                <default>false</default>
+                <label>Visual Field Loss</label>
+            </value>
+            <value>
+                <fullName>Vitelliform Macular Dystrophy</fullName>
+                <default>false</default>
+                <label>Vitelliform Macular Dystrophy</label>
+            </value>
+            <value>
+                <fullName>Vitreoretinal Degeneration</fullName>
+                <default>false</default>
+                <label>Vitreoretinal Degeneration</label>
+            </value>
+            <value>
+                <fullName>Vitreous Detachment</fullName>
+                <default>false</default>
+                <label>Vitreous Detachment</label>
+            </value>
+            <value>
+                <fullName>Watering Eyes</fullName>
+                <default>false</default>
+                <label>Watering Eyes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

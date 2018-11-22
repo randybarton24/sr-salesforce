@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weighted_SF_Rep__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( Opportunity__r.Invoiced_MSF__c = 0, Opportunity__r.SFPrice__c * Individual_Credit_Portion__c , Opportunity__r.Invoiced_SF__c * Individual_Credit_Portion__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Weighted SF-Rep</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

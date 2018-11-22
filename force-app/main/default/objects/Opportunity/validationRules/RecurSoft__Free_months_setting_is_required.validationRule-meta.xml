@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Free_months_setting_is_required</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    AND(
+        VALUE(TEXT(RecurSoft__Number_of_Free_Months__c)) &gt; 0,
+        OR(
+            ISBLANK(TEXT(RecurSoft__Free_Months_Setting__c)),
+            ISPICKVAL(RecurSoft__Free_Months_Setting__c, &#39;None&#39;)
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Free Months Setting is required</errorMessage>
+</ValidationRule>

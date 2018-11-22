@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unreceived_ADR_Sets</fullName>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>Event_Source__c</columns>
+    <columns>SR_Date_Created__c</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>TASK.STATUS</columns>
+    <filterScope>Team</filterScope>
+    <filters>
+        <field>ADR_Set__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>ADR_Set_Received__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>ADR Sets Unreceived - My Team All Time</label>
+    <sharedTo>
+        <role>SAE_Manager_1</role>
+        <role>SAE_Manager_2</role>
+        <role>SAE_Manager_3</role>
+    </sharedTo>
+</ListView>

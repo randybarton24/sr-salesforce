@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_for_Processing_JS</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit for Processing</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)} 
+
+var readyToProcess = &quot;&quot;; 
+var countAssets = sforce.connection.query(&quot;SELECT COUNT() FROM Asset WHERE Active__c = true AND AccountId = &#39;{!Addendum__c.AccountId__c}&#39; AND Contract_Type__c != &#39;Month-to-month&#39; AND Id NOT IN (SELECT Asset__c FROM Addendum_Line_Item__c WHERE Addendum__c = &#39;{!Addendum__c.Id}&#39;)&quot;); 
+
+if(countAssets.size &gt; 0 &amp;&amp; &quot;{!Addendum__c.CoTerm_Change__c}&quot; == &quot;CoTerm&quot;) 
+{ 
+readyToProcess += &quot;When changing the renewal date, all coterminous products must also be changed. Please adjust the current modifications or add all coterminous products to the addendum. &quot;; 
+} 
+if(&quot;{!Addendum__c.CoTerm_Dates__c}&quot; != 1) 
+{ 
+readyToProcess += &quot;The new renewal date must be the same for all products. Please adjust the current modifications. &quot;; 
+} 
+if(&quot;{!Addendum__c.Addendum_Signer__c}&quot; == &quot;&quot;) 
+{ 
+readyToProcess += &quot;Please select an Addendum Signer. &quot;; 
+} 
+
+if(readyToProcess == &quot;&quot;) 
+{ 
+var newAddendum= new sforce.SObject(&quot;Addendum__c&quot;); 
+newAddendum.id = &quot;{!Addendum__c.Id}&quot;; 
+newAddendum.OwnerId=&quot;{!Addendum__c.QueueID__c}&quot;; 
+newAddendum.Status__c=&quot;Ready for Processing&quot;; 
+
+var result = sforce.connection.update([newAddendum]); 
+
+if (result[0].getBoolean(&quot;success&quot;)) 
+{ 
+// Refresh window 
+window.location.reload(); 
+} 
+else 
+{ 
+alert(&quot;something broke&quot;); 
+} 
+} 
+else 
+{ 
+alert(readyToProcess); 
+}</url>
+</WebLink>

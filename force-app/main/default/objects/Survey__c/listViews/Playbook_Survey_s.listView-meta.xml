@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Playbook_Survey_s</fullName>
+    <columns>NAME</columns>
+    <columns>Business_Name__c</columns>
+    <columns>Rep_Name__c</columns>
+    <columns>Survey_Completed__c</columns>
+    <columns>Confidence_Level__c</columns>
+    <columns>Would_you_Recommend_SR__c</columns>
+    <columns>How_can_we_improve__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Survey_Completion_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Survey__c.Playbook_Case_Survey</value>
+    </filters>
+    <label>Playbook Survey&#39;s</label>
+</ListView>

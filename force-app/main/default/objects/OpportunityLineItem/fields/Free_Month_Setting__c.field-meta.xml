@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Free_Month_Setting__c</fullName>
+    <description>Override opportunity free months</description>
+    <externalId>false</externalId>
+    <label>Orientation Month Setting</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Extend Contract - At the Beginning</fullName>
+                <default>false</default>
+                <label>Extend Contract - At the Beginning</label>
+            </value>
+            <value>
+                <fullName>Include in Contract Period - At the Beginning</fullName>
+                <default>false</default>
+                <label>Include in Contract Period - At the Beginning</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

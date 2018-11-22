@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>day_46_leads_Last_activity</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Last_ROE_Task_Date__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.EMAIL</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Contacted</value>
+    </filters>
+    <filters>
+        <field>LEAD.LAST_ACTIVITY</field>
+        <operation>equals</operation>
+        <value>N_DAYS_AGO:44</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>Do Not Contact Leads</value>
+    </filters>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>equals</operation>
+        <value>N_DAYS_AGO:44</value>
+    </filters>
+    <label>day 46 - leads - LAST ROE TASK DATE</label>
+    <sharedTo>
+        <roleAndSubordinates>SAE_Rep_3</roleAndSubordinates>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Playbook_Reference_Date__c</fullName>
+    <description>The play due date will be calculated by reference to this date.</description>
+    <externalId>false</externalId>
+    <label>Playbook Reference Date</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Playbook Add Date1</fullName>
+                <default>false</default>
+                <label>Playbook Add Date</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

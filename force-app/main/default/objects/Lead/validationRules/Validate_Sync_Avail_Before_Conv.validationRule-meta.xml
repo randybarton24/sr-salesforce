@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Sync_Avail_Before_Conv</fullName>
+    <active>false</active>
+    <description>Validates that the Sync is NOT on the Blacklist prior to converting the lead</description>
+    <errorConditionFormula>AND(
+  IsConverted = true, 
+  ISPICKVAL(Practice_Software__r.SYNC_Availability__c,&quot;Blacklist - DO NOT SELL&quot;)
+)</errorConditionFormula>
+    <errorMessage>Practice Management Software is not supported. DO NOT SELL!</errorMessage>
+</ValidationRule>

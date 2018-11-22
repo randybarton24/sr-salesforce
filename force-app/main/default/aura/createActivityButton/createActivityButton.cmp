@@ -1,0 +1,108 @@
+<!--
+ - Created by mschetselaar on 9/10/2018.
+ -->
+
+<aura:component description="createActivityButton" controller="PlaybookControllerApxc">
+    <aura:attribute name="isOpen" type="Boolean"/>
+    <aura:attribute name="TaskId" type="Id" />
+    <aura:attribute name="CaseId" type="Id" />
+    <aura:attribute name="options" type="List" default="[
+    {'label': 'Task', 'value': 'Task'},
+    {'label': 'Event', 'value': 'Event'}
+    ]"/>
+    <aura:attribute name="durationOptions" type="List" default="[
+    {'label': '15 minutes', 'value': '15'},
+    {'label': '30 minutes', 'value': '30'},
+    {'label': '1 hour', 'value': '60'},
+    {'label': '2 hour', 'value': '120'},
+    ]"/>
+    <aura:attribute name="typeOptions" type="List" default="[
+    {'label' : 'Inbound Call', 'value': 'Inbound Call'},
+    {'label' : 'Outbound Call', 'value': 'Outbound Call'},
+    {'label' : 'Email', 'value': 'Email'},
+    {'label' : 'Administrative/Other', 'value': 'Administrative/Other'},
+    {'label' : 'Sync Install', 'value': 'Sync Install'},
+    {'label' : 'Custom Settings', 'value': 'Custom Settings'},
+    {'label' : 'Kick Off Call', 'value': 'Kick Off Call'},
+    {'label' : 'Midway Decision Maker Call', 'value': 'Midway Decision Maker Call'},
+    {'label' : 'Final Call', 'value': 'Final Call'},
+    {'label' : 'General Training', 'value': 'General Training'},
+    {'label' : 'Follow Up', 'value': 'Follow Up'},
+    ]"/>
+
+    <aura:attribute name="value" type="String" default="Task"/>
+    <aura:attribute name="isTask" type="Boolean" default="true" />
+    <aura:attribute name="newTask" type="Task" default="{ 'sobjectType': 'Task' }" />
+    <aura:attribute name="newEvent" type="Event" default="{ 'sobjectType': 'Event' }" />
+
+
+    <aura:registerEvent name="updateSpinner" type="c:PlaybookSpinner" />
+    <aura:registerEvent name="updateCases" type="c:UpdatePlaybookCases" />
+
+    <lightning:button label="Schedule Activity" onclick="{!c.addEvent}" iconName="action:new_event"/>
+
+    <aura:if isTrue="{!v.isOpen}">
+
+        <!--###### MODAL BOX Start######-->
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open  slds-modal--small slds-scrollable--y">
+            <div class="slds-modal__container" style="height: 500px" >
+                <!-- ###### MODAL BOX HEADER Start ######-->
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Create Activity</h2>
+                </header>
+                <!--###### MODAL BOX BODY Part Start######-->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1"  style="height: 500px">
+
+                    <div class="slds-grid slds-align-content-center" >
+                        <lightning:radioGroup name="Task Event Button"
+                                              messageWhenValueMissing="Please select an option"
+                                              options="{!v.options}"
+                                              type="button"
+                                              onchange="{!c.TaskEventSelector}"
+                                              value="Task"
+                        />
+                    </div>
+                    <aura:if isTrue="{!v.isTask}">
+
+                        <div class="slds-p-horizontal--small slds-grid slds-wrap ">
+                            <lightning:input label="Subject" value="{!v.newTask.Subject}" class="slds-size--6-of-12 slds-p-horizontal--small "/>
+
+                            <div class="slds-p-horizontal--small slds-size--6-of-12 datepicker-display-table clear-user-agent-styles slds-datepicker datepicker-table">
+                                <lightning:input label="Due Date" type="date" value="{!v.newTask.ActivityDate}" class="datepicker-display-table clear-user-agent-styles datepicker__month datepicker-table slds-datepicker datepicker-table" />
+                            </div>
+                        </div>
+
+                        <aura:set attribute="else">
+                            <div class="slds-p-horizontal--small slds-grid slds-wrap" >
+                                <lightning:input label="Subject" value="{!v.newEvent.Subject}" class="slds-size--6-of-12 slds-p-horizontal--small" />
+
+                                <div class="slds-p-horizontal--small slds-size--6-of-12 datepicker-display-table clear-user-agent-styles">
+                                    <lightning:input type="datetime-local" value="{!v.newEvent.ActivityDate}" class="datepicker-display-table clear-user-agent-styles datepicker__month datepicker-table datepicker-table" />
+                                </div>
+                                <lightning:combobox label="Duration" options="{!v.durationOptions}" required="true" onchange="{!c.setDuration}" class="slds-size--6-of-12 slds-p-horizontal--small"/>
+                                <lightning:combobox label="Activity Type" options="{!v.typeOptions}" required="true" onchange="{!c.setType}" class="slds-size--6-of-12 slds-p-horizontal--small"/>
+
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <!--###### MODAL BOX FOOTER Part Start ######-->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral"
+                                      label="Cancel"
+                                      title="Cancel"
+                                      onclick="{! c.closeModel }"
+                    />
+                    <lightning:button variant="brand"
+                                      label="Save"
+                                      title="Save"
+                                      onclick="{! c.saveAndClose }"
+                    />
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        <!--###### MODAL BOX Part END Here ######-->
+
+    </aura:if>
+</aura:component>

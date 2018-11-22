@@ -1,0 +1,29 @@
+<!--
+ - Created by mschetselaar on 9/6/2018.
+ -->
+
+<aura:component description="OpenTaskLineItem" controller="PlaybookControllerApxc">
+    <aura:attribute name="task" type="Task"/>
+    <aura:attribute name="completed" type="Boolean" default="false" />
+
+    <aura:registerEvent name="updateTask" type="c:taskLineItemUpdate" />
+
+    <tr>
+
+        <td><lightning:input  type="checkbox" label="" value="{!v.completed}" onchange="{!c.updateTask}"/> </td>
+        <td>{!v.task.Subject}</td>
+        <td>{!v.task.ActivityDate}</td>
+        <td>{!v.task.Play_Type__c}</td>
+        <td>{!v.task.Status}</td>
+        <td>{!v.task.Priority}</td>
+        <td>{!v.task.OwnerId}</td>
+
+        <td>
+            <!--<aura:if isTrue="{!v.task.Status == 'Completed'}" >-->
+                <!--<lightning:button label="Schedule Event" onclick="{!c.addEvent}" iconName="action:new_event"/>-->
+                <!--&lt;!&ndash;<c:AddPlaybookButton />&ndash;&gt;-->
+            <!--</aura:if>-->
+        </td>
+
+    </tr>
+</aura:component>

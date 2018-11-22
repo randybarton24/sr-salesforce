@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pardot_Partner_ID__c</fullName>
+    <description>This field is populated from Pardot and is the Solutionreach assigned Partner ID</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is populated from Pardot and is the Solutionreach assigned Partner ID</inlineHelpText>
+    <label>Pardot Partner ID</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

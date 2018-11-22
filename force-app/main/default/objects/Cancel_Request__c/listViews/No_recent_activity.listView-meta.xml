@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_recent_activity</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Stage__c</columns>
+    <columns>Projected_Contract_Expiration_Renewal__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LAST_UPDATE</field>
+        <operation>lessOrEqual</operation>
+        <value>12/1/2016 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled,No Sale,Save,Resume - No Change</value>
+    </filters>
+    <label>No recent activity</label>
+    <sharedTo>
+        <group>Client_Engagement</group>
+    </sharedTo>
+</ListView>

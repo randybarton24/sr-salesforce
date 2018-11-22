@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Sync_Date_5_Days__c</fullName>
+    <externalId>false</externalId>
+    <formula>Admin_Last_Sync_Date__c  &lt;= Today()-5</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If the box is checked the sync hasn&#39;t run for more than 5 days.</inlineHelpText>
+    <label>Last Sync Date 5+ Days</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

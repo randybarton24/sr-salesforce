@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Renewal_rule_update_after_Closing_Won</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false,
+    AND(
+        ISPICKVAL(StageName, &#39;Closed Won&#39;),
+        ISCHANGED(RecurSoft__Renewal_Rule__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>You can not update Renewal Rule after Closing Won the Opportunity</errorMessage>
+</ValidationRule>

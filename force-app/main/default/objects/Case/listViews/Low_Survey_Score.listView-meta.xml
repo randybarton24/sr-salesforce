@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Low_Survey_Score</fullName>
+    <columns>Subscriber_ID__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>SR_Date_Created__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Category__c</columns>
+    <columns>Product__c</columns>
+    <columns>Topics__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Resolution__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Support</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>equals</operation>
+        <value>Low Survey Score</value>
+    </filters>
+    <label>Low Survey Score</label>
+    <sharedTo>
+        <role>CSR_Director</role>
+        <role>CSR_Manager</role>
+        <role>VP_CSR</role>
+    </sharedTo>
+</ListView>

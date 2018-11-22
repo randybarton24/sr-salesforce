@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Med_Team_1</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7 AND 8 and 9 and 10</booleanFilter>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>tz__Timezone__c</columns>
+    <columns>Sub_industry__c</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Competitor__c</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Practice_Software__c</columns>
+    <columns>Last_ROE_Task_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.INDUSTRY</field>
+        <operation>equals</operation>
+        <value>Medical</value>
+    </filters>
+    <filters>
+        <field>LEAD.DO_NOT_CALL</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Remove_from_List__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>,New,Contacted,No Response,Unconverted,No Integration</value>
+    </filters>
+    <filters>
+        <field>LEAD.PHONE</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>isGroup__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>LEAD.LAST_ACTIVITY</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_DAYS:31</value>
+    </filters>
+    <filters>
+        <field>PM_Sync_Availability_Text__c</field>
+        <operation>notEqual</operation>
+        <value>,In Development,Discovery,Blacklist - DO NOT SELL</value>
+    </filters>
+    <filters>
+        <field>Lead_Type__c</field>
+        <operation>equals</operation>
+        <value>Practice</value>
+    </filters>
+    <filters>
+        <field>Sub_industry__c</field>
+        <operation>notContain</operation>
+        <value>ob/g</value>
+    </filters>
+    <label>Med Team 1</label>
+    <sharedTo>
+        <role>ADR_Manager_1</role>
+        <role>ADR_Rep_1</role>
+    </sharedTo>
+</ListView>

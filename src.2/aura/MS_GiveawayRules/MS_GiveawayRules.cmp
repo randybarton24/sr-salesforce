@@ -1,0 +1,74 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global"  >
+	<aura:attribute name="GiveawayRulesContent" type="string" default=""/>
+    <div>
+    	<p>
+            <b>{!v.GiveawayRulesContent}</b>
+        </p>
+        <p><br>&nbsp;</br>
+        	<b>1. NO PURCHASE NECESSARY TO ENTER OR WIN:</b> The Solutionreach $250 Gift Card Giveaway (“Sweepstakes”) is open to all legal residents of the 
+            United States, age 18 years or older, except employees, officers, directors, members, managers, and agents ((and their immediate families (spouse, 
+            parent, child, sibling and their respective spouses) and household members (whether or not related)) of Solutionreach, Inc. (“Solutionreach”), 
+            and its parents, affiliates, officers, directors, managers, members, trustees, participating vendors, distributors, judges, advertising and 
+            promotion agencies and affiliated entities (collectively, with Solutionreach, “Sweepstakes Entities”). Due to legal restrictions in Canada, 
+            residents of Canada are not eligible for the Sweepstakes. Void wherever prohibited or restricted by law. Sweepstakes is governed by U.S. law and 
+            subject to all applicable federal, state and local laws and regulations. No purchase is necessary to enter or win.
+        </p>
+        <p><br>&nbsp;</br>
+        	By entering the Sweepstakes, entrants agree to accept and be bound by all terms of these official rules (“Official Rules”) and understand that they 
+            and/or their Submissions (as defined below) may appear in any advertisement associated with the Sweepstakes or Solutionreach.
+        </p>
+        <p><br>&nbsp;</br>
+            <b>2. HOW TO ENTER: </b>Beginning at 12:00:00 am Mountain Time (“MT”) on January 25, 2018 and ending at 11:59:59 pm MT on March 30, 2018 (the “Promotion 
+            Period”), entrants may enter the Sweepstakes by calling (855)-733-5228, chatting, logging a case through the Solutionreach community 
+            (community.solutionreach.com), or e-mailing srresponse@solutionreach.com to submit a “how-to” question that is not already answered in the Solutionreach 
+            knowledge base about how to use the Solutionreach software. Limit one entry per eligible submission per entrant, but entrants may submit multiple eligible submissions to 
+            enter multiple times.  One prize Winner will be selected per week during the Promotion Period. Solutionreach reserves the right in its sole discretion, to 
+            disqualify any individual who tampers with the entry process. Entries may be subject to verification prior to prize drawing. Programmatically reproduced 
+            entries are not permitted and will be disqualified. Entries become the property of Solutionreach and will not be returned. Solutionreach is not responsible 
+            for lost, late, misdirected, damaged or incomplete entries, or for transactions that are processed late or incorrectly computed or are lost, all of which are 
+            void, because of computer error or malfunctions.
+        </p>
+        <p><br>&nbsp;</br>
+        	<b>3. RANDOM DRAWING: </b>Entries must be received during the Promotion Period to be eligible for a prize. Random drawing will be conducted 
+            weekly throughout the Promotion Period from among all eligible entries received during the week immediately preceding the weekly random 
+            drawing. The random drawing will be conducted by Solutionreach whose decisions are final on all matters relating to this Sweepstakes.
+        </p>
+        <p><br>&nbsp;</br>
+            <b>4. ODDS: </b>Odds of winning a prize will depend on the total number of eligible entries received. PRIZE: One Winner will win a $250 USD 
+            Gift Card each week for approximately 10 weeks. TOTAL VALUE OF ALL PRIZES: Approximately $2500 USD ($250 per week for approximately 10 weeks). 
+            No substitution or transfer of prizes or cash redemptions permitted by the Winner. Solutionreach reserves the right to substitute for any 
+            reason whatsoever a prize (or portion thereof) of comparable or greater value. Prizes are awarded “as is” with no warranty or guarantee, either 
+            express or implied by Solutionreach. The Winner is responsible for the reporting and payment of all taxes (if any) as well as any other costs 
+            and expenses associated with acceptance and use of a prize not specified herein as being awarded. Any gift cards are subject to retailer 
+            regulations and restrictions. All prize details are at Solutionreach’s sole discretion.
+        </p>     
+        <p><br>&nbsp;</br>
+        	<b>5. GENERAL RULES AND REGULATIONS: </b>By entering this Sweepstakes and/or accepting the prizes, participants grant Solutionreach and its 
+            designees the right, unless prohibited by law, to use their names, cities and states of residences, voices, performances, pictures and 
+            likenesses (including recorded media coverage), without compensation, notification or approval, for the purpose of advertising, promotional, 
+            and other purposes, in any manner or medium, now or hereafter known, throughout the universe in perpetuity.
+        </p>
+        <p><br>&nbsp;</br>
+            The potential Winners may be required to execute an affidavit of eligibility, liability release, tax acknowledgment form and, except where 
+            prohibited by law, publicity release and return within five (5) business days of date of issuance of notification. Noncompliance within this 
+            time period or failure of a potential Winner to respond to a notification attempt within five (5) days of such attempt may result in 
+            disqualification and, at Solutionreach’s discretion, a new Winner will be drawn at random. If: (i) any prize notification is returned as 
+            undeliverable, (ii) a potential Winner declines his or her prize; or (iii) a potential Winner fails to comply with any of the Official Rules 
+            as outlined herein, he/she will be disqualified and, at Solutionreach’s discretion, a new Winner will be drawn at random.
+        </p>     
+        <p><br>&nbsp;</br>
+        	THE SWEEPSTAKES ENTITIES, AND THEIR RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES AND AGENTS (COLLECTIVELY, THE “RELEASED PARTIES”) EXPRESSLY 
+            DISCLAIM ANY RESPONSIBILITY AND PARTICIPANTS AGREE TO INDEMNIFY AND HOLD HARMLESS THE RELEASED PARTIES FROM AND AGAINST ANY AND ALL CLAIMS, 
+            ACTIONS, DEMANDS AND/OR LIABILITY FOR INJURY, DAMAGE OR LOSS WHATSOEVER RELATING TO OR ARISING IN CONNECTION WITH PARTICIPATION IN THIS 
+            SWEEPSTAKES (REGARDLESS OF THE CAUSE OF SUCH INJURY, DAMAGE OR LOSS), SOLUTIONREACH’S USE OF ANY MATERIALS SUBMITTED BY PARTICIPANT, AND/OR 
+            THE DELIVERY AND/OR SUBSEQUENT USE OR MISUSE OF ANY OF THE PRIZES AWARDED.
+        </p>
+        <p><br>&nbsp;</br>
+            <b>6. OFFICIAL RULES AND WINNERS LIST: </b>The full and complete Official Rules are contained herein. The Winners List (available after 
+            April 15, 2018) will be posted here or at the Solutionreach Community website.
+        </p>     
+        <p><br>&nbsp;</br>
+        	<b>7. SPONSOR: </b>The Solutionreach $250 Gift Card Giveaway is sponsored by Solutionreach, Inc., 2600 N. Ashton Blvd. Lehi, UT 84043.
+        </p> 
+    </div>
+</aura:component>

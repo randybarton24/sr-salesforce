@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <label>AppAdminAPI Settings</label>
+    <visibility>Protected</visibility>
+    <fields>
+        <fullName>isProduction__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>isProduction</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>practiceNameLength__c</fullName>
+        <description>Allowable practice name length for AppAdmin</description>
+        <externalId>false</externalId>
+        <label>practiceNameLength</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>productionContractUrl__c</fullName>
+        <description>Base URL for Contract Link</description>
+        <externalId>false</externalId>
+        <label>productionContractUrl</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>productionPassword__c</fullName>
+        <description>AppAdmin password for Production Server.</description>
+        <externalId>false</externalId>
+        <label>productionPassword</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>productionRequestUrl__c</fullName>
+        <description>URL for GET from AppAdmin Production Server</description>
+        <externalId>false</externalId>
+        <label>productionRequestUrl</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>productionTargetUrl__c</fullName>
+        <description>URL to POST to AppAdmin Production Server</description>
+        <externalId>false</externalId>
+        <label>productionTargetUrl</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>productionUsername__c</fullName>
+        <description>AppAdmin username for Production Server.</description>
+        <externalId>false</externalId>
+        <label>productionUsername</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RequestType__c</fullName>
+        <externalId>false</externalId>
+        <label>RequestType</label>
+        <length>10</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sandboxContractUrl__c</fullName>
+        <description>Base URL for Contract link</description>
+        <externalId>false</externalId>
+        <label>sandboxContractUrl</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sandboxPassword__c</fullName>
+        <description>AppAdmin password for Test Server</description>
+        <externalId>false</externalId>
+        <label>sandboxPassword</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sandboxRequestUrl__c</fullName>
+        <description>URL for GET from AppAdmin Test Server</description>
+        <externalId>false</externalId>
+        <label>sandboxRequestUrl</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sandboxTargetUrl__c</fullName>
+        <description>URL to POST to AppAdmin Test Server</description>
+        <externalId>false</externalId>
+        <label>sandboxTargetUrl</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sandboxUsername__c</fullName>
+        <description>AppAdmin username for Test Server</description>
+        <externalId>false</externalId>
+        <label>sandboxUsername</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>successStatusCode__c</fullName>
+        <description>Status code returned by AppAdmin for success.</description>
+        <externalId>false</externalId>
+        <label>successStatusCode</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

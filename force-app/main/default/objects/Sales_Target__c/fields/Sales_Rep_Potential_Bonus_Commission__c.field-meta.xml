@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Rep_Potential_Bonus_Commission__c</fullName>
+    <description>Sum of Potential Bonus &amp; Commission Credit field on the Sales Credit object.  Set by DLRS.  Used for checking individual credits for accuracy against the total.</description>
+    <externalId>false</externalId>
+    <label>Sales Rep Potential Bonus &amp; Commission</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

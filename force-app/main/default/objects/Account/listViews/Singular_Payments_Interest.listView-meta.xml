@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Singular_Payments_Interest</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Subscriber_ID__c</columns>
+    <columns>RecurSoft__Status__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Singular_Interest__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Singular_Interest_Received__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Singular Payments Interest</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Invoicing_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This field determines the invoice dates from the revenue schedule entries.
+Added after discussion with Nik on invoice date calculus.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Determines the date of the billing schedules.</inlineHelpText>
+    <label>Invoicing Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>RecurSoft__Billing_Frequency__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>First day of the month</fullName>
+                <default>false</default>
+                <label>First day of the month</label>
+            </value>
+            <value>
+                <fullName>Last day of the month</fullName>
+                <default>false</default>
+                <label>Last day of the month</label>
+            </value>
+            <value>
+                <fullName>Based on contract start date</fullName>
+                <default>true</default>
+                <label>Based on contract start date</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>One-Time</controllingFieldValue>
+            <controllingFieldValue>Monthly</controllingFieldValue>
+            <controllingFieldValue>Quarterly</controllingFieldValue>
+            <controllingFieldValue>Semi-annual</controllingFieldValue>
+            <controllingFieldValue>Yearly</controllingFieldValue>
+            <valueName>Based on contract start date</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Monthly</controllingFieldValue>
+            <controllingFieldValue>Quarterly</controllingFieldValue>
+            <controllingFieldValue>Yearly</controllingFieldValue>
+            <valueName>First day of the month</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Monthly</controllingFieldValue>
+            <controllingFieldValue>Quarterly</controllingFieldValue>
+            <controllingFieldValue>Yearly</controllingFieldValue>
+            <valueName>Last day of the month</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

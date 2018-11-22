@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Optometry_Practicing_Specialty__c</fullName>
+    <externalId>false</externalId>
+    <label>Primary Optometry Practicing Specialty</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cornea &amp; Contact Management</fullName>
+                <default>false</default>
+                <label>Cornea &amp; Contact Management</label>
+            </value>
+            <value>
+                <fullName>Low Vision Rehabilitation</fullName>
+                <default>false</default>
+                <label>Low Vision Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Occupational Optometry</fullName>
+                <default>false</default>
+                <label>Occupational Optometry</label>
+            </value>
+            <value>
+                <fullName>Optometry</fullName>
+                <default>false</default>
+                <label>Optometry</label>
+            </value>
+            <value>
+                <fullName>Pediatric Optometry</fullName>
+                <default>false</default>
+                <label>Pediatric Optometry</label>
+            </value>
+            <value>
+                <fullName>Sports Vision</fullName>
+                <default>false</default>
+                <label>Sports Vision</label>
+            </value>
+            <value>
+                <fullName>Vision Therapy</fullName>
+                <default>false</default>
+                <label>Vision Therapy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

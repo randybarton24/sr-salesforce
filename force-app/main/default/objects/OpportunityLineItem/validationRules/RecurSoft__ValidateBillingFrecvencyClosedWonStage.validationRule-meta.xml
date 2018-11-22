@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__ValidateBillingFrecvencyClosedWonStage</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    OR (
+        $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c,
+        $Setup.RecurSoft__Deactivate_opp_validations__c.RecurSoft__IsActive__c
+    ), false, 
+    RecurSoft__Source_Opportunity_Stage__c == &#39;Closed Won&#39; &amp;&amp;
+    ISCHANGED(
+        RecurSoft__Billing_Frequency_New__c
+    )
+)</errorConditionFormula>
+    <errorMessage>Billing frequency cannot be changed with opportunity set to &#39;Closed Won&#39;.</errorMessage>
+</ValidationRule>

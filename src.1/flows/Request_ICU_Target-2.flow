@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Finds the cloest renewal date and assigns a new Target to it.</description>
+    <interviewLabel>Request ICU Target {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Request ICU Target</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Target</name>
+        <label>Create Target</label>
+        <locationX>299</locationX>
+        <locationY>429</locationY>
+        <assignRecordIdToReference>varTargetID</assignRecordIdToReference>
+        <connector>
+            <targetReference>Update_Save_Oppty</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Page</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Account__c</field>
+            <value>
+                <elementReference>varAccountID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>ICU Target for {!varBusinessName}</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>varUserID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>varICURecordID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Save_Opportunity__c</field>
+            <value>
+                <elementReference>varOpptyID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Target_Status__c</field>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </inputAssignments>
+        <object>ICU_Target__c</object>
+    </recordCreates>
+    <recordLookups>
+        <name>Business_Name_from_AccoutID</name>
+        <label>Business Name from AccoutID</label>
+        <locationX>301</locationX>
+        <locationY>227</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Target_Record_ID</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Page</targetReference>
+        </faultConnector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varAccountID</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputAssignments>
+            <assignToReference>varBusinessName</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <name>Lockup_Retention_Record_Type_ID</name>
+        <label>Lockup Retention Record Type ID</label>
+        <locationX>302</locationX>
+        <locationY>27</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Lookup_Save_Opportunity</targetReference>
+        </connector>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Retention</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Opportunity</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>varRecordTypeID</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <name>Lookup_Save_Opportunity</name>
+        <label>Lookup Save Opportunity</label>
+        <locationX>298</locationX>
+        <locationY>127</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Business_Name_from_AccoutID</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Page</targetReference>
+        </faultConnector>
+        <filters>
+            <field>Assist_Requested__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsClosed</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varRecordTypeID</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Target_Flow_Creation__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <outputAssignments>
+            <assignToReference>varAccountID</assignToReference>
+            <field>AccountId</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>varOpptyID</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <sortField>Projected_Contract_Expiration_Renewal_Mo__c</sortField>
+        <sortOrder>Asc</sortOrder>
+    </recordLookups>
+    <recordLookups>
+        <name>Target_Record_ID</name>
+        <label>Target Record ID</label>
+        <locationX>300</locationX>
+        <locationY>327</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Target</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Page</targetReference>
+        </faultConnector>
+        <filters>
+            <field>Name</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>ICU</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ICU_Target__c</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>varICURecordID</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Save_Oppty</name>
+        <label>Update Save Oppty</label>
+        <locationX>301</locationX>
+        <locationY>525</locationY>
+        <connector>
+            <targetReference>Success</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Page</targetReference>
+        </faultConnector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varOpptyID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Assist_Requested__c</field>
+            <value>
+                <stringValue>Target Created</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <screens>
+        <name>Error_Page</name>
+        <label>Error Page</label>
+        <locationX>584</locationX>
+        <locationY>333</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>EncounteredError</name>
+            <fieldText>You&#39;ve Encountered an error:
+
+Opportunity ID: {!varOpptyID}
+Account ID: {!varAccountID}
+Business Name: {!varBusinessName}
+User ID: {!varUserID}
+Target ID: {!varTargetID}
+Record Type: {!varRecordTypeID}
+
+Error Message: {!$Flow.FaultMessage}</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <isVisible>true</isVisible>
+        </fields>
+    </screens>
+    <screens>
+        <name>Success</name>
+        <label>Success</label>
+        <locationX>300</locationX>
+        <locationY>623</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>NewICUSuccess</name>
+            <fieldText>Success!
+
+You have created a new Target.  Click Finish to be redirected to your Target.
+
+Target ID: {!varTargetID}
+Subject: ICU Target for {!varBusinessName}</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <isVisible>true</isVisible>
+        </fields>
+    </screens>
+    <screens>
+        <name>Test_Screen</name>
+        <label>Test Screen</label>
+        <locationX>117</locationX>
+        <locationY>268</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Test</name>
+            <fieldText>Record Type ID: {!varRecordTypeID}
+Opportunity ID: {!varOpptyID}
+Account ID: {!varAccountID}
+Business Name: {!varBusinessName}
+Target Record Type ID: {!varICURecordID}</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <isVisible>true</isVisible>
+        </fields>
+    </screens>
+    <startElementReference>Lockup_Retention_Record_Type_ID</startElementReference>
+    <variables>
+        <name>varAccountID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varBusinessName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varICURecordID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varOpptyID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varRecordTypeID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>123</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varTargetID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varUserID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

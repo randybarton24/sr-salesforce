@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blitz_list_AE_REngem</fullName>
+    <booleanFilter>1 AND (2 OR 3) AND 4 And (5 OR 6) AND 7 AND 8</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>Last_ROE_Task_Date__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>List Upload</value>
+    </filters>
+    <filters>
+        <field>SR_Date_Created__c</field>
+        <operation>equals</operation>
+        <value>1/27/2015 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>SR_Date_Created__c</field>
+        <operation>equals</operation>
+        <value>11/18/2013 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Contacted,No Response,Dead</value>
+    </filters>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_MONTHS:3</value>
+    </filters>
+    <filters>
+        <field>Lead_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Enterprise,Group Practice</value>
+    </filters>
+    <filters>
+        <field>tz__Timezone__c</field>
+        <operation>notEqual</operation>
+        <value>PST,PDT</value>
+    </filters>
+    <label>Blitz list AM - AE REngemann</label>
+    <sharedTo/>
+</ListView>

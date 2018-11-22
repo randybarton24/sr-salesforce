@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Updates the Billing Email Address on the Account when a contact is created if there is no billing email</description>
+    <label>Account Billing Email Update</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Billing_Email</name>
+        <label>Update Billing Email</label>
+        <locationX>617</locationX>
+        <locationY>182</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varAccountID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>RecurSoft__Billing_Email__c</field>
+            <value>
+                <elementReference>varEmailAddress</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <startElementReference>Update_Billing_Email</startElementReference>
+    <variables>
+        <name>varAccountID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varEmailAddress</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

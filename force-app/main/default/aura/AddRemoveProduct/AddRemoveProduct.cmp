@@ -1,0 +1,39 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="AddendumLineItemsApxc" >
+	
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="maxRowSelection" type="Integer"/>
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <div>
+        <thead class="slds-align_absolute-center">
+            <tr class="slds-line-height_reset" colspan="1">
+                <th class="slds-text-title_caps" scope="col" >
+                    <div class="slds-truncate">Add/Remove Products</div>
+                </th>              
+            </tr>
+        </thead>
+        <br></br>        
+        <div class="slds-align_absolute-center">
+            <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.handleClick }" />
+            <lightning:button variant="brand" label="Cancel" title="Cancel" onclick="{! c.closeModel }" />       
+        </div>
+        <br></br>                
+        </div>
+    <div>
+    	<lightning:datatable
+            columns="{! v.columns }"
+            data="{! v.data }"
+            keyField="id"
+            maxRowSelection="{! v.maxRowSelection }"
+            onrowselection="{! c.updateSelectedText }"/>
+    </div>  
+    <br></br>
+    <div>
+    	<lightning:datatable
+            columns="{! v.columns }"
+            data="{! v.data }"
+            keyField="id"
+            maxRowSelection="{! v.maxRowSelection }"
+            onrowselection="{! c.updateSelectedText }"/>
+    </div>
+</aura:component>

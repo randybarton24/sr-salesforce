@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__SemiAnnualRevenueTransaction</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c, false, 
+    AND(
+        ISPICKVAL(RecurSoft__Billing_Frequency__c, &#39;Semi-annual&#39;),
+        OR(
+            ISPICKVAL(RecurSoft__Rev_Installments_Period__c, &#39;Milestones&#39;),
+            ISPICKVAL(RecurSoft__Rev_Installments_Period__c, &#39;One-Time&#39;),
+            ISPICKVAL(RecurSoft__Rev_Installments_Period__c, &#39;Monthly&#39;),
+            ISPICKVAL(RecurSoft__Rev_Installments_Period__c, &#39;Quarterly&#39;)
+        ),
+        ISPICKVAL(RecurSoft__Revenue_Recognition_Method__c, &#39;Revenue Transaction&#39;)
+    )
+)</errorConditionFormula>
+    <errorMessage>Revenue transaction recognition method with  &#39;Quarterly&#39; billing frequency can be selected only with &#39;Semi-annual&#39;  or &#39;Yearly&#39; installments periods.</errorMessage>
+</ValidationRule>

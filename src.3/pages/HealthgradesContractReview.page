@@ -1,0 +1,518 @@
+<apex:page controller="HealthgradesContractController" showHeader="false" standardStylesheets="true" >
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="robots" content="noindex" />
+            <meta name="description" content="" />
+            <meta name="keywords" content="Solutionreach" />
+            <title>Healthgrades Premium Profile Agreement</title>
+            <apex:stylesheet value="{!$Resource.Contract}"/>
+        </head>
+        <body style="background-image: {! URLFOR($Resource.images, '/images/new_body_bg.png')}" id="bodyform" >
+            <div id="container">
+                <div id="formnav">
+                    <div id="logo"><img src="{! URLFOR($Resource.images, '/images/logo_new.png')}" border="0" alt="Solutionreach" /></div>
+                    <div id="formphone">Call Toll Free: 1 (866) 605-6867</div>
+                </div>
+            </div>
+            <apex:outputPanel id="fullpage">
+                <apex:outputpanel id="Form" rendered="{! renderForm}" >
+                    <div id="sidenav">
+                        <p class="textreg" style="line-height:11px; font-size:11px; margin-right:14px;"><apex:outputtext Value="{! $Label.ContractPageLeftSideMessage}"/></p>
+                        <p class="textreg" style="line-height:11px; font-size:11px; color:#385375;"><b><apex:outputtext Value="{! $Label.ContractOfficeManager}"/>, <br />Office Manager</b></p>
+                    </div>
+                    <div id="bodeeNOads">
+                        <h1 class="bigblue">Addendum to Services Agreement</h1>
+                        <p class="textreg">Enter your information in the form below and we will contact you shortly.</p>
+                        <p class="textreg">Your Sales Representative's name is <strong><apex:outputtext value="{!relatedOpportunity.Owner.Name}"/></strong>.</p>
+                        <div style="float:left;"><p class="textreg"><font style="color:#ff0101;">*</font> Required field</p><br /></div>
+                        <div style="clear:both;"><h2 class="medblue">Healthgrades Provider Information</h2></div>
+                        <br/>
+                        <apex:form id="contractForm" >
+                            <table border="0" cellpadding="0" cellspacing="2px" class="textreg">
+                                <tbody>
+                                    <tr>
+                                        <td width="200">First Name <font style="color:#ff0101;">*</font></td>
+                                        <td>
+                                            <apex:selectList id="contactSalutation" size="1" value="{!contactSalutation}" >
+                                                <apex:selectOptions value="{!PreFix}"/>
+                                            </apex:selectList>
+                                            <apex:inputText id="contactFirstName" maxlength="40" size="27" value="{!contactFirstName}" >
+                                            </apex:inputText>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last Name <font style="color:#ff0101;">*</font></td>
+                                        <td>
+                                            <apex:inputText id="contactLastName" maxlength="80" size="40" value="{!contactLastName}" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Direct Phone <font style="color:#ff0101;">*</font></td>
+                                        <td>
+                                            <apex:inputText id="contactPhone" maxlength="32" size="40" value="{!contactPhone}" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email <font style="color:#ff0101;">*</font></td>
+                                        <td>
+                                            <apex:inputText id="contactEmail" maxlength="80" size="40" value="{!contactEmail}" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>NPI </td>
+                                        <td>
+                                            <apex:inputText id="providerNPI" maxlength="80" size="40" value="{!prov.NPI__c}" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Healthgrades URL <font style="color:#ff0101;">*</font></td>
+                                        <td>
+                                            <apex:outputText id="providerURL" value="{!prov.Healthgrades_ID__c}" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <br/>
+                            <div style="clear:both;"><h2 class="medblue">Billing Information</h2></div>
+                            <p class="textreg">
+                                <strong>
+                                    * This is a&nbsp;
+                                    <apex:outputText value="{!contractTerm}"/>
+                                    month commitment billed to the following Solutionreach Subscriber Account.<br/>
+                                    If this is not the correct Account for billing, please notify your Sales Representative before submitting.
+                                </strong>
+                            </p>
+                            <table border="0" cellpadding="0" cellspacing="2px" class="textreg">
+                                <tbody>
+                                    <tr>
+                                        <td width="200">Subscriber ID: </td>
+                                        <td>
+                                            <apex:outputText id="accountSubscriberId" value="{!relatedAccount.Subscriber_ID__c}" />
+                                        </td>
+                                    </tr>
+                                    <tr/>
+                                    <tr>
+                                        <td width="200">Business Name: </td>
+                                        <td>
+                                            <apex:outputField id="accountName" value="{!relatedAccount.Name}" />
+                                        </td>
+                                    </tr>
+                                    <tr/>
+                                    <tr>
+                                        <td width="200">Business Address: </td>
+                                        <td>
+                                            <apex:outputText id="accountStreet" value="{!relatedAccount.BillingStreet}" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="200"/>
+                                        <td>
+                                            <apex:outputText id="accountCityState" value="{!relatedAccount.BillingCity}, {!relatedAccount.BillingState}  {!relatedAccount.BillingPostalCode}" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="200"/>
+                                        <td>
+                                            <apex:outputText id="accountCountry" value="{!relatedAccount.BillingCountry}" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <br/>
+                            <div style="clear:both;"><h2 class="medblue">Terms and Conditions</h2></div>
+                            <p class="textreg" style="line-height:11px; font-size:10px;">
+                                This Addendum to Services Agreement (this “Addendum”) is effective as of this day, 
+                                <apex:outputText value=" {0,date}" >
+                                    <apex:param value="{!TODAY()}"/>
+                                </apex:outputText> 
+                                (the “Addendum Effective Date”) and is an addendum to that certain Services Agreement dated as of
+                                <apex:outputText value=" {0,date}" >
+                                    <apex:param value="{! relatedAccount.Probable_Most_Recent_K_Date__c}" />
+                                </apex:outputText> 
+                                (the "Agreement") between&nbsp;
+                                <apex:outputText value="{! relatedAccount.name}" />
+                                ("Client") and Solutionreach, Inc., d.b.a. Solutionreach or Smile Reminder ("Company").
+                            </p>
+                            <p class="textreg" style="line-height:12px; font-size:11px;">
+                            <strong>The parties agree as follows: </strong>
+                            </p>
+                            <ol>
+                                <li class="textreg" style="line-height:11px; font-size:10px; padding-bottom: 5px;">
+                                The Company agrees to assist the individual medical practitioners in Client’s practice listed above
+                                (collectively, “Practitioners”) with procuring Healthgrades® Premium Profiles offered by Healthgrades 
+                                Operating Company, Inc. (“Healthgrades”) via the www.healthgrades.com website (“Premium Profile Services”), 
+                                pursuant to the terms specified herein.
+                                </li>
+                                <li class="textreg" style="line-height:11px; font-size:10px; padding-bottom: 5px;">
+                                Notwithstanding anything to the contrary in Company’s privacy policy or the Agreement, Client, on behalf 
+                                of itself and the Practitioners, grants to Company and hereby authorizes Company to grant to Healthgrades, 
+                                the right to use Practitioners’ name(s), photograph(s), medical license information, medical practice information, 
+                                Client’s name and logos, and other information requested by Company or Healthgrades in connection with the 
+                                Premium Profile Services, on a worldwide, royalty-free, perpetual, irrevocable basis.  As between Client and 
+                                Practitioners on the one hand, and Company on the other hand, the foregoing information, content, and materials 
+                                shall be considered “User Content” under the Agreement.  As between Practitioners on the one hand, and Healthgrades 
+                                on the other hand, the foregoing information, content, and materials shall be considered “Content” under the 
+                                Physician Agreement (defined below).
+                                </li>
+                                <li class="textreg" style="line-height:11px; font-size:10px; padding-bottom: 5px;">
+                                Client agrees to the following payment terms in connection with the Premium Profile Services:
+                                <br/>
+                                <br/>
+                                    <h2 class="medblue" style="line-height:12px; font-size:11px; padding-bottom: 5px;">
+                                        <apex:outputText value="{!contractTerm}" />
+                                        MONTH LICENSE
+                                        <apex:outputText value="({!contractFreeMonths} Months Free)" rendered="{!relatedOpportunity.HGFreeMonths__c != null && relatedOpportunity.HGFreeMonths__c > 0}"/>
+                                    </h2>
+                                    <table style="border:1px solid #888888;" cellpadding="3px" cellspacing="0" id='theProducts'>
+                                        <tbody>
+                                            <apex:repeat value="{!relatedOppLis}" var="OppLi" id="repeatOppLi">
+                                                <tr style="border:1px solid #888888;">
+                                                    <td style="border:1px solid #888888;">
+                                                        <font class="textreg" style="line-height:12px; font-size:11px; padding-bottom: 5px;">
+                                                            <apex:outputtext value="{!OppLi.PricebookEntry.Product2.Name}" />
+                                                        </font>
+                                                    </td>
+                                                    <td style="border:1px solid #888888;">
+                                                        <font class="textreg" style="line-height:12px; font-size:11px; padding-bottom: 5px;">
+                                                            <strong>
+                                                            $
+                                                                <apex:outputText value="{0, number,###,###,###,###,##0.00}" >
+                                                                    <apex:param value="{!OppLi.TotalPrice}"/>
+                                                                </apex:outputText>
+                                                            <apex:outputText value=" per month" rendered="{!(OppLi.PricebookEntry.Product2.RecurSoft__Billing_Frequency__c == 'Monthly')}"  />
+
+                                                            </strong>
+                                                        </font>
+                                                    </td>
+                                                    <td style="border:1px solid #888888;">
+                                                        <font class="textreg" style="line-height:12px; font-size:11px; padding-bottom: 5px;">
+                                                            <strong>
+                                                                <apex:outputText value="{!OppLi.Trial__c} Day Satisfaction Period" rendered="{!OppLi.Trial__c != ''}"/>
+                                                            </strong>
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                            </apex:repeat>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="textreg" style="line-height:11px; font-size:10px; padding-bottom: 5px;">
+                                The Premium Profile Services are governed by Healthgrades’ Physician User Agreement located at 
+                                http://www.healthgrades.com/content/user-agreement (“Physician Agreement”) and other Healthgrades agreements 
+                                incorporated therein, and Company’s ability to assist Client and the Practitioners in obtaining the Premium 
+                                Profile Services is conditioned upon each Practitioner’s acceptance of the terms of the Physician Agreement.  
+                                Client, on behalf of itself and its Practitioners, hereby releases Company from any and all liability related 
+                                to the User Content (as defined in the Agreement), Content (as defined in the Physician Agreement), and Premium 
+                                Profile Services.  Client shall indemnify and defend Company from and against all damages resulting from any 
+                                third-party claims brought by Practitioners in connection with the User Content, Content, and Premium Profile Services.
+                                </li>
+                                <li class="textreg" style="line-height:11px; font-size:10px; padding-bottom: 5px;">
+                                This Addendum shall automatically renew on the Renewal Date, specified in the Agreement, for an additional one year term and annually thereafter on each anniversary of the Renewal Date, unless the Company is notified in writing at least 15 days prior to the next Renewal Date.
+                                </li>
+                            </ol>
+                            <p class="textreg">
+                                By entering my first and last name below, I am constituting a legally
+                                binding electronic signature. 
+                            </p>
+                            <p class="textreg">
+                                IN WITNESS WHEREOF, the parties,
+                                by their duly authorized representatives, have executed this electronic
+                                Addendum as of the Addendum Effective Date 
+                            </p>
+                            <br/>
+                            <font style="color:#ff0101;">* &nbsp;</font>
+                            <apex:inputtext id="contract_SignName" size="40" value="{! signName}" />
+                            <p class="textreg">
+                                <apex:inputCheckbox id="requestedEmail" value="{! requestedEmail}" />
+                                <font style="color:#ff0101;"></font>
+                                <label>Send a copy of this addendum to the Provider's email.</label>
+                            </p>
+                            <p class="textreg">
+                                <apex:inputCheckbox id="acceptRenewal" value="{! acceptedRenewal}" />
+                                <font style="color:#ff0101;">*</font>
+                                <label>Click here to indicate that you understand and acknowledge the automatic renewal terms of this agreement.</label>
+                            </p>
+                            <p class="textreg">
+                                <apex:inputCheckbox id="acceptTerms" value="{! acceptedTerms}" />
+                                <font style="color:#ff0101;">*</font>
+                                <label>I agree to the Terms Conditions and authorize Solutionreach to charge my credit card.</label>
+                            </p>
+                            <br/>
+                            <div>
+                                <apex:pageMessages id="msgs" />
+                                <apex:outputPanel id="buttonPanel">    
+                                    <apex:actionStatus id="status">
+                                        <apex:facet name="start">
+                                            <apex:outputPanel >
+                                                <img  src="/img/loading.gif" title="Please Wait...Processing Information" />
+                                                Processing...
+                                            </apex:outputPanel>
+                                        </apex:facet>
+                                        <apex:facet name="stop">
+                                            <apex:outputPanel >
+                                                <apex:commandButton action="{!submitform}" value="Submit" id="submitButton" status="status" reRender="fullpage"/>
+                                            </apex:outputPanel>
+                                        </apex:facet>
+                                    </apex:actionStatus>
+                                </apex:outputPanel>
+                            </div>
+                            <br/>
+                            <br/>
+                        </apex:form>
+                    </div>
+                </apex:outputpanel>
+                <apex:outputPanel id="Error" rendered="{! renderError}" >
+                    <div id="bodeeNOads" style="border:0; width:960px;" >
+                        <h1 class="bigblue">
+                            <apex:outputtext Value="{! errorMessage}"/>
+                        </h1>
+                        <p class="textreg">
+                            <apex:outputtext Value="{! $Label.ContractSalesRepInfo}"/>
+                        </p>
+                    </div>
+                </apex:outputPanel>
+                <apex:outputPanel id="Confirmation" rendered="{! renderConfirmation}" >
+                    <div id="bodeeNOads" style="border:0; width:960px;" >
+                        <h1>
+                            <apex:outputtext value="Thank you for signing up. An email confirmation will follow shortly!"/>
+                        </h1>
+                        <p>
+                            <apex:outputtext value="{! $Label.ContractSalesRepInfo}"/>
+                        </p>
+                    </div>
+                    <div id="bodeeNOads" style="border:0; width:960px;">
+                        <h1 class="bigblue">
+                            Receipt
+                        </h1>
+                        <p class="textreg">
+                            This is a printable version of your Healthgrades™ Addendum to Services Agreement. It is recommended that you print and retain a copy of this page for your own records.
+                        </p>
+                        <div class="line"/>
+                        <div>
+                            <div style="clear:both;">
+                                <h2 class="medblue">
+                                    Provider Information
+                                </h2>
+                            </div>
+                        </div>
+                        <table align="center" style="width:100%;" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td style="vertical-align:top;">
+                                        <table align="center" style="width:420px;" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="textreg">
+                                                        <strong>First Name: </strong>
+                                                    </td>
+                                                    <td class="textreg">
+                                                        <apex:outputText id="contactFirstNameConfirmation"  value="{!relatedContact.FirstName}" />
+                                                    </td>
+                                                </tr>
+                                                <tr bgcolor="#eeeeee">
+                                                    <td class="textreg">
+                                                        <strong>Last Name: </strong>
+                                                    </td>
+                                                    <td class="textreg">
+                                                        <apex:outputText id="contactLastNameConfirmation"  value="{!relatedContact.LastName}" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textreg">
+                                                        <strong>Phone: </strong>
+                                                    </td>
+                                                    <td class="textreg">
+                                                        <apex:outputText id="contactPhoneConfirmation"  value="{!relatedContact.Phone}" />
+                                                    </td>
+                                                </tr>
+                                                <tr bgcolor="#eeeeee">
+                                                    <td class="textreg">
+                                                        <strong>Email: </strong>
+                                                    </td>
+                                                    <td class="textreg">
+                                                        <apex:outputText id="contactEmailConfirmation"  value="{!relatedContact.Email}" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textreg">
+                                                        <strong>NPI: </strong>
+                                                    </td>
+                                                    <td class="textreg">
+                                                        <apex:outputText id="providerNPIConfirmation"  value="{!prov.NPI__c}" />
+                                                    </td>
+                                                </tr>
+                                                <tr bgcolor="#eeeeee">
+                                                    <td class="textreg">
+                                                        <strong>Healthgrades URL: </strong>
+                                                    </td>
+                                                    <td class="textreg">
+                                                        <apex:outputText id="providerHgUrlConfirmation"  value="{!prov.Healthgrades_ID__c}" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textreg">
+                                                        <strong>Business Name: </strong>
+                                                    </td>
+                                                    <td class="textreg">
+                                                        <apex:outputText id="accountNameConfirmation"  value="{!relatedAccount.Name}" />
+                                                    </td>
+                                                </tr>
+                                                <tr bgcolor="#eeeeee">
+                                                    <td class="textreg">
+                                                        <strong>Business Address: </strong>
+                                                    </td>
+                                                    <td class="textreg">
+                                                        <apex:outputText id="accountStreetConfirmation"  value="{!relatedAccount.BillingStreet}" />
+                                                    </td>
+                                                </tr>
+                                                <tr bgcolor="#eeeeee">
+                                                    <td/>
+                                                    <td class="textreg">
+                                                        <apex:outputText id="accountCityStateConfirmation"  value="{!relatedAccount.BillingCity}, {!relatedAccount.BillingState}  {!relatedAccount.BillingPostalCode}" />
+                                                    </td>
+                                                </tr>
+                                                <tr bgcolor="#eeeeee">
+                                                    <td/>
+                                                    <td class="textreg">
+                                                        <apex:outputText id="accountCountryConfirmation"  value="{!relatedAccount.BillingCountry}" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="line"/>
+                        <div>
+                            <div style="clear:both;">
+                                <h2 class="medblue">
+                                    Terms and Conditions
+                                </h2>
+                            </div>
+                            <p class="textreg" style="line-height:11px; font-size:10px;">
+                                This Addendum to Services Agreement (this “Addendum”) is effective as of this day, 
+                                <apex:outputText value=" {0,date}" >
+                                    <apex:param value="{!TODAY()}"/>
+                                </apex:outputText> 
+                                (the “Addendum Effective Date”) and is an addendum to that certain Services Agreement dated as of
+                                <apex:outputText value=" {0,date}" >
+                                    <apex:param value="{! relatedAccount.Probable_Most_Recent_K_Date__c}"/>
+                                </apex:outputText>
+                                (the "Agreement") between&nbsp;
+                                <apex:outputText value="{! relatedAccount.name}" />
+                                ("Client") and Solutionreach, Inc., d.b.a. Solutionreach or Smile Reminder ("Company").
+                            </p>
+                            <p class="textreg" style="line-height:12px; font-size:11px;">
+                            <strong>The parties agree as follows: </strong>
+                            </p>
+                            <ol>
+                                <li class="textreg" style="line-height:11px; font-size:10px; padding-bottom: 5px;">
+                                The Company agrees to assist the individual medical practitioners in Client’s practice listed above
+                                (collectively, “Practitioners”) with procuring Healthgrades® Premium Profiles offered by Healthgrades 
+                                Operating Company, Inc. (“Healthgrades”) via the www.healthgrades.com website (“Premium Profile Services”), 
+                                pursuant to the terms specified herein.
+                                </li>
+                                <li class="textreg" style="line-height:11px; font-size:10px; padding-bottom: 5px;">
+                                Notwithstanding anything to the contrary in Company’s privacy policy or the Agreement, Client, on behalf 
+                                of itself and the Practitioners, grants to Company and hereby authorizes Company to grant to Healthgrades, 
+                                the right to use Practitioners’ name(s), photograph(s), medical license information, medical practice information, 
+                                Client’s name and logos, and other information requested by Company or Healthgrades in connection with the 
+                                Premium Profile Services, on a worldwide, royalty-free, perpetual, irrevocable basis.  As between Client and 
+                                Practitioners on the one hand, and Company on the other hand, the foregoing information, content, and materials 
+                                shall be considered “User Content” under the Agreement.  As between Practitioners on the one hand, and Healthgrades 
+                                on the other hand, the foregoing information, content, and materials shall be considered “Content” under the 
+                                Physician Agreement (defined below).
+                                </li>
+                                <li class="textreg" style="line-height:11px; font-size:10px; padding-bottom: 5px;">
+                                Client agrees to the following payment terms in connection with the Premium Profile Services:
+                                <br/>
+                                <br/>
+                                    <h2 class="medblue" style="line-height:12px; font-size:11px; padding-bottom: 5px;">
+                                        <apex:outputText value="{!contractTerm}" />
+                                        MONTH LICENSE
+                                        <apex:outputText value="({!contractFreeMonths} Months Free)" rendered="{!relatedOpportunity.HGFreeMonths__c != null && relatedOpportunity.HGFreeMonths__c > 0}"/>
+                                    </h2>
+                                    <table style="border:1px solid #888888;" cellpadding="3px" cellspacing="0" id='theProducts'>
+                                        <tbody>
+                                            <apex:repeat value="{!relatedOppLis}" var="OppLi" id="repeatOppLi">
+                                                <tr style="border:1px solid #888888;">
+                                                    <td style="border:1px solid #888888;">
+                                                        <font class="textreg" style="line-height:12px; font-size:11px; padding-bottom: 5px;">
+                                                            <apex:outputtext value="{!OppLi.PricebookEntry.Product2.Name}" />
+                                                        </font>
+                                                    </td>
+                                                    <td style="border:1px solid #888888;">
+                                                        <font class="textreg" style="line-height:12px; font-size:11px; padding-bottom: 5px;">
+                                                            <strong>
+                                                            $
+                                                                <apex:outputText value="{0, number,###,###,###,###,##0.00}" >
+                                                                    <apex:param value="{!OppLi.TotalPrice}"/>
+                                                                </apex:outputText>
+                                                            <apex:outputText value=" per month" rendered="{!(OppLi.PricebookEntry.Product2.RecurSoft__Billing_Frequency__c == 'Monthly')}"  />
+
+
+                                                            </strong>
+                                                        </font>
+                                                    </td>
+                                                    <td style="border:1px solid #888888;">
+                                                        <font class="textreg" style="line-height:12px; font-size:11px; padding-bottom: 5px;">
+                                                            <strong>
+                                                                <apex:outputText value="{!OppLi.Trial__c} Day Satisfaction Period" rendered="{!OppLi.Trial__c != ''}"/>
+                                                            </strong>
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                            </apex:repeat>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="textreg" style="line-height:11px; font-size:10px; padding-bottom: 5px;">
+                                The Premium Profile Services are governed by Healthgrades’ Physician User Agreement located at 
+                                http://www.healthgrades.com/content/user-agreement (“Physician Agreement”) and other Healthgrades agreements 
+                                incorporated therein, and Company’s ability to assist Client and the Practitioners in obtaining the Premium 
+                                Profile Services is conditioned upon each Practitioner’s acceptance of the terms of the Physician Agreement.  
+                                Client, on behalf of itself and its Practitioners, hereby releases Company from any and all liability related 
+                                to the User Content (as defined in the Agreement), Content (as defined in the Physician Agreement), and Premium 
+                                Profile Services.  Client shall indemnify and defend Company from and against all damages resulting from any 
+                                third-party claims brought by Practitioners in connection with the User Content, Content, and Premium Profile Services.
+                                </li>
+                                <li class="textreg" style="line-height:11px; font-size:10px; padding-bottom: 5px;">
+                                This Addendum shall automatically renew on the Renewal Date, specified in the Agreement, for an additional one year term and annually thereafter on each anniversary of the Renewal Date, unless the Company is notified in writing at least 15 days prior to the next Renewal Date.
+                                </li>
+                            </ol>
+                            <p class="textreg">
+                                IN WITNESS WHEREOF, the parties,
+                                by their duly authorized representatives, have executed this electronic
+                                Addendum as of the Addendum Effective Date 
+                            </p>
+                            <div style="width: 412px;text-align: left;margin-left:100px" >
+                        <div style="font-family:Arial,Helvetica,sans-serif;font-size:9.1px;color:rgb(0,0,0);font-style:normal;text-decoration: none" >
+                            CLIENT (or authorized representative):
+                        </div>
+                        <br/>
+                        <div style="font-family:Arial,Helvetica,sans-serif;font-size:9.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none;border-bottom: 2px solid">
+                            /s/
+                            <apex:outputText value="{!signName}" />
+                        </div>
+                        <div style="font-family:Arial,Helvetica,sans-serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none" >
+                            IP Address: 
+                            <apex:outputText value=" {!contractIP}" />
+                            Timestamp: 
+                            <apex:outputText value=" {!contractDateTime}" />
+                        </div>
+                        <div style="font-family:Arial,Helvetica,sans-serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none" >
+                            Authorized Representative: 
+                            <apex:outputText value=" {!relatedOpportunity.Owner.Name}" />
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </body>
+    </html>
+</apex:page>

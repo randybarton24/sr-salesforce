@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Healthgrades_URL_REGEX</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(REGEX( Healthgrades_ID__c, &quot;(.*)(healthgrades\\.com\\/)(((dentist|physician)\\/([a-z]+\\-){3,}[a-z0-9]{5,10})|(provider\\/([a-z]*\\-){2,}[a-z0-9]{5,10}))&quot;))</errorConditionFormula>
+    <errorMessage>The URL is not formatted correctly. It should be in the following format:  https://www.healthgrades.com/dentist/dr-first-last-abc12  OR: https://www.healthgrades.com/physician/dr-first-last-123ab  OR: https://www.healthgrades.com/provider/first-last-12abc</errorMessage>
+</ValidationRule>

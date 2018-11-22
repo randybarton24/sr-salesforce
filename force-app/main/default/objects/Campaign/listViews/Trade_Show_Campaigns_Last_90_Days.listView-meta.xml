@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trade_Show_Campaigns_Last_90_Days</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.ID</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>Total_Touch_Points__c</columns>
+    <columns>CAMPAIGN.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.NAME</field>
+        <operation>contains</operation>
+        <value>trade show</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_90_DAYS</value>
+    </filters>
+    <label>Trade Show Campaigns - Last 90 Days</label>
+    <sharedTo>
+        <role>ADR_Rep_5</role>
+        <role>Outside_Sales_Manager</role>
+        <role>Outside_Sales_Rep</role>
+    </sharedTo>
+</ListView>

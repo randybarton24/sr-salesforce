@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Free_Months_Floor</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISBLANK( PricebookEntry.Free_Months_Floor__c )) &amp;&amp;
+Number_of_Free_Months__c &gt; PricebookEntry.Free_Months_Floor__c &amp;&amp;
+$User.Approval_Exempt__c = false &amp;&amp;
+ $Profile.Name != &quot;Finance&quot;</errorConditionFormula>
+    <errorMessage>The number of free months is greater than the maximum allowable.</errorMessage>
+</ValidationRule>

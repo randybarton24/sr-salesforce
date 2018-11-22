@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Scheduled_Date_Text__c</fullName>
+    <description>HubSpot is unable to sync a Datetime type field.  A UTC datetime string will be synced to this field and then converted to datetime for Demo_Scheduled_Date__c.</description>
+    <externalId>false</externalId>
+    <label>Demo Scheduled Date Text</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

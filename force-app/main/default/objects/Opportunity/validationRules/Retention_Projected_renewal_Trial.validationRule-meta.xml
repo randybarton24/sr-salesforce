@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retention_Projected_renewal_Trial</fullName>
+    <active>false</active>
+    <description>Make sure the Projected Contract Expiration/Renewal date is not further than 4 months away from the Contract signed date for Trial Cancel</description>
+    <errorConditionFormula>AND(Projected_Contract_Expiration_Renewal_Mo__c &gt;  Account.RecurSoft__Customer_Active_Date__c +130, ISPICKVAL( Cancel_Request_Type__c , &quot;Trial&quot;))</errorConditionFormula>
+    <errorDisplayField>Projected_Contract_Expiration_Renewal_Mo__c</errorDisplayField>
+    <errorMessage>Please select a Renewal date that is less than 4 months from the contract signed date</errorMessage>
+</ValidationRule>

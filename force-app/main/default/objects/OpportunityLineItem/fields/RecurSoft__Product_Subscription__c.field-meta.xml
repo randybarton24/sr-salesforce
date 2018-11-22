@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Product_Subscription__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains product subscription for current opportunity product.</inlineHelpText>
+    <label>Product Subscription</label>
+    <referenceTo>RecurSoft__Product_Subscription__c</referenceTo>
+    <relationshipLabel>Opportunity Product (Product Subscription)</relationshipLabel>
+    <relationshipName>RecurSoft_Opportunity_Product3</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X8_No_Sale</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>No Sale</value>
+    </filters>
+    <label>8.  No Sale</label>
+    <sharedTo>
+        <role>ADR_Manager_1</role>
+        <role>ADR_Rep_1</role>
+        <role>Inside_Sales_Coordinator</role>
+        <role>SAE_Manager_1</role>
+        <role>SAE_Manager_2</role>
+        <role>SAE_Manager_3</role>
+        <role>SAE_Rep_1</role>
+        <role>SAE_Rep_2</role>
+        <role>SAE_Rep_3</role>
+    </sharedTo>
+</ListView>

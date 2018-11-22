@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User__c</fullName>
+    <description>(Required) If you set up one or more additional users on the account, this value is the ID 
+of the user authorized to process transactions. If, however, you have not set up additional 
+users on the account, USER has the same value as VENDOR. 
+Limitations: Sixty-four alphanumeric, case-sensitive characters.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>(Required) If you set up one or more additional users on the account, this value is the ID 
+of the user authorized to process transactions. If, however, you have not set up additional 
+users on the account, USER has the same value as VENDOR.</inlineHelpText>
+    <label>User</label>
+    <length>64</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

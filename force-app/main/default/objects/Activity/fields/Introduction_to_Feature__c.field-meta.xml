@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Introduction_to_Feature__c</fullName>
+    <externalId>false</externalId>
+    <label>Introduction to Feature</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SR Smart Reviews</fullName>
+                <default>false</default>
+                <label>SR Smart Reviews</label>
+            </value>
+            <value>
+                <fullName>SR Conversations</fullName>
+                <default>false</default>
+                <label>SR Conversations</label>
+            </value>
+            <value>
+                <fullName>Limelight</fullName>
+                <default>false</default>
+                <label>Limelight</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

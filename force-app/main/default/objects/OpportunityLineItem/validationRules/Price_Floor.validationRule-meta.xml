@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Floor</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISBLANK( PricebookEntry.Price_Discount_Floor__c )) &amp;&amp;
+UnitPrice &lt; PricebookEntry.Price_Discount_Floor__c &amp;&amp;
+ $User.Approval_Exempt__c = false &amp;&amp;
+ $UserRole.Name != &quot;CSR Enterprise&quot; &amp;&amp;
+ $Profile.Name != &quot;Finance&quot;</errorConditionFormula>
+    <errorMessage>The price is below the minimum allowable price.</errorMessage>
+</ValidationRule>

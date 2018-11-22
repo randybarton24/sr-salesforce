@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scheduler_Customers_to_Reschedule</fullName>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>Activity_Type__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Activity_Results__c</columns>
+    <columns>tz__Timezone__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TASK.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Event.Support_Event</value>
+    </filters>
+    <filters>
+        <field>Activity_Results__c</field>
+        <operation>equals</operation>
+        <value>No-Show</value>
+    </filters>
+    <filters>
+        <field>Activity_Type__c</field>
+        <operation>equals</operation>
+        <value>Sync Install,Custom Settings</value>
+    </filters>
+    <label>Scheduler - Customers to Reschedule</label>
+    <sharedTo>
+        <role>CSR_Director</role>
+        <role>CSR_Implementation</role>
+        <role>CSR_Manager</role>
+        <role>CSR_Team_Lead</role>
+        <role>Sales_Operations</role>
+        <role>Sales_Operations_Manager</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pod_2_D_V_Round_Robin_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Pod 02 - D/V Round Robin</label>
+    <queue>Pod_02_D_V_Round_Robin</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

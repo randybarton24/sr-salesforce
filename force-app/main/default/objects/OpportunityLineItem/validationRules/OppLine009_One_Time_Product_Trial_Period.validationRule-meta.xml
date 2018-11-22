@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OppLine009_One_Time_Product_Trial_Period</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( Product2.RecurSoft__Billing_Frequency__c , &quot;One-Time&quot; ) &amp;&amp;
+NOT(ISPICKVAL( Trial__c , &quot;&quot; ))</errorConditionFormula>
+    <errorMessage>One-Time products cannot have a Trial Period.</errorMessage>
+</ValidationRule>

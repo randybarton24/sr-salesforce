@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hybrid_Rep_Manager__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box if this is the rep target for a Hybrid manager.</description>
+    <externalId>false</externalId>
+    <label>Hybrid Rep/Manager</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

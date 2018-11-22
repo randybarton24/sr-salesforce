@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dentistry_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Dentistry Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abscess</fullName>
+                <default>false</default>
+                <label>Abscess</label>
+            </value>
+            <value>
+                <fullName>Alveolar Bone Loss</fullName>
+                <default>false</default>
+                <label>Alveolar Bone Loss</label>
+            </value>
+            <value>
+                <fullName>Ankylosis</fullName>
+                <default>false</default>
+                <label>Ankylosis</label>
+            </value>
+            <value>
+                <fullName>Ankylosis of Tooth</fullName>
+                <default>false</default>
+                <label>Ankylosis of Tooth</label>
+            </value>
+            <value>
+                <fullName>Anodontia</fullName>
+                <default>false</default>
+                <label>Anodontia</label>
+            </value>
+            <value>
+                <fullName>Bad Taste in Mouth</fullName>
+                <default>false</default>
+                <label>Bad Taste in Mouth</label>
+            </value>
+            <value>
+                <fullName>Black Hairy Tongue</fullName>
+                <default>false</default>
+                <label>Black Hairy Tongue</label>
+            </value>
+            <value>
+                <fullName>Bonding Disorders</fullName>
+                <default>false</default>
+                <label>Bonding Disorders</label>
+            </value>
+            <value>
+                <fullName>Bone Loss</fullName>
+                <default>false</default>
+                <label>Bone Loss</label>
+            </value>
+            <value>
+                <fullName>Burning Mouth Syndrome</fullName>
+                <default>false</default>
+                <label>Burning Mouth Syndrome</label>
+            </value>
+            <value>
+                <fullName>Cancer of Floor of Mouth</fullName>
+                <default>false</default>
+                <label>Cancer of Floor of Mouth</label>
+            </value>
+            <value>
+                <fullName>Canine Teeth, Absence Upper Permanent</fullName>
+                <default>false</default>
+                <label>Canine Teeth, Absence Upper Permanent</label>
+            </value>
+            <value>
+                <fullName>Canker Sore</fullName>
+                <default>false</default>
+                <label>Canker Sore</label>
+            </value>
+            <value>
+                <fullName>Cavity</fullName>
+                <default>false</default>
+                <label>Cavity</label>
+            </value>
+            <value>
+                <fullName>Chipped Tooth</fullName>
+                <default>false</default>
+                <label>Chipped Tooth</label>
+            </value>
+            <value>
+                <fullName>Chronic Periodontitis</fullName>
+                <default>false</default>
+                <label>Chronic Periodontitis</label>
+            </value>
+            <value>
+                <fullName>Clefting - Ectropion - Conical Teeth</fullName>
+                <default>false</default>
+                <label>Clefting - Ectropion - Conical Teeth</label>
+            </value>
+            <value>
+                <fullName>Clicking of Temporomandibular Joint</fullName>
+                <default>false</default>
+                <label>Clicking of Temporomandibular Joint</label>
+            </value>
+            <value>
+                <fullName>Cold Sore</fullName>
+                <default>false</default>
+                <label>Cold Sore</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Conditions</fullName>
+                <default>false</default>
+                <label>Cosmetic Conditions</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Peridontal Problems</fullName>
+                <default>false</default>
+                <label>Cosmetic Peridontal Problems</label>
+            </value>
+            <value>
+                <fullName>Craniofacial Disorders</fullName>
+                <default>false</default>
+                <label>Craniofacial Disorders</label>
+            </value>
+            <value>
+                <fullName>Dental Abnormalities</fullName>
+                <default>false</default>
+                <label>Dental Abnormalities</label>
+            </value>
+            <value>
+                <fullName>Dental Disorders</fullName>
+                <default>false</default>
+                <label>Dental Disorders</label>
+            </value>
+            <value>
+                <fullName>Dental Injury</fullName>
+                <default>false</default>
+                <label>Dental Injury</label>
+            </value>
+            <value>
+                <fullName>Dental Tissue Neoplasm</fullName>
+                <default>false</default>
+                <label>Dental Tissue Neoplasm</label>
+            </value>
+            <value>
+                <fullName>Dental Trauma</fullName>
+                <default>false</default>
+                <label>Dental Trauma</label>
+            </value>
+            <value>
+                <fullName>Dentin Dysplasia, Coronal</fullName>
+                <default>false</default>
+                <label>Dentin Dysplasia, Coronal</label>
+            </value>
+            <value>
+                <fullName>Dentin Dysplasia, Radicular</fullName>
+                <default>false</default>
+                <label>Dentin Dysplasia, Radicular</label>
+            </value>
+            <value>
+                <fullName>Dentinogenesis Imperfecta</fullName>
+                <default>false</default>
+                <label>Dentinogenesis Imperfecta</label>
+            </value>
+            <value>
+                <fullName>Dry Mouth</fullName>
+                <default>false</default>
+                <label>Dry Mouth</label>
+            </value>
+            <value>
+                <fullName>Dry Tooth Socket</fullName>
+                <default>false</default>
+                <label>Dry Tooth Socket</label>
+            </value>
+            <value>
+                <fullName>Edentulism</fullName>
+                <default>false</default>
+                <label>Edentulism</label>
+            </value>
+            <value>
+                <fullName>Excessive Tooth Wear</fullName>
+                <default>false</default>
+                <label>Excessive Tooth Wear</label>
+            </value>
+            <value>
+                <fullName>Exostoses</fullName>
+                <default>false</default>
+                <label>Exostoses</label>
+            </value>
+            <value>
+                <fullName>Facial Pain</fullName>
+                <default>false</default>
+                <label>Facial Pain</label>
+            </value>
+            <value>
+                <fullName>Fibroma</fullName>
+                <default>false</default>
+                <label>Fibroma</label>
+            </value>
+            <value>
+                <fullName>Fluorosis</fullName>
+                <default>false</default>
+                <label>Fluorosis</label>
+            </value>
+            <value>
+                <fullName>Geographic Tongue</fullName>
+                <default>false</default>
+                <label>Geographic Tongue</label>
+            </value>
+            <value>
+                <fullName>Gingival Diseases</fullName>
+                <default>false</default>
+                <label>Gingival Diseases</label>
+            </value>
+            <value>
+                <fullName>Gingival Fibromatosis - Dntl Abnormaliti</fullName>
+                <default>false</default>
+                <label>Gingival Fibromatosis - Dntl Abnormaliti</label>
+            </value>
+            <value>
+                <fullName>Gingival Fibrosis</fullName>
+                <default>false</default>
+                <label>Gingival Fibrosis</label>
+            </value>
+            <value>
+                <fullName>Gingivitis</fullName>
+                <default>false</default>
+                <label>Gingivitis</label>
+            </value>
+            <value>
+                <fullName>Gingivostomatitis</fullName>
+                <default>false</default>
+                <label>Gingivostomatitis</label>
+            </value>
+            <value>
+                <fullName>Grinding of Teeth</fullName>
+                <default>false</default>
+                <label>Grinding of Teeth</label>
+            </value>
+            <value>
+                <fullName>Gum Disease</fullName>
+                <default>false</default>
+                <label>Gum Disease</label>
+            </value>
+            <value>
+                <fullName>Halitosis</fullName>
+                <default>false</default>
+                <label>Halitosis</label>
+            </value>
+            <value>
+                <fullName>Hypodontia</fullName>
+                <default>false</default>
+                <label>Hypodontia</label>
+            </value>
+            <value>
+                <fullName>Jaw Sprain</fullName>
+                <default>false</default>
+                <label>Jaw Sprain</label>
+            </value>
+            <value>
+                <fullName>Loose Teeth</fullName>
+                <default>false</default>
+                <label>Loose Teeth</label>
+            </value>
+            <value>
+                <fullName>Misaligned Teeth</fullName>
+                <default>false</default>
+                <label>Misaligned Teeth</label>
+            </value>
+            <value>
+                <fullName>Mouth Conditions</fullName>
+                <default>false</default>
+                <label>Mouth Conditions</label>
+            </value>
+            <value>
+                <fullName>Mouth Lesions</fullName>
+                <default>false</default>
+                <label>Mouth Lesions</label>
+            </value>
+            <value>
+                <fullName>Mouth Ulcer</fullName>
+                <default>false</default>
+                <label>Mouth Ulcer</label>
+            </value>
+            <value>
+                <fullName>Mucositis</fullName>
+                <default>false</default>
+                <label>Mucositis</label>
+            </value>
+            <value>
+                <fullName>Oral Infection</fullName>
+                <default>false</default>
+                <label>Oral Infection</label>
+            </value>
+            <value>
+                <fullName>Oral Lichenoid Lesions</fullName>
+                <default>false</default>
+                <label>Oral Lichenoid Lesions</label>
+            </value>
+            <value>
+                <fullName>Oral Motor Problems</fullName>
+                <default>false</default>
+                <label>Oral Motor Problems</label>
+            </value>
+            <value>
+                <fullName>Oral Pharyngeal Disorders</fullName>
+                <default>false</default>
+                <label>Oral Pharyngeal Disorders</label>
+            </value>
+            <value>
+                <fullName>Oral Squamous Cell Carcinoma</fullName>
+                <default>false</default>
+                <label>Oral Squamous Cell Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Orofacial Pain</fullName>
+                <default>false</default>
+                <label>Orofacial Pain</label>
+            </value>
+            <value>
+                <fullName>Palate Cancer</fullName>
+                <default>false</default>
+                <label>Palate Cancer</label>
+            </value>
+            <value>
+                <fullName>Plaque</fullName>
+                <default>false</default>
+                <label>Plaque</label>
+            </value>
+            <value>
+                <fullName>Postoperative Pain</fullName>
+                <default>false</default>
+                <label>Postoperative Pain</label>
+            </value>
+            <value>
+                <fullName>Receding Gums</fullName>
+                <default>false</default>
+                <label>Receding Gums</label>
+            </value>
+            <value>
+                <fullName>Salivary Duct Stones</fullName>
+                <default>false</default>
+                <label>Salivary Duct Stones</label>
+            </value>
+            <value>
+                <fullName>Sensitive Teeth</fullName>
+                <default>false</default>
+                <label>Sensitive Teeth</label>
+            </value>
+            <value>
+                <fullName>Soft Tissue Infection</fullName>
+                <default>false</default>
+                <label>Soft Tissue Infection</label>
+            </value>
+            <value>
+                <fullName>Stained Teeth</fullName>
+                <default>false</default>
+                <label>Stained Teeth</label>
+            </value>
+            <value>
+                <fullName>Swollen Gums</fullName>
+                <default>false</default>
+                <label>Swollen Gums</label>
+            </value>
+            <value>
+                <fullName>Teething</fullName>
+                <default>false</default>
+                <label>Teething</label>
+            </value>
+            <value>
+                <fullName>Teeth Noneruptn w/ Mxilry Hyplsia &amp; Gnu</fullName>
+                <default>false</default>
+                <label>Teeth Noneruptn w/ Mxilry Hyplsia &amp; Gnu</label>
+            </value>
+            <value>
+                <fullName>Tempormandibular Joint Pain</fullName>
+                <default>false</default>
+                <label>Tempormandibular Joint Pain</label>
+            </value>
+            <value>
+                <fullName>Temporomandibular Ankylosis</fullName>
+                <default>false</default>
+                <label>Temporomandibular Ankylosis</label>
+            </value>
+            <value>
+                <fullName>Tender Gums</fullName>
+                <default>false</default>
+                <label>Tender Gums</label>
+            </value>
+            <value>
+                <fullName>TMJ</fullName>
+                <default>false</default>
+                <label>TMJ</label>
+            </value>
+            <value>
+                <fullName>Tongue Conditions</fullName>
+                <default>false</default>
+                <label>Tongue Conditions</label>
+            </value>
+            <value>
+                <fullName>Tooth Abnormalities as Seen in Diabetes</fullName>
+                <default>false</default>
+                <label>Tooth Abnormalities as Seen in Diabetes</label>
+            </value>
+            <value>
+                <fullName>Tooth Abrasion</fullName>
+                <default>false</default>
+                <label>Tooth Abrasion</label>
+            </value>
+            <value>
+                <fullName>Tooth Abscess</fullName>
+                <default>false</default>
+                <label>Tooth Abscess</label>
+            </value>
+            <value>
+                <fullName>Toothache</fullName>
+                <default>false</default>
+                <label>Toothache</label>
+            </value>
+            <value>
+                <fullName>Tooth Attrition</fullName>
+                <default>false</default>
+                <label>Tooth Attrition</label>
+            </value>
+            <value>
+                <fullName>Tooth Avulsion</fullName>
+                <default>false</default>
+                <label>Tooth Avulsion</label>
+            </value>
+            <value>
+                <fullName>Tooth Damage</fullName>
+                <default>false</default>
+                <label>Tooth Damage</label>
+            </value>
+            <value>
+                <fullName>Tooth Decay</fullName>
+                <default>false</default>
+                <label>Tooth Decay</label>
+            </value>
+            <value>
+                <fullName>Tooth Decay Caused by Acid Attack</fullName>
+                <default>false</default>
+                <label>Tooth Decay Caused by Acid Attack</label>
+            </value>
+            <value>
+                <fullName>Tooth Demineralization</fullName>
+                <default>false</default>
+                <label>Tooth Demineralization</label>
+            </value>
+            <value>
+                <fullName>Tooth Discoloration</fullName>
+                <default>false</default>
+                <label>Tooth Discoloration</label>
+            </value>
+            <value>
+                <fullName>Tooth Loss</fullName>
+                <default>false</default>
+                <label>Tooth Loss</label>
+            </value>
+            <value>
+                <fullName>Tooth Malformation</fullName>
+                <default>false</default>
+                <label>Tooth Malformation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

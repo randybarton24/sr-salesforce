@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Revenue_Schedule_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Determines  whether the Product Price will be repeated on all periods, or the Product price will be equally split across all periods.</inlineHelpText>
+    <label>Billing Schedule Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Repeat Amount for Each Installment</fullName>
+                <default>true</default>
+                <label>Repeat Amount for Each Installment</label>
+            </value>
+            <value>
+                <fullName>Divide Amount into multiple installments</fullName>
+                <default>false</default>
+                <label>Divide Amount into multiple installments</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Optometry_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Optometry Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allergy Drops</fullName>
+                <default>false</default>
+                <label>Allergy Drops</label>
+            </value>
+            <value>
+                <fullName>Allergy Treatment</fullName>
+                <default>false</default>
+                <label>Allergy Treatment</label>
+            </value>
+            <value>
+                <fullName>B-Scan Ultrasound</fullName>
+                <default>false</default>
+                <label>B-Scan Ultrasound</label>
+            </value>
+            <value>
+                <fullName>Contact Lens Exams</fullName>
+                <default>false</default>
+                <label>Contact Lens Exams</label>
+            </value>
+            <value>
+                <fullName>Contact Lens Services</fullName>
+                <default>false</default>
+                <label>Contact Lens Services</label>
+            </value>
+            <value>
+                <fullName>Corneal Graft</fullName>
+                <default>false</default>
+                <label>Corneal Graft</label>
+            </value>
+            <value>
+                <fullName>Diabetes Eye Care</fullName>
+                <default>false</default>
+                <label>Diabetes Eye Care</label>
+            </value>
+            <value>
+                <fullName>Diabetic Eye Exam</fullName>
+                <default>false</default>
+                <label>Diabetic Eye Exam</label>
+            </value>
+            <value>
+                <fullName>Epi-LASIK Eye Surgery</fullName>
+                <default>false</default>
+                <label>Epi-LASIK Eye Surgery</label>
+            </value>
+            <value>
+                <fullName>Eye Drops</fullName>
+                <default>false</default>
+                <label>Eye Drops</label>
+            </value>
+            <value>
+                <fullName>Eye Examination</fullName>
+                <default>false</default>
+                <label>Eye Examination</label>
+            </value>
+            <value>
+                <fullName>Eyeglasses</fullName>
+                <default>false</default>
+                <label>Eyeglasses</label>
+            </value>
+            <value>
+                <fullName>Eye Patch</fullName>
+                <default>false</default>
+                <label>Eye Patch</label>
+            </value>
+            <value>
+                <fullName>Eye Procedure</fullName>
+                <default>false</default>
+                <label>Eye Procedure</label>
+            </value>
+            <value>
+                <fullName>Eye Surgery</fullName>
+                <default>false</default>
+                <label>Eye Surgery</label>
+            </value>
+            <value>
+                <fullName>Foreign Body Removal</fullName>
+                <default>false</default>
+                <label>Foreign Body Removal</label>
+            </value>
+            <value>
+                <fullName>Foreign Body Removal from Eye</fullName>
+                <default>false</default>
+                <label>Foreign Body Removal from Eye</label>
+            </value>
+            <value>
+                <fullName>Glaucoma Treatment</fullName>
+                <default>false</default>
+                <label>Glaucoma Treatment</label>
+            </value>
+            <value>
+                <fullName>Implantable Contact Lens</fullName>
+                <default>false</default>
+                <label>Implantable Contact Lens</label>
+            </value>
+            <value>
+                <fullName>Lash Enhancer</fullName>
+                <default>false</default>
+                <label>Lash Enhancer</label>
+            </value>
+            <value>
+                <fullName>Ocular Inflammation (Uveitis) Treatment</fullName>
+                <default>false</default>
+                <label>Ocular Inflammation (Uveitis) Treatment</label>
+            </value>
+            <value>
+                <fullName>Post-Operative Care</fullName>
+                <default>false</default>
+                <label>Post-Operative Care</label>
+            </value>
+            <value>
+                <fullName>Pre-Operative Care</fullName>
+                <default>false</default>
+                <label>Pre-Operative Care</label>
+            </value>
+            <value>
+                <fullName>Prism Lenses</fullName>
+                <default>false</default>
+                <label>Prism Lenses</label>
+            </value>
+            <value>
+                <fullName>Punctal Plug Insertion</fullName>
+                <default>false</default>
+                <label>Punctal Plug Insertion</label>
+            </value>
+            <value>
+                <fullName>Retinal Testing</fullName>
+                <default>false</default>
+                <label>Retinal Testing</label>
+            </value>
+            <value>
+                <fullName>Soft Contact Lenses</fullName>
+                <default>false</default>
+                <label>Soft Contact Lenses</label>
+            </value>
+            <value>
+                <fullName>Strabismus Examination</fullName>
+                <default>false</default>
+                <label>Strabismus Examination</label>
+            </value>
+            <value>
+                <fullName>Vision Screening</fullName>
+                <default>false</default>
+                <label>Vision Screening</label>
+            </value>
+            <value>
+                <fullName>Visual Evoked Potential (VEP)</fullName>
+                <default>false</default>
+                <label>Visual Evoked Potential (VEP)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

@@ -1,0 +1,60 @@
+<aura:component controller="TP_LightningComponentHelper" implements="forceCommunity:availableForAllPageTypes" access="global" >    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>   
+    
+    <aura:attribute name="phnumber" type="String" default=""/>
+    <aura:attribute name="ourMission" type="String" default=""/>
+    <aura:attribute name="webelieve" type="String" default=""/>
+    <aura:attribute name="messageBox" type="String" default=""/>
+    
+    <div id="main-div" style="display:block">
+        <div class="common-tab-details tab-padding">
+            <div class="common-heading">
+                <h3 class="slds-text-heading--large">Contact Client Success for Additional Help</h3>
+            </div>
+            <h4 class="slds-text-heading_medium align-text-center"><lightning:formattedRichText value="{!$Label.c.SROutageMessage}" /></h4>
+            
+            <ul class="common-col-sec slds-grid slds-grid_align-spread support-common-col-sec ">
+                <li>
+                    <div class="col">
+                        <a href="" onclick="{!c.openBot}">
+                            <figure><img src="{!$Resource.sarazip}"/></figure>   
+                            <h3 class="slds-text-heading--medium">Chat</h3>
+                            <p>
+                                Chat with us
+                            </p>
+                            
+                        </a>  
+                    </div>
+                </li>
+                <li>
+                    <div class="col">
+                        <a href="" onclick="{!c.submitTicket}">
+                            <figure><img src="{!$Resource.ticket}"/> </figure>
+                            <h3 class="slds-text-heading--medium">Submit a Ticket</h3>
+                            <p>
+                                Let us know how we can help and we'll reach out to you 
+                            </p>
+                            
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="col" >
+                        <a href="" onclick="{!c.callNow}">
+                            <figure><img src="{!$Resource.phoneicon}"/></figure> 
+                            <h3 class="slds-text-heading--medium">Call Now</h3>
+                            <p>
+                                Speak with a Client Success representative
+                            </p> 
+                            <span id="PhoneNo" style="display:none;" class="phone-number">{!v.phnumber}</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>                   
+        </div>    
+    </div>
+    <div id="child-div" class="common-heading" style="display:none; margin-top: 2%; 
+    margin-bottom: -3%;">
+        <h3><b>{!v.messageBox} <!--&nbsp;<a href="https://solutionreach.force.com/SRCustomer/login?so=00Di0000000dHcr&sc=0LEi00000004D0b" target="_parent">here</a>--></b></h3>
+    </div>   
+</aura:component>

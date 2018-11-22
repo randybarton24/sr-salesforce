@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shh_Dont_Ask__c</fullName>
+    <description>This is a text field that you can use to easily tag things temporarily.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a text field that you can use to easily tag things temporarily.</inlineHelpText>
+    <label>Shh Dont Ask</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

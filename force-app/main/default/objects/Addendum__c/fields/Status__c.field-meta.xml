@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <defaultValue>&quot;New&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Needs Accounting Data</fullName>
+                <default>false</default>
+                <label>Needs Accounting Data</label>
+            </value>
+            <value>
+                <fullName>Accounting Data Received</fullName>
+                <default>false</default>
+                <label>Accounting Data Received</label>
+            </value>
+            <value>
+                <fullName>Ready For Processing</fullName>
+                <default>false</default>
+                <label>Ready For Processing</label>
+            </value>
+            <value>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+                <label>Not Approved</label>
+            </value>
+            <value>
+                <fullName>Signature Requested</fullName>
+                <default>false</default>
+                <label>Signature Requested</label>
+            </value>
+            <value>
+                <fullName>Signature Expired</fullName>
+                <default>false</default>
+                <label>Signature Expired</label>
+            </value>
+            <value>
+                <fullName>Signature Declined</fullName>
+                <default>false</default>
+                <label>Signature Declined</label>
+            </value>
+            <value>
+                <fullName>Signature Received</fullName>
+                <default>false</default>
+                <label>Signature Received</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

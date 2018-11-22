@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Major_Account</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>LEX_Sales_Account</compactLayoutAssignment>
+    <description>Child account for 10+ offices, must be linked to a parent Major Account record type.</description>
+    <label>Child Major Account</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>ADR Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Sales_Status__c</picklist>
+        <values>
+            <fullName>Bogus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>No Response</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Admin_Status__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Billing_Method__c</picklist>
+        <values>
+            <fullName>ACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Check etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid by other Account</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Billing_Plan__c</picklist>
+        <values>
+            <fullName>Bill Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill to Parent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Converted_from_Competitor__c</picklist>
+        <values>
+            <fullName>1800 Dentists</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 Patient Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AbleDent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DemandForce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lighthouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Activator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Tree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice Mojo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revenue Wel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sesame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teledental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Televox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Updox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Websystem3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eCentral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eReminders</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Pulse__c</picklist>
+        <values>
+            <fullName>Extremely Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fairly Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Severe Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Some Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Do_Not_Support_Reason__c</picklist>
+        <values>
+            <fullName>Billing Concern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Pending Cancel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Action</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Dental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vision</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Integration_Type__c</picklist>
+        <values>
+            <fullName>Tier 1 - Tech Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 2 - Marketing %26 Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 3 - Preferred Vendor Status</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Micro_Vertical__c</picklist>
+        <values>
+            <fullName>Anesthesiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Breast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiovascular</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cosmetic Dermatology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabeties Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gynecologic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hematology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holistic%2C Integrative%2C or Naturopathic Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospice %26 Palliative Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Dermatology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multi-specialty Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nephrology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pathology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pediatric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Please Specify --%3E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pulmonary Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reproductive Medicine or Fertility Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rheumatology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sleep Disorders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thoracic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vascular Surgery %28veins%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Number_of_Locations__c</picklist>
+        <values>
+            <fullName>0-9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10-49</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>100%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50-100</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Number_of_Providers__c</picklist>
+        <values>
+            <fullName>0-10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11-29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30-49</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50%2B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Partner_Status__c</picklist>
+        <values>
+            <fullName>Contract Renewal Approaching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extend Current Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-boarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-going Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal to Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renegotiate Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Executive Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signed Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminate Relationship</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pipeline_Source__c</picklist>
+        <values>
+            <fullName>CRM Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Team%2FCustomer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RecurSoft__Channel__c</picklist>
+        <values>
+            <fullName>100</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>200</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RecurSoft__Default_Payment_Type__c</picklist>
+        <values>
+            <fullName>ACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Other %28Check etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid by other Account</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RecurSoft__Payment_Term__c</picklist>
+        <values>
+            <fullName>Due Upon Receipt</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Due on Receipt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 30</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RecurSoft__Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reseller__c</picklist>
+        <values>
+            <fullName>Eyefinity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innereactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QSI</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Engineer_Call_Result__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Special_Considerations__c</picklist>
+        <values>
+            <fullName>KOL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Vertical__c</picklist>
+        <values>
+            <fullName>Allergy %26 Immunology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bariatric%2C Metabolic and Weight Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chiropractic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cosmetic Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dermatology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENT-Otolaryngology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Endocrinology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Endodontistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Medicine or General Physician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gastroenterology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Dentistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geriatric Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIV%2FInfectious Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heart and Vascular</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Spa or Aesthetic Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neurology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OB%2FGYN or Womens Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ophthalmology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optometry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oral Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthodontistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthotics%2FProsthetics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pain Management or Physical Medicine or Physiatry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pediatrics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pedodontistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Periodontistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Therapy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Podiatry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prosthodontistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatry or Mental Health or Substance Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radiology or Imaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Team_Assignment__c</picklist>
+        <values>
+            <fullName>Dentrix 1 Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dentrix 2 Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EagleSoft Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Groups Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOL%2FVIP Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical 1 Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical 2 Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCOPE Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vision Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extra Sync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X8_Touch_Program__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

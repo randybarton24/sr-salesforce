@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Contract_Term__c</fullName>
+    <description>If Inherit Opportunity Contract Terms is false, the Contract Term will be set on the Opportunity Product to (Default Contract Term + Product Number of Free Months) and reset to this value when an Opportunity contract term change is made. For month-to-month products.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If Inherit Opportunity Contract Terms is false, the Contract Term will be set on the Opportunity Product to (Default Contract Term + Product Number of Free Months) and reset to this value when an Opportunity contract term change is made.</inlineHelpText>
+    <label>Default Contract Term</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

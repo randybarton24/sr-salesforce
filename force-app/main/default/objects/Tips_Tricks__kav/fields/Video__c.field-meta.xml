@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Video__c</fullName>
+    <description>Add in the url of the video you would like to add</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Add in the url of the video you would like to add</inlineHelpText>
+    <label>Video</label>
+    <length>32768</length>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

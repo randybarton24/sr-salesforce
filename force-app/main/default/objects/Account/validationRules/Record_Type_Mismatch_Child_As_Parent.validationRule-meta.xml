@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Type_Mismatch_Child_As_Parent</fullName>
+    <active>false</active>
+    <errorConditionFormula>((RecordType.Name = &quot;Child Major Account&quot; &amp;&amp; 
+ParentId = null) || 
+(RecordType.Name = &quot;Child Multi-Location Account&quot; &amp;&amp; 
+ParentId = null) || 
+(RecordType.Name = &quot;Child Account&quot; &amp;&amp; 
+ParentId = null)) &amp;&amp;
+(ISBLANK( Subscriber_ID__c ) ||
+ISNULL( Subscriber_ID__c )) &amp;&amp;
+(ISBLANK( Parent.Subscriber_ID__c ) ||
+ISNULL( Parent.Subscriber_ID__c ))</errorConditionFormula>
+    <errorMessage>This Account record type requires a parent Account to be specified.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_NewTerm</fullName>
+    <active>true</active>
+    <errorConditionFormula>(NewTerm__c = true &amp;&amp;
+ISBLANK( NewTerm_Months__c )) ||
+(NewTerm__c = false &amp;&amp;
+NOT(ISBLANK( NewTerm_Months__c )))</errorConditionFormula>
+    <errorMessage>The New Term modification isn&#39;t complete.</errorMessage>
+</ValidationRule>

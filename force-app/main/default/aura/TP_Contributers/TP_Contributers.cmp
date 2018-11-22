@@ -1,0 +1,43 @@
+<aura:component controller="TP_LightningComponentHelper" implements="forceCommunity:availableForAllPageTypes" access="global" >
+	<aura:handler name="init" action="{!c.myAction}" value="{!this}" />
+    <aura:attribute name="users" type="User[]"/>
+    <aura:attribute name="profileName" type="string"/>
+     
+    <h3 class="slds-text-heading--medium">Top Contributors</h3>
+    <div >
+    	<ul aura:id="CommunityUser" class="showData">
+            <aura:iteration items="{!v.users}" var="user" indexVar="index" >
+                <li><span class="no">{!index+1}</span>&nbsp;                    
+                    <span class="slds-truncate contributer-title">
+                        <a href="{!'/s/profile/'+user.Id}" onclick="{!c.removeCss}">
+                            <span class="slds-avatar slds-avatar--x-small">
+                                <img src="{!user.SmallPhotoUrl}" alt="person name" />
+                            </span>
+                            {!user.FirstName}&nbsp;{!user.LastName}
+                        </a>
+                    </span>
+                </li>
+            </aura:iteration>
+        </ul>
+    </div>
+    <div >
+    	<ul aura:id="GuestUser" class="hideData">
+            <aura:iteration items="{!v.users}" var="user" indexVar="index" >
+                <li><span class="no">{!index+1}</span>&nbsp;                    
+                    <span class="slds-truncate contributer-title">                        
+                        <span class="slds-avatar slds-avatar--x-small">
+                            <img src="{!user.SmallPhotoUrl}" alt="person name" />
+                        </span>
+                        {!user.FirstName}&nbsp;{!user.LastName}                        
+                    </span>
+                </li>
+            </aura:iteration>
+        </ul>
+    </div>
+    <div class="community-link">
+        <a href="/s/communityguidelines" onclick="{!c.removeCss}">Community Guidelines</a>
+    </div>
+    <div class="advertisement">
+        <a target="_blank" href="{!$Label.c.HubspotAd}"><img src="{!$Resource.SR_Feedback}"/></a>
+    </div>
+</aura:component>

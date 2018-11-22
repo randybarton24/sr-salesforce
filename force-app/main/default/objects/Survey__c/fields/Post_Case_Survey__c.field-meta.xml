@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Case_Survey__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( RecordType.Name , 
+					&quot;Post Case Survey&quot;, &quot;http://Solutionreach.Customer-Experience-Survey.sgizmo.com/s3/?surveyid=&quot;&amp;Id, 
+					&quot;Playbook Case Survey&quot;, &quot;http://Solutionreach.Onboarding-Survey.sgizmo.com/s3/?surveyid=&quot;&amp;Id,
+					&quot;EBR Case Survey&quot;, &quot;http://Solutionreach.EBR-Survey.sgizmo.com/s3/?surveyid=&quot;&amp;Id,
+					&quot;http://Solutionreach.Customer-Experience-Survey.sgizmo.com/s3/?surveyid=&quot;&amp;Id)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Survey Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

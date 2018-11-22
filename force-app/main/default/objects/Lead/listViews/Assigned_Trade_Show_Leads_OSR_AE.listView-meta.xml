@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_Trade_Show_Leads_OSR_AE</fullName>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>outside_sales_rep__c</field>
+        <operation>equals</operation>
+        <value>Adam,Brandon,Danny,Eric,Korbin,Mary,Otis,Robbie,Tennli</value>
+    </filters>
+    <filters>
+        <field>LEAD.LAST_ACTIVITY</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_DAYS:60</value>
+    </filters>
+    <label>Assigned Trade Show Leads (OSR) - AE</label>
+    <sharedTo>
+        <group>AE</group>
+    </sharedTo>
+</ListView>

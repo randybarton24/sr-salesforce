@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X7_Closed_Won_90_120_days_ag</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Account_Phone__c</columns>
+    <columns>RecurSoft__Number_of_Free_Months__c</columns>
+    <columns>MSFPrice__c</columns>
+    <columns>SFPrice__c</columns>
+    <columns>RecurSoft__Trial_End_Date1__c</columns>
+    <columns>Subscriber_ID__c</columns>
+    <columns>tz__Timezone__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Closed Won</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:120</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>lessOrEqual</operation>
+        <value>N_DAYS_AGO:90</value>
+    </filters>
+    <label>8.  Closed Won 90-120 days ago</label>
+</ListView>

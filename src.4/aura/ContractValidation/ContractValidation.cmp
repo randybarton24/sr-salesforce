@@ -1,0 +1,56 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId">   
+    <aura:attribute name="opportunity" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="validationResult" type="Array"/>
+    <aura:attribute name="headerTitle" type="Aura.Component[]">
+        <span>            
+            <lightning:icon iconName="custom:custom83" size="small" style="float:left"/>            
+            <h2 style="float:left;padding-left:12px">
+                <b>Contract Link</b>
+            </h2>
+        </span>        
+    </aura:attribute>    
+    <force:recordData aura:id="recordLoaderCard"
+      recordId="{!v.recordId}"
+      fields="Account.Industry,
+              Account.Practice_Management_Software__c,
+              Account.Practice_Management_Software__r.Sales_Engineer_Call_Needed__c,
+              Approval_Level_Required__c,
+              Contract_Signed__c,
+              Id,
+              Name,  
+              RecordType.Name,
+              RecurSoft__Bill_to_Account__c,
+              RecurSoft__Intacct_Entity__c,
+              RecurSoft__Initial_Contract_Term__c,
+              RecurSoft__Bill_to_Account__r.Industry,
+              Sales_Engineer_Call_Completed__c,
+              StageName,
+              Owner.Profile.Name"
+      targetFields="{!v.opportunity}"
+      targetError="{!v.recordError}"
+      recordUpdated="{!c.recordUpdate}"
+      />
+     <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            <ui:message title="Error" severity="error" closable="true">
+                {!v.recordError}
+            </ui:message>
+        </div>
+    </aura:if>    
+    <lightning:card title="{!v.headerTitle}">                
+        <aura:iteration items="{!v.validationResult}" var="item">
+            <p class="slds-p-horizontal_small">            
+              <li>{!item} </li>         
+            </p>
+      </aura:iteration>      
+      <aura:if isTrue="{!empty(v.validationResult)}">
+        <div style="text-align:center">
+          <input type="button" class="slds-button slds-button_neutral" id="copyLink" onclick="{!c.copyClick}" value="Copy URL" />        
+          <input type="button" class="slds-button slds-button_neutral" value="Open URL" onclick="{!c.openClick}" />          
+        </div>
+      </aura:if>    
+               
+    </lightning:card>
+ 
+</aura:component>

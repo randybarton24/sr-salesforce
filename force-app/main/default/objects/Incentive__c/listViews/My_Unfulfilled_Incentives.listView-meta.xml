@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Unfulfilled_Incentives</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Gift_Card__c</columns>
+    <columns>Gift_Card_Amount__c</columns>
+    <columns>Incentive_Notes__c</columns>
+    <columns>Lead__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Promotional_Item__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Requested,Pending Trial Completion</value>
+    </filters>
+    <label>My Unfulfilled Incentives</label>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Msg_Batches_Last_90_Days__c</fullName>
+    <description>Number of times a group message has been sent in the last 90 days</description>
+    <externalId>false</externalId>
+    <label>Group Msg Batches Last 90 Days</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

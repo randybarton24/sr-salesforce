@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Healthgrades_Interest__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box if the office has expressed interest in signing up for Healthgrades</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box if the office has expressed interest in signing up for Healthgrades</inlineHelpText>
+    <label>Healthgrades Interest</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

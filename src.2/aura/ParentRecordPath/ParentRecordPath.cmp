@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" >	    
+    <aura:attribute name="childRecord" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="variant" type="String" default="linear"/>
+    <aura:attribute name="hideUpdateButton" type="Boolean" default="false"/>
+    
+    <force:recordData aura:id="recordLoaderChild"
+      recordId="{!v.recordId}"
+      fields="Id,Active_Opportunity__c,Name,Active_Opportunity__r.StageName,Active_Opportunity__r.Name,Active_Opportunity__r.RecordTypeId"
+      targetFields="{!v.childRecord}"
+      targetError="{!v.recordError}"
+      recordUpdated="{!c.recordUpdate}"
+      />
+    
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            <ui:message title="Error" severity="error" closable="true">
+                {!v.recordError}
+            </ui:message>
+        </div>
+    </aura:if>
+    
+    {!v.body}
+    
+</aura:component>

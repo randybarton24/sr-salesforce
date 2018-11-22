@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allergists_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Allergists Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allergy Drops</fullName>
+                <default>false</default>
+                <label>Allergy Drops</label>
+            </value>
+            <value>
+                <fullName>Allergy Shots</fullName>
+                <default>false</default>
+                <label>Allergy Shots</label>
+            </value>
+            <value>
+                <fullName>Allergy Shots for Insect Stings</fullName>
+                <default>false</default>
+                <label>Allergy Shots for Insect Stings</label>
+            </value>
+            <value>
+                <fullName>Allergy Skin Testing</fullName>
+                <default>false</default>
+                <label>Allergy Skin Testing</label>
+            </value>
+            <value>
+                <fullName>Drug or Food Challenge</fullName>
+                <default>false</default>
+                <label>Drug or Food Challenge</label>
+            </value>
+            <value>
+                <fullName>Environmental Allergy Testing</fullName>
+                <default>false</default>
+                <label>Environmental Allergy Testing</label>
+            </value>
+            <value>
+                <fullName>Food Sensitivity Testing</fullName>
+                <default>false</default>
+                <label>Food Sensitivity Testing</label>
+            </value>
+            <value>
+                <fullName>Desensitization</fullName>
+                <default>false</default>
+                <label>Desensitization</label>
+            </value>
+            <value>
+                <fullName>Exercise-Induced Asthma (EIA) Testing</fullName>
+                <default>false</default>
+                <label>Exercise-Induced Asthma (EIA) Testing</label>
+            </value>
+            <value>
+                <fullName>Lung Spirometry</fullName>
+                <default>false</default>
+                <label>Lung Spirometry</label>
+            </value>
+            <value>
+                <fullName>Patch Testing</fullName>
+                <default>false</default>
+                <label>Patch Testing</label>
+            </value>
+            <value>
+                <fullName>Sublingual Immunotherapy</fullName>
+                <default>false</default>
+                <label>Sublingual Immunotherapy</label>
+            </value>
+            <value>
+                <fullName>Xolair® Therapy</fullName>
+                <default>false</default>
+                <label>Xolair® Therapy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

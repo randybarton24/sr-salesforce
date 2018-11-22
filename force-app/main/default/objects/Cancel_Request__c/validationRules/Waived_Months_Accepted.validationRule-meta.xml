@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Waived_Months_Accepted</fullName>
+    <active>true</active>
+    <description>Requires a number when marking Wavied Months Offered as Accepted</description>
+    <errorConditionFormula>AND (ISPICKVAL( Save_Offer_Waived_Months__c , &quot;Accepted&quot;) , ISNULL (Number_of_waived_months_offered__c ))</errorConditionFormula>
+    <errorDisplayField>Number_of_waived_months_offered__c</errorDisplayField>
+    <errorMessage>You must provide the number of free months if the offer was accepted</errorMessage>
+</ValidationRule>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chiropractic_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Chiropractic Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Disability Evaluation</fullName>
+                <default>false</default>
+                <label>Disability Evaluation</label>
+            </value>
+            <value>
+                <fullName>Low Back Procedure</fullName>
+                <default>false</default>
+                <label>Low Back Procedure</label>
+            </value>
+            <value>
+                <fullName>Manipulation Adjustment of Back and Neck</fullName>
+                <default>false</default>
+                <label>Manipulation Adjustment of Back and Neck</label>
+            </value>
+            <value>
+                <fullName>Neck Pain Procedure</fullName>
+                <default>false</default>
+                <label>Neck Pain Procedure</label>
+            </value>
+            <value>
+                <fullName>Range of Motion Testing</fullName>
+                <default>false</default>
+                <label>Range of Motion Testing</label>
+            </value>
+            <value>
+                <fullName>Rehabilitation Therapy</fullName>
+                <default>false</default>
+                <label>Rehabilitation Therapy</label>
+            </value>
+            <value>
+                <fullName>Active Release Technique</fullName>
+                <default>false</default>
+                <label>Active Release Technique</label>
+            </value>
+            <value>
+                <fullName>Applied Kinesiology (AK)</fullName>
+                <default>false</default>
+                <label>Applied Kinesiology (AK)</label>
+            </value>
+            <value>
+                <fullName>Arthritic Rehabilitation</fullName>
+                <default>false</default>
+                <label>Arthritic Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Cervical Decompression Therapy</fullName>
+                <default>false</default>
+                <label>Cervical Decompression Therapy</label>
+            </value>
+            <value>
+                <fullName>Chiropractic Plus Kinesiology (CPK)</fullName>
+                <default>false</default>
+                <label>Chiropractic Plus Kinesiology (CPK)</label>
+            </value>
+            <value>
+                <fullName>CranioSacral Therapy (CST)</fullName>
+                <default>false</default>
+                <label>CranioSacral Therapy (CST)</label>
+            </value>
+            <value>
+                <fullName>Diagnostic Imaging</fullName>
+                <default>false</default>
+                <label>Diagnostic Imaging</label>
+            </value>
+            <value>
+                <fullName>Exercise Counseling</fullName>
+                <default>false</default>
+                <label>Exercise Counseling</label>
+            </value>
+            <value>
+                <fullName>Functional Orthotic</fullName>
+                <default>false</default>
+                <label>Functional Orthotic</label>
+            </value>
+            <value>
+                <fullName>Gait Analysis</fullName>
+                <default>false</default>
+                <label>Gait Analysis</label>
+            </value>
+            <value>
+                <fullName>Graston Technique®</fullName>
+                <default>false</default>
+                <label>Graston Technique®</label>
+            </value>
+            <value>
+                <fullName>Intersegmental Traction</fullName>
+                <default>false</default>
+                <label>Intersegmental Traction</label>
+            </value>
+            <value>
+                <fullName>Kinesio® Taping</fullName>
+                <default>false</default>
+                <label>Kinesio® Taping</label>
+            </value>
+            <value>
+                <fullName>Laser Office Procedure</fullName>
+                <default>false</default>
+                <label>Laser Office Procedure</label>
+            </value>
+            <value>
+                <fullName>Myofascial Release Therapy</fullName>
+                <default>false</default>
+                <label>Myofascial Release Therapy</label>
+            </value>
+            <value>
+                <fullName>Myotherapy</fullName>
+                <default>false</default>
+                <label>Myotherapy</label>
+            </value>
+            <value>
+                <fullName>Neurological Rehabilitation</fullName>
+                <default>false</default>
+                <label>Neurological Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Non-Surgical Pain Management</fullName>
+                <default>false</default>
+                <label>Non-Surgical Pain Management</label>
+            </value>
+            <value>
+                <fullName>Osteopathic Manipulative Treatment (OMT)</fullName>
+                <default>false</default>
+                <label>Osteopathic Manipulative Treatment (OMT)</label>
+            </value>
+            <value>
+                <fullName>Post-Surgical Rehabilitaion</fullName>
+                <default>false</default>
+                <label>Post-Surgical Rehabilitaion</label>
+            </value>
+            <value>
+                <fullName>Sacrospinous Ligament Fixation</fullName>
+                <default>false</default>
+                <label>Sacrospinous Ligament Fixation</label>
+            </value>
+            <value>
+                <fullName>Soft Tissue Massage</fullName>
+                <default>false</default>
+                <label>Soft Tissue Massage</label>
+            </value>
+            <value>
+                <fullName>Spine and Sports Musculoskeletal Rehab</fullName>
+                <default>false</default>
+                <label>Spine and Sports Musculoskeletal Rehab</label>
+            </value>
+            <value>
+                <fullName>Spine Rehabilitation Exercises</fullName>
+                <default>false</default>
+                <label>Spine Rehabilitation Exercises</label>
+            </value>
+            <value>
+                <fullName>Stroke Rehabilitation</fullName>
+                <default>false</default>
+                <label>Stroke Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Therapeutic Massage</fullName>
+                <default>false</default>
+                <label>Therapeutic Massage</label>
+            </value>
+            <value>
+                <fullName>Trauma Rehabilitation</fullName>
+                <default>false</default>
+                <label>Trauma Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Trigger Point Therapy</fullName>
+                <default>false</default>
+                <label>Trigger Point Therapy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Payment_Term__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>As with all values that impact the creation of invoices in Intacct, this and other account fields equivalent to fields in Intacct must match Intacct. Values that are missing or incorrectly mapped will result in failed revenue schedules.</inlineHelpText>
+    <label>Payment Term</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Due Upon Receipt</fullName>
+                <default>true</default>
+                <label>Due Upon Receipt</label>
+            </value>
+            <value>
+                <fullName>Net 30</fullName>
+                <default>false</default>
+                <label>Net 30</label>
+            </value>
+            <value>
+                <fullName>Due on Receipt</fullName>
+                <default>false</default>
+                <label>Due on Receipt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

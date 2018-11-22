@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pediatric_Dentistry_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Pediatric Dentistry Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fluoride Treatment</fullName>
+                <default>false</default>
+                <label>Fluoride Treatment</label>
+            </value>
+            <value>
+                <fullName>Dental Extraction</fullName>
+                <default>false</default>
+                <label>Dental Extraction</label>
+            </value>
+            <value>
+                <fullName>Dental Cleaning</fullName>
+                <default>false</default>
+                <label>Dental Cleaning</label>
+            </value>
+            <value>
+                <fullName>Dental Examination</fullName>
+                <default>false</default>
+                <label>Dental Examination</label>
+            </value>
+            <value>
+                <fullName>Pediatric Dental Exam</fullName>
+                <default>false</default>
+                <label>Pediatric Dental Exam</label>
+            </value>
+            <value>
+                <fullName>Dental X-Ray</fullName>
+                <default>false</default>
+                <label>Dental X-Ray</label>
+            </value>
+            <value>
+                <fullName>Athletic Mouthguards</fullName>
+                <default>false</default>
+                <label>Athletic Mouthguards</label>
+            </value>
+            <value>
+                <fullName>Conscious Sedation</fullName>
+                <default>false</default>
+                <label>Conscious Sedation</label>
+            </value>
+            <value>
+                <fullName>Dental Bonding</fullName>
+                <default>false</default>
+                <label>Dental Bonding</label>
+            </value>
+            <value>
+                <fullName>Dental Filling</fullName>
+                <default>false</default>
+                <label>Dental Filling</label>
+            </value>
+            <value>
+                <fullName>Dental Hygiene Services</fullName>
+                <default>false</default>
+                <label>Dental Hygiene Services</label>
+            </value>
+            <value>
+                <fullName>Dental Procedure</fullName>
+                <default>false</default>
+                <label>Dental Procedure</label>
+            </value>
+            <value>
+                <fullName>Dental Prophylaxis</fullName>
+                <default>false</default>
+                <label>Dental Prophylaxis</label>
+            </value>
+            <value>
+                <fullName>Dental Prophylaxis, Child</fullName>
+                <default>false</default>
+                <label>Dental Prophylaxis, Child</label>
+            </value>
+            <value>
+                <fullName>Dental Restoration</fullName>
+                <default>false</default>
+                <label>Dental Restoration</label>
+            </value>
+            <value>
+                <fullName>Dental Sealant</fullName>
+                <default>false</default>
+                <label>Dental Sealant</label>
+            </value>
+            <value>
+                <fullName>Digital X-Ray (CDR)</fullName>
+                <default>false</default>
+                <label>Digital X-Ray (CDR)</label>
+            </value>
+            <value>
+                <fullName>Fixed Orthodontic Correction</fullName>
+                <default>false</default>
+                <label>Fixed Orthodontic Correction</label>
+            </value>
+            <value>
+                <fullName>Fluoride Varnish</fullName>
+                <default>false</default>
+                <label>Fluoride Varnish</label>
+            </value>
+            <value>
+                <fullName>Frenectomy</fullName>
+                <default>false</default>
+                <label>Frenectomy</label>
+            </value>
+            <value>
+                <fullName>Full Mouth Rehabilitation</fullName>
+                <default>false</default>
+                <label>Full Mouth Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>General Anesthesia</fullName>
+                <default>false</default>
+                <label>General Anesthesia</label>
+            </value>
+            <value>
+                <fullName>Gum Disease Treatment</fullName>
+                <default>false</default>
+                <label>Gum Disease Treatment</label>
+            </value>
+            <value>
+                <fullName>Moderate Sedation</fullName>
+                <default>false</default>
+                <label>Moderate Sedation</label>
+            </value>
+            <value>
+                <fullName>Nitrous Oxide Administration</fullName>
+                <default>false</default>
+                <label>Nitrous Oxide Administration</label>
+            </value>
+            <value>
+                <fullName>Nitrous Oxide Sedation</fullName>
+                <default>false</default>
+                <label>Nitrous Oxide Sedation</label>
+            </value>
+            <value>
+                <fullName>Oral Conscious Sedation</fullName>
+                <default>false</default>
+                <label>Oral Conscious Sedation</label>
+            </value>
+            <value>
+                <fullName>Oral Sedation</fullName>
+                <default>false</default>
+                <label>Oral Sedation</label>
+            </value>
+            <value>
+                <fullName>Oral Soft Tissue Assessment</fullName>
+                <default>false</default>
+                <label>Oral Soft Tissue Assessment</label>
+            </value>
+            <value>
+                <fullName>Panoramic Digital Dental X-Rays</fullName>
+                <default>false</default>
+                <label>Panoramic Digital Dental X-Rays</label>
+            </value>
+            <value>
+                <fullName>Cephalometric Digital Dental X-Rays</fullName>
+                <default>false</default>
+                <label>Cephalometric Digital Dental X-Rays</label>
+            </value>
+            <value>
+                <fullName>Pocket Depth Measurement</fullName>
+                <default>false</default>
+                <label>Pocket Depth Measurement</label>
+            </value>
+            <value>
+                <fullName>Special Needs Patients-General Care</fullName>
+                <default>false</default>
+                <label>Special Needs Patients-General Care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

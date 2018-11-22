@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>qbdialer__ContactScoreId__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The InsideSales.com NeuralView Hourly Contactability Score Object Lookup</description>
+    <externalId>false</externalId>
+    <label>NeuralView: Hourly Contactability ID</label>
+    <referenceTo>qbdialer__ContactScore__c</referenceTo>
+    <relationshipLabel>Contact Score Items</relationshipLabel>
+    <relationshipName>Contact_Score_Items</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

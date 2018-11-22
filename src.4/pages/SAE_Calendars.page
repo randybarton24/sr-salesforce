@@ -1,0 +1,46 @@
+<apex:page sideBar="false">
+<div style="position:relative;height:1000px">
+
+<style>
+
+/* To Remove the Group Calendar Section */
+.JQ_CA > .CA_1 > div[data-type="group"] {
+display:none;
+}
+/* To Remove the Web Calendar Section */
+.JQ_CA > .CA_l > div[data-type="web"] {
+display:none;
+}
+</style>
+
+    <apex:variable value="a26i0000000pOBdAAM" var="WendyT"/>
+
+<SLCA2:calendar date="" 
+
+    calendar="{!WendyT}"
+    createable=""
+    filter="{}" 
+    namespace=""
+    enabled="{'{!WendyT}':false}"
+    settings="[]"
+    view="week"
+    urlparams="l_ds=0&r_g=0&r_a=0&r_c=0&r_s=0"
+    userAdditionalSettings="{'startHourPeriod':'6','stopHourPeriod':'17','dayModeArea':'0_1','nonWorkingHoursDisplay':'hide','showWeekEnds':'5'}"
+    
+
+    readonly="{
+        cloneSharing    : true,
+        edit            : true, 
+        create          : true, 
+        detail          : true, 
+        move            : true, 
+        hover           : true, 
+/* To disable More button and right click options in Calendar use contextEvent as false */
+        contextEvent    : false, 
+        contextCalendar : true, 
+        contextArea     : true
+    }"
+></SLCA2:calendar>
+
+</div>
+</apex:page>

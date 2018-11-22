@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>qbdialer__Create_List</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create List</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&#39;https://sforce.insidesales.com/js/json.js&#39;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/lib/jquery.min.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/lib/jsonp.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/lib/persist.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/ISConference.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/c2c/ISClickToCall.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20170424025435/c2csf.js&quot;)}
+
+var getTabClass = function() {
+    var bodytags = document.getElementsByTagName(&quot;body&quot;);
+    var classes  = bodytags[0].className.split(&#39; &#39;);
+    var hostname = window.location.hostname;
+    try {
+        try {
+            sforce.connection.sessionId=&quot;{!$Api.Session_ID}&quot;;
+        } catch (e) {
+            //
+        }
+        user  = sforce.connection.getUserInfo();
+        var theme = user.userUiSkin;
+        return {
+            &quot;css_base&quot;  : &quot;https://&quot;+window.location.hostname,
+            &quot;css_theme&quot; : theme,
+            &quot;css_class&quot; : classes[0]};
+    } catch (e) {
+        return {
+            &quot;css_base&quot; : &quot;https://&quot;+window.location.hostname,
+            &quot;css_class&quot; : classes[0],
+            &quot;css_theme&quot; : false
+        };
+    }
+};
+var getTabClassString = function() {
+    var css_info = getTabClass();
+    var tmp_url = &quot;&quot;;
+    tmp_url += &#39;&amp;css_base=&#39;+encodeURIComponent(css_info.css_base);
+        if (css_info.css_theme) {
+        tmp_url += &#39;&amp;css_theme=&#39;+encodeURIComponent(css_info.css_theme);
+} 
+    tmp_url += &#39;&amp;css_class=&#39;+encodeURIComponent(css_info.css_class);
+    return tmp_url;
+} ;
+
+var openPopup = function(){ 
+    pd.requestSalesforceInstance(sforce.connection.sessionId);
+    pd.makeRequest(&#39;getAuthToken&#39;,
+        function (result) {
+            var jwt = typeof result == &#39;object&#39; &amp;&amp; &#39;token&#39; in result ? result.token : &#39;&#39;;
+            var use_jwt = jwt != &#39;&#39;;
+            var html = &quot;&lt;form name=&#39;createList&#39; method=&#39;post&#39; action=&#39;https://{!$User.qbdialer__is_subdomain__c}.insidesales.com/noauth/create_sf_list?&quot;;
+            html += &quot;&amp;salesforce_package_version=6.36.21&quot;;
+            html += &quot;&amp;type=Lead&quot;;
+            if (!use_jwt) {
+                html += &quot;&amp;organization_id={!$Organization.Id}&quot;;
+                html += &quot;&amp;token={!User.qbdialer__is_token__c}&quot;;
+            }
+            html += &quot;&amp;agent_phone={!User.Phone}&quot;;
+            html += getTabClassString();
+            html += &quot;&#39;&gt;&lt;input type=&#39;submit&#39; style=&#39;visibility:hidden&#39;&gt;&quot;; 
+            if (use_jwt) {
+                html += &quot;&lt;input type=&#39;hidden&#39; name=&#39;Authorization&#39; value=&#39;&quot;+jwt+&quot;&#39;&gt;&quot;;
+            }
+            var data = &quot;&quot;; 
+            for (var i=0; i &lt; idArray.length; i++) {
+                data = {Id:idArray[i]}; 
+                data = JSON.stringify(data); 
+                html += &quot;&lt;input type=&#39;hidden&#39; name=&#39;leads[]&#39; value=&#39;&quot;+data+&quot;&#39;&gt;&quot;; 
+            } 
+            html += &quot;&lt;&quot;+&quot;/form&gt;&quot;; 
+            html += &quot;&lt;script&gt;document.createList.submit();&lt;&quot;+&quot;/script&gt;&quot;; 
+            var host = document.location.protocol+&quot;//&quot;+ 
+            document.location.hostname; 
+            var w = window.open(host, &quot;&quot;, &quot;height=700,width=800,menubar=0,resizable=1,scrollbars=1,status=0,titlebar=0,toolbar=0,location=0&quot;); 
+            w.document.write(html); 
+        }
+    );
+};
+
+var user_oauth_token = &#39;{!JSENCODE($User.qbdialer__is_token__c)}&#39;;
+if (!user_oauth_token) {
+    window.location.href=&quot;/apex/qbdialer__InsideSales_OAuth_Setup&quot;;
+} else {
+    var idArray = {!GETRECORDIDS($ObjectType.Lead)}; 
+    if (idArray.length == 0) { 
+        alert(&quot;Please select at least one row&quot;); 
+    } else {
+        openPopup(); 
+    }
+}</url>
+</WebLink>

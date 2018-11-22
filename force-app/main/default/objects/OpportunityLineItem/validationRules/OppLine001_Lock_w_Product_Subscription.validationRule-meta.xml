@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OppLine001_Lock_w_Product_Subscription</fullName>
+    <active>true</active>
+    <description>Provider can&#39;t be changed if there is an existing Product Subscription.</description>
+    <errorConditionFormula>RecurSoft__Product_Subscription__c != null &amp;&amp;
+ ISCHANGED( Provider__c ) &amp;&amp;
+$Profile.Name != &quot;System Administrator&quot;</errorConditionFormula>
+    <errorMessage>OppLine001 - There is active billing for this Healthgrades Premium Profile.  Please contact Accounting if there is a mistake with the related Provider.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,18 @@
+<aura:component implements="forceCommunity:searchInterface,forceCommunity:availableForAllPageTypes" access="global" >
+
+  <aura:attribute name='placeholder' type='String' access='global' />
+  <aura:attribute name='name' type='String' default='communityCoveo' access='global' />
+  <aura:attribute name="searchHub" type="String" default="communityCoveo" access='global' />
+  <aura:attribute name="searchPageName" type="String" default="global-search/%40uri" access='global' />
+
+    <div class="flex-container">
+        <CoveoV2:Searchbox name="{!v.name}"
+                           searchHub="{!v.searchHub}"
+                           searchPageName="{!v.searchPageName}"
+                           placeholder="{!v.placeholder}"/>
+                            
+    </div>
+
+  
+    
+</aura:component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Error_Logs_with_Date</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Error__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Error Logs with Date</label>
+    <sharedTo>
+        <group>Admin_Group</group>
+        <group>ESR_Managers</group>
+        <group>ISR_Managers</group>
+    </sharedTo>
+</ListView>

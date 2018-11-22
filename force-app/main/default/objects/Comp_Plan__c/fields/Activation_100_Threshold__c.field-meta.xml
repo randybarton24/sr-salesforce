@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activation_100_Threshold__c</fullName>
+    <description>The Activation Percentage that qualifies as a 100% mulitplier.  If Activation Percentage is at or above this number, all available commission is earned.</description>
+    <externalId>false</externalId>
+    <label>Activation 100% Threshold</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

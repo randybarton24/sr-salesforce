@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ADR_Set_Received__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SAE will check this box to acknowledge receiving an ADR set</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box when an ADR set has been received</inlineHelpText>
+    <label>ADR Set Received</label>
+    <type>Checkbox</type>
+</CustomField>

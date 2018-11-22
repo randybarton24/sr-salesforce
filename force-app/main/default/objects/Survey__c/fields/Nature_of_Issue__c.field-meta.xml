@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nature_of_Issue__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What was the nature of your support issue?</inlineHelpText>
+    <label>Nature of Issue</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Training - needed to be taught/shown how to do something</fullName>
+                <default>false</default>
+                <label>Training - needed to be taught/shown how to do something</label>
+            </value>
+            <value>
+                <fullName>Technical - needed help with a technical problem or product malfunction</fullName>
+                <default>false</default>
+                <label>Technical - needed help with a technical problem or product malfunction</label>
+            </value>
+            <value>
+                <fullName>Administrative - needed help with something you were not able to do yourself in the SR Platform (i.e., reset password, enable a feature in the platform, change billing information, etc.)</fullName>
+                <default>false</default>
+                <label>Administrative - needed help with something you were not able to do yourself in the SR Platform (i.e., reset password, enable a feature in the platform, change billing information, etc.)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

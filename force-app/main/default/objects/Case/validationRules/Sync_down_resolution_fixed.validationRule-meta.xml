@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sync_down_resolution_fixed</fullName>
+    <active>true</active>
+    <description>Required fields for sync down cases before set to resolution fixed.</description>
+    <errorConditionFormula>AND( 
+$RecordType.DeveloperName = &quot;Sync_List_Case&quot;, 
+ISPICKVAL(Resolution__c, &quot;Fixed&quot;), 
+ISCHANGED(Resolution__c), 
+OR( 
+ISBLANK(TEXT(OS_Version__c)), 
+ISBLANK(TEXT(Computer_Type__c)), 
+ISBLANK(TEXT(Sync_Installed_Location__c)), 
+ISBLANK(TEXT(All_Windows_Updates_Installed__c)), 
+ISBLANK(TEXT(Customer_s_Antivirus__c)), 
+ISBLANK(TEXT(OS__c))
+))</errorConditionFormula>
+    <errorMessage>Missing information from &quot;Computer and Error Info&quot; tab. Complete all required fields before setting to a fixed resolution.</errorMessage>
+</ValidationRule>

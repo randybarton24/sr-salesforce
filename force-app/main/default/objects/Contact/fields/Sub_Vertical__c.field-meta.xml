@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Vertical__c</fullName>
+    <description>Used for new Contacts coming from HubSpot to create new Account. Updated via Parent/Child Mapping in Apex</description>
+    <externalId>false</externalId>
+    <label>Sub-Vertical</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dermatology</fullName>
+                <default>false</default>
+                <label>Dermatology</label>
+            </value>
+            <value>
+                <fullName>Ophthalmology</fullName>
+                <default>false</default>
+                <label>Ophthalmology</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Surgery</fullName>
+                <default>false</default>
+                <label>Cosmetic Surgery</label>
+            </value>
+            <value>
+                <fullName>Family Medicine or General Physician</fullName>
+                <default>false</default>
+                <label>Family Medicine or General Physician</label>
+            </value>
+            <value>
+                <fullName>Pediatrics</fullName>
+                <default>false</default>
+                <label>Pediatrics</label>
+            </value>
+            <value>
+                <fullName>OB/GYN or Womens Health</fullName>
+                <default>false</default>
+                <label>OB/GYN or Womens Health</label>
+            </value>
+            <value>
+                <fullName>Allergy &amp; Immunology</fullName>
+                <default>false</default>
+                <label>Allergy &amp; Immunology</label>
+            </value>
+            <value>
+                <fullName>ENT-Otolaryngology</fullName>
+                <default>false</default>
+                <label>ENT-Otolaryngology</label>
+            </value>
+            <value>
+                <fullName>Gastroenterology</fullName>
+                <default>false</default>
+                <label>Gastroenterology</label>
+            </value>
+            <value>
+                <fullName>Orthopedics</fullName>
+                <default>false</default>
+                <label>Orthopedics</label>
+            </value>
+            <value>
+                <fullName>Bariatric, Metabolic and Weight Health</fullName>
+                <default>false</default>
+                <label>Bariatric, Metabolic and Weight Health</label>
+            </value>
+            <value>
+                <fullName>Endocrinology</fullName>
+                <default>false</default>
+                <label>Endocrinology</label>
+            </value>
+            <value>
+                <fullName>Geriatric Medicine</fullName>
+                <default>false</default>
+                <label>Geriatric Medicine</label>
+            </value>
+            <value>
+                <fullName>Heart and Vascular</fullName>
+                <default>false</default>
+                <label>Heart and Vascular</label>
+            </value>
+            <value>
+                <fullName>HIV/Infectious Disease</fullName>
+                <default>false</default>
+                <label>HIV/Infectious Disease</label>
+            </value>
+            <value>
+                <fullName>Internal Medicine</fullName>
+                <default>false</default>
+                <label>Internal Medicine</label>
+            </value>
+            <value>
+                <fullName>Medical Spa or Aesthetic Medicine</fullName>
+                <default>false</default>
+                <label>Medical Spa or Aesthetic Medicine</label>
+            </value>
+            <value>
+                <fullName>Neurology</fullName>
+                <default>false</default>
+                <label>Neurology</label>
+            </value>
+            <value>
+                <fullName>General Surgery</fullName>
+                <default>false</default>
+                <label>General Surgery</label>
+            </value>
+            <value>
+                <fullName>Oncology</fullName>
+                <default>false</default>
+                <label>Oncology</label>
+            </value>
+            <value>
+                <fullName>Pain Management or Physical Medicine or Physiatry</fullName>
+                <default>false</default>
+                <label>Pain Management or Physical Medicine or Physiatry</label>
+            </value>
+            <value>
+                <fullName>Podiatry</fullName>
+                <default>false</default>
+                <label>Podiatry</label>
+            </value>
+            <value>
+                <fullName>Psychiatry or Mental Health or Substance Rehabilitation</fullName>
+                <default>false</default>
+                <label>Psychiatry or Mental Health or Substance Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Radiology or Imaging</fullName>
+                <default>false</default>
+                <label>Radiology or Imaging</label>
+            </value>
+            <value>
+                <fullName>Urology</fullName>
+                <default>false</default>
+                <label>Urology</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>General Dentistry</fullName>
+                <default>false</default>
+                <label>General Dentistry</label>
+            </value>
+            <value>
+                <fullName>Orthodontistry</fullName>
+                <default>false</default>
+                <label>Orthodontistry</label>
+            </value>
+            <value>
+                <fullName>Endodontistry</fullName>
+                <default>false</default>
+                <label>Endodontistry</label>
+            </value>
+            <value>
+                <fullName>Pedodontistry</fullName>
+                <default>false</default>
+                <label>Pedodontistry</label>
+            </value>
+            <value>
+                <fullName>Periodontistry</fullName>
+                <default>false</default>
+                <label>Periodontistry</label>
+            </value>
+            <value>
+                <fullName>Prosthodontistry</fullName>
+                <default>false</default>
+                <label>Prosthodontistry</label>
+            </value>
+            <value>
+                <fullName>Oral Surgery</fullName>
+                <default>false</default>
+                <label>Oral Surgery</label>
+            </value>
+            <value>
+                <fullName>Optometry</fullName>
+                <default>false</default>
+                <label>Optometry</label>
+            </value>
+            <value>
+                <fullName>Chiropractic</fullName>
+                <default>false</default>
+                <label>Chiropractic</label>
+            </value>
+            <value>
+                <fullName>Physical Therapy</fullName>
+                <default>false</default>
+                <label>Physical Therapy</label>
+            </value>
+            <value>
+                <fullName>Non-medical</fullName>
+                <default>false</default>
+                <label>Non-medical</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

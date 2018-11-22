@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HS_Number_of_Bounces__c</fullName>
+    <description>Hub Spot number of emails bounced.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Hub Spot number of emails bounced.</inlineHelpText>
+    <label>HS Number of Bounces</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

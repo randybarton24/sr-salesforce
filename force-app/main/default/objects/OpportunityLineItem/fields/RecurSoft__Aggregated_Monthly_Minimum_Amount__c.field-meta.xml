@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Aggregated_Monthly_Minimum_Amount__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>PricebookEntry.Product2.RecurSoft__Aggregated_Monthly_Minimum_Amount__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The usage for this product is billed based on Aggregated Monthly Minimum Amount logic.</inlineHelpText>
+    <label>Aggregated Monthly Minimum Amount</label>
+    <type>Checkbox</type>
+</CustomField>

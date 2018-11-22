@@ -1,0 +1,102 @@
+<apex:page standardController="Account" extensions="AccountBanner_Controller">
+
+    <style type="text/css">
+
+        div.box { 
+            text-align:center; 
+            float:left; 
+            margin: 0px 10px 0px 0px; 
+            color: white; 
+            font-weight:900; 
+            padding: 0px 10px 20px 10px; 
+            width:100px; height:50px; 
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: #B3B3B3 1px 1px 1px;
+            -moz-box-shadow: #B3B3B3 1px 1px 1px; 
+            box-shadow: #B3B3B3 1px 1px 1px; 
+        }
+        
+        div.ExtremelySatisfied { 
+            background-color:green; 
+        }
+        
+        div.VerySatisfied { 
+            background-color:#12e8dd; 
+        }
+        
+        div.FairlySatisfied { 
+            background-color:blue; 
+        }
+        
+        div.SomeRisk { 
+            background-color:#e1e81b; 
+        }
+        
+        div.HighRisk { 
+            background-color:orange; 
+        }
+        
+        div.SevereRisk { 
+            background-color:red; 
+        }
+        
+        div.None { 
+            background-color:#888c8c; 
+        }
+        
+        span.label { 
+            font-size:125%; 
+            margin-right:5px; 
+        }
+
+    </style> 
+
+    
+    <apex:outputPanel style="white-space:nowrap;font-weight:bold;font-color:red;" rendered="{!IF(account.Current_Pulse_Value__c=='None',true,false) }">
+        This Account currently does not have a Churn Risk.  Please add one by clicking on the "New Pulse" button above.
+    </apex:outputPanel>
+    
+    <br/>
+    <br/>
+    <apex:outputPanel rendered="{!account.Special_Considerations__c == 'KOL'}">
+        <apex:image url="{!$Resource.SRKOL}" height="105" style="margin-left: 120px; margin-right: 10px;float:left"></apex:image>
+        <br/>
+    </apex:outputPanel>
+    <apex:outputPanel id="SRScheduleEligible" rendered="{!srsEligible}">
+        <div class="box ExtremelySatisfied">
+            <span style="font-size:110%; float:right; margin-top:15px; margin-right:10px;">
+                Eligible for<br/>SR Schedule
+            </span>
+        </div>
+    </apex:outputPanel>
+    
+    <apex:outputPanel id="ConversationsEligible" rendered="{!srcEligible && CONTAINS(account.BillingCountry, 'United States')}" >
+        <div class="box ExtremelySatisfied">
+            <span style="font-size:110%; float:right; margin-top:5px;">
+                Eligible for <br/> SR Conversations
+            </span>
+        </div>
+    </apex:outputPanel>
+    
+    <div class="box {!account.Current_Pulse_Value__c}">
+        <p>
+            <span class="label">
+                {!account.Current_Pulse__c}
+            </span>
+        </p>
+    </div>
+    
+    <br/>
+    
+    <apex:outputText value="{!FLOOR(account.Days_since_last_Pulse__c)} day(s) since last Pulse"/>
+    
+    <br/>
+    <br/>
+    
+    <apex:outputText > Please use the button above to update Pulse</apex:outputText>
+    
+    <apex:outputText value="{!account.Practice_Management_Software__r.Limelight_Available__c}" rendered="false"/>
+
+</apex:page>

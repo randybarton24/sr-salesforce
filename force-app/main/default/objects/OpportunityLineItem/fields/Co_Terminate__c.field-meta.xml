@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Co_Terminate__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Determines if the Opportunity Product should be forced to co-terminate with all other Opportunity Products, regardless of free months.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Determines if the Opportunity Product should be forced to co-terminate with all other Opportunity Products, regardless of free months.</inlineHelpText>
+    <label>Co-Terminate</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Stage__c</fullName>
+    <description>For the partner team to track the status of this relationship</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For partner use only</inlineHelpText>
+    <label>Partner Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Radar</fullName>
+                <default>false</default>
+                <label>Radar</label>
+            </value>
+            <value>
+                <fullName>Scoping</fullName>
+                <default>false</default>
+                <label>Scoping</label>
+            </value>
+            <value>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+                <label>Qualified</label>
+            </value>
+            <value>
+                <fullName>Negotiation Review</fullName>
+                <default>false</default>
+                <label>Negotiation Review</label>
+            </value>
+            <value>
+                <fullName>Agreement</fullName>
+                <default>false</default>
+                <label>Agreement</label>
+            </value>
+            <value>
+                <fullName>Dead</fullName>
+                <default>false</default>
+                <label>Dead</label>
+            </value>
+            <value>
+                <fullName>Recycle</fullName>
+                <default>false</default>
+                <label>Recycle</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

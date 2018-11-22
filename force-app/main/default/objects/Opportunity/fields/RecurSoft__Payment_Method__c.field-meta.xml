@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Payment_Method__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Payment Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACH</fullName>
+                <default>false</default>
+                <label>ACH</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>true</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Other (Check etc.)</fullName>
+                <default>false</default>
+                <label>Other (Check etc.)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

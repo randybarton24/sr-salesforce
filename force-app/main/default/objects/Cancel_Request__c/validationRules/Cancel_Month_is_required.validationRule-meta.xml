@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_Month_is_required</fullName>
+    <active>true</active>
+    <description>When cancelling or No Sale Cancel Month is required</description>
+    <errorConditionFormula>AND(OR(ISPICKVAL(Stage__c, &quot;Cancelled&quot;),ISPICKVAL(Stage__c, &quot;No Sale&quot;)), ISBLANK(Cancel_Month__c))</errorConditionFormula>
+    <errorDisplayField>Cancel_Month__c</errorDisplayField>
+    <errorMessage>You must add a Cancel Month to mark this as Cancelled or No Sale</errorMessage>
+</ValidationRule>

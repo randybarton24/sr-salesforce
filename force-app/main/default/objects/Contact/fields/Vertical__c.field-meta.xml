@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vertical__c</fullName>
+    <description>Used for new Contacts coming from HubSpot to create new Account. Updated via Parent/Child Mapping in Apex.</description>
+    <externalId>false</externalId>
+    <label>Vertical</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dental</fullName>
+                <default>false</default>
+                <label>Dental</label>
+            </value>
+            <value>
+                <fullName>Vision</fullName>
+                <default>false</default>
+                <label>Vision</label>
+            </value>
+            <value>
+                <fullName>Medical</fullName>
+                <default>false</default>
+                <label>Medical</label>
+            </value>
+            <value>
+                <fullName>Non-Medical</fullName>
+                <default>false</default>
+                <label>Non-Medical</label>
+            </value>
+            <value>
+                <fullName>Physical Rehabilitation</fullName>
+                <default>false</default>
+                <label>Physical Rehabilitation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

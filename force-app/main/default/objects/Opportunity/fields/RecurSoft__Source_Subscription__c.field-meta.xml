@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Source_Subscription__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Master subscription for which an addendum is created.</inlineHelpText>
+    <label>Source Subscription</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>The subscription must be active and related to the opportunity&#39;s associated account.</errorMessage>
+        <filterItems>
+            <field>RecurSoft__Product_Subscription__c.RecurSoft__Account__r.Id</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>RecurSoft__Product_Subscription__c.RecurSoft__Billing_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Terminated, To be terminated</value>
+        </filterItems>
+        <filterItems>
+            <field>RecurSoft__Product_Subscription__c.RecurSoft__Is_Master__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>RecurSoft__Product_Subscription__c</referenceTo>
+    <relationshipLabel>Opportunities</relationshipLabel>
+    <relationshipName>Opportunities</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

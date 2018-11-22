@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ET_Reason_Required_for_BK_Collections</fullName>
+    <active>true</active>
+    <description>If BK/Collections is selected then the ET Reasons is required</description>
+    <errorConditionFormula>ISPICKVAL (  Cancellation_Reasons__c  , &quot;Bankruptcy/Collections/Out of business&quot; ) &amp;&amp;
+ISPICKVAL (  E_T_Reason__c , &quot;&quot; )</errorConditionFormula>
+    <errorDisplayField>E_T_Reason__c</errorDisplayField>
+    <errorMessage>E.T. Reason is required when Bankruptcy/Collections/Out of business is selected.</errorMessage>
+</ValidationRule>

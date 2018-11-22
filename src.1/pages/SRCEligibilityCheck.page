@@ -1,0 +1,38 @@
+<apex:page standardController="Account" extensions="SRCEligibilityCheck_Controller" showHeader="true" sidebar="true" tabStyle="Account">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script>
+	    j$ = jQuery.noConflict();
+	    j$(document).ready(function() {
+	       //code when page is ready 
+	       j$('.waitingGifDiv').hide();
+
+	       j$('.SubmitButton').on('click',function() {
+	           j$('.waitingGifDiv').show();
+	           j$('.SubmitButtonDiv').hide();
+	        });
+	    });
+	</script>
+
+	<apex:form >
+		<apex:pageBlock id="Results" title="Enter a Phone Number to Check SRC Eligibility">
+			<apex:pageMessage summary="{!msg}" severity="Info" rendered="true"/>
+			<apex:pageMessages />
+			<br/>
+			<apex:inputText title="Phone Number" value="{!phoneNum}" />
+			<br/>
+			<br/>
+			<apex:messages >
+	            <div class="waitingGifDiv" >
+	                <apex:image id="WaitingGif" url="{!$Resource.loading}" width="25" height="25" style="float:center-right; "/>
+	                Checking Eligibility, Please wait...
+	            </div>
+	            <div class="SubmitButtonDiv">
+	                <apex:commandButton styleClass="SubmitButton" value="Check SRC Eligibility" action="{!check}"/>
+					<apex:commandButton value="Back to Account" action="{!back}"/>
+	            </div>
+			</apex:messages>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

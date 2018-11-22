@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>Input_Assignment</name>
+        <label>Input Assignment</label>
+        <locationX>687</locationX>
+        <locationY>278</locationY>
+        <assignmentItems>
+            <assignToReference>varSubject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Subject</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varDescription</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Description</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Work_item</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Comes_from_ticket</name>
+        <label>Comes from ticket</label>
+        <locationX>652</locationX>
+        <locationY>61</locationY>
+        <defaultConnector>
+            <targetReference>Work_Detail_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Needs input</defaultConnectorLabel>
+        <rules>
+            <name>From_Ticket</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varSubject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue/>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Creating_ticket</targetReference>
+            </connector>
+            <label>From Ticket</label>
+        </rules>
+    </decisions>
+    <description>Creates a Work Item with Subject and Description</description>
+    <interviewLabel>Work Item Creation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Work Item Creation</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Work_item</name>
+        <label>Create Work item</label>
+        <locationX>970</locationX>
+        <locationY>278</locationY>
+        <assignRecordIdToReference>varWorkId</assignRecordIdToReference>
+        <faultConnector>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>agf__Details__c</field>
+            <value>
+                <elementReference>varDescription</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>agf__Product_Tag__c</field>
+            <value>
+                <stringValue>a5Q0Z000000R0a9UAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>agf__Subject__c</field>
+            <value>
+                <elementReference>varSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <object>agf__ADM_Work__c</object>
+    </recordCreates>
+    <screens>
+        <name>Creating_ticket</name>
+        <label>Creating ticket</label>
+        <locationX>854</locationX>
+        <locationY>160</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_Work_item</targetReference>
+        </connector>
+        <fields>
+            <name>CreatingTicket</name>
+            <fieldText>We are crating a Work Item with the following information:
+Subject: {!varSubject}
+Description: {!varDescription}</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <isVisible>true</isVisible>
+        </fields>
+    </screens>
+    <screens>
+        <name>Error_Screen</name>
+        <label>Error Screen</label>
+        <locationX>691</locationX>
+        <locationY>505</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ErrorScreen</name>
+            <fieldText>We&#39;ve encountered an error.  Please try again.  If you continue to get this error please see your Administrator with the following error message:
+
+{!$Flow.FaultMessage}</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <isVisible>true</isVisible>
+        </fields>
+    </screens>
+    <screens>
+        <name>Work_Detail_Screen</name>
+        <label>Work Detail Screen</label>
+        <locationX>440</locationX>
+        <locationY>281</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Input_Assignment</targetReference>
+        </connector>
+        <fields>
+            <name>Subject</name>
+            <dataType>String</dataType>
+            <fieldText>Subject</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <isVisible>true</isVisible>
+        </fields>
+        <fields>
+            <name>Description</name>
+            <fieldText>Description</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+            <isVisible>true</isVisible>
+        </fields>
+    </screens>
+    <startElementReference>Comes_from_ticket</startElementReference>
+    <variables>
+        <name>varDescription</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varSubject</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varWorkId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

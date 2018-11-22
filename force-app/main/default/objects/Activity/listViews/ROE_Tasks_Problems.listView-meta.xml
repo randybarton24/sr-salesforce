@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROE_Tasks_Problems</fullName>
+    <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>Activity_Type__c</columns>
+    <columns>Activity_Results__c</columns>
+    <columns>Talked_To__c</columns>
+    <columns>TASK.STATUS</columns>
+    <columns>Date_Completed_New__c</columns>
+    <filterScope>Team</filterScope>
+    <filters>
+        <field>Activity_Results__c</field>
+        <operation>equals</operation>
+        <value>Future Event</value>
+    </filters>
+    <filters>
+        <field>TASK.STATUS</field>
+        <operation>equals</operation>
+        <value>Completed</value>
+    </filters>
+    <filters>
+        <field>Activity_Results__c</field>
+        <operation>equals</operation>
+        <value>Left Voice Mail,Spoke with-,Received</value>
+    </filters>
+    <filters>
+        <field>TASK.STATUS</field>
+        <operation>equals</operation>
+        <value>Scheduled</value>
+    </filters>
+    <label>ROE Task Problems</label>
+    <sharedTo>
+        <roleAndSubordinates>SVP_Sales</roleAndSubordinates>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ophthalmology_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Ophthalmology Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anterior Lamellar Keratoplasty (ALK)</fullName>
+                <default>false</default>
+                <label>Anterior Lamellar Keratoplasty (ALK)</label>
+            </value>
+            <value>
+                <fullName>Anterior Vitrectomy</fullName>
+                <default>false</default>
+                <label>Anterior Vitrectomy</label>
+            </value>
+            <value>
+                <fullName>Antifungal Eye Drops</fullName>
+                <default>false</default>
+                <label>Antifungal Eye Drops</label>
+            </value>
+            <value>
+                <fullName>Argon Laser Surgery</fullName>
+                <default>false</default>
+                <label>Argon Laser Surgery</label>
+            </value>
+            <value>
+                <fullName>Argon Laser Trabeculoplasty</fullName>
+                <default>false</default>
+                <label>Argon Laser Trabeculoplasty</label>
+            </value>
+            <value>
+                <fullName>Argon Laser Treatment</fullName>
+                <default>false</default>
+                <label>Argon Laser Treatment</label>
+            </value>
+            <value>
+                <fullName>Asian Eyelid Surgery</fullName>
+                <default>false</default>
+                <label>Asian Eyelid Surgery</label>
+            </value>
+            <value>
+                <fullName>Astigmatic Keratotomy</fullName>
+                <default>false</default>
+                <label>Astigmatic Keratotomy</label>
+            </value>
+            <value>
+                <fullName>Avastin® Injection</fullName>
+                <default>false</default>
+                <label>Avastin® Injection</label>
+            </value>
+            <value>
+                <fullName>Biopsy of Cornea</fullName>
+                <default>false</default>
+                <label>Biopsy of Cornea</label>
+            </value>
+            <value>
+                <fullName>Blepharoplasty</fullName>
+                <default>false</default>
+                <label>Blepharoplasty</label>
+            </value>
+            <value>
+                <fullName>Blepharorrhaphy</fullName>
+                <default>false</default>
+                <label>Blepharorrhaphy</label>
+            </value>
+            <value>
+                <fullName>B-Scan Ultrasound</fullName>
+                <default>false</default>
+                <label>B-Scan Ultrasound</label>
+            </value>
+            <value>
+                <fullName>Canthoplasty and Canthopexy</fullName>
+                <default>false</default>
+                <label>Canthoplasty and Canthopexy</label>
+            </value>
+            <value>
+                <fullName>Canthotomy</fullName>
+                <default>false</default>
+                <label>Canthotomy</label>
+            </value>
+            <value>
+                <fullName>Cataract Removal Surgery</fullName>
+                <default>false</default>
+                <label>Cataract Removal Surgery</label>
+            </value>
+            <value>
+                <fullName>Clear Lens Extraction</fullName>
+                <default>false</default>
+                <label>Clear Lens Extraction</label>
+            </value>
+            <value>
+                <fullName>Clear Lens Srgry w/Multifocal Implant</fullName>
+                <default>false</default>
+                <label>Clear Lens Srgry w/Multifocal Implant</label>
+            </value>
+            <value>
+                <fullName>Clear Lens Surgery-Crct Nr/Fr Simltans</fullName>
+                <default>false</default>
+                <label>Clear Lens Surgery-Crct Nr/Fr Simltans</label>
+            </value>
+            <value>
+                <fullName>Conjunctivocystorhinostomy</fullName>
+                <default>false</default>
+                <label>Conjunctivocystorhinostomy</label>
+            </value>
+            <value>
+                <fullName>Conjunctivoplasty</fullName>
+                <default>false</default>
+                <label>Conjunctivoplasty</label>
+            </value>
+            <value>
+                <fullName>Contact Lens Exams</fullName>
+                <default>false</default>
+                <label>Contact Lens Exams</label>
+            </value>
+            <value>
+                <fullName>Contact Lens Services</fullName>
+                <default>false</default>
+                <label>Contact Lens Services</label>
+            </value>
+            <value>
+                <fullName>Coreoplasty</fullName>
+                <default>false</default>
+                <label>Coreoplasty</label>
+            </value>
+            <value>
+                <fullName>Corneal Graft</fullName>
+                <default>false</default>
+                <label>Corneal Graft</label>
+            </value>
+            <value>
+                <fullName>Corneal Tattooing</fullName>
+                <default>false</default>
+                <label>Corneal Tattooing</label>
+            </value>
+            <value>
+                <fullName>Cornea Surgery</fullName>
+                <default>false</default>
+                <label>Cornea Surgery</label>
+            </value>
+            <value>
+                <fullName>Cornea Transplant</fullName>
+                <default>false</default>
+                <label>Cornea Transplant</label>
+            </value>
+            <value>
+                <fullName>Cryopexy</fullName>
+                <default>false</default>
+                <label>Cryopexy</label>
+            </value>
+            <value>
+                <fullName>Cryoretinopexy</fullName>
+                <default>false</default>
+                <label>Cryoretinopexy</label>
+            </value>
+            <value>
+                <fullName>Cyclocryotherapy</fullName>
+                <default>false</default>
+                <label>Cyclocryotherapy</label>
+            </value>
+            <value>
+                <fullName>Cyclodiathermy</fullName>
+                <default>false</default>
+                <label>Cyclodiathermy</label>
+            </value>
+            <value>
+                <fullName>Dacryoadenectomy</fullName>
+                <default>false</default>
+                <label>Dacryoadenectomy</label>
+            </value>
+            <value>
+                <fullName>Dacryocystectomy</fullName>
+                <default>false</default>
+                <label>Dacryocystectomy</label>
+            </value>
+            <value>
+                <fullName>Dacryocystorhinostomy</fullName>
+                <default>false</default>
+                <label>Dacryocystorhinostomy</label>
+            </value>
+            <value>
+                <fullName>Dacryocystostomy or Dacryocystotomy</fullName>
+                <default>false</default>
+                <label>Dacryocystostomy or Dacryocystotomy</label>
+            </value>
+            <value>
+                <fullName>Destruction Lesion of Retina/Choroid</fullName>
+                <default>false</default>
+                <label>Destruction Lesion of Retina/Choroid</label>
+            </value>
+            <value>
+                <fullName>Diabetes Eye Care</fullName>
+                <default>false</default>
+                <label>Diabetes Eye Care</label>
+            </value>
+            <value>
+                <fullName>Diabetic Eye Exam</fullName>
+                <default>false</default>
+                <label>Diabetic Eye Exam</label>
+            </value>
+            <value>
+                <fullName>Diagnostic Angiography</fullName>
+                <default>false</default>
+                <label>Diagnostic Angiography</label>
+            </value>
+            <value>
+                <fullName>Dilation of Outflow Canal</fullName>
+                <default>false</default>
+                <label>Dilation of Outflow Canal</label>
+            </value>
+            <value>
+                <fullName>Drainage of Conjunctival Cyst</fullName>
+                <default>false</default>
+                <label>Drainage of Conjunctival Cyst</label>
+            </value>
+            <value>
+                <fullName>Endoscopic Brow Lift</fullName>
+                <default>false</default>
+                <label>Endoscopic Brow Lift</label>
+            </value>
+            <value>
+                <fullName>Enucleation of Eye</fullName>
+                <default>false</default>
+                <label>Enucleation of Eye</label>
+            </value>
+            <value>
+                <fullName>Epi-LASIK Eye Surgery</fullName>
+                <default>false</default>
+                <label>Epi-LASIK Eye Surgery</label>
+            </value>
+            <value>
+                <fullName>Excision/Destruction of LesionCornea</fullName>
+                <default>false</default>
+                <label>Excision/Destruction of LesionCornea</label>
+            </value>
+            <value>
+                <fullName>Excision/Dstructn of Lesion of Sclera</fullName>
+                <default>false</default>
+                <label>Excision/Dstructn of Lesion of Sclera</label>
+            </value>
+            <value>
+                <fullName>Excision of Chalazion</fullName>
+                <default>false</default>
+                <label>Excision of Chalazion</label>
+            </value>
+            <value>
+                <fullName>Exenteration</fullName>
+                <default>false</default>
+                <label>Exenteration</label>
+            </value>
+            <value>
+                <fullName>Extracapsular Cataract Extraction</fullName>
+                <default>false</default>
+                <label>Extracapsular Cataract Extraction</label>
+            </value>
+            <value>
+                <fullName>Extraocular Muscle Surgery</fullName>
+                <default>false</default>
+                <label>Extraocular Muscle Surgery</label>
+            </value>
+            <value>
+                <fullName>Eye Drops</fullName>
+                <default>false</default>
+                <label>Eye Drops</label>
+            </value>
+            <value>
+                <fullName>Eye Examination</fullName>
+                <default>false</default>
+                <label>Eye Examination</label>
+            </value>
+            <value>
+                <fullName>Eyeglasses</fullName>
+                <default>false</default>
+                <label>Eyeglasses</label>
+            </value>
+            <value>
+                <fullName>Eye Injection</fullName>
+                <default>false</default>
+                <label>Eye Injection</label>
+            </value>
+            <value>
+                <fullName>Eyelid Reconstruction Surgery</fullName>
+                <default>false</default>
+                <label>Eyelid Reconstruction Surgery</label>
+            </value>
+            <value>
+                <fullName>Eyelid Surgery</fullName>
+                <default>false</default>
+                <label>Eyelid Surgery</label>
+            </value>
+            <value>
+                <fullName>Eye Patch</fullName>
+                <default>false</default>
+                <label>Eye Patch</label>
+            </value>
+            <value>
+                <fullName>Eye Procedure</fullName>
+                <default>false</default>
+                <label>Eye Procedure</label>
+            </value>
+            <value>
+                <fullName>Eye Surgery</fullName>
+                <default>false</default>
+                <label>Eye Surgery</label>
+            </value>
+            <value>
+                <fullName>Foreign Body Removal from Eye</fullName>
+                <default>false</default>
+                <label>Foreign Body Removal from Eye</label>
+            </value>
+            <value>
+                <fullName>Glaucoma Medical Therapy</fullName>
+                <default>false</default>
+                <label>Glaucoma Medical Therapy</label>
+            </value>
+            <value>
+                <fullName>Glaucoma Surgery</fullName>
+                <default>false</default>
+                <label>Glaucoma Surgery</label>
+            </value>
+            <value>
+                <fullName>Glaucoma Treatment</fullName>
+                <default>false</default>
+                <label>Glaucoma Treatment</label>
+            </value>
+            <value>
+                <fullName>Goniotomy</fullName>
+                <default>false</default>
+                <label>Goniotomy</label>
+            </value>
+            <value>
+                <fullName>Implantable Contact Lens</fullName>
+                <default>false</default>
+                <label>Implantable Contact Lens</label>
+            </value>
+            <value>
+                <fullName>Indocyanine Green Angiography</fullName>
+                <default>false</default>
+                <label>Indocyanine Green Angiography</label>
+            </value>
+            <value>
+                <fullName>Intracorneal Ring (ICR)</fullName>
+                <default>false</default>
+                <label>Intracorneal Ring (ICR)</label>
+            </value>
+            <value>
+                <fullName>Intraocular Lens Pigmentation Removal</fullName>
+                <default>false</default>
+                <label>Intraocular Lens Pigmentation Removal</label>
+            </value>
+            <value>
+                <fullName>Iridotomy</fullName>
+                <default>false</default>
+                <label>Iridotomy</label>
+            </value>
+            <value>
+                <fullName>Juvéderm® Injection</fullName>
+                <default>false</default>
+                <label>Juvéderm® Injection</label>
+            </value>
+            <value>
+                <fullName>Keratomileusis</fullName>
+                <default>false</default>
+                <label>Keratomileusis</label>
+            </value>
+            <value>
+                <fullName>Keratophakia</fullName>
+                <default>false</default>
+                <label>Keratophakia</label>
+            </value>
+            <value>
+                <fullName>Laser Cataract Surgery</fullName>
+                <default>false</default>
+                <label>Laser Cataract Surgery</label>
+            </value>
+            <value>
+                <fullName>Laser Cryopexy</fullName>
+                <default>false</default>
+                <label>Laser Cryopexy</label>
+            </value>
+            <value>
+                <fullName>Laser Microsurgery</fullName>
+                <default>false</default>
+                <label>Laser Microsurgery</label>
+            </value>
+            <value>
+                <fullName>Laser Office Procedure</fullName>
+                <default>false</default>
+                <label>Laser Office Procedure</label>
+            </value>
+            <value>
+                <fullName>Laser Surgery</fullName>
+                <default>false</default>
+                <label>Laser Surgery</label>
+            </value>
+            <value>
+                <fullName>Laser Trabeculoplasty or Iridectomy</fullName>
+                <default>false</default>
+                <label>Laser Trabeculoplasty or Iridectomy</label>
+            </value>
+            <value>
+                <fullName>Lash Enhancer</fullName>
+                <default>false</default>
+                <label>Lash Enhancer</label>
+            </value>
+            <value>
+                <fullName>LASIK</fullName>
+                <default>false</default>
+                <label>LASIK</label>
+            </value>
+            <value>
+                <fullName>Macugen® Injection</fullName>
+                <default>false</default>
+                <label>Macugen® Injection</label>
+            </value>
+            <value>
+                <fullName>Macular Translocation</fullName>
+                <default>false</default>
+                <label>Macular Translocation</label>
+            </value>
+            <value>
+                <fullName>Medical/Surgical Mgmt of Glaucoma</fullName>
+                <default>false</default>
+                <label>Medical/Surgical Mgmt of Glaucoma</label>
+            </value>
+            <value>
+                <fullName>No-Stitch Corneal Transplantation (DLEK)</fullName>
+                <default>false</default>
+                <label>No-Stitch Corneal Transplantation (DLEK)</label>
+            </value>
+            <value>
+                <fullName>Ocular Inflammation (Uveitis) Treatment</fullName>
+                <default>false</default>
+                <label>Ocular Inflammation (Uveitis) Treatment</label>
+            </value>
+            <value>
+                <fullName>Ocular Prosthetics</fullName>
+                <default>false</default>
+                <label>Ocular Prosthetics</label>
+            </value>
+            <value>
+                <fullName>Ocular Surface Reconstruction</fullName>
+                <default>false</default>
+                <label>Ocular Surface Reconstruction</label>
+            </value>
+            <value>
+                <fullName>Oculoplastics</fullName>
+                <default>false</default>
+                <label>Oculoplastics</label>
+            </value>
+            <value>
+                <fullName>Ophthalmic Surgical Procedures</fullName>
+                <default>false</default>
+                <label>Ophthalmic Surgical Procedures</label>
+            </value>
+            <value>
+                <fullName>Orbital Decompression and Orbitotomy</fullName>
+                <default>false</default>
+                <label>Orbital Decompression and Orbitotomy</label>
+            </value>
+            <value>
+                <fullName>Orbital Floor Fracture Repair</fullName>
+                <default>false</default>
+                <label>Orbital Floor Fracture Repair</label>
+            </value>
+            <value>
+                <fullName>Orbit Evisceration</fullName>
+                <default>false</default>
+                <label>Orbit Evisceration</label>
+            </value>
+            <value>
+                <fullName>Paracentesis of Anterior Eye</fullName>
+                <default>false</default>
+                <label>Paracentesis of Anterior Eye</label>
+            </value>
+            <value>
+                <fullName>Peripheral Iridotomy</fullName>
+                <default>false</default>
+                <label>Peripheral Iridotomy</label>
+            </value>
+            <value>
+                <fullName>Phacoemulsification</fullName>
+                <default>false</default>
+                <label>Phacoemulsification</label>
+            </value>
+            <value>
+                <fullName>Phakic Refractive Lens Implantation</fullName>
+                <default>false</default>
+                <label>Phakic Refractive Lens Implantation</label>
+            </value>
+            <value>
+                <fullName>Photocoagulation</fullName>
+                <default>false</default>
+                <label>Photocoagulation</label>
+            </value>
+            <value>
+                <fullName>Photodynamic Therapy (PDT)</fullName>
+                <default>false</default>
+                <label>Photodynamic Therapy (PDT)</label>
+            </value>
+            <value>
+                <fullName>Photorefractive Keratectomy (PRK)</fullName>
+                <default>false</default>
+                <label>Photorefractive Keratectomy (PRK)</label>
+            </value>
+            <value>
+                <fullName>Photo Therapeutic Keratectomy</fullName>
+                <default>false</default>
+                <label>Photo Therapeutic Keratectomy</label>
+            </value>
+            <value>
+                <fullName>Plaque Radiation Therapy</fullName>
+                <default>false</default>
+                <label>Plaque Radiation Therapy</label>
+            </value>
+            <value>
+                <fullName>Plastic Surgery, Facial</fullName>
+                <default>false</default>
+                <label>Plastic Surgery, Facial</label>
+            </value>
+            <value>
+                <fullName>Pneumatic Retinopexy</fullName>
+                <default>false</default>
+                <label>Pneumatic Retinopexy</label>
+            </value>
+            <value>
+                <fullName>Prism Lenses</fullName>
+                <default>false</default>
+                <label>Prism Lenses</label>
+            </value>
+            <value>
+                <fullName>Pterygium Surgery</fullName>
+                <default>false</default>
+                <label>Pterygium Surgery</label>
+            </value>
+            <value>
+                <fullName>Ptosis (Eyelids) Surgery</fullName>
+                <default>false</default>
+                <label>Ptosis (Eyelids) Surgery</label>
+            </value>
+            <value>
+                <fullName>Punctal Plug Insertion</fullName>
+                <default>false</default>
+                <label>Punctal Plug Insertion</label>
+            </value>
+            <value>
+                <fullName>Q-Switched Nd:YAG Laser</fullName>
+                <default>false</default>
+                <label>Q-Switched Nd:YAG Laser</label>
+            </value>
+            <value>
+                <fullName>Radial Keratotomy</fullName>
+                <default>false</default>
+                <label>Radial Keratotomy</label>
+            </value>
+            <value>
+                <fullName>Reconstructive Eyelid Surgery</fullName>
+                <default>false</default>
+                <label>Reconstructive Eyelid Surgery</label>
+            </value>
+            <value>
+                <fullName>Refractive Lens Exchange</fullName>
+                <default>false</default>
+                <label>Refractive Lens Exchange</label>
+            </value>
+            <value>
+                <fullName>Refractive Surgery</fullName>
+                <default>false</default>
+                <label>Refractive Surgery</label>
+            </value>
+            <value>
+                <fullName>Removal of Fregn Body from Extrnl Eye</fullName>
+                <default>false</default>
+                <label>Removal of Fregn Body from Extrnl Eye</label>
+            </value>
+            <value>
+                <fullName>Repair of Brow Ptosis and Blepharoptosis</fullName>
+                <default>false</default>
+                <label>Repair of Brow Ptosis and Blepharoptosis</label>
+            </value>
+            <value>
+                <fullName>Repair of Entropion or Ectropion</fullName>
+                <default>false</default>
+                <label>Repair of Entropion or Ectropion</label>
+            </value>
+            <value>
+                <fullName>Repair of Lid Retraction</fullName>
+                <default>false</default>
+                <label>Repair of Lid Retraction</label>
+            </value>
+            <value>
+                <fullName>Repair of Retinal Detachment</fullName>
+                <default>false</default>
+                <label>Repair of Retinal Detachment</label>
+            </value>
+            <value>
+                <fullName>Repair of Rtinal Detachment/Rtinal Tr</fullName>
+                <default>false</default>
+                <label>Repair of Rtinal Detachment/Rtinal Tr</label>
+            </value>
+            <value>
+                <fullName>Retina and Vitreous Surgery</fullName>
+                <default>false</default>
+                <label>Retina and Vitreous Surgery</label>
+            </value>
+            <value>
+                <fullName>Retinal Freezing (Cryopexy)</fullName>
+                <default>false</default>
+                <label>Retinal Freezing (Cryopexy)</label>
+            </value>
+            <value>
+                <fullName>Retinal Laser Photocoagulation</fullName>
+                <default>false</default>
+                <label>Retinal Laser Photocoagulation</label>
+            </value>
+            <value>
+                <fullName>Retinal Laser Surgery</fullName>
+                <default>false</default>
+                <label>Retinal Laser Surgery</label>
+            </value>
+            <value>
+                <fullName>Retinal Surgery</fullName>
+                <default>false</default>
+                <label>Retinal Surgery</label>
+            </value>
+            <value>
+                <fullName>Retinal Testing</fullName>
+                <default>false</default>
+                <label>Retinal Testing</label>
+            </value>
+            <value>
+                <fullName>Retinal Thermal Laser Therapy</fullName>
+                <default>false</default>
+                <label>Retinal Thermal Laser Therapy</label>
+            </value>
+            <value>
+                <fullName>Routine General Exams</fullName>
+                <default>false</default>
+                <label>Routine General Exams</label>
+            </value>
+            <value>
+                <fullName>Scatter Laser Treatment</fullName>
+                <default>false</default>
+                <label>Scatter Laser Treatment</label>
+            </value>
+            <value>
+                <fullName>Scleral Buckling</fullName>
+                <default>false</default>
+                <label>Scleral Buckling</label>
+            </value>
+            <value>
+                <fullName>Scleral Reinforcement Surgery</fullName>
+                <default>false</default>
+                <label>Scleral Reinforcement Surgery</label>
+            </value>
+            <value>
+                <fullName>Soft Contact Lenses</fullName>
+                <default>false</default>
+                <label>Soft Contact Lenses</label>
+            </value>
+            <value>
+                <fullName>Strabismus Examination</fullName>
+                <default>false</default>
+                <label>Strabismus Examination</label>
+            </value>
+            <value>
+                <fullName>Strabismus Surgery</fullName>
+                <default>false</default>
+                <label>Strabismus Surgery</label>
+            </value>
+            <value>
+                <fullName>Sutureless Cataract Surgery</fullName>
+                <default>false</default>
+                <label>Sutureless Cataract Surgery</label>
+            </value>
+            <value>
+                <fullName>Tear Drainage Surgery</fullName>
+                <default>false</default>
+                <label>Tear Drainage Surgery</label>
+            </value>
+            <value>
+                <fullName>Tear Duct Surgery</fullName>
+                <default>false</default>
+                <label>Tear Duct Surgery</label>
+            </value>
+            <value>
+                <fullName>Temporal Artery Biopsy</fullName>
+                <default>false</default>
+                <label>Temporal Artery Biopsy</label>
+            </value>
+            <value>
+                <fullName>Thermotherapy</fullName>
+                <default>false</default>
+                <label>Thermotherapy</label>
+            </value>
+            <value>
+                <fullName>Trabeculectomy</fullName>
+                <default>false</default>
+                <label>Trabeculectomy</label>
+            </value>
+            <value>
+                <fullName>Trabeculotomy Ab Externo</fullName>
+                <default>false</default>
+                <label>Trabeculotomy Ab Externo</label>
+            </value>
+            <value>
+                <fullName>Transillumination</fullName>
+                <default>false</default>
+                <label>Transillumination</label>
+            </value>
+            <value>
+                <fullName>Ultrasound, Carotid</fullName>
+                <default>false</default>
+                <label>Ultrasound, Carotid</label>
+            </value>
+            <value>
+                <fullName>Ultrasound, Eye</fullName>
+                <default>false</default>
+                <label>Ultrasound, Eye</label>
+            </value>
+            <value>
+                <fullName>Vitrectomy</fullName>
+                <default>false</default>
+                <label>Vitrectomy</label>
+            </value>
+            <value>
+                <fullName>Vitreoretinal Surgery</fullName>
+                <default>false</default>
+                <label>Vitreoretinal Surgery</label>
+            </value>
+            <value>
+                <fullName>Vitreous Surgery</fullName>
+                <default>false</default>
+                <label>Vitreous Surgery</label>
+            </value>
+            <value>
+                <fullName>YAG Iridotomy</fullName>
+                <default>false</default>
+                <label>YAG Iridotomy</label>
+            </value>
+            <value>
+                <fullName>YAG Laser Capsulotomy</fullName>
+                <default>false</default>
+                <label>YAG Laser Capsulotomy</label>
+            </value>
+            <value>
+                <fullName>YAG Laser Surgery</fullName>
+                <default>false</default>
+                <label>YAG Laser Surgery</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__ValidateOverageAutomation</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c, false, 
+    RecurSoft__Overage_automation__c &amp;&amp; !ISPICKVAL(RecurSoft__Usage_Type__c , &#39;Earned Revenue&#39;)
+)</errorConditionFormula>
+    <errorMessage>Overage automation can be selected only with Earned Revenue usage type.</errorMessage>
+</ValidationRule>

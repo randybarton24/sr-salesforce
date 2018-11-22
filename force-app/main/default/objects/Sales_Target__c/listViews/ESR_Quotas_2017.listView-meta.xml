@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESR_Quotas_2017</fullName>
+    <columns>NAME</columns>
+    <columns>Owner__c</columns>
+    <columns>Target_Date__c</columns>
+    <columns>Actual_Credits__c</columns>
+    <columns>Target__c</columns>
+    <columns>Sub_Team__c</columns>
+    <columns>Sales_Rep_SR_Credit__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Owner_Profile__c</field>
+        <operation>equals</operation>
+        <value>Extended Sales</value>
+    </filters>
+    <filters>
+        <field>Target_Year__c</field>
+        <operation>equals</operation>
+        <value>2017</value>
+    </filters>
+    <filters>
+        <field>Target_Date__c</field>
+        <operation>equals</operation>
+        <value>4/1/2017</value>
+    </filters>
+    <filters>
+        <field>Sub_Team__c</field>
+        <operation>notEqual</operation>
+        <value>Extended Sales Manager</value>
+    </filters>
+    <label>ESR Quotas April 2017</label>
+</ListView>

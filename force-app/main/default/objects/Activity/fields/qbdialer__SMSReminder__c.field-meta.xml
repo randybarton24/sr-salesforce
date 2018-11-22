@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>qbdialer__SMSReminder__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Text message reminders will be sent to all attendees at the set reminder time.</inlineHelpText>
+    <label>Send text msg reminder to all attendees</label>
+    <type>Checkbox</type>
+</CustomField>

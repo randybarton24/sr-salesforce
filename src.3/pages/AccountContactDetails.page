@@ -1,0 +1,72 @@
+<apex:page standardController="Account" extensions="AccountContactDetails_Controller" showHeader="true" sidebar="true" >
+    
+    <apex:stylesheet value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"/>
+
+    <script type="text/javascript">
+        var x$ = jQuery.noConflict();
+
+        x$(document).ready(function() {
+            x$("#tabs").tabs();
+        });
+
+        j$ = jQuery.noConflict();
+        j$(document).ready(function() {
+           //code when page is ready 
+           j$('.waitingGifDiv').hide();
+
+           j$('.saveButton').on('click',function() {
+               j$('.waitingGifDiv').show();
+               j$('.saveButtonDiv').hide();
+            });
+        });
+    </script>
+    
+    <apex:outputPanel >
+        <apex:form >
+            <div align="center" style="padding-bottom: 5px">
+                <div class="waitingGifDiv" >
+                    <apex:image id="WaitingGif" url="{!$Resource.loading}" width="25" height="25" style="float:center-right; "/>
+                    Processing, Please wait...
+                </div>
+                <div class="saveButtonDiv">
+                    <apex:commandButton action="{!createNewContact}" value="Save" styleClass="saveButton" id="saveNewContactButton"
+                        rendered="{!renderNewContact}" reRender="table"
+                        oncomplete="window.top.location='/{!account.id}';" />
+                    <apex:commandButton action="{!newContactForm}" value="New Contact" id="newContactButton"
+                        rendered="{!!renderNewContact}" />
+                    <apex:commandButton action="{!cancel}" value="Cancel"
+                        id="editCancelButton" rendered="{!renderNewContact}"
+                        onclick="window.top.location='/{!account.id}';" />
+                </div>
+            </div>
+            <apex:pageBlock rendered="{!renderNewContact}">
+                <apex:pageBlockSection title="Contact Information" collapsible="false" columns="2">
+                    <apex:inputField value="{!newContact.Title}"/>
+                    <apex:pageBlockSectionItem />
+                    <apex:inputField value="{!newContact.FirstName}" required="true"/>
+                    <apex:inputField value="{!newContact.LastName}"/>
+                    <apex:inputField value="{!newContact.Phone}" required="true"/>
+                    <apex:inputField value="{!newContact.Email}" required="true"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:form>
+    </apex:outputPanel>
+
+    <apex:outputPanel rendered="{!!renderNewContact}">
+        <div id="tabs" class="ui-tabs">
+            <ul class="ui-tabs-nav">
+                <apex:repeat var="contact" value="{!listContacts}" id="repeat">
+                    <li><a href="#tabs-{!contact.Id}">{!contact.Name}</a></li>
+                </apex:repeat>
+            </ul>
+            <apex:repeat var="contact" value="{!listContacts}" id="details">
+                <div id="tabs-{!contact.Id}">
+                    <apex:detail subject="{!contact}" relatedList="false" title="false" inlineEdit="true" oncomplete="window.top.location='/{!account.id}';"/>
+                </div>
+            </apex:repeat>
+        </div>
+    </apex:outputPanel>
+
+</apex:page>

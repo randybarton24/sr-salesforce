@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unavailable_Feature_only_when_selected</fullName>
+    <active>true</active>
+    <description>Makes it so Unavailable features can only be selected when that cancel reason is selected</description>
+    <errorConditionFormula>NOT(CONTAINS(Text(Cancellation_Reasons__c), &quot;Unavailable Feature&quot;)) &amp;&amp;  NOT(ISBLANK(Unavailable_Feature__c ))</errorConditionFormula>
+    <errorDisplayField>Unavailable_Feature__c</errorDisplayField>
+    <errorMessage>You Cannot select an Unavailable Feature unless you&#39;ve selected that option from the Cancel Reasons</errorMessage>
+</ValidationRule>

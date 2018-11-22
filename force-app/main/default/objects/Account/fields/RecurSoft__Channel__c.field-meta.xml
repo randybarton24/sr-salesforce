@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Channel__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This field is mapped to the Class dimension in Intacct.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Maps to the class dimension ID within Intacct.</inlineHelpText>
+    <label>Class</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>100</fullName>
+                <default>true</default>
+                <label>100</label>
+            </value>
+            <value>
+                <fullName>200</fullName>
+                <default>false</default>
+                <label>200</label>
+            </value>
+            <value>
+                <fullName>300</fullName>
+                <default>false</default>
+                <label>300</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

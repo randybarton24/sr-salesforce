@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_have_Automated_Mail_Subject</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISNEW() &amp;&amp;
+(CONTAINS(Subject, &quot;Re: Appointment Confirmation&quot;)
+ || 
+CONTAINS(Subject, &quot;Thank you for your interest in our office!&quot;)
+ || 
+CONTAINS(Subject, &quot;Re: Online profile appointment request&quot;)
+ || 
+CONTAINS(Subject, &quot;Thanks for your request&quot;)
+ || 
+CONTAINS(Subject, &quot;Re: Appointment confirmation&quot;)
+||
+CONTAINS(Subject, &quot;Appointment confirmation&quot;)
+||
+CONTAINS(Subject, &quot;Re: Appointment Request&quot;)
+||
+CONTAINS(Subject, &quot;(autoresponse) Appointment confirmation&quot;)
+||
+CONTAINS(Subject, &quot;Unmonitored Inbox&quot;)
+|| 
+CONTAINS(Subject, &quot;RE: Online profile appointment request&quot;))</errorConditionFormula>
+    <errorMessage>Change subject of case</errorMessage>
+</ValidationRule>

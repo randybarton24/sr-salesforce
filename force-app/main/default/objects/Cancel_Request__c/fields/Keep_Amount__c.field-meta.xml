@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Keep_Amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( ISPICKVAL( Cancel_Request_Type__c , &quot;Trial&quot;), ( Months_Paid_Trial__c * Current_MSF__c ) + (( Save_Term__c - New_Free_Months__c ) * Save_MSF__c ) , (( Save_Term__c - New_Free_Months__c ) * Save_MSF__c ) - ( Months_Remaining_Annual__c * Current_MSF__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Keep Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

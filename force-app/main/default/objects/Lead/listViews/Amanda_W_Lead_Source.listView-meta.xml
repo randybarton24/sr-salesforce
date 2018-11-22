@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amanda_W_Lead_Source</fullName>
+    <booleanFilter>1 AND ((2 AND 3)OR(2 AND 4)) AND 5 AND 6 AND (7 OR 8)</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>tz__Timezone__c</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>contains</operation>
+        <value>Trade Show/Event,Web,Referral Partner,Partner,Other Referral,ESR Event</value>
+    </filters>
+    <filters>
+        <field>LEAD.LAST_ACTIVITY</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_DAYS:7</value>
+    </filters>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_DAYS:45</value>
+    </filters>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Duplicate,Converted,No Integration</value>
+    </filters>
+    <filters>
+        <field>Practice_Software__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>LEAD.INDUSTRY</field>
+        <operation>equals</operation>
+        <value>Dental,Vision</value>
+    </filters>
+    <filters>
+        <field>Sub_industry__c</field>
+        <operation>equals</operation>
+        <value>Plastic Surgery</value>
+    </filters>
+    <label>Amanda W. Lead Source</label>
+    <sharedTo>
+        <role>ADR_Rep_1</role>
+    </sharedTo>
+</ListView>

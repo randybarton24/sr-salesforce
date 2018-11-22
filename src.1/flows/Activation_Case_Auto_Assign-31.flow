@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>New Onboarding flow to Assign Activation Case to Success Coaches - added Conversation case assignment</description>
+    <label>Activation Case Auto Assign</label>
+    <processType>AutoLaunchedFlow</processType>
+</Flow>

@@ -1,0 +1,62 @@
+<apex:page id="page" standardController="Account" extensions="AccountOpportunityDetails_Controller" showHeader="true" sidebar="true" >
+    
+    <apex:stylesheet value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"/>
+
+    <script type="text/javascript">
+
+        j$ = jQuery.noConflict();
+        j$(document).ready(function() {
+           //code when page is ready 
+           j$('.waitingGifDiv').hide();
+
+           j$('.claimAccountButton').on('click',function() {
+               j$('.waitingGifDiv').show();
+               j$('.ClaimAccountButtonDiv').hide();
+            });
+        });
+    </script>
+    
+    <apex:outputPanel >
+        <apex:form id="form" rendered="{!listOpps.size = 0}">
+            <div align="center" style="padding-bottom: 5px">
+                <div class="waitingGifDiv" >
+                    <apex:image id="WaitingGif" url="{!$Resource.loading}" width="25" height="25" style="float:center-right; "/>
+                    Processing, Please wait...
+                </div>
+                <div class="ClaimAccountButtonDiv">
+                    <apex:commandButton action="{!claimAccount}" styleClass="claimAccountButton" value="Claim Account" id="claimAccountButton"  reRender="form" 
+                    onclick="j$('.waitingGifDiv').show(); j$('.ClaimAccountButtonDiv').hide();"
+                    oncomplete="if({!NOT(hasError)}) window.top.location='/{!account.id}'; if({!hasError}) j$('.waitingGifDiv').hide();"/>
+                </div>
+            </div>
+            <apex:pageBlock id="pageblock">
+                <apex:pageMessages >
+                </apex:pageMessages>
+                <apex:pageBlockSection >
+                    <apex:inputField id="leadsource" required="false" label="Lead Source" value="{!o.LeadSource}"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Task Information">
+                    <apex:inputField value="{!t.Subject}"/>
+                    <apex:inputField value="{!t.Status}"/>
+                    <apex:inputField value="{!t.Activity_Type__c}"/>
+                    <apex:inputField value="{!t.Activity_Results__c}"/>
+                    <apex:inputField value="{!t.Description}"/>
+                    <apex:inputField value="{!t.Talked_To__c}"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>   
+        </apex:form>
+    </apex:outputPanel>
+
+    <apex:outputPanel >
+        <div id="tabs" class="ui-tabs">
+            <apex:repeat var="opp" value="{!listOpps}" id="details">
+                <div id="tabs-{!opp.Id}">
+                    <apex:detail subject="{!opp}" relatedList="true" title="false" inlineEdit="true" oncomplete="window.top.location='/{!account.id}';"/>
+                </div>
+            </apex:repeat>
+        </div>
+    </apex:outputPanel>
+    
+</apex:page>

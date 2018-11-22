@@ -1,0 +1,31 @@
+<aura:component implements="forceCommunity:searchInterface,forceCommunity:availableForAllPageTypes" access="global" >
+
+  <aura:attribute name='placeholder' type='String' access='global' />
+  <aura:attribute name='name' type='String' default='communityCoveo' access='global' />
+  <aura:attribute name="searchHub" type="String" default="communityCoveo" access='global' />
+  <aura:attribute name="searchPageName" type="String" default="global-search/%40uri" access='global'/> 
+  <aura:attribute name="enableQuerySuggestAddon" type="boolean" default="true" access='global'/>
+      <div>        
+    	<div class="welcome-search-sec">
+			<span class="slds-text-heading--large">Welcome to the Solutionreach Community</span> 
+            <h1>A resource to find answers and connect with peers.</h1> 
+            <div class="search">
+                <div class="search-wrapper">
+                    <form class="search-form">
+                        <div class="search-input-wrapper">
+                    <CoveoV2:Searchbox name="{!v.name}"
+                     searchHub="{!v.searchHub}"
+                     searchPageName="{!v.searchPageName}"
+                     placeholder="{!v.placeholder}"
+                     enableQuerySuggestAddon="{!v.enableQuerySuggestAddon}"/>
+                            
+                        </div>
+                        <input type="hidden" name="language" value="en" />
+                    </form>
+                </div>
+            </div>
+        </div>               
+    </div>
+  
+    
+</aura:component>

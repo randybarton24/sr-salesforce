@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_Change_MSF</fullName>
+    <active>true</active>
+    <errorConditionFormula>(Change_MSF__c = true &amp;&amp;
+ISBLANK( New_MSF__c )) ||
+(Change_MSF__c = false &amp;&amp;
+NOT(ISBLANK( New_MSF__c )))</errorConditionFormula>
+    <errorMessage>The Change MSF modification isn&#39;t complete.</errorMessage>
+</ValidationRule>

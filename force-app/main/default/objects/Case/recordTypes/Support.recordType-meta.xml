@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Support</fullName>
+    <active>true</active>
+    <businessProcess>Support</businessProcess>
+    <description>The main case type for Support</description>
+    <label>Support</label>
+    <picklistValues>
+        <picklist>Case_Type__c</picklist>
+        <values>
+            <fullName>Support</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Account Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Birthday Messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eyewear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Messaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newsletters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reminders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Conversations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Smart Reviews</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Error</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Credit_Memo_Product__c</picklist>
+        <values>
+            <fullName>Patient Reach Tablet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Conversations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Platform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Practice Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Scheduler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Smart Reviews</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Credit_Memo_Reason__c</picklist>
+        <values>
+            <fullName>Billing Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incentive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Issues</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Features_Options__c</picklist>
+        <values>
+            <fullName>Account Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Action List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AppAdmin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Birthdays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Associates Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Addendum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conversations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Determine Need</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dynamic Messaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eyewear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Groups%2FNewsletter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthgrades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Troubleshooting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing%2FSales Promotions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newsletters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Presence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Password</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Profile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Reminders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reminders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Huddle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Notify</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voicemail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Five9__Five9EmailNotificationStatus__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Main_Issue__c</picklist>
+        <values>
+            <fullName>3rd Party Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activate account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Add Voice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Additional Providers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Additional Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adjust Sync Times</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adjust Templates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alerts Inbox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment Requests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assignment Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner Image</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CS Training Queue Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaign Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CanSpam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancel Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check in</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Copy of contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Newsletter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Database Connection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral - Healthgrades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral - Limelight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dentrix G5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Device Enable%2FDisable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Messaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disable account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Edit Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Edit Post Appt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email design layout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enable%2FDisable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enhancement Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eyemagination videos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook Appointment Requests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fields</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filter Adjust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Floor Wide Systemic Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Questions%2FRenewal Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIPAA Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIPAA Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health History</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Help Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Image Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive%2FMissing Patients</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Interaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Install</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kept Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licenses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Line Provisioning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Linking Profile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Linking Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Linking YouTube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Message Introduction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Message Not Sending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Message Type Enable%2FDisable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Microsite Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Invite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Login Info%2FAccount Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More Info %2F Link</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need help with Implementation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newsletter Adjustment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notification Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notifications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office wanting to learn about new features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opt Out Emails</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM Switch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRT License Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Password Help</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Appointments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Info Requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Recall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Message Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portal Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portal Cards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post %2F Missed Appointment Reminders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post to Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice Stats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferences Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Profile Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Profile Page Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospects List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publishing Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recall Due Dates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreate %2F Restore Launcher Config</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reinstall%2FMove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remap %2F Adjust XLS_CSV File Path</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove Voice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restore Sync Configuration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retract Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Confirmation Emails to practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Notify Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Schedule Subscription Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfaction Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Sync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scorecard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Search for Patient%2FDevice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Search%2FReports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secure Messaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Confirmation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Text Preference Email to All Patients</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set Permissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set up Post %2F Missed Appointment Reminders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setup Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sharing Reviews to Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skip Healthgrades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skip Limelight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spam emails</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Statistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Responses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TCPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TL VM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text %26 Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Zone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Today%27s Appointments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Troubleshooting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uninstall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Sync Version</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Updates to Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upload Image</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Username</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Username%2FPassword</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voicemail Inbox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waitlist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waive Satisfaction Period</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webutation value delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wordstream</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Writebacks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iFrame Code</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NL_Groups_Completed_Method__c</picklist>
+        <values>
+            <fullName>One-on-One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Onboarding_Case_Type__c</picklist>
+        <values>
+            <fullName>Newsletters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xtend%2FAP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live-Agent Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PRT_Completed_Method__c</picklist>
+        <values>
+            <fullName>One-on-One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>Account Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activate Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Add%2FEdit Locations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Add%2FEdit Providers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admin Privileges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaign Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Criteria Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Database Connections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferrals%2FIncentives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery%2FTiming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Editing Surveys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filter Report Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gathering Contact Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Template</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Line Provisioning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low CSAT%2FRSAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need%2FUpdating Admin%2FSync Username</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need%2FUpdating Contact Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need%2FUpdating Password</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need%2FUpdating Personnel Username</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Birthday Template %28single settings page%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Old Birthday Template %28multiple settings pages%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Opt-In%2FOut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platform Down</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portal Cards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requesting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Huddle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SR Notify</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set Permissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Post%2FStatus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Filter Adjustment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Filters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Template</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Template Adjustment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Templates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Updating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Updating Contact Info</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_del__c</picklist>
+        <values>
+            <fullName>Agreement %26 Renewals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Data Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>How-To</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Resolution__c</picklist>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot Reproduce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incomplete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Max Attempts Reached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wont Fix</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SR_Portal_Completed_Method__c</picklist>
+        <values>
+            <fullName>One-on-One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Attempted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispute Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Made Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Made Offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolving Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent Addendum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Installed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Scheduled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Survey_to_be_Sent__c</picklist>
+        <values>
+            <fullName>EBR Case Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fast Track Survey</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Topics__c</picklist>
+        <values>
+            <fullName>Active Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Active Push</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Active Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Birthdays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CareCredit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Addendum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eyewear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthgrades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Listing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Messaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newsletters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Password</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PatientReach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PatientReach Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PatientView</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reminders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singular Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SmileDash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Down</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Launcher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xtend Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Xtend_AP_Completed_Method__c</picklist>
+        <values>
+            <fullName>One-on-One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

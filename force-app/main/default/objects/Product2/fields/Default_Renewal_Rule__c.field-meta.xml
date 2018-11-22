@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Renewal_Rule__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Provides the Default Renewal Rule for this Product. Will be set on Opportunity Products.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Provides the Default Renewal Rule for this Product. Will be set on Opportunity Products.</inlineHelpText>
+    <label>Default Renewal Rule</label>
+    <referenceTo>RecurSoft__Renewal_Rule__c</referenceTo>
+    <relationshipLabel>Products</relationshipLabel>
+    <relationshipName>Products</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

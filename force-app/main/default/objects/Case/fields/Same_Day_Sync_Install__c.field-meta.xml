@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Same_Day_Sync_Install__c</fullName>
+    <description>Checks if the sync install was completed on the same day it was scheduled for</description>
+    <externalId>false</externalId>
+    <formula>DATEVALUE( Sync_Install_Scheduled_For__c ) =  DATEVALUE( Sync_Install_Completed__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Same Day Sync Install</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

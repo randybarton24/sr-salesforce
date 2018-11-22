@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>29.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>This page is designed only to run the new case flow and provide a finish attribute that will redirect the user to the newly created Case when they click &#39;Finish&#39;</description>
+    <label>New Case Flow Control</label>
+</ApexPage>

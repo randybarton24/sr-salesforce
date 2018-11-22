@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SR_Opps_Won</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Account_Phone__c</columns>
+    <columns>Subscriber_ID__c</columns>
+    <columns>Opportunity_Owner__c</columns>
+    <columns>RecurSoft__Contract_Signed_Date__c</columns>
+    <columns>Contract_Date_Time__c</columns>
+    <columns>Monthly_Revenue__c</columns>
+    <columns>SR_Monthly_Revenue__c</columns>
+    <columns>SFPrice__c</columns>
+    <columns>RecurSoft__Trial__c</columns>
+    <columns>MSF_Free_Months__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Contract_Signed__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>RecurSoft__Contract_Signed_Date__c</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>SR_Monthly_Revenue__c</field>
+        <operation>greaterThan</operation>
+        <value>USD 0</value>
+    </filters>
+    <label>Closed Won Today</label>
+</ListView>

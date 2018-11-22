@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Five9_Sync_View</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.ADDRESS2_STATE_CODE</columns>
+    <columns>CONTACT.DO_NOT_CALL</columns>
+    <columns>Account_Created_Date__c</columns>
+    <columns>AccountSoftware__c</columns>
+    <columns>qbdialer__Dials__c</columns>
+    <columns>Primary_Contact__c</columns>
+    <columns>Vertical__c</columns>
+    <columns>Sub_Vertical__c</columns>
+    <columns>qbdialer__LastCallTime__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>AccountSoftware__c</field>
+        <operation>equals</operation>
+        <value>a00i000000Mq9oB</value>
+    </filters>
+    <filters>
+        <field>CONTACT.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>smith</value>
+    </filters>
+    <label>Five9 Sync View</label>
+    <sharedTo>
+        <role>Sales_Operations</role>
+        <role>System_Administrator</role>
+    </sharedTo>
+</ListView>

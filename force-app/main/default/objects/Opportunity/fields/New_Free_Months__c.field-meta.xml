@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Free_Months__c</fullName>
+    <description>Used to calculate Keep information on Save opportunities</description>
+    <externalId>false</externalId>
+    <formula>If(ISPICKVAL( Save_Offer_Waived_Months__c , &quot;Accepted&quot;), Number_of_waived_months_offered__c ,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>New Free Months</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

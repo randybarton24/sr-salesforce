@@ -1,0 +1,18 @@
+<apex:page standardController="Account" sidebar="false">
+     <br/>
+ <Center><Font size ="10" Color = "Blue">Adding an Incentive Item for {!Account.Name}</font></Center>
+ <br/><br/>
+ <style type="text/css">
+.FlowText {
+     color: crimson;
+     }
+.FlowDropdown{
+     color: black;
+     }
+    
+</style>
+    <flow:interview name="Incentive_Fulfillment_Creating_Flow" finishLocation="/{!Account.Id}" buttonLocation="bottom" buttonStyle="">
+        <apex:param name="varType" value="Acct"/>
+        <apex:param name="varID" value="{!Account.Id}"/>
+    </flow:interview>  
+</apex:page>

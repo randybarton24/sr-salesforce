@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Orthodontics_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Orthodontics Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AcceleDent™ System</fullName>
+                <default>false</default>
+                <label>AcceleDent™ System</label>
+            </value>
+            <value>
+                <fullName>Athletic Mouthguards</fullName>
+                <default>false</default>
+                <label>Athletic Mouthguards</label>
+            </value>
+            <value>
+                <fullName>Bite Adjustment</fullName>
+                <default>false</default>
+                <label>Bite Adjustment</label>
+            </value>
+            <value>
+                <fullName>Bracket Braces</fullName>
+                <default>false</default>
+                <label>Bracket Braces</label>
+            </value>
+            <value>
+                <fullName>Buccal Tubes for Braces</fullName>
+                <default>false</default>
+                <label>Buccal Tubes for Braces</label>
+            </value>
+            <value>
+                <fullName>Ceramic Dental Braces</fullName>
+                <default>false</default>
+                <label>Ceramic Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Clear Ceramic Braces</fullName>
+                <default>false</default>
+                <label>Clear Ceramic Braces</label>
+            </value>
+            <value>
+                <fullName>ClearCorrect™ Invisible Braces</fullName>
+                <default>false</default>
+                <label>ClearCorrect™ Invisible Braces</label>
+            </value>
+            <value>
+                <fullName>Clear Dental Braces</fullName>
+                <default>false</default>
+                <label>Clear Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Cleft Lip and Palate Repair</fullName>
+                <default>false</default>
+                <label>Cleft Lip and Palate Repair</label>
+            </value>
+            <value>
+                <fullName>Cone Beam 3D Imaging</fullName>
+                <default>false</default>
+                <label>Cone Beam 3D Imaging</label>
+            </value>
+            <value>
+                <fullName>Cone Beam Computerized Tomography (CBCT)</fullName>
+                <default>false</default>
+                <label>Cone Beam Computerized Tomography (CBCT)</label>
+            </value>
+            <value>
+                <fullName>Corrective Jaw Surgery</fullName>
+                <default>false</default>
+                <label>Corrective Jaw Surgery</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Oral Evaluation</fullName>
+                <default>false</default>
+                <label>Cosmetic Oral Evaluation</label>
+            </value>
+            <value>
+                <fullName>Cosmetic Procedure</fullName>
+                <default>false</default>
+                <label>Cosmetic Procedure</label>
+            </value>
+            <value>
+                <fullName>Damon® Clear Braces</fullName>
+                <default>false</default>
+                <label>Damon® Clear Braces</label>
+            </value>
+            <value>
+                <fullName>Damon® System</fullName>
+                <default>false</default>
+                <label>Damon® System</label>
+            </value>
+            <value>
+                <fullName>Dental Brace</fullName>
+                <default>false</default>
+                <label>Dental Brace</label>
+            </value>
+            <value>
+                <fullName>Dental Brace and Headgear</fullName>
+                <default>false</default>
+                <label>Dental Brace and Headgear</label>
+            </value>
+            <value>
+                <fullName>Dental X-Ray</fullName>
+                <default>false</default>
+                <label>Dental X-Ray</label>
+            </value>
+            <value>
+                <fullName>Digital Impression System</fullName>
+                <default>false</default>
+                <label>Digital Impression System</label>
+            </value>
+            <value>
+                <fullName>Edgewise Dental Braces</fullName>
+                <default>false</default>
+                <label>Edgewise Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Facebow Headgear</fullName>
+                <default>false</default>
+                <label>Facebow Headgear</label>
+            </value>
+            <value>
+                <fullName>Facial Bone Fracture Repair</fullName>
+                <default>false</default>
+                <label>Facial Bone Fracture Repair</label>
+            </value>
+            <value>
+                <fullName>Fixed Orthodontic Correction</fullName>
+                <default>false</default>
+                <label>Fixed Orthodontic Correction</label>
+            </value>
+            <value>
+                <fullName>Glow in the Dark Dental Braces</fullName>
+                <default>false</default>
+                <label>Glow in the Dark Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Gold Dental Braces</fullName>
+                <default>false</default>
+                <label>Gold Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Herbst® Appliance</fullName>
+                <default>false</default>
+                <label>Herbst® Appliance</label>
+            </value>
+            <value>
+                <fullName>i-CAT® 3D Dental Imaging</fullName>
+                <default>false</default>
+                <label>i-CAT® 3D Dental Imaging</label>
+            </value>
+            <value>
+                <fullName>Incognito™ Invisible Braces</fullName>
+                <default>false</default>
+                <label>Incognito™ Invisible Braces</label>
+            </value>
+            <value>
+                <fullName>In-Ovation® System Braces</fullName>
+                <default>false</default>
+                <label>In-Ovation® System Braces</label>
+            </value>
+            <value>
+                <fullName>Insignia™ Dental Appliance</fullName>
+                <default>false</default>
+                <label>Insignia™ Dental Appliance</label>
+            </value>
+            <value>
+                <fullName>Intraoral Device</fullName>
+                <default>false</default>
+                <label>Intraoral Device</label>
+            </value>
+            <value>
+                <fullName>Invisalign®</fullName>
+                <default>false</default>
+                <label>Invisalign®</label>
+            </value>
+            <value>
+                <fullName>Invisalign Teen®</fullName>
+                <default>false</default>
+                <label>Invisalign Teen®</label>
+            </value>
+            <value>
+                <fullName>Invisible Aligners</fullName>
+                <default>false</default>
+                <label>Invisible Aligners</label>
+            </value>
+            <value>
+                <fullName>Invisible Dental Braces</fullName>
+                <default>false</default>
+                <label>Invisible Dental Braces</label>
+            </value>
+            <value>
+                <fullName>iTero™ Digital Scanning</fullName>
+                <default>false</default>
+                <label>iTero™ Digital Scanning</label>
+            </value>
+            <value>
+                <fullName>Jaw Surgery</fullName>
+                <default>false</default>
+                <label>Jaw Surgery</label>
+            </value>
+            <value>
+                <fullName>Lingual Dental Braces</fullName>
+                <default>false</default>
+                <label>Lingual Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Management of Distraction Osteogenesis</fullName>
+                <default>false</default>
+                <label>Management of Distraction Osteogenesis</label>
+            </value>
+            <value>
+                <fullName>Metal Dental Braces</fullName>
+                <default>false</default>
+                <label>Metal Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Mini Dental Braces</fullName>
+                <default>false</default>
+                <label>Mini Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Nasoalveolar Molding</fullName>
+                <default>false</default>
+                <label>Nasoalveolar Molding</label>
+            </value>
+            <value>
+                <fullName>Nightguard</fullName>
+                <default>false</default>
+                <label>Nightguard</label>
+            </value>
+            <value>
+                <fullName>Non-Surgical Bite Correction</fullName>
+                <default>false</default>
+                <label>Non-Surgical Bite Correction</label>
+            </value>
+            <value>
+                <fullName>Non-Surgical Orthodontic Procedures</fullName>
+                <default>false</default>
+                <label>Non-Surgical Orthodontic Procedures</label>
+            </value>
+            <value>
+                <fullName>Opalescence® Tooth Whitening System</fullName>
+                <default>false</default>
+                <label>Opalescence® Tooth Whitening System</label>
+            </value>
+            <value>
+                <fullName>Ortho. Mgmt of Distraction Osteogenesis</fullName>
+                <default>false</default>
+                <label>Ortho. Mgmt of Distraction Osteogenesis</label>
+            </value>
+            <value>
+                <fullName>Orthodontic Aligners</fullName>
+                <default>false</default>
+                <label>Orthodontic Aligners</label>
+            </value>
+            <value>
+                <fullName>Orthodontic Procedures</fullName>
+                <default>false</default>
+                <label>Orthodontic Procedures</label>
+            </value>
+            <value>
+                <fullName>Orthodontic Temp. Anchorage Devices</fullName>
+                <default>false</default>
+                <label>Orthodontic Temp. Anchorage Devices</label>
+            </value>
+            <value>
+                <fullName>Orthodontic Treatment, Adult</fullName>
+                <default>false</default>
+                <label>Orthodontic Treatment, Adult</label>
+            </value>
+            <value>
+                <fullName>Orthodontic Treatment, Early</fullName>
+                <default>false</default>
+                <label>Orthodontic Treatment, Early</label>
+            </value>
+            <value>
+                <fullName>Orthognathic Surgery</fullName>
+                <default>false</default>
+                <label>Orthognathic Surgery</label>
+            </value>
+            <value>
+                <fullName>Palatal Expander</fullName>
+                <default>false</default>
+                <label>Palatal Expander</label>
+            </value>
+            <value>
+                <fullName>Panoramic and Cephalometric X-Rays</fullName>
+                <default>false</default>
+                <label>Panoramic and Cephalometric X-Rays</label>
+            </value>
+            <value>
+                <fullName>Porcelain Dental Braces</fullName>
+                <default>false</default>
+                <label>Porcelain Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Preparation for Alveolar Cleft Repair</fullName>
+                <default>false</default>
+                <label>Preparation for Alveolar Cleft Repair</label>
+            </value>
+            <value>
+                <fullName>Propel® Orthodontics</fullName>
+                <default>false</default>
+                <label>Propel® Orthodontics</label>
+            </value>
+            <value>
+                <fullName>Removable Appliances</fullName>
+                <default>false</default>
+                <label>Removable Appliances</label>
+            </value>
+            <value>
+                <fullName>Retainers</fullName>
+                <default>false</default>
+                <label>Retainers</label>
+            </value>
+            <value>
+                <fullName>Retainer Therapy</fullName>
+                <default>false</default>
+                <label>Retainer Therapy</label>
+            </value>
+            <value>
+                <fullName>Scar Revision Surgery</fullName>
+                <default>false</default>
+                <label>Scar Revision Surgery</label>
+            </value>
+            <value>
+                <fullName>Sleep Apnea Oral Appliances</fullName>
+                <default>false</default>
+                <label>Sleep Apnea Oral Appliances</label>
+            </value>
+            <value>
+                <fullName>Snoring Prevention</fullName>
+                <default>false</default>
+                <label>Snoring Prevention</label>
+            </value>
+            <value>
+                <fullName>SomnoDent® (for Sleep Apnea)</fullName>
+                <default>false</default>
+                <label>SomnoDent® (for Sleep Apnea)</label>
+            </value>
+            <value>
+                <fullName>Spacers for Braces</fullName>
+                <default>false</default>
+                <label>Spacers for Braces</label>
+            </value>
+            <value>
+                <fullName>Springs for Braces</fullName>
+                <default>false</default>
+                <label>Springs for Braces</label>
+            </value>
+            <value>
+                <fullName>SureSmile® Dental Braces</fullName>
+                <default>false</default>
+                <label>SureSmile® Dental Braces</label>
+            </value>
+            <value>
+                <fullName>Surgical Orthodontics</fullName>
+                <default>false</default>
+                <label>Surgical Orthodontics</label>
+            </value>
+            <value>
+                <fullName>Temporary Anchorage Devices (TADs)</fullName>
+                <default>false</default>
+                <label>Temporary Anchorage Devices (TADs)</label>
+            </value>
+            <value>
+                <fullName>Temporormandibular (TM) Therapy</fullName>
+                <default>false</default>
+                <label>Temporormandibular (TM) Therapy</label>
+            </value>
+            <value>
+                <fullName>Two-Phase Orthodontic Treatment</fullName>
+                <default>false</default>
+                <label>Two-Phase Orthodontic Treatment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

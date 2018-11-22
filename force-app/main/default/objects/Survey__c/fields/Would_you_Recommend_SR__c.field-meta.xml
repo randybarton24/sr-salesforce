@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Would_you_Recommend_SR__c</fullName>
+    <externalId>false</externalId>
+    <formula>Value(IF( FS_Would_you_Recommend__c = &quot;None&quot;,&quot;&quot;, TRIM( RIGHT( FS_Would_you_Recommend__c , 2) ) ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Would you recommend Solutionreach to a friend or colleague?</inlineHelpText>
+    <label>Would you Recommend SR</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

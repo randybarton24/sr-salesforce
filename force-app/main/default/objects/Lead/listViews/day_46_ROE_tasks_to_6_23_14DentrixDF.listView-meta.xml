@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>day_46_ROE_tasks_to_6_23_14DentrixDF</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>Last_ROE_Task_Date__c</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.EMAIL</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Contacted</value>
+    </filters>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_DAYS:45</value>
+    </filters>
+    <filters>
+        <field>Practice_Software__c</field>
+        <operation>equals</operation>
+        <value>Dentrix</value>
+    </filters>
+    <filters>
+        <field>Competitor__c</field>
+        <operation>equals</operation>
+        <value>DemandForce</value>
+    </filters>
+    <label>day 46 - ROE tasks to 6/23/14DentrixDF</label>
+    <sharedTo/>
+</ListView>

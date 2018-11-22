@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EM_MQL_List</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>PM_Sync_Availability__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>Emerging</value>
+    </filters>
+    <filters>
+        <field>Don_t_Send__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>EM MQL List</label>
+    <sharedTo>
+        <role>ADR_Rep_6</role>
+    </sharedTo>
+</ListView>

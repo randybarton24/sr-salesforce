@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Convert_from_the_Black_List</fullName>
+    <active>false</active>
+    <errorConditionFormula>(Practice_Management_SYNC_Availability__c = &quot;Black List- DO NOT SELL&quot;)</errorConditionFormula>
+    <errorMessage>We cannot sell to offices with this software, if this is a new medical integration please contact the partner team to see if we want to move forward. If it is a non medical integration please fill out the associated field for tracking.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pusle_Value__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Pulse__c , &quot;Severe Risk&quot;, 1, &quot;High Risk&quot;, 2,&quot;Some Risk&quot;, 3, &quot;Fairly Satisfied&quot;, 4, &quot;Very Satisfied&quot;, 5, &quot;Extremely Satisfied&quot;, 6, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Pusle Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

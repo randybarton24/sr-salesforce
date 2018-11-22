@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" >
+	<aura:attribute name="actionClicked" type="String"/>
+    <aura:attribute name="newRequest" type="agf__ADM_Work__c"/>
+</aura:event>

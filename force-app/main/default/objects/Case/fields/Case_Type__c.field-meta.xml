@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Type__c</fullName>
+    <description>The type of case being created.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which area the case needs to be created for.</inlineHelpText>
+    <label>Case Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>Billing Services</fullName>
+                <default>false</default>
+                <label>Billing Services</label>
+            </value>
+            <value>
+                <fullName>Coding Services</fullName>
+                <default>false</default>
+                <label>Coding Services</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Development</fullName>
+                <default>false</default>
+                <label>Development</label>
+            </value>
+            <value>
+                <fullName>Preload</fullName>
+                <default>false</default>
+                <label>Preload</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

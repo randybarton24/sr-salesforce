@@ -1,0 +1,77 @@
+<apex:page standardController="Addendum__c" extensions="AddendumItem_Controller" showHeader="true" sidebar="true" >
+    
+    <apex:stylesheet value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"/>
+
+    <script type="text/javascript">
+        var x$ = jQuery.noConflict();
+
+        x$(document).ready(function() {
+            x$("#tabs").tabs();
+        });
+    </script>
+    
+    <apex:outputPanel >
+        <apex:form >
+            <div id="waitingGifDiv" style="padding-left:150px; display: none">
+                <apex:image id="WaitingGif" url="/img/loading.gif" width="25" height="25" style="float:center-right;"/>
+                 Processing, Please wait...
+            </div>
+            <div align="center" style="padding-bottom: 5px" id="buttonsDiv">
+                <apex:commandButton action="{!saveAddRemove}" value="Save" onclick="processing();" 
+                    id="saveAddRemoveButton" rendered="{!renderAddRemove}" reRender="table"
+                    oncomplete="if(!{!error}){window.top.location='/{!Addendum__c.id}';}" />
+                <apex:commandButton action="{!addRemove}" value="Add/Remove Items" id="addRemoveButton"
+                    rendered="{!!renderAddRemove}" />
+                <apex:commandButton action="{!cancel}" value="Cancel" 
+                    id="editCancelButton" rendered="{!renderAddRemove}"
+                    onclick="window.top.location='/{!Addendum__c.id}';" />
+            </div>
+            <apex:pageBlock rendered="{!renderAddRemove}">
+                <apex:pageBlockSection title="Choose an Item to Add" collapsible="false" columns="1">
+                    <apex:pageBlockTable title="Choose an Item to Add" value="{!wrapAssetOptions}" var="assetOption" >
+                        <apex:column >
+                            <apex:inputCheckbox value="{!assetOption.isChecked}"/>
+                        </apex:column>
+                        <apex:column value="{!assetOption.asset.Name}"/>
+                        <apex:column value="{!assetOption.asset.Product2.Family}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+                <br/>
+                <apex:pageBlockSection title="Choose an Item to Remove" collapsible="false" columns="1">
+                    <apex:pageBlockTable title="Choose an Item to Remove" value="{!wrapAddmItemOptions}" var="addmItenOption">
+                        <apex:column >
+                            <apex:inputCheckbox value="{!addmItenOption.isChecked}"/>
+                        </apex:column>
+                        <apex:column value="{!addmItenOption.addendumLineItem.Asset__r.Name}"/>
+                        <apex:column value="{!addmItenOption.addendumLineItem.Asset__r.Product2.Family}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:form>
+        <script>
+            function processing()
+            {
+                document.getElementById("buttonsDiv").style.display = "none";             
+                document.getElementById("waitingGifDiv").style.display = "block"; 
+            }
+        </script>
+    </apex:outputPanel>
+    <apex:form >
+    <apex:outputPanel rendered="{!!renderAddRemove}">
+        <div id="tabs" class="ui-tabs">
+            <ul class="ui-tabs-nav">
+                <apex:repeat var="ali" value="{!listAddmItems}" id="repeat">
+                    <li><a href="#tabs-{!ali.Id}">{!ali.Asset__r.Name}</a></li>
+                </apex:repeat>
+            </ul>
+            <apex:repeat var="ali" value="{!listAddmItems}" id="details">
+                <div id="tabs-{!ali.Id}">
+                    <apex:detail subject="{!ali}" relatedList="false" title="false" inlineEdit="true" oncomplete="window.top.location='/{!Addendum__c.id}';"/>
+                </div>
+            </apex:repeat>
+        </div>
+    </apex:outputPanel>
+    </apex:form>
+</apex:page>

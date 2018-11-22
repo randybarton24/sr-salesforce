@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_Waived</fullName>
+    <active>true</active>
+    <errorConditionFormula>(Waive_Billing__c = true &amp;&amp;
+ISBLANK( Waived_Months__c )) ||
+(Waive_Billing__c = false &amp;&amp;
+NOT(ISBLANK( Waived_Months__c )))</errorConditionFormula>
+    <errorMessage>The Waive Billing modification isn&#39;t complete.</errorMessage>
+</ValidationRule>

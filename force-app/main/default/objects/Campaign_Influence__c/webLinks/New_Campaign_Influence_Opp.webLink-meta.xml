@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Campaign_Influence_Opp</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Campaign Influence</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!URLFOR( $Action.Campaign_Influence__c.New , null, [saveURL=Opportunity.Link, retURL=Opportunity.Link, CF00Ni000000EIsC4_lkid=Opportunity.Id , CF00Ni000000EIsC4=Opportunity.Name])}</url>
+</WebLink>

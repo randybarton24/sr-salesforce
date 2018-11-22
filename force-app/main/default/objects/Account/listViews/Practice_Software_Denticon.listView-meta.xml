@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Practice_Software_Denticon</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Practice_Management_Software__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Activated_Status_and_FMS_Status__c</columns>
+    <columns>Sub_Vertical__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Practice_Management_Software__c</field>
+        <operation>equals</operation>
+        <value>Denticon | Next DDS</value>
+    </filters>
+    <label>Practice Software - Denticon</label>
+    <sharedTo>
+        <group>AE</group>
+    </sharedTo>
+</ListView>

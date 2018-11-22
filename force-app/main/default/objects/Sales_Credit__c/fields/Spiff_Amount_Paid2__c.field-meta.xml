@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spiff_Amount_Paid2__c</fullName>
+    <description>Occasionaly, there are adjustments made after the first amount has been paid. This field will allow for tracking a second payment. Uploaded by Sales Ops.</description>
+    <externalId>false</externalId>
+    <label>Spiff Amount Paid2</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Feature_only_when_selected</fullName>
+    <active>true</active>
+    <description>Requires a Current Feature if that is a Cancel Reason</description>
+    <errorConditionFormula>Not(CONTAINS(Text(Cancellation_Reasons__c), &quot;Functionality of Current Feature&quot;)) &amp;&amp;  Not(ISBLANK( Current_Feature__c  ))</errorConditionFormula>
+    <errorDisplayField>Current_Feature__c</errorDisplayField>
+    <errorMessage>You cannot select a Current feature without making Functionality of Current Feature the Cancellation Reason</errorMessage>
+</ValidationRule>

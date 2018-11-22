@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Unique_Sales_Target_Field_Change</fullName>
+        <description>Update the Unique Target field to ensure that there is never more than one sales target for the same person in the same month and year.</description>
+        <field>Unique_Target__c</field>
+        <formula>Target_Year__c &amp; Target_Month__c &amp; CASESAFEID( Owner__c ) &amp; TEXT( Type__c )</formula>
+        <name>Unique Sales Target Field Change</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>SalesTarget_FieldUpdate_UniqueTarget</fullName>
+        <actions>
+            <name>Unique_Sales_Target_Field_Change</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Executed when either the Target Owner, Month or Year field (or any combination of the three) has changed.</description>
+        <formula>ISCHANGED( Owner__c ) ||
+ISCHANGED( Type__c ) ||
+ISCHANGED( Target_Month__c ) ||
+ISCHANGED( Target_Year__c ) ||
+ISNEW()</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

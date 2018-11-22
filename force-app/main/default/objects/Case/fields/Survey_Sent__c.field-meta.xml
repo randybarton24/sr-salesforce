@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey_Sent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Auto checks when a case is closed to ensure a contact only receives one survey per case closed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Has a Survey been sent out?</inlineHelpText>
+    <label>Survey Sent</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

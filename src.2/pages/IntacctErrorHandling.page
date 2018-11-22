@@ -1,0 +1,38 @@
+<!--
+ * File:        IntacctErrorHandling.page
+ * Project:     Sererra 
+ * Date:        February 11, 2013
+ * Created By:  Ionut Boghean
+ * *************************************************************************
+ * Description: The page contains 2 tabs:
+				  1.Errors grouped by object
+				    a. picklist to select the type of object
+				    b. table containing max 1000 error message records for the selected object ordered by created date
+				    c. pagination for the table
+				  2.Delete errors
+				    a. date field - the errors created till this date will be removed
+				    b. delete button - deletes errors (all if no date is entered)
+ * *************************************************************************
+ * History:
+ -->
+<apex:page controller="IntacctErrorHandling" title="Intacct Error Handling"> 
+    <center>
+        <apex:pagemessages />
+    </center>
+    <apex:form id="intacctForm">
+        <apex:tabPanel switchType="client" id="intacctTabPanel" rendered="{!isThereAnyError}">
+            <apex:tab label="View Errors" id="intacctFirstTab">
+                <apex:dynamicComponent componentValue="{!dynamicHeaderPageBlock}" id="intacctHeaderDynamicComponent"/>
+                <apex:outputPanel id="intacctBodyOutputPanel">
+		            <apex:dynamicComponent componentValue="{!dynamicBodyPageBlock}" rendered="{!IF(selectedObject = '',false,true)}"/>
+		            <center>
+                        <apex:dynamicComponent componentValue="{!dynamicFooterPanelGrid}" rendered="{!IF(selectedObject = '',false,true)}"/>
+		            </center>
+		        </apex:outputPanel>
+            </apex:tab>
+            <apex:tab label="Delete Errors" id="inacctSecondTab">
+                <apex:dynamicComponent componentValue="{!dynamicDeletePageBlock}" id="intacctDeleteDynamicComponent"/>
+            </apex:tab>
+        </apex:tabPanel>
+    </apex:form>
+</apex:page>

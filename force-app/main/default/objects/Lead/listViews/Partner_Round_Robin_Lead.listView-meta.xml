@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Round_Robin_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Partner Round Robin</label>
+    <queue>Partner_Round_Robin</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

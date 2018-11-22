@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Podiatry_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Podiatry Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Achilles Tendinitis</fullName>
+                <default>false</default>
+                <label>Achilles Tendinitis</label>
+            </value>
+            <value>
+                <fullName>Ankle Disorders</fullName>
+                <default>false</default>
+                <label>Ankle Disorders</label>
+            </value>
+            <value>
+                <fullName>Ankle Fracture</fullName>
+                <default>false</default>
+                <label>Ankle Fracture</label>
+            </value>
+            <value>
+                <fullName>Ankle Sprain and Achilles Tendon Sprain or Rupture</fullName>
+                <default>false</default>
+                <label>Ankle Sprain and Achilles Tendon Sprain or Rupture</label>
+            </value>
+            <value>
+                <fullName>Ankle Sprains and Strains</fullName>
+                <default>false</default>
+                <label>Ankle Sprains and Strains</label>
+            </value>
+            <value>
+                <fullName>Bunion</fullName>
+                <default>false</default>
+                <label>Bunion</label>
+            </value>
+            <value>
+                <fullName>Foot Conditions</fullName>
+                <default>false</default>
+                <label>Foot Conditions</label>
+            </value>
+            <value>
+                <fullName>Foot Fracture</fullName>
+                <default>false</default>
+                <label>Foot Fracture</label>
+            </value>
+            <value>
+                <fullName>Foot Sprain</fullName>
+                <default>false</default>
+                <label>Foot Sprain</label>
+            </value>
+            <value>
+                <fullName>Fracture</fullName>
+                <default>false</default>
+                <label>Fracture</label>
+            </value>
+            <value>
+                <fullName>Hammer Toe</fullName>
+                <default>false</default>
+                <label>Hammer Toe</label>
+            </value>
+            <value>
+                <fullName>Plantar Fasciitis</fullName>
+                <default>false</default>
+                <label>Plantar Fasciitis</label>
+            </value>
+            <value>
+                <fullName>Ankle Injury</fullName>
+                <default>false</default>
+                <label>Ankle Injury</label>
+            </value>
+            <value>
+                <fullName>Bunionette</fullName>
+                <default>false</default>
+                <label>Bunionette</label>
+            </value>
+            <value>
+                <fullName>Clubfoot</fullName>
+                <default>false</default>
+                <label>Clubfoot</label>
+            </value>
+            <value>
+                <fullName>Diabetic (Charcot) Foot</fullName>
+                <default>false</default>
+                <label>Diabetic (Charcot) Foot</label>
+            </value>
+            <value>
+                <fullName>Diabetic Ulcers</fullName>
+                <default>false</default>
+                <label>Diabetic Ulcers</label>
+            </value>
+            <value>
+                <fullName>Flat Foot</fullName>
+                <default>false</default>
+                <label>Flat Foot</label>
+            </value>
+            <value>
+                <fullName>Foot and Ankle Disorders</fullName>
+                <default>false</default>
+                <label>Foot and Ankle Disorders</label>
+            </value>
+            <value>
+                <fullName>Foot and Ankle Injuries</fullName>
+                <default>false</default>
+                <label>Foot and Ankle Injuries</label>
+            </value>
+            <value>
+                <fullName>Foot Deformities</fullName>
+                <default>false</default>
+                <label>Foot Deformities</label>
+            </value>
+            <value>
+                <fullName>Foot Injuries</fullName>
+                <default>false</default>
+                <label>Foot Injuries</label>
+            </value>
+            <value>
+                <fullName>Gout</fullName>
+                <default>false</default>
+                <label>Gout</label>
+            </value>
+            <value>
+                <fullName>Heel Pain</fullName>
+                <default>false</default>
+                <label>Heel Pain</label>
+            </value>
+            <value>
+                <fullName>Heel Spur</fullName>
+                <default>false</default>
+                <label>Heel Spur</label>
+            </value>
+            <value>
+                <fullName>Ingrown Toenail</fullName>
+                <default>false</default>
+                <label>Ingrown Toenail</label>
+            </value>
+            <value>
+                <fullName>Neuromas</fullName>
+                <default>false</default>
+                <label>Neuromas</label>
+            </value>
+            <value>
+                <fullName>Peripheral Autonomic Neuropathy</fullName>
+                <default>false</default>
+                <label>Peripheral Autonomic Neuropathy</label>
+            </value>
+            <value>
+                <fullName>Stress Fracture of Foot</fullName>
+                <default>false</default>
+                <label>Stress Fracture of Foot</label>
+            </value>
+            <value>
+                <fullName>Ulcer of Foot</fullName>
+                <default>false</default>
+                <label>Ulcer of Foot</label>
+            </value>
+            <value>
+                <fullName>Warts</fullName>
+                <default>false</default>
+                <label>Warts</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

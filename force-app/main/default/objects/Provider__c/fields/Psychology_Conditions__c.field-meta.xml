@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Psychology_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Psychology Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Antisocial Behavior</fullName>
+                <default>false</default>
+                <label>Antisocial Behavior</label>
+            </value>
+            <value>
+                <fullName>Anxiety Attack</fullName>
+                <default>false</default>
+                <label>Anxiety Attack</label>
+            </value>
+            <value>
+                <fullName>Bereavement</fullName>
+                <default>false</default>
+                <label>Bereavement</label>
+            </value>
+            <value>
+                <fullName>Binge Eating Disorder</fullName>
+                <default>false</default>
+                <label>Binge Eating Disorder</label>
+            </value>
+            <value>
+                <fullName>Depressive Episode</fullName>
+                <default>false</default>
+                <label>Depressive Episode</label>
+            </value>
+            <value>
+                <fullName>Grief</fullName>
+                <default>false</default>
+                <label>Grief</label>
+            </value>
+            <value>
+                <fullName>Pathological Gambling</fullName>
+                <default>false</default>
+                <label>Pathological Gambling</label>
+            </value>
+            <value>
+                <fullName>Psychological Addiction</fullName>
+                <default>false</default>
+                <label>Psychological Addiction</label>
+            </value>
+            <value>
+                <fullName>Psychological Disorders</fullName>
+                <default>false</default>
+                <label>Psychological Disorders</label>
+            </value>
+            <value>
+                <fullName>Brain Damage</fullName>
+                <default>false</default>
+                <label>Brain Damage</label>
+            </value>
+            <value>
+                <fullName>Cognitive Delay</fullName>
+                <default>false</default>
+                <label>Cognitive Delay</label>
+            </value>
+            <value>
+                <fullName>Divorce</fullName>
+                <default>false</default>
+                <label>Divorce</label>
+            </value>
+            <value>
+                <fullName>Homosexual Issues</fullName>
+                <default>false</default>
+                <label>Homosexual Issues</label>
+            </value>
+            <value>
+                <fullName>Rape Trauma Syndrome</fullName>
+                <default>false</default>
+                <label>Rape Trauma Syndrome</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

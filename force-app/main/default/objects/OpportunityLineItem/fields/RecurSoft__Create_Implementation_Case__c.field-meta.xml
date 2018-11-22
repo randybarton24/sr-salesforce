@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Create_Implementation_Case__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Used to indicate an Implementation case is desired for this product. It is only necessary to use on one-time revenue products.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to indicate an Implementation case is desired for this product. It is only necessary to use on one-time revenue products.</inlineHelpText>
+    <label>Deprecated - Create Implementation Case</label>
+    <type>Checkbox</type>
+</CustomField>

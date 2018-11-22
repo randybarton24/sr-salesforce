@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pipeline_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Pipeline Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Existing Partner</fullName>
+                <default>false</default>
+                <label>Existing Partner</label>
+            </value>
+            <value>
+                <fullName>Sales Team/Customer</fullName>
+                <default>false</default>
+                <label>Sales Team/Customer</label>
+            </value>
+            <value>
+                <fullName>CRM Data</fullName>
+                <default>false</default>
+                <label>CRM Data</label>
+            </value>
+            <value>
+                <fullName>Partner Network</fullName>
+                <default>false</default>
+                <label>Partner Network</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

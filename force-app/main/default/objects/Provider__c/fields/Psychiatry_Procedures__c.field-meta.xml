@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Psychiatry_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Psychiatry Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Addiction Treatment</fullName>
+                <default>false</default>
+                <label>Addiction Treatment</label>
+            </value>
+            <value>
+                <fullName>Behavior Therapy</fullName>
+                <default>false</default>
+                <label>Behavior Therapy</label>
+            </value>
+            <value>
+                <fullName>Counseling Services</fullName>
+                <default>false</default>
+                <label>Counseling Services</label>
+            </value>
+            <value>
+                <fullName>Emotional Management</fullName>
+                <default>false</default>
+                <label>Emotional Management</label>
+            </value>
+            <value>
+                <fullName>Psychiatric Evaluation</fullName>
+                <default>false</default>
+                <label>Psychiatric Evaluation</label>
+            </value>
+            <value>
+                <fullName>Psychoanalysis</fullName>
+                <default>false</default>
+                <label>Psychoanalysis</label>
+            </value>
+            <value>
+                <fullName>Psychological Testing</fullName>
+                <default>false</default>
+                <label>Psychological Testing</label>
+            </value>
+            <value>
+                <fullName>Psychotherapy Services</fullName>
+                <default>false</default>
+                <label>Psychotherapy Services</label>
+            </value>
+            <value>
+                <fullName>Stress Management</fullName>
+                <default>false</default>
+                <label>Stress Management</label>
+            </value>
+            <value>
+                <fullName>Antidepressant Therapy</fullName>
+                <default>false</default>
+                <label>Antidepressant Therapy</label>
+            </value>
+            <value>
+                <fullName>Antipsychotic Med. Therapy (Inpatient)</fullName>
+                <default>false</default>
+                <label>Antipsychotic Med. Therapy (Inpatient)</label>
+            </value>
+            <value>
+                <fullName>Behavioral Activation</fullName>
+                <default>false</default>
+                <label>Behavioral Activation</label>
+            </value>
+            <value>
+                <fullName>Chemical Shock Therapy (Inpatient)</fullName>
+                <default>false</default>
+                <label>Chemical Shock Therapy (Inpatient)</label>
+            </value>
+            <value>
+                <fullName>Cognitive Behavioral Therapy (CBT)</fullName>
+                <default>false</default>
+                <label>Cognitive Behavioral Therapy (CBT)</label>
+            </value>
+            <value>
+                <fullName>Coping Strategy</fullName>
+                <default>false</default>
+                <label>Coping Strategy</label>
+            </value>
+            <value>
+                <fullName>Couples Therapy</fullName>
+                <default>false</default>
+                <label>Couples Therapy</label>
+            </value>
+            <value>
+                <fullName>Diagnostic Evaluation</fullName>
+                <default>false</default>
+                <label>Diagnostic Evaluation</label>
+            </value>
+            <value>
+                <fullName>Dual Diagnosis Treatment</fullName>
+                <default>false</default>
+                <label>Dual Diagnosis Treatment</label>
+            </value>
+            <value>
+                <fullName>Educational Therapy</fullName>
+                <default>false</default>
+                <label>Educational Therapy</label>
+            </value>
+            <value>
+                <fullName>Electroconvulsive Therapy (ECT)</fullName>
+                <default>false</default>
+                <label>Electroconvulsive Therapy (ECT)</label>
+            </value>
+            <value>
+                <fullName>Family Psychotherapy</fullName>
+                <default>false</default>
+                <label>Family Psychotherapy</label>
+            </value>
+            <value>
+                <fullName>Group Psychotherapy</fullName>
+                <default>false</default>
+                <label>Group Psychotherapy</label>
+            </value>
+            <value>
+                <fullName>Hypnosis (Medical Hypnotherapy)</fullName>
+                <default>false</default>
+                <label>Hypnosis (Medical Hypnotherapy)</label>
+            </value>
+            <value>
+                <fullName>Lithium Therapy (Inpatient)</fullName>
+                <default>false</default>
+                <label>Lithium Therapy (Inpatient)</label>
+            </value>
+            <value>
+                <fullName>Mindfulness Technique Therapy</fullName>
+                <default>false</default>
+                <label>Mindfulness Technique Therapy</label>
+            </value>
+            <value>
+                <fullName>Narcosynthesis</fullName>
+                <default>false</default>
+                <label>Narcosynthesis</label>
+            </value>
+            <value>
+                <fullName>Other Psychiat. Med. Therapy (Inpatient)</fullName>
+                <default>false</default>
+                <label>Other Psychiat. Med. Therapy (Inpatient)</label>
+            </value>
+            <value>
+                <fullName>Outpatient Addiction Treatment</fullName>
+                <default>false</default>
+                <label>Outpatient Addiction Treatment</label>
+            </value>
+            <value>
+                <fullName>Psychiatric Medication Therapy</fullName>
+                <default>false</default>
+                <label>Psychiatric Medication Therapy</label>
+            </value>
+            <value>
+                <fullName>Psychodynamic Therapy</fullName>
+                <default>false</default>
+                <label>Psychodynamic Therapy</label>
+            </value>
+            <value>
+                <fullName>Psychoeducation</fullName>
+                <default>false</default>
+                <label>Psychoeducation</label>
+            </value>
+            <value>
+                <fullName>Psychological Counseling</fullName>
+                <default>false</default>
+                <label>Psychological Counseling</label>
+            </value>
+            <value>
+                <fullName>Psychopharmacologic Treatment</fullName>
+                <default>false</default>
+                <label>Psychopharmacologic Treatment</label>
+            </value>
+            <value>
+                <fullName>Psychotherapy Therapy</fullName>
+                <default>false</default>
+                <label>Psychotherapy Therapy</label>
+            </value>
+            <value>
+                <fullName>Psychophysiological Therapy</fullName>
+                <default>false</default>
+                <label>Psychophysiological Therapy</label>
+            </value>
+            <value>
+                <fullName>Psychotherapy for Crisis</fullName>
+                <default>false</default>
+                <label>Psychotherapy for Crisis</label>
+            </value>
+            <value>
+                <fullName>Recreational Therapy</fullName>
+                <default>false</default>
+                <label>Recreational Therapy</label>
+            </value>
+            <value>
+                <fullName>Relapse Prevention</fullName>
+                <default>false</default>
+                <label>Relapse Prevention</label>
+            </value>
+            <value>
+                <fullName>Relaxation Therapy</fullName>
+                <default>false</default>
+                <label>Relaxation Therapy</label>
+            </value>
+            <value>
+                <fullName>Transcranial Magnetic Stimulation (TMS)</fullName>
+                <default>false</default>
+                <label>Transcranial Magnetic Stimulation (TMS)</label>
+            </value>
+            <value>
+                <fullName>Vagus Nerve Stimulation (VNS)</fullName>
+                <default>false</default>
+                <label>Vagus Nerve Stimulation (VNS)</label>
+            </value>
+            <value>
+                <fullName>Violence Risk Assessment</fullName>
+                <default>false</default>
+                <label>Violence Risk Assessment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

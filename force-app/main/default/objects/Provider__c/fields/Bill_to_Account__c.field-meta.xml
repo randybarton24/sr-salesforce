@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_to_Account__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>The related account that will be billed for the Provider&#39;s Healthgrades subscription.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The related account that will be billed for the Provider&#39;s Healthgrades subscription.</inlineHelpText>
+    <label>Bill to Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Providers</relationshipLabel>
+    <relationshipName>Providers</relationshipName>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

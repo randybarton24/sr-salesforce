@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Training Method</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Activity_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Webinar</fullName>
+                <default>true</default>
+                <label>Webinar</label>
+            </value>
+            <value>
+                <fullName>One-on-One</fullName>
+                <default>false</default>
+                <label>One-on-One</label>
+            </value>
+            <value>
+                <fullName>KB Video</fullName>
+                <default>false</default>
+                <label>KB Video</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>General Training</controllingFieldValue>
+            <controllingFieldValue>PRT</controllingFieldValue>
+            <controllingFieldValue>Healthgrades</controllingFieldValue>
+            <controllingFieldValue>Limelight</controllingFieldValue>
+            <controllingFieldValue>SR Portal</controllingFieldValue>
+            <valueName>Webinar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Training</controllingFieldValue>
+            <controllingFieldValue>PRT</controllingFieldValue>
+            <controllingFieldValue>Healthgrades</controllingFieldValue>
+            <controllingFieldValue>Limelight</controllingFieldValue>
+            <controllingFieldValue>SR Portal</controllingFieldValue>
+            <valueName>One-on-One</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Training</controllingFieldValue>
+            <controllingFieldValue>PRT</controllingFieldValue>
+            <controllingFieldValue>Healthgrades</controllingFieldValue>
+            <controllingFieldValue>Limelight</controllingFieldValue>
+            <controllingFieldValue>SR Portal</controllingFieldValue>
+            <valueName>KB Video</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

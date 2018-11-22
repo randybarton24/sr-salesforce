@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Memo_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Credit Memo Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SR Platform</fullName>
+                <default>false</default>
+                <label>SR Platform</label>
+            </value>
+            <value>
+                <fullName>SR Smart Reviews</fullName>
+                <default>false</default>
+                <label>SR Smart Reviews</label>
+            </value>
+            <value>
+                <fullName>SR Conversations</fullName>
+                <default>false</default>
+                <label>SR Conversations</label>
+            </value>
+            <value>
+                <fullName>SR Scheduler</fullName>
+                <default>false</default>
+                <label>SR Scheduler</label>
+            </value>
+            <value>
+                <fullName>SR Practice Marketing</fullName>
+                <default>false</default>
+                <label>SR Practice Marketing</label>
+            </value>
+            <value>
+                <fullName>Patient Reach Tablet</fullName>
+                <default>false</default>
+                <label>Patient Reach Tablet</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

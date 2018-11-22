@@ -1,0 +1,67 @@
+<apex:page controller="AddProductOpp_Controller" showHeader="true" sidebar="true" tabStyle="Opportunity">
+	<apex:form >
+		<apex:pageBlock id="PricebookOptions" title="Please choose the correct Pricebook:" rendered="{!renderPricebookOptions}">
+			<apex:pageMessage summary="{!errorMsg}" severity="Error" rendered="{!hasError}"/>
+			<apex:pageMessages />
+			<apex:selectList value="{!pBookId}" size="1">
+				<apex:selectOptions value="{!pricebookOptions}" />
+			</apex:selectList>
+			<br/>
+			<apex:messages >
+				<apex:commandButton value="Next" action="{!nextPage2}" rendered="{!isEligible}"/>
+				<apex:commandButton value="Cancel" action="{!cancel}"/>
+			</apex:messages>
+		</apex:pageBlock>
+		<apex:pageBlock id="Options" title="Which Products Would You Like to Add?" rendered="{!renderOptions}">
+			<apex:pageMessage summary="{!errorMsg}" severity="Error" rendered="{!hasError}"/>
+			<apex:pageMessages />
+			<apex:pageBlockTable value="{!wrapProductOptions}" var="product" rendered="{!isEligible}">
+				<apex:column >
+					<apex:inputCheckbox value="{!product.isChecked}"/>
+				</apex:column>
+				<apex:column value="{!product.pBookEntry.Product2.Name}"/>
+				<apex:column value="{!product.pBookEntry.UnitPrice}"/>
+				<apex:column value="{!product.pBookEntry.Product2.ProductCode}"/>
+				<apex:column value="{!product.pBookEntry.Product2.Family}"/>
+			</apex:pageBlockTable>
+			<br/>
+			<apex:messages >
+				<apex:commandButton value="Next" action="{!nextPage3}" rendered="{!isEligible}"/>
+				<apex:commandButton value="Back" action="{!backPage1}" rendered="{!isEligible}"/>
+				<apex:commandButton value="Cancel" action="{!cancel}"/>
+			</apex:messages>
+		</apex:pageBlock>
+		<apex:pageBlock id="Selections" title="Set the Contract Terms" rendered="{!renderSelections}">
+			<apex:pageMessage summary="{!errorMsg}" severity="Error" rendered="{!hasError}"/>
+			<apex:pageMessages />
+			<apex:pageBlockTable value="{!wrapProductSelections}" var="product" rendered="{!isEligible}">
+				<apex:column value="{!product.pBookEntry.Product2.Name}"/>>
+				<apex:column headerValue="Sales Price">
+					<apex:inputText value="{!product.salesPrice}" />
+				</apex:column>
+				<apex:column headerValue="Trial Period">
+					<apex:selectList value="{!product.trialPeriod}" size="1">
+						<apex:selectOptions value="{!product.trialPeriodOptions}" />
+					</apex:selectList>
+				</apex:column>
+				<apex:column headerValue="Orientation Price">
+					<apex:inputText value="{!product.promotionalPrice}"/>
+				</apex:column>
+				<apex:column headerValue="Number of Orientation Months">
+					<apex:inputText value="{!product.numberOfFreeMonths}" />
+				</apex:column>
+				<apex:column headerValue="Orientation Month Setting">
+					<apex:selectList value="{!product.freeMonthSetting}" size="1">
+						<apex:selectOptions value="{!product.freeMonthOptions}" />
+					</apex:selectList>
+				</apex:column>				
+			</apex:pageBlockTable>
+			<br/>
+			<apex:messages >
+				<apex:commandButton value="Save" action="{!saveOpp}" rendered="{!isEligible}"/>
+				<apex:commandButton value="Back" action="{!backPage2}" rendered="{!isEligible}"/>
+				<apex:commandButton value="Cancel" action="{!cancel}"/>
+			</apex:messages>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

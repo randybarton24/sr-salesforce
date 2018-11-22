@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SYNC_Availability__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Being Built= an integration engineer is currently building this SYNC
+Discovery= research is being done if we can integrate 
+Cannot Integrate= DO NOT SELL
+Business Negotiation= we are looking into making a business agreement
+SYNC Complete= Sail Away</inlineHelpText>
+    <label>SYNC Availability</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+                <label>Discovery</label>
+            </value>
+            <value>
+                <fullName>In Development</fullName>
+                <default>false</default>
+                <label>Sales Engineer List</label>
+            </value>
+            <value>
+                <fullName>SYNC Complete</fullName>
+                <default>false</default>
+                <label>SYNC Complete</label>
+            </value>
+            <value>
+                <fullName>Blacklist - DO NOT SELL</fullName>
+                <default>false</default>
+                <label>Blacklist - DO NOT SELL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

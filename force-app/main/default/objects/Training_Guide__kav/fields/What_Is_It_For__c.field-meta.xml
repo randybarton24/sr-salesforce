@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_Is_It_For__c</fullName>
+    <description>A quick paragraph telling readers what this article is discussing</description>
+    <externalId>false</externalId>
+    <label>What Is It For?</label>
+    <length>32768</length>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

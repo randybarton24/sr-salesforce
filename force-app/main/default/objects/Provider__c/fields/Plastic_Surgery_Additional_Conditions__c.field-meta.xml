@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plastic_Surgery_Additional_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Plastic Surgery Additional Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cleft Lip</fullName>
+                <default>false</default>
+                <label>Cleft Lip</label>
+            </value>
+            <value>
+                <fullName>Cleft Lip and Palate</fullName>
+                <default>false</default>
+                <label>Cleft Lip and Palate</label>
+            </value>
+            <value>
+                <fullName>Cleft Palate</fullName>
+                <default>false</default>
+                <label>Cleft Palate</label>
+            </value>
+            <value>
+                <fullName>Congenital Nasal Deformity</fullName>
+                <default>false</default>
+                <label>Congenital Nasal Deformity</label>
+            </value>
+            <value>
+                <fullName>Fracture of Hand (incl. Fingers)</fullName>
+                <default>false</default>
+                <label>Fracture of Hand (incl. Fingers)</label>
+            </value>
+            <value>
+                <fullName>Nose Injuries</fullName>
+                <default>false</default>
+                <label>Nose Injuries</label>
+            </value>
+            <value>
+                <fullName>Polydactyly</fullName>
+                <default>false</default>
+                <label>Polydactyly</label>
+            </value>
+            <value>
+                <fullName>Rhinophyma</fullName>
+                <default>false</default>
+                <label>Rhinophyma</label>
+            </value>
+            <value>
+                <fullName>Syndactyly</fullName>
+                <default>false</default>
+                <label>Syndactyly</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

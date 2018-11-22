@@ -1,0 +1,49 @@
+<apex:page controller="CRW_Ctrl" showHeader="false" sidebar="false">
+    <!-- Includes the Salesforce Console integration toolkit -->
+    <apex:includeScript value="/support/console/39.0/integration.js"/>
+
+    <!-- Includes the Lightning Components for VF js library, lightning.out.js, from the correct Salesforce domain -->
+    <apex:includeLightning />
+
+    <!-- Includes lightnign design system styles -->
+    <apex:slds />
+
+    <div id="lightning" />
+
+    <script>
+        function getSubtabRecordIdAndInitialize(){
+            sforce.console.getFocusedSubtabObjectId(initializeComponent);
+        }
+
+        function initializeComponent(result){
+            console.log(result.id);
+            $Lightning.use("{!JSENCODE(currentPrefix)}:CRW_App", function() {
+                $Lightning.createComponent("{!JSENCODE(currentPrefix)}:CRW_wrapper",
+                   { recordId : result.id },
+                   "lightning",
+                   function(cmp) {
+                       $A.eventService.addHandler({
+                           "event": "{!JSENCODE(currentPrefix)}:CRW_recommendationsUpdated",
+                           "handler" : handleRecommendationsUpdate
+                       });
+                   });
+            });
+        }
+
+        function handleRecommendationsUpdate(){
+            //NOTE: This throws a DOM exception when testing in stand-alone mode
+            sforce.console.getFocusedSubtabId(refreshSubTab);
+        }
+
+        function refreshSubTab(result){
+            sforce.console.refreshSubtabById(result.id, true, function(){});
+        }
+
+        //Check to handle testing in stand-alone mode
+        if({!hasIdParam}){
+            window.onload = initializeComponent({id : '{!JSENCODE(recordId)}'});
+        }else{
+            window.onload = getSubtabRecordIdAndInitialize;
+        }
+    </script>
+</apex:page>

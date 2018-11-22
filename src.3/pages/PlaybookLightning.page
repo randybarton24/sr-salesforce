@@ -1,0 +1,12 @@
+<apex:page standardController="Account" sidebar="false" showHeader="false">
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    <script>
+        $Lightning.use("c:PlaybookDisplayApp", function() {
+            $Lightning.createComponent(
+                "c:PlaybookDisplay", {},
+                "displayComponent",
+                function(cmp) {});
+        });
+    </script>
+    <div id="displayComponent"/>
+</apex:page>

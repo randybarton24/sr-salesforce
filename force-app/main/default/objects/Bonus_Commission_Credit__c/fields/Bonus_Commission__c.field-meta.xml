@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bonus_Commission__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>The related Bonus &amp; Commission record for the Bonus &amp; Commission Credit</description>
+    <externalId>false</externalId>
+    <label>Bonus &amp; Commission</label>
+    <referenceTo>Bonus_Commission__c</referenceTo>
+    <relationshipLabel>Bonus &amp; Commission Credits</relationshipLabel>
+    <relationshipName>Bonus_Commission_Credits</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

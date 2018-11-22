@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Addendum_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Addendum Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AS-01: Purchase Additional Quantity (No Price Change)</fullName>
+                <default>false</default>
+                <label>AS-01: Purchase Additional Quantity (No Price Change)</label>
+            </value>
+            <value>
+                <fullName>AS-02: Increase/Decrease Source Quantity and Price</fullName>
+                <default>false</default>
+                <label>AS-02: Increase/Decrease Source Quantity and Price</label>
+            </value>
+            <value>
+                <fullName>AS-03: Purchase New Product</fullName>
+                <default>false</default>
+                <label>AS-03: Purchase New Product</label>
+            </value>
+            <value>
+                <fullName>AS-04: Purchase New Product and Change Source Subscription Price</fullName>
+                <default>false</default>
+                <label>AS-04: Purchase New Product and Change Source Subscription Price</label>
+            </value>
+            <value>
+                <fullName>AS-05: Product Upgrade: Replace Product</fullName>
+                <default>false</default>
+                <label>AS-05: Product Upgrade: Replace Product</label>
+            </value>
+            <value>
+                <fullName>AS-06: Product Downgrade: Replace Product</fullName>
+                <default>false</default>
+                <label>AS-06: Product Downgrade: Replace Product</label>
+            </value>
+            <value>
+                <fullName>AS-07: Product Downgrade: Decrease Product Quantity</fullName>
+                <default>false</default>
+                <label>AS-07: Product Downgrade: Decrease Product Quantity</label>
+            </value>
+            <value>
+                <fullName>AS-08: User Defined</fullName>
+                <default>false</default>
+                <label>AS-08: User Defined</label>
+            </value>
+            <value>
+                <fullName>AS-09: Change Subscription Bill-to Account/Owner</fullName>
+                <default>false</default>
+                <label>AS-09: Change Subscription Bill-to Account/Owner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

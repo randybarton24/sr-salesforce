@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dental_Hygiene_Procedures__c</fullName>
+    <externalId>false</externalId>
+    <label>Dental Hygiene Procedures</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dental Cleaning</fullName>
+                <default>false</default>
+                <label>Dental Cleaning</label>
+            </value>
+            <value>
+                <fullName>Dental Examination</fullName>
+                <default>false</default>
+                <label>Dental Examination</label>
+            </value>
+            <value>
+                <fullName>Dental Prophylaxis</fullName>
+                <default>false</default>
+                <label>Dental Prophylaxis</label>
+            </value>
+            <value>
+                <fullName>Dental Prophylaxis, Adult</fullName>
+                <default>false</default>
+                <label>Dental Prophylaxis, Adult</label>
+            </value>
+            <value>
+                <fullName>Dental Prophylaxis, Child</fullName>
+                <default>false</default>
+                <label>Dental Prophylaxis, Child</label>
+            </value>
+            <value>
+                <fullName>Dental X-Ray</fullName>
+                <default>false</default>
+                <label>Dental X-Ray</label>
+            </value>
+            <value>
+                <fullName>Fluoride Varnish</fullName>
+                <default>false</default>
+                <label>Fluoride Varnish</label>
+            </value>
+            <value>
+                <fullName>Gum Disease Treatment</fullName>
+                <default>false</default>
+                <label>Gum Disease Treatment</label>
+            </value>
+            <value>
+                <fullName>Pocket Depth Measurement</fullName>
+                <default>false</default>
+                <label>Pocket Depth Measurement</label>
+            </value>
+            <value>
+                <fullName>Teeth Polishing</fullName>
+                <default>false</default>
+                <label>Teeth Polishing</label>
+            </value>
+            <value>
+                <fullName>Teeth Scaling</fullName>
+                <default>false</default>
+                <label>Teeth Scaling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

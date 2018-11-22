@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Lost</fullName>
+    <active>true</active>
+    <description>abishop@solutionreach.com</description>
+    <errorConditionFormula>ISCHANGED( StageName ) &amp;&amp;
+PRIORVALUE( IsClosed ) &amp;&amp;
+RecordType.Name != &quot;Healthgrades&quot; &amp;&amp;
+$Profile.Name != &quot;System Administrator&quot; &amp;&amp;
+$Profile.Name != &quot;Finance&quot; &amp;&amp;
+$Profile.Name != &quot;Accounting - Beta&quot; &amp;&amp;
+$Profile.Name != &quot;Client Engagement Manager&quot; &amp;&amp;
+$Profile.Name != &quot;Sales Administrator&quot; &amp;&amp;
+ISPICKVAL( Reason_for_closing__c, &quot;&quot; ) &amp;&amp;
+!ISCHANGED( Closed_Owner_Role_Id__c ) &amp;&amp;
+!ISCHANGED( Closed_Owner_Manager__c ) &amp;&amp;
+!ISCHANGED( Closed_Owner_VP__c ) &amp;&amp;
+!ISCHANGED( Source_User__c ) &amp;&amp;
+!ISCHANGED( Source_User_Role_Id__c ) &amp;&amp;
+!ISCHANGED( Source_User_Manager__c ) &amp;&amp;
+!ISCHANGED( Source_User_VP__c ) &amp;&amp;
+!ISCHANGED( Demo_Request_Reason__c)</errorConditionFormula>
+    <errorMessage>You cannot edit a Closed Lost Opportunity</errorMessage>
+</ValidationRule>

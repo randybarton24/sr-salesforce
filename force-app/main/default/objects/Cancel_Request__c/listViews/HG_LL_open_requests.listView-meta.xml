@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HG_LL_open_requests</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Cancel_Request_Date__c</columns>
+    <columns>Cancel_Request_Type__c</columns>
+    <columns>Stage__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Projected_Contract_Expiration_Renewal__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Cancel_Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Annual,Trial</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled,No Sale,Save,Resume - No Change</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Cancel_Request__c.Healthgrades,Cancel_Request__c.SR_Schedule,Cancel_Request__c.SR_Smart_Reviews</value>
+    </filters>
+    <label>Add-on features open requests</label>
+    <sharedTo>
+        <group>Client_Engagement</group>
+    </sharedTo>
+</ListView>

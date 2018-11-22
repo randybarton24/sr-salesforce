@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Billing_Frequency__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;One-Time&quot;), &quot;One-Time&quot;,
+IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;Monthly&quot;), &quot;Monthly&quot;,
+IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;Quarterly&quot;), &quot;Quarterly&quot; ,
+IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;Semi-Annual&quot;), &quot;Semi-Annual&quot;,
+IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;Yearly&quot;), &quot;Yearly&quot; ,
+IF (ISPICKVAL(PricebookEntry.Product2.RecurSoft__Billing_Frequency__c, &quot;Milestones&quot;), &quot;Milestones&quot; , &quot;&quot;
+)
+)
+)
+)
+)
+)</formula>
+    <inlineHelpText>Default billing frequency of the product.</inlineHelpText>
+    <label>Billing Frequency</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

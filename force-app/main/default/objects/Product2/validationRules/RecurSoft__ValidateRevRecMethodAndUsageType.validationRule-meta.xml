@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__ValidateRevRecMethodAndUsageType</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c, false, 
+    AND(
+        ISPICKVAL(RecurSoft__Revenue_Recognition_Method__c, &#39;Usage Based&#39;),
+        NOT(
+            OR(
+                ISPICKVAL(RecurSoft__Usage_Type__c, &#39;Accrued Usage&#39;),
+                ISPICKVAL(RecurSoft__Usage_Type__c, &#39;Earned Revenue&#39;)
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Revenue Recognition Method with Usage Based should only be assigned to a product with Usage type with Earned Revenue or Accrued Usage.</errorMessage>
+</ValidationRule>

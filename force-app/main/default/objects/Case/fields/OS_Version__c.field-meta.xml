@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OS_Version__c</fullName>
+    <externalId>false</externalId>
+    <label>OS Version</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>OS__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Windows XP</fullName>
+                <default>false</default>
+                <label>Windows XP</label>
+            </value>
+            <value>
+                <fullName>Windows 7</fullName>
+                <default>false</default>
+                <label>Windows 7</label>
+            </value>
+            <value>
+                <fullName>Windows Vista</fullName>
+                <default>false</default>
+                <label>Windows Vista</label>
+            </value>
+            <value>
+                <fullName>Windows 8.1</fullName>
+                <default>false</default>
+                <label>Windows 8.1</label>
+            </value>
+            <value>
+                <fullName>Windows 10</fullName>
+                <default>false</default>
+                <label>Windows 10</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2003</fullName>
+                <default>false</default>
+                <label>Windows Server 2003</label>
+            </value>
+            <value>
+                <fullName>Windows Servers 2008</fullName>
+                <default>false</default>
+                <label>Windows Servers 2008</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2008R2</fullName>
+                <default>false</default>
+                <label>Windows Server 2008R2</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2012</fullName>
+                <default>false</default>
+                <label>Windows Server 2012</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2016</fullName>
+                <default>false</default>
+                <label>Windows Server 2016</label>
+            </value>
+            <value>
+                <fullName>Windows Server 2018</fullName>
+                <default>false</default>
+                <label>Windows Server 2018</label>
+            </value>
+            <value>
+                <fullName>10.7</fullName>
+                <default>false</default>
+                <label>10.7</label>
+            </value>
+            <value>
+                <fullName>10.8</fullName>
+                <default>false</default>
+                <label>10.8</label>
+            </value>
+            <value>
+                <fullName>10.9</fullName>
+                <default>false</default>
+                <label>10.9</label>
+            </value>
+            <value>
+                <fullName>10.11</fullName>
+                <default>false</default>
+                <label>10.11</label>
+            </value>
+            <value>
+                <fullName>10.12</fullName>
+                <default>false</default>
+                <label>10.12</label>
+            </value>
+            <value>
+                <fullName>10.13</fullName>
+                <default>false</default>
+                <label>10.13</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows XP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows 7</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows Vista</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows 8.1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows 10</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows Server 2003</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows Servers 2008</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows Server 2008R2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows Server 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows Server 2016</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows</controllingFieldValue>
+            <valueName>Windows Server 2018</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mac</controllingFieldValue>
+            <valueName>10.7</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mac</controllingFieldValue>
+            <valueName>10.8</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mac</controllingFieldValue>
+            <valueName>10.9</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mac</controllingFieldValue>
+            <valueName>10.11</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mac</controllingFieldValue>
+            <valueName>10.12</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mac</controllingFieldValue>
+            <valueName>10.13</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

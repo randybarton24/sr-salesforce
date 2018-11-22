@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unavailable_Feature__c</fullName>
+    <externalId>false</externalId>
+    <label>Unavailable Feature</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auto-Cancel Appointments via Text</fullName>
+                <default>false</default>
+                <label>Auto-Cancel Appointments via Text</label>
+            </value>
+            <value>
+                <fullName>Call Recording</fullName>
+                <default>false</default>
+                <label>Call Recording</label>
+            </value>
+            <value>
+                <fullName>Insurance Billing</fullName>
+                <default>false</default>
+                <label>Insurance Billing</label>
+            </value>
+            <value>
+                <fullName>Multi-lingual Messaging</fullName>
+                <default>false</default>
+                <label>Multi-lingual Messaging</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Phone System</fullName>
+                <default>false</default>
+                <label>Phone System</label>
+            </value>
+            <value>
+                <fullName>Portal Integration</fullName>
+                <default>false</default>
+                <label>Portal Integration</label>
+            </value>
+            <value>
+                <fullName>Postcards</fullName>
+                <default>false</default>
+                <label>Postcards</label>
+            </value>
+            <value>
+                <fullName>Pre/Post Op Message</fullName>
+                <default>false</default>
+                <label>Pre/Post Op Message</label>
+            </value>
+            <value>
+                <fullName>Pre/Post-op Messaging</fullName>
+                <default>false</default>
+                <label>Pre/Post-op Messaging</label>
+            </value>
+            <value>
+                <fullName>Treatment Plan Messaging</fullName>
+                <default>false</default>
+                <label>Treatment Plan Messaging</label>
+            </value>
+            <value>
+                <fullName>Two Way Texting</fullName>
+                <default>false</default>
+                <label>Two Way Texting</label>
+            </value>
+            <value>
+                <fullName>Voice to cell phone</fullName>
+                <default>false</default>
+                <label>Voice to cell phone</label>
+            </value>
+            <value>
+                <fullName>Website Hosting</fullName>
+                <default>false</default>
+                <label>Website Hosting</label>
+            </value>
+            <value>
+                <fullName>Writeback</fullName>
+                <default>false</default>
+                <label>Writeback</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

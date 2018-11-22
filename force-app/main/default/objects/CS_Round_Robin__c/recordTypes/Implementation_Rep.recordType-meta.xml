@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Implementation_Rep</fullName>
+    <active>true</active>
+    <description>Used for setting limits for Implementation Reps for Activation Assignments</description>
+    <label>Implementation Rep</label>
+    <picklistValues>
+        <picklist>Team_Assignment__c</picklist>
+        <values>
+            <fullName>Dentrix 1 Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dentrix 2 Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EagleSoft Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical 1 Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical 2 Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCOPE Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vision Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vertical_Practice_Management_System__c</picklist>
+        <values>
+            <fullName>Dentrix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vision</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

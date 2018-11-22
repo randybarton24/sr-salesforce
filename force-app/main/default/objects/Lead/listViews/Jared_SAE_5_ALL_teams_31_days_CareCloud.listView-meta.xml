@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jared_SAE_5_ALL_teams_31_days_CareCloud</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>Competitor__c</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Last_ROE_Task_Date__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Practice_Software__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Last_ROE_Task_Date__c</field>
+        <operation>lessThan</operation>
+        <value>N_DAYS_AGO:31</value>
+    </filters>
+    <filters>
+        <field>Practice_Software__c</field>
+        <operation>contains</operation>
+        <value>Carecloud</value>
+    </filters>
+    <label>Jared SAE 5 ALL teams: 31 days-CareCloud</label>
+    <sharedTo>
+        <role>SAE_Manager_5</role>
+        <role>SAE_Rep_5</role>
+    </sharedTo>
+</ListView>

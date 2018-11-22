@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Support_Reason_Needed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISCHANGED(Do_Not_Support_Sync__c), 
+Do_Not_Support_Sync__c = true, 
+ISPICKVAL(Do_Not_Support_Reason__c, &quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>Do_Not_Support_Reason__c</errorDisplayField>
+    <errorMessage>Please select why this account should no longer be supported.</errorMessage>
+</ValidationRule>

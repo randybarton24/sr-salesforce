@@ -1,0 +1,13 @@
+.THIS.widgetContainer{
+    margin:10px;
+    min-height:100px;
+}
+.THIS .fieldsContainer{
+    padding:10px;
+}
+.THIS .buttonsContainer{
+    margin:10px 0;
+}
+.THIS .buttonsContainer .applyButton{
+    width:100%;
+}

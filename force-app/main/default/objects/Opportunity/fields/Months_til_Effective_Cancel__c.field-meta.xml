@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Months_til_Effective_Cancel__c</fullName>
+    <description>Used to find how many months between when an office signs up and when they cancel</description>
+    <externalId>false</externalId>
+    <formula>12*(Year( Cancel_Month__c ) - Year(  Most_Recent_Contract_Date__c  )) + (Month( Cancel_Month__c ) - Month(Most_Recent_Contract_Date__c ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Months til Effective Cancel</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

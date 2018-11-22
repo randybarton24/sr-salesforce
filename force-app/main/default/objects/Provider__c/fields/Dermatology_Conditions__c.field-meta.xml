@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dermatology_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Dermatology Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acanthosis Nigricans</fullName>
+                <default>false</default>
+                <label>Acanthosis Nigricans</label>
+            </value>
+            <value>
+                <fullName>Acne</fullName>
+                <default>false</default>
+                <label>Acne</label>
+            </value>
+            <value>
+                <fullName>Acneiform Eruption</fullName>
+                <default>false</default>
+                <label>Acneiform Eruption</label>
+            </value>
+            <value>
+                <fullName>Acne Keloid</fullName>
+                <default>false</default>
+                <label>Acne Keloid</label>
+            </value>
+            <value>
+                <fullName>Acne Vulgaris</fullName>
+                <default>false</default>
+                <label>Acne Vulgaris</label>
+            </value>
+            <value>
+                <fullName>Actinic Cheilitis</fullName>
+                <default>false</default>
+                <label>Actinic Cheilitis</label>
+            </value>
+            <value>
+                <fullName>Actinic Keratosis</fullName>
+                <default>false</default>
+                <label>Actinic Keratosis</label>
+            </value>
+            <value>
+                <fullName>Adult Acne</fullName>
+                <default>false</default>
+                <label>Adult Acne</label>
+            </value>
+            <value>
+                <fullName>Age Spots</fullName>
+                <default>false</default>
+                <label>Age Spots</label>
+            </value>
+            <value>
+                <fullName>Aging Face</fullName>
+                <default>false</default>
+                <label>Aging Face</label>
+            </value>
+            <value>
+                <fullName>Alopecia Areata</fullName>
+                <default>false</default>
+                <label>Alopecia Areata</label>
+            </value>
+            <value>
+                <fullName>Anal Warts</fullName>
+                <default>false</default>
+                <label>Anal Warts</label>
+            </value>
+            <value>
+                <fullName>Angioedema</fullName>
+                <default>false</default>
+                <label>Angioedema</label>
+            </value>
+            <value>
+                <fullName>Angioma</fullName>
+                <default>false</default>
+                <label>Angioma</label>
+            </value>
+            <value>
+                <fullName>Athlete&#39;s Foot</fullName>
+                <default>false</default>
+                <label>Athlete&#39;s Foot</label>
+            </value>
+            <value>
+                <fullName>Atopic Dermatitis (Eczema)</fullName>
+                <default>false</default>
+                <label>Atopic Dermatitis (Eczema)</label>
+            </value>
+            <value>
+                <fullName>Atypical Mole</fullName>
+                <default>false</default>
+                <label>Atypical Mole</label>
+            </value>
+            <value>
+                <fullName>Autoimmune Diseases</fullName>
+                <default>false</default>
+                <label>Autoimmune Diseases</label>
+            </value>
+            <value>
+                <fullName>Bacterial Infections</fullName>
+                <default>false</default>
+                <label>Bacterial Infections</label>
+            </value>
+            <value>
+                <fullName>Basal Cell Carcinoma</fullName>
+                <default>false</default>
+                <label>Basal Cell Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Basal Cell Carcinomas w/Milia &amp; Course</fullName>
+                <default>false</default>
+                <label>Basal Cell Carcinomas w/Milia &amp; Course</label>
+            </value>
+            <value>
+                <fullName>Basosquamous Carcinoma</fullName>
+                <default>false</default>
+                <label>Basosquamous Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Bedsores</fullName>
+                <default>false</default>
+                <label>Bedsores</label>
+            </value>
+            <value>
+                <fullName>Birthmark</fullName>
+                <default>false</default>
+                <label>Birthmark</label>
+            </value>
+            <value>
+                <fullName>Black Hairy Tongue</fullName>
+                <default>false</default>
+                <label>Black Hairy Tongue</label>
+            </value>
+            <value>
+                <fullName>Boil</fullName>
+                <default>false</default>
+                <label>Boil</label>
+            </value>
+            <value>
+                <fullName>Candidiasis of Skin and Nails</fullName>
+                <default>false</default>
+                <label>Candidiasis of Skin and Nails</label>
+            </value>
+            <value>
+                <fullName>Canker Sore</fullName>
+                <default>false</default>
+                <label>Canker Sore</label>
+            </value>
+            <value>
+                <fullName>Carbuncle</fullName>
+                <default>false</default>
+                <label>Carbuncle</label>
+            </value>
+            <value>
+                <fullName>Cellulitis</fullName>
+                <default>false</default>
+                <label>Cellulitis</label>
+            </value>
+            <value>
+                <fullName>Chemical Burn</fullName>
+                <default>false</default>
+                <label>Chemical Burn</label>
+            </value>
+            <value>
+                <fullName>Chickenpox</fullName>
+                <default>false</default>
+                <label>Chickenpox</label>
+            </value>
+            <value>
+                <fullName>Chronic Urticaria</fullName>
+                <default>false</default>
+                <label>Chronic Urticaria</label>
+            </value>
+            <value>
+                <fullName>Cold Sore</fullName>
+                <default>false</default>
+                <label>Cold Sore</label>
+            </value>
+            <value>
+                <fullName>Condyloma</fullName>
+                <default>false</default>
+                <label>Condyloma</label>
+            </value>
+            <value>
+                <fullName>Connective Tissue Disorders</fullName>
+                <default>false</default>
+                <label>Connective Tissue Disorders</label>
+            </value>
+            <value>
+                <fullName>Contact Dermatitis</fullName>
+                <default>false</default>
+                <label>Contact Dermatitis</label>
+            </value>
+            <value>
+                <fullName>Cutaneous Candidiasis</fullName>
+                <default>false</default>
+                <label>Cutaneous Candidiasis</label>
+            </value>
+            <value>
+                <fullName>Cutaneous T-Cell Lymphoma</fullName>
+                <default>false</default>
+                <label>Cutaneous T-Cell Lymphoma</label>
+            </value>
+            <value>
+                <fullName>Cyst</fullName>
+                <default>false</default>
+                <label>Cyst</label>
+            </value>
+            <value>
+                <fullName>Dandruff</fullName>
+                <default>false</default>
+                <label>Dandruff</label>
+            </value>
+            <value>
+                <fullName>Dermal Melanoma</fullName>
+                <default>false</default>
+                <label>Dermal Melanoma</label>
+            </value>
+            <value>
+                <fullName>Dermatitis</fullName>
+                <default>false</default>
+                <label>Dermatitis</label>
+            </value>
+            <value>
+                <fullName>Dermatitis Herpetiformis</fullName>
+                <default>false</default>
+                <label>Dermatitis Herpetiformis</label>
+            </value>
+            <value>
+                <fullName>Dermatofibroma</fullName>
+                <default>false</default>
+                <label>Dermatofibroma</label>
+            </value>
+            <value>
+                <fullName>Dermatomyositis</fullName>
+                <default>false</default>
+                <label>Dermatomyositis</label>
+            </value>
+            <value>
+                <fullName>Dermoid Cyst</fullName>
+                <default>false</default>
+                <label>Dermoid Cyst</label>
+            </value>
+            <value>
+                <fullName>Discoid Lupus</fullName>
+                <default>false</default>
+                <label>Discoid Lupus</label>
+            </value>
+            <value>
+                <fullName>Discoid Lupus Erythematosus</fullName>
+                <default>false</default>
+                <label>Discoid Lupus Erythematosus</label>
+            </value>
+            <value>
+                <fullName>Dry Skin</fullName>
+                <default>false</default>
+                <label>Dry Skin</label>
+            </value>
+            <value>
+                <fullName>Dysplastic Nevi</fullName>
+                <default>false</default>
+                <label>Dysplastic Nevi</label>
+            </value>
+            <value>
+                <fullName>Epidermoid Carcinoma</fullName>
+                <default>false</default>
+                <label>Epidermoid Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Erysipelas</fullName>
+                <default>false</default>
+                <label>Erysipelas</label>
+            </value>
+            <value>
+                <fullName>Erythema Multiforme</fullName>
+                <default>false</default>
+                <label>Erythema Multiforme</label>
+            </value>
+            <value>
+                <fullName>Excessive Sweating</fullName>
+                <default>false</default>
+                <label>Excessive Sweating</label>
+            </value>
+            <value>
+                <fullName>External Ear Disorders</fullName>
+                <default>false</default>
+                <label>External Ear Disorders</label>
+            </value>
+            <value>
+                <fullName>Eyelid Eczema</fullName>
+                <default>false</default>
+                <label>Eyelid Eczema</label>
+            </value>
+            <value>
+                <fullName>Follicular Adenocarcinoma</fullName>
+                <default>false</default>
+                <label>Follicular Adenocarcinoma</label>
+            </value>
+            <value>
+                <fullName>Folliculitis</fullName>
+                <default>false</default>
+                <label>Folliculitis</label>
+            </value>
+            <value>
+                <fullName>Fungal Infections</fullName>
+                <default>false</default>
+                <label>Fungal Infections</label>
+            </value>
+            <value>
+                <fullName>Fungal Nail Infection</fullName>
+                <default>false</default>
+                <label>Fungal Nail Infection</label>
+            </value>
+            <value>
+                <fullName>Genital Herpes</fullName>
+                <default>false</default>
+                <label>Genital Herpes</label>
+            </value>
+            <value>
+                <fullName>Genital Warts</fullName>
+                <default>false</default>
+                <label>Genital Warts</label>
+            </value>
+            <value>
+                <fullName>Gorlin Syndrome</fullName>
+                <default>false</default>
+                <label>Gorlin Syndrome</label>
+            </value>
+            <value>
+                <fullName>Granuloma Annulare</fullName>
+                <default>false</default>
+                <label>Granuloma Annulare</label>
+            </value>
+            <value>
+                <fullName>Hair Conditions</fullName>
+                <default>false</default>
+                <label>Hair Conditions</label>
+            </value>
+            <value>
+                <fullName>Hair Loss</fullName>
+                <default>false</default>
+                <label>Hair Loss</label>
+            </value>
+            <value>
+                <fullName>Hand Eczema</fullName>
+                <default>false</default>
+                <label>Hand Eczema</label>
+            </value>
+            <value>
+                <fullName>Hemangioma</fullName>
+                <default>false</default>
+                <label>Hemangioma</label>
+            </value>
+            <value>
+                <fullName>Herpes Simplex Infection</fullName>
+                <default>false</default>
+                <label>Herpes Simplex Infection</label>
+            </value>
+            <value>
+                <fullName>Hidradenitis Suppurativa</fullName>
+                <default>false</default>
+                <label>Hidradenitis Suppurativa</label>
+            </value>
+            <value>
+                <fullName>Hirsutism</fullName>
+                <default>false</default>
+                <label>Hirsutism</label>
+            </value>
+            <value>
+                <fullName>Hives</fullName>
+                <default>false</default>
+                <label>Hives</label>
+            </value>
+            <value>
+                <fullName>Human Parvovirus B19 Infection</fullName>
+                <default>false</default>
+                <label>Human Parvovirus B19 Infection</label>
+            </value>
+            <value>
+                <fullName>Impetigo</fullName>
+                <default>false</default>
+                <label>Impetigo</label>
+            </value>
+            <value>
+                <fullName>Infundibulocystic Basal Cell Carcinoma</fullName>
+                <default>false</default>
+                <label>Infundibulocystic Basal Cell Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Insect Bites and Stings</fullName>
+                <default>false</default>
+                <label>Insect Bites and Stings</label>
+            </value>
+            <value>
+                <fullName>Intertrigo</fullName>
+                <default>false</default>
+                <label>Intertrigo</label>
+            </value>
+            <value>
+                <fullName>Itchy Skin</fullName>
+                <default>false</default>
+                <label>Itchy Skin</label>
+            </value>
+            <value>
+                <fullName>Jock Itch</fullName>
+                <default>false</default>
+                <label>Jock Itch</label>
+            </value>
+            <value>
+                <fullName>Keloid Scar</fullName>
+                <default>false</default>
+                <label>Keloid Scar</label>
+            </value>
+            <value>
+                <fullName>Keratosis</fullName>
+                <default>false</default>
+                <label>Keratosis</label>
+            </value>
+            <value>
+                <fullName>Keratosis Pilaris</fullName>
+                <default>false</default>
+                <label>Keratosis Pilaris</label>
+            </value>
+            <value>
+                <fullName>Lesion</fullName>
+                <default>false</default>
+                <label>Lesion</label>
+            </value>
+            <value>
+                <fullName>Lice</fullName>
+                <default>false</default>
+                <label>Lice</label>
+            </value>
+            <value>
+                <fullName>Lichen Planus</fullName>
+                <default>false</default>
+                <label>Lichen Planus</label>
+            </value>
+            <value>
+                <fullName>Lichen Sclerosis Et Atrophicus</fullName>
+                <default>false</default>
+                <label>Lichen Sclerosis Et Atrophicus</label>
+            </value>
+            <value>
+                <fullName>Lichen Simplex Chronicus</fullName>
+                <default>false</default>
+                <label>Lichen Simplex Chronicus</label>
+            </value>
+            <value>
+                <fullName>Localized Fat Deposits</fullName>
+                <default>false</default>
+                <label>Localized Fat Deposits</label>
+            </value>
+            <value>
+                <fullName>Lyme Disease</fullName>
+                <default>false</default>
+                <label>Lyme Disease</label>
+            </value>
+            <value>
+                <fullName>Measles</fullName>
+                <default>false</default>
+                <label>Measles</label>
+            </value>
+            <value>
+                <fullName>Melanoma</fullName>
+                <default>false</default>
+                <label>Melanoma</label>
+            </value>
+            <value>
+                <fullName>Merkel Cell Carcinoma</fullName>
+                <default>false</default>
+                <label>Merkel Cell Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Mild Acne</fullName>
+                <default>false</default>
+                <label>Mild Acne</label>
+            </value>
+            <value>
+                <fullName>Mole</fullName>
+                <default>false</default>
+                <label>Mole</label>
+            </value>
+            <value>
+                <fullName>Molluscum Contagiosum Infection</fullName>
+                <default>false</default>
+                <label>Molluscum Contagiosum Infection</label>
+            </value>
+            <value>
+                <fullName>Nail Diseases</fullName>
+                <default>false</default>
+                <label>Nail Diseases</label>
+            </value>
+            <value>
+                <fullName>Nail Psoriasis</fullName>
+                <default>false</default>
+                <label>Nail Psoriasis</label>
+            </value>
+            <value>
+                <fullName>Neurofibromatosis</fullName>
+                <default>false</default>
+                <label>Neurofibromatosis</label>
+            </value>
+            <value>
+                <fullName>Nevus</fullName>
+                <default>false</default>
+                <label>Nevus</label>
+            </value>
+            <value>
+                <fullName>Onchyomycosis</fullName>
+                <default>false</default>
+                <label>Onchyomycosis</label>
+            </value>
+            <value>
+                <fullName>Oral Lichenoid Lesions</fullName>
+                <default>false</default>
+                <label>Oral Lichenoid Lesions</label>
+            </value>
+            <value>
+                <fullName>Oral Lichen Planus</fullName>
+                <default>false</default>
+                <label>Oral Lichen Planus</label>
+            </value>
+            <value>
+                <fullName>Oral Mucous Membrane Disease</fullName>
+                <default>false</default>
+                <label>Oral Mucous Membrane Disease</label>
+            </value>
+            <value>
+                <fullName>Oral Squamous Cell Carcinoma</fullName>
+                <default>false</default>
+                <label>Oral Squamous Cell Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Parapsoriasis</fullName>
+                <default>false</default>
+                <label>Parapsoriasis</label>
+            </value>
+            <value>
+                <fullName>Pemphigoid</fullName>
+                <default>false</default>
+                <label>Pemphigoid</label>
+            </value>
+            <value>
+                <fullName>Pemphigus</fullName>
+                <default>false</default>
+                <label>Pemphigus</label>
+            </value>
+            <value>
+                <fullName>Photosensitivity</fullName>
+                <default>false</default>
+                <label>Photosensitivity</label>
+            </value>
+            <value>
+                <fullName>Pigmentation Disorders</fullName>
+                <default>false</default>
+                <label>Pigmentation Disorders</label>
+            </value>
+            <value>
+                <fullName>Pityriasis Rosea</fullName>
+                <default>false</default>
+                <label>Pityriasis Rosea</label>
+            </value>
+            <value>
+                <fullName>Porphyria</fullName>
+                <default>false</default>
+                <label>Porphyria</label>
+            </value>
+            <value>
+                <fullName>Pruritus</fullName>
+                <default>false</default>
+                <label>Pruritus</label>
+            </value>
+            <value>
+                <fullName>Pruritus Ani</fullName>
+                <default>false</default>
+                <label>Pruritus Ani</label>
+            </value>
+            <value>
+                <fullName>Psoriasis</fullName>
+                <default>false</default>
+                <label>Psoriasis</label>
+            </value>
+            <value>
+                <fullName>Rhinophyma</fullName>
+                <default>false</default>
+                <label>Rhinophyma</label>
+            </value>
+            <value>
+                <fullName>Ringworm</fullName>
+                <default>false</default>
+                <label>Ringworm</label>
+            </value>
+            <value>
+                <fullName>Ringworm of the Beard</fullName>
+                <default>false</default>
+                <label>Ringworm of the Beard</label>
+            </value>
+            <value>
+                <fullName>Rosacea</fullName>
+                <default>false</default>
+                <label>Rosacea</label>
+            </value>
+            <value>
+                <fullName>Roseola</fullName>
+                <default>false</default>
+                <label>Roseola</label>
+            </value>
+            <value>
+                <fullName>Scabies</fullName>
+                <default>false</default>
+                <label>Scabies</label>
+            </value>
+            <value>
+                <fullName>Scars</fullName>
+                <default>false</default>
+                <label>Scars</label>
+            </value>
+            <value>
+                <fullName>Scleroderma</fullName>
+                <default>false</default>
+                <label>Scleroderma</label>
+            </value>
+            <value>
+                <fullName>Seborrheic Keratosis</fullName>
+                <default>false</default>
+                <label>Seborrheic Keratosis</label>
+            </value>
+            <value>
+                <fullName>Seborrhoea</fullName>
+                <default>false</default>
+                <label>Seborrhoea</label>
+            </value>
+            <value>
+                <fullName>Shingles</fullName>
+                <default>false</default>
+                <label>Shingles</label>
+            </value>
+            <value>
+                <fullName>Skin Aging</fullName>
+                <default>false</default>
+                <label>Skin Aging</label>
+            </value>
+            <value>
+                <fullName>Skin Allergy</fullName>
+                <default>false</default>
+                <label>Skin Allergy</label>
+            </value>
+            <value>
+                <fullName>Skin Cancer</fullName>
+                <default>false</default>
+                <label>Skin Cancer</label>
+            </value>
+            <value>
+                <fullName>Skin Diseases</fullName>
+                <default>false</default>
+                <label>Skin Diseases</label>
+            </value>
+            <value>
+                <fullName>Skin Diseases in HIV</fullName>
+                <default>false</default>
+                <label>Skin Diseases in HIV</label>
+            </value>
+            <value>
+                <fullName>Skin Disorders</fullName>
+                <default>false</default>
+                <label>Skin Disorders</label>
+            </value>
+            <value>
+                <fullName>Skin Laxity</fullName>
+                <default>false</default>
+                <label>Skin Laxity</label>
+            </value>
+            <value>
+                <fullName>Skin Ulcer</fullName>
+                <default>false</default>
+                <label>Skin Ulcer</label>
+            </value>
+            <value>
+                <fullName>Solar Keratoses</fullName>
+                <default>false</default>
+                <label>Solar Keratoses</label>
+            </value>
+            <value>
+                <fullName>Squamous Cell Carcinoma</fullName>
+                <default>false</default>
+                <label>Squamous Cell Carcinoma</label>
+            </value>
+            <value>
+                <fullName>Squamous Cell Carcinoma of Head and Neck</fullName>
+                <default>false</default>
+                <label>Squamous Cell Carcinoma of Head and Neck</label>
+            </value>
+            <value>
+                <fullName>Stretch Marks</fullName>
+                <default>false</default>
+                <label>Stretch Marks</label>
+            </value>
+            <value>
+                <fullName>Sweaty Palms</fullName>
+                <default>false</default>
+                <label>Sweaty Palms</label>
+            </value>
+            <value>
+                <fullName>Thinning of Skin</fullName>
+                <default>false</default>
+                <label>Thinning of Skin</label>
+            </value>
+            <value>
+                <fullName>Toxic Shock Syndrome</fullName>
+                <default>false</default>
+                <label>Toxic Shock Syndrome</label>
+            </value>
+            <value>
+                <fullName>Tumidus Lupus Erythematosus</fullName>
+                <default>false</default>
+                <label>Tumidus Lupus Erythematosus</label>
+            </value>
+            <value>
+                <fullName>Urticaria Due to Cold</fullName>
+                <default>false</default>
+                <label>Urticaria Due to Cold</label>
+            </value>
+            <value>
+                <fullName>Varicose Veins</fullName>
+                <default>false</default>
+                <label>Varicose Veins</label>
+            </value>
+            <value>
+                <fullName>Vasculitis</fullName>
+                <default>false</default>
+                <label>Vasculitis</label>
+            </value>
+            <value>
+                <fullName>Vitiligo</fullName>
+                <default>false</default>
+                <label>Vitiligo</label>
+            </value>
+            <value>
+                <fullName>Warts</fullName>
+                <default>false</default>
+                <label>Warts</label>
+            </value>
+            <value>
+                <fullName>Xerosis</fullName>
+                <default>false</default>
+                <label>Xerosis</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

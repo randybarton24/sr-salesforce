@@ -1,0 +1,61 @@
+<aura:component controller="WorkRequestComponent_Controller" >
+    <aura:attribute name="newRequest" type="agf__ADM_Work__c"
+         default="{ 'sobjectType': 'agf__ADM_Work__c',
+                        'agf__Subject__c': '',
+                        'Category__c': '',
+                        'agf__Details__c': '',
+                  		'agf__Color__c':''}"/>
+    <aura:registerEvent name="navigateFlowEvent" type="c:navigateFlow"/>
+    <aura:registerEvent name="categoryChangeEvent" type="c:categoryChange"/>
+
+    <lightning:layout >
+        <lightning:layoutItem flexibility="auto" padding="around-small">
+            <!-- CREATE NEW WORK REQUEST -->
+            <div aria-labelledby="newworkrequestform">
+                <!-- BOXED AREA -->
+                <fieldset class="slds-box slds-theme--default slds-container--medium">
+                <legend id="newworkrequestform" class="slds-text-heading--small 
+                  slds-p-vertical--medium">
+                  Create Request
+                </legend>
+          
+                <!-- CREATE NEW WORK REQUEST FORM -->
+                <form class="slds-form--stacked">          
+                    <lightning:input aura:id="workrequestform" label="Subject"
+                                     name="workrequestsubject"
+                                     value="{!v.newRequest.agf__Subject__c}"
+                                     required="true"/> 
+                    <lightning:select aura:id="workrequestform" name="workrequestcategory" label="Category" value="{!v.newRequest.Category__c}"
+                                      onchange="{!c.onCategoryChange}" required="true">
+                        <option value="">Select a Category</option>
+                        <option value="Bug">Bug</option>
+                        <option value="Feature Request">Feature Request</option>
+                        <option value="Access Request">Access Request</option>
+                        <option value="Data Change Request">Data Change Request</option>
+                        <option value="Reporting Request">Reporting Request</option>
+                    </lightning:select>
+                    <lightning:select aura:id="workrequestform" name="workrequestpriority" label="Priority" value="{!v.newRequest.agf__Priority__c}"
+                                      required="true">
+                        <option value="">Select a Priority Level</option>
+                        <option value="P1">Level 1</option>
+                        <option value="P2">Level 2</option>
+                        <option value="P3">Level 3</option>
+                        <option value="P4">Level 4</option>
+                    </lightning:select>
+                    <ui:inputTextArea label="Description" required="true"
+                                     value="{!v.newRequest.agf__Details__c}" rows="10"/>
+                    <lightning:button label="Create Request" 
+                                      class="slds-m-top--medium"
+                                      variant="brand"
+                                      onclick="{!c.handleCreate}"/>
+                </form>
+                <!-- / CREATE NEW EXPENSE FORM -->
+          
+              </fieldset>
+              <!-- / BOXED AREA -->
+            </div>
+            <!-- / CREATE NEW EXPENSE -->
+        </lightning:layoutItem>
+    </lightning:layout>
+    
+</aura:component>

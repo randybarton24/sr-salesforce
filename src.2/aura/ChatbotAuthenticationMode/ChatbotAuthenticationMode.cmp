@@ -1,0 +1,9 @@
+<aura:component controller="TP_LightningComponentHelper" implements="forceCommunity:availableForAllPageTypes,force:appHostable" access="global" >    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="bot" default="Default" type="String" access="global"/>
+    <aura:attribute name="customAttributesProcessor" default="Default" type="String" access="global"/>
+
+    <div aura:id="chatBotWrapper">
+        <nfchat:ChatBot bot="{!v.bot}" />
+    </div>
+</aura:component>

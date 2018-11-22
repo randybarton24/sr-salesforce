@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_closing__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for closing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Cancelled</fullName>
+                <default>false</default>
+                <label>Customer Cancelled</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Future Interest</fullName>
+                <default>false</default>
+                <label>Future Interest</label>
+            </value>
+            <value>
+                <fullName>Existing Customer/Duplicate</fullName>
+                <default>false</default>
+                <label>Existing Customer/Duplicate</label>
+            </value>
+            <value>
+                <fullName>No Integration</fullName>
+                <default>false</default>
+                <label>No Integration</label>
+            </value>
+            <value>
+                <fullName>No Response</fullName>
+                <default>false</default>
+                <label>No Response</label>
+            </value>
+            <value>
+                <fullName>ROE Expired</fullName>
+                <default>false</default>
+                <label>ROE Expired</label>
+            </value>
+            <value>
+                <fullName>Non-Healthcare</fullName>
+                <default>false</default>
+                <label>Non-Healthcare</label>
+            </value>
+            <value>
+                <fullName>Foreign Prospect</fullName>
+                <default>false</default>
+                <label>Foreign Prospect</label>
+            </value>
+            <value>
+                <fullName>Did Not See Value</fullName>
+                <default>false</default>
+                <label>Did Not See Value</label>
+            </value>
+            <value>
+                <fullName>Workflow Concerns</fullName>
+                <default>false</default>
+                <label>Workflow Concerns</label>
+            </value>
+            <value>
+                <fullName>Functionality</fullName>
+                <default>false</default>
+                <label>Functionality</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not Interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Future Interest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>No Response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>ROE Expired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Did Not See Value</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Workflow Concerns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Functionality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>Existing Customer/Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>No Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>Non-Healthcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Qualified</controllingFieldValue>
+            <valueName>Foreign Prospect</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

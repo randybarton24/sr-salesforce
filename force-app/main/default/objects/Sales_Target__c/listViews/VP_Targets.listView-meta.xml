@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VP_Targets</fullName>
+    <columns>OBJECT_ID</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>Size_of_Team__c</columns>
+    <columns>NAME</columns>
+    <columns>Target__c</columns>
+    <columns>Revenue_Target__c</columns>
+    <columns>Target_Date__c</columns>
+    <columns>Forecast__c</columns>
+    <columns>Sub_Team__c</columns>
+    <columns>Actual_Credits__c</columns>
+    <columns>Sales_to_Target__c</columns>
+    <columns>Above_Rep_Productivity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Target_Year__c</field>
+        <operation>equals</operation>
+        <value>2017</value>
+    </filters>
+    <filters>
+        <field>Owner_Name__c</field>
+        <operation>equals</operation>
+        <value>Gail Mainiero,Ben Stokes,James Cook,Tennli Nelson,Mike Brannelly</value>
+    </filters>
+    <filters>
+        <field>Target_Month__c</field>
+        <operation>equals</operation>
+        <value>December</value>
+    </filters>
+    <label>Director Targets</label>
+</ListView>

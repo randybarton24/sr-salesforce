@@ -1,0 +1,73 @@
+<!--
+ - Created by mschetselaar on 9/7/2018.
+ -->
+
+<aura:component description="closeCaseButton" controller="PlaybookControllerApxc">
+    <aura:attribute name="isOpen" type="Boolean" default="false" />
+    <aura:attribute name="CaseID" type="Id" />
+    <aura:attribute name="Resolution" type="String" default="Fixed" />
+    <aura:attribute name="ResolutionDescription" type="String" />
+    <aura:attribute name="resolutionOptions" type="List" default="[
+    {'label': 'Fixed', 'value': 'Fixed'},
+    {'label': 'Wont Fix', 'value': 'Wont Fix'},
+    {'label': 'Incomplete', 'value': 'Incomplete'},
+    {'label': 'Duplicate', 'value': 'Duplicate'},
+    {'label': 'Cannot Reproduce', 'value': 'Cannot Reproduce'},
+    {'label': 'Resumed', 'value': 'Resumed'},
+    {'label': 'Max Attempts Reached', 'value': 'Max Attempts Reached'},
+    ]"/>
+
+    <aura:registerEvent name="updateSpinner" type="c:PlaybookSpinner" />
+    <aura:registerEvent name="updateCases" type="c:UpdatePlaybookCases" />
+
+    <lightning:button name="Close Playbook" label="Close Playbook" iconName="standard:case_change_status" onclick="{!c.closeCase}" />
+
+    <aura:if isTrue="{!v.isOpen}">
+
+        <!--###### MODAL BOX Start######-->
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container" style="height: 400px" >
+                <!-- ###### MODAL BOX HEADER Start ######-->
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Close Playbook"</h2>
+                </header>
+                <!--###### MODAL BOX BODY Part Start######-->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="height: 400px">
+
+                    <!--<lightning:select label="Resolution" required="true" value="{!v.Resolution}">-->
+                        <!--<option value="">Choose one...</option>-->
+                        <!--<option value="Fixed">Fixed</option>-->
+                        <!--<option value="Wont Fix">Wont Fix</option>-->
+                        <!--<option value="Incomplete">Incomplete</option>-->
+                        <!--<option value="Duplicate">Duplicate</option>-->
+                        <!--<option value="Cannot Reproduce">Cannot Reproduce</option>-->
+                        <!--<option value="Resumed">Resumed</option>-->
+                        <!--<option value="Max Attempts Reached">Max Attempts Reached</option>-->
+                    <!--</lightning:select>-->
+                    <lightning:combobox name="Resolution" label="Resolution" value="Fixed" options="{!v.resolutionOptions}" onchange="{!c.setResolution}"  />
+
+                    <lightning:textarea label="Resolution Description" value="{!v.ResolutionDescription}" maxlength="250" />
+                    <br/>
+                    <br/>
+
+                </div>
+                <!--###### MODAL BOX FOOTER Part Start ######-->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral"
+                                      label="Cancel"
+                                      title="Cancel"
+                                      onclick="{! c.closeModel }"
+                    />
+                    <lightning:button variant="brand"
+                                      label="Save and Close"
+                                      title="Save and Close"
+                                      onclick="{! c.saveAndClose }"
+                    />
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        <!--###### MODAL BOX Part END Here ######-->
+
+    </aura:if>
+</aura:component>

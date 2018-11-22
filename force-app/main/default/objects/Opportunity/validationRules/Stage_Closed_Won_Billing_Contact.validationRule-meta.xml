@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Closed_Won_Billing_Contact</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT( Apex_Override_Validation__c ) &amp;&amp;
+ISPICKVAL(StageName, &quot;Closed Won&quot;) &amp;&amp;
+ISBLANK(RecurSoft__Billing_Contact__c)</errorConditionFormula>
+    <errorDisplayField>RecurSoft__Billing_Contact__c</errorDisplayField>
+    <errorMessage>Please select a Bill to Contact</errorMessage>
+</ValidationRule>

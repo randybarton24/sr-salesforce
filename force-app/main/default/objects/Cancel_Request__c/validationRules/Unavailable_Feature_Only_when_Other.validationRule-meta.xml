@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unavailable_Feature_Only_when_Other</fullName>
+    <active>true</active>
+    <description>Only allow text in New Unavailable Feature when Other is selected</description>
+    <errorConditionFormula>Not(Includes(Unavailable_Feature__c , &quot;Other&quot;)) &amp;&amp;  Not(ISBLANK (New_Unavailable_Feature__c ))</errorConditionFormula>
+    <errorDisplayField>New_Unavailable_Feature__c</errorDisplayField>
+    <errorMessage>You can only enter in a new Unavailable Feature when &quot;Other&quot; is selected</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Powerstone__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Identifies if the Contact has been sent to Powerstone for a call campaign. The Contact will be removed from Powerstone&#39;s list and this field will be updated if ROE is established on the Account.</description>
+    <externalId>false</externalId>
+    <label>Powerstone</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

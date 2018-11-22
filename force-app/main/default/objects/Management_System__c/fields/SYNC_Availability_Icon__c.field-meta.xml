@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SYNC_Availability_Icon__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(SYNC_Availability__c,
+   &quot;In Development&quot;,
+IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000006OvDg&quot;,&quot;In Development&quot;),
+
+   &quot;Discovery&quot;,
+IMAGE(&quot;/servlet/servlet.FileDownload?file=0150Z000008j1Lw&quot;,&quot;Discovery&quot;),
+
+   &quot;Blacklist - DO NOT SELL&quot;, 
+IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000006OvDf&quot;,&quot;Blacklist - DO NOT SELL&quot;),
+
+   &quot;SYNC Complete&quot;,
+IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000006OvDe&quot;,&quot;SYNC Complete&quot;),
+
+IMAGE(&quot;/servlet/servlet.FileDownload?file= 015i0000006OvDd&quot;,&quot;Unknown&quot;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SYNC Availability Icon</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

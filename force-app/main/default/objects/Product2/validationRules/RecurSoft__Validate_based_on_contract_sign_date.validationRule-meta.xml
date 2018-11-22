@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Validate_based_on_contract_sign_date</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    $Setup.RecurSoft__Deactivate_ISB_validations__c.RecurSoft__Is_active__c, false, 
+    AND(
+        OR(
+            ISPICKVAL(RecurSoft__Billing_Frequency__c, &#39;One-Time&#39;),
+            ISPICKVAL(RecurSoft__Billing_Frequency__c, &#39;Milestones&#39;)
+        ),
+        !ISPICKVAL(RecurSoft__Invoicing_Date__c, &#39;Based on contract signed date&#39;),
+        !ISPICKVAL(RecurSoft__Invoicing_Date__c, &#39;Based on contract start date&#39;)
+    )
+)</errorConditionFormula>
+    <errorMessage>One-time or Milestones products without Invoicing date based on contract start date is not allowed.</errorMessage>
+</ValidationRule>

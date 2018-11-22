@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disc_dev</fullName>
+    <columns>NAME</columns>
+    <columns>SYNC_Availability__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>SYNC_Availability__c</field>
+        <operation>equals</operation>
+        <value>Discovery,In Development</value>
+    </filters>
+    <label>Disc, dev</label>
+    <sharedTo>
+        <group>Support</group>
+    </sharedTo>
+</ListView>

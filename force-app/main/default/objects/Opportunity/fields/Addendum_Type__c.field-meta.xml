@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Addendum_Type__c</fullName>
+    <description>Sugar field for Save Opportunity</description>
+    <externalId>false</externalId>
+    <label>Addendum Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing Change - Change Rate</fullName>
+                <default>false</default>
+                <label>Billing Change - Change Rate</label>
+            </value>
+            <value>
+                <fullName>Billing Change - Defer/Pause</fullName>
+                <default>false</default>
+                <label>Billing Change - Defer/Pause</label>
+            </value>
+            <value>
+                <fullName>Billing Change - Refund</fullName>
+                <default>false</default>
+                <label>Billing Change - Refund</label>
+            </value>
+            <value>
+                <fullName>Billing Change - Skip (Free Month)</fullName>
+                <default>false</default>
+                <label>Billing Change - Skip (Free Month)</label>
+            </value>
+            <value>
+                <fullName>Billing Change - Voice Add</fullName>
+                <default>false</default>
+                <label>Billing Change - Voice Add</label>
+            </value>
+            <value>
+                <fullName>Billing Change - Voice Remove</fullName>
+                <default>false</default>
+                <label>Billing Change - Voice Remove</label>
+            </value>
+            <value>
+                <fullName>Other Addendum - Active Presence</fullName>
+                <default>false</default>
+                <label>Other Addendum - Active Presence</label>
+            </value>
+            <value>
+                <fullName>Other Addendum - Assignment Agreement</fullName>
+                <default>false</default>
+                <label>Other Addendum - Assignment Agreement</label>
+            </value>
+            <value>
+                <fullName>Other Addendum - Simpletrac</fullName>
+                <default>false</default>
+                <label>Other Addendum - Simpletrac</label>
+            </value>
+            <value>
+                <fullName>Other Addendum - Trial Waive</fullName>
+                <default>false</default>
+                <label>Other Addendum - Trial Waive</label>
+            </value>
+            <value>
+                <fullName>Other Addendum - Trail Extension</fullName>
+                <default>false</default>
+                <label>Other Addendum - Trail Extension</label>
+            </value>
+            <value>
+                <fullName>Other Addendum - Extended Term (Same MSF)</fullName>
+                <default>false</default>
+                <label>Other Addendum - Extended Term (Same MSF)</label>
+            </value>
+            <value>
+                <fullName>Other - No Change</fullName>
+                <default>false</default>
+                <label>Other - No Change</label>
+            </value>
+            <value>
+                <fullName>None - Cancellation</fullName>
+                <default>false</default>
+                <label>None - Cancellation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

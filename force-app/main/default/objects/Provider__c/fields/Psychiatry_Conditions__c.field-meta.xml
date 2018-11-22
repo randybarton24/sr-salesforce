@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Psychiatry_Conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>Psychiatry Conditions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anxiety</fullName>
+                <default>false</default>
+                <label>Anxiety</label>
+            </value>
+            <value>
+                <fullName>Bipolar Disorder</fullName>
+                <default>false</default>
+                <label>Bipolar Disorder</label>
+            </value>
+            <value>
+                <fullName>Depression</fullName>
+                <default>false</default>
+                <label>Depression</label>
+            </value>
+            <value>
+                <fullName>Impulse Control Disorders</fullName>
+                <default>false</default>
+                <label>Impulse Control Disorders</label>
+            </value>
+            <value>
+                <fullName>Major Depressive Disorder</fullName>
+                <default>false</default>
+                <label>Major Depressive Disorder</label>
+            </value>
+            <value>
+                <fullName>Obsessive-Compulsive Disorder (OCD)</fullName>
+                <default>false</default>
+                <label>Obsessive-Compulsive Disorder (OCD)</label>
+            </value>
+            <value>
+                <fullName>Panic Disorder</fullName>
+                <default>false</default>
+                <label>Panic Disorder</label>
+            </value>
+            <value>
+                <fullName>Phobia</fullName>
+                <default>false</default>
+                <label>Phobia</label>
+            </value>
+            <value>
+                <fullName>Schizoaffective Disorder</fullName>
+                <default>false</default>
+                <label>Schizoaffective Disorder</label>
+            </value>
+            <value>
+                <fullName>Addiction</fullName>
+                <default>false</default>
+                <label>Addiction</label>
+            </value>
+            <value>
+                <fullName>ADHD</fullName>
+                <default>false</default>
+                <label>ADHD</label>
+            </value>
+            <value>
+                <fullName>Adjustment Disorder</fullName>
+                <default>false</default>
+                <label>Adjustment Disorder</label>
+            </value>
+            <value>
+                <fullName>Adult ADHD</fullName>
+                <default>false</default>
+                <label>Adult ADHD</label>
+            </value>
+            <value>
+                <fullName>Alcohol-Induced Mental Disorders</fullName>
+                <default>false</default>
+                <label>Alcohol-Induced Mental Disorders</label>
+            </value>
+            <value>
+                <fullName>Alcoholism (Alcohol Dependence)</fullName>
+                <default>false</default>
+                <label>Alcoholism (Alcohol Dependence)</label>
+            </value>
+            <value>
+                <fullName>Amnesia</fullName>
+                <default>false</default>
+                <label>Amnesia</label>
+            </value>
+            <value>
+                <fullName>Amphetamine Dependence</fullName>
+                <default>false</default>
+                <label>Amphetamine Dependence</label>
+            </value>
+            <value>
+                <fullName>Anorexia</fullName>
+                <default>false</default>
+                <label>Anorexia</label>
+            </value>
+            <value>
+                <fullName>Antisocial Personality Disorder</fullName>
+                <default>false</default>
+                <label>Antisocial Personality Disorder</label>
+            </value>
+            <value>
+                <fullName>Atypical Depression</fullName>
+                <default>false</default>
+                <label>Atypical Depression</label>
+            </value>
+            <value>
+                <fullName>Atypical Psychosis</fullName>
+                <default>false</default>
+                <label>Atypical Psychosis</label>
+            </value>
+            <value>
+                <fullName>Autism</fullName>
+                <default>false</default>
+                <label>Autism</label>
+            </value>
+            <value>
+                <fullName>Avoidant Personality Disorder</fullName>
+                <default>false</default>
+                <label>Avoidant Personality Disorder</label>
+            </value>
+            <value>
+                <fullName>Behavioral Changes</fullName>
+                <default>false</default>
+                <label>Behavioral Changes</label>
+            </value>
+            <value>
+                <fullName>Behavioral Disorders</fullName>
+                <default>false</default>
+                <label>Behavioral Disorders</label>
+            </value>
+            <value>
+                <fullName>Behavioral Symptoms of S.A.D.</fullName>
+                <default>false</default>
+                <label>Behavioral Symptoms of S.A.D.</label>
+            </value>
+            <value>
+                <fullName>Body Dysmorphic Disorder (BDD)</fullName>
+                <default>false</default>
+                <label>Body Dysmorphic Disorder (BDD)</label>
+            </value>
+            <value>
+                <fullName>Borderline Personality Disorder</fullName>
+                <default>false</default>
+                <label>Borderline Personality Disorder</label>
+            </value>
+            <value>
+                <fullName>Bulimia</fullName>
+                <default>false</default>
+                <label>Bulimia</label>
+            </value>
+            <value>
+                <fullName>Chemical Addiction</fullName>
+                <default>false</default>
+                <label>Chemical Addiction</label>
+            </value>
+            <value>
+                <fullName>Childhood Disintegrative Disorder</fullName>
+                <default>false</default>
+                <label>Childhood Disintegrative Disorder</label>
+            </value>
+            <value>
+                <fullName>Chronic Depression</fullName>
+                <default>false</default>
+                <label>Chronic Depression</label>
+            </value>
+            <value>
+                <fullName>Chronic Mental Disorders</fullName>
+                <default>false</default>
+                <label>Chronic Mental Disorders</label>
+            </value>
+            <value>
+                <fullName>Cocaine Addiction</fullName>
+                <default>false</default>
+                <label>Cocaine Addiction</label>
+            </value>
+            <value>
+                <fullName>Cognitive Disorders</fullName>
+                <default>false</default>
+                <label>Cognitive Disorders</label>
+            </value>
+            <value>
+                <fullName>Combination Drug Dependence</fullName>
+                <default>false</default>
+                <label>Combination Drug Dependence</label>
+            </value>
+            <value>
+                <fullName>Conduct Disorder</fullName>
+                <default>false</default>
+                <label>Conduct Disorder</label>
+            </value>
+            <value>
+                <fullName>Conversion Disorders</fullName>
+                <default>false</default>
+                <label>Conversion Disorders</label>
+            </value>
+            <value>
+                <fullName>Cyclothymia (Chronic Mood Disorder)</fullName>
+                <default>false</default>
+                <label>Cyclothymia (Chronic Mood Disorder)</label>
+            </value>
+            <value>
+                <fullName>Delusional Disorder</fullName>
+                <default>false</default>
+                <label>Delusional Disorder</label>
+            </value>
+            <value>
+                <fullName>Dementia</fullName>
+                <default>false</default>
+                <label>Dementia</label>
+            </value>
+            <value>
+                <fullName>Dependent Personality Disorder</fullName>
+                <default>false</default>
+                <label>Dependent Personality Disorder</label>
+            </value>
+            <value>
+                <fullName>Depersonalization Disorder</fullName>
+                <default>false</default>
+                <label>Depersonalization Disorder</label>
+            </value>
+            <value>
+                <fullName>Developmental and Learning Disorders</fullName>
+                <default>false</default>
+                <label>Developmental and Learning Disorders</label>
+            </value>
+            <value>
+                <fullName>Difficulty Concentrating</fullName>
+                <default>false</default>
+                <label>Difficulty Concentrating</label>
+            </value>
+            <value>
+                <fullName>Disruptive Behavior Disorders</fullName>
+                <default>false</default>
+                <label>Disruptive Behavior Disorders</label>
+            </value>
+            <value>
+                <fullName>Dissociative Disorder</fullName>
+                <default>false</default>
+                <label>Dissociative Disorder</label>
+            </value>
+            <value>
+                <fullName>Dissociative Disorders</fullName>
+                <default>false</default>
+                <label>Dissociative Disorders</label>
+            </value>
+            <value>
+                <fullName>Dissociative Identity Disorder</fullName>
+                <default>false</default>
+                <label>Dissociative Identity Disorder</label>
+            </value>
+            <value>
+                <fullName>Drug Abuse</fullName>
+                <default>false</default>
+                <label>Drug Abuse</label>
+            </value>
+            <value>
+                <fullName>Drug and Alcohol Dependence</fullName>
+                <default>false</default>
+                <label>Drug and Alcohol Dependence</label>
+            </value>
+            <value>
+                <fullName>Drug-Induced Mental Disorders</fullName>
+                <default>false</default>
+                <label>Drug-Induced Mental Disorders</label>
+            </value>
+            <value>
+                <fullName>Dysthymia &amp; Cyclothymia (Mood Disorders)</fullName>
+                <default>false</default>
+                <label>Dysthymia &amp; Cyclothymia (Mood Disorders)</label>
+            </value>
+            <value>
+                <fullName>Dysthymia (Chronic Depression)</fullName>
+                <default>false</default>
+                <label>Dysthymia (Chronic Depression)</label>
+            </value>
+            <value>
+                <fullName>Eating Disorders</fullName>
+                <default>false</default>
+                <label>Eating Disorders</label>
+            </value>
+            <value>
+                <fullName>Emot. Disturbances of Childhood &amp; Adol.</fullName>
+                <default>false</default>
+                <label>Emot. Disturbances of Childhood &amp; Adol.</label>
+            </value>
+            <value>
+                <fullName>Exhibitionism</fullName>
+                <default>false</default>
+                <label>Exhibitionism</label>
+            </value>
+            <value>
+                <fullName>Factitious Disorders</fullName>
+                <default>false</default>
+                <label>Factitious Disorders</label>
+            </value>
+            <value>
+                <fullName>Fear</fullName>
+                <default>false</default>
+                <label>Fear</label>
+            </value>
+            <value>
+                <fullName>Fear of Open Places</fullName>
+                <default>false</default>
+                <label>Fear of Open Places</label>
+            </value>
+            <value>
+                <fullName>Gender Identity Disorders</fullName>
+                <default>false</default>
+                <label>Gender Identity Disorders</label>
+            </value>
+            <value>
+                <fullName>Generalized Anxiety Disorder</fullName>
+                <default>false</default>
+                <label>Generalized Anxiety Disorder</label>
+            </value>
+            <value>
+                <fullName>Hallucinogen Dependence</fullName>
+                <default>false</default>
+                <label>Hallucinogen Dependence</label>
+            </value>
+            <value>
+                <fullName>Histrionic Personality Disorder</fullName>
+                <default>false</default>
+                <label>Histrionic Personality Disorder</label>
+            </value>
+            <value>
+                <fullName>Homicidal Crisis</fullName>
+                <default>false</default>
+                <label>Homicidal Crisis</label>
+            </value>
+            <value>
+                <fullName>Homicidal Ideation</fullName>
+                <default>false</default>
+                <label>Homicidal Ideation</label>
+            </value>
+            <value>
+                <fullName>Hypochondriasis</fullName>
+                <default>false</default>
+                <label>Hypochondriasis</label>
+            </value>
+            <value>
+                <fullName>Impaired Cognition</fullName>
+                <default>false</default>
+                <label>Impaired Cognition</label>
+            </value>
+            <value>
+                <fullName>Job Stress</fullName>
+                <default>false</default>
+                <label>Job Stress</label>
+            </value>
+            <value>
+                <fullName>Klinefelter Syndrome</fullName>
+                <default>false</default>
+                <label>Klinefelter Syndrome</label>
+            </value>
+            <value>
+                <fullName>Learning Disabilities</fullName>
+                <default>false</default>
+                <label>Learning Disabilities</label>
+            </value>
+            <value>
+                <fullName>Marijuana Addiction</fullName>
+                <default>false</default>
+                <label>Marijuana Addiction</label>
+            </value>
+            <value>
+                <fullName>Mild Cognitive Impairment</fullName>
+                <default>false</default>
+                <label>Mild Cognitive Impairment</label>
+            </value>
+            <value>
+                <fullName>Mood Changes</fullName>
+                <default>false</default>
+                <label>Mood Changes</label>
+            </value>
+            <value>
+                <fullName>Mood Disorders</fullName>
+                <default>false</default>
+                <label>Mood Disorders</label>
+            </value>
+            <value>
+                <fullName>Movement Disorders</fullName>
+                <default>false</default>
+                <label>Movement Disorders</label>
+            </value>
+            <value>
+                <fullName>Narcissistic Personality Disorder</fullName>
+                <default>false</default>
+                <label>Narcissistic Personality Disorder</label>
+            </value>
+            <value>
+                <fullName>Neurasthenia</fullName>
+                <default>false</default>
+                <label>Neurasthenia</label>
+            </value>
+            <value>
+                <fullName>Nondependent Alcohol Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Alcohol Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Amphetamine Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Amphetamine Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Antidepressant Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Antidepressant Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Anxiolytic Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Anxiolytic Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Cocaine Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Cocaine Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Drug and Alcohol Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Drug and Alcohol Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Hallucinogen Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Hallucinogen Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Hypnotic Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Hypnotic Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Marijuana Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Marijuana Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Opioid Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Opioid Abuse</label>
+            </value>
+            <value>
+                <fullName>Nondependent Sedative Abuse</fullName>
+                <default>false</default>
+                <label>Nondependent Sedative Abuse</label>
+            </value>
+            <value>
+                <fullName>OCPD</fullName>
+                <default>false</default>
+                <label>OCPD</label>
+            </value>
+            <value>
+                <fullName>Opioid Dependence</fullName>
+                <default>false</default>
+                <label>Opioid Dependence</label>
+            </value>
+            <value>
+                <fullName>Other Psychostimulant Dependence</fullName>
+                <default>false</default>
+                <label>Other Psychostimulant Dependence</label>
+            </value>
+            <value>
+                <fullName>Panic Attack</fullName>
+                <default>false</default>
+                <label>Panic Attack</label>
+            </value>
+            <value>
+                <fullName>Paranoid Personality Disorder</fullName>
+                <default>false</default>
+                <label>Paranoid Personality Disorder</label>
+            </value>
+            <value>
+                <fullName>Passive-Aggressive Behavior</fullName>
+                <default>false</default>
+                <label>Passive-Aggressive Behavior</label>
+            </value>
+            <value>
+                <fullName>Pedophilia</fullName>
+                <default>false</default>
+                <label>Pedophilia</label>
+            </value>
+            <value>
+                <fullName>Personality Disorders</fullName>
+                <default>false</default>
+                <label>Personality Disorders</label>
+            </value>
+            <value>
+                <fullName>Pervasive Developmental Disorder (PDD)</fullName>
+                <default>false</default>
+                <label>Pervasive Developmental Disorder (PDD)</label>
+            </value>
+            <value>
+                <fullName>Post-Traumatic Stress Disorder (PTSD)</fullName>
+                <default>false</default>
+                <label>Post-Traumatic Stress Disorder (PTSD)</label>
+            </value>
+            <value>
+                <fullName>Psychiatric Diseases</fullName>
+                <default>false</default>
+                <label>Psychiatric Diseases</label>
+            </value>
+            <value>
+                <fullName>Psychogenic Disorders</fullName>
+                <default>false</default>
+                <label>Psychogenic Disorders</label>
+            </value>
+            <value>
+                <fullName>Psychosis</fullName>
+                <default>false</default>
+                <label>Psychosis</label>
+            </value>
+            <value>
+                <fullName>Psychosis Due to Mental Illness</fullName>
+                <default>false</default>
+                <label>Psychosis Due to Mental Illness</label>
+            </value>
+            <value>
+                <fullName>Psychotic Disorders</fullName>
+                <default>false</default>
+                <label>Psychotic Disorders</label>
+            </value>
+            <value>
+                <fullName>Schizoid Personality Disorder</fullName>
+                <default>false</default>
+                <label>Schizoid Personality Disorder</label>
+            </value>
+            <value>
+                <fullName>Schizophreniform Disorder</fullName>
+                <default>false</default>
+                <label>Schizophreniform Disorder</label>
+            </value>
+            <value>
+                <fullName>Schizotypal Personality Disorder</fullName>
+                <default>false</default>
+                <label>Schizotypal Personality Disorder</label>
+            </value>
+            <value>
+                <fullName>Seasonal Affective Disorder</fullName>
+                <default>false</default>
+                <label>Seasonal Affective Disorder</label>
+            </value>
+            <value>
+                <fullName>Sedative/Hypnotic/Anxiolytic Dependence</fullName>
+                <default>false</default>
+                <label>Sedative/Hypnotic/Anxiolytic Dependence</label>
+            </value>
+            <value>
+                <fullName>Self-Esteem Problems</fullName>
+                <default>false</default>
+                <label>Self-Esteem Problems</label>
+            </value>
+            <value>
+                <fullName>Self-Injury Behavior</fullName>
+                <default>false</default>
+                <label>Self-Injury Behavior</label>
+            </value>
+            <value>
+                <fullName>Separation Anxiety</fullName>
+                <default>false</default>
+                <label>Separation Anxiety</label>
+            </value>
+            <value>
+                <fullName>Sexual Disorders</fullName>
+                <default>false</default>
+                <label>Sexual Disorders</label>
+            </value>
+            <value>
+                <fullName>Sleep Disorders</fullName>
+                <default>false</default>
+                <label>Sleep Disorders</label>
+            </value>
+            <value>
+                <fullName>Social Anxiety Disorder</fullName>
+                <default>false</default>
+                <label>Social Anxiety Disorder</label>
+            </value>
+            <value>
+                <fullName>Social Phobia</fullName>
+                <default>false</default>
+                <label>Social Phobia</label>
+            </value>
+            <value>
+                <fullName>Somatoform Disorders</fullName>
+                <default>false</default>
+                <label>Somatoform Disorders</label>
+            </value>
+            <value>
+                <fullName>Speech, Language and Learning Disorders</fullName>
+                <default>false</default>
+                <label>Speech, Language and Learning Disorders</label>
+            </value>
+            <value>
+                <fullName>Stress</fullName>
+                <default>false</default>
+                <label>Stress</label>
+            </value>
+            <value>
+                <fullName>Substance Abuse</fullName>
+                <default>false</default>
+                <label>Substance Abuse</label>
+            </value>
+            <value>
+                <fullName>Suicidal Ideation</fullName>
+                <default>false</default>
+                <label>Suicidal Ideation</label>
+            </value>
+            <value>
+                <fullName>Suicide</fullName>
+                <default>false</default>
+                <label>Suicide</label>
+            </value>
+            <value>
+                <fullName>Tobacco Use Disorder</fullName>
+                <default>false</default>
+                <label>Tobacco Use Disorder</label>
+            </value>
+            <value>
+                <fullName>Tourette&#39;s Syndrome</fullName>
+                <default>false</default>
+                <label>Tourette&#39;s Syndrome</label>
+            </value>
+            <value>
+                <fullName>Voyeurism</fullName>
+                <default>false</default>
+                <label>Voyeurism</label>
+            </value>
+            <value>
+                <fullName>Zoophilia</fullName>
+                <default>false</default>
+                <label>Zoophilia</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

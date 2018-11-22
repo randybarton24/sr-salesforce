@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Support_Queue__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( RecordType.Name = &#39;%Major%&#39;,&#39;Major Account&#39;, 
+IF( RecordType.Name = &#39;%Multi%&#39;,&#39;Multi Location Account&#39;, 
+IF( ISPICKVAL( Team_Assignment__c, &#39;KOL/VIP Team&#39;), &#39;KOL/VIP&#39;, 
+IF( ISPICKVAL(Industry, &#39;Dental&#39;), &#39;Dental&#39;, 
+IF( ISPICKVAL(Industry, &#39;Vision&#39;), &#39;Vision&#39;, 
+IF(ISPICKVAL(Industry, &#39;Medical&#39;), &#39;Medical&#39;, 
+&#39;Other&#39;))))))</formula>
+    <label>Phone Support Queue</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

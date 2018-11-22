@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Saves</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Save_MSF__c</columns>
+    <columns>Months_Gained__c</columns>
+    <columns>Processed_Date__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Save with Change,Save with No Change</value>
+    </filters>
+    <label>My Saves</label>
+    <sharedTo>
+        <group>Client_Engagement</group>
+    </sharedTo>
+</ListView>

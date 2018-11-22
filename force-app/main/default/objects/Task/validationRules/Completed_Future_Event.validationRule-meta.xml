@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_Future_Event</fullName>
+    <active>false</active>
+    <errorConditionFormula>And(
+ISPICKVAL( Activity_Results__c , &quot;Future Event&quot;),
+ISPICKVAL( Status, &quot;Completed&quot;))</errorConditionFormula>
+    <errorDisplayField>Activity_Results__c</errorDisplayField>
+    <errorMessage>Activity Results cannot be &quot;Future Event&quot; with a status of &quot;Completed&quot; .
+Please update to the appropriate value.</errorMessage>
+</ValidationRule>

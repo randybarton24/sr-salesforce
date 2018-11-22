@@ -1,0 +1,72 @@
+<aura:component description="AddendumLineItemsDetail" controller="AddendumLineItemsApxc">
+    <aura:attribute name="AddendumID" type="Id" />
+    <aura:attribute name="numberTab" type="String" />
+    <aura:attribute name="pbEntries" type="PricebookEntry[]"/>
+    <aura:attribute name="addendumLineItem" type="Addendum_Line_Item__c" />
+    <aura:attribute name="openAddendumLineItems" type="Addendum_Line_Item__c[]" />
+    <aura:attribute name="options" type="List" default="[
+                                                        {'label': ' Yes', 'value': true}
+                                                        ]"/>
+    <aura:attribute name="val" type="Boolean" default="false"/>
+    <aura:attribute name="isOpen" type="Boolean" default="false"/>            
+    <aura:attribute name="addnLineItem" type="String[]" default="[
+                                                                  'Original_Agreement_Date__c',
+                                                                  '',
+                                                                  'Current_Price__c',
+                                                                  'New_Price__c',
+                                                                  'Current_Next_Invoice_Date__c',
+                                                                  'New_Next_Invoice_Date__c',
+                                                                  'Current_Trial_End_Date__c',
+                                                                  'New_Trial_End_Date__c','Current_Renewal_Date__c',
+                                                                  'New_Renewal_Date__c']" />   
+    <aura:attribute name="addnLineItemModifications" type="String[]" default="[
+                                                                  'NewTerm__c',
+                                                                  'NewTerm_Months__c',
+                                                                  'Defer_Billing__c',
+                                                                  'Deferred_Months__c',
+                                                                  'Waive_Billing__c',
+                                                                  'Waived_Months__c',
+                                                                  'Change_MSF__c',
+                                                                  'New_MSF__c',
+                                                                  'Extend_Satisfaction_Period__c',
+                                                                  'Trial_End_Date__c']" />   
+    <aura:attribute name="addnLineItemAddProduct" type="String[]" default="[
+                                                                  'New_Price__c','New_Quantity__c']" />
+    <aura:if isTrue="{! v.addendumLineItem.Id != undefined}">
+        <aura:if isTrue="{! v.addendumLineItem.Asset__c != undefined}">
+            <lightning:tab label="{! 'Modify Product: ' + v.addendumLineItem.Asset__r.Name}" id="{! v.numberTab}">
+                <div>
+                    <lightning:recordForm 
+                                          recordId="{!v.addendumLineItem.Id}" 
+                                          objectApiName="Addendum_Line_Item__c"
+                                          fields="{!v.addnLineItem}"
+                                          columns="2"
+                                          mode="readonly"
+                                          /> 
+                    <div style="margin-top:30px; margin-bottom:30px;height:20px">
+                        <strong>MODIFICATIONS</strong>
+                    </div>   
+                    <lightning:recordForm 
+                                          recordId="{!v.addendumLineItem.Id}" 
+                                          objectApiName="Addendum_Line_Item__c"
+                                          fields="{!v.addnLineItemModifications}"
+                                          columns="2"
+                                          mode="view"
+                                          />
+                </div>
+            </lightning:tab>
+        </aura:if>    
+        <aura:if isTrue="{! v.addendumLineItem.Asset__c == undefined}">
+            <lightning:tab label="{! 'Add Product: ' + v.addendumLineItem.PriceBookEntry_Name__c}" id="{!v.numberTab}">
+                <div>
+                    <lightning:recordForm 
+                                          recordId="{!v.addendumLineItem.Id}" 
+                                          objectApiName="Addendum_Line_Item__c"
+                                          fields="{!v.addnLineItemAddProduct}"
+                                          columns="1"
+                                          mode="view" />
+                </div>
+            </lightning:tab>
+        </aura:if>  
+    </aura:if>  
+</aura:component>

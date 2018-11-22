@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tz__Local_Time_Lst__c</fullName>
+    <deprecated>false</deprecated>
+    <description>For internal use of the Local Time App. This field is used in the PLeads tab.
+
+*DO NOT* add it to the lead page layout or lead list views as it does not work.</description>
+    <externalId>false</externalId>
+    <label>Local Time List</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

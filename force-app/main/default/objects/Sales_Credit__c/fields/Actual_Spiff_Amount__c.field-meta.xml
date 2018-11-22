@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Spiff_Amount__c</fullName>
+    <description>The actual spiff amount for this sale based on the Account activating within 120 days and a bonus or commission being earned for this sale. The Override B&amp;C Activation checkbox is for exceptions. Spiffs not related to a specific sale will be created as new Sales Credits and placed on the first or last sale of the month and Potential Spiff will be the same as Available Spiff and Actual Spiff.</description>
+    <externalId>false</externalId>
+    <formula>IF( Individual_Credit_Portion__c = 0 , Potential_Spiff_Amount__c ,
+IF( ( Opportunity__r.Account.MRFMS__c - Opportunity__r.RecurSoft__Contract_Signed_Date__c &lt;= 120 &amp;&amp; 
+Opportunity__r.Account.MRFMS__c &gt;= Opportunity__r.RecurSoft__Contract_Signed_Date__c &amp;&amp;
+Actual_Bonus_Commission_Credit__c &gt; 0 ) ||
+ Override_Spiff__c 
+, Potential_Spiff_Amount__c , 0 ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Actual Spiff Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

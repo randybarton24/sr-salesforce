@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurSoft__Subscription_Total_Price__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Total Price of the generated subscription after Closed Won</description>
+    <externalId>false</externalId>
+    <label>Subscription Total Price</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <type>Currency</type>
+</CustomField>

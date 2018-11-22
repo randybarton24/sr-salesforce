@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LL_NextGen2</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>tz__Timezone__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+    <columns>Practice_Management_Software__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Practice_Management_Software__c</field>
+        <operation>contains</operation>
+        <value>NextGen,Dentrix,Eaglesoft,Officemate,Crystal PM,Revolution EHR,SoftDent</value>
+    </filters>
+    <filters>
+        <field>Subscriber_ID__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Subscriber_ID__c</field>
+        <operation>lessThan</operation>
+        <value>38000</value>
+    </filters>
+    <filters>
+        <field>Admin_Status__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <label>LL NextGen</label>
+    <sharedTo>
+        <group>Sales_All_Sales</group>
+    </sharedTo>
+</ListView>

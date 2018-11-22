@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OppLine005_HG_Provider</fullName>
+    <active>true</active>
+    <description>Ensure a Provider is linked to the Healthgrades Opportunity Product</description>
+    <errorConditionFormula>Product2.Name = &quot;Healthgrades Premium Profile&quot; &amp;&amp; 
+ISBLANK( Provider__c ) &amp;&amp;
+Opportunity.RecordType.Name != &quot;Renewal&quot; &amp;&amp;
+ $Profile.Name  != &quot;System Administrator&quot; &amp;&amp;
+  $User.Username != &quot;nroberts@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;melissap@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;patriciac@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;beldredge@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;awhitaker@solutionreach.com&quot; &amp;&amp;
+$User.Username != &quot;mrichards@solutionreach.com&quot;</errorConditionFormula>
+    <errorMessage>You must link the Healthgrades Premium Profile to a specific Provider. Click the Add Healthgrades Provider button on the Account.</errorMessage>
+</ValidationRule>
