@@ -23,7 +23,7 @@ In VS Code Terminal:
 
 ```
 cd C:\Users\rbarton\sr-salesforce
-git clone https://github.com/randybarton24/test-sr-deploy.git
+git clone https://github.com/randybarton24/sr-salesforce.git
 git config --global user.name "Randy Barton"
 git config --global user.email "randy@solutionreach.com"
 ```
