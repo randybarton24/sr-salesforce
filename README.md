@@ -8,21 +8,12 @@
 <p>https://code.visualstudio.com/docs/setup/setup-overview</p></details>
 <details><summary>Install VS Code SF Extensions</summary>
 <p>https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode</p></details>
-<details><summary>Create a folder with name sr-salesforce</summary>
-<p>
-In VS Code Terminal:
-
-```
-cd C:\Users\rbarton
-mkdir sr-salesforce
-```
-</p></details>
 <details><summary>Clone Github repo in sr-salesforce</summary>
 <p>
 In VS Code Terminal:
 
 ```
-cd C:\Users\rbarton\sr-salesforce
+cd C:\Users\rbarton
 git clone https://github.com/randybarton24/sr-salesforce.git
 git config --global user.name "Randy Barton"
 git config --global user.email "randy@solutionreach.com"
