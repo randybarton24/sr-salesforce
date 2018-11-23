@@ -1,3 +1,5 @@
 mdapi-src/**
 .sfdx/**
 .vscode/**
+server.crt
+server.key
