@@ -3,8 +3,7 @@
     <fullName>Phone_required_for_Customer_sync</fullName>
     <active>false</active>
     <description>Phone required for Customer sync</description>
-    <errorConditionFormula>ISBLANK (Phone ) &amp;&amp;
-ISBLANK ( DefHC_HospitalID__c )</errorConditionFormula>
+    <errorConditionFormula>ISBLANK (Phone )</errorConditionFormula>
     <errorDisplayField>Phone</errorDisplayField>
     <errorMessage>You must provide a value for Phone on the Contact</errorMessage>
 </ValidationRule>
