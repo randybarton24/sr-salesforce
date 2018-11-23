@@ -3,7 +3,7 @@
 <details><summary>Install Git</summary>
 <p>Windows: https://gitforwindows.org/<br>Mac: https://sourceforge.net/projects/git-osx-installer/files/</p></details>
 <details><summary>Install Salesforce CLI</summary>
-<p><a>https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm</a></p></details>
+<p>https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm</p></details>
 <details><summary>Install VS Code</summary>
 <p>https://code.visualstudio.com/docs/setup/setup-overview</p></details>
 <details><summary>Install VS Code SF Extensions</summary>
