@@ -61,7 +61,7 @@ In VS Code Terminal:
 cd C:\Users\rbarton\sr-salesforce
 mkdir mdapi-src
 sfdx force:source:convert -r force-app -d mdapi-src
-sfdx force:mdapi:deploy -d mdapi-src -u dev1
+sfdx force:mdapi:deploy -d mdapi-src -w 10 -u dev1 
 Remove-Item  -path mdapi-src -recurse -force
 ```
 </p></details>
