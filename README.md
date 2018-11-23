@@ -11,6 +11,7 @@
 <details><summary>Clone Github repo in sr-salesforce</summary>
 <p>
 In VS Code Terminal:
+(For git config use your name and email)
 
 ```
 cd C:\Users\rbarton
@@ -45,6 +46,7 @@ git checkout -b "feature/w-0234/Feature Name"
 <details><summary>Authenticate sandbox in SFDX</summary>
 <p>
 In VS Code Terminal:
+(Replace "dev1" with the actual sandbox name)
 
 ```
 cd C:\Users\rbarton\sr-salesforce
@@ -58,9 +60,9 @@ In VS Code Terminal:
 ```
 cd C:\Users\rbarton\sr-salesforce
 mkdir mdapi-src
-sfdx force:source:convert -m mdapi-src
-sfdx force:mdapi:deploy -r mdapi-src
-rm mdapi-src
+sfdx force:source:convert -r force-app -d mdapi-src
+sfdx force:mdapi:deploy -d mdapi-src -u dev1
+Remove-Item  -path mdapi-src -recurse -force
 ```
 </p></details>
 <details><summary>Config/Code/Test</summary>
@@ -71,7 +73,7 @@ In VS Code Terminal:
 
 ```
 cd C:\Users\rbarton\sr-salesforce
-sfdx force:source:retrieve -x package.xml
+sfdx force:source:retrieve -p force-app -u dev1 -x package.xml
 ```
 </p></details>
 <details><summary>Stage changes that should be kept</summary>
