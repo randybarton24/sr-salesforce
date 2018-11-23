@@ -1,3 +1,4 @@
 mdapi-src/**
 .sfdx/**
+.sfdx/tools/**
 .vscode/**
