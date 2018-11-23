@@ -41,7 +41,6 @@
     </filters>
     <label>Accounts Needing a Sync Case - Child</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_Dentrix_1</group>
         <role>CSR_Tech</role>
     </sharedTo>

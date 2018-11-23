@@ -19,6 +19,7 @@
             <value>
                 <fullName>EBR Case Survey</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>EBR Case Survey</label>
             </value>
         </valueSetDefinition>

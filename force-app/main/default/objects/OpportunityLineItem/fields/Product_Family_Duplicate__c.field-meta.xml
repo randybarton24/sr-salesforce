@@ -5,7 +5,7 @@
     <description>Set via Apex.  Creates a key with Opportunity Id and Product Family so that only one Product from each Family can be added to an Opportunity.</description>
     <externalId>false</externalId>
     <label>Product Family Duplicate</label>
-    <length>255</length>
+    <length>36</length>
     <required>false</required>
     <type>Text</type>
     <unique>true</unique>

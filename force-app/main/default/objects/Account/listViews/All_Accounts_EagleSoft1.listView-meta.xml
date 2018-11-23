@@ -21,7 +21,6 @@
     </filters>
     <label>All Accounts - EagleSoft</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_EagleSoft</group>
     </sharedTo>
 </ListView>

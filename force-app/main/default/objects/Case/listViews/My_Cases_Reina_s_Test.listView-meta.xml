@@ -18,7 +18,4 @@
     </filters>
     <label>My Cases - Reina&#39;s Test</label>
     <queue>Technical_Queue</queue>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

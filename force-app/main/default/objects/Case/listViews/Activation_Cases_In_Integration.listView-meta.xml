@@ -23,7 +23,4 @@
         <value>In Integration</value>
     </filters>
     <label>Activation Cases &quot;In Integration&quot;</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

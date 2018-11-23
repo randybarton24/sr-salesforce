@@ -2,7 +2,6 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Inside_Sales_Task</fullName>
     <active>true</active>
-    <compactLayoutAssignment>Sales_Compact_Layout</compactLayoutAssignment>
     <description>For all Inside Sales Tasks</description>
     <label>Inside Sales Task</label>
     <picklistValues>

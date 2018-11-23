@@ -10,7 +10,4 @@
     <columns>CORE.USERS.ALIAS</columns>
     <filterScope>Everything</filterScope>
     <label>Link to add SRS contract broken</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

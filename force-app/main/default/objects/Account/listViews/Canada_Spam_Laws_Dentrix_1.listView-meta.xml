@@ -30,7 +30,6 @@
     </filters>
     <label>Canada Spam Laws - Dentrix 1</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_Dentrix_1</group>
         <role>CSR_Director</role>
         <role>CSR_Manager</role>

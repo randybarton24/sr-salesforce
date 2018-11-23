@@ -41,7 +41,6 @@
     </filters>
     <label>Accounts Needing a Sync Case - Global</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_Global</group>
         <role>CSR_Tech</role>
     </sharedTo>

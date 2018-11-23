@@ -5,6 +5,7 @@
     <columns>TASK.RECORDTYPE</columns>
     <columns>TASK.SUBJECT</columns>
     <columns>TASK.DUE_DATE</columns>
+    <columns>ACTIVITY.TASK</columns>
     <columns>TASK.PRIORITY</columns>
     <filterScope>Mine</filterScope>
     <filters>

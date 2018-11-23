@@ -8,7 +8,6 @@ PRIORVALUE( IsClosed ) &amp;&amp;
 RecordType.Name != &quot;Healthgrades&quot; &amp;&amp;
 $Profile.Name != &quot;System Administrator&quot; &amp;&amp;
 $Profile.Name != &quot;Finance&quot; &amp;&amp;
-$Profile.Name != &quot;Accounting - Beta&quot; &amp;&amp;
 $Profile.Name != &quot;Client Engagement Manager&quot; &amp;&amp;
 $Profile.Name != &quot;Sales Administrator&quot; &amp;&amp;
 ISPICKVAL( Reason_for_closing__c, &quot;&quot; ) &amp;&amp;

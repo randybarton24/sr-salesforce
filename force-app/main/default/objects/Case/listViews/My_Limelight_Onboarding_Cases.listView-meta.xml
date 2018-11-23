@@ -20,7 +20,4 @@
         <value>Closed</value>
     </filters>
     <label>My Open Limelight Onboarding Cases</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

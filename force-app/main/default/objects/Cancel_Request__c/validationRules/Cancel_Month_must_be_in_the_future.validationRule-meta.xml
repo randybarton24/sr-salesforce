@@ -3,7 +3,7 @@
     <fullName>Cancel_Month_must_be_in_the_future</fullName>
     <active>true</active>
     <description>The Cancel Month should be this month or the future.</description>
-    <errorConditionFormula>AND(Cancel_Month__c &lt; (TODAY()- 31) , NOT(ISBLANK(Cancel_Month__c)), $Profile.Name &lt;&gt; &quot;System Administrator&quot;, $Profile.Name &lt;&gt; &quot;Finance&quot;,$Profile.Name &lt;&gt; &quot;Client Engagement Manager&quot;, $Profile.Name &lt;&gt; &quot;Business Operations&quot; , 
+    <errorConditionFormula>AND(Cancel_Month__c &lt; (TODAY()- 31) , NOT(ISBLANK(Cancel_Month__c)), $Profile.Name &lt;&gt; &quot;System Administrator&quot;, $Profile.Name &lt;&gt; &quot;Finance&quot;,$Profile.Name &lt;&gt; &quot;Client Engagement Manager&quot; , 
 $Profile.Name &lt;&gt; &quot;Support Exec&quot; )</errorConditionFormula>
     <errorDisplayField>Cancel_Month__c</errorDisplayField>
     <errorMessage>The Cancel Month must be in this month or the future</errorMessage>

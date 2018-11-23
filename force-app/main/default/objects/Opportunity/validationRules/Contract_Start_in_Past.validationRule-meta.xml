@@ -7,7 +7,6 @@ ISPICKVAL( StageName , &quot;Closed Won&quot; ) &amp;&amp;
  Min_Contract_Start_Validation__c &lt; Today() &amp;&amp;
  $Profile.Name != &quot;System Administrator&quot; &amp;&amp;
 $Profile.Name != &quot;Sales Administrator&quot; &amp;&amp;
- $Profile.Name != &quot;Finance&quot; &amp;&amp;
- $Profile.Name != &quot;Accounting - Beta&quot;</errorConditionFormula>
+ $Profile.Name != &quot;Finance&quot;</errorConditionFormula>
     <errorMessage>The Contract Term Start Date cannot be in the past</errorMessage>
 </ValidationRule>

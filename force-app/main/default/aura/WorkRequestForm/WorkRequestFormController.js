@@ -22,7 +22,7 @@
         if(selectedCategory === "Bug"){
             component.set("v.newRequest.agf__Details__c", "-Expected Behavior:\n\n-Actual Behavior/Error Message(Attach screenshot(s) in next screen):\n\n-Steps to Reproduce:\n  1.\n  2.\n\n-How many users are impacted?\n\n-Is there currently a workaround in place?");    
         } else if(selectedCategory === "Feature Request"){
-            component.set("v.newRequest.agf__Details__c", "-Please describe the business case/justification for this request\n\n-What problem or issue are we solving for?\n\n-Current solution:\n\n-Potential/Proposed Solution:\n\n-What teams will use or will be affected by this change?");        
+            component.set("v.newRequest.agf__Details__c", "-What problem or issue are we solving for?\n\n-Current solution:\n\n-Potential/Proposed Solution:\n\n-What teams will use or will be affected by this change?");        
         } else if(selectedCategory === "Access Request"){
             component.set("v.newRequest.agf__Details__c", "-What system, object, field, etc. do you need access to?\n\n-What is the reason for the change in access? (ie. Team change, new employee, etc.)\n\n-Who is an example of someone that has the level of access you are requesting?");        
         } else if(selectedCategory === "Data Change Request"){

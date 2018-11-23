@@ -8,15 +8,15 @@
     </values>
     <values>
         <field>Controlling_field_Value__c</field>
-        <value xsi:type="xsd:string">SR Schedule</value>
+        <value xsi:type="xsd:string">Administrative</value>
     </values>
     <values>
         <field>Dependent_field_API_Name__c</field>
-        <value xsi:type="xsd:string">Product__c</value>
+        <value xsi:type="xsd:string">Features_Options__c</value>
     </values>
     <values>
         <field>Dependent_field_Value__c</field>
-        <value xsi:type="xsd:string">Customer Education</value>
+        <value xsi:type="xsd:string">PR Portal</value>
     </values>
     <values>
         <field>Object_Name_for_Dependent_Picklist__c</field>

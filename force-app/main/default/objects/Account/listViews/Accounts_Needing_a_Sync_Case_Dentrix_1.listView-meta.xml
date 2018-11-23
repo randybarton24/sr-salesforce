@@ -42,7 +42,6 @@
     </filters>
     <label>Accounts Needing a Sync Case - Dentrix 1</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_Dentrix_1</group>
         <role>CSR_Tech</role>
     </sharedTo>

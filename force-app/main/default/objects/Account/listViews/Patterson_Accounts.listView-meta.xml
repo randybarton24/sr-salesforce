@@ -3,7 +3,7 @@
     <fullName>Patterson_Accounts</fullName>
     <booleanFilter>1 OR 2</booleanFilter>
     <columns>ACCOUNT.NAME</columns>
-    <columns>Partner_Customer_ID__c</columns>
+    <columns>Parent_Account_Subscriber_ID__c</columns>
     <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
     <columns>ACCOUNT.PHONE1</columns>
     <filterScope>Everything</filterScope>

@@ -27,7 +27,4 @@
         <value>Active</value>
     </filters>
     <label>Customers by State &amp; Vertical w/Evergage</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

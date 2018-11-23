@@ -21,7 +21,6 @@
     </filters>
     <label>All Accounts - Medical 1</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_Medical_1</group>
     </sharedTo>
 </ListView>

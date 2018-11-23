@@ -41,7 +41,4 @@
         <value>SCOPE Queue,Medical 1 Queue</value>
     </filters>
     <label>Emails To Be Assigned</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

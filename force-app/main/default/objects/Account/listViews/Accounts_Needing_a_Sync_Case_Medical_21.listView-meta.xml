@@ -41,7 +41,6 @@
     </filters>
     <label>Accounts Needing a Sync Case - Medical</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_Medical_1</group>
     </sharedTo>
 </ListView>

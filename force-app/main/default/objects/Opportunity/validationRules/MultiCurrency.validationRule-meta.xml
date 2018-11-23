@@ -4,7 +4,6 @@
     <active>true</active>
     <errorConditionFormula>NOT( ISPICKVAL( CurrencyIsoCode , &quot;USD&quot; )) &amp;&amp;
 NOT( $Profile.Name != &quot;Finance&quot; ) &amp;&amp;
-NOT( $Profile.Name != &quot;System Administrator&quot; )&amp;&amp;
-NOT( $Profile.Name != &quot;Accounting - Beta&quot; )</errorConditionFormula>
+NOT( $Profile.Name != &quot;System Administrator&quot; )</errorConditionFormula>
     <errorMessage>You are only authorized to use USD</errorMessage>
 </ValidationRule>

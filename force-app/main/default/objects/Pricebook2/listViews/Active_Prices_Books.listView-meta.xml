@@ -5,7 +5,6 @@
     <columns>PRICEBOOK2.IS_ACTIVE</columns>
     <columns>PRICEBOOK2.DESCRIPTION</columns>
     <columns>PRICEBOOK2.LAST_UPDATE</columns>
-    <columns>Playbook__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>PRICEBOOK2.IS_ACTIVE</field>

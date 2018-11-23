@@ -41,7 +41,6 @@
     </filters>
     <label>Accounts Needing a Sync Case - Dentrix 2</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_Dentrix_1</group>
         <group>CS_Dentrix_2</group>
     </sharedTo>

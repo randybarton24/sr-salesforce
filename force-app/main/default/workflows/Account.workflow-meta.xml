@@ -191,7 +191,7 @@ NULL) ) ) ) )</formula>
             <name>RecurSoft__Updated_Customer_ID</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
         <description>Updated Customer ID with value from Subscriber ID</description>
         <formula>AND    (       OR       (        ISNEW(),        ISCHANGED( RecurSoft__Subscriber_ID__c )        ),      NOT ISBLANK(RecurSoft__Subscriber_ID__c) )</formula>
         <triggerType>onAllChanges</triggerType>
@@ -217,6 +217,25 @@ NULL) ) ) ) )</formula>
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
+        <fullName>Singular payment Tracking</fullName>
+        <actions>
+            <name>Singular_Payment_Referrer</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Singular_Interest__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Singular_Referrer__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>Records the name of the Rep that checks the box to say the customer is interested in Singular Payments - Matthew Schetselaar</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
         <fullName>Sync Manager Group</fullName>
         <actions>
             <name>Update_Sync_Manager_Field</name>
@@ -235,8 +254,7 @@ NULL) ) ) ) )</formula>
         </actions>
         <active>true</active>
         <description>Updates the Account Number to the value of the Subscriber ID anytime the Subscriber ID is changed. This allows the Communities SSO to function</description>
-        <formula>ISCHANGED(Subscriber_ID__c) || 
-(ISNEW() &amp;&amp; Subscriber_ID__c != null)</formula>
+        <formula>ISCHANGED(Subscriber_ID__c) ||  (ISNEW() &amp;&amp; Subscriber_ID__c != null)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -249,6 +267,30 @@ NULL) ) ) ) )</formula>
         <description>Updates the Billing Email Address on the Account when a lead is converted - Matthew Schetselaar</description>
         <formula>OR( ISNEW( ), IsChanged( Lead_Billing_Email__c ))</formula>
         <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Status when a message is setn</fullName>
+        <actions>
+            <name>Update_Status_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Admin_FMS__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Admin_Status__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Enterprise</value>
+        </criteriaItems>
+        <description>Updates Enterprise Accounts when a message is first sent - Matt Schetselaar</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
         <fullName>Updated Customer ID</fullName>

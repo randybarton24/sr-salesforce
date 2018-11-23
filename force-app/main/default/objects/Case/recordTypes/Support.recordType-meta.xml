@@ -15,122 +15,16 @@
     <picklistValues>
         <picklist>Category__c</picklist>
         <values>
-            <fullName>Account Information</fullName>
+            <fullName>Administrative</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Accounting</fullName>
+            <fullName>Technical</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Birthday Messages</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Contract Information</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Eyewear</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Group Messaging</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Newsletters</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Recall</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Reminders</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Reports</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SR Conversations</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SR Schedule</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SR Smart Reviews</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Service Experience</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Social Networking</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Surveys</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sync</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>System Error</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Credit_Memo_Product__c</picklist>
-        <values>
-            <fullName>Patient Reach Tablet</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SR Conversations</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SR Platform</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SR Practice Marketing</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SR Scheduler</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SR Smart Reviews</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Credit_Memo_Reason__c</picklist>
-        <values>
-            <fullName>Billing Issue</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Escalation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Incentive</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Service Issues</fullName>
-            <default>false</default>
+            <fullName>Training</fullName>
+            <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>
@@ -1084,203 +978,23 @@
     <picklistValues>
         <picklist>Product__c</picklist>
         <values>
-            <fullName>Account Settings</fullName>
+            <fullName>Healthgrades</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Activate Account</fullName>
+            <fullName>Limelight</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Add%2FEdit Locations</fullName>
+            <fullName>SR Conversations</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Add%2FEdit Providers</fullName>
-            <default>false</default>
+            <fullName>SR Platform</fullName>
+            <default>true</default>
         </values>
         <values>
-            <fullName>Admin Privileges</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>BAA</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Campaign Setup</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Creation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Criteria Group</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Custom Group</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Customer Education</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Database Connections</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Deferrals%2FIncentives</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Delivery Issues</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Delivery%2FTiming</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Detailed Report</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Editing Surveys</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Escalation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Filter Report Data</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Gathering Contact Info</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Group Template</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Groups</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Incorrect Data</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Language</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Line Provisioning</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Low CSAT%2FRSAT</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Need%2FUpdating Admin%2FSync Username</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Need%2FUpdating Contact Email</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Need%2FUpdating Password</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Need%2FUpdating Personnel Username</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>New Birthday Template %28single settings page%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Old Birthday Template %28multiple settings pages%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Patient Opt-In%2FOut</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Platform Down</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Portal Cards</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Requesting</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SR Huddle</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SR Notify</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Services</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Set Permissions</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Settings</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Social Post%2FStatus</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sync Filter Adjustment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sync Filters</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>System Resources</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Template</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Template Adjustment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Templates</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Updating</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Updating Contact Info</fullName>
+            <fullName>SR Smart Reviews</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1417,10 +1131,6 @@
     </picklistValues>
     <picklistValues>
         <picklist>Survey_to_be_Sent__c</picklist>
-        <values>
-            <fullName>EBR Case Survey</fullName>
-            <default>false</default>
-        </values>
         <values>
             <fullName>Fast Track Survey</fullName>
             <default>false</default>

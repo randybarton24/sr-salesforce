@@ -29,7 +29,4 @@
         <operation>notEqual</operation>
     </filters>
     <label>Success Coach - Accounts</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

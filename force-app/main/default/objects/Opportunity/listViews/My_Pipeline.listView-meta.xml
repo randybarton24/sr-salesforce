@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>My_Pipeline</fullName>
-    <booleanFilter>1 OR 2</booleanFilter>
     <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
     <columns>Monthly_Amount__c</columns>
     <columns>OPPORTUNITY.CLOSE_DATE</columns>
-    <columns>Number_of_Locations__c</columns>
-    <columns>ACCOUNT.NAME</columns>
     <columns>OPPORTUNITY.STAGE_NAME</columns>
     <columns>CORE.USERS.ALIAS</columns>
     <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
@@ -15,11 +13,6 @@
         <field>OPPORTUNITY.STAGE_NAME</field>
         <operation>equals</operation>
         <value>Pre-Qualified,Qualified,Demo Scheduled,Demo Completed,Negotiation Review</value>
-    </filters>
-    <filters>
-        <field>OPPORTUNITY.STAGE_NAME</field>
-        <operation>equals</operation>
-        <value>Proposal,Negotiation/VOC,Procurement/Security,Legal,Signatures</value>
     </filters>
     <label>My Pipeline</label>
 </ListView>

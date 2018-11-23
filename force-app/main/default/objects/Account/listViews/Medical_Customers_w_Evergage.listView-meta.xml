@@ -27,7 +27,4 @@
         <value>Active</value>
     </filters>
     <label>Medical Customers w/Evergage</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

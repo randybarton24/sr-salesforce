@@ -41,7 +41,6 @@
     </filters>
     <label>Accounts Needing a Sync Case - EagleSoft</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_EagleSoft</group>
         <role>CSR_Director</role>
         <role>CSR_Manager</role>

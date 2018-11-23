@@ -22,8 +22,4 @@
         <operation>notEqual</operation>
     </filters>
     <label>Community Cases (Do not edit w/o Matt)</label>
-    <sharedTo>
-        <allCustomerPortalUsers/>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

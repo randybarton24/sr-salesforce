@@ -49,7 +49,6 @@
             var x$ = jQuery.noConflict();
             
             function validateFormEmail(elementRef) {                
-                if (elementRef.value == '') return true;
                 var x = elementRef.value;
                 var atpos = x.indexOf("@");
                 var dotpos = x.lastIndexOf(".");
@@ -57,7 +56,6 @@
                 
                 if ((atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length || whitespace >= 0)) {                    
                     alert("Not a valid e-mail address " + x);
-                    elementRef.value = '';
                     return false;
                 }
             }
@@ -601,10 +599,10 @@
                                                                 Primary Doctor/Owner
                                                             </td>
                                                             <td colspan="1">
-                                                                <apex:inputText id="contact1FirstName" value="{!primaryDoctorWrapper.FirstName}" maxlength="40" styleClass="form-control" onchange="updatePrimary();" onblur="checkRequired(this);"/>
+                                                                <apex:inputText id="contact1FirstName" value="{!primaryDoctorWrapper.FirstName}" styleClass="form-control" onchange="updatePrimary();" onblur="checkRequired(this);"/>
                                                             </td>
                                                             <td colspan="1">
-                                                                <apex:inputText id="contact1LastName" value="{!primaryDoctorWrapper.LastName}" maxlength="80" styleClass="form-control" onchange="updatePrimary();" onblur="checkRequired(this);"/>
+                                                                <apex:inputText id="contact1LastName" value="{!primaryDoctorWrapper.LastName}" styleClass="form-control" onchange="updatePrimary();" onblur="checkRequired(this);"/>
                                                             </td>
                                                             <td colspan="1">
                                                                 <apex:inputText id="contact1Title" value="{!primaryDoctorWrapper.Title}" styleClass="form-control" onchange="updatePrimary();" onblur="checkRequired(this);"/>
@@ -624,10 +622,10 @@
                                                                 </a>
                                                             </td>
                                                             <td colspan="1">
-                                                                <apex:inputText id="contact2FirstName" value="{!businessContactWrapper.FirstName}" maxlength="40" styleClass="form-control" onchange="updateBusiness();" onblur="checkRequired(this);"/>
+                                                                <apex:inputText id="contact2FirstName" value="{!businessContactWrapper.FirstName}" styleClass="form-control" onchange="updateBusiness();" onblur="checkRequired(this);"/>
                                                             </td>
                                                             <td colspan="1">
-                                                                <apex:inputText id="contact2LastName" value="{!businessContactWrapper.LastName}" maxlength="80" styleClass="form-control" onchange="updateBusiness();" onblur="checkRequired(this);"/>
+                                                                <apex:inputText id="contact2LastName" value="{!businessContactWrapper.LastName}" styleClass="form-control" onchange="updateBusiness();" onblur="checkRequired(this);"/>
                                                             </td>
                                                             <td colspan="1">
                                                                 <apex:inputText id="contact2Title" value="{!businessContactWrapper.Title}" styleClass="form-control" onchange="updateBusiness();" onblur="checkRequired(this);"/>
@@ -671,13 +669,13 @@
                                                                 <p><strong>First Name</strong><font style="color:#ff0101;"> *</font></p>
                                                             </td>
                                                             <td colspan="1">
-                                                                <apex:inputText id="contact4FirstName" value="{!billingContactWrapper.FirstName}" maxlength="40" styleClass="form-control" onchange="updateBilling();" onblur="checkRequired(this);"/>
+                                                                <apex:inputText id="contact4FirstName" value="{!billingContactWrapper.FirstName}" styleClass="form-control" onchange="updateBilling();" onblur="checkRequired(this);"/>
                                                             </td>
                                                             <td colspan="1" class="bg-gray">
                                                                 <p><strong>Last Name</strong><font style="color:#ff0101;"> *</font></p>
                                                             </td>
                                                             <td colspan="1">
-                                                                <apex:inputText id="contact4LastName" value="{!billingContactWrapper.LastName}" maxlength="80" styleClass="form-control" onchange="updateBilling();" onblur="checkRequired(this);"/>
+                                                                <apex:inputText id="contact4LastName" value="{!billingContactWrapper.LastName}" styleClass="form-control" onchange="updateBilling();" onblur="checkRequired(this);"/>
                                                             </td>
                                                             <td colspan="1" class="bg-gray">
                                                                 <p><strong>Title</strong><font style="color:#ff0101;"> *</font></p>
@@ -2279,13 +2277,13 @@
                                                                 <p><strong>First Name<font style="color:#ff0101;"> *</font></strong></p>
                                                             </td>
                                                             <td colspan="1">
-                                                                <apex:inputText id="contact3FirstName" value="{!contractSignerWrapper.FirstName}" maxlength="40" styleClass="form-control" onchange="clearCS();"/>
+                                                                <apex:inputText id="contact3FirstName" value="{!contractSignerWrapper.FirstName}" styleClass="form-control" onchange="clearCS();"/>
                                                             </td>
                                                             <td colspan="1" class="bg-gray">
                                                                 <p><strong>Last Name</strong><font style="color:#ff0101;"> *</font></p>
                                                             </td>
                                                             <td colspan="1">
-                                                                <apex:inputText id="contact3LastName" value="{!contractSignerWrapper.LastName}" maxlength="80" styleClass="form-control" onchange="clearCS();"/>
+                                                                <apex:inputText id="contact3LastName" value="{!contractSignerWrapper.LastName}" styleClass="form-control" onchange="clearCS();"/>
                                                             </td>
                                                             <td colspan="1" class="bg-gray">
                                                                 <p><strong>Title</strong><font style="color:#ff0101;"> *</font></p>

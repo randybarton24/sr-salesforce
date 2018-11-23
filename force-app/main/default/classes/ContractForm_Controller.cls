@@ -705,7 +705,7 @@ public without sharing class ContractForm_Controller extends WebFormsUtilityClas
         else if((opp.Approval_Level_Required__c != null && opp.Approval_Level_Required__c > 0) ||
                 (opp.Deal_Desk_Approval_Date__c == null && 
                     opp.RecordTypeId == SRUtilities.getRecordTypeId('Opportunity', 'New Practice Business') &&
-                    (opp.Number_of_Locations__c > 2 || opp.Approval_Level_Required_Orientation__c > opp.Pricebook2.Deal_Desk_Orientation_Months__c)) ||
+                    (opp.Number_of_Locations__c > 2 || opp.Approval_Level_Required_Orientation__c > 1)) ||
                 opp.Contract_Signed__c ||
                 opp.StageName == 'Closed Won' ||
                 opp.StageName == 'Closed Lost' ||

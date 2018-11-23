@@ -4,7 +4,6 @@
     <deprecated>false</deprecated>
     <description>Five9 dialing list name</description>
     <externalId>false</externalId>
-    <inlineHelpText>Standard Five9 Sync (not LSP-compatible)</inlineHelpText>
     <label>Five9list</label>
     <length>50</length>
     <required>false</required>

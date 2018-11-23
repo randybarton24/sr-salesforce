@@ -60,11 +60,6 @@
                 <default>false</default>
                 <label>Update_Opp_Stage_Demo_Scheduled</label>
             </value>
-            <value>
-                <fullName>Create_CI</fullName>
-                <default>false</default>
-                <label>Create_CI</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

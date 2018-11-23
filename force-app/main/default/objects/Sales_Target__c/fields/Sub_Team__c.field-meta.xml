@@ -34,36 +34,6 @@
                 <default>false</default>
                 <label>Mid-Market</label>
             </value>
-            <value>
-                <fullName>Upsell</fullName>
-                <default>false</default>
-                <label>Upsell</label>
-            </value>
-            <value>
-                <fullName>Client Engagement</fullName>
-                <default>false</default>
-                <label>Client Engagement</label>
-            </value>
-            <value>
-                <fullName>Client Success</fullName>
-                <default>false</default>
-                <label>Client Success</label>
-            </value>
-            <value>
-                <fullName>Enterprise Client Success</fullName>
-                <default>false</default>
-                <label>Enterprise Client Success</label>
-            </value>
-            <value>
-                <fullName>Mid-Market Client Success</fullName>
-                <default>false</default>
-                <label>Mid-Market Client Success</label>
-            </value>
-            <value>
-                <fullName>Independent Client Success</fullName>
-                <default>false</default>
-                <label>Independent Client Success</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

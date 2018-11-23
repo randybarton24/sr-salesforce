@@ -26,8 +26,4 @@
         <value>Active</value>
     </filters>
     <label>Accounts by software</label>
-    <sharedTo>
-        <allInternalUsers/>
-        <role>Inside_Sales_Coordinator</role>
-    </sharedTo>
 </ListView>

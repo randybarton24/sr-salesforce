@@ -18,8 +18,7 @@
             <type>Alert</type>
         </actions>
         <active>true</active>
-        <formula>ISCHANGED( OwnerId ) &amp;&amp;
-OwnerId = CreatedById</formula>
+        <formula>ISCHANGED( OwnerId ) &amp;&amp; OwnerId = CreatedById</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

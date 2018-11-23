@@ -7,7 +7,6 @@ public class PricebooksSelector extends fflib_SObjectSelector
 			Pricebook2.AppAdmin_Plan_Name__c,
 			Pricebook2.Contract_Start_Date_Offset__c,
 			Pricebook2.Default_Term__c,
-			Pricebook2.Deal_Desk_Orientation_Months__c,
 			Pricebook2.IsActive,
 			Pricebook2.Name,
 			Pricebook2.Number_of_Providers_Included__c,

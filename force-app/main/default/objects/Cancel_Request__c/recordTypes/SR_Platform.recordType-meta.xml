@@ -663,10 +663,6 @@
             <default>true</default>
         </values>
         <values>
-            <fullName>Pending Cancel</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Resume - No Change</fullName>
             <default>false</default>
         </values>

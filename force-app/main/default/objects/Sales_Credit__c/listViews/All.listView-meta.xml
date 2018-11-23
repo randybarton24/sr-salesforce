@@ -12,12 +12,11 @@
     <columns>CREATED_DATE</columns>
     <columns>CREATEDBY_USER</columns>
     <columns>VP__c</columns>
-    <columns>Days_to_Activate__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>Sales_Rep__c</field>
-        <operation>contains</operation>
-        <value>eric</value>
+        <field>Contract_Signed_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>7/27/2018 12:00 AM</value>
     </filters>
     <label>All</label>
 </ListView>

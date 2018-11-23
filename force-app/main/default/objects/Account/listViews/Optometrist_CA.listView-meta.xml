@@ -24,7 +24,4 @@
         <value>0</value>
     </filters>
     <label>Optometrist CA</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

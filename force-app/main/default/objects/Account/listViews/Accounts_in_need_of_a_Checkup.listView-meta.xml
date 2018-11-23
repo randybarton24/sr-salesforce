@@ -22,7 +22,6 @@
     </filters>
     <label>Whites Creek Dental</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>Support</group>
     </sharedTo>
 </ListView>

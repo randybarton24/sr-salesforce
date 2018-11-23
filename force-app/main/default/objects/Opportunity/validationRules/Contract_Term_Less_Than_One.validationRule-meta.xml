@@ -6,7 +6,6 @@
 ISPICKVAL( StageName , &quot;Closed Won&quot; ) &amp;&amp; 
  RecurSoft__Initial_Contract_Term__c &lt; 1 &amp;&amp;
 $Profile.Name != &quot;System Administrator&quot; &amp;&amp; 
-$Profile.Name != &quot;Finance&quot; &amp;&amp; 
-$Profile.Name != &quot;Accounting - Beta&quot;</errorConditionFormula>
+$Profile.Name != &quot;Finance&quot;</errorConditionFormula>
     <errorMessage>The Contract Term(Months) cannot be less than one.</errorMessage>
 </ValidationRule>

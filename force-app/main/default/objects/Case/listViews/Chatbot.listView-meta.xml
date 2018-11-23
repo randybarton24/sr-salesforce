@@ -16,7 +16,4 @@
         <value>Chatbot</value>
     </filters>
     <label>Chatbot</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

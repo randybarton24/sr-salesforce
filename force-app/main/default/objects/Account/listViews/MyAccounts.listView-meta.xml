@@ -16,7 +16,4 @@
         <value>Cancelled,No Sale</value>
     </filters>
     <label>My Accounts</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

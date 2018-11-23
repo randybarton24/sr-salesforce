@@ -21,7 +21,6 @@
     </filters>
     <label>CSM Book of Business Renewal ML</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>Groups_Team</group>
     </sharedTo>
 </ListView>

@@ -13,7 +13,7 @@
     <filters>
         <field>CORE.PROFILE.NAME</field>
         <operation>contains</operation>
-        <value>Support,account,inside</value>
+        <value>Sales,Business,Account</value>
     </filters>
     <filters>
         <field>CORE.USERS.ACTIVE</field>
@@ -28,6 +28,5 @@
     <label>Sales [New Hires]</label>
     <sharedTo>
         <role>Sales_Operations</role>
-        <roleAndSubordinates>Sales_Operations</roleAndSubordinates>
     </sharedTo>
 </ListView>

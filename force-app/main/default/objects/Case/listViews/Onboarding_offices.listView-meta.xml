@@ -15,7 +15,4 @@
         <value>Case.Activation</value>
     </filters>
     <label>Onboarding offices</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

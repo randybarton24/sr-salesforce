@@ -8,15 +8,15 @@
     </values>
     <values>
         <field>Controlling_field_Value__c</field>
-        <value xsi:type="xsd:string">Sync</value>
+        <value xsi:type="xsd:string">&quot;Technical, Training&quot;</value>
     </values>
     <values>
         <field>Dependent_field_API_Name__c</field>
-        <value xsi:type="xsd:string">Product__c</value>
+        <value xsi:type="xsd:string">Features_Options__c</value>
     </values>
     <values>
         <field>Dependent_field_Value__c</field>
-        <value xsi:type="xsd:string">Admin Privileges</value>
+        <value xsi:type="xsd:string">Settings</value>
     </values>
     <values>
         <field>Object_Name_for_Dependent_Picklist__c</field>

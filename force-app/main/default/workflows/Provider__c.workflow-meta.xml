@@ -34,8 +34,7 @@
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <formula>ISCHANGED(PUID__c) ||
-ISNEW()</formula>
+        <formula>ISCHANGED(PUID__c) || ISNEW()</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -45,9 +44,7 @@ ISNEW()</formula>
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <formula>NOT( $Setup.HG_WFR__c.HG_WFR_OFF__c ) &amp;&amp;
-NOT(ISCHANGED( Last_Reported_Date__c )) &amp;&amp;  
-NOT(ISCHANGED( Last_Scorecard_Date__c))</formula>
+        <formula>NOT( $Setup.HG_WFR__c.HG_WFR_OFF__c ) &amp;&amp; NOT(ISCHANGED( Last_Reported_Date__c )) &amp;&amp;   NOT(ISCHANGED( Last_Scorecard_Date__c))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>

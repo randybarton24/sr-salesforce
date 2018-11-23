@@ -12,7 +12,4 @@
         <value>Account.Partner,Account.Affiliate</value>
     </filters>
     <label>Partners</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

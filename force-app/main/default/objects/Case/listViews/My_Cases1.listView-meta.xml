@@ -34,7 +34,4 @@
         <value>Dearing</value>
     </filters>
     <label>Karlis cases</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

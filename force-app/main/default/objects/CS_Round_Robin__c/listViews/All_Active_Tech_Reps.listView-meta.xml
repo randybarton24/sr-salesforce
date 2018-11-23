@@ -8,7 +8,6 @@
     <columns>Case_Limit__c</columns>
     <columns>Load__c</columns>
     <columns>UPDATEDBY_USER</columns>
-    <columns>Team_Assignment__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>RECORDTYPE</field>

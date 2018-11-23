@@ -20,7 +20,4 @@
         <value>Closed</value>
     </filters>
     <label>My Open Healthgrades Onboarding Cases</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

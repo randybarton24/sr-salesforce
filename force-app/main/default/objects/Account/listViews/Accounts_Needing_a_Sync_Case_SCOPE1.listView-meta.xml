@@ -41,7 +41,6 @@
     </filters>
     <label>Accounts Needing a Sync Case - SCOPE</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_SCOPE</group>
     </sharedTo>
 </ListView>

@@ -24,7 +24,4 @@
         <value>Active</value>
     </filters>
     <label>Customers by Specialty: PlastSurg/Cosmet</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

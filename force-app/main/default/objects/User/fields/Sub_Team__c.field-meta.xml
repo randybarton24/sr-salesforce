@@ -10,14 +10,59 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
+                <fullName>Account Executive</fullName>
+                <default>false</default>
+                <label>Account Executive</label>
+            </value>
+            <value>
+                <fullName>Senior Account Executive</fullName>
+                <default>false</default>
+                <label>Senior Account Executive</label>
+            </value>
+            <value>
+                <fullName>Extended Sales Representative</fullName>
+                <default>false</default>
+                <label>Extended Sales Representative</label>
+            </value>
+            <value>
+                <fullName>Outside Sales Representative</fullName>
+                <default>false</default>
+                <label>Outside Sales Representative</label>
+            </value>
+            <value>
+                <fullName>Enterprise Sales Representative</fullName>
+                <default>false</default>
+                <label>Enterprise Sales Representative</label>
+            </value>
+            <value>
+                <fullName>Senior Account Executive Manager</fullName>
+                <default>false</default>
+                <label>Senior Account Executive Manager</label>
+            </value>
+            <value>
+                <fullName>Account Executive Manager</fullName>
+                <default>false</default>
+                <label>Account Executive Manager</label>
+            </value>
+            <value>
+                <fullName>Extended Sales Manager</fullName>
+                <default>false</default>
+                <label>Extended Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Outside Sales Manager</fullName>
+                <default>false</default>
+                <label>Outside Sales Manager</label>
+            </value>
+            <value>
                 <fullName>Inside Sales</fullName>
                 <default>false</default>
                 <label>Inside Sales</label>
             </value>
             <value>
-                <fullName>Territory Sales</fullName>
+                <fullName>Extended Sales</fullName>
                 <default>false</default>
-                <label>Territory Sales</label>
+                <label>Extended Sales</label>
             </value>
             <value>
                 <fullName>Outside Sales</fullName>
@@ -25,44 +70,44 @@
                 <label>Outside Sales</label>
             </value>
             <value>
-                <fullName>Major Accounts</fullName>
+                <fullName>Enterprise Sales</fullName>
                 <default>false</default>
-                <label>Major Accounts</label>
+                <label>Enterprise Sales</label>
             </value>
             <value>
-                <fullName>Mid-Market</fullName>
+                <fullName>Specialty Team</fullName>
                 <default>false</default>
-                <label>Mid-Market</label>
+                <label>Specialty Team</label>
             </value>
             <value>
-                <fullName>Upsell</fullName>
+                <fullName>Major Accounts Executive</fullName>
                 <default>false</default>
-                <label>Upsell</label>
+                <label>Major Accounts Executive</label>
             </value>
             <value>
-                <fullName>Client Engagement</fullName>
+                <fullName>Major Accounts Manager</fullName>
                 <default>false</default>
-                <label>Client Engagement</label>
+                <label>Major Accounts Manager</label>
             </value>
             <value>
-                <fullName>Client Success</fullName>
+                <fullName>Account Development Rep</fullName>
                 <default>false</default>
-                <label>Client Success</label>
+                <label>Account Development Rep</label>
             </value>
             <value>
-                <fullName>Enterprise Client Success</fullName>
+                <fullName>Account Development Manager</fullName>
                 <default>false</default>
-                <label>Enterprise Client Success</label>
+                <label>Account Development Manager</label>
             </value>
             <value>
-                <fullName>Mid-Market Client Success</fullName>
+                <fullName>Inside Sales Director</fullName>
                 <default>false</default>
-                <label>Mid-Market Client Success</label>
+                <label>Inside Sales Director</label>
             </value>
             <value>
-                <fullName>Independent Client Success</fullName>
+                <fullName>Territory Sales Director</fullName>
                 <default>false</default>
-                <label>Independent Client Success</label>
+                <label>Territory Sales Director</label>
             </value>
         </valueSetDefinition>
     </valueSet>

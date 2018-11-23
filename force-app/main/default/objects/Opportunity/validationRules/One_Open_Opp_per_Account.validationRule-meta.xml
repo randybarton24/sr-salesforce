@@ -2,17 +2,9 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>One_Open_Opp_per_Account</fullName>
     <active>true</active>
-    <errorConditionFormula>$User.Username != &quot;apiuser@solutionreach.com&quot; &amp;&amp;
-$User.Username != &quot;contract@solutionreachtest.force.com&quot; &amp;&amp;
-ISBLANK( Addendum__c )
-
-&amp;&amp; 
-
-( 
-				RecordType.Name = &quot;Enterprise New Business&quot; ||
-				RecordType.Name = &quot;Add Product&quot; ||
-				RecordType.Name = &quot;New Practice Business&quot; 
-)
+    <errorConditionFormula>( RecordType.Name = &quot;Enterprise New Business&quot; ||
+RecordType.Name = &quot;Add Product&quot; ||
+RecordType.Name = &quot;New Practice Business&quot; )
 
 &amp;&amp; 
 
@@ -21,31 +13,21 @@ ISBLANK( Addendum__c )
 								ISNEW() &amp;&amp; 
 								Account.Number_of_Open_NPB_Opps__c &gt; 0 &amp;&amp;
 								IsClosed = false
-				) 
-				|| 
+								
+				) || 
 				(
 								ISCHANGED(RecordTypeId) &amp;&amp; 
-								PRIORVALUE( RecordTypeId ) != &quot;012i0000001Dyv2&quot; &amp;&amp;
-								PRIORVALUE( RecordTypeId ) != &quot;01231000001NWyI&quot; &amp;&amp;
-								PRIORVALUE( RecordTypeId ) != &quot;012i0000001Dyv5&quot; &amp;&amp;
 								Account.Number_of_Open_NPB_Opps__c &gt; 0 &amp;&amp;
 								IsClosed = false
-				) 
-				|| 
+				) || 
 				Account.Number_of_Open_NPB_Opps__c &gt; 1
-) 
-
-&amp;&amp;
-
+) &amp;&amp;
 (
-				NOT(
-								ISCHANGED(StageName) 
-								&amp;&amp;
+				NOT(ISCHANGED(StageName) &amp;&amp;
 								(
 												ISPICKVAL( StageName , &quot;Closed Lost&quot; ) ||
 												ISPICKVAL( StageName , &quot;Not Qualified&quot; ) ||
-												ISPICKVAL( StageName , &quot;Closed Won&quot; ) ||
-ISPICKVAL( StageName , &quot;Closed Won - Non-Billing&quot; )
+												ISPICKVAL( StageName , &quot;Closed Won&quot; )
 								)
 							)
 )</errorConditionFormula>

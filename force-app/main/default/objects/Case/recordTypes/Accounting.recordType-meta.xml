@@ -35,57 +35,43 @@
     <picklistValues>
         <picklist>Category__c</picklist>
         <values>
-            <fullName>Accounting</fullName>
+            <fullName>Administrative</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Service Experience</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Credit_Memo_Product__c</picklist>
-        <values>
-            <fullName>Patient Reach Tablet</fullName>
+            <fullName>Change Payment Terms</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>SR Conversations</fullName>
+            <fullName>Collections</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>SR Platform</fullName>
+            <fullName>Feature Enhancement</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>SR Practice Marketing</fullName>
+            <fullName>Generic</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>SR Scheduler</fullName>
+            <fullName>Open Invoice</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>SR Smart Reviews</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Credit_Memo_Reason__c</picklist>
-        <values>
-            <fullName>Billing Issue</fullName>
+            <fullName>Past Due</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Escalation</fullName>
+            <fullName>Setup Billing</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Incentive</fullName>
+            <fullName>Technical</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Service Issues</fullName>
+            <fullName>Training</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -153,10 +139,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Partner Community</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Phone</fullName>
             <default>true</default>
         </values>
@@ -198,91 +180,35 @@
     <picklistValues>
         <picklist>Product__c</picklist>
         <values>
-            <fullName>Account Settings</fullName>
+            <fullName>One Desk</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Criteria Group</fullName>
+            <fullName>PatientReach</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Custom Group</fullName>
+            <fullName>SR Conversations</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Delivery Issues</fullName>
+            <fullName>SR Enterprise</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Delivery%2FTiming</fullName>
+            <fullName>SR Platform</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Detailed Report</fullName>
+            <fullName>SR Smart Reviews</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Editing Surveys</fullName>
+            <fullName>SR Sync</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Escalation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Filter Report Data</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Group Template</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Incorrect Data</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Language</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Low CSAT%2FRSAT</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Need%2FUpdating Admin%2FSync Username</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Need%2FUpdating Personnel Username</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>New Birthday Template %28single settings page%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Old Birthday Template %28multiple settings pages%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Patient Opt-In%2FOut</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Settings</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Social Post%2FStatus</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Template</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Templates</fullName>
+            <fullName>Simpletrac</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -447,10 +373,6 @@
     </picklistValues>
     <picklistValues>
         <picklist>Survey_to_be_Sent__c</picklist>
-        <values>
-            <fullName>EBR Case Survey</fullName>
-            <default>false</default>
-        </values>
         <values>
             <fullName>Fast Track Survey</fullName>
             <default>false</default>

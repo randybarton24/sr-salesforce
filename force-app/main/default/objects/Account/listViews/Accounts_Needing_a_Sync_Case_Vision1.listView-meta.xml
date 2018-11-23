@@ -42,7 +42,6 @@
     </filters>
     <label>Accounts Needing a Sync Case - Vision</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_Vision</group>
     </sharedTo>
 </ListView>

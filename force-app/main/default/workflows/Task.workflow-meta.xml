@@ -46,6 +46,26 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>BlacklistTaskUpdate</fullName>
+        <field>Activity_Type__c</field>
+        <literalValue>Outbound Call</literalValue>
+        <name>BlacklistTaskUpdate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CallResult2ActivtyType</fullName>
+        <description>Update Activity Type</description>
+        <field>Activity_Type__c</field>
+        <literalValue>Outbound Call</literalValue>
+        <name>CallResult2ActivtyType</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Completed_for_Auto_Email</fullName>
         <field>Date_Completed_New__c</field>
         <formula>now()</formula>
@@ -70,6 +90,15 @@
         <name>Date Completed New</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Demo_Activity_Type</fullName>
+        <field>Activity_Type__c</field>
+        <literalValue>Phone Demo</literalValue>
+        <name>Demo Activity Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
@@ -224,6 +253,15 @@
         <field>Activity_Results__c</field>
         <literalValue>Left Voice Mail</literalValue>
         <name>TaskVMUpdate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateActivityResults</fullName>
+        <field>Activity_Results__c</field>
+        <literalValue>Spoke with-</literalValue>
+        <name>UpdateActivityResults</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
@@ -502,8 +540,7 @@
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <formula>CONTAINS(Subject, &quot;Email:&quot;) &amp;&amp;
-NOT(ISCHANGED(Activity_Results__c))</formula>
+        <formula>CONTAINS(Subject, &quot;Email:&quot;) &amp;&amp; NOT(ISCHANGED(Activity_Results__c))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -532,5 +569,336 @@ NOT(ISCHANGED(Activity_Results__c))</formula>
             <operation>equals</operation>
         </criteriaItems>
         <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateActivityTypeBL</fullName>
+        <actions>
+            <name>BLTaskUpdate2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>BlacklistTaskUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Override1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Blacklisted</value>
+        </criteriaItems>
+        <description>Update Activity Type base on rules</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateActivityTypeCC</fullName>
+        <actions>
+            <name>Override2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityResults7</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityType7</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Cold Call</value>
+        </criteriaItems>
+        <description>Update Activity Type base on rules</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateActivityTypeCustomer</fullName>
+        <actions>
+            <name>Override3</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityResults2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivtyType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Existing Customer</value>
+        </criteriaItems>
+        <description>Update Activity Type base on rules</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateActivityTypeDemo</fullName>
+        <actions>
+            <name>Demo_Activity_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Override4</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityResults</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Demo</value>
+        </criteriaItems>
+        <description>Update Activity Type base on rules</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateActivityTypeFU</fullName>
+        <actions>
+            <name>Override5</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityResults3</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityType3</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Follow-up</value>
+        </criteriaItems>
+        <description>Update Activity Type base on rules</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateActivityTypeLiveMessage</fullName>
+        <actions>
+            <name>Override6</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityResults4</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityType4</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Left live message</value>
+        </criteriaItems>
+        <description>Update Activity Type base on rules</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateActivityTypeNABS</fullName>
+        <actions>
+            <name>UpdateActivityResults5</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityType5</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>No answer Busy signal</value>
+        </criteriaItems>
+        <description>Update Activity Type base on rules</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateActivityTypeNonHC</fullName>
+        <actions>
+            <name>Override7</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityResults6</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateActivityType6</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Non-healthcare</value>
+        </criteriaItems>
+        <description>Update Activity Type base on rules</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateActivityTypeVM</fullName>
+        <actions>
+            <name>ActivtyVM2Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>TaskVMUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Left voicemail</value>
+        </criteriaItems>
+        <description>Update Activity Type base on rules</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateIBBL</fullName>
+        <actions>
+            <name>IBOverride4</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityResult4</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityType4</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Inbound-Blacklisted PM</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateIBCallInfo</fullName>
+        <actions>
+            <name>IBOverride1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityResult1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityType1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Inbound-Info Requested</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateIBCustomer</fullName>
+        <actions>
+            <name>IBOverride5</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityResult5</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityType5</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Inbound-Existing Customer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateIBDemo</fullName>
+        <actions>
+            <name>IBOverride3</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityResult3</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityType3</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Inbound-Demo</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateIBNon-HC</fullName>
+        <actions>
+            <name>IBOverride6</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityResult6</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityType6</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Inbound-Non-healthcare</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateIBSalesTransfer</fullName>
+        <actions>
+            <name>IBOverride2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityResult2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateIBActivityType2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.CallDisposition</field>
+            <operation>equals</operation>
+            <value>Inbound-Sales Transfer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
 </Workflow>

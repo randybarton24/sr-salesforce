@@ -31,11 +31,6 @@
                 <label>Sent Addendum</label>
             </value>
             <value>
-                <fullName>Pending Cancel</fullName>
-                <default>false</default>
-                <label>Pending Cancel</label>
-            </value>
-            <value>
                 <fullName>Save</fullName>
                 <default>false</default>
                 <label>Save</label>

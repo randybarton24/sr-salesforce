@@ -2,19 +2,10 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Current_Next_Invoice_Date__c</fullName>
     <externalId>false</externalId>
-    <formula>IF( 
-				( 
-								ISBLANK( Asset__r.Current_Product_Subscription__c ) 
-								|| 
-								(
-												Asset__r.Current_Product_Subscription__r.RecurSoft__Unit_Price__c = 0 
-									   &amp;&amp;
-												ISPICKVAL( Asset__r.Product2.Family , &quot;SR Platform&quot; ) 
-								)				
-				) ,
-				Asset__r.Next_Payment_Date__c ,
-				Asset__r.Current_Product_Subscription__r.Next_Payment_Date__c 
-)</formula>
+    <formula>IF( ( ISBLANK( Asset__r.Current_Product_Subscription__c ) || 
+Asset__r.Current_Product_Subscription__r.RecurSoft__Unit_Price__c = 0 ) ,
+Asset__r.Next_Payment_Date__c ,
+Asset__r.Current_Product_Subscription__r.Next_Payment_Date__c )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Current Next Invoice Date</label>
     <required>false</required>

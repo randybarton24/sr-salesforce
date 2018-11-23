@@ -2,20 +2,20 @@
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>All_Supported_Features</fullName>
     <columns>NAME</columns>
-    <columns>Sync_Details__c</columns>
     <columns>SYNC_Availability_Icon__c</columns>
-    <columns>DB_Type__c</columns>
+    <columns>Analytics_Icon__c</columns>
+    <columns>ASAP_Icon__c</columns>
     <columns>Ledgers_Icon__c</columns>
-    <columns>Recare_Icon__c</columns>
-    <columns>Voice_Icon__c</columns>
-    <columns>Write_back_Confirmations__c</columns>
-    <columns>Limelight_Available__c</columns>
+    <columns>SR_Portal_Icon__c</columns>
+    <columns>Group_By_Insurance_Icon__c</columns>
+    <columns>Eyewear_Icon__c</columns>
+    <columns>Maps_Icon__c</columns>
     <columns>Locations_Icon__c</columns>
     <columns>Procedure_History_Icon__c</columns>
     <columns>Providers_Icon__c</columns>
-    <columns>Appointment_Location_Icon__c</columns>
-    <columns>Appointment_Provider__c</columns>
-    <columns>Write_back_Confirmations_Icon__c</columns>
+    <columns>Survey_Icon__c</columns>
+    <columns>Recare_Icon__c</columns>
+    <columns>Voice_Icon__c</columns>
     <filterScope>Everything</filterScope>
     <label>All - Supported Features</label>
 </ListView>

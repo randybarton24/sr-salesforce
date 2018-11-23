@@ -380,6 +380,30 @@ Email_Alerts_Sent__c +&quot;;&quot;+&quot;Email Support General Auto Response&qu
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
+        <fullName>Activation Case Round Robin</fullName>
+        <actions>
+            <name>Activation_Case_Assignment</name>
+            <type>FlowAction</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Activation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Implementation_Rep__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+        <description>Automatically assigns out the Activation Case when a new one comes in - Matthew Schetselaar</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
         <fullName>Activation Case Status Update</fullName>
         <actions>
             <name>Activation_Status</name>
@@ -415,6 +439,17 @@ Email_Alerts_Sent__c +&quot;;&quot;+&quot;Email Support General Auto Response&qu
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
+        <fullName>Activation%2FOnboarding Case Owner Change</fullName>
+        <actions>
+            <name>Activation_Owner_Changed</name>
+            <type>FlowAction</type>
+        </actions>
+        <active>false</active>
+        <description>Updates the CS Round Robin when an Activation or Onboarding Case Changes Ownership. - Matthew Schetselaar</description>
+        <formula>And( Not(IsChanged( CS_Round_Robin_ID__c )), IsChanged( OwnerId ),  OR(RecordTypeId = &quot;012i0000001EALw&quot; , RecordTypeId = &quot;012i0000001Dnil&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
         <fullName>Case Owner Change</fullName>
         <actions>
             <name>Task_Creation_after_Case_Reassignment</name>
@@ -422,12 +457,7 @@ Email_Alerts_Sent__c +&quot;;&quot;+&quot;Email Support General Auto Response&qu
         </actions>
         <active>true</active>
         <description>Creates a Task for the new owner of the case if it&#39;s different than the one modifying the case. - Matthew Schetselaar</description>
-        <formula>AND( OwnerId &lt;&gt; LastModifiedById, 
-ISCHANGED( OwnerId ), 
-ISBLANK( Owner:Queue.QueueName ), 
-OR (RecordType.Name &lt;&gt; &quot;Activation&quot;, RecordType.Name &lt;&gt; &quot;Onboarding&quot;),
- Not(ISPICKVAL( Status , &quot;Closed&quot;)), 
-NOT(ISPICKVAL(Origin , &quot;Chatbot&quot;)) )</formula>
+        <formula>AND( OwnerId &lt;&gt; LastModifiedById,  ISCHANGED( OwnerId ),  ISBLANK( Owner:Queue.QueueName ),  OR (RecordType.Name &lt;&gt; &quot;Activation&quot;, RecordType.Name &lt;&gt; &quot;Onboarding&quot;),  Not(ISPICKVAL( Status , &quot;Closed&quot;)),  NOT(ISPICKVAL(Origin , &quot;Chatbot&quot;)) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -466,6 +496,26 @@ NOT(ISPICKVAL(Origin , &quot;Chatbot&quot;)) )</formula>
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
+        <fullName>Onboarding Task</fullName>
+        <actions>
+            <name>Create_Onboarding_Task</name>
+            <type>FlowAction</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Activation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Custom_Settings_Class__c</field>
+            <operation>equals</operation>
+            <value>complete</value>
+        </criteriaItems>
+        <description>Creates a task for the Onboarder to start working with the Office - Matthew Schetselaar</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
         <fullName>Partner Community Cases Change Ownership</fullName>
         <actions>
             <name>Owner_Change_to_Accounting_Queue</name>
@@ -491,6 +541,76 @@ NOT(ISPICKVAL(Origin , &quot;Chatbot&quot;)) )</formula>
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
+        <fullName>Post Case Survey Creation</fullName>
+        <actions>
+            <name>Post_Case_Survey_Trigger</name>
+            <type>FlowAction</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND (6 OR 12) AND 7 AND 8 AND 9 AND 10 AND 11</booleanFilter>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Support,Sync List Case</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Resolution__c</field>
+            <operation>equals</operation>
+            <value>Fixed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Survey_Sent__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.AccountName</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.HasOptedOutOfEmail</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Eligible_for_a_Survey__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecurSoft__Status__c</field>
+            <operation>equals</operation>
+            <value>Active,Pending Setup</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Customer,Enterprise</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>00Gi0000003T8Bg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>005i0000003I9Ll</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Survey_Opt_Out__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Creates a Survey through a flow - Matt Schetselaar</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
         <fullName>SR Date Created Case Update</fullName>
         <actions>
             <name>SR_Date_Created_Case_Update</name>
@@ -503,6 +623,25 @@ NOT(ISPICKVAL(Origin , &quot;Chatbot&quot;)) )</formula>
         </criteriaItems>
         <description>For all Newly created Cases, sets the SR_Date_Created__c field to the value of Created_Date</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sync Case Update</fullName>
+        <actions>
+            <name>Update_Account_on_Sync_Case_Status</name>
+            <type>FlowAction</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Sync List Case</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingStreet</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Marks the Account when a Sync Case is opened and closed - Matthew Schetselaar</description>
+        <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
         <fullName>Update Case owner team assignment</fullName>

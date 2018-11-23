@@ -27,7 +27,4 @@
         <value>,Assigned,Closed,Rejected,Pending Customer Input,Resolved</value>
     </filters>
     <label>Feature Activation Request</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

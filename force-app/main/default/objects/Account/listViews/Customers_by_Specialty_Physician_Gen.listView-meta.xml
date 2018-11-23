@@ -24,7 +24,4 @@
         <value>Active</value>
     </filters>
     <label>Customers by Specialty: Physician - Gen</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

@@ -8,15 +8,15 @@
     </values>
     <values>
         <field>Controlling_field_Value__c</field>
-        <value xsi:type="xsd:string">Newsletters</value>
+        <value xsi:type="xsd:string">Technical, Training</value>
     </values>
     <values>
         <field>Dependent_field_API_Name__c</field>
-        <value xsi:type="xsd:string">Product__c</value>
+        <value xsi:type="xsd:string">Features_Options__c</value>
     </values>
     <values>
         <field>Dependent_field_Value__c</field>
-        <value xsi:type="xsd:string">Campaign Setup</value>
+        <value xsi:type="xsd:string">PRP</value>
     </values>
     <values>
         <field>Object_Name_for_Dependent_Picklist__c</field>

@@ -38,6 +38,6 @@
         <a href="/s/communityguidelines" onclick="{!c.removeCss}">Community Guidelines</a>
     </div>
     <div class="advertisement">
-        <a target="_blank" href="{!$Label.c.HubspotAd}"><img src="{!$Resource.SR_Feedback}"/></a>
+        <a href="https://www.surveymonkey.com/r/WZYBHKH"><img src="{!$Resource.SR_Feedback}"/></a>
     </div>
 </aura:component>

@@ -21,7 +21,6 @@
     </filters>
     <label>All Accounts - Global</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_Global</group>
     </sharedTo>
 </ListView>

@@ -310,16 +310,12 @@ public class AccountsSelector extends fflib_SObjectSelector
 				toSOQL());
 	}
 	
-	public Database.QueryLocator queryCorporateISBStatusUpdate_Batch()
+	public Map<Id, Account> selectAccountsBySet(Set<Id>ids)
 	{
 		fflib_QueryFactory accountQueryFactory = newQueryFactory();
-
-		new AccountsSelector().configureQueryFactoryFields(accountQueryFactory, 'Parent');
-
-		return Database.getQueryLocator(
-			accountQueryFactory
-				.selectFields(new Set<Schema.SObjectField>(this.getSObjectFieldList()))
-				.setCondition('RecurSoft__Status__c = \'Active\' AND Account.Parent.RecurSoft__Status__c != \'Active\' AND ParentId != null AND Account.Parent.Type = \'Corporate\'')
-				.toSOQL());
+		
+		return new Map<Id, Account>((Account[]) Database.query(
+				accountQueryFactory.selectFields(new Set<Schema.SObjectField>(this.getSObjectFieldList())).setCondition('Id IN :ids').toSOQL()));
 	}
+	
 }

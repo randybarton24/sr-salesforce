@@ -3,8 +3,7 @@
     <fullName>Email_required_for_Customer_sync</fullName>
     <active>false</active>
     <description>Email required for Customer sync</description>
-    <errorConditionFormula>ISBLANK( Email ) &amp;&amp;
-ISBLANK( DefHC_HospitalID__c )</errorConditionFormula>
+    <errorConditionFormula>ISBLANK( Email )</errorConditionFormula>
     <errorDisplayField>Email</errorDisplayField>
     <errorMessage>You must provide a value for Email on the Contact</errorMessage>
 </ValidationRule>

@@ -20,7 +20,4 @@
         <value>Closed</value>
     </filters>
     <label>Healthgrades: Open Cases</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

@@ -27,7 +27,4 @@
         <value>Oklahoma</value>
     </filters>
     <label>Medical Customers w/Evergage-Oklahoma</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

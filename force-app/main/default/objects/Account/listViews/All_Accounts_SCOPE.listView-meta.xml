@@ -21,7 +21,6 @@
     </filters>
     <label>All Accounts - SCOPE</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>CS_SCOPE</group>
     </sharedTo>
 </ListView>

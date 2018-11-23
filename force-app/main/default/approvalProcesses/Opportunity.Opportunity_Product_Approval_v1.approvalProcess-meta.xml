@@ -15,10 +15,9 @@
         <field>Name</field>
         <field>Number_of_Locations__c</field>
         <field>Pricebook2</field>
-        <field>StageName</field>
         <field>RecurSoft__Initial_Contract_Term__c</field>
-        <field>Monthly_Revenue__c</field>
         <field>Product_Terms__c</field>
+        <field>Monthly_Revenue__c</field>
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>true</allowDelegate>
@@ -34,17 +33,12 @@
             </approver>
         </assignedApprover>
         <entryCriteria>
-            <formula>(
-    (Approval_Level_Required__c &gt; 0 &amp;&amp; 
-    RecordType.Name != &quot;New Practice Business&quot;) || 
-
-    (Approval_Level_Required__c &gt; 0 &amp;&amp; 
-    Number_of_Locations__c &lt;= 2 &amp;&amp; 
-    Approval_Level_Required_Orientation__c &lt;= 1 &amp;&amp; 
-    RecordType.Name = &quot;New Practice Business&quot; )
-)
-&amp;&amp;
-NOT( ISPICKVAL( Pricebook2.Approval_Type__c , &quot;Deal Desk&quot; ))</formula>
+            <formula>(Approval_Level_Required__c &gt; 0 &amp;&amp; 
+RecordType.Name != &quot;New Practice Business&quot;) || 
+(Approval_Level_Required__c &gt; 0 &amp;&amp; 
+Number_of_Locations__c &lt;= 2 &amp;&amp; 
+Approval_Level_Required_Orientation__c &lt;= 1 &amp;&amp; 
+RecordType.Name = &quot;New Practice Business&quot; )</formula>
         </entryCriteria>
         <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
         <label>Manager Approval</label>
@@ -64,17 +58,12 @@ NOT( ISPICKVAL( Pricebook2.Approval_Type__c , &quot;Deal Desk&quot; ))</formula>
             </approver>
         </assignedApprover>
         <entryCriteria>
-            <formula>(
-(Approval_Level_Required__c &gt; 1 &amp;&amp; 
+            <formula>(Approval_Level_Required__c &gt; 1 &amp;&amp; 
 RecordType.Name != &quot;New Practice Business&quot;) || 
-
 (Approval_Level_Required__c &gt; 1 &amp;&amp; 
 Number_of_Locations__c &lt;= 2 &amp;&amp; 
 Approval_Level_Required_Orientation__c &lt;= 1 &amp;&amp; 
-RecordType.Name = &quot;New Practice Business&quot;)
-) 
-&amp;&amp; 
-NOT( ISPICKVAL( Pricebook2.Approval_Type__c , &quot;Deal Desk&quot; ))</formula>
+RecordType.Name = &quot;New Practice Business&quot;)</formula>
         </entryCriteria>
         <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
         <label>VP Approval</label>
@@ -97,17 +86,12 @@ NOT( ISPICKVAL( Pricebook2.Approval_Type__c , &quot;Deal Desk&quot; ))</formula>
             </approver>
         </assignedApprover>
         <entryCriteria>
-            <formula>(
-(Approval_Level_Required__c &gt; 2 &amp;&amp; 
+            <formula>(Approval_Level_Required__c &gt; 2 &amp;&amp; 
 RecordType.Name != &quot;New Practice Business&quot;) || 
-
 (Approval_Level_Required__c &gt; 2 &amp;&amp; 
 Number_of_Locations__c &lt;= 2 &amp;&amp; 
 Approval_Level_Required_Orientation__c &lt;= 1 &amp;&amp; 
-RecordType.Name = &quot;New Practice Business&quot;)
-) 
-&amp;&amp; 
-NOT( ISPICKVAL( Pricebook2.Approval_Type__c , &quot;Deal Desk&quot; ))</formula>
+RecordType.Name = &quot;New Practice Business&quot;)</formula>
         </entryCriteria>
         <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
         <label>Executive Approval</label>
@@ -138,28 +122,20 @@ NOT( ISPICKVAL( Pricebook2.Approval_Type__c , &quot;Deal Desk&quot; ))</formula>
                 <type>user</type>
             </approver>
             <approver>
+                <name>randy@solutionreach.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
                 <name>stacy@solutionreach.com</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
         <entryCriteria>
-            <formula>(
-(
-Number_of_Locations__c &gt; 2 || 
-(
-Approval_Level_Required_Orientation__c &gt; 1 &amp;&amp;
-NOT( ISPICKVAL( Pricebook2.Approval_Type__c , &quot;Manager&gt;VP&quot; ))
-)
-)
+            <formula>(Number_of_Locations__c &gt; 2 || 
+Approval_Level_Required_Orientation__c &gt; 1)
 &amp;&amp;
-RecordType.Name = &quot;New Practice Business&quot;
-)
-||
-(
-Approval_Level_Required__c &gt; 0 &amp;&amp;
-ISPICKVAL( Pricebook2.Approval_Type__c , &quot;Deal Desk&quot; )
-)</formula>
+RecordType.Name = &quot;New Practice Business&quot;</formula>
         </entryCriteria>
         <label>Deal Desk Approval</label>
         <name>Deal_Desk_Approval</name>
@@ -172,13 +148,8 @@ ISPICKVAL( Pricebook2.Approval_Type__c , &quot;Deal Desk&quot; )
     <entryCriteria>
         <formula>Approval_Level_Required__c &gt; 0 || 
 (
-				(
-								Number_of_Locations__c &gt; 2 || 
-								(
-												Approval_Level_Required_Orientation__c &gt; 0 &amp;&amp;
-												NOT( ISPICKVAL( Pricebook2.Approval_Type__c , &quot;Manager&gt;VP&quot; ))
-								)
-				)
+				(Number_of_Locations__c &gt; 2 || 
+					Approval_Level_Required_Orientation__c &gt; 0)
 				&amp;&amp;	RecordType.Name = &quot;New Practice Business&quot;
 )</formula>
     </entryCriteria>

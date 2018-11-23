@@ -6,8 +6,6 @@
     <errorConditionFormula>AND(
      Not(Owner:Queue.Id=&quot;00Gi0000003T8Bg&quot;), 
      NOT(ISBLANK(Owner:Queue.Id)), 
-     ISPICKVAL(Status, &quot;Closed&quot;),
-				Account.Do_Not_Support_Sync__c = false
-)</errorConditionFormula>
+     ISPICKVAL(Status, &quot;Closed&quot;))</errorConditionFormula>
     <errorMessage>You cannot close a case that is still assigned to a Queue.  Please claim the Case and then try closing it again.</errorMessage>
 </ValidationRule>

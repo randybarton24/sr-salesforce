@@ -22,7 +22,4 @@
         <value>Centricity</value>
     </filters>
     <label>Medical Customers w/Evergage-Centricity</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

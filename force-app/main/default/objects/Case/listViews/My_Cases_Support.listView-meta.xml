@@ -10,9 +10,6 @@
     <columns>CORE.USERS.ALIAS</columns>
     <columns>CASES.CREATED_DATE</columns>
     <columns>CASES.LAST_UPDATE</columns>
-    <columns>CASES.RECORDTYPE</columns>
-    <columns>Case_ART__c</columns>
-    <columns>CASES.REASON</columns>
     <filterScope>Mine</filterScope>
     <filters>
         <field>CASES.STATUS</field>
@@ -20,7 +17,4 @@
         <value>Closed</value>
     </filters>
     <label>My Cases</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

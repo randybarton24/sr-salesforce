@@ -24,7 +24,4 @@
         <value>Active</value>
     </filters>
     <label>Customers by Specialty: OB/GYN Women&#39;s C</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

@@ -50,11 +50,6 @@
                 <default>false</default>
                 <label>Medical 2 Team</label>
             </value>
-            <value>
-                <fullName>ML and Major Accounts</fullName>
-                <default>false</default>
-                <label>ML and Major Accounts</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

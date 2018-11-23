@@ -22,7 +22,4 @@
         <value>jasone</value>
     </filters>
     <label>Reps cases</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

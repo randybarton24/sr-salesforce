@@ -14,7 +14,4 @@
         <value>gpool</value>
     </filters>
     <label>General Pool</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

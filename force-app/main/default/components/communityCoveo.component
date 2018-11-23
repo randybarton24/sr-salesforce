@@ -1,4 +1,4 @@
-<apex:component ><div id="search" class="CoveoSearchInterface" data-design="new" data-enable-history="true" data-maximum-age="0" data-pipeline="SR Community" data-results-per-page="15">
+<apex:component ><div id="search" class="CoveoSearchInterface" data-design="new" data-enable-history="true" data-maximum-age="0" data-pipeline="SR Community">
 
 <div class="CoveoAnalytics"></div>
    
@@ -14,7 +14,7 @@
         <div class="CoveoBreadcrumb"></div>
         <div class="coveo-results-header">
             <div class="coveo-summary-section">
-                <span class="CoveoQuerySummary"><div class="coveo-show-if-no-results"></div></span>
+                <span class="CoveoQuerySummary"></span>
                 <span class="CoveoQueryDuration"></span>
             </div>
             <div class="coveo-result-layout-section">
@@ -28,7 +28,7 @@
         <div class="CoveoHiddenQuery"></div>
         <div class="CoveoDidYouMean"></div>
         <div class="CoveoErrorReport" data-pop-up="false"></div>
-        <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-fields-to-include="@Sf" data-infinite-scroll-page-size=""><script type="text/html" data-field-objecttype="feeditem,feedcomment" class="result-template" id="Discussions"><div class="coveo-result-frame">
+        <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-fields-to-include="@Sf" data-enable-infinite-scroll="true"><script type="text/html" data-field-objecttype="feeditem,feedcomment" class="result-template" id="Discussions"><div class="coveo-result-frame">
   <div class="coveo-result-row">
     <div class="coveo-result-cell" style="width:85px;text-align:center;padding-top:7px;">
      <img src="https://community.solutionreach.com/resource/1525372243000/KATypeDiscussions
@@ -89,7 +89,7 @@
     </div>
     <div class="coveo-result-cell" style="padding-left:15px">
       <div class="coveo-result-row">
-        <div class="coveo-result-cell" style="font-size:18px"><span class="CoveoSalesforceResultLink" data-title-template="${raw.sftitle}"></span></div>
+        <div class="coveo-result-cell" style="font-size:18px"><span class="CoveoSalesforceResultLink" data-field="@sftitle"></span></div>
         <div class="coveo-result-cell" style="width:120px; text-align:right;font-size:12px">
           
         </div>
@@ -111,8 +111,9 @@
         <script type="text/html" data-field-objecttype="getting_started,tips_tricks,webinar	" class="result-template" id="Training Vid Template"><div class="coveo-result-frame">
   <div class="coveo-result-row">
           <div class="coveo-result-cell" style="width:85px; text-align:center; padding-top:7px">
-             <img src="https://community.solutionreach.com/resource/1525372243000/KATypeVideo" width="60px" height="60px"/>
+      <span class="CoveoIcon">
       </span>
+      <span class="CoveoQuickview">
       </span>
       </div>
     <div class="coveo-result-cell" style="padding-left:15px">

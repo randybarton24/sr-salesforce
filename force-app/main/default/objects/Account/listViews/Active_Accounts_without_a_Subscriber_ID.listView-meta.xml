@@ -29,7 +29,4 @@
         <operation>equals</operation>
     </filters>
     <label>Active Accounts without a Subscriber ID</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

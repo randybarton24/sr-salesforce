@@ -23,7 +23,4 @@
         <value>No Sale</value>
     </filters>
     <label>Customers by Specialty: Pediatrics</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

@@ -145,6 +145,17 @@ TotalPrice ) , 0 )</formula>
         <protected>false</protected>
     </fieldUpdates>
     <rules>
+        <fullName>ContractStartDateFromProduct_WFR</fullName>
+        <actions>
+            <name>FieldUpdate_Contract_Start_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>For Addendum Opps</description>
+        <formula>(ISCHANGED( RecurSoft__Contract_Term_Start_Date_New__c ) ||   ISNEW()) &amp;&amp; Opportunity.RecordType.DeveloperName = &quot;Add_On_Business&quot;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
         <fullName>RecurSoft__Update Counter Aggregated Monthly Min</fullName>
         <actions>
             <name>RecurSoft__Update_Counter_Aggregated_Monthly_Min</name>
@@ -157,5 +168,59 @@ TotalPrice ) , 0 )</formula>
             <value>True</value>
         </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Monthly Products</fullName>
+        <actions>
+            <name>Update_Monthly_Products</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISPICKVAL( PricebookEntry.Product2.RecurSoft__Billing_Frequency__c , &quot;Monthly&quot; ) &amp;&amp;  Is_Monthly__c = false</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Total Monthly Revenue</fullName>
+        <actions>
+            <name>Update_HG_Monthly_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_LL_Monthly_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Other_Monthly_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_SRC_Monthly_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_SRSR_Monthly_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_SR_Monthly_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Total_Monthly_Revenue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>true || isnew() || ischanged( UnitPrice ) || ischanged( Invoiced_Price__c ) || ischanged( Quantity )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>copy Product Code</fullName>
+        <actions>
+            <name>populate_product_code</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISNEW()</formula>
+        <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

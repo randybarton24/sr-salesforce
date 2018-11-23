@@ -26,7 +26,6 @@
     </filters>
     <label>CSM Book of Business</label>
     <sharedTo>
-        <allInternalUsers/>
         <group>Groups_Team</group>
     </sharedTo>
 </ListView>

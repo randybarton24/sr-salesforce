@@ -2,7 +2,6 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Playbook</fullName>
     <active>true</active>
-    <compactLayoutAssignment>Sales_Compact_Layout</compactLayoutAssignment>
     <label>Playbook</label>
     <picklistValues>
         <picklist>Activity_Results__c</picklist>
@@ -458,10 +457,6 @@
     </picklistValues>
     <picklistValues>
         <picklist>Status</picklist>
-        <values>
-            <fullName>Closed - Not Completed</fullName>
-            <default>false</default>
-        </values>
         <values>
             <fullName>Completed</fullName>
             <default>false</default>

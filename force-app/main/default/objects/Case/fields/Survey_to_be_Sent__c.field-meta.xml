@@ -15,11 +15,6 @@
                 <default>false</default>
                 <label>Fast Track Survey</label>
             </value>
-            <value>
-                <fullName>EBR Case Survey</fullName>
-                <default>false</default>
-                <label>EBR Case Survey</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

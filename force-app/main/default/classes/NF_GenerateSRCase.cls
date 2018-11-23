@@ -71,7 +71,7 @@ global without sharing class NF_GenerateSRCase implements nfchat.AIMethodService
             case1.Main_Issue__c = 'Newsletter Adjustment';
         }
         else if(intentName.indexOf('business.sync.t') == 0) {
-//            case1.RecordTypeId = [Select Id from RecordType where Name = 'Sync List Case'].Id;
+            case1.RecordTypeId = [Select Id from RecordType where Name = 'Sync List Case'].Id;
             case1.Features_Options__c = 'Sync';
             case1.Main_Issue__c = 'Database Connection';
 //          case1.Category__c = 'Technical';

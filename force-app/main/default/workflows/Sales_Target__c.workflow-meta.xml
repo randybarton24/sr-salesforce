@@ -25,4 +25,15 @@ ISCHANGED( Target_Year__c ) ||
 ISNEW()</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
+    <rules>
+        <fullName>Unique Sales Target Field Change</fullName>
+        <actions>
+            <name>Unique_Sales_Target_Field_Change</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Executed when either the Target Owner, Month or Year field (or any combination of the three) has changed.</description>
+        <formula>OR( ISCHANGED( Owner__c ) , ISCHANGED( Type__c ) , ISCHANGED( Target_Month__c ) , ISCHANGED( Target_Year__c ) , ISNEW() )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
 </Workflow>

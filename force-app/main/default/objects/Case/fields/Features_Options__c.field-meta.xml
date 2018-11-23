@@ -242,5 +242,230 @@
                 <label>Voicemail</label>
             </value>
         </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Account Questions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>AppAdmin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Business Associates Agreement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Community</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Contract Addendum</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Email Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Legal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Marketing/Sales Promotions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Password</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>PR Portal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Social Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Voicemail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Action List</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Birthdays</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <valueName>Care Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <valueName>Conversations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Determine Need</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <valueName>Dynamic Messaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Eyewear</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Groups/Newsletter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Healthgrades</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <valueName>Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>New Features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Newsletters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Online Presence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <valueName>Patient Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Patient Profile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Payment Reminders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>PRM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>PRP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>PRT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Recall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Referrals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <valueName>Reminders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <valueName>Settings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <valueName>SR Huddle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>SR Notify</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>SR Schedule</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Surveys</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement</controllingFieldValue>
+            <valueName>Voice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <valueName>Initial Troubleshooting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technical</controllingFieldValue>
+            <valueName>Sync</valueName>
+        </valueSettings>
     </valueSet>
 </CustomField>

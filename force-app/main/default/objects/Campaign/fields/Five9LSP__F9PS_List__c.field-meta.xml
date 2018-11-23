@@ -4,7 +4,6 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <inlineHelpText>List Sync Plus-compatible</inlineHelpText>
     <label>Five9 List</label>
     <referenceTo>Five9LSP__Five9_List__c</referenceTo>
     <relationshipLabel>Campaigns</relationshipLabel>

@@ -7,7 +7,6 @@
     <columns>ACCOUNT.PHONE1</columns>
     <columns>ACCOUNT.TYPE</columns>
     <columns>CORE.USERS.ALIAS</columns>
-    <columns>SR_Date_Created__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>ACCOUNT.CREATED_DATE</field>
@@ -15,7 +14,4 @@
         <value>THIS_WEEK</value>
     </filters>
     <label>New This Week</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

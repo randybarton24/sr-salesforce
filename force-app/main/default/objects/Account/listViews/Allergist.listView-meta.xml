@@ -28,7 +28,4 @@
         <value>Nextech</value>
     </filters>
     <label>Customers by Specialty: Allergist</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
 </ListView>

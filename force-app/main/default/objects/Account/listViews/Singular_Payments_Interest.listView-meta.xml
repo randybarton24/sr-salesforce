@@ -20,7 +20,5 @@
         <value>0</value>
     </filters>
     <label>Singular Payments Interest</label>
-    <sharedTo>
-        <allInternalUsers/>
-    </sharedTo>
+    <sharedTo/>
 </ListView>

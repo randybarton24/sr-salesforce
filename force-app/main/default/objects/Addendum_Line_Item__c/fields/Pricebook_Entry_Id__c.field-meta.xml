@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Pricebook_Entry_Id__c</fullName>
     <externalId>false</externalId>
-    <formula>if(ISBLANK(Asset__c),PriceBookEntryId__c, Asset__r.Product2.Standard_Pricebook_Entry_Id__c)</formula>
+    <formula>Asset__r.Product2.Standard_Pricebook_Entry_Id__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Pricebook Entry Id</label>
     <required>false</required>
